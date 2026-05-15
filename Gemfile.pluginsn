@@ -1,0 +1,2 @@
+gem "openproject-ia_colaborativa", path: "plugins/ia_colaborativa"
+gem 'openproject-speckle', path: 'modules/speckle'

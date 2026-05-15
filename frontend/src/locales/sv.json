@@ -1,0 +1,2060 @@
+{
+  "sv": {
+    "date": {
+      "abbr_day_names": [
+        "Sön",
+        "Mån",
+        "Tis",
+        "Ons",
+        "Tors",
+        "Fre",
+        "Lör"
+      ],
+      "abbr_month_names": [
+        null,
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "Maj",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Okt",
+        "Nov",
+        "Dec"
+      ],
+      "abbr_week": "Wk",
+      "day_names": [
+        "Söndag",
+        "Måndag",
+        "Tisdag",
+        "Onsdag",
+        "Torsdag",
+        "Fredag",
+        "Lördag"
+      ],
+      "formats": {
+        "default": "%Y-%m-%d",
+        "long": "%B %d, %Y",
+        "short": "%b %d"
+      },
+      "month_names": [
+        null,
+        "Januari",
+        "Februari",
+        "Mars",
+        "April",
+        "Maj",
+        "Juni",
+        "Juli",
+        "Augusti",
+        "September",
+        "Oktober",
+        "November",
+        "December"
+      ],
+      "order": [
+        ":år",
+        ":månad",
+        "dag"
+      ]
+    },
+    "js": {
+      "admin": {
+        "enterprise": {
+          "text_expired": "expired",
+          "text_reprieve_days_left": "%{days} days until end of grace period",
+          "trial": {
+            "confirmation": "Bekräftelse av e-postadress",
+            "confirmation_info": "We sent you an email on %{date} to %{email}. Please check your inbox and click the confirmation link provided to start your 14 days trial.\n",
+            "email_not_received": "You did not receive an email? You can resend the email with the link on the right.",
+            "form": {
+              "domain_mismatch": "The current request host name does not match the configured host name. Please double check your system settings.",
+              "general_consent": "Jag godkänner <a target=\"_blank\" href=\"%{link_terms}\">användarvillkoren</a> och <a target=\"_blank\" href=\"%{link_privacy}\">integritetspolicyn</a>.\n",
+              "invalid_email": "Ogiltig e-postadress",
+              "label_additional_features": "Additional features",
+              "label_company": "Company",
+              "label_domain": "Domain",
+              "label_expires_at": "Förfaller den",
+              "label_first_name": "Förnamn",
+              "label_last_name": "Efternamn",
+              "label_maximum_users": "Max antal aktiva användare",
+              "label_plan": "Plan",
+              "label_starts_at": "Starts at",
+              "label_subscriber": "Prenumerant",
+              "receive_newsletter": "I want to receive the OpenProject <a target=\"_blank\" href=\"%{link}\">newsletter</a>.",
+              "taken_domain": "There can only be one active trial per domain.",
+              "taken_email": "Each user can only create one trial."
+            },
+            "next_steps": "Next steps",
+            "quick_overview": "Get a quick overview of project management and team collaboration with OpenProject Enterprise edition.",
+            "resend_link": "Skicka igen",
+            "resend_success": "Email has been resent. Please check your emails and click the confirmation link provided.",
+            "resend_warning": "Could not resend email.",
+            "session_timeout": "Your session timed out. Please try to reload the page or resend email.",
+            "status_confirmed": "bekräftade",
+            "status_label": "Status:",
+            "status_waiting": "email sent - waiting for confirmation",
+            "test_ee": "Test the Enterprise edition 14 days for free",
+            "try_another_email": "Or try it with another email address."
+          },
+          "upsell": {
+            "become_hero": "Bli en hjälte!",
+            "benefits": {
+              "description": "What are the benefits of the Enterprise on-premises edition?",
+              "high_security": "Security features",
+              "high_security_text": "Single sign on (SAML, OpenID Connect, CAS), LDAP groups.",
+              "installation": "Installation support",
+              "installation_text": "Experienced software engineers guide you through the complete installation and setup process in your own infrastructure.",
+              "premium_features": "Enterprise add-ons",
+              "premium_features_text": "Agile boards, custom theme and logo, graphs, intelligent workflows with custom actions, full text search for work package attachments and multi-select custom fields.",
+              "professional_support": "Professionell hjälp",
+              "professional_support_text": "Get reliable, high-touch support from senior support engineers with expert knowledge about running OpenProject in business-critical environments."
+            },
+            "button_book_now": "Boka nu",
+            "button_contact_us": "Kontakta oss för en demo",
+            "button_start_trial": "Starta fri provperiod",
+            "button_upgrade": "Uppgradera nu",
+            "confidence": "We deliver the confidence of a tested and supported enterprise-class project management software - with Open Source and an open mind.\n",
+            "enterprise_info_html": "%{feature_title} is an Enterprise <span class='spot-icon spot-icon_inline spot-icon_enterprise-addons'></span> add-on.",
+            "link_quote": "Få en offert",
+            "more_info": "Mer information",
+            "text": "The OpenProject Enterprise edition builds on top of the Community edition. It includes Enterprise add-ons and professional support mainly aimed at organizations with more than 10 users that manage business critical projects with OpenProject.\n",
+            "unlimited": "Unlimited",
+            "upgrade_info": "Vänligen uppgradera till en betalplan för att aktivera och börja använda den i ditt team.",
+            "you_contribute": "Developers need to pay their bills, too. By upgrading to the Enterprise edition, you will be supporting this open source community effort and contributing to its development, maintenance and continuous improvement."
+          }
+        },
+        "type_form": {
+          "add_group": "Lägg till attributgrupp",
+          "add_table": "Lägg till tabell med relaterade arbetspaket",
+          "custom_field": "Anpassat fält",
+          "drag_to_activate": "Dra fält härifrån för att aktivera dom",
+          "edit_query": "Redigera fråga",
+          "inactive": "Inaktiv",
+          "new_group": "Ny grupp",
+          "reset_to_defaults": "Återställ standardinställningar"
+        },
+        "work_packages_settings": {
+          "warning_progress_calculation_mode_change_from_field_to_status_html": "Changing progress calculation mode from work-based to status-based will result in all existing <i>% Complete</i> values to be lost and replaced with values associated with each status. Existing values for <i>Remaining work</i> may also be recalculated to reflect this change. This action is not reversible.",
+          "warning_progress_calculation_mode_change_from_status_to_field_html": "Changing progress calculation mode from status-based to work-based will make the <i>% Complete</i> field freely editable. If you optionally enter values for <i>Work</i> or <i>Remaining work</i>, they will also be linked to <i>% Complete</i>. Changing <i>Remaining work</i> can then update <i>% Complete</i>."
+        },
+        "working_days": {
+          "add_non_working_day": "Non-working day",
+          "already_added_error": "A non-working day for this date exists already. There can only be one non-working day created for each unique date.",
+          "calendar": {
+            "empty_state_description": "No specific non-working days are defined for this year. Click on \"+ Non-working day\" below to add a date.",
+            "empty_state_header": "Non-working days",
+            "new_date": "(new)"
+          },
+          "change_button": "Save and reschedule",
+          "change_description": "Changing which days of the week are considered working days or non-working days can affect the start and finish days of all work packages and life cycles in all projects in this instance.",
+          "change_title": "Change working days",
+          "removed_title": "You will remove the following days from the non-working days list:",
+          "warning": "The changes might take some time to take effect. You will be notified when all relevant work packages and project life cycles have been updated. Are you sure you want to continue?\n"
+        }
+      },
+      "ajax": {
+        "hide": "Dölj",
+        "loading": "Loading…",
+        "updating": "Updating…"
+      },
+      "attachments": {
+        "delete": "Radera bilaga",
+        "delete_confirmation": "Are you sure you want to delete this file? This action is not reversible.\n",
+        "draggable_hint": "Dra på editorfältet för att infoga bild eller referensbilaga. Stängda editorfält kommer att öppnas medan du fortsätter att dra.\n",
+        "quarantined_hint": "The file is quarantined, as a virus was found. It is not available for download."
+      },
+      "autocomplete_ng_select": {
+        "add_tag": "Add item",
+        "clear_all": "Rensa alla",
+        "loading": "Laddar...",
+        "not_found": "Inga objekt hittades",
+        "type_to_search": "Skriv för att söka"
+      },
+      "autocomplete_select": {
+        "active": "Aktiva %{label} %{name}",
+        "placeholder": {
+          "multi": "Lägg till ”%{name}”",
+          "single": "Välj ”%{name}”"
+        },
+        "remove": "Ta bort %{name}"
+      },
+      "autocompleter": {
+        "notFoundText": "Inga objekt hittades",
+        "placeholder": "Skriv för att söka",
+        "project": {
+          "placeholder": "Select project"
+        }
+      },
+      "avatars": {
+        "empty_file_error": "Vänligen ladda upp en giltig bild (jpg, png, gif)",
+        "error_image_too_large": "Bilden är för stor.",
+        "label_choose_avatar": "Välj profilbild från fil",
+        "text_upload_instructions": "Ladda upp din egen avatar på 128 gånger 128 pixlar. Större filer kommer att skalas om och beskäras för att matcha.\nEn förhandsvisning av din avatar kommer att visas innan du laddar upp, när du har valt en bild.\n",
+        "uploading_avatar": "Ladda upp din avatar.",
+        "wrong_file_format": "Tillåtna format är jpg, png, gif"
+      },
+      "backup": {
+        "attachments_disabled": "Attachments may not be included since they exceed the maximum overall size allowed. You can change this via the configuration (requires a server restart).",
+        "download_backup": "Download backup",
+        "include_attachments": "Include attachments",
+        "info": "You can trigger a backup here. The process can take some time depending on the amount of data (especially attachments) you have. You will receive an email once it's ready.\n",
+        "last_backup": "Last backup",
+        "last_backup_from": "Last backup from",
+        "note": "A new backup will override any previous one. Only a limited number of backups per day can be requested.\n",
+        "options": "Alternativ",
+        "request_backup": "Request backup",
+        "title": "Backup OpenProject"
+      },
+      "baseline": {
+        "apply": "Tilldela",
+        "clear": "Rensa",
+        "drop_down": {
+          "a_specific_date": "a specific date",
+          "between_two_specific_dates": "between two specific dates",
+          "last_month": "förra månaden",
+          "last_week": "förra veckan",
+          "last_working_day": "last working day",
+          "none": "-",
+          "yesterday": "igår"
+        },
+        "from": "Från",
+        "header_description": "Highlight changes made to this list since any point in the past.",
+        "help_description": "Reference time zone for the baseline.",
+        "icon_tooltip": {
+          "added": "Added to view within the comparison time period",
+          "changed": "Maintained with modifications",
+          "removed": "Removed from view within the comparison time period"
+        },
+        "legends": {
+          "changes_between": "Changes between",
+          "changes_since": "Changes since",
+          "in_your_timezone": "In your local timezone:",
+          "maintained_with_changes": "Maintained with changes",
+          "no_longer_meets_filter_criteria": "No longer meets filter criteria",
+          "now_meets_filter_criteria": "Now meets filter criteria"
+        },
+        "show_changes_since": "Show changes since",
+        "time": "Tid",
+        "time_description": "In your local time: %{datetime}",
+        "to": "Till",
+        "toggle_title": "Baseline"
+      },
+      "bcf": {
+        "add_viewpoint": "Add viewpoint",
+        "delete_viewpoint": "Delete viewpoint",
+        "export": "Exportera",
+        "export_bcf_xml_file": "Export BCF XML file (BCF version 2.1)",
+        "import": "Importera",
+        "import_bcf_xml_file": "Import BCF XML file (BCF version 2.1)",
+        "label_bcf": "BCF",
+        "management": "BCF management",
+        "refresh": "Refresh",
+        "refresh_work_package": "Refresh work package",
+        "show_viewpoint": "Show viewpoint",
+        "viewpoint": "Viewpoint"
+      },
+      "boards": {
+        "add_card": "Lägg till kort",
+        "add_list": "Lägg till lista på tavlan",
+        "add_list_modal": {
+          "labels": {
+            "assignee": "Select user to add as a new assignee list",
+            "status": "Select status to add as a new list",
+            "subproject": "Select subproject to add as a new list",
+            "subtasks": "Select work package to add as a new list",
+            "version": "Select version to add as a new list"
+          },
+          "warning": {
+            "add_members": "<a href=\"%{link}\">Add a new member to this project</a> to select users again.",
+            "assignee": "There isn't any member matched with your filter value.  <br>",
+            "no_member": "This project currently does not have any members that can be added.  <br>",
+            "status": "There is currently no status available. <br>\nEither there are none or they have all already been added to the board.\n"
+          }
+        },
+        "board_type": {
+          "action": "Åtgärdstavla",
+          "action_by_attribute": "Åtgärdstavla (%{attribute})",
+          "action_text": "A board with filtered lists on %{attribute} attribute. Moving work packages to other lists will update their attribute.\n",
+          "action_text_assignee": "Board with automated columns based on assigned users. Ideal for dispatching work packages.\n",
+          "action_text_status": "Basic kanban style board with columns for status such as To Do, In Progress, Done.\n",
+          "action_text_subprojects": "Board with automated columns for subprojects. Dragging work packages to other lists updates the (sub-)project accordingly.\n",
+          "action_text_subtasks": "Board with automated columns for sub-elements. Dragging work packages to other lists updates the parent accordingly.\n",
+          "action_text_version": "Board with automated columns based on the version attribute. Ideal for planning product development.\n",
+          "action_type": {
+            "assignee": "assignee",
+            "status": "status",
+            "subproject": "subproject",
+            "subtasks": "parent-child",
+            "version": "version"
+          },
+          "board_type_title": {
+            "assignee": "Tilldelad till",
+            "basic": "Enkel",
+            "status": "Status",
+            "subproject": "Delprojekt",
+            "subtasks": "Förälder-barn",
+            "version": "Version"
+          },
+          "free": "basic",
+          "free_text": "Start from scratch with a blank board. Manually add cards and columns to this board.\n",
+          "select_attribute": "Åtgärdsattribut",
+          "select_board_type": "Please choose the type of board you need.",
+          "text": "Brädstyp"
+        },
+        "click_to_remove_list": "Klicka för att ta bort denna lista",
+        "configuration_modal": {
+          "display_settings": {
+            "card_mode": "Visa som kort",
+            "table_mode": "Visa som tabell"
+          },
+          "title": "Konfigurera denna tavla"
+        },
+        "create_new": "Skapa ny bräda",
+        "error_attribute_not_writable": "Kan inte flytta arbetspaketet, %{attribute} är inte skrivbar.",
+        "error_cannot_move_into_self": "You can not move a work package into its own column.",
+        "error_loading_the_list": "Fel vid inläsning av listan: %{error_message}",
+        "error_permission_missing": "Behörigheten att skapa offentliga frågor saknas",
+        "label_board_type": "Typ av tavla",
+        "label_unnamed_board": "Namnlös tavla",
+        "label_unnamed_list": "Namnlös lista",
+        "lists": {
+          "delete": "Ta bort lista"
+        },
+        "new_board": "Ny tavla",
+        "text_hidden_list_warning": "Not all lists are displayed because you lack the permission. Contact your admin for more information.",
+        "version": {
+          "close_version": "Stäng version",
+          "closed": "Stängt",
+          "edit_version": "Redigera version",
+          "is_closed": "Version är stängd. Inga objekt kan läggas till i denna version.",
+          "is_locked": "Version är låst. Inga objekt kan läggas till i denna version.",
+          "lock_version": "Lås version",
+          "locked": "Låst",
+          "open_version": "Öppen version",
+          "show_version": "Visa version",
+          "unlock_version": "Lås upp version"
+        }
+      },
+      "button_add": "Lägg till",
+      "button_add_watcher": "Lägg till bevakare",
+      "button_advanced_filter": "Avancerat filter",
+      "button_back": "Tillbaka",
+      "button_back_to_list_view": "Tillbaka till listvy",
+      "button_cancel": "Avbryt",
+      "button_change_project": "Move to another project",
+      "button_check_all": "Markera alla",
+      "button_close": "Stäng",
+      "button_close_details": "Stäng detaljvyn",
+      "button_collapse_all": "Fäll ihop alla",
+      "button_configure-form": "Ställ in formulär",
+      "button_confirm": "Bekräfta",
+      "button_continue": "Fortsätt",
+      "button_copy": "Kopiera",
+      "button_copy_link_to_clipboard": "Kopiera länk till urklipp",
+      "button_copy_to_clipboard": "Kopiera till Urklipp",
+      "button_copy_to_other_project": "Duplicate in another project",
+      "button_create": "Skapa",
+      "button_custom-fields": "Anpassade fält",
+      "button_delete": "Radera",
+      "button_delete_watcher": "Ta bort bevakare",
+      "button_details_view": "Detaljvy",
+      "button_duplicate": "Duplicera",
+      "button_edit": "Redigera",
+      "button_expand_all": "Expandera alla",
+      "button_export-atom": "Ladda ner Atom",
+      "button_filter": "Filter",
+      "button_generate_pdf": "Generate PDF",
+      "button_list_view": "Listvy",
+      "button_log_costs": "Logga enhetskostnader",
+      "button_log_time": "Logga tid",
+      "button_more": "Mer",
+      "button_more_actions": "More actions",
+      "button_open_details": "Öppna detaljvyn",
+      "button_open_fullscreen": "Öppna fullskärmsläge",
+      "button_quote": "Citat",
+      "button_save": "Spara",
+      "button_settings": "Inställningar",
+      "button_show_cards": "Visa kortvy",
+      "button_show_fullscreen": "Show fullscreen view",
+      "button_show_gantt": "Show Gantt view",
+      "button_show_list": "Visa listvy",
+      "button_show_table": "Show table view",
+      "button_show_view": "Helskärmsläge",
+      "button_uncheck_all": "Avmarkera alla",
+      "button_update": "Uppdatera",
+      "calendar": {
+        "create_new": "Skapa ny kalender",
+        "title": "Kalender",
+        "too_many": "Det finns totalt %{count} arbetspaket, men bara %{max} kan visas.",
+        "unsaved_title": "Kalender utan namn"
+      },
+      "caption_rate_history": "Historiska timpriser",
+      "card": {
+        "add_new": "Lägg till kort",
+        "highlighting": {
+          "entire_card_by": "Hela kortet med",
+          "inline": "Markera inline:"
+        },
+        "remove_from_list": "Ta bort kort från listan"
+      },
+      "chart": {
+        "axis_criteria": "Axelkriterier",
+        "errors": {
+          "could_not_load": "Data för att visa grafen kunde inte laddas. De nödvändiga behörigheterna kan saknas."
+        },
+        "modal_title": "Konfiguration av graf för arbetspaket",
+        "tabs": {
+          "dataset": "Dataset %{number}",
+          "graph_settings": "Allmänt"
+        },
+        "type": "Typ av diagram",
+        "types": {
+          "bar": "Stapel",
+          "doughnut": "Munk",
+          "horizontal_bar": "Horisontell linje",
+          "line": "Linje",
+          "pie": "Paj",
+          "polar_area": "Polarområde",
+          "radar": "Radar"
+        }
+      },
+      "clipboard": {
+        "browser_error": "Your browser doesn't support copying to clipboard. Please copy it manually: %{content}",
+        "copied_successful": "Successfully copied to clipboard!"
+      },
+      "close_filter_title": "Stäng filter",
+      "close_form_title": "Stäng formulär",
+      "close_popup_title": "Stäng popup",
+      "custom_actions": {
+        "date": {
+          "current_date": "Aktuellt datum",
+          "specific": "på"
+        }
+      },
+      "dashboards": {
+        "label": "Översikt"
+      },
+      "description_available_columns": "Tillgängliga kolumner",
+      "description_current_position": "Du är här: ",
+      "description_select_work_package": "Välj arbetspaket #%{id}",
+      "description_subwork_package": "Barn till arbetspaket #%{id}",
+      "editor": {
+        "ckeditor_error": "An error occurred within CKEditor",
+        "error_saving_failed": "Misslyckades med att spara dokumentet på grund av följande fel: %{error}",
+        "macro": {
+          "attribute_reference": {
+            "invalid_attribute": "The selected attribute '%{name}' does not exist.",
+            "macro_help_tooltip": "This text segment is being dynamically rendered by a macro.",
+            "nested_macro": "This macro is recursively referencing %{model} %{id}.",
+            "not_found": "Requested resource could not be found"
+          },
+          "child_pages": {
+            "button": "Länkar till underordnade sidor",
+            "hint": "Lämna fältet tomt om du vill lista alla underordnade sidor på den aktuella sidan. Om du vill referera till en annan sida, ange dess titel eller slug.\n",
+            "include_parent": "Inkludera överordnade",
+            "page": "Wiki-sida",
+            "text": "[Placeholder] länkar till underordnade sidor av",
+            "this_page": "den här sidan"
+          },
+          "code_block": {
+            "button": "Infoga kodstycket",
+            "language": "Formateringsspråk",
+            "language_hint": "Ange det formateringsspråk som används för att belysa (om det stöds).",
+            "title": "Infoga / redigera kodavsnitt"
+          },
+          "dropdown": {
+            "chose_macro": "Choose macro",
+            "macros": "Makron"
+          },
+          "embedded_calendar": {
+            "text": "[Placeholder] Inbäddad kalender"
+          },
+          "embedded_table": {
+            "button": "Bädda in arbetspaket-tabell",
+            "text": "[Placeholder] Inbäddade tabeller för arbetspaket"
+          },
+          "error": "Cannot expand macro: %{message}",
+          "toc": "Innehållsförteckning",
+          "toolbar_help": "Klicka på välj widget och visa verktygsfältet. Dubbelklicka om du vill redigera widget",
+          "wiki_page_include": {
+            "button": "Inkludera innehåll från en annan wiki-sida",
+            "hint": "Inkludera innehåll från en annan wiki-sida genom att ange dess titel eller slug. Du kan inkludera wiki-sidan för ett annat projekt genom att separera dem med ett kolon som följande exempel.\n",
+            "not_set": "(Sida ännu inte satt)",
+            "page": "Wiki-sida",
+            "text": "[Placeholder] Inkluderad wiki-sida för"
+          },
+          "work_package_button": {
+            "button": "Lägg till skapa arbetspaket-knapp",
+            "button_style": "Använd knappstil",
+            "button_style_hint": "Frivilligt: Markera för att makrot ska synas som en knapp istället för en länk.",
+            "type": "Arbetspaketstyper",
+            "with_type": "Skapa arbetspaket (Typ: %{typename})",
+            "without_type": "Skapa arbetspaket"
+          }
+        },
+        "mode": {
+          "manual": "Växla till markdown-källa",
+          "wysiwyg": "Växla till WYSIWYG-redigerare"
+        },
+        "no_revisions": "No local modifications found",
+        "preview": "Växla förhandsgranskningsläge",
+        "revisions": "Show local modifications",
+        "source_code": "Växla markdown-källläge"
+      },
+      "enumeration_activities": "Aktiviteter (tidredovisning)",
+      "enumeration_doc_categories": "Dokumentkategorier",
+      "enumeration_work_package_priorities": "Arbetspaketsprioritering",
+      "error": {
+        "cannot_save_changes_with_message": "Kan inte spara dina ändringar på grund av följande error: %{error}",
+        "embedded_table_loading": "Den inbäddade vyn kunde inte laddas: %{message}",
+        "internal": "Ett internt fel har inträffat.",
+        "query_saving": "Vyn kunde inte sparas."
+      },
+      "error_attachment_upload": "Filen kunde inte laddas upp: %{error}",
+      "error_attachment_upload_permission": "Du har inte rättigheter att ladda upp filer i den här resursen.",
+      "error_could_not_resolve_user_name": "Kunde inte fastställa användarnamn",
+      "error_could_not_resolve_version_name": "Kunde inte fastställa versionsnamn",
+      "exclusion_info": {
+        "modal": {
+          "content": "The status '%{status_name}' has been configured to be excluded from hierarchy totals of Work, Remaining work, and % Complete. The totals do not take this value into account.",
+          "title": "Status excluded from hierarchy totals"
+        }
+      },
+      "favorite_projects": {
+        "no_results": "You have no favorite projects",
+        "no_results_subtext": "Add one or multiple projects as favorite through their overview or in a project list."
+      },
+      "field_value_enter_prompt": "Ange ett värde för \"%{field}\"",
+      "filter": {
+        "description": {
+          "text_close_filter": "Välj en post genom att ändra fokus (ex. med 'ENTER'). Välj den första (tomma) posten för att lämna utan filter.",
+          "text_open_filter": "Öppna det här filtret med 'ALT' och piltangenterna."
+        },
+        "more_values_not_shown": "There are %{total} more results, search to filter results.",
+        "noneElement": "(ingen)",
+        "sorting": {
+          "criteria": {
+            "one": "Första sorteringskriteriet",
+            "three": "Tredje sorteringskriteriet",
+            "two": "Andra sorteringskriteriet"
+          }
+        },
+        "time_zone_converted": {
+          "only_end": "Till %{to} lokala tid.",
+          "only_start": "Från %{from} lokala tid.",
+          "two_values": "%{from} - %{to} lokal tid."
+        },
+        "value_spacer": "-"
+      },
+      "forms": {
+        "advanced_settings": "Avancerade inställningar",
+        "load_error_message": "There was an error loading the form",
+        "submit_success_message": "The form was successfully submitted",
+        "validation_error_message": "Please fix the errors present in the form"
+      },
+      "gantt_chart": {
+        "button_activate": "Visa Gantt-schema",
+        "button_deactivate": "Dölj Gantt-schema",
+        "filter": {
+          "noneSelection": "(ingen)"
+        },
+        "label": "Gantt-schema",
+        "labels": {
+          "bar": "Bar etiketter",
+          "description": "Select the attributes you want to be shown in the respective positions of the Gantt chart at all times. Note that when hovering over an element, its date labels will be shown instead of these attributes.\n",
+          "farRight": "Längst till höger",
+          "left": "Vänster",
+          "right": "Höger",
+          "title": "Etikettsinställning"
+        },
+        "quarter_label": "Q%{quarter_number}",
+        "selection_mode": {
+          "notification": "Klicka på ett markerat arbetspaket för att skapa relationen. Tryck på escape för att avbryta."
+        },
+        "zoom": {
+          "auto": "Autozoom",
+          "days": "Dagar",
+          "description": "Välj den initiala zoomnivån som ska visas när autozoom inte är tillgänglig.\n",
+          "in": "Zooma in",
+          "months": "Månader",
+          "out": "Zooma ut",
+          "quarters": "Kvartal",
+          "weeks": "Veckor",
+          "years": "År"
+        }
+      },
+      "general_text_No": "Nej",
+      "general_text_Yes": "Ja",
+      "general_text_no": "nej",
+      "general_text_yes": "ja",
+      "github_integration": {
+        "github_actions": "Åtgärder",
+        "pull_requests": {
+          "merged_message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} has been %{pr_state} by %{github_user_link}.",
+          "message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} authored by %{github_user_link} has been %{pr_state}.",
+          "referenced_message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} authored by %{github_user_link} referenced this work package.",
+          "states": {
+            "closed": "stängt",
+            "draft": "drafted",
+            "merged": "merged",
+            "opened": "opened",
+            "ready_for_review": "marked ready for review"
+          }
+        },
+        "tab_header": {
+          "copy_menu": {
+            "description": "Copy git snippets to clipboard",
+            "label": "Git snippets"
+          },
+          "git_actions": {
+            "branch_name": "Branch name",
+            "cmd": "Create branch with empty commit",
+            "commit_message": "Commit message",
+            "copy_error": "❌ Copy failed!",
+            "copy_success": "✅ Copied!",
+            "title": "Quick snippets for Git"
+          },
+          "title": "Pull requests"
+        },
+        "tab_prs": {
+          "empty": "There are no pull requests linked yet. Link an existing PR by using the code <code>OP#%{wp_id}</code> in the PR description or create a new PR."
+        },
+        "work_packages": {
+          "tab_name": "GitHub"
+        }
+      },
+      "gitlab_integration": {
+        "gitlab_pipelines": "Pipelines",
+        "tab_header_issue": {
+          "title": "Problem"
+        },
+        "tab_header_mr": {
+          "copy_menu": {
+            "description": "Copy git snippets to clipboard",
+            "label": "Git snippets"
+          },
+          "create_mr": {
+            "description": "Create a Merge Request",
+            "label": "Create MR"
+          },
+          "git_actions": {
+            "branch_name": "Branch name",
+            "cmd": "Create branch with empty commit",
+            "commit_message": "Commit message",
+            "copy_error": "❌ Copy failed!",
+            "copy_success": "✅ Copied!",
+            "title": "Quick snippets for Git"
+          },
+          "title": "Merge requests"
+        },
+        "tab_issue": {
+          "empty": "There are no issues linked yet. Link an existing issue by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the issue title/description or create a new issue."
+        },
+        "tab_mrs": {
+          "empty": "There are no merge requests linked yet. Link an existing MR by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the MR title/description or create a new MR."
+        },
+        "updated_on": "Uppdaterat den",
+        "work_packages": {
+          "tab_name": "GitLab"
+        }
+      },
+      "global_search": {
+        "all_projects": "I alla projekt",
+        "close_search": "Stäng sökning",
+        "current_project": "I detta projekt",
+        "current_project_and_all_descendants": "I detta projekt + delprojekt",
+        "recently_viewed": "Recently viewed",
+        "search": "Sök",
+        "title": {
+          "all_projects": "alla projekt",
+          "project_and_subprojects": "och alla delprojekt",
+          "search_for": "Sök efter"
+        }
+      },
+      "grid": {
+        "add_widget": "Lägg till widget",
+        "configure": "Konfigurera widget",
+        "remove": "Ta bort widget",
+        "widgets": {
+          "custom_text": {
+            "title": "Egen text"
+          },
+          "documents": {
+            "no_results": "Inga dokument ännu.",
+            "title": "Dokument"
+          },
+          "members": {
+            "add": "Medlem",
+            "no_results": "Inga synliga medlemmar.",
+            "title": "Medlemmar",
+            "too_many": "Visar %{count} av %{total} medlemmar.",
+            "view_all_members": "Visa alla medlemmar"
+          },
+          "missing_permission": "You don't have the necessary permissions to view this widget.",
+          "news": {
+            "at": "vid",
+            "no_results": "Inget nytt att rapportera.",
+            "title": "Nyheter"
+          },
+          "project_description": {
+            "no_results": "Ingen beskrivning har skrivits ännu. Den kan anges i 'Projektinställningar'.",
+            "title": "Projektbeskrivning"
+          },
+          "project_favorites": {
+            "no_results": "You currently have no favorite projects. Click on the star icon in the project dashboard to add one to your favorites.",
+            "title": "Favorite projects"
+          },
+          "project_status": {
+            "at_risk": "I riskzonen",
+            "discontinued": "Discontinued",
+            "finished": "Avslutad",
+            "not_set": "Ej inställd",
+            "not_started": "Inte påbörjad",
+            "off_track": "Urspårat",
+            "on_track": "På rätt spår",
+            "title": "Projektstatus"
+          },
+          "subprojects": {
+            "no_results": "Inga delprojekt.",
+            "title": "Delprojekt"
+          },
+          "time_entries_current_user": {
+            "displayed_days": "Dagar som visas i widgeten:",
+            "title": "My spent time"
+          },
+          "time_entries_list": {
+            "no_results": "Inga tidsinlägg för de senaste 7 dagarna.",
+            "title": "Spenderad tid (senaste 7 dagarna)"
+          },
+          "work_packages_accountable": {
+            "title": "Arbetspaket Jag är ansvarig för"
+          },
+          "work_packages_assigned": {
+            "title": "Arbetspaket som tilldelats till mig"
+          },
+          "work_packages_calendar": {
+            "title": "Kalender"
+          },
+          "work_packages_created": {
+            "title": "Arbetspaket skapade av mig"
+          },
+          "work_packages_graph": {
+            "title": "Graf för arbetspaket"
+          },
+          "work_packages_overview": {
+            "placeholder": "Klicka för att redigera ...",
+            "title": "Översikt över arbetspaket"
+          },
+          "work_packages_table": {
+            "title": "Tabell för arbetspaket"
+          },
+          "work_packages_watched": {
+            "title": "Arbetspaket bevakade av mig"
+          }
+        }
+      },
+      "hal": {
+        "error": {
+          "edit_prohibited": "Redigering av %{attribute} är blockerad för denna resurs. Antingen härrör detta attribut från relationer (t.ex. barn) eller på annat sätt inte konfigurerbar.",
+          "format": {
+            "date": "%{attribute} är inget giltigt datum - förväntat format är åååå-mm-dd."
+          },
+          "general": "Ett fel har inträffat.",
+          "update_conflict_refresh": "Klicka här för att uppdatera resursen och uppdatera till den nyaste versionen."
+        }
+      },
+      "help_texts": {
+        "show_modal": "Show help text"
+      },
+      "homescreen": {
+        "blocks": {
+          "new_features": {
+            "16_1": {
+              "standard": {
+                "new_features_html": "The release contains various new features and improvements, such as <br> <ul class=\"%{list_styling_class}\"> <li>Structure the project life cycle with phases and phase gates.</li> <li>Export meetings in PDF format.</li> <li>Set smart default options for reminders.</li> <li>Use negative lag for work package dates.</li> <li>Display hierarchy trees for hierarchy custom fields.</li> <li>Benefit from improved accessibility for the date picker with ARIA live regions.</li> </ul>\n"
+              }
+            },
+            "learn_about": "Learn more about all new features",
+            "text_new_features": "Läs om nya funktioner och produktuppdateringar."
+          }
+        }
+      },
+      "ical_sharing_modal": {
+        "copy_url_label": "Copy URL",
+        "description": "You can use the URL (iCalendar) to subscribe to this calendar in an external client and view up-to-date work package information from there.",
+        "ical_generation_error_text": "An error occured while generating the calendar URL.",
+        "inital_setup_error_message": "An error occured while fetching data.",
+        "success_message": "The URL \"%{name}\" was successfully copied to your clipboard. Paste it in your calendar client to complete the subscription.",
+        "title": "Subscribe to calendar",
+        "token_name_description_text": "If you subscribe to this calendar from multiple devices, this name will help you distinguish between them in your <a href=\"my/access_token\", target=\"_blank\">access tokens</a> list.",
+        "token_name_label": "Where will you be using this?",
+        "token_name_placeholder": "Ange ett namn, t. ex. \"Telefon\"",
+        "warning": "Please don't share this URL with other users. Anyone with this link will be able to view work package details without an account or password."
+      },
+      "ifc_models": {
+        "empty_warning": "This project does not yet have any IFC models.",
+        "keyboard_input_disabled": "Viewer does not have keyboard controls. Click on the viewer to give keyboard control to the viewer.",
+        "models": {
+          "ifc_models": "IFC-modeller"
+        },
+        "use_this_link_to_manage": "Use this link to upload and manage your IFC models",
+        "views": {
+          "split": "Viewer and table",
+          "split_cards": "Viewer and cards",
+          "viewer": "Viewer"
+        }
+      },
+      "include_projects": {
+        "apply": "Tilldela",
+        "clear_selection": "Clear selection",
+        "include_subprojects": "Include all sub-projects",
+        "no_results": "No project matches your search criteria.",
+        "search_placeholder": "Search project...",
+        "selected_filter": {
+          "all": "Alla projekt",
+          "selected": "Only selected"
+        },
+        "title": "Projekt",
+        "toggle_title": "Include projects",
+        "tooltip": {
+          "current_project": "This is the current project you are in.",
+          "does_not_match_search": "Project does not match the search criteria.",
+          "include_all_selected": "Project already included since Include all sub-projects is enabled."
+        }
+      },
+      "inplace": {
+        "btn_preview_disable": "Inaktivera förhandsgranskning",
+        "btn_preview_enable": "Förhandsgranska",
+        "button_cancel": "%{attribute}: Avbryt",
+        "button_cancel_all": "Avbryt",
+        "button_edit": "%{attribute}: Redigera",
+        "button_save": "%{attribute}: Spara",
+        "button_save_all": "Spara",
+        "clear_value_label": "-",
+        "errors": {
+          "maxlength": "%{field} kan inte innehålla mer än %{maxLength} siffra/siffror",
+          "messages_on_field": "Fältet är ogiltigt: %{messages}",
+          "minlength": "%{field} kan inte innehålla mindre än %{minLength} siffra/siffror",
+          "number": "%{field} är inte ett giltigt tal",
+          "required": "%{field} kan inte vara tomt"
+        },
+        "link_formatting_help": "Hjälp med textformatering",
+        "null_value_label": "Inget värde"
+      },
+      "invite_user_modal": {
+        "back": "Tillbaka",
+        "invite": "Invite",
+        "message": {
+          "description": "We will send an email to the user, to which you can add a personal message here. An explanation for the invitation could be useful, or prehaps a bit of information regarding the project to help them get started.",
+          "label": "Invitation message",
+          "next_button": "Nästa"
+        },
+        "principal": {
+          "already_member_message": "Already a member of %{project}",
+          "create_new_placeholder": "Create new placeholder:",
+          "invite_user": "Invite:",
+          "label": {
+            "name": "Namn",
+            "name_or_email": "Namn eller e-postadress"
+          },
+          "next_button": "Nästa",
+          "no_results_group": "Inga grupper hittades",
+          "no_results_placeholder": "No placeholders were found",
+          "no_results_user": "Inga användare hittades",
+          "required": {
+            "group": "Please select a group",
+            "placeholder": "Please select a placeholder",
+            "user": "Vänligen välj en användare"
+          }
+        },
+        "project": {
+          "label": "Projekt",
+          "lacking_permission": "Please select a different project since you lack permissions to assign users to the currently selected.",
+          "lacking_permission_info": "You lack the permission to assign users to the project you are currently in. You need to select a different one.",
+          "next_button": "Nästa",
+          "no_invite_rights": "You are not allowed to invite members to this project",
+          "no_results": "Inga projekt hittades",
+          "required": "Please select a project"
+        },
+        "role": {
+          "description": "This is the role that the user will receive when they join your project. The role defines which actions they are allowed to take and which information they are allowed to see. <a href=\"https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions\" target=\"_blank\"> Learn more about roles and permissions. </a>",
+          "label": "Role in %{project}",
+          "next_button": "Nästa",
+          "no_roles_found": "Inga roller hittades",
+          "required": "Please select a role"
+        },
+        "success": {
+          "description": {
+            "group": "The group is now a part of %{project}. Meanwhile you can already plan with that group and assign work packages for instance.",
+            "placeholder": "The placeholder can now be used in %{project}. Meanwhile you can already plan with that user and assign work packages for instance.",
+            "user": "The user can now log in to access %{project}. Meanwhile you can already plan with that user and assign work packages for instance."
+          },
+          "next_button": "Fortsätt",
+          "title": "%{principal} was invited!"
+        },
+        "summary": {
+          "next_button": "Skicka inbjudan"
+        },
+        "title": {
+          "Group": "group",
+          "PlaceholderUser": "placeholder user",
+          "User": "användare",
+          "invite": "Bjud in användare",
+          "invite_principal_to_project": "Invite %{principal} to %{project}",
+          "invite_to_project": "Invite %{type} to %{project}"
+        },
+        "type": {
+          "group": {
+            "description": "Permissions based on the assigned role in the selected project",
+            "title": "Grupp"
+          },
+          "placeholder": {
+            "description": "Has no access to the project and no emails are sent out.",
+            "description_no_ee": "Has no access to the project and no emails are sent out. <br>Check out the <a href=\"%{eeHref}\" target=\"_blank\">Enterprise edition</a>",
+            "title": "Placeholder user",
+            "title_no_ee": "Placeholder user (Enterprise edition only add-on)"
+          },
+          "required": "Please select the type to be invited",
+          "user": {
+            "description": "Permissions based on the assigned role in the selected project",
+            "title": "Användare"
+          }
+        }
+      },
+      "label_activate": "Aktivera",
+      "label_activity_show_all": "Visa aktiviteter",
+      "label_activity_show_only_comments": "Visa aktiviteter med endast kommentarer",
+      "label_add_attachments": "Attach files",
+      "label_add_column_after": "Lägg till kolumn efter",
+      "label_add_column_before": "Lägg till kolumn före",
+      "label_add_columns": "Lägg till kolumn",
+      "label_add_comment": "Lägg till kommentar",
+      "label_add_comment_title": "Kommentera och skriv @ för att meddela andra personer",
+      "label_add_description": "Lägga till en beskrivning för %{file}",
+      "label_add_row_after": "Lägg till rad efter",
+      "label_add_row_before": "Lägg till rad före",
+      "label_add_selected_columns": "Lägga till markerade kolumner",
+      "label_added_by": "lagts till av",
+      "label_added_time_by": "Added by <a href=\"%{authorLink}\">%{author}</a> at %{age}",
+      "label_ago": "dagar sedan",
+      "label_all": "alla",
+      "label_all_uppercase": "Alla",
+      "label_all_work_packages": "alla arbetspaket",
+      "label_and": "och",
+      "label_ascending": "Stigande",
+      "label_assignee": "Tilldelad till",
+      "label_attachments": "Bilagor",
+      "label_author": "Författare: %{user}",
+      "label_avatar": "Profilbild",
+      "label_between": "mellan",
+      "label_board": "Tavla",
+      "label_board_locked": "Låst",
+      "label_board_plural": "Tavlor",
+      "label_board_sticky": "Klistrad",
+      "label_cancel_comment": "Avbryt kommentar",
+      "label_change": "Ändra",
+      "label_children_derived_duration": "Work package's children derived duration",
+      "label_closed_work_packages": "stängda",
+      "label_collapse": "Fäll ihop",
+      "label_collapse_all": "Fäll ihop alla",
+      "label_collapsed": "hopfällda",
+      "label_columns": "Kolumner",
+      "label_comment": "Kommentar",
+      "label_committed_at": "%{committed_revision_link} den %{date}",
+      "label_committed_link": "lade till revision %{revision_identifier}",
+      "label_contains": "innehåller",
+      "label_create": "Skapa",
+      "label_create_work_package": "Skapa nya arbetspaket",
+      "label_created_by": "Skapad av",
+      "label_created_on": "skapad den",
+      "label_current": "current",
+      "label_custom_queries": "Private",
+      "label_date": "Datum",
+      "label_date_with_format": "Ange %{date_attribute} med följande format: %{format}",
+      "label_deactivate": "Deaktivera",
+      "label_default_queries": "Standard",
+      "label_descending": "Fallande",
+      "label_description": "Beskrivning",
+      "label_details": "Detaljer",
+      "label_display": "Visa",
+      "label_drop_files": "Drop files here to attach files.",
+      "label_drop_folders_hint": "Du kan inte ladda upp mappar som bilaga. Välj enstaka filer.",
+      "label_drop_or_click_files": "Drop files here or click to attach files.",
+      "label_edit_comment": "Redigera kommentaren",
+      "label_edit_status": "Redigera status för arbetspaketet",
+      "label_email": "E-post",
+      "label_equals": "är",
+      "label_expand": "Expandera",
+      "label_expand_all": "Expandera alla",
+      "label_expand_project_menu": "Expandera projektmenyn",
+      "label_expanded": "expanderade",
+      "label_export": "Exportera",
+      "label_export_preparing": "The export is being prepared and will be downloaded shortly.",
+      "label_favorites": "Favoriter",
+      "label_filename": "Fil",
+      "label_files_to_upload": "Dessa filer kommer att laddas upp:",
+      "label_filesize": "Filstorlek",
+      "label_formattable_attachment_hint": "Bifoga och länka filer genom att släppa på fältet, eller klistra in från Urklipp.",
+      "label_general": "Allmänt",
+      "label_global_queries": "Offentlig",
+      "label_greater_or_equal": ">=",
+      "label_group": "Grupp",
+      "label_group_by": "Gruppera efter",
+      "label_group_plural": "Grupper",
+      "label_hide_attributes": "Visa mindre",
+      "label_hide_column": "Dölj kolumn",
+      "label_hide_project_menu": "Minimera projektmenyn",
+      "label_hour": "timme",
+      "label_hours": "timmar",
+      "label_import": "Importera",
+      "label_in": "i",
+      "label_in_less_than": "i mindre än",
+      "label_in_more_than": "i mer än",
+      "label_incoming_emails": "Inkommande E-post",
+      "label_information_plural": "Information",
+      "label_invalid": "Invalid",
+      "label_last_updated_on": "Senast uppdaterad den",
+      "label_latest_activity": "Senaste aktivitet",
+      "label_learn_more_link": "Lär dig mer",
+      "label_less_or_equal": "<=",
+      "label_less_than_ago": "mindre än dagar sedan",
+      "label_loading": "Laddar...",
+      "label_mail_notification": "E-postaviseringar",
+      "label_manage_columns": "Manage and reorder columns",
+      "label_me": "mig",
+      "label_meeting_agenda": "Agenda",
+      "label_meeting_minutes": "Protokoll",
+      "label_meetings": "Möten",
+      "label_menu_collapse": "fäll ihop",
+      "label_menu_expand": "expandera",
+      "label_moderate_comment": "Moderate comment",
+      "label_more_than_ago": "mer än dagar sedan",
+      "label_next": "Nästa",
+      "label_no_color": "Ingen färg",
+      "label_no_data": "Ingen data att visa",
+      "label_no_date": "no date",
+      "label_no_due_date": "no finish date",
+      "label_no_start_date": "inget startdatum",
+      "label_no_value": "Inget värde",
+      "label_none": "inga",
+      "label_not_contains": "innehåller inte",
+      "label_not_equals": "är inte",
+      "label_on": "på",
+      "label_open_context_menu": "Öppna kontextmenyn",
+      "label_open_menu": "Öppna meny",
+      "label_open_work_packages": "öppna",
+      "label_password": "Lösenord",
+      "label_per_page": "Per sida:",
+      "label_please_wait": "Vänligen vänta",
+      "label_press_enter_to_save": "Tryck på enter för att spara.",
+      "label_preview": "Förhandsgranska",
+      "label_previous": "Föregående",
+      "label_project": "Projekt",
+      "label_project_list": "Projektlistor",
+      "label_project_plural": "Projekt",
+      "label_public_query": "Offentlig",
+      "label_quote_comment": "Citera denna kommentar",
+      "label_recent": "Recent",
+      "label_rejected_files": "Dessa filer går inte att ladda upp:",
+      "label_rejected_files_reason": "Dessa filer går inte att ladda upp eftersom deras storlek är större än %{maximumFilesize}",
+      "label_remove": "Ta bort",
+      "label_remove_all_files": "Ta bort alla filer",
+      "label_remove_column": "Ta bort kolumn",
+      "label_remove_columns": "Ta bort markerade kolumner",
+      "label_remove_file": "Radera %{fileName}",
+      "label_remove_row": "Ta bort rad",
+      "label_remove_watcher": "Ta bort bevakare %{name}",
+      "label_report": "Rapport",
+      "label_repository_plural": "Versionsarkiv",
+      "label_reset": "Återställ",
+      "label_save_as": "Spara som",
+      "label_search_columns": "Search a column",
+      "label_select_project": "Välj ett projekt",
+      "label_select_watcher": "Välj en bevakare...",
+      "label_selected_filter_list": "Valda filter",
+      "label_show_attributes": "Visa alla attribut",
+      "label_show_in_menu": "Visa vyn i menyn",
+      "label_sort_by": "Sortera efter",
+      "label_sort_higher": "Flytta upp",
+      "label_sort_lower": "Flytta ned",
+      "label_sorted_by": "sorterade efter",
+      "label_sorting": "Sortering",
+      "label_spent_time": "Förbrukad tid",
+      "label_star_query": "Föredragen",
+      "label_starred_queries": "Favorite",
+      "label_subject": "Ämne",
+      "label_sum": "Summa",
+      "label_sum_for": "Summa för",
+      "label_this_week": "denna vecka",
+      "label_time_entry_plural": "Förbrukad tid",
+      "label_today": "Today",
+      "label_total_amount": "Totalt: %{amount}",
+      "label_total_progress": "%{percent}% Totalt klart",
+      "label_total_sum": "Total sum",
+      "label_unwatch": "Sluta bevaka",
+      "label_unwatch_work_package": "Sluta bevaka arbetspaket",
+      "label_up": "Upp",
+      "label_updated_on": "uppdaterad den",
+      "label_upload_counter": "%{done} av %{count} filer färdiga",
+      "label_upload_notification": "Laddar upp fil(er)...",
+      "label_uploaded_by": "Uppladdad av",
+      "label_user_plural": "Användare",
+      "label_validation_error": "Arbetspaketet kunde inte sparas på grund av följande fel:",
+      "label_value_derived_from_children": "(värde härrör från barn)",
+      "label_version_plural": "Versioner",
+      "label_view_has_changed": "Denna vy har osparade ändringar. Klicka för att spara dem.",
+      "label_visibility_settings": "Synlighet inställningar",
+      "label_wait": "Vänligen vänta för konfiguration...",
+      "label_warning": "Varning",
+      "label_watch": "Bevaka",
+      "label_watch_work_package": "Bevaka arbetspaket",
+      "label_watcher_added_successfully": "Bevakare har lagts till!",
+      "label_watcher_deleted_successfully": "Bevakare har tagits bort!",
+      "label_work_package": "Arbetspaket",
+      "label_work_package_context_menu": "Work package context menu",
+      "label_work_package_details_you_are_here": "You are on the %{tab} tab for %{type} %{subject}.",
+      "label_work_package_parent": "Parent work package",
+      "label_work_package_plural": "Arbetspaket",
+      "label_work_package_upload_notification": "Ladda upp filer för arbetspaket #%{id}: %{subject}",
+      "label_wp_id_added_by": "#%{id} tillagd av %{author}",
+      "modals": {
+        "button_apply": "Tilldela",
+        "button_cancel": "Avbryt",
+        "button_delete": "Radera",
+        "button_save": "Spara",
+        "button_submit": "Skicka",
+        "destroy_time_entry": {
+          "text": "Are you sure you want to delete the following time entry?",
+          "title": "Confirm deletion of time entry"
+        },
+        "destroy_work_package": {
+          "bulk_text": "Are you sure you want to delete the following %{label}?",
+          "confirm_deletion_children": "Jag bekräftar att allt underliggande till de listade arbetspaketen kommer att tas bort rekursivt.",
+          "deletes_children": "Alla barnarbetspaket och deras underliggande kommer också att raderas rekursivt.",
+          "has_children": "Arbetspaketet har %{childUnits}:",
+          "single_text": "Are you sure you want to delete the work package",
+          "title": "Bekräfta radering av %{label}"
+        },
+        "form_submit": {
+          "text": "Är du säker på att du vill utföra den här åtgärden?",
+          "title": "Bekräfta för att fortsätta"
+        },
+        "label_delete_page": "Ta bort aktuell sida",
+        "label_name": "Namn"
+      },
+      "myTimeTracking": {
+        "noSpecificTime": "No specific time"
+      },
+      "my_page": {
+        "label": "Min sida"
+      },
+      "notice_bad_request": "Felaktig förfrågan.",
+      "notice_job_started": "job started.",
+      "notice_no_results_to_display": "Inga synliga resultat att visa.",
+      "notice_successful_create": "Skapades utan problem.",
+      "notice_successful_delete": "Raderades utan problem.",
+      "notice_successful_update": "Uppdaterades utan problem.",
+      "notifications": {
+        "center": {
+          "and_more_users": {
+            "one": "och 1 annan",
+            "other": "och %{count} andra"
+          },
+          "empty_state": {
+            "no_notification": "Looks like you are all caught up.",
+            "no_notification_for_filter": "Looks like you are all caught up for this filter.",
+            "no_notification_with_current_filter": "Looks like you are all caught up for %{filter} filter.",
+            "no_notification_with_current_project_filter": "Looks like you are all caught up with the selected project.",
+            "no_selection": "Click on a notification to view all activity details."
+          },
+          "label_actor_and": "och",
+          "mark_all_read": "Mark all as read",
+          "mark_all_read_confirmation": "This will mark all notifications in this view as read. Are you sure you want to do this?",
+          "mark_as_read": "Mark as read",
+          "new_notifications": {
+            "link_text": "Click here to load them.",
+            "message": "There are new notifications."
+          },
+          "no_results": {
+            "at_all": "New notifications will appear here when there is activity that concerns you.",
+            "with_current_filter": "There are no notifications in this view at the moment"
+          },
+          "text_update_date_by": "%{date} by",
+          "total_count_warning": "Showing the %{newest_count} most recent notifications. %{more_count} more are not displayed."
+        },
+        "date_alerts": {
+          "milestone_date": "Milestone date",
+          "overdue": "Overdue",
+          "overdue_since": "since %{difference_in_days}.",
+          "property_is": "is in %{difference_in_days}.",
+          "property_is_deleted": "is deleted.",
+          "property_today": "is today.",
+          "property_was": "was %{difference_in_days} ago."
+        },
+        "no_unread": "No unread notifications",
+        "reasons": {
+          "assigned": "Tilldelad till",
+          "commented": "Kommenterade",
+          "created": "Skapad",
+          "dateAlert": "Date alert",
+          "mentioned": "Mentioned",
+          "prioritized": "Prioritized",
+          "processed": "Processed",
+          "reminder": "Reminder",
+          "responsible": "Huvudansvarig",
+          "scheduled": "Schemalagt",
+          "shared": "Shared",
+          "watched": "Bevakare"
+        },
+        "reminders": {
+          "note": "Note: “%{note}”"
+        },
+        "settings": {
+          "change_notification_settings": "You can modify your <a target=\"_blank\" href=\"%{url}\">notification settings</a> to ensure you never miss an important update.",
+          "global": {
+            "date_alerts": {
+              "description": "Automatic notifications when important dates are approaching for open work packages you are involved in (assignee, accountable or watcher).",
+              "title": "Date alerts"
+            },
+            "delayed": {
+              "description": "Additional notifications for activities in all projects.",
+              "title": "Non-participating"
+            },
+            "immediately": {
+              "description": "Notifications for all activities in work packages you are involved in (assignee, accountable or watcher).",
+              "title": "Participating"
+            },
+            "overdue": "When overdue"
+          },
+          "notify_me": "Notify me",
+          "project_specific": {
+            "add": "Add setting for project",
+            "already_selected": "This project is already selected",
+            "description": "These project-specific settings override default settings above.",
+            "remove": "Remove project settings",
+            "title": "Project-specific notification settings"
+          },
+          "reasons": {
+            "assignee": "Tilldelad till",
+            "mentioned": {
+              "description": "Receive a notification every time someone mentions me anywhere",
+              "title": "Mentioned"
+            },
+            "responsible": "Huvudansvarig",
+            "shared": "Shared",
+            "watched": "Bevakare",
+            "work_package_commented": "All new comments",
+            "work_package_created": "New work packages",
+            "work_package_prioritized": "All priority changes",
+            "work_package_processed": "All status changes",
+            "work_package_scheduled": "All date changes"
+          },
+          "reminders": {
+            "no_notification": "No notification",
+            "timeframes": {
+              "normal": {
+                "P1D": "1 day before",
+                "P3D": "3 days before",
+                "P7D": "a week before",
+                "PT0S": "same day"
+              },
+              "overdue": {
+                "P1D": "varje dag",
+                "P3D": "every 3 days",
+                "P7D": "every week"
+              }
+            }
+          },
+          "title": "Notification settings"
+        },
+        "title": "Notifications"
+      },
+      "onboarding": {
+        "buttons": {
+          "got_it": "Jag fattar",
+          "next": "Nästa",
+          "skip": "Hoppa över"
+        },
+        "steps": {
+          "backlogs": {
+            "overview": "Manage your work in the <b>backlogs</b> view.",
+            "sprints": "On the right you have the product backlog and the bug backlog, on the left you have the respective sprints. Here you can create <b>epics, user stories, and bugs</b>, prioritize via drag & drop and add them to a sprint.",
+            "task_board": "The task board visualizes the <b>progress for this sprint</b>. Click on the plus (+) icon next to a user story to add new tasks or impediments. <br> The status can be updated by drag and drop.",
+            "task_board_arrow": "To see your <b>task board</b>, open the sprint drop-down...",
+            "task_board_select": "...and select the <b>task board</b> entry."
+          },
+          "boards": {
+            "add": "Click on the plus (+) icon to <b>create a new card</b> or <b>add an existing card</b> to the list on the board.",
+            "drag": "Drag and drop your cards within a given list to reorder them, or to move them to another list. <br> You can click the info (i) icon in the upper right-hand corner or double-click a card to open its details.",
+            "lists_basic": "Here you can create multiple lists (columns) within your agile board.",
+            "lists_kanban": "Here you can create multiple lists (columns) within your board. This feature allows you to create a <b>Kanban board</b>, for example.",
+            "overview": "Select <b>boards</b> to shift the view and manage your project using the agile boards view."
+          },
+          "help_menu": "The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with OpenProject!",
+          "members": "Invite new <b>members</b> to join your project.",
+          "quick_add_button": "Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>.",
+          "sidebar_arrow": "Use the return arrow in the top left corner to return to the project’s <b>main menu</b>.",
+          "team_planner": {
+            "add_assignee": "To get started, add assignees to the team planner.",
+            "add_existing": "Search for existing work packages and drag them to the team planner to instantly assign them to a team member and define start and end dates.",
+            "calendar": "The weekly or biweekly planning board displays all work packages assigned to your team members.",
+            "card": "Drag work packages horizontally to move them backwards or forwards in time, drag the edges to change start and end dates and even drag them vertically to a different row to assign them to another member.",
+            "overview": "The team planner lets you visually assign tasks to team members and get an overview of who is working on what."
+          },
+          "welcome": "Take a three-minute introduction tour to learn the most <b>important features</b>. <br> We recommend completing the steps until the end. You can restart the tour any time.",
+          "wiki": "Within the <b>wiki</b> you can document and share knowledge together with your team.",
+          "wp": {
+            "back_button": "Use the return arrow in the top left corner to exit and return to the work package list.",
+            "create_button": "The <b>+ Create</b> button will add a new work package to your project.",
+            "full_view": "The <b>work package details</b> view provides all the relevant information pertaining to a given work package, such as its description, status, priority, activities, dependencies, and comments.",
+            "gantt_menu": "Create project schedules and timelines effortlessly using the Gantt chart module.",
+            "list": "This <b>work</b> package overview provides a list of all the work in your project, such as tasks, milestones, phases, and more. <br> Work packages can be created and edited directly from this view. To access the details of a particular work package, simply double-click its row.",
+            "timeline": "Here you can <b>edit your project plan</b>, create new work packages, such as tasks, milestones, phases, and more, as well as <b>add dependencies</b>. All team members can see and update the latest plan at any time.",
+            "toggler": "Now let's have a look at the <b>work package</b> section, which gives you a more detailed view of your work."
+          }
+        }
+      },
+      "open_project_storage_modal": {
+        "waiting_subtitle": {
+          "network_off": "There is a network problem.",
+          "network_on": "Network is back. We are trying."
+        },
+        "waiting_title": {
+          "timeout": "Timeout"
+        }
+      },
+      "overviews": {
+        "label": "Översikt"
+      },
+      "pagination": {
+        "no_other_page": "Du befinner dig på den enda sidan.",
+        "pages": {
+          "next": "Fortsätt till nästa sida",
+          "previous": "Bakåt till föregående sida"
+        }
+      },
+      "password_confirmation": {
+        "field_description": "Du behöver ange ditt lösenord för att bekräfta ändringen.",
+        "title": "Bekräfta ditt lösenord för att fortsätta"
+      },
+      "placeholders": {
+        "default": "-",
+        "description": "Description: Click to edit...",
+        "relation_description": "Klicka för att ange beskrivning för denna relation",
+        "selection": "Välj",
+        "subject": "Ange ämne här"
+      },
+      "project": {
+        "autocompleter": {
+          "label": "Automatisk komplettering av projekt"
+        },
+        "click_to_switch_to_project": "Projekt: %{projectname}",
+        "confirm_template_load": "Switching the template will reload the page and you will lose all input to this form. Continue?",
+        "context": "Projektsammanhang",
+        "copy": {
+          "copy_options": "Copy options"
+        },
+        "no_template_selected": "(None)",
+        "not_available": "Project N/A",
+        "required_outside_context": "Välj ett projekt för att skapa arbetspaketet för att se alla attribut. Du kan bara välja projekt som har typen ovan aktiverad.\n",
+        "use_template": "Use template"
+      },
+      "project_menu_details": "Detaljer",
+      "relation_buttons": {
+        "abort": "Avbryt",
+        "add_existing": "Lägg till befintlig",
+        "add_existing_child": "Lägg till underordnad",
+        "add_existing_relation": "Lägg till befintlig relation",
+        "add_new_child": "Skapa nytt barn",
+        "add_new_relation": "Skapa ny relation",
+        "add_parent": "Lägga till befintlig förälder",
+        "add_predecessor": "Lägg till föregångare",
+        "add_successor": "Add successor",
+        "change_parent": "Ändra överordnad",
+        "create_new": "Skapa ny",
+        "group_by_relation_type": "Gruppera efter relationstyp",
+        "group_by_wp_type": "Gruppera efter arbetspakettyp",
+        "hierarchy_indent": "Öka indrag för hierarki",
+        "hierarchy_outdent": "Minska indrag för hierarki",
+        "remove": "Radera relation",
+        "remove_child": "Ta bort barn",
+        "remove_parent": "Ta bort förälder",
+        "save": "Spara relation",
+        "set_parent": "Ange förälder",
+        "show_relations": "Show relations",
+        "toggle_description": "Visa/dölj relationsbeskrivning",
+        "update_description": "Ange eller uppdatera beskrivningen av denna relation",
+        "update_relation": "Klicka för att ändra relationstypen"
+      },
+      "relation_labels": {
+        "blocked": "Blockerad av",
+        "blocks": "Block",
+        "child": "Child",
+        "children": "Barn",
+        "duplicated": "Duplicerad av",
+        "duplicates": "Dubbletter",
+        "follows": "Följer",
+        "includes": "Inkluderar",
+        "parent": "Överordnad",
+        "partof": "Del av",
+        "precedes": "Föregår",
+        "relates": "Relaterade till",
+        "relation_type": "relationstyp",
+        "required": "Krävs av",
+        "requires": "Kräver"
+      },
+      "relations": {
+        "empty": "Inga samband finns",
+        "remove": "Radera relation"
+      },
+      "relations_autocomplete": {
+        "parent_placeholder": "Välj ny förälder eller tryck på escape för att avbryta.",
+        "placeholder": "Skriv för att söka"
+      },
+      "relations_hierarchy": {
+        "children_headline": "Barn",
+        "hierarchy_headline": "Hierarchy",
+        "parent_headline": "Överordnad"
+      },
+      "reminders": {
+        "settings": {
+          "alerts": {
+            "document_added": "Documents added",
+            "explanation": "Notifications today are limited to work packages. You can choose to continue receiving email alerts for these events until they are included in notifications:\n",
+            "forum_messages": "New forum messages",
+            "membership_added": "Membership added",
+            "membership_updated": "Membership updated",
+            "news_added": "Nyheter tillagda",
+            "news_commented": "Comment on a news item",
+            "title": "Email alerts for other items (that are not work packages)",
+            "wiki_page_added": "Wiki-sidan tillagd",
+            "wiki_page_updated": "Wiki-sidan uppdaterad"
+          },
+          "daily": {
+            "add_time": "Add time",
+            "enable": "Enable daily email reminders",
+            "explanation": "You will receive these reminders only for unread notifications and only at hours you specify. %{no_time_zone}",
+            "no_time_zone": "Until you configure a time zone for your account, the times will be interpreted to be in UTC.",
+            "time_label": "Time %{counter}:",
+            "title": "Send me daily email reminders for unread notifications"
+          },
+          "immediate": {
+            "mentioned": "Immediately when someone @mentions me",
+            "personal_reminder": "Immediately when I receive a personal reminder",
+            "title": "Send me an email reminder"
+          },
+          "pause": {
+            "first_day": "First day",
+            "label": "Temporarily pause daily email reminders",
+            "last_day": "Last day"
+          },
+          "title": "Email reminders",
+          "workdays": {
+            "title": "Receive email reminders on these days"
+          }
+        }
+      },
+      "reporting_engine": {
+        "label_remove": "Ta bort",
+        "label_response_error": "Det uppstod ett fel när frågan hanterades."
+      },
+      "repositories": {
+        "select_branch": "Välj gren",
+        "select_tag": "Välj etikett"
+      },
+      "revit": {
+        "revit_add_in": "Revit Add-In",
+        "revit_add_in_settings": "Revit Add-In settings"
+      },
+      "sharing": {
+        "selected_count": "%{count} selected",
+        "selection": {
+          "mixed": "Mixed"
+        },
+        "share": "Dela"
+      },
+      "sort": {
+        "activate_asc": "aktivera om du vill tillämpa stigande sortering",
+        "activate_dsc": "aktivera om du vill tillämpa fallande sortering",
+        "activate_no": "aktivera för att ta bort sortering",
+        "sorted_asc": "Stigande sortering används, ",
+        "sorted_dsc": "Fallande sortering används, ",
+        "sorted_no": "Ingen sortering används, ",
+        "sorting_disabled": "sortering är inaktiverad"
+      },
+      "spot": {
+        "drop_modal": {
+          "close": "Close modal",
+          "focus_grab": "This is a focus anchor for modals. Press shift+tab to go back to the modal trigger element."
+        },
+        "filter_chip": {
+          "remove": "Ta bort"
+        }
+      },
+      "storages": {
+        "authentication_error": "Authentication with %{storageType} failed",
+        "choose_location": "Choose location",
+        "drop_files": "Drop files here to upload them to %{name}.",
+        "drop_or_click_files": "Drop files here or click to upload them to %{name}.",
+        "file_links": {
+          "already_linked_directory": "This directory is already linked to this work package.",
+          "already_linked_file": "This file is already linked to this work package.",
+          "download": "Download %{fileName}",
+          "empty": "Currently there are no linked files to this work package. Start linking files with the action below or from within %{storageType}.\n",
+          "link_uploaded_file_error": "An error occurred linking the recently uploaded file '%{fileName}' to the work package %{workPackageId}.\n",
+          "open": "Open file on storage",
+          "open_location": "Open file in location",
+          "remove": "Remove file link",
+          "remove_confirmation": "Are you sure you want to unlink the file from this work package? Unlinking does not affect the original file and only removes the connection to this work package.\n",
+          "remove_short": "Remove link",
+          "select": "Select files",
+          "select_all": "Markera alla",
+          "selection": {
+            "one": "Link 1 file",
+            "other": "Link %{count} files",
+            "zero": "Select files to link"
+          },
+          "success_create": {
+            "one": "Successfully created 1 file link.",
+            "other": "Successfully created %{count} file links."
+          },
+          "tooltip": {
+            "not_found": "This file cannot be found.",
+            "not_logged_in": "Please log in to the storage to access this file.",
+            "view_not_allowed": "You have no permission to see this file."
+          },
+          "upload_error": {
+            "403": "Your file (%{fileName}) could not be uploaded due to system restrictions. Please contact your administrator for more information.\n",
+            "413": "Your file (%{fileName}) is bigger than what OpenProject can upload to %{storageType}. You can upload it directly to %{storageType} first and then link the file.\n",
+            "507": "Your file (%{fileName}) is bigger than the storage quota allows. Contact your administrator to modify this quota.\n",
+            "default": "Your file (%{fileName}) could not be uploaded.\n",
+            "detail": {
+              "nextcloud": "Please check that the latest version of the Nextcloud App \"OpenProject Integration\" is installed and contact your administrator for more information.\n"
+            }
+          }
+        },
+        "files": {
+          "already_existing_body": "A file with the name \"%{fileName}\" already exists in the location where you are trying to upload this file. What would you like to do?\n",
+          "already_existing_header": "This file already exists",
+          "cannot_create_folder": "Failed to create folder. Avoid using special characters and symbols and make sure the folder does not exist already.",
+          "directory_not_writeable": "You do not have permission to add files to this folder.",
+          "dragging_folder": "The upload to %{storageType} does not support folders.",
+          "dragging_many_files": "The upload to %{storageType} supports only one file at once.",
+          "empty_folder": "Denna mapp är tom.",
+          "empty_folder_location_hint": "Click the button below to upload the file to this location.",
+          "file_not_selectable_location": "Selecting a file is not possible in the process of choosing a location.",
+          "managed_project_folder_no_access": "You have no access yet to the managed project folder. Please wait a bit and try again.\n",
+          "managed_project_folder_not_available": "The automatically managed project folder was not yet found. Please wait a bit, reload the page to fetch the newest data, and try again.\n",
+          "project_folder_no_access": "You have no access to the project folder. Please, contact your administrator to get access or upload the file in another location.\n",
+          "upload_keep_both": "Keep both",
+          "upload_replace": "Ersätt"
+        },
+        "information": {
+          "authentication_error": "The request to %{storageType} could not be authenticated, that's an error.",
+          "connection_error": "Some %{storageType} settings are not working. Please contact your %{storageType} administrator.\n",
+          "live_data_error": "Error fetching file details",
+          "live_data_error_description": "Some %{storageType} data could not be fetched. Please try to reload this page or contact your %{storageType} administrator.\n",
+          "no_file_links": "In order to link files to this work package please do it via %{storageType}.",
+          "not_logged_in": "To add a link, see or upload files related to this work package, please login to %{storageType}.\n",
+          "suggest_logout": "You can try whether logging out and back in fixes this problem.",
+          "suggest_relink": "You can try whether re-linking your account via the login button below fixes this problem."
+        },
+        "link_existing_files": "Link existing files",
+        "link_files_in_storage": "Link files in %{storageType}",
+        "login": "%{storageType} login",
+        "login_to": "Login to %{storageType}",
+        "new_folder": "New folder",
+        "no_connection": "No %{storageType} connection",
+        "open_storage": "Open %{storageType}",
+        "select_location": "Select location",
+        "types": {
+          "default": "Storage",
+          "nextcloud": "Nextcloud",
+          "one_drive": "OneDrive/SharePoint"
+        },
+        "upload_files": "Upload files"
+      },
+      "team_planner": {
+        "add_assignee": "Tilldelad till",
+        "add_existing": "Lägg till befintlig",
+        "add_existing_title": "Add existing work packages",
+        "cannot_drag_here": "Cannot remove the work package due to permissions or editing restrictions.",
+        "cannot_drag_to_non_working_day": "This work package cannot start/finish on a non-working day.",
+        "create_label": "Team planerare",
+        "create_title": "Skapa ny teamplanerare",
+        "drag_here_to_remove": "Drag here to remove assignee and start and end dates.",
+        "eight_weeks": "8-week",
+        "four_weeks": "4-week",
+        "modify": {
+          "errors": {
+            "fallback": "This work package cannot be edited.",
+            "permission_denied": "You do not have the necessary permissions to modify this."
+          }
+        },
+        "no_data": "Add assignees to set up your team planner.",
+        "one_week": "1-week",
+        "quick_add": {
+          "empty_state": "Use the search field to find work packages and drag them to the planner to assign it to someone and define start and end dates.",
+          "search_placeholder": "Sök..."
+        },
+        "remove_assignee": "Remove assignee",
+        "today": "Today",
+        "two_weeks": "2-week",
+        "unsaved_title": "Unnamed team planner",
+        "work_week": "Work week"
+      },
+      "text_are_you_sure": "Är du säker?",
+      "text_data_lost": "All entered data will be lost.",
+      "text_query_destroy_confirmation": "Är du säker på att du vill ta bort den markerade vyn?",
+      "text_user_wrote": "%{value} skrev:",
+      "text_work_packages_destroy_confirmation": "Är du säker du vill ta bort det valda arbetspaket(paketen)?",
+      "time_entry": {
+        "stop": "Stop",
+        "title": "Logga tid",
+        "tracking": "Tidredovisning",
+        "work_package_required": "Requires selecting a work package first."
+      },
+      "timer": {
+        "button_stop": "Stop current timer",
+        "start_new_timer": "Start new timer",
+        "timer_already_running": "To start a new timer, you must first stop the current timer:",
+        "timer_already_stopped": "No active timer for this work package, have you stopped it in another window?",
+        "tracking_time": "Tracking time"
+      },
+      "tl_toolbar": {
+        "outlines": "Hierarkinivå",
+        "zooms": "Zoomnivå"
+      },
+      "toolbar": {
+        "filter": "Filter",
+        "search_query_label": "Sök sparade vyer",
+        "settings": {
+          "columns": "Kolumner",
+          "configure_view": "Configure view",
+          "delete": "Radera",
+          "display_hierarchy": "Visa hierarki",
+          "display_sums": "Visa summor",
+          "export": "Exportera",
+          "group_by": "Gruppera efter",
+          "hide_hierarchy": "Dölj hierarki",
+          "hide_sums": "Dölj summor",
+          "page_settings": "Byt namn på vyn",
+          "save": "Spara",
+          "save_as": "Spara som",
+          "share_calendar": "Subscribe to calendar",
+          "sort_by": "Sortera efter",
+          "visibility_settings": "Synlighet inställningar"
+        },
+        "unselected_title": "Arbetspaket"
+      },
+      "two_factor_authentication": {
+        "errors": {
+          "aborted": "The authentication was cancelled. Please try again."
+        },
+        "label_two_factor_authentication": "Tvåfaktorsautentisering"
+      },
+      "types": {
+        "attribute_groups": {
+          "confirm_reset": "Varning: Är du säker på att du vill återställa formulärinställningarna? Detta kommer att återställa attributen till deras standardgrupper, avmarkera kryssrutorna för synlighet samt inaktivera samtliga anpassade fält.\n",
+          "error_duplicate_group_name": "Namnet %{group} används redan. Gruppnamn måste vara unika.",
+          "error_no_table_configured": "Konfigurera en tabell för %{group}.",
+          "more_information": "Mer information",
+          "nevermind": "Det var inget",
+          "reset_title": "Återställ formulärinställningarna",
+          "upgrade_to_ee": "Upgrade to Enterprise on-premises edition",
+          "upgrade_to_ee_text": "Wow! If you need this add-on you are a super pro! Would you mind supporting us OpenSource developers by becoming an Enterprise edition client?"
+        }
+      },
+      "units": {
+        "child_work_packages": {
+          "one": "ett barnarbetspaket",
+          "other": "%{count} arbetspaket barn"
+        },
+        "day": {
+          "one": "1 dag",
+          "other": "%{count} dagar",
+          "zero": "0 dagar"
+        },
+        "hour": {
+          "one": "1 tim",
+          "other": "%{count} timmar",
+          "zero": "0 h"
+        },
+        "word": {
+          "one": "1 ord",
+          "other": "%{count} ord"
+        },
+        "workPackage": {
+          "one": "arbetspaket",
+          "other": "arbetspaket"
+        }
+      },
+      "upsell": {
+        "ee_only": "Enterprise edition add-on"
+      },
+      "views": {
+        "card": "Kort",
+        "list": "Tabell",
+        "timeline": "Gantt-schema"
+      },
+      "watchers": {
+        "label_add": "Lägg till bevakare",
+        "label_discard": "Förkasta val",
+        "label_error_loading": "Ett fel inträffade när bevakarna laddades",
+        "label_loading": "laddar bevakare...",
+        "label_search_watchers": "Sök bevakare",
+        "typeahead_placeholder": "Sök efter möjliga bevakare"
+      },
+      "wiki_formatting": {
+        "code": "Inline-källkod",
+        "deleted": "Borttagna",
+        "heading1": "Rubrik 1",
+        "heading2": "Rubrik 2",
+        "heading3": "Rubrik 3",
+        "image": "Bild",
+        "italic": "Kursiv",
+        "ordered_list": "Sorterad lista",
+        "preformatted_text": "Förformaterad Text",
+        "quote": "Citat",
+        "strong": "Fetstil",
+        "underline": "Understruken",
+        "unordered_list": "Osorterad lista",
+        "unquote": "Slutcitat",
+        "wiki_link": "Länka till en Wiki-sida"
+      },
+      "work_packages": {
+        "baseline": {
+          "addition_label": "Added to view within the comparison time period",
+          "column_incompatible": "This column does not show changes in Baseline mode.",
+          "modification_label": "Modified within the comparison time period",
+          "removal_label": "Removed from view within the comparison time period"
+        },
+        "bulk_actions": {
+          "copy": "Bulkkopiera",
+          "delete": "Massborttagning",
+          "edit": "Lägg till/Ändra",
+          "move": "Bulk-ändra projekt"
+        },
+        "button_clear": "Rensa",
+        "comment_added": "Kommentaren lades till.",
+        "comment_send_failed": "Ett fel har inträffat. Kommentaren kunde inte läggas till.",
+        "comment_updated": "Kommentaren har uppdaterats.",
+        "confirm_edit_cancel": "Är du säker på att du vill avbryta redigeringen av arbetspaketet?",
+        "copy": {
+          "title": "Kopiera arbetspaket"
+        },
+        "create": {
+          "button": "Skapa",
+          "header": "Ny %{type}",
+          "header_no_type": "Nytt arbetspaket (typ har inte angetts än)",
+          "header_with_parent": "Ny %{type} (barn till %{parent_type} #%{id})",
+          "title": "Nytt arbetspaket"
+        },
+        "default_queries": {
+          "all_open": "Alla öppna",
+          "assigned_to_me": "Tilldelad till mig",
+          "created_by_me": "Skapad av mig",
+          "latest_activity": "Senaste aktivitet",
+          "manually_sorted": "New manually sorted query",
+          "milestones": "Milstolpar",
+          "overdue": "Overdue",
+          "recently_created": "Nyligen skapade",
+          "shared_with_me": "Shared with me",
+          "shared_with_users": "Shared with users",
+          "summary": "Sammanfattning"
+        },
+        "description_enter_text": "Ange text",
+        "description_filter": "Filter",
+        "description_options_hide": "Dölj alternativ",
+        "description_options_show": "Visa alternativ",
+        "edit_attribute": "%{attribute} - Redigera",
+        "faulty_query": {
+          "description": "Din vy är felaktig och kunde inte bearbetas.",
+          "title": "Arbetspaket kunde inte laddas."
+        },
+        "filters": {
+          "baseline_incompatible": "This filter attribute is not taken into consideration in Baseline mode.",
+          "baseline_warning": "Baseline mode is on but some of your active filters are not included in the comparison.",
+          "title": "Filtrera arbetspaket"
+        },
+        "hierarchy": {
+          "children_collapsed": "Hierarkinivå %{level} kollapsade. Klicka för att visa de filtrerade barnen",
+          "children_expanded": "Hierarkinivå %{level} expanderade. Klicka för att dölja de filtrerade barnen",
+          "hide": "Dölj hierarkiläge",
+          "leaf": "Arbetspaketsnod på nivå %{level}.",
+          "show": "Visa hierarkiläge",
+          "toggle_button": "Klicka för att växla hierarkiläge."
+        },
+        "inline_create": {
+          "title": "Klicka här för att lägga till ett nytt arbetspaket till listan"
+        },
+        "jump_marks": {
+          "content": "Gå till innehåll",
+          "label_content": "Klicka här för att hoppa över menyn och gå till innehållet",
+          "label_pagination": "Klicka här för att hoppa arbetspaketets tabell och gå till sidnumrering",
+          "pagination": "Gå till sidnumrering för tabell"
+        },
+        "key_value": "%{key}: %{value}",
+        "label_column_multiselect": "Kombinerade nedrullningsbara fält: Markera med piltangenterna, bekräfta val med RETUR, ta bort med BACKSTEG",
+        "label_disable_multi_select": "Inaktivera multival",
+        "label_enable_multi_select": "Aktivera multival",
+        "label_filter_add": "Lägg till filter",
+        "label_filter_by_text": "Filtrera på text",
+        "label_options": "Alternativ",
+        "limited_results": "Only %{count} work packages can be shown in manual sorting mode. Please reduce the results by filtering, or switch to automatic sorting.",
+        "message_error_during_bulk_delete": "Ett fel uppstod vid försök att ta bort arbetspaket.",
+        "message_successful_bulk_delete": "Arbetspaket togs bort.",
+        "message_successful_show_in_fullscreen": "Klicka här för att öppna det här arbetspaketet i fullskärmsläge.",
+        "message_view_spent_time": "Visa loggad tid för detta arbetspaket",
+        "message_work_package_read_only": "Arbetspaketet är låst i denna status. Inget annat attribut än status kan ändras.",
+        "message_work_package_status_blocked": "Status för arbetspaketet är inte skrivbar på grund av stängd status och stängd version tilldelas.",
+        "no_results": {
+          "description": "Antingen finns det inga arbetspaket eller så har alla filtrerats bort.",
+          "title": "Inga arbetspaket att visa."
+        },
+        "placeholder_filter_by_text": "Ämne, beskrivning, kommentarer, ...",
+        "placeholders": {
+          "date": "Select date",
+          "default": "-"
+        },
+        "progress": {
+          "title": "Work estimates and progress"
+        },
+        "properties": {
+          "assignee": "Tilldelad till",
+          "author": "Upphovsman",
+          "category": "Kategori",
+          "costObject": "Budget",
+          "createdAt": "Skapat den",
+          "date": "Datum",
+          "description": "Beskrivning",
+          "dueDate": "Slutdatum",
+          "duration": "Varaktighet",
+          "overallCosts": "Totalkostnader",
+          "percentComplete": "% Complete",
+          "percentCompleteAlternative": "Progress",
+          "percentageDone": "Procent gjort",
+          "priority": "Prioritet",
+          "projectName": "Projekt",
+          "remainingTime": "Remaining work",
+          "remainingWork": "Remaining work",
+          "remainingWorkAlternative": "Återstående timmar",
+          "responsible": "Ansvarig",
+          "spentTime": "Förbrukad tid",
+          "spentUnits": "Bokade enheter",
+          "startDate": "Startdatum",
+          "status": "Status",
+          "storyPoints": "Berättelsepoäng",
+          "subject": "Ämne",
+          "subproject": "Delprojekt",
+          "title": "Titel",
+          "type": "Typ",
+          "updatedAt": "Uppdaterat den",
+          "version": "Version",
+          "versionName": "Version",
+          "work": "Work",
+          "workAlternative": "Beräknad tid"
+        },
+        "property_groups": {
+          "costs": "Kostnader",
+          "details": "Detaljer",
+          "estimatesAndTime": "Uppskattningar & tid",
+          "other": "Andra",
+          "people": "Personer"
+        },
+        "query": {
+          "click_to_edit_query_name": "Klicka för att redigera titeln på denna vy.",
+          "column_names": "Kolumner",
+          "confirm_edit_cancel": "Är du säker på att du vill avbryta redigering av namnet på den här vyn? Titeln kommer att återställas till föregående värde.",
+          "display_sums": "Visa summor",
+          "errors": {
+            "duplicate_query_title": "Namnet på denna vy finns redan. Ändra ändå?",
+            "not_found": "Det finns ingen sådan vy",
+            "unretrievable_query": "Det gick inte att hämta vyn från URL"
+          },
+          "filters": "Filter",
+          "group": "Gruppera efter",
+          "group_by": "Gruppera resultat efter",
+          "group_by_disabled_by_hierarchy": "Gruppering är inaktiverat när hierarkiläget är aktivt.",
+          "hide_column": "Dölj kolumn",
+          "hierarchy_disabled_by_group_by": "Hierarkiläget är inaktiverat då resultaten är grupperade efter %{column}.",
+          "insert_columns": "Insert columns",
+          "move_column_left": "Flytta kolumnen till vänster",
+          "move_column_right": "Flytta kolumnen till höger",
+          "public_text": "Publicera den här vyn så att andra användare kan komma åt vyn. Användare med behörigheten \"Hantera offentliga vyer\" kan ändra eller ta bort offentlig fråga. Detta påverkar inte synligheten av arbetspaketet resultat i den vyn och beroende på deras behörigheter kan användare se olika resultat.\n",
+          "rename_query_placeholder": "Namn på denna vy",
+          "sort_ascending": "Sortera stigande",
+          "sort_descending": "Sortera fallande",
+          "star_text": "Markera denna vy som favorit och lägg till den sparade vyn sidofältet till vänster.",
+          "text_no_results": "Inga matchande vyer hittades."
+        },
+        "reminders": {
+          "button_label": "Set reminder",
+          "presets": {
+            "custom": "At a particular date/time",
+            "month": "In a month",
+            "three_days": "In 3 days",
+            "tomorrow": "Tomorrow",
+            "week": "In a week"
+          },
+          "subtitle": "You will receive a notification for this work package at the chosen time.",
+          "title": {
+            "edit": "Edit reminder",
+            "new": "Set a reminder"
+          }
+        },
+        "scheduling": {
+          "is_parent": "The dates of this work package are automatically deduced from its children. Activate 'Manual scheduling' to set the dates.",
+          "is_switched_from_manual_to_automatic": "The dates of this work package may need to be recalculated after switching from manual to automatic scheduling due to relationships with other work packages."
+        },
+        "sharing": {
+          "show_all_users": "Show all users with whom the work package has been shared with",
+          "title": "Share work package"
+        },
+        "table": {
+          "configure_button": "Konfigurera arbetspakets-tabell",
+          "summary": "Tabell med ett arbetspaket för varje rad och kolumner för varje arbetspaketsattribut.",
+          "text_inline_edit": "Du kan klicka på de flesta celler i den här tabellen för att redigera attributens funktion.",
+          "text_select_hint": "Valda celler öppnas med 'ALT' och piltangenterna.",
+          "text_sort_hint": "Med hjälp av länkarna i tabellrubrikerna kan du sortera, gruppera, ändra ordning, radera och lägga till kolumner."
+        },
+        "table_configuration": {
+          "button": "Konfigurera detta arbetspaket-tabell",
+          "choose_display_mode": "Visa arbetspaket som",
+          "columns_help_text": "Use the input field above to add columns to your table view. You can drag and drop the columns to reorder them.",
+          "default": "standard",
+          "default_mode": "Platt lista",
+          "display_settings": "Skärminställningar",
+          "display_sums_hint": "Visa summor av alla sammanlagda attribut i en rad under tabellresultatet.",
+          "embedded_tab_disabled": "This configuration tab is not available for the embedded view you are editing.",
+          "hierarchy_hint": "Alla filtrerade tabellresultat kommer att kompletteras med sina förfäder. Hierarkier kan utökas och kollapsas.",
+          "hierarchy_mode": "Hierarchy",
+          "highlighting": "Markering",
+          "highlighting_mode": {
+            "description": "Markera med färg",
+            "entire_row_by": "Hel rad per",
+            "inline": "Markerade attribut",
+            "inline_all": "Alla attribut",
+            "none": "Ingen markering",
+            "priority": "Prioritet",
+            "status": "Status",
+            "type": "Typ"
+          },
+          "modal_title": "Inställningar för arbetspaket-tabell",
+          "relation_filters": {
+            "filter_work_packages_by_relation_type": "Filter work packages by relation type"
+          },
+          "show_timeline_hint": "Visa ett interaktivt gantt-diagram på höger sida av tabellen. Du kan ändra dess bredd genom att dra delaren mellan tabellen och gantt-diagrammet.",
+          "sorting_mode": {
+            "automatic": "Automatisk",
+            "description": "Välj läge för att sortera dina arbetspaket:",
+            "manually": "Manuellt",
+            "warning": "Du förlorar din tidigare sortering när du aktiverar det automatiska sorteringsläget."
+          }
+        },
+        "tabs": {
+          "activity": "Aktivitet",
+          "files": "Filer",
+          "github": "GitHub",
+          "gitlab": "GitLab",
+          "meetings": "Möten",
+          "overview": "Översikt",
+          "relations": "Relationer",
+          "watchers": "Bevakare"
+        },
+        "time_relative": {
+          "days": "dagar",
+          "months": "månader",
+          "weeks": "veckor"
+        }
+      },
+      "zen_mode": {
+        "button_activate": "Aktivera zen-läge",
+        "button_deactivate": "Inaktivera avskalat läge"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": " ",
+          "format": "%n %u",
+          "negative_format": "-%u%n",
+          "precision": 2,
+          "separator": ",",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "kr"
+        }
+      },
+      "format": {
+        "delimiter": null,
+        "precision": 3,
+        "round_mode": "default",
+        "separator": ",",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "Miljard",
+            "million": "Miljon",
+            "quadrillion": "Biljard",
+            "thousand": "Tusen",
+            "trillion": "Biljon",
+            "unit": null
+          }
+        },
+        "format": {
+          "delimiter": null,
+          "precision": 1,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "one": "Byte",
+              "other": "Bytes"
+            },
+            "eb": "EB",
+            "gb": "GB",
+            "kb": "kB",
+            "mb": "MB",
+            "pb": "PB",
+            "tb": "TB",
+            "zb": "ZB"
+          }
+        }
+      },
+      "nth": {},
+      "percentage": {
+        "format": {
+          "delimiter": " ",
+          "format": "%n %"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": null
+        }
+      }
+    },
+    "time": {
+      "am": "fm",
+      "formats": {
+        "default": "%Y-%m-%d %H-%M-%S",
+        "long": "%B %d, %Y %H:%M:%S",
+        "short": "%d %b %H:%M:%S",
+        "time": "%H:%M:%S"
+      },
+      "pm": "em"
+    }
+  }
+}

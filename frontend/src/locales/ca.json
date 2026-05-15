@@ -1,0 +1,2072 @@
+{
+  "ca": {
+    "date": {
+      "abbr_day_names": [
+        "Dg",
+        "Dl",
+        "Dima",
+        "Dime",
+        "Dj",
+        "Dv",
+        "Ds"
+      ],
+      "abbr_month_names": [
+        null,
+        "Gen",
+        "Feb",
+        "Mar",
+        "Abr",
+        "Mai",
+        "Jun",
+        "Jul",
+        "Ago",
+        "Set",
+        "Oct",
+        "Nov",
+        "Des"
+      ],
+      "abbr_week": "Setm",
+      "day_names": [
+        "Diumenge",
+        "Dilluns",
+        "Dimarts",
+        "Dimecres",
+        "Dijous",
+        "Divendres",
+        "Dissabte"
+      ],
+      "formats": {
+        "default": "%m/%d/%Y",
+        "long": "%B %d, %Y",
+        "short": "%b %d"
+      },
+      "month_names": [
+        null,
+        "Gener",
+        "Febrer",
+        "Març",
+        "Abril",
+        "Maig",
+        "Juny",
+        "Juliol",
+        "Agost",
+        "Setembre",
+        "Octubre",
+        "Novembre",
+        "Desembre"
+      ],
+      "order": [
+        "any",
+        "mes",
+        "dia"
+      ]
+    },
+    "js": {
+      "admin": {
+        "enterprise": {
+          "text_expired": "caducat",
+          "text_reprieve_days_left": "%{days} dies fins al final del període de gràcia",
+          "trial": {
+            "confirmation": "Confirmació del correu electrònic",
+            "confirmation_info": "Et vam enviar un correu electrònic el %{date} a %{email}. Si us plau, comprova la teva safata d'entrada i fes clic a l'enllaç de confirmació per començar la prova de 14 dies.\n",
+            "email_not_received": "No has rebut un correu electrònic? Pots reenviar el correu electrònic utilitzant l'enllaç de la dreta.",
+            "form": {
+              "domain_mismatch": "El nom d'allotjament proveït no coincideix amb el nom d'allotjament configurat. Si us plau, valida la teva configuració de sistema.",
+              "general_consent": "Accepto les <a target=\"_blank\" href=\"%{link_terms}\">condicions de servei</a> i la <a target=\"_blank\" href=\"%{link_privacy}\">política de privacitat</a>.\n",
+              "invalid_email": "Adreça de correu electrònic invàlida",
+              "label_additional_features": "Additional features",
+              "label_company": "Empresa",
+              "label_domain": "Domini",
+              "label_expires_at": "Caduca el",
+              "label_first_name": "Nom",
+              "label_last_name": "Cognom",
+              "label_maximum_users": "Nombre màxim d'usuaris actius",
+              "label_plan": "Pla",
+              "label_starts_at": "Comença el",
+              "label_subscriber": "Subscriptor",
+              "receive_newsletter": "Vull rebre el <a target=\"_blank\" href=\"%{link}\">butlletí de notícies</a> d'OpenProject.",
+              "taken_domain": "Només hi pot haver una prova gratuïta activa per domini.",
+              "taken_email": "Cada usuari només pot crear una prova gratuïta."
+            },
+            "next_steps": "Passos següents",
+            "quick_overview": "Obté una visió general ràpida de la gestió de projectes i col·laboració d'equips amb l'edició Enterprise d'OpenProject.",
+            "resend_link": "Reenvia",
+            "resend_success": "El correu electrònic s'ha reenviat. Si us plau, comprova el teu correu electrònic i fes clic a l'enllaç de confirmació proporcionat.",
+            "resend_warning": "No s'ha pogut reenviar el correu electrònic.",
+            "session_timeout": "La teva sessió ha expirat. Si us plau, prova de carregar la pàgina de nou o reenvia el correu electrònic.",
+            "status_confirmed": "confirmat",
+            "status_label": "Estat:",
+            "status_waiting": "correu electrònic enviat - esperant la confirmació",
+            "test_ee": "Prova l'edició Enterprise de forma gratuïta per 14 dies",
+            "try_another_email": "O prova amb un altre correu electrònic."
+          },
+          "upsell": {
+            "become_hero": "Sigues un heroi!",
+            "benefits": {
+              "description": "Quins són els beneficis de l'edició Enterprise on-premises?",
+              "high_security": "Funcions de seguretat",
+              "high_security_text": "Inici de sessió únic (SAML, OpenID Conenct, CAS), grups LDAP.",
+              "installation": "Suport d'instal·lació",
+              "installation_text": "Enginyers de programari amb experiència et guien durant tot el procés d'instal·lació i configuració de la teva pròpia estructura.",
+              "premium_features": "Extensions Enterprise",
+              "premium_features_text": "Taulells \"agile\", tema personalitzat i logotip, gràfiques, fluxos de treball amb accions personalitzades, cerca de text completa per a fitxers adjunt en paquets de treball i la selecció múltiple de camps personalitzats.",
+              "professional_support": "Suport professional",
+              "professional_support_text": "Obté un suport de confiança i d'alt nivell dels nostres enginyers de suport sèniors amb experiència en manegar OpenProject en ambients empresarials crítics."
+            },
+            "button_book_now": "Reserva ara",
+            "button_contact_us": "Contacta amb nosaltres per una demostració",
+            "button_start_trial": "Inicia la prova gratuïta",
+            "button_upgrade": "Actualitza ara",
+            "confidence": "Tenim la certesa i confiança d'una eina de gestió de projectes testejat i suportat en ambients empresarials - amb Codi Obert i amb una mentalitat oberta.\n",
+            "enterprise_info_html": "%{feature_title} is an Enterprise <span class='spot-icon spot-icon_inline spot-icon_enterprise-addons'></span> add-on.",
+            "link_quote": "Obtenir un pressupost",
+            "more_info": "Més informació",
+            "text": "The OpenProject Enterprise edition builds on top of the Community edition. It includes Enterprise add-ons and professional support mainly aimed at organizations with more than 10 users that manage business critical projects with OpenProject.\n",
+            "unlimited": "Il·limitat",
+            "upgrade_info": "Si us plau, actualitza a una versió de pagament per tal d'activar i començar a utilitzar-la en el teu equip.",
+            "you_contribute": "Developers need to pay their bills, too. By upgrading to the Enterprise edition, you will be supporting this open source community effort and contributing to its development, maintenance and continuous improvement."
+          }
+        },
+        "type_form": {
+          "add_group": "Afegir atribut de grup",
+          "add_table": "Afegeix una taula de paquets de treball relacionats",
+          "custom_field": "Camp personalitzat",
+          "drag_to_activate": "Arrossega els camps aquí per activar-los",
+          "edit_query": "Editar consulta",
+          "inactive": "Inactiu",
+          "new_group": "Nou grup",
+          "reset_to_defaults": "Restableix als valors per defecte"
+        },
+        "work_packages_settings": {
+          "warning_progress_calculation_mode_change_from_field_to_status_html": "Changing progress calculation mode from work-based to status-based will result in all existing <i>% Complete</i> values to be lost and replaced with values associated with each status. Existing values for <i>Remaining work</i> may also be recalculated to reflect this change. This action is not reversible.",
+          "warning_progress_calculation_mode_change_from_status_to_field_html": "Changing progress calculation mode from status-based to work-based will make the <i>% Complete</i> field freely editable. If you optionally enter values for <i>Work</i> or <i>Remaining work</i>, they will also be linked to <i>% Complete</i>. Changing <i>Remaining work</i> can then update <i>% Complete</i>."
+        },
+        "working_days": {
+          "add_non_working_day": "Dia no laborable",
+          "already_added_error": "Ja existeix un dia no laborable per aquesta data. Només hi pot haver un dia no laborable creat per a cada data.",
+          "calendar": {
+            "empty_state_description": "No hi ha cap dia no laborable especificat per aquest any. Fes clic al botó \"+ Dies no laborables\" de sota per afegir una data.",
+            "empty_state_header": "Dies no laborables",
+            "new_date": "(nou)"
+          },
+          "change_button": "Guarda i reprograma",
+          "change_description": "Changing which days of the week are considered working days or non-working days can affect the start and finish days of all work packages and life cycles in all projects in this instance.",
+          "change_title": "Canvia els dies laborals",
+          "removed_title": "Eliminaràs els següents dies de la llista de dies no laborals:",
+          "warning": "The changes might take some time to take effect. You will be notified when all relevant work packages and project life cycles have been updated. Are you sure you want to continue?\n"
+        }
+      },
+      "ajax": {
+        "hide": "Amagar",
+        "loading": "Carregant...",
+        "updating": "Actualitzant…"
+      },
+      "attachments": {
+        "delete": "Elimina fitxer adjunt",
+        "delete_confirmation": "Estàs segur que vols esborrar aquest fitxer adjunt? Aquesta acció és irreversible.\n",
+        "draggable_hint": "Arrossega a l'editor per a pujar una imatge o referenciar un fitxer adjunt. Els camps tancats de l'editor seguiran oberts mentre se segueixi arrossegant.\n",
+        "quarantined_hint": "The file is quarantined, as a virus was found. It is not available for download."
+      },
+      "autocomplete_ng_select": {
+        "add_tag": "Afegeix element",
+        "clear_all": "Esborra-ho tot",
+        "loading": "Carregant...",
+        "not_found": "Elements no trobats",
+        "type_to_search": "Escriviu per cercar"
+      },
+      "autocomplete_select": {
+        "active": "Activar %{label} %{name}",
+        "placeholder": {
+          "multi": "Afegir \"%{name}\"",
+          "single": "Seleccionar \"%{name}\""
+        },
+        "remove": "Eliminar %{name}"
+      },
+      "autocompleter": {
+        "notFoundText": "Elements no trobats",
+        "placeholder": "Escriviu per cercar",
+        "project": {
+          "placeholder": "Select project"
+        }
+      },
+      "avatars": {
+        "empty_file_error": "Si us plau, carrega una imatge vàlida (jpg, png i gif)",
+        "error_image_too_large": "La imatge és massa gran.",
+        "label_choose_avatar": "Tria un avatar des d'un fitxer",
+        "text_upload_instructions": "Carrega el teu avatar personalitzat de 128 per 128 píxels. Les imatges més grans es redimensionaran i retallaran per encaixar. Una previsualització de l'avatar es mostrarà abans d'actualitzar-la, un cop seleccionis la imatge.\n",
+        "uploading_avatar": "Carregant el teu avatar.",
+        "wrong_file_format": "Els formats permesos són jpg, png i gif "
+      },
+      "backup": {
+        "attachments_disabled": "Els fitxers adjunts no s'han pogut incloure, ja que excedeixen la mida màxima permesa. Pots canviar això utilitzant la configuració (requereix un reinici del servidor).",
+        "download_backup": "Descarregar còpia de seguretat",
+        "include_attachments": "Incloure fitxers adjunts",
+        "info": "Pots induir la còpia de seguretat aquí. El procés pot tardar un temps depenent de la quantitat de data (especialment fitxers adjunts) que tinguis. Rebràs un correu electrònic un cop feta.\n",
+        "last_backup": "Última còpia de seguretat",
+        "last_backup_from": "Última còpia de seguretat de",
+        "note": "Una nova còpia de seguretat substituirà tots els anteriors. Només es pot sol·licitar un nombre limitat de còpies de seguretat per dia.\n",
+        "options": "Opcions",
+        "request_backup": "Sol·lícita còpia de seguretat",
+        "title": "Còpia de seguretat d'OpenProject"
+      },
+      "baseline": {
+        "apply": "Aplica",
+        "clear": "Esborra",
+        "drop_down": {
+          "a_specific_date": "data específica",
+          "between_two_specific_dates": "entre dues dates específiques",
+          "last_month": "el mes passat",
+          "last_week": "la setmana passada",
+          "last_working_day": "últim dia laboral",
+          "none": "-",
+          "yesterday": "ahir"
+        },
+        "from": "Des de",
+        "header_description": "Destaca canvis efectuats en aquesta llista des de qualsevol punt del passat.",
+        "help_description": "Zona de temporal de referència per aquesta base de referència.",
+        "icon_tooltip": {
+          "added": "Afegit a la vista en el període de temps de la comparació",
+          "changed": "Mantingut amb canvis",
+          "removed": "Eliminat de la vista en el període de temps de la comparació"
+        },
+        "legends": {
+          "changes_between": "Changes between",
+          "changes_since": "Canvis des de",
+          "in_your_timezone": "En la teva zona horària:",
+          "maintained_with_changes": "Mantingut amb canvis",
+          "no_longer_meets_filter_criteria": "Ja no compleix els criteris del filtre",
+          "now_meets_filter_criteria": "Ara compleix els criteris del filtre"
+        },
+        "show_changes_since": "Mostra canvis des de",
+        "time": "Hora",
+        "time_description": "En el temps local: %{datetime}",
+        "to": "Fins",
+        "toggle_title": "Base de referència"
+      },
+      "bcf": {
+        "add_viewpoint": "Afegir punt de vista",
+        "delete_viewpoint": "Eliminar punt de vista",
+        "export": "Exportar",
+        "export_bcf_xml_file": "Exportar fitxer BCF XML (BCF versió 2.1)",
+        "import": "Importar",
+        "import_bcf_xml_file": "Importar fitxer BCF XML (BCF versió 2.1)",
+        "label_bcf": "BCF",
+        "management": "Administració de BCF",
+        "refresh": "Actualitza",
+        "refresh_work_package": "Actualitza el paquet de treball",
+        "show_viewpoint": "Mostrar punt de vista",
+        "viewpoint": "Punt de vista"
+      },
+      "boards": {
+        "add_card": "Afegeix una targeta",
+        "add_list": "Afegir llista a un taulell",
+        "add_list_modal": {
+          "labels": {
+            "assignee": "Selecciona un usuari per afegir-lo a la llista d'assignats",
+            "status": "Selecciona un estat per afegir-lo a una nova llista",
+            "subproject": "Selecciona un subprojecte per afegir-lo a una nova llista",
+            "subtasks": "Selecciona un paquet de treball per afegir-lo a una nova llista",
+            "version": "Selecciona una versió per afegir-lo a una nova llista"
+          },
+          "warning": {
+            "add_members": "<a href=\"%{link}\">Afegeix un membre nou a aquest projecte </a> per seleccionar usuaris de nou.",
+            "assignee": "No hi ha cap usuari que coincideixi amb el teu filtre. <br>",
+            "no_member": "Aquest projecte actualment no té cap membre que es pugui afegir. <br>",
+            "status": "No hi ha cap estat disponible. <br>\nO bé no n'hi ha cap o ja han estat afegits a un taulell.\n"
+          }
+        },
+        "board_type": {
+          "action": "Taulell d'acció",
+          "action_by_attribute": "Panell d'acció (%{attribute})",
+          "action_text": "Un taulell amb llistes filtrades per %{attribute} atribut. Movent els paquets de treball a altres llistes actualitzarà el seu atribut.\n",
+          "action_text_assignee": "Taulell amb columnes automàtiques per usuaris assignats. Ideal per a la distribució de paquets de treball.\n",
+          "action_text_status": "Taulell simple d'estil Kanban amb columnes automàtiques per estatus com Per Fer, En Procés o Fet.\n",
+          "action_text_subprojects": "Taulell amb columnes automàtiques per subprojectes. Movent els paquets de treball a altres llistes actualitzarà el (sub-)projecte.\n",
+          "action_text_subtasks": "Taulell amb columnes automàtiques per subelements. Movent els paquets de treball a altres llistes actualitzarà el  paquet pare.\n",
+          "action_text_version": "Taulell amb columnes automàtiques per versió d'atribut. Ideal per al desenvolupament de planificació de productes.\n",
+          "action_type": {
+            "assignee": "assignat a",
+            "status": "estat",
+            "subproject": "subprojecte",
+            "subtasks": "pare-fill",
+            "version": "versió"
+          },
+          "board_type_title": {
+            "assignee": "Assignat a",
+            "basic": "Bàsic",
+            "status": "Estat",
+            "subproject": "Subprojecte",
+            "subtasks": "Pare-fill",
+            "version": "Versió"
+          },
+          "free": "bàsic",
+          "free_text": "Comença de zero amb un taulell en blanc. Afegeix manualment targetes i columnes a aquest taulell.\n",
+          "select_attribute": "Atribut d'acció",
+          "select_board_type": "Si us plau, tria l'estil de taulell que necessites.",
+          "text": "Tipus de taulell"
+        },
+        "click_to_remove_list": "Cliqueu per eliminar aquesta llista",
+        "configuration_modal": {
+          "display_settings": {
+            "card_mode": "Mostreu-ho com a targetes",
+            "table_mode": "Mostreu-ho com a taula"
+          },
+          "title": "Configureu aquest taulell"
+        },
+        "create_new": "Crea un tauler nou",
+        "error_attribute_not_writable": "No es pot moure el paquet de treball, %{attribute} no és modificable.",
+        "error_cannot_move_into_self": "No pots moure un paquet de treball a la seva pròpia columna.",
+        "error_loading_the_list": "Error carregant la llista: %{error_message}",
+        "error_permission_missing": "No disposeu de permisos per crear consultes públiques",
+        "label_board_type": "Tipus de taulell",
+        "label_unnamed_board": "Taulell sense nom",
+        "label_unnamed_list": "Llista sense nom",
+        "lists": {
+          "delete": "Suprimeix la llista"
+        },
+        "new_board": "Nou taulell",
+        "text_hidden_list_warning": "No totes les llistes són visibles perquè et falten permisos. Contacta el teu administrador per més informació.",
+        "version": {
+          "close_version": "Tanca la versió",
+          "closed": "Tancat",
+          "edit_version": "Edita la versió",
+          "is_closed": "La versió és tancada. No es poden afegir elements en aquesta versió.",
+          "is_locked": "La versió és bloquejada. No es poden afegir elements en aquesta versió.",
+          "lock_version": "Bloca la versió",
+          "locked": "Bloquejat",
+          "open_version": "Obre la versió",
+          "show_version": "Mostra la versió",
+          "unlock_version": "Desbloca la versió"
+        }
+      },
+      "button_add": "Afegir",
+      "button_add_watcher": "Afegir observador",
+      "button_advanced_filter": "Filtres avançats",
+      "button_back": "Endarrere",
+      "button_back_to_list_view": "Tornar a la vista de llista",
+      "button_cancel": "Cancel·la",
+      "button_change_project": "Move to another project",
+      "button_check_all": "Marcar-ho tot",
+      "button_close": "Tanca",
+      "button_close_details": "Tancar vista detallada",
+      "button_collapse_all": "Col·lapsar tot",
+      "button_configure-form": "Configurar formulari",
+      "button_confirm": "Confirmar",
+      "button_continue": "Continua",
+      "button_copy": "Copiar",
+      "button_copy_link_to_clipboard": "Copy link to clipboard",
+      "button_copy_to_clipboard": "Copiar al porta-retalls",
+      "button_copy_to_other_project": "Duplicate in another project",
+      "button_create": "Crear",
+      "button_custom-fields": "Camps personalitzats",
+      "button_delete": "Esborrar",
+      "button_delete_watcher": "Eliminar l'observador",
+      "button_details_view": "Vista detallada",
+      "button_duplicate": "Duplicar",
+      "button_edit": "Editar",
+      "button_expand_all": "Expandir tot",
+      "button_export-atom": "Descarregar Atom",
+      "button_filter": "Filtre",
+      "button_generate_pdf": "Generate PDF",
+      "button_list_view": "Vista de llista",
+      "button_log_costs": "Registra costs d'unitats ",
+      "button_log_time": "Registrar temps",
+      "button_more": "Més",
+      "button_more_actions": "Més accions",
+      "button_open_details": "Obrir vista detallada",
+      "button_open_fullscreen": "Obrir vista en pantalla completa",
+      "button_quote": "Citar",
+      "button_save": "Desa",
+      "button_settings": "Configuració",
+      "button_show_cards": "Mostra la vista de targeta",
+      "button_show_fullscreen": "Obrir en pantalla completa",
+      "button_show_gantt": "Mostra el diagrama de Gantt",
+      "button_show_list": "Mostrar la vista de llista",
+      "button_show_table": "Mostra la vista de taula",
+      "button_show_view": "Vista en pantalla completa",
+      "button_uncheck_all": "Desmarca-ho tot",
+      "button_update": "Actualitzar",
+      "calendar": {
+        "create_new": "Crear nou calendari",
+        "title": "Calendari",
+        "too_many": "Hi ha %{count} paquets de treball en total, però només %{max} es poden mostrar",
+        "unsaved_title": "Calendari sense nom"
+      },
+      "caption_rate_history": "Història d'índex",
+      "card": {
+        "add_new": "Afegir nova targeta",
+        "highlighting": {
+          "entire_card_by": "Targeta sencera per",
+          "inline": "Ressaltar de línia:"
+        },
+        "remove_from_list": "Suprimeix la targeta de la llista"
+      },
+      "chart": {
+        "axis_criteria": "Criteri d'eix",
+        "errors": {
+          "could_not_load": "Les dades mostrades al gràfic no es poden carregar. Pot ser que faltin els permisos necessaris."
+        },
+        "modal_title": "Configuració gràfica de paquet de treball",
+        "tabs": {
+          "dataset": "Conjunt de dades %{number}",
+          "graph_settings": "General"
+        },
+        "type": "Tipus de gràfica",
+        "types": {
+          "bar": "Barra",
+          "doughnut": "Donut",
+          "horizontal_bar": "Barra horitzontal",
+          "line": "Línia",
+          "pie": "Pastís",
+          "polar_area": "Àrea polar",
+          "radar": "Radar"
+        }
+      },
+      "clipboard": {
+        "browser_error": "El teu navegador no permet copiar al porta-retalls. Si us plau, copia-ho manualment: %{content}",
+        "copied_successful": "S'ha copiat correctament al porta-retalls!"
+      },
+      "close_filter_title": "Tancar filtre",
+      "close_form_title": "Tancar formulari",
+      "close_popup_title": "Tanca el popup",
+      "custom_actions": {
+        "date": {
+          "current_date": "Data actual",
+          "specific": "en"
+        }
+      },
+      "dashboards": {
+        "label": "Tauler de control"
+      },
+      "description_available_columns": "Columnes disponibles",
+      "description_current_position": "Ets aquí:",
+      "description_select_work_package": "Selecciona el paquet de treball #%{id}",
+      "description_subwork_package": "Fill del paquet de treball #%{id}",
+      "editor": {
+        "ckeditor_error": "S'ha produït un error amb el CKEditor",
+        "error_saving_failed": "No s'ha pogut guardar el document per culpa del següent error: %{error}",
+        "macro": {
+          "attribute_reference": {
+            "invalid_attribute": "L'atribut seleccionat \"%{name}\" no existeix.",
+            "macro_help_tooltip": "Aquest segment de text s'està presentant dinàmicament per una macro.",
+            "nested_macro": "This macro is recursively referencing %{model} %{id}.",
+            "not_found": "El recurs sol·licitat no s'ha trobat"
+          },
+          "child_pages": {
+            "button": "Enllaços a pàgines filles",
+            "hint": "Deixa aquest camp buit per llistar totes les pàgines filles de la pàgina actual. Si vols referenciar a una pàgina diferent, indica el seu títol o slug.\n",
+            "include_parent": "Afegir pare",
+            "page": "Pàgina wiki",
+            "text": "[Placeholder] Enllaçar a pàgines filles de",
+            "this_page": "aquesta pàgina"
+          },
+          "code_block": {
+            "button": "Inserir un fragment de codi",
+            "language": "Llenguatge formatat",
+            "language_hint": "Introdueix el llenguatge formatat que serà utilitzat per a ressaltar (si està suportat).",
+            "title": "Inserir / editar un fragment de codi"
+          },
+          "dropdown": {
+            "chose_macro": "Escollir macro",
+            "macros": "Macros"
+          },
+          "embedded_calendar": {
+            "text": "[Placeholder] Calendari incrustat"
+          },
+          "embedded_table": {
+            "button": "Incrustar la taula de paquets de treball",
+            "text": "[Placeholder] Taula de paquets de treball incrustada"
+          },
+          "error": "No es pot expandir la macro: %{message}",
+          "toc": "Taula de continguts",
+          "toolbar_help": "Fes clic per seleccionar el widget i mostrar la barra d'eines. Fes doble clic per editar el widget",
+          "wiki_page_include": {
+            "button": "Inclou contingut a una altra pàgina wiki",
+            "hint": "Inclou el contingut d'una altra pàgina wiki indicant el seu títol o slug.\nPots incloure la pàgina wiki d'un altre projecte separant-les amb dos punts com al següent exemple.\n",
+            "not_set": "(Pàgina encara no establida)",
+            "page": "Pàgina wiki",
+            "text": "[Placeholder] Pàgina wiki inclosa de"
+          },
+          "work_package_button": {
+            "button": "Afegir botó per crear paquets de treball",
+            "button_style": "Utilitzar estil de botó",
+            "button_style_hint": "Opcional: marca per fer que la macro aparegui com a botó, no com enllaç.",
+            "type": "Classe de paquet de treball",
+            "with_type": "Crear paquet de treball (Classe: %{typename})",
+            "without_type": "Crear paquet de treball"
+          }
+        },
+        "mode": {
+          "manual": "Canviar a la font Markdown",
+          "wysiwyg": "Canviar a l'editor WYSIWYG"
+        },
+        "no_revisions": "No local modifications found",
+        "preview": "Canvia al mode de vista prèvia",
+        "revisions": "Show local modifications",
+        "source_code": "Canvia al mode de font Markdown"
+      },
+      "enumeration_activities": "Activitats (registre temporal)",
+      "enumeration_doc_categories": "Categories de documents",
+      "enumeration_work_package_priorities": "Prioritats dels paquets de treball",
+      "error": {
+        "cannot_save_changes_with_message": "No s'han pogut guardar els teus canvis per causa del següent error: %{error}",
+        "embedded_table_loading": "La vista incrustada no s'ha pogut carregar: %{message}",
+        "internal": "S'ha produït un error intern.",
+        "query_saving": "No s'ha pogut desar la vista."
+      },
+      "error_attachment_upload": "Ha fallat la càrrega del fitxer: %{error}",
+      "error_attachment_upload_permission": "No tens permisos per carregar fitxers en aquest recurs.",
+      "error_could_not_resolve_user_name": "No s'ha pogut resoldre el nom d'usuari",
+      "error_could_not_resolve_version_name": "No s'ha pogut resoldre el nom de versió",
+      "exclusion_info": {
+        "modal": {
+          "content": "The status '%{status_name}' has been configured to be excluded from hierarchy totals of Work, Remaining work, and % Complete. The totals do not take this value into account.",
+          "title": "Status excluded from hierarchy totals"
+        }
+      },
+      "favorite_projects": {
+        "no_results": "You have no favorite projects",
+        "no_results_subtext": "Add one or multiple projects as favorite through their overview or in a project list."
+      },
+      "field_value_enter_prompt": "Introduïu un valor per a '%{field}'",
+      "filter": {
+        "description": {
+          "text_close_filter": "Per seleccionar una entrada tregui el focus prement per exemple prement la tecla entrar. Per deixar sense filtrar seleccioneu la primera entrada (buida).",
+          "text_open_filter": "Obrir aquest filtre amb les tecles 'ALT' i cursors."
+        },
+        "more_values_not_shown": "Hi ha un %{total} de resultats més, fes una cerca per filtrar els resultats.",
+        "noneElement": "(cap)",
+        "sorting": {
+          "criteria": {
+            "one": "Primer criteri d'ordenació",
+            "three": "Tercer criteri d'ordenació",
+            "two": "Segon criteri d'ordenació"
+          }
+        },
+        "time_zone_converted": {
+          "only_end": "Fins %{to} en el teu temps local.",
+          "only_start": "Des de %{from} en el teu temps local.",
+          "two_values": "%{from} - %{to} en el teu temps local."
+        },
+        "value_spacer": "-"
+      },
+      "forms": {
+        "advanced_settings": "Configuració avançada",
+        "load_error_message": "S'ha produït un error en carregar el formulari",
+        "submit_success_message": "El formulari s'ha sotmès correctament",
+        "validation_error_message": "Si us plau, corregeix els errors presentats en el formulari"
+      },
+      "gantt_chart": {
+        "button_activate": "Mostra el diagrama de Gantt",
+        "button_deactivate": "Amaga el diagrama de Gantt",
+        "filter": {
+          "noneSelection": "(cap)"
+        },
+        "label": "Diagrama de Gantt",
+        "labels": {
+          "bar": "Etiquetes de barres",
+          "description": "Selecciona els atributs que vols que es mostrin en les posicions corresponents del diagrama de Gantt en tot moment. Tingui en compte que, en mantenir el ratolí sobre un element, es mostraran les etiquetes de data en lloc d'aquests atributs.\n",
+          "farRight": "Extrem dret",
+          "left": "Esquerra",
+          "right": "Dreta",
+          "title": "Configuració d'etiquetes"
+        },
+        "quarter_label": "Q%{quarter_number}",
+        "selection_mode": {
+          "notification": "Faci clic en qualsevol paquet de treball ressaltat per a crear la relació. Cliqui Esc per a cancel·lar."
+        },
+        "zoom": {
+          "auto": "Zoom automàtic",
+          "days": "Dies",
+          "description": "Seleccioni el nivell inicial de zoom que s'ha de mostrar quan el zoom automàtic no estigui disponible.\n",
+          "in": "Ampliar",
+          "months": "Mesos",
+          "out": "Allunyar",
+          "quarters": "Quatrimestres",
+          "weeks": "Setmanes",
+          "years": "Anys"
+        }
+      },
+      "general_text_No": "No",
+      "general_text_Yes": "Sí",
+      "general_text_no": "no",
+      "general_text_yes": "sí",
+      "github_integration": {
+        "github_actions": "Accions",
+        "pull_requests": {
+          "merged_message": "El \"pull request\" #%{pr_number} %{pr_link} del %{repository_link} ha estàt %{pr_state} per %{github_user_link}.",
+          "message": "El \"pull request\" #%{pr_number} %{pr_link} del %{repository_link} creat per %{github_user_link} ha estàt %{pr_state}.",
+          "referenced_message": "El \"pull request\" #%{pr_number} %{pr_link} del %{repository_link} creat per %{github_user_link} ha estàt referenciat a aquest paquet de treball.",
+          "states": {
+            "closed": "tancat",
+            "draft": "esborrany",
+            "merged": "fusionat",
+            "opened": "obert",
+            "ready_for_review": "marcat com a preparat per a revisar"
+          }
+        },
+        "tab_header": {
+          "copy_menu": {
+            "description": "Fragments de git copiats al porta-retalls",
+            "label": "Fragments de git"
+          },
+          "git_actions": {
+            "branch_name": "Nom de la branca",
+            "cmd": "Crea una branca amb una submissió buida",
+            "commit_message": "Sotmet el missatge",
+            "copy_error": "❌ Còpia fallida!",
+            "copy_success": "✅ Copiat!",
+            "title": "Fragments ràpids per git"
+          },
+          "title": "Pull request"
+        },
+        "tab_prs": {
+          "empty": "No hi ha cap pull request vinculat encara. Vincula una PR existent utilitzant el codi <code>OP#%{wp_id}</code> en la descripció de la PR o crea una PR nova."
+        },
+        "work_packages": {
+          "tab_name": "GitHub"
+        }
+      },
+      "gitlab_integration": {
+        "gitlab_pipelines": "Pipelines",
+        "tab_header_issue": {
+          "title": "Problemes"
+        },
+        "tab_header_mr": {
+          "copy_menu": {
+            "description": "Fragments de git copiats al porta-retalls",
+            "label": "Fragments de git"
+          },
+          "create_mr": {
+            "description": "Create a Merge Request",
+            "label": "Create MR"
+          },
+          "git_actions": {
+            "branch_name": "Nom de la branca",
+            "cmd": "Crea una branca amb una submissió buida",
+            "commit_message": "Sotmet el missatge",
+            "copy_error": "❌ Còpia fallida!",
+            "copy_success": "✅ Copiat!",
+            "title": "Fragments ràpids per git"
+          },
+          "title": "Merge requests"
+        },
+        "tab_issue": {
+          "empty": "There are no issues linked yet. Link an existing issue by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the issue title/description or create a new issue."
+        },
+        "tab_mrs": {
+          "empty": "There are no merge requests linked yet. Link an existing MR by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the MR title/description or create a new MR."
+        },
+        "updated_on": "Actualitzat el",
+        "work_packages": {
+          "tab_name": "GitLab"
+        }
+      },
+      "global_search": {
+        "all_projects": "En tots els projectes",
+        "close_search": "Tanca la cerca",
+        "current_project": "En aquest projecte",
+        "current_project_and_all_descendants": "En aquest projecte + subprojectes",
+        "recently_viewed": "Vist recentment",
+        "search": "Cercar",
+        "title": {
+          "all_projects": "tots els projectes",
+          "project_and_subprojects": "i tots els subprojectes",
+          "search_for": "Cercar per"
+        }
+      },
+      "grid": {
+        "add_widget": "Afegeix widget",
+        "configure": "Configurar widget",
+        "remove": "Elimina els widgets",
+        "widgets": {
+          "custom_text": {
+            "title": "Text personalitzat"
+          },
+          "documents": {
+            "no_results": "Sense documents de moment.",
+            "title": "Documents"
+          },
+          "members": {
+            "add": "Membre",
+            "no_results": "No hi ha membres visibles.",
+            "title": "Membres",
+            "too_many": "Mostrant %{count} de %{total} membres.",
+            "view_all_members": "Veure tots els membres"
+          },
+          "missing_permission": "You don't have the necessary permissions to view this widget.",
+          "news": {
+            "at": "a",
+            "no_results": "Res nou a informar.",
+            "title": "Notícies"
+          },
+          "project_description": {
+            "no_results": "No s'ha escrit cap descripció encara. Aquesta pot ser afegida en la configuració del projecte.",
+            "title": "Descripció del projecte"
+          },
+          "project_favorites": {
+            "no_results": "You currently have no favorite projects. Click on the star icon in the project dashboard to add one to your favorites.",
+            "title": "Projectes preferits"
+          },
+          "project_status": {
+            "at_risk": "En risc",
+            "discontinued": "Discontinuat",
+            "finished": "Finalitzat",
+            "not_set": "No configurat",
+            "not_started": "No començat",
+            "off_track": "En mal camí",
+            "on_track": "Pel bon camí",
+            "title": "Estat del projecte"
+          },
+          "subprojects": {
+            "no_results": "Sense subprojectes.",
+            "title": "Subprojectes"
+          },
+          "time_entries_current_user": {
+            "displayed_days": "Dies mostrats en el widget",
+            "title": "El meu temps invertit"
+          },
+          "time_entries_list": {
+            "no_results": "Sense entrades de temps els últims 7 dies.",
+            "title": "Temps invertit (últims 7 dies)"
+          },
+          "work_packages_accountable": {
+            "title": "Paquets de treball dels que en sóc responsable"
+          },
+          "work_packages_assigned": {
+            "title": "Paquets de treball assignats a mi"
+          },
+          "work_packages_calendar": {
+            "title": "Calendari"
+          },
+          "work_packages_created": {
+            "title": "Paquets de treball creats per vosté"
+          },
+          "work_packages_graph": {
+            "title": "Gràfica de paquets de treball"
+          },
+          "work_packages_overview": {
+            "placeholder": "Clica per editar...",
+            "title": "Visió general de paquets de treball"
+          },
+          "work_packages_table": {
+            "title": "Taula de paquets de treball"
+          },
+          "work_packages_watched": {
+            "title": "Paquets de treball seguiment per vosté"
+          }
+        }
+      },
+      "hal": {
+        "error": {
+          "edit_prohibited": "Editar %{attribute} està bloquejat per a aquest recurs. Ja sigui perquè aquest atribut es deriva d'alguna relació (per exemple, els fills) o perquè no és configurable.",
+          "format": {
+            "date": "%{attribute} no és una data vàlida - s'espera en format AAAA-MM-DD."
+          },
+          "general": "S'ha produït un error.",
+          "update_conflict_refresh": "Cliqui aquí per refrescar la font i actualitzar a la última versió."
+        }
+      },
+      "help_texts": {
+        "show_modal": "Show help text"
+      },
+      "homescreen": {
+        "blocks": {
+          "new_features": {
+            "16_1": {
+              "standard": {
+                "new_features_html": "The release contains various new features and improvements, such as <br> <ul class=\"%{list_styling_class}\"> <li>Structure the project life cycle with phases and phase gates.</li> <li>Export meetings in PDF format.</li> <li>Set smart default options for reminders.</li> <li>Use negative lag for work package dates.</li> <li>Display hierarchy trees for hierarchy custom fields.</li> <li>Benefit from improved accessibility for the date picker with ARIA live regions.</li> </ul>\n"
+              }
+            },
+            "learn_about": "Learn more about all new features",
+            "text_new_features": "Llegeix sobre les noves funcions i actualitzacions del producte. "
+          }
+        }
+      },
+      "ical_sharing_modal": {
+        "copy_url_label": "Copia l'URL",
+        "description": "You can use the URL (iCalendar) to subscribe to this calendar in an external client and view up-to-date work package information from there.",
+        "ical_generation_error_text": "An error occured while generating the calendar URL.",
+        "inital_setup_error_message": "S'ha produït un error en carregar les dades.",
+        "success_message": "The URL \"%{name}\" was successfully copied to your clipboard. Paste it in your calendar client to complete the subscription.",
+        "title": "Subscribe to calendar",
+        "token_name_description_text": "If you subscribe to this calendar from multiple devices, this name will help you distinguish between them in your <a href=\"my/access_token\", target=\"_blank\">access tokens</a> list.",
+        "token_name_label": "Where will you be using this?",
+        "token_name_placeholder": "Type a name, e.g. \"Phone\"",
+        "warning": "Please don't share this URL with other users. Anyone with this link will be able to view work package details without an account or password."
+      },
+      "ifc_models": {
+        "empty_warning": "Aquest projecte encara no té cap model IFC.",
+        "keyboard_input_disabled": "El visor no te controls de teclat. Clica en el visor per donar control de teclat al visor.",
+        "models": {
+          "ifc_models": "Models IFC"
+        },
+        "use_this_link_to_manage": "Utilitza aquest enllaç per carregar i administrar els teus models IFC.",
+        "views": {
+          "split": "Visor i taula",
+          "split_cards": "Visor i targetes",
+          "viewer": "Visor"
+        }
+      },
+      "include_projects": {
+        "apply": "Aplicar",
+        "clear_selection": "Neteja la selecció",
+        "include_subprojects": "Inclou tots els subprojectes",
+        "no_results": "Cap projecte s'ajusta a la teva cerca.",
+        "search_placeholder": "Cerca projecte...",
+        "selected_filter": {
+          "all": "Tots els projectes",
+          "selected": "Només seleccionats"
+        },
+        "title": "Projectes",
+        "toggle_title": "Inclou projectes",
+        "tooltip": {
+          "current_project": "Aquest és el projecte actual.",
+          "does_not_match_search": "El projecte no coincideix amb la cerca.",
+          "include_all_selected": "Projecte ja inclòs, ja que \"Inclou tots els subprojectes\" està activat."
+        }
+      },
+      "inplace": {
+        "btn_preview_disable": "Deshabilita la visualització prèvia",
+        "btn_preview_enable": "Previsualitzar",
+        "button_cancel": "%{attribute}: Cancel·lar",
+        "button_cancel_all": "Cancel·la",
+        "button_edit": "%{attribute}: Editar",
+        "button_save": "%{attribute}: Desar",
+        "button_save_all": "Desa",
+        "clear_value_label": "-",
+        "errors": {
+          "maxlength": "%{field} no pot contenir més de %{maxLength} dígit(s)",
+          "messages_on_field": "Aquest camp no és vàlid: %{messages}",
+          "minlength": "%{field} no pot contenir menys de %{minLength} dígit(s)",
+          "number": "%{field} no és un número vàlid",
+          "required": "%{field} no pot estar buit"
+        },
+        "link_formatting_help": "Ajuda de format de text",
+        "null_value_label": "Cap valor"
+      },
+      "invite_user_modal": {
+        "back": "Endarrere",
+        "invite": "Convida",
+        "message": {
+          "description": "Enviarem un correu electrònic a l'usuari, al qual pots afegir un missatge personal aquí. Una explicació per a la invitació pot ser útil, o potser una mica d'informació amb relació al projecte per ajudar als usuaris a començar.",
+          "label": "Missatge d'invitació",
+          "next_button": "Següent"
+        },
+        "principal": {
+          "already_member_message": "Ja és membre del %{project}",
+          "create_new_placeholder": "Crea un usuari de marcador de posició:",
+          "invite_user": "Convida:",
+          "label": {
+            "name": "Nom",
+            "name_or_email": "Nom o adreça de correu electrònic"
+          },
+          "next_button": "Següent",
+          "no_results_group": "No s'ha trobat cap grup",
+          "no_results_placeholder": "No s'ha trobat cap usuari de marcador de posició.",
+          "no_results_user": "No s'ha trobat cap usuari",
+          "required": {
+            "group": "Si us plau, selecciona un grup",
+            "placeholder": "Si us plau, selecciona un usuari de marcador de posició",
+            "user": "Si us plau, selecciona un usuari"
+          }
+        },
+        "project": {
+          "label": "Projecte",
+          "lacking_permission": "Si us plau, selecciona un projecte diferent, ja que no tens permisos per assignar usuaris al projecte seleccionat actualment.",
+          "lacking_permission_info": "No tens permisos per assignar usuaris al projecte en el qual et trobes. Necessites seleccionar-ne un de diferent.",
+          "next_button": "Següent",
+          "no_invite_rights": "No tens permisos per convidar membres a aquest projecte",
+          "no_results": "No s'han trobat projectes",
+          "required": "Si us plau, selecciona un projecte"
+        },
+        "role": {
+          "description": "Aquest és el rol que l'usuari rebrà quan s'uneixin al teu projecte. El rol defineix quines accions els hi són permeses i quina informació poden veure. <a href=\"https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions\" target=\"_blank\"> Més informació sobre rols i permisos. </a>",
+          "label": "Rol en %{project}",
+          "next_button": "Següent",
+          "no_roles_found": "No s'ha trobat cap rol",
+          "required": "Si us plau, selecciona un rol"
+        },
+        "success": {
+          "description": {
+            "group": "El grup és ara part de %{project}. Per tant, ja pots planejar amb aquest grup i assignar-li paquets de treball.",
+            "placeholder": "L'usuari de marcador de posició ara pot ser utilitzat a %{project}. Per tant, ja pots planejar amb aquest usuari i assignar-li paquets de treball.",
+            "user": "L'usuari ara pot iniciar sessió per accedir a %{project}. Per tant, ja pots planejar amb aquest usuari i assignar-li paquets de treball."
+          },
+          "next_button": "Continua",
+          "title": "S'ha convidat al %{principal}!"
+        },
+        "summary": {
+          "next_button": "Enviar la invitació"
+        },
+        "title": {
+          "Group": "grup",
+          "PlaceholderUser": "usuari de marcador de posició",
+          "User": "usuari",
+          "invite": "Invitar usuari",
+          "invite_principal_to_project": "Convida %{principal} a %{project}",
+          "invite_to_project": "Convida %{type} a %{project}"
+        },
+        "type": {
+          "group": {
+            "description": "Permisos basats en el rol assignat en el projecte seleccionat",
+            "title": "Grup"
+          },
+          "placeholder": {
+            "description": "No té accés al projecte i no s'han enviat els correus electrònics.",
+            "description_no_ee": "No tens accés al projecte i per tant, no s'han enviat els correus electrònics. <br>Fes una ullada a <a href=\"%{eeHref}\" target=\"_blank\">l'edició Enterprise</a>",
+            "title": "Usuari de marcador de posició",
+            "title_no_ee": "Usuari de marcador de posició (extensió només de l'edició Enterprise)"
+          },
+          "required": "Si us plau, selecciona la classe a convidar",
+          "user": {
+            "description": "Permisos basats en el rol assignat en el projecte seleccionat",
+            "title": "Usuari"
+          }
+        }
+      },
+      "label_activate": "Activar",
+      "label_activity_show_all": "Mostra totes les activitats",
+      "label_activity_show_only_comments": "Mostra només activitats amb comentaris",
+      "label_add_attachments": "Adjuntar arxius",
+      "label_add_column_after": "Afegir una columna després",
+      "label_add_column_before": "Afegir una columna abans",
+      "label_add_columns": "Afegir una columna",
+      "label_add_comment": "Afegeix un comentari",
+      "label_add_comment_title": "Comenta i escriu @ per a notificar altres persones",
+      "label_add_description": "Afegiu una descripció per a %{file}",
+      "label_add_row_after": "Afegir una fila després",
+      "label_add_row_before": "Afegir una fila abans",
+      "label_add_selected_columns": "Afegir columnes seleccionades",
+      "label_added_by": "afegit per",
+      "label_added_time_by": "Afegit per <a href=%{authorLink}>%{author}</a> el %{age}",
+      "label_ago": "dies abans",
+      "label_all": "tot",
+      "label_all_uppercase": "Totes",
+      "label_all_work_packages": "tots els paquets de treball",
+      "label_and": "i",
+      "label_ascending": "Ascendent",
+      "label_assignee": "Assignat a",
+      "label_attachments": "Fitxers adjunts",
+      "label_author": "Autor: %{user}",
+      "label_avatar": "Avatar",
+      "label_between": "entre",
+      "label_board": "Taulell",
+      "label_board_locked": "Bloquejat",
+      "label_board_plural": "Taulells",
+      "label_board_sticky": "Fixa't",
+      "label_cancel_comment": "Cancel·lar comentari",
+      "label_change": "Canvia",
+      "label_children_derived_duration": "Duració derivada dels fills dels paquets de treball",
+      "label_closed_work_packages": "tancat",
+      "label_collapse": "Col·lapsa",
+      "label_collapse_all": "Col·lapsar tot",
+      "label_collapsed": "col·lapsat",
+      "label_columns": "Columnes",
+      "label_comment": "Comentari",
+      "label_committed_at": "%{committed_revision_link} el %{date}",
+      "label_committed_link": "revisió acceptada %{revision_identifier}",
+      "label_contains": "conté",
+      "label_create": "Crear",
+      "label_create_work_package": "Crear nou paquet de treball",
+      "label_created_by": "Creat per",
+      "label_created_on": "creat el",
+      "label_current": "current",
+      "label_custom_queries": "Privat",
+      "label_date": "Data",
+      "label_date_with_format": "Introdueix el %{date_attribute} amb el format següent: %{format}",
+      "label_deactivate": "Desactivar",
+      "label_default_queries": "Per defecte",
+      "label_descending": "Descendent",
+      "label_description": "Descripció",
+      "label_details": "Detalls",
+      "label_display": "Mostrar",
+      "label_drop_files": "Arrossega fitxers aquí per adjuntar-los.",
+      "label_drop_folders_hint": "No pots carregar carpetes com a fitxers adjunts. Si us plau, selecciona fitxers únics.",
+      "label_drop_or_click_files": "Arrossega fitxers o fes clic aquí per adjuntar-los.",
+      "label_edit_comment": "Edita aquest comentari",
+      "label_edit_status": "Edita l'estat del paquet de treball",
+      "label_email": "Correu electrònic",
+      "label_equals": "és",
+      "label_expand": "Expandir",
+      "label_expand_all": "Expandir tot",
+      "label_expand_project_menu": "Expandieix el menú de projecte",
+      "label_expanded": "expandit",
+      "label_export": "Exportar",
+      "label_export_preparing": "S'està preparant l'exportació i serà descarregada aviat.",
+      "label_favorites": "Favorites",
+      "label_filename": "Fitxer",
+      "label_files_to_upload": "Es carregaran aquests fitxers:",
+      "label_filesize": "Mida",
+      "label_formattable_attachment_hint": "Adjuntar i enllaça fitxers arrossegant-los en aquest camp, o enganxant-los des del porta-papers.",
+      "label_general": "General",
+      "label_global_queries": "Públic",
+      "label_greater_or_equal": ">=",
+      "label_group": "Grup",
+      "label_group_by": "Agrupa per",
+      "label_group_plural": "Grups",
+      "label_hide_attributes": "Mostra menys",
+      "label_hide_column": "Amagar columna",
+      "label_hide_project_menu": "Col·lapsa el menú de projecte",
+      "label_hour": "hora",
+      "label_hours": "hores",
+      "label_import": "Importar",
+      "label_in": "en",
+      "label_in_less_than": "en menys de",
+      "label_in_more_than": "en més de",
+      "label_incoming_emails": "Correu electrònics d'entrada",
+      "label_information_plural": "Informació",
+      "label_invalid": "Invàlid",
+      "label_last_updated_on": "Última actualització el",
+      "label_latest_activity": "Última activitat",
+      "label_learn_more_link": "Saber-ne més",
+      "label_less_or_equal": "<=",
+      "label_less_than_ago": "menys que fa uns dies",
+      "label_loading": "Carregant...",
+      "label_mail_notification": "Notificacions de correu electrònic",
+      "label_manage_columns": "Manage and reorder columns",
+      "label_me": "jo",
+      "label_meeting_agenda": "Agenda",
+      "label_meeting_minutes": "Acta",
+      "label_meetings": "Reunions",
+      "label_menu_collapse": "col·lapsar",
+      "label_menu_expand": "expandir",
+      "label_moderate_comment": "Moderate comment",
+      "label_more_than_ago": "més que fa uns dies",
+      "label_next": "Següent",
+      "label_no_color": "Sense color",
+      "label_no_data": "No hi ha dades per mostrar",
+      "label_no_date": "sense data",
+      "label_no_due_date": "sense data de final",
+      "label_no_start_date": "no hi ha data d'inici",
+      "label_no_value": "Cap valor",
+      "label_none": "cap",
+      "label_not_contains": "no conté",
+      "label_not_equals": "no és",
+      "label_on": "en",
+      "label_open_context_menu": "Obre el menú contextual",
+      "label_open_menu": "Obrir menú",
+      "label_open_work_packages": "obrir",
+      "label_password": "Contrasenya",
+      "label_per_page": "Per pàgina:",
+      "label_please_wait": "Espereu, si us plau",
+      "label_press_enter_to_save": "Prem enter per guardar.",
+      "label_preview": "Previsualitzar",
+      "label_previous": "Anterior",
+      "label_project": "Projecte",
+      "label_project_list": "Llistes de projectes",
+      "label_project_plural": "Projectes",
+      "label_public_query": "Públic",
+      "label_quote_comment": "Citar aquest comentari",
+      "label_recent": "Recent",
+      "label_rejected_files": "Aquests fitxers no es poden carregar:",
+      "label_rejected_files_reason": "Aquests fitxers no es poden carregar perquè la seva mida és més gran que %{maximumFilesize}",
+      "label_remove": "Eliminar",
+      "label_remove_all_files": "Elimina tots els fitxers",
+      "label_remove_column": "Eliminar columna",
+      "label_remove_columns": "Eliminar les columnes seleccionades",
+      "label_remove_file": "Eliminar %{fileName}",
+      "label_remove_row": "Eliminar fila",
+      "label_remove_watcher": "Elimina l'observador %{name}",
+      "label_report": "Reportar",
+      "label_repository_plural": "Repositoris",
+      "label_reset": "Reinciar",
+      "label_save_as": "Desa com a",
+      "label_search_columns": "Search a column",
+      "label_select_project": "Selecciona un projecte",
+      "label_select_watcher": "Seleccioneu un observador...",
+      "label_selected_filter_list": "Filtres seleccionats",
+      "label_show_attributes": "Mostrar tots els atributs",
+      "label_show_in_menu": "Mostrar vista al menú",
+      "label_sort_by": "Ordena per",
+      "label_sort_higher": "Mou amunt",
+      "label_sort_lower": "Mou avall",
+      "label_sorted_by": "ordenat per",
+      "label_sorting": "Ordenació",
+      "label_spent_time": "Temps utilitzat",
+      "label_star_query": "Favorit",
+      "label_starred_queries": "Preferit",
+      "label_subject": "Assumpte",
+      "label_sum": "Suma",
+      "label_sum_for": "Suma de",
+      "label_this_week": "aquesta setmana",
+      "label_time_entry_plural": "Temps utilitzat",
+      "label_today": "Avui",
+      "label_total_amount": "Total: %{amount}",
+      "label_total_progress": "%{percent}% Progrés total",
+      "label_total_sum": "Suma total",
+      "label_unwatch": "Deixa d'observar",
+      "label_unwatch_work_package": "Deixa d'observar el paquet de treball",
+      "label_up": "Amunt",
+      "label_updated_on": "actualitzat el",
+      "label_upload_counter": "%{done} de %{count} fitxers finalitzats",
+      "label_upload_notification": "Carregant fitxers...",
+      "label_uploaded_by": "Carregat per",
+      "label_user_plural": "Usuaris",
+      "label_validation_error": "El paquet de treball no s'ha pogut desar a causa dels següents errors:",
+      "label_value_derived_from_children": "(valor derivat dels fills)",
+      "label_version_plural": "Versions",
+      "label_view_has_changed": "Aquesta vista té canvis sense guardar. Fes clic per guardar-los.",
+      "label_visibility_settings": "Configuració de visualització",
+      "label_wait": "Si us plau esperi a la configuració...",
+      "label_warning": "Alerta",
+      "label_watch": "Observa",
+      "label_watch_work_package": "Observar paquet de treball",
+      "label_watcher_added_successfully": "Observador afegit correctament!",
+      "label_watcher_deleted_successfully": "Observador eliminat correctament!",
+      "label_work_package": "Paquet de treball",
+      "label_work_package_context_menu": "Work package context menu",
+      "label_work_package_details_you_are_here": "Estàs a la pestanya %{tab} per %{type} %{subject}.",
+      "label_work_package_parent": "Paquet de treball pare",
+      "label_work_package_plural": "Paquets de treball",
+      "label_work_package_upload_notification": "Carregant fitxers del paquet de treball #%{id}: %{subject}",
+      "label_wp_id_added_by": "#%{id} afegit per %{author}",
+      "modals": {
+        "button_apply": "Aplicar",
+        "button_cancel": "Cancel·la",
+        "button_delete": "Elimina",
+        "button_save": "Desa",
+        "button_submit": "Sotmetre",
+        "destroy_time_entry": {
+          "text": "Estàs segur que vols eliminar la següent l'entrada temporal?",
+          "title": "Confirma l'eliminació de l'entrada temporal"
+        },
+        "destroy_work_package": {
+          "bulk_text": "Estàs segur que vols eliminar el següent %{label}?",
+          "confirm_deletion_children": "Entenc que TOTS els descendents dels paquets de treball llistats seran eliminats recursivament.",
+          "deletes_children": "Tots els paquets de treball fills i els seus descendents també seran eliminats recursivament.",
+          "has_children": "Aquest paquet de treball té %{childUnits}:",
+          "single_text": "Estàs segur que vols eliminar aquest paquet de treball",
+          "title": "Confirma l'eliminació de %{label}"
+        },
+        "form_submit": {
+          "text": "Estàs segur que vols realitzar aquesta acció?",
+          "title": "Confirma per continuar"
+        },
+        "label_delete_page": "Elimina la pàgina actual",
+        "label_name": "Nom"
+      },
+      "myTimeTracking": {
+        "noSpecificTime": "No specific time"
+      },
+      "my_page": {
+        "label": "La meva pàgina"
+      },
+      "notice_bad_request": "Sol·licitud incorrecta.",
+      "notice_job_started": "feina començada.",
+      "notice_no_results_to_display": "No hi han resultats per mostrar.",
+      "notice_successful_create": "Creat correctament.",
+      "notice_successful_delete": "Eliminat correctament.",
+      "notice_successful_update": "Actualitzat correctament.",
+      "notifications": {
+        "center": {
+          "and_more_users": {
+            "one": " i 1 altre",
+            "other": " i %{count} altres"
+          },
+          "empty_state": {
+            "no_notification": "Sembla que ja estàs al dia.",
+            "no_notification_for_filter": "Looks like you are all caught up for this filter.",
+            "no_notification_with_current_filter": "Sembla que ja estàs al dia pel filtre %{filter}.",
+            "no_notification_with_current_project_filter": "Sembla que ja estàs al dia per al projecte seleccionat.",
+            "no_selection": "Fes clic en una notificació per veure els detalls de l'activitat."
+          },
+          "label_actor_and": "i",
+          "mark_all_read": "Marca tot com a llegit",
+          "mark_all_read_confirmation": "This will mark all notifications in this view as read. Are you sure you want to do this?",
+          "mark_as_read": "Marca com a llegit",
+          "new_notifications": {
+            "link_text": "Click here to load them.",
+            "message": "No hi ha notificacions noves"
+          },
+          "no_results": {
+            "at_all": "Noves notificacions apareixeran aquí quan hi hagi activitat que sigui important per a tu.",
+            "with_current_filter": "En aquest moment no hi han notificacions en aquesta vista"
+          },
+          "text_update_date_by": "%{date} per",
+          "total_count_warning": "Mostrant el %{newest_count} de notificacions recents. %{more_count} no s'estan mostrant."
+        },
+        "date_alerts": {
+          "milestone_date": "Data de fita",
+          "overdue": "Vençut",
+          "overdue_since": "since %{difference_in_days}.",
+          "property_is": "is in %{difference_in_days}.",
+          "property_is_deleted": "is deleted.",
+          "property_today": "is today.",
+          "property_was": "was %{difference_in_days} ago."
+        },
+        "no_unread": "No hi ha notificacions sense llegir",
+        "reasons": {
+          "assigned": "Assignat a",
+          "commented": "Comentat",
+          "created": "Creat",
+          "dateAlert": "Alerta per dates",
+          "mentioned": "Mencionat",
+          "prioritized": "Prioritized",
+          "processed": "Processed",
+          "reminder": "Reminder",
+          "responsible": "Responsable",
+          "scheduled": "Programat",
+          "shared": "Compartida",
+          "watched": "Observador"
+        },
+        "reminders": {
+          "note": "Note: “%{note}”"
+        },
+        "settings": {
+          "change_notification_settings": "Pots modificar la teva <a target=\"_blank\" href=\"%{url}\">configuració de notificacions</a> per assegurar-te que mai et perds informació important.",
+          "global": {
+            "date_alerts": {
+              "description": "Notificacions automàtiques quan dates importants s'aproximen per a paquets de treball oberts en els quals estàs involucrat (assignat, responsable o observador).",
+              "title": "Alertes per dates"
+            },
+            "delayed": {
+              "description": "Notificacions addicionals per activitats en tots els projectes.",
+              "title": "No participant"
+            },
+            "immediately": {
+              "description": "Notificacions per a totes les activitats en els paquets de treball en els que estàs involucrat (assignat, responsable o observador).",
+              "title": "Participant"
+            },
+            "overdue": "Quan vençut"
+          },
+          "notify_me": "Notifica’m",
+          "project_specific": {
+            "add": "Afegeix configuracions pel projecte",
+            "already_selected": "Aquest projecte ja està seleccionat",
+            "description": "Aquestes configuracions específiques de projecte anul·len les configuracions per defecte especificades a sobre.",
+            "remove": "Elimina les configuracions del projecte",
+            "title": "Configuracions de notificacions específiques del projecte"
+          },
+          "reasons": {
+            "assignee": "Assignat a",
+            "mentioned": {
+              "description": "Rep una notificació cada vegada que algú em menciona a qualsevol lloc",
+              "title": "Mencionat"
+            },
+            "responsible": "Responsable",
+            "shared": "Compartida",
+            "watched": "Observador",
+            "work_package_commented": "Tots els nous comentaris",
+            "work_package_created": "Paquets de treball nou",
+            "work_package_prioritized": "Tots els canvis de prioritat",
+            "work_package_processed": "Tots els canvis d'estat",
+            "work_package_scheduled": "Tots els canvis de data"
+          },
+          "reminders": {
+            "no_notification": "Sense notificació",
+            "timeframes": {
+              "normal": {
+                "P1D": "1 dia abans",
+                "P3D": "3 dies abans",
+                "P7D": "una setmana abans",
+                "PT0S": "el mateix dia"
+              },
+              "overdue": {
+                "P1D": "cada dia",
+                "P3D": "cada 3 dies",
+                "P7D": "cada setmana"
+              }
+            }
+          },
+          "title": "Configuració de notificacions"
+        },
+        "title": "Notificacions"
+      },
+      "onboarding": {
+        "buttons": {
+          "got_it": "D'acord",
+          "next": "Següent",
+          "skip": "Omet"
+        },
+        "steps": {
+          "backlogs": {
+            "overview": "Administra la teva feina en vistes de <b>treballs pendents</b>.",
+            "sprints": "A la dreta hi tens els treballs pendents del producte i errors, a l'esquerra hi tens els \"sprint\" respectius. Aquí pots crear <b>èpiques, històries d'usuari i errors</b>, prioritza'ls arrossegant-los i afegeix-los a un \"sprint\".",
+            "task_board": "En el tauler de tasques es pot visualitzar el <b> progrés d'aquest \"sprint\"</b>. Fes clic a la icona més (+) al costat d'una història d'usuari per afegir noves tasques o impediments. <br> L'estat es pot actualitzar arrossegant.",
+            "task_board_arrow": "Per veure el teu <b>Tauler de tasques</b>, obri el desplegable \"sprint\"...",
+            "task_board_select": "... i seleccioni l'entrada del <b>tauler de tasca</b>."
+          },
+          "boards": {
+            "add": "Fes clic a la icona de més (+) per <b>crear una targeta nova</b> o <b>afegir una targeta existent</b> a la llista del taulell.",
+            "drag": "Arrossega les teves targetes entre les llistes donades per reordenar-és, o moure-les a una altra llista. <br>Pots fer clic a la icona d'informació (i) a la cantonada superior dreta o fes doble clic per obrir-ne els detalls.",
+            "lists_basic": "Aquí pots crear múltiples llistes (columna) amb el teu taulell \"agile\".",
+            "lists_kanban": "Aquí pots crear múltiples llistes (columnes) en el teu taulell. Aquesta funció, per exemple, permet crear un <b>taulell Kanban</b>.",
+            "overview": "Selecciona els <b>taulers</b> per canviar la vista i administra el teu projecte utilitza la vista de taulers \"agile\"."
+          },
+          "help_menu": "El menú d'Ajuda (?) proveeix <b>recursos d'ajuda addicionals</b>. Aquí podràs trobar la guia d'usuari, vídeos explicatius i molt més. <br> Gaudeix del teu treball amb OpenProject!",
+          "members": "Convida nous <b>membres</b> a afegir-se al teu projecte.",
+          "quick_add_button": "Fes clic a la icona de més (+) en la navegació superior per <b>crear un nou projecte</b> o <b>convidar companys de feina</b>.",
+          "sidebar_arrow": "Utilitza la fletxa de retorn a la cantonada esquerra per tornar al <b>menú principal</b> del projecte.",
+          "team_planner": {
+            "add_assignee": "Per començar, afegeix assignats al planificador d'equips.",
+            "add_existing": "Cerca paquets de treball existents i arrossega'ls al planificador d'equips per assignar-los instantàniament a un membre de l'equip i definir les dates d'inici i final.",
+            "calendar": "El taulell de planificació setmanal o bisetmanal mostra tots els paquets de treball assignats als membres del teu equip.",
+            "card": "Arrossega paquets de treball horitzontalment per moure'ls endavant o enrere temporalment, arrossega els extrems per canviar les dates o arrossega'ls verticalment a una altra fila per canviar l'assignat a un altre membre.",
+            "overview": "El planificador d'equips et permet visualment assignar tasques a membres de l'equip i obtenir una visió general de qui està treballant en què."
+          },
+          "welcome": "Take a three-minute introduction tour to learn the most <b>important features</b>. <br> We recommend completing the steps until the end. You can restart the tour any time.",
+          "wiki": "Dintre de la <b>wiki</b> pots documentar i compartir el coneixement conjuntament amb el teu equip.",
+          "wp": {
+            "back_button": "Utilitza la fletxa de retorn a la cantonada superior esquerra per sortir i tornar a la llista de paquets de treball.",
+            "create_button": "El botó <b>+ Crear</b> afegirà un nou paquet de treball al teu projecte.",
+            "full_view": "La vista dels <b>detalls dels paquets de treball</b> proveeixen tota la informació rellevant que pertany al paquet de treball, com ara la descripció, l'estat, la prioritat, activitats, dependències i comentaris.",
+            "gantt_menu": "Create project schedules and timelines effortlessly using the Gantt chart module.",
+            "list": "Aquesta visió general de <b>paquets de treball</b> proporciona una llista de totes les feines en el teu projecte, com ara tasques, fites, fases i més. <br>Els paquets de treball poden ser creats directament des d'aquesta vista. Per accedir als detalls d'un paquet de treball en particular simplement fes doble clic a la seva fila.",
+            "timeline": "Aquí pots <b>editar el teu pla de projecte</b>, crear nous paquets de treball com tasques, fites, fases i més. També pots afegir <b>dependències</b>. Tots els membres poden veure i actualitzar l'últim pla en qualsevol moment.",
+            "toggler": "Ara fem un cop d'ull a la secció <b>Paquets de treball</b>, la qual ens dona una vista més detallada de les teves tasques."
+          }
+        }
+      },
+      "open_project_storage_modal": {
+        "waiting_subtitle": {
+          "network_off": "There is a network problem.",
+          "network_on": "Network is back. We are trying."
+        },
+        "waiting_title": {
+          "timeout": "Timeout"
+        }
+      },
+      "overviews": {
+        "label": "Visió general"
+      },
+      "pagination": {
+        "no_other_page": "Estàs en la pàgina única.",
+        "pages": {
+          "next": "Avançar a la pàgina següent",
+          "previous": "Tornar a la pàgina anterior"
+        }
+      },
+      "password_confirmation": {
+        "field_description": "Necessites introduir la contrasenya del teu compte per a confirmar aquest canvi.",
+        "title": "Confirma la teva contrasenya per continuar"
+      },
+      "placeholders": {
+        "default": "-",
+        "description": "Descripció: Fes clic per editar...",
+        "relation_description": "Fes clic per afegir una descripció per aquesta relació",
+        "selection": "Si us plau, selecciona",
+        "subject": "Introdueixi l'assumpte aquí"
+      },
+      "project": {
+        "autocompleter": {
+          "label": "Autoemplenament del projecte"
+        },
+        "click_to_switch_to_project": "Projecte: %{projectname}",
+        "confirm_template_load": "Canviar la plantilla tornarà a carregar la pàgina i perdràs totes les dades del formulari. Continuar?",
+        "context": "Context del projecte",
+        "copy": {
+          "copy_options": "Opcions de còpia"
+        },
+        "no_template_selected": "(Cap)",
+        "not_available": "Project N/A",
+        "required_outside_context": "Si us plau, selecciona un projecte on crear el paquet de treball per a veure tots els atributs. Només pots seleccionar projectes que tinguin activat la classe indicada anteriorment.\n",
+        "use_template": "Utilitzar plantilla"
+      },
+      "project_menu_details": "Detalls",
+      "relation_buttons": {
+        "abort": "Anul·la",
+        "add_existing": "Afegir existent",
+        "add_existing_child": "Afegir fill",
+        "add_existing_relation": "Afegir relació existent",
+        "add_new_child": "Crear nou fill",
+        "add_new_relation": "Crea una nova relació",
+        "add_parent": "Afegir pare existent",
+        "add_predecessor": "Afegir predecessor",
+        "add_successor": "Add successor",
+        "change_parent": "Canviar pare",
+        "create_new": "Crear nou",
+        "group_by_relation_type": "Agrupar per classe de relació",
+        "group_by_wp_type": "Agrupar per classe de paquet de treball",
+        "hierarchy_indent": "Jerarquia cap a l'interior",
+        "hierarchy_outdent": "Jerarquia cap a l'exterior",
+        "remove": "Eliminar la relació",
+        "remove_child": "Eliminar fill",
+        "remove_parent": "Eliminar pare",
+        "save": "Guardar la relació",
+        "set_parent": "Establir pare",
+        "show_relations": "Mostra les relacions",
+        "toggle_description": "Activar descripció de la relació",
+        "update_description": "Establir o actualitzar la descripció d'aquesta relació",
+        "update_relation": "Faci clic per a canviar la classe de relació"
+      },
+      "relation_labels": {
+        "blocked": "Bloquejat per",
+        "blocks": "Bloqueja",
+        "child": "Child",
+        "children": "Fills",
+        "duplicated": "Duplicat per",
+        "duplicates": "Duplica",
+        "follows": "Segueix",
+        "includes": "Inclou",
+        "parent": "Pare",
+        "partof": "Part de",
+        "precedes": "Precedeix",
+        "relates": "Relacionats amb",
+        "relation_type": "classe de relació",
+        "required": "Requerit per",
+        "requires": "Requereix"
+      },
+      "relations": {
+        "empty": "No existeix cap relació",
+        "remove": "Eliminar la relació"
+      },
+      "relations_autocomplete": {
+        "parent_placeholder": "Escull nou pare o clica escapar per cancel·lar.",
+        "placeholder": "Escriviu per cercar"
+      },
+      "relations_hierarchy": {
+        "children_headline": "Fills",
+        "hierarchy_headline": "Jerarquia",
+        "parent_headline": "Pare"
+      },
+      "reminders": {
+        "settings": {
+          "alerts": {
+            "document_added": "Documents afegits",
+            "explanation": "Ara mateix les notificacions estan limitades als paquets de treball. Pots seleccionar continuar rebent alertes en correus electrònics per aquells esdeveniments fins que s'incloguin a les notificacions:\n",
+            "forum_messages": "Nou missatges de fòrum",
+            "membership_added": "Afiliació afegida",
+            "membership_updated": "Afiliació actualitzada",
+            "news_added": "Notícies afegides",
+            "news_commented": "Comenta a un element de notícia",
+            "title": "Alertes en correu electrònic per altres elements (que no són paquets de treball)",
+            "wiki_page_added": "S'ha afegit la pàgina wiki",
+            "wiki_page_updated": "S'ha actualitzat la pàgina wiki"
+          },
+          "daily": {
+            "add_time": "Afegeix temps",
+            "enable": "Activa els correus electrònics recordatori diaris",
+            "explanation": "Rebràs aquests recordatoris per a notificacions no llegides a les hores que especifiquis. %{no_time_zone}",
+            "no_time_zone": "Fins que no configuris una zona horària per al teu compte, els temps seran interpretats en UTC.",
+            "time_label": "Temps %{counter}:",
+            "title": "Envia'm correus electrònics recordatori diaris per a notificacions no llegides."
+          },
+          "immediate": {
+            "mentioned": "Immediatament quan algú em @menciona",
+            "personal_reminder": "Immediately when I receive a personal reminder",
+            "title": "Envia'm un correu electrònic recordatori"
+          },
+          "pause": {
+            "first_day": "Primer dia",
+            "label": "Pausa els correu electrònic recordatori temporalment",
+            "last_day": "Últim dia"
+          },
+          "title": "Correus electrònics recordatori",
+          "workdays": {
+            "title": "Rep recordatoris de correus electrònics recordatori aquests dies"
+          }
+        }
+      },
+      "reporting_engine": {
+        "label_remove": "Esborra",
+        "label_response_error": "Hi ha un error manipulant la consulta."
+      },
+      "repositories": {
+        "select_branch": "Seleccionar branca",
+        "select_tag": "Seleccionar l'etiqueta"
+      },
+      "revit": {
+        "revit_add_in": "Revit add-in",
+        "revit_add_in_settings": "Configuració del Revit add-in"
+      },
+      "sharing": {
+        "selected_count": "%{count} selected",
+        "selection": {
+          "mixed": "Mixed"
+        },
+        "share": "Compartir"
+      },
+      "sort": {
+        "activate_asc": "activeu per aplicar ordenació ascendent ",
+        "activate_dsc": "activeu per aplicar ordenació descendent",
+        "activate_no": "activeu per desactivar l'ordenació",
+        "sorted_asc": "Ordre ascendent aplicat,",
+        "sorted_dsc": "Ordre descendent aplicat,",
+        "sorted_no": "Sense ordre aplicat,",
+        "sorting_disabled": "ordenació deshabilitada"
+      },
+      "spot": {
+        "drop_modal": {
+          "close": "Close modal",
+          "focus_grab": "Estàs en un focus ancorat per a finestres emergents. Fes clic a shift+tab per tornar a l'element que ha activat la finestra emergent."
+        },
+        "filter_chip": {
+          "remove": "Eliminar"
+        }
+      },
+      "storages": {
+        "authentication_error": "Authentication with %{storageType} failed",
+        "choose_location": "Tria ubicació",
+        "drop_files": "Arrossega els fitxers aquí per carregar-los a %{name}.",
+        "drop_or_click_files": "Arrossega els fitxers o fes clic aquí per carregar-los a %{name}.",
+        "file_links": {
+          "already_linked_directory": "Aquest directori ja està enllaçat a aquest paquet de treball.",
+          "already_linked_file": "Aquest fitxer ja està enllaçat a aquest paquet de treball.",
+          "download": "Descarrega %{fileName}",
+          "empty": "Actualment no hi ha cap fitxer enllaçat a aquest paquet de treball. Comença a enllaçar fitxers amb l'acció de sota o dins de %{storageType}.\n",
+          "link_uploaded_file_error": "S'ha produït un error en enllaçar els fitxers carregats recentment \"%{fileName}\" al paquet de treball %{workPackageId}.\n",
+          "open": "Obre el fitxer a l'emmagatzematge",
+          "open_location": "Obre la ubicació del fitxer",
+          "remove": "Elimina l'enllaç del fitxer",
+          "remove_confirmation": "Estàs segur que vols eliminar l'enllaç de fitxer d'aquest paquet de treball? Eliminar l'enllaç no afecta el fitxer original, només elimina la connexió d'aquest paquet de treball.\n",
+          "remove_short": "Eliminar enllaç",
+          "select": "Selecciona fitxers",
+          "select_all": "Selecciona-ho tot",
+          "selection": {
+            "one": "Enllaça 1 fitxer",
+            "other": "Enllaça %{count} fitxers",
+            "zero": "Selecciona fitxers a enllaçar"
+          },
+          "success_create": {
+            "one": "1 enllaç de fitxer creat correctament.",
+            "other": "%{count} enllaços de fitxer creat correctament."
+          },
+          "tooltip": {
+            "not_found": "This file cannot be found.",
+            "not_logged_in": "Please log in to the storage to access this file.",
+            "view_not_allowed": "No tens permisos per veure aquest fitxer."
+          },
+          "upload_error": {
+            "403": "El fitxer (%{fileName}) no s'ha pogut carregar a causa de les restriccions del sistema. Si us plau, contacta el teu administrador per a més informació.\n",
+            "413": "El fitxer (%{fileName}) és més gran del que OpenProject pot carregar a %{storageType}. Pots carregar-lo directament a %{storageType} i després vincular-lo.\n",
+            "507": "El fitxer (%{fileName}) és més gran que la quota d'emmagatzematge permesa. Si us plau, contacta el teu administrador per a modificar aquesta quota.\n",
+            "default": "El teu fitxer (%{fileName}) no s'ha pogut carregar.\n",
+            "detail": {
+              "nextcloud": "Si us plau, comprova l'última versió de l'aplicació Nextcloud \"OpenProject Integration\" estigui instal·lada i contacta el teu administrador per més informació.\n"
+            }
+          }
+        },
+        "files": {
+          "already_existing_body": "Un fitxer amb el nom \"%{fileName}\" ja existeix a la ubicació on estàs intentant carregar-lo. Que vols fer?\n",
+          "already_existing_header": "Aquest fitxer ja existeix",
+          "cannot_create_folder": "Failed to create folder. Avoid using special characters and symbols and make sure the folder does not exist already.",
+          "directory_not_writeable": "No tens permís per afegir fitxers dins d'aquesta carpeta.",
+          "dragging_folder": "Les carpetes no estan permeses a la càrrega a %{storageType}.",
+          "dragging_many_files": "La càrrega a %{storageType} només permet un fitxer per càrrega.",
+          "empty_folder": "Aquesta carpeta està buida.",
+          "empty_folder_location_hint": "Fes clic al botó de sota per carregar fitxers a aquesta ubicació.",
+          "file_not_selectable_location": "Seleccionar un fitxer, no és possible en el procés de tria d'ubicació.",
+          "managed_project_folder_no_access": "Encara no tens access a la carpeta de projecte gestionada. Si us plau, espera un moment i prova-ho de nou.\n",
+          "managed_project_folder_not_available": "Les carpetes gestionades automàticament no s'ha trobat encara. Si us plau, espera una mica i recarrega la pàgina per obtenir les dades més recents i prova-ho de nou.\n",
+          "project_folder_no_access": "No tens accés a la capeta de projecte. Si us plau, contacta amb el teu administrador per obtenir accés o puja el fitxer en una altra ubicació.\n",
+          "upload_keep_both": "Conserva els dos",
+          "upload_replace": "Substitueix"
+        },
+        "information": {
+          "authentication_error": "The request to %{storageType} could not be authenticated, that's an error.",
+          "connection_error": "Alguna configuració de %{storageType} no està funcionant. Si us plau, contacta el teu administrador de %{storageType}.\n",
+          "live_data_error": "Error recuperant els detalls del fitxer",
+          "live_data_error_description": "Algunes dades de %{storageType} no s'han pogut recuperar. Si us plau, prova de tornar a carregar la pàgina o contacta l'administrador de %{storageType}.\n",
+          "no_file_links": "Per tal d'enllaçar arxius a aquest paquet de treball si us plau fes-ho a través de %{storageType}.",
+          "not_logged_in": "Per afegir un enllaç, veure o pujar fitxers relacionats amb aquest paquet de treball si us plau inicia sessió a %{storageType}.\n",
+          "suggest_logout": "You can try whether logging out and back in fixes this problem.",
+          "suggest_relink": "You can try whether re-linking your account via the login button below fixes this problem."
+        },
+        "link_existing_files": "Enllaça fitxers existents",
+        "link_files_in_storage": "Fitxers enllaçats a %{storageType}",
+        "login": "%{storageType} inici de sessió",
+        "login_to": "Inicia sessió a %{storageType}",
+        "new_folder": "New folder",
+        "no_connection": "%{storageType} sense connexió",
+        "open_storage": "Obre %{storageType}",
+        "select_location": "Selecciona ubicació",
+        "types": {
+          "default": "Emmagatzematge",
+          "nextcloud": "Nextcloud",
+          "one_drive": "OneDrive/SharePoint"
+        },
+        "upload_files": "Carregar fitxers"
+      },
+      "team_planner": {
+        "add_assignee": "Assignat a",
+        "add_existing": "Afegir existent",
+        "add_existing_title": "Afegir paquets de treball existents",
+        "cannot_drag_here": "No s'ha pogut eliminar el paquet de treball a causa dels permisos o les restriccions d'edició.",
+        "cannot_drag_to_non_working_day": "Aquest paquet de treball no pot començar o acabar en un dia no laborable.",
+        "create_label": "Planificador d'equips",
+        "create_title": "Crea un nou planificador d'equips",
+        "drag_here_to_remove": "Arrossega aquí per eliminar l'usuari assignat i les dates d'inici i final.",
+        "eight_weeks": "8-week",
+        "four_weeks": "4-week",
+        "modify": {
+          "errors": {
+            "fallback": "Aquest paquet de treball no pot ser editat.",
+            "permission_denied": "No tens els permisos necessaris per modificar això"
+          }
+        },
+        "no_data": "Afegeix usuaris assignats per tal de configurar el teu planificador d'equip.",
+        "one_week": "1 setmana",
+        "quick_add": {
+          "empty_state": "Utilitza el camp de cerca per trobar els paquets de treball i arrossegar-los dins del planificador d'equips i assignar-los a algú i definir les dates d'inici i final. ",
+          "search_placeholder": "Cerca..."
+        },
+        "remove_assignee": "Elimina assignats",
+        "today": "Avui",
+        "two_weeks": "2 setmanes",
+        "unsaved_title": "Planificador d'equips sense nom",
+        "work_week": "Setmana laboral"
+      },
+      "text_are_you_sure": "N'esteu segur?",
+      "text_data_lost": "Totes les dades entrades es perdran.",
+      "text_query_destroy_confirmation": "Estàs segur que vols eliminar la vista seleccionada?",
+      "text_user_wrote": "%{value} va escriure:",
+      "text_work_packages_destroy_confirmation": "¿Estàs segur que vols eliminar el(s) paquet(s) de treball seleccionat(s)?",
+      "time_entry": {
+        "stop": "Aturar",
+        "title": "Registrar temps",
+        "tracking": "Seguiment de temps",
+        "work_package_required": "Requereix seleccionar un paquet de treball primer."
+      },
+      "timer": {
+        "button_stop": "Aturar el temporitzador actual",
+        "start_new_timer": "Iniciar nou temporitzador",
+        "timer_already_running": "Per començar un nou temporitzador, has de parar el temporitzador actual:",
+        "timer_already_stopped": "No active timer for this work package, have you stopped it in another window?",
+        "tracking_time": "Seguiment de temps"
+      },
+      "tl_toolbar": {
+        "outlines": "Nivell de jerarquia",
+        "zooms": "Nivell de zoom"
+      },
+      "toolbar": {
+        "filter": "Filtre",
+        "search_query_label": "Busca vistes guardades",
+        "settings": {
+          "columns": "Columnes",
+          "configure_view": "Configurar vista",
+          "delete": "Elimina",
+          "display_hierarchy": "Mostra la jerarquia",
+          "display_sums": "Mostra les sumes",
+          "export": "Exporta",
+          "group_by": "Agrupar per",
+          "hide_hierarchy": "Amaga la jerarquia",
+          "hide_sums": "Amaga les sumes",
+          "page_settings": "Reanomena la vista",
+          "save": "Desa",
+          "save_as": "Desa com a",
+          "share_calendar": "Subscribe to calendar",
+          "sort_by": "Ordena per",
+          "visibility_settings": "Configuració de visibilitat"
+        },
+        "unselected_title": "Paquet de treball"
+      },
+      "two_factor_authentication": {
+        "errors": {
+          "aborted": "The authentication was cancelled. Please try again."
+        },
+        "label_two_factor_authentication": "Autentificació en dos passos"
+      },
+      "types": {
+        "attribute_groups": {
+          "confirm_reset": "Alerta: Estàs segur que vols reiniciar la configuració del formulari? Això reiniciarà els atributs als seus grups per defecte i desactivarà TOTS els camps personalitzats.\n",
+          "error_duplicate_group_name": "El nom %{group} ja està en ús. Els noms de grup han de ser únics.",
+          "error_no_table_configured": "Si us plau, configuri una taula per a %{group}.",
+          "more_information": "Més informació",
+          "nevermind": "Sense importància",
+          "reset_title": "Reiniciar la configuració del formulari",
+          "upgrade_to_ee": "Actualitza a l'edició Enterprise on-premises",
+          "upgrade_to_ee_text": "Ostres! Si necessita aquesta funció ets un súper pro! T'importaria donar suport als nostres desenvolupadors de codi obert convertint-te en client de l'edició Enterprise?"
+        }
+      },
+      "units": {
+        "child_work_packages": {
+          "one": "un paquet de treball fill",
+          "other": "%{count} paquets de treball fills"
+        },
+        "day": {
+          "one": "1 dia",
+          "other": "%{count} dies",
+          "zero": "0 dies"
+        },
+        "hour": {
+          "one": "1 h",
+          "other": "%{count} h",
+          "zero": "0 h"
+        },
+        "word": {
+          "one": "1 word",
+          "other": "%{count} words"
+        },
+        "workPackage": {
+          "one": "paquet de treball",
+          "other": "paquets de treball"
+        }
+      },
+      "upsell": {
+        "ee_only": "Extensió de l'edició Enterprise"
+      },
+      "views": {
+        "card": "Targetes",
+        "list": "Taula",
+        "timeline": "Gantt"
+      },
+      "watchers": {
+        "label_add": "Afegir observadors",
+        "label_discard": "Descartar la selecció",
+        "label_error_loading": "S'ha produït un error carregant dels observadors",
+        "label_loading": "carregant observadors...",
+        "label_search_watchers": "Cercar observadors",
+        "typeahead_placeholder": "Cercar possibles observadors"
+      },
+      "wiki_formatting": {
+        "code": "Codi entre línies",
+        "deleted": "Eliminat",
+        "heading1": "Títol 1",
+        "heading2": "Títol 2",
+        "heading3": "Títol 3",
+        "image": "Imatge",
+        "italic": "Cursiva",
+        "ordered_list": "Llista ordenada",
+        "preformatted_text": "Text preformatat",
+        "quote": "Citar",
+        "strong": "Negreta",
+        "underline": "Subratllat",
+        "unordered_list": "Llista sense ordenar",
+        "unquote": "Treure la cita",
+        "wiki_link": "Enllaça a una pàgina Wiki"
+      },
+      "work_packages": {
+        "baseline": {
+          "addition_label": "Afegit a la vista en el període de temps de la comparació",
+          "column_incompatible": "This column does not show changes in Baseline mode.",
+          "modification_label": "Modificat dins del període de temps de la comparació",
+          "removal_label": "Eliminat de la vista en el període de temps de la comparació"
+        },
+        "bulk_actions": {
+          "copy": "Còpia massiva",
+          "delete": "Eliminació massiva",
+          "edit": "Edició massiva",
+          "move": "Canvi massiu de projecte"
+        },
+        "button_clear": "Neteja",
+        "comment_added": "El comentari s'ha afegit correctament.",
+        "comment_send_failed": "S'ha produït un error. No s'ha pogut sotmetre el comentari.",
+        "comment_updated": "El comentari s'ha actualitzat correctament.",
+        "confirm_edit_cancel": "Estàs segur que vols cancel·lar l'edició del paquet de treball?",
+        "copy": {
+          "title": "Copiar paquet de treball"
+        },
+        "create": {
+          "button": "Crear",
+          "header": "Nou %{type}",
+          "header_no_type": "Nou paquet de treball (Classe no establerta encara)",
+          "header_with_parent": "Nou %{type} (Fill de %{parent_type} #%{id})",
+          "title": "Nou paquet de treball"
+        },
+        "default_queries": {
+          "all_open": "Tots els oberts",
+          "assigned_to_me": "Assignat a mi",
+          "created_by_me": "Creat per mi",
+          "latest_activity": "Última activitat",
+          "manually_sorted": "New manually sorted query",
+          "milestones": "Fites",
+          "overdue": "Vençut",
+          "recently_created": "Creat recentment",
+          "shared_with_me": "Shared with me",
+          "shared_with_users": "Shared with users",
+          "summary": "Resum"
+        },
+        "description_enter_text": "Introduïu text",
+        "description_filter": "Filtre",
+        "description_options_hide": "Amagar opcions",
+        "description_options_show": "Mostra opcions",
+        "edit_attribute": "%{attribute} - Edita",
+        "faulty_query": {
+          "description": "La vista és errònia i no pot ser processada.",
+          "title": "No s'ha pogut carregar el paquet de treball."
+        },
+        "filters": {
+          "baseline_incompatible": "This filter attribute is not taken into consideration in Baseline mode.",
+          "baseline_warning": "La base de referència està activat però alguns dels teus filtres actius no estan actius en la comparació.",
+          "title": "Filtrar paquets de treball"
+        },
+        "hierarchy": {
+          "children_collapsed": "Nivell de jerarquia %{level} col·lapsat. Fes clic per mostrar els fills filtrats.",
+          "children_expanded": "Nivell de jerarquia %{level} ampliat. Fes clic per col·lapsar els fills filtrats.",
+          "hide": "Amaga el mode de jerarquia",
+          "leaf": "Branca de paquet de treball al nivell %{level}.",
+          "show": "Mostra el mode de jerarquia",
+          "toggle_button": "Fes clic per activar el mode jeràrquic."
+        },
+        "inline_create": {
+          "title": "Fes clic aquí per afegir un nou paquet de treball a aquesta llista"
+        },
+        "jump_marks": {
+          "content": "Ves al contingut",
+          "label_content": "Fes clic aquí per saltar el menú i anar directament al contingut",
+          "label_pagination": "Fes clic aquí per saltar per sobre la taula de paquets de treball i anar a paginació",
+          "pagination": "Saltar a la paginació de la taula"
+        },
+        "key_value": "%{key}: %{value}",
+        "label_column_multiselect": "Camp combinat desplegable: selecciona amb les tecles de fletxa, confirma la selecció amb enter, elimina amb retrocés",
+        "label_disable_multi_select": "Deshabilita la selecció múltiple",
+        "label_enable_multi_select": "Permetre selecció múltiple",
+        "label_filter_add": "Afegir un filtre",
+        "label_filter_by_text": "Filtrar per text",
+        "label_options": "Opcions",
+        "limited_results": "Només %{count} paquets de treball es poden mostrar en el mode d'ordenació manual. Si us plau, redueix els resultats filtrant-los o canviant a ordenació automàtica.",
+        "message_error_during_bulk_delete": "S'ha produït un error en intentar eliminar els paquets de treball.",
+        "message_successful_bulk_delete": "Paquets de treball eliminats correctament.",
+        "message_successful_show_in_fullscreen": "Feu clic aquí per obrir aquest paquet de treball a pantalla completa.",
+        "message_view_spent_time": "Mostra el temps utilitzat per aquest paquet de treball",
+        "message_work_package_read_only": "El paquet de treball està bloquejat en aquest estat. Cap atribut excepte l'estat es pot modificar.",
+        "message_work_package_status_blocked": "L'estat del paquet de treball no permet l'escriptura perquè el seu estat i versió estan tancats.",
+        "no_results": {
+          "description": "No se n'ha creat cap o tots els paquets de treball s'han filtrat.",
+          "title": "Cap paquet de treball per mostrar."
+        },
+        "placeholder_filter_by_text": "Assumpte, descripció, comentaris, ...",
+        "placeholders": {
+          "date": "Seleccionar data",
+          "default": "-"
+        },
+        "progress": {
+          "title": "Work estimates and progress"
+        },
+        "properties": {
+          "assignee": "Assignat a",
+          "author": "Autor",
+          "category": "Categoria",
+          "costObject": "Pressupost",
+          "createdAt": "Creat el",
+          "date": "Data",
+          "description": "Descripció",
+          "dueDate": "Data final",
+          "duration": "Durada",
+          "overallCosts": "Costs generals",
+          "percentComplete": "% Complet",
+          "percentCompleteAlternative": "Progress",
+          "percentageDone": "Percentatge fet",
+          "priority": "Prioritat",
+          "projectName": "Projecte",
+          "remainingTime": "Treball restant",
+          "remainingWork": "Treball restant",
+          "remainingWorkAlternative": "Hores restants",
+          "responsible": "Responsable",
+          "spentTime": "Temps utilitzat",
+          "spentUnits": "Unitats gastades",
+          "startDate": "Data d'inici",
+          "status": "Estat",
+          "storyPoints": "Punts d'història",
+          "subject": "Assumpte",
+          "subproject": "Subprojecte",
+          "title": "Títol",
+          "type": "Classe",
+          "updatedAt": "Actualitzat el",
+          "version": "Versió",
+          "versionName": "Versió",
+          "work": "Treball",
+          "workAlternative": "Temps estimat"
+        },
+        "property_groups": {
+          "costs": "Costs",
+          "details": "Detalls",
+          "estimatesAndTime": "Estimacions & Temps",
+          "other": "Altres",
+          "people": "Persones"
+        },
+        "query": {
+          "click_to_edit_query_name": "Fes clic aquí per editar el títol d'aquesta vista.",
+          "column_names": "Columnes",
+          "confirm_edit_cancel": "Estàs segur que vols cancel·lar l'edició del nom d'aquesta vista? El títol tornarà al valor anterior.",
+          "display_sums": "Mostra les sumes",
+          "errors": {
+            "duplicate_query_title": "El nom de la vista ja existeix. Canvia de totes formes?",
+            "not_found": "No existeix aquesta vista",
+            "unretrievable_query": "No es pot recuperar la vista de l'URL"
+          },
+          "filters": "Filtres",
+          "group": "Agrupa per",
+          "group_by": "Agrupa els resultats per",
+          "group_by_disabled_by_hierarchy": "L'agrupament està desactivat a causa que el mètode de jerarquia està actiu.",
+          "hide_column": "Amagar columna",
+          "hierarchy_disabled_by_group_by": "El mètode de jerarquia està desactivat a causa que els resultats estan agrupats en %{column}.",
+          "insert_columns": "Insereix columnes",
+          "move_column_left": "Moure la columna a l'esquerra",
+          "move_column_right": "Moure la columna a la dreta",
+          "public_text": "Publica aquesta vista permetent a altres usuaris accedir a les teves vistes. Els usuaris amb el permís per \"Administrar vistes públiques\" poden modificar o eliminar elements públics. Aquesta acció no afecta la visibilitat dels paquets de treball resultants en aquella vista i depenent dels permisos altres usuaris potser veuen resultats diferents.\n",
+          "rename_query_placeholder": "Nom d'aquesta vista",
+          "sort_ascending": "Ordenació ascendent",
+          "sort_descending": "Ordenació descendent",
+          "star_text": "Marca aquesta vista com a favorita i afegeix-la a les vistes guardades en el menú lateral de l'esquerra.",
+          "text_no_results": "No hi ha vistes que coincideixin"
+        },
+        "reminders": {
+          "button_label": "Set reminder",
+          "presets": {
+            "custom": "At a particular date/time",
+            "month": "In a month",
+            "three_days": "In 3 days",
+            "tomorrow": "Tomorrow",
+            "week": "In a week"
+          },
+          "subtitle": "You will receive a notification for this work package at the chosen time.",
+          "title": {
+            "edit": "Edit reminder",
+            "new": "Set a reminder"
+          }
+        },
+        "scheduling": {
+          "is_parent": "Les dates d'aquest paquet de treball estan derivades automàticament dels seus fills. Activa la \"Planificació manual\" per canviar les dates.",
+          "is_switched_from_manual_to_automatic": "Pot ser que les dates d'aquest paquet de treball no es tornin a calcular automàticament en canviar de planificació manual a automàtica a causa de les relacions amb altres paquets de treball."
+        },
+        "sharing": {
+          "show_all_users": "Show all users with whom the work package has been shared with",
+          "title": "Share work package"
+        },
+        "table": {
+          "configure_button": "Configura la taula de paquets de treball",
+          "summary": "Taula amb fileres de paquets de treball i columnes amb els atributs dels paquets de treball.",
+          "text_inline_edit": "La majoria de les cel·les d'aquesta taula són botons que activen la funcionalitat d'edició en línia de l'atribut.",
+          "text_select_hint": "Les caixes seleccionades es poden obrir amb la tecla \"ALT\" i les fletxes.",
+          "text_sort_hint": "Amb els enllaços a les capçaleres de les taules es pot ordenar, agrupar, reordenar, treure i afegir columnes de la taula."
+        },
+        "table_configuration": {
+          "button": "Configura aquesta taula de paquets de treball",
+          "choose_display_mode": "Mostra els paquets de treball com a",
+          "columns_help_text": "Utilitza aquest camp d'entrada per afegir columnes a la teva vista de taula. Pots arrossegar les columnes per reordenar-les.",
+          "default": "per defecte",
+          "default_mode": "Llista plana",
+          "display_settings": "Configuració de visualització",
+          "display_sums_hint": "Mostra les sumes totals dels atributs que es poden sumar en una fila a sota de la taula de resultats.",
+          "embedded_tab_disabled": "Aquesta pestanya de configuració no està disponible per a la vista incrustada que estàs editant.",
+          "hierarchy_hint": "A tots els resultats filtrats de la taula se'ls afegirà els seus antecessors. Les jerarquies es poden expandir i col·lapsar.",
+          "hierarchy_mode": "Jerarquia",
+          "highlighting": "Ressaltar",
+          "highlighting_mode": {
+            "description": "Ressaltar amb color",
+            "entire_row_by": "Fila sencera per",
+            "inline": "Atribut(s) ressaltats",
+            "inline_all": "Tots els atributs",
+            "none": "Sense ressaltar",
+            "priority": "Prioritat",
+            "status": "Estat",
+            "type": "Classe"
+          },
+          "modal_title": "Configuració de la taula de paquets de treball",
+          "relation_filters": {
+            "filter_work_packages_by_relation_type": "Filtra paquets de treball per classe de relació"
+          },
+          "show_timeline_hint": "Mostra un diagrama de Gantt interactiu a la part dreta de la taula. Pors canviar la seva amplada arrossegant el divisor entre la taula i el diagrama de Gantt.",
+          "sorting_mode": {
+            "automatic": "Automàtic",
+            "description": "Selecciona el mètode per ordenar els teus paquets de treball:",
+            "manually": "Manual",
+            "warning": "Perdràs l'ordenació anterior en activar el mode d'ordenació automàtic."
+          }
+        },
+        "tabs": {
+          "activity": "Activitat",
+          "files": "Fitxers",
+          "github": "GitHub",
+          "gitlab": "GitLab",
+          "meetings": "Reunions",
+          "overview": "Visió general",
+          "relations": "Relacions",
+          "watchers": "Observadors"
+        },
+        "time_relative": {
+          "days": "dies",
+          "months": "mesos",
+          "weeks": "setmanes"
+        }
+      },
+      "zen_mode": {
+        "button_activate": "Activa el mode zen",
+        "button_deactivate": "Desactiva el mode zen"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": ".",
+          "format": "%n %u",
+          "negative_format": "-%u%n",
+          "precision": 2,
+          "separator": ",",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "€"
+        }
+      },
+      "format": {
+        "delimiter": null,
+        "precision": 3,
+        "round_mode": "default",
+        "separator": ".",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "mil milions",
+            "million": {
+              "one": "milió",
+              "other": "milions"
+            },
+            "quadrillion": {
+              "one": "quadrilió",
+              "other": "quadrilions"
+            },
+            "thousand": {
+              "one": "miler",
+              "other": "milers"
+            },
+            "trillion": {
+              "one": "bilió",
+              "other": "bilions"
+            },
+            "unit": null
+          }
+        },
+        "format": {
+          "delimiter": null,
+          "precision": 1,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "one": "Byte",
+              "other": "Bytes"
+            },
+            "eb": "EB",
+            "gb": "GB",
+            "kb": "kB",
+            "mb": "Mb",
+            "pb": "PB",
+            "tb": "TB",
+            "zb": "ZB"
+          }
+        }
+      },
+      "nth": {},
+      "percentage": {
+        "format": {
+          "delimiter": null,
+          "format": "%n %"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": null
+        }
+      }
+    },
+    "time": {
+      "am": "AM",
+      "formats": {
+        "default": "%m/%d/%Y %I:%M %p",
+        "long": "%B %d, %Y %H:%M",
+        "short": "%d %b %H:%M",
+        "time": "%I:%M %p"
+      },
+      "pm": "PM"
+    }
+  }
+}

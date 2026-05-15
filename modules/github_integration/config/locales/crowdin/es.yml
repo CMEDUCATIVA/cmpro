@@ -1,0 +1,55 @@
+#-- copyright
+#OpenProject is an open source project management software.
+#Copyright (C) the OpenProject GmbH
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License version 3.
+#OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+#Copyright (C) 2006-2013 Jean-Philippe Lang
+#Copyright (C) 2010-2013 the ChiliProject Team
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License
+#as published by the Free Software Foundation; either version 2
+#of the License, or (at your option) any later version.
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with this program; if not, write to the Free Software
+#Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#See COPYRIGHT and LICENSE files for more details.
+#++
+es:
+  attributes:
+    additions_count: "Número de adiciones"
+    deletions_count: "Número de eliminaciones"
+    comments_count: "Número de comentarios"
+    github_html_url: "URL de solicitud de incorporación de cambios"
+    github_app_owner_avatar_url: "URL del avatar del propietario"
+    review_comments_count: "Número de comentarios de revisión"
+    github: "Identificador de GitHub"
+    github_avatar_url: "URL del avatar"
+    github_updated_at: "Actualizado a las"
+    github_login: "Inicio de sesión en GitHub"
+    host: "Host"
+    labels: "Etiquetas"
+    repository: "Repositorio"
+    changed_files_count: "Archivos modificados"
+  button_add_deploy_target: Añadir objetivo de despliegue
+  label_deploy_target: Objetivo de despliegue
+  label_deploy_target_new: Nuevo objetivo de despliegue
+  label_deploy_target_plural: Objetivos de despliegue
+  label_github_integration: Integración con GitHub
+  notice_deploy_target_created: Objetivo de despliegue creado
+  notice_deploy_target_destroyed: Objetivo de despliegue eliminado
+  plugin_openproject_github_integration:
+    name: "Integración de OpenProject y GitHub"
+    description: "Integra OpenProject y GitHub para un mejor flujo de trabajo"
+  project_module_github: "GitHub"
+  permission_show_github_content: "Mostrar contenido de GitHub"
+  permission_introspection: Leer la versión del núcleo de OpenProject en ejecución y construir SHA
+  text_deploy_target_type_info: >
+    Hasta ahora solo damos soporte al propio OpenProject.
+  text_deploy_target_api_key_info: >
+    Un OpenProject [clave API](docs_url) perteneciente a un usuario que tiene el permiso de introspección global.
+  text_pull_request_deployed_to: "%{pr_link} desplegado en %{deploy_target_link}"

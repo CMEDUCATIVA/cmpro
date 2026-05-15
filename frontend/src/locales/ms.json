@@ -1,0 +1,2054 @@
+{
+  "ms": {
+    "date": {
+      "abbr_day_names": [
+        "Aha",
+        "Isn",
+        "Sel",
+        "Rab",
+        "Kha",
+        "Jum",
+        "Sab"
+      ],
+      "abbr_month_names": [
+        null,
+        "Jan",
+        "Feb",
+        "Mac",
+        "Apr",
+        "Mei",
+        "Jun",
+        "Jul",
+        "Ogo",
+        "Sep",
+        "Okt",
+        "Nov",
+        "Dis"
+      ],
+      "abbr_week": "Minggu",
+      "day_names": [
+        "Ahad",
+        "Isnin",
+        "Selasa",
+        "Rabu",
+        "Khamis",
+        "Jumaat",
+        "Sabtu"
+      ],
+      "formats": {
+        "default": "%m/%d/%Y",
+        "long": "%B %d, %Y",
+        "short": "%b %d"
+      },
+      "month_names": [
+        null,
+        "Januari",
+        "Februari",
+        "Mac",
+        "April",
+        "Mei",
+        "Jun",
+        "Julai",
+        "Ogos",
+        "September",
+        "Oktober",
+        "November",
+        "Disember"
+      ],
+      "order": [
+        "tahun",
+        "bulan",
+        "hari"
+      ]
+    },
+    "js": {
+      "admin": {
+        "enterprise": {
+          "text_expired": "tamat tempoh",
+          "text_reprieve_days_left": "%{days} hari sehingga tamat tempoh kelonggaran",
+          "trial": {
+            "confirmation": "Pengesahan alamat e-mel ",
+            "confirmation_info": "Kami telah menghantar e-mel kepada anda pada %{date} di %{email}. Sila semak peti masuk anda dan klik pautan pengesahan yang disediakan untuk memulakan percubaan 14 hari anda.\n",
+            "email_not_received": "Anda tidak menerima sebarang e-mel? Anda boleh menghantar semula e-mel menggunakan pautan di sebelah kanan.",
+            "form": {
+              "domain_mismatch": "Permintaan nama hos semasa tidak sepadan dengan nama hos yang dikonfigurasikan. Sila semak tetapan sistem anda sekali lagi.",
+              "general_consent": "Saya bersetuju dengan <a target=\"_blank\" href=\"%{link_terms}\">syarat-syarat perkhidmatan</a> dan <a target=\"_blank\" href=\"%{link_privacy}\">polisi privasi</a>.\n",
+              "invalid_email": "Alamat e-mel tidak sah",
+              "label_additional_features": "Additional features",
+              "label_company": "Syarikat",
+              "label_domain": "Domain",
+              "label_expires_at": "Tamat tempoh pada",
+              "label_first_name": "Nama pertama",
+              "label_last_name": "Nama akhir",
+              "label_maximum_users": "Pengguna aktif maksimum",
+              "label_plan": "Pelan",
+              "label_starts_at": "Mula pada",
+              "label_subscriber": "Pelanggan",
+              "receive_newsletter": "Saya ingin menerima <a target=\"_blank\" href=\"%{link}\">surat berita</a> OpenProject.",
+              "taken_domain": "Hanya boleh mempunyai satu percubaan aktif setiap domain.",
+              "taken_email": "Setiap pengguna hanya boleh mencipta satu percubaan."
+            },
+            "next_steps": "Langkah seterusnya",
+            "quick_overview": "Dapatkan gambaran keseluruhan ringkas pengurusan projek dan kolaborasi kumpulan dengan OpenProject edisi Enterprise.",
+            "resend_link": "Hantar semula",
+            "resend_success": "E-mel telah dihantar semula. Sila semak semula e-mel anda dan klik pautan pengesahan yang disediakan.",
+            "resend_warning": "Tidak dapat menghantar semula e-mel.",
+            "session_timeout": "Sesi anda telah tamat tempoh. Sila cuba untuk muat semula halaman atau hantar semula e-mel.",
+            "status_confirmed": "disahkan",
+            "status_label": "Status:",
+            "status_waiting": "e-mel dihantar - sedang menunggu pengesahan",
+            "test_ee": "Cuba edisi Enterprise 14 hari secara percuma",
+            "try_another_email": "Atau cuba dengan alamat e-mel yang lain."
+          },
+          "upsell": {
+            "become_hero": "Jadilah wira!",
+            "benefits": {
+              "description": "Apakah manfaat edisi Enterprise di premis?",
+              "high_security": "Fitur keselamatan",
+              "high_security_text": "Log masuk tunggal (SAML, OpenID Connect, CAS), kumpulan LDAP.",
+              "installation": "Sokongan pemasangan",
+              "installation_text": "Jurutera perisian berpengalaman membimbing anda melalui pemasangan lengkap dan proses persediaan dalam infrastruktur anda sendiri.",
+              "premium_features": "Tambahan Enterprise",
+              "premium_features_text": "Board Agile, tema tersuai dan logo, graf, aliran kerja yang cerdas dengan tindakan tersuai, carian teks penuh untuk lampiran pakej kerja dan pelbagai pilihan ruang tersuai.",
+              "professional_support": "Sokongan profesional",
+              "professional_support_text": "Dapatkan sokongan yang boleh dipercayai, sokongan peribadi yang berkualiti tinggi daripada jurutera sokongan berpengalaman dengan pengetahuan pakar tentang menjalankan OpenProject dalam persekitaran perniagaan yang kritikal."
+            },
+            "button_book_now": "Tempah sekarang",
+            "button_contact_us": "Hubungi kami untuk demo",
+            "button_start_trial": "Mulakan tempoh percubaan percuma",
+            "button_upgrade": "Naik taraf sekarang",
+            "confidence": "Kami memberikan keyakinan dalam perisian pengurusan projek kelas enterprise yang telah diuji dan disokong - dengan Sumber Terbuka dan minda yang terbuka.\n",
+            "enterprise_info_html": "%{feature_title} adalah tambahan Enterprise <span class='spot-icon spot-icon_inline spot-icon_enterprise-addons'></span>.",
+            "link_quote": "Dapatkan sebut harga",
+            "more_info": "Maklumat lanjut",
+            "text": "The OpenProject Enterprise edition builds on top of the Community edition. It includes Enterprise add-ons and professional support mainly aimed at organizations with more than 10 users that manage business critical projects with OpenProject.\n",
+            "unlimited": "Tiada had",
+            "upgrade_info": "Sila naik taraf ke pelan berbayar untuk mengaktifkan dan mula menggunakannya dalam pasukan anda.",
+            "you_contribute": "Developers need to pay their bills, too. By upgrading to the Enterprise edition, you will be supporting this open source community effort and contributing to its development, maintenance and continuous improvement."
+          }
+        },
+        "type_form": {
+          "add_group": "Tambah kumpulan atribut",
+          "add_table": "Tambah jadual pakej kerja yang berkaitan",
+          "custom_field": "Ruang tersuai",
+          "drag_to_activate": "Tarik ruangan dari sini untuk mengaktifkan mereka",
+          "edit_query": "Edit pertanyaan",
+          "inactive": "Tidak aktif",
+          "new_group": "Kumpulan baharu",
+          "reset_to_defaults": "Set semula ke default"
+        },
+        "work_packages_settings": {
+          "warning_progress_calculation_mode_change_from_field_to_status_html": "Mengubah mod pengiraan perkembangan daripada berasaskan-kerja kepada berasaskan-status akan menjadikan semua nilai <i>% Selesai</i> yang sedia ada hilang dan digantikan dengan nilai yang berkaitan dengan setiap status. Nilai sedia ada bagi <i>Kerja yang berbaki</i> juga akan dikira semula untuk menggambarkan perubahan ini. Tindakan ini tidak boleh dipulihkan.",
+          "warning_progress_calculation_mode_change_from_status_to_field_html": "Menukar mod pengiraan kemajuan daripada berasaskan status kepada berasaskan kerja akan menjadikan medan <i>% Selesai</i> boleh diedit secara bebas. Jika anda secara pilihan memasukkan nilai untuk <i>Kerja</i> atau <i>Kerja yang tinggal</i>, nilai tersebut juga akan dipautkan kepada <i>% Selesai</i>. Menukar <i>Baki kerja</i> kemudian boleh mengemas kini <i>% Selesai</i>."
+        },
+        "working_days": {
+          "add_non_working_day": "Hari tidak bekerja",
+          "already_added_error": "Hari tidak bekerja untuk tarikh ini sudah ada. Hanya boleh mempunyai satu hari tidak bekerja dicipta untuk setiap tarikh yang unik.",
+          "calendar": {
+            "empty_state_description": "Tiada hari tidak bekerja yang khusus ditentukan untuk tahun ini. Klik \"+ Hari tidak bekerja\" dibawah untuk menambah tarikh.",
+            "empty_state_header": "Hari tidak bekerja",
+            "new_date": "(baharu)"
+          },
+          "change_button": "Simpan dan jadualkan semula",
+          "change_description": "Changing which days of the week are considered working days or non-working days can affect the start and finish days of all work packages and life cycles in all projects in this instance.",
+          "change_title": "Tukar hari bekerja",
+          "removed_title": "Anda akan mengeluarkan hari berikut dari senarai hari tidak bekerja:",
+          "warning": "The changes might take some time to take effect. You will be notified when all relevant work packages and project life cycles have been updated. Are you sure you want to continue?\n"
+        }
+      },
+      "ajax": {
+        "hide": "Sembunyikan",
+        "loading": "Memuatkan...",
+        "updating": "Mengemas kini..."
+      },
+      "attachments": {
+        "delete": "Padam lampiran",
+        "delete_confirmation": "Adakah anda pasti anda ingin memadam fail ini? Tindakan ini tidak boleh dikembalikan.\n",
+        "draggable_hint": "Tarik ruang pengedit ke imej sebaris atau lampiran rujukan. Ruang pengedit yang ditutup akan dibuka semasa anda menariknya.\n",
+        "quarantined_hint": "Fail ini telah dikuarantin kerana virus telah ditemui. Ia tidak tersedia untuk dimuat turun."
+      },
+      "autocomplete_ng_select": {
+        "add_tag": "Tambah item",
+        "clear_all": "Padam semua",
+        "loading": "Sedang memuatkan...",
+        "not_found": "Tiada item ditemui",
+        "type_to_search": "Taip untuk cari"
+      },
+      "autocomplete_select": {
+        "active": "%{name} %{label} aktif ",
+        "placeholder": {
+          "multi": "Tambah \"%{name}\"",
+          "single": "Pilih \"%{name}\""
+        },
+        "remove": "Keluarkan %{name}"
+      },
+      "autocompleter": {
+        "notFoundText": "Tiada item ditemui",
+        "placeholder": "Taip untuk cari",
+        "project": {
+          "placeholder": "Pilih projek"
+        }
+      },
+      "avatars": {
+        "empty_file_error": "Sila muat naik imej yang sah (jpg, png, gif)",
+        "error_image_too_large": "Imej terlalu besar.",
+        "label_choose_avatar": "Pilih Avatar dari fail",
+        "text_upload_instructions": "Muat naik avatar tersuai anda sendiri bersaiz 128 x 128 piksel. Fail lebih besar akan disaizkan semula dan dipotong untuk disesuaikan.\nPreviu avatar anda akan ditunjukkan sebelum memuat naik, sebaik sahaja anda memilih imej. \n",
+        "uploading_avatar": "Memuat naik avatar anda.",
+        "wrong_file_format": "Format yang dibenarkan adalah jpg, png, gif"
+      },
+      "backup": {
+        "attachments_disabled": "Lampiran mungkin tidak akan disertakan kerana ia melebihi saiz maksimum keseluruhan yang dibenarkan. Anda boleh mengubah ini melalui konfigurasi (memerlukan server untuk dimulakan semula).",
+        "download_backup": "Muat turun sandaran",
+        "include_attachments": "Sertakan lampiran",
+        "info": "Anda boleh mencetuskan sandaran disini. Proses tersebut akan mengambil sedikit masa bergantung kepada jumlah data (terutamanya lampiran) yang anda ada. Anda akan menerima e-mel apabila ianya telah disediakan.\n",
+        "last_backup": "Sandaran terakhir",
+        "last_backup_from": "Sandaran terakhir daripada",
+        "note": "Sandaran baharu akan mengatasi mana-mana yang terdahulu. Hanya beberapa bilangan sandaran yang terhad boleh diminta mengikut hari.\n",
+        "options": "Pilihan",
+        "request_backup": "Minta sandaran",
+        "title": "Sandaran OpenProject"
+      },
+      "baseline": {
+        "apply": "Gunakan",
+        "clear": "Kosongkan",
+        "drop_down": {
+          "a_specific_date": "tarikh tertentu",
+          "between_two_specific_dates": "antara dua tarikh tertentu",
+          "last_month": "bulan lepas",
+          "last_week": "minggu lepas",
+          "last_working_day": "hari bekerja terakhir",
+          "none": "-",
+          "yesterday": "semalam"
+        },
+        "from": "Dari",
+        "header_description": "Sorotkan perubahan yang dibuat ke senarai ini pada bila-bila masa lalu.",
+        "help_description": "Zon masa rujukan untuk garis panduan asas.",
+        "icon_tooltip": {
+          "added": "Ditambah ke paparan dalam tempoh masa perbandingan",
+          "changed": "Dikekalkan dengan pengubahsuaian",
+          "removed": "Dikeluarkan dari paparan dalam tempoh masa perbandingan"
+        },
+        "legends": {
+          "changes_between": "Perubahan antara",
+          "changes_since": "Perubahan sejak",
+          "in_your_timezone": "Dalam zon waktu tempatan anda:",
+          "maintained_with_changes": "Dikekalkan dengan perubahan",
+          "no_longer_meets_filter_criteria": "Tidak lagi memenuhi kriteria penyaring",
+          "now_meets_filter_criteria": "Kini memenuhi kriteria penyaring"
+        },
+        "show_changes_since": "Paparkan perubahan sejak",
+        "time": "Masa",
+        "time_description": "Dalam masa tempatan anda: %{datetime}",
+        "to": "Hingga",
+        "toggle_title": "Garis panduan asas"
+      },
+      "bcf": {
+        "add_viewpoint": "Tambah sudut pandangan",
+        "delete_viewpoint": "Padam sudut pandangan",
+        "export": "Eksport",
+        "export_bcf_xml_file": "Eksport fail BCF XML (BCF versi 2.1)",
+        "import": "Import",
+        "import_bcf_xml_file": "Import fail BCF XML (BCF versi 2.1)",
+        "label_bcf": "BCF",
+        "management": "Pengurusan BCF",
+        "refresh": "Muat semula ",
+        "refresh_work_package": "Muat semula pakej kerja",
+        "show_viewpoint": "Paparkan sudut pandangan",
+        "viewpoint": "Sudut pandangan"
+      },
+      "boards": {
+        "add_card": "Tambah kad",
+        "add_list": "Tambah senarai ke board",
+        "add_list_modal": {
+          "labels": {
+            "assignee": "Pilih pengguna untuk ditambah sebagai senarai penerima tugasan baharu",
+            "status": "Pilih status untuk ditambah sebagai senarai baharu",
+            "subproject": "Pilih subprojek untuk ditambah sebagai senarai baharu",
+            "subtasks": "Pilih pakej kerja untuk ditambah sebagai senarai baharu",
+            "version": "Pilih versi untuk ditambah sebagai senarai baharu"
+          },
+          "warning": {
+            "add_members": "<a href=\"%{link}\">Tambah ahli baru ke projek ini</a> untuk pilih pengguna lagi.",
+            "assignee": "Tiada ahli yang sepadan dengan nilai penyaringan anda.  <br>",
+            "no_member": "Projek ini tidak mempunyai ahli yang boleh ditambah pada masa ini.  <br>",
+            "status": "Tiada status yang tersedia pada masa ini. <br>\nSama ada sudah tiada atau semua sudah ditambah ke board.\n"
+          }
+        },
+        "board_type": {
+          "action": "Board tindakan",
+          "action_by_attribute": "Board tindakan (%{attribute})",
+          "action_text": "Board dengan senarai yang disaring di atribut %{attribute}. Pemindahan pakej kerja ke senarai lain akan mengemas kini atribut mereka.\n",
+          "action_text_assignee": "Board dengan kolum automatik berdasarkan pengguna yang ditentukan. Ideal untuk penghantaran pakej kerja.\n",
+          "action_text_status": "Board gaya kanban asas dengan kolum untuk status seperti Untuk Dilakukan, Dalam Pelaksanaan, Selesai.\n",
+          "action_text_subprojects": "Board dengan kolum automatik untuk subprojek. Menarik pakej kerja ke senarai lain akan mengemas kini (sub-)projek sewajarnya.\n",
+          "action_text_subtasks": "Board dengan kolum automatik untuk sub-elements. Menarik pakej kerja ke senarai lain akan mengemas kini (sub-)projek sewajarnya.\n",
+          "action_text_version": "Board dengan kolum automatik berdasarkan versi atribut. Ideal untuk merancang pembangunan produk.\n",
+          "action_type": {
+            "assignee": "penerima tugasan",
+            "status": "status",
+            "subproject": "subprojek",
+            "subtasks": "induk-anak",
+            "version": "versi"
+          },
+          "board_type_title": {
+            "assignee": "Penerima tugasan",
+            "basic": "Asas",
+            "status": "Status",
+            "subproject": "Subprojek",
+            "subtasks": "Induk-anak",
+            "version": "Versi"
+          },
+          "free": "asas",
+          "free_text": "Bermula dari awal dengan board kosong. Tambah kad dan kolum secara manual kepada board ini.\n",
+          "select_attribute": "Atribut tindakan",
+          "select_board_type": "Sila pilih jenis board yang anda perlukan.",
+          "text": "Jenis board\n"
+        },
+        "click_to_remove_list": "Klik untuk padamkan senarai ini",
+        "configuration_modal": {
+          "display_settings": {
+            "card_mode": "Paparkan sebagai kad",
+            "table_mode": "Paparkan sebagai jadual"
+          },
+          "title": "Konfigurasi board ini"
+        },
+        "create_new": "Cipta board baru",
+        "error_attribute_not_writable": "Pakej kerja tidak boleh dialihkan, %{attribute} tidak boleh ditulis.",
+        "error_cannot_move_into_self": "Anda tidak boleh mengalihkan pakej kerja ke dalam kolum sendiri.",
+        "error_loading_the_list": "Ralat memuat senarai: %{error_message}",
+        "error_permission_missing": "Kebenaran untuk membuat pertanyaan awam tidak ditemui",
+        "label_board_type": "Jenis board\n",
+        "label_unnamed_board": "Board tanpa nama",
+        "label_unnamed_list": "Senarai tanpa nama",
+        "lists": {
+          "delete": "Padam senarai"
+        },
+        "new_board": "Board baharu",
+        "text_hidden_list_warning": "Hanya beberapa senarai dipaparkan kerana anda tidak mempunyai kebenaran. Hubungi pentadbir anda untuk maklumat lanjut.",
+        "version": {
+          "close_version": "Versi tertutup",
+          "closed": "Tertutup",
+          "edit_version": "Versi edit",
+          "is_closed": "Versi ini ditutup. Tiada item yang boleh ditambah ke dalam versi ini.",
+          "is_locked": "Versi ini dikunci. Tiada item yang boleh ditambah ke dalam versi ini.",
+          "lock_version": "Versi terkunci",
+          "locked": "Terkunci",
+          "open_version": "Versi terbuka",
+          "show_version": "Papar versi",
+          "unlock_version": "Versi dibuka"
+        }
+      },
+      "button_add": "Tambah",
+      "button_add_watcher": "Tambah pemerhati",
+      "button_advanced_filter": "Penyaringan lanjutan",
+      "button_back": "Kembali",
+      "button_back_to_list_view": "Kembali ke paparan senarai",
+      "button_cancel": "Batal",
+      "button_change_project": "Beralih ke projek lain",
+      "button_check_all": "Semak semua",
+      "button_close": "Tutup",
+      "button_close_details": "Tutup paparan butiran",
+      "button_collapse_all": "Sembunyikan semua",
+      "button_configure-form": "Konfigurasi borang",
+      "button_confirm": "Sahkan",
+      "button_continue": "Seterusnya",
+      "button_copy": "Salin",
+      "button_copy_link_to_clipboard": "Salin pautan ke papan klip",
+      "button_copy_to_clipboard": "Salin ke papan klip",
+      "button_copy_to_other_project": "Salin dalam projek lain",
+      "button_create": "Cipta",
+      "button_custom-fields": "Ruang tersuai",
+      "button_delete": "Padamkan",
+      "button_delete_watcher": "Padam pemerhati",
+      "button_details_view": "Paparan butiran",
+      "button_duplicate": "Salinan",
+      "button_edit": "Edit",
+      "button_expand_all": "Kembangkan semua",
+      "button_export-atom": "Muat Turun Atom",
+      "button_filter": "Penyaring",
+      "button_generate_pdf": "Hasilkan PDF",
+      "button_list_view": "Paparan senarai",
+      "button_log_costs": "Log kos unit",
+      "button_log_time": "Masa log",
+      "button_more": "Lagi",
+      "button_more_actions": "Tindakan lebih lanjut",
+      "button_open_details": "Buka paparan butiran",
+      "button_open_fullscreen": "Buka paparan skrin penuh",
+      "button_quote": "Petikan",
+      "button_save": "Simpan",
+      "button_settings": "Tetapan",
+      "button_show_cards": "Paparkan paparan kad",
+      "button_show_fullscreen": "Paparkan paparan skrin penuh",
+      "button_show_gantt": "Paparkan paparan Gantt",
+      "button_show_list": "Paparkan paparan senarai",
+      "button_show_table": "Paparkan paparan jadual",
+      "button_show_view": "Pandangan skrin penuh",
+      "button_uncheck_all": "Batalkan semua pilihan",
+      "button_update": "Kemas kini",
+      "calendar": {
+        "create_new": "Cipta kalendar baharu",
+        "title": "Kalendar",
+        "too_many": "Terdapat %{count} pakej kerja secara keseluruhan, tetapi hanya %{max} sahaja yang boleh dipaparkan.",
+        "unsaved_title": "Kalendar tidak dinamakan"
+      },
+      "caption_rate_history": "Sejarah kadar",
+      "card": {
+        "add_new": "Tambah kad baharu",
+        "highlighting": {
+          "entire_card_by": "Keseluruhan kad dengan",
+          "inline": "Sorotkan barisan:"
+        },
+        "remove_from_list": "Keluarkan kad dari senarai"
+      },
+      "chart": {
+        "axis_criteria": "Kriteria paksi",
+        "errors": {
+          "could_not_load": "Data untuk paparkan graf tidak dapat dimuatkan. Kebenaran yang diperlukan mungkin kurang."
+        },
+        "modal_title": "Konfigurasi graf pakej kerja",
+        "tabs": {
+          "dataset": "Set data %{number}",
+          "graph_settings": "Umum"
+        },
+        "type": "Jenis carta",
+        "types": {
+          "bar": "Bar",
+          "doughnut": "Donat",
+          "horizontal_bar": "Bar mendatar",
+          "line": "Baris",
+          "pie": "Pai",
+          "polar_area": "Kawasan polar",
+          "radar": "Radar"
+        }
+      },
+      "clipboard": {
+        "browser_error": "Server anda tidak menyokong menyalin ke papan klip. Sila salin secara manual: %{content}",
+        "copied_successful": "Berjaya disalin ke papan klip!"
+      },
+      "close_filter_title": "Tutup penyaring",
+      "close_form_title": "Tutup borang",
+      "close_popup_title": "Tutup pop timbul",
+      "custom_actions": {
+        "date": {
+          "current_date": "Tarikh semasa",
+          "specific": "pada"
+        }
+      },
+      "dashboards": {
+        "label": "Papan Pemuka"
+      },
+      "description_available_columns": "Kolum Tersedia",
+      "description_current_position": "Anda di sini:",
+      "description_select_work_package": "Pilih pakej kerja #%{id}",
+      "description_subwork_package": "Anak kepada pakej kerja #%{id}",
+      "editor": {
+        "ckeditor_error": "Ralat berlaku dalam CKEditor",
+        "error_saving_failed": "Penyimpanan dokumen gagal dengan ralat yang berikut: %{error}",
+        "macro": {
+          "attribute_reference": {
+            "invalid_attribute": "Atribut yang dipilih '%{name}' tidak wujud.",
+            "macro_help_tooltip": "Bahagian teks ini sedang dihasilkan secara dinamik oleh makro.",
+            "nested_macro": "Makro ini merujuk secara rekursif %{model} %{id}.",
+            "not_found": "Sumber yang diminta tidak dapat ditemui"
+          },
+          "child_pages": {
+            "button": "Terpaut pada halaman anak",
+            "hint": "Tinggalkan ruangan ini kosong untuk senaraikan halaman-halaman anak daripada halaman semasa. Jika anda ingin merujuk ke halaman berbeza, sediakan tajuk atau slug.\n",
+            "include_parent": "Termasuk induk",
+            "page": "Halaman wiki",
+            "text": "[Placeholder] Pautan ke halaman anak",
+            "this_page": "halaman ini"
+          },
+          "code_block": {
+            "button": "Masukkan kod snippet",
+            "language": "Bahasa pemformatan",
+            "language_hint": "Masukkan pemformatan bahasa yang akan digunakan untuk penyorotan (jika disokong).",
+            "title": "Masukkan / edit Kod snippet"
+          },
+          "dropdown": {
+            "chose_macro": "Pilih makro",
+            "macros": "Makro-makro"
+          },
+          "embedded_calendar": {
+            "text": "[Placeholder] Kalendar yang tersemat"
+          },
+          "embedded_table": {
+            "button": "Sematkan jadual pakej kerja ",
+            "text": "[Placeholder] Jadual pakej kerja yang tersemat"
+          },
+          "error": "Tidak dapat kembangkan makro: %{message}",
+          "toc": "Jadual kandungan",
+          "toolbar_help": "Klik untuk memilih widget dan paparkan toolbar. Klik dua kali untuk edit widget",
+          "wiki_page_include": {
+            "button": "Sertakan kandungan halaman wiki lain",
+            "hint": "Sertakan kandungan halaman wiki lain dengan menyatakan tajuk atau slugnya.\nAnda boleh sertakan halaman wiki projek lain dengan mengasingkan mereka menggunakan kolon seperti contoh berikut.\n",
+            "not_set": "(Halaman belum ditetapkan lagi)",
+            "page": "Halaman wiki",
+            "text": "[Placeholder] Termasuk halaman wiki"
+          },
+          "work_package_button": {
+            "button": "Masukkan butang cipta pakej kerja",
+            "button_style": "Guna gaya butang",
+            "button_style_hint": "Pilihan: Tanda untuk membuat makro muncul sebagai butang, bukan sebagai pautan.",
+            "type": "Jenis pakej kerja ",
+            "with_type": "Cipta pakej kerja (Jenis: %{typename})",
+            "without_type": "Cipta pakej kerja"
+          }
+        },
+        "mode": {
+          "manual": "Tukar ke sumber Markdown",
+          "wysiwyg": "Tukar ke editor WYSIWYG"
+        },
+        "no_revisions": "Tiada pengubahsuaian tempatan ditemui",
+        "preview": "Tukar mod tinjauan",
+        "revisions": "Tunjukkan pengubahsuaian tempatan",
+        "source_code": "Tukar mod sumber Markdown"
+      },
+      "enumeration_activities": "Aktiviti (penjejakan masa)",
+      "enumeration_doc_categories": "Kategori dokumen",
+      "enumeration_work_package_priorities": "Keutamaan pakej kerja",
+      "error": {
+        "cannot_save_changes_with_message": "Tidak dapat menyimpan perubahan anda kerana ralat tersebut: %{error}",
+        "embedded_table_loading": "Paparan yang tersemat tidak dapat dimuatkan: %{message}",
+        "internal": "Sebuah ralat dalaman telah berlaku.",
+        "query_saving": "Paparan tersebut tidak dapat disimpan."
+      },
+      "error_attachment_upload": "Fail gagal untuk dimuat naik: %{error}",
+      "error_attachment_upload_permission": "Anda tidak mempunyai kebenaran untuk memuat naik fail-fail pada sumber ini.",
+      "error_could_not_resolve_user_name": "Tidak dapat menyelesaikan nama pengguna",
+      "error_could_not_resolve_version_name": "Tidak dapat menyelesaikan nama versi",
+      "exclusion_info": {
+        "modal": {
+          "content": "Status %{status_name} telah dikonfigurasikan untuk dikeluarkan daripada jumlah hierarki Kerja, Kerja yang berbaki, dan % Selesai. Jumlah tersebut tidak mengambil kira nilai ini.",
+          "title": "Status dikeluarkan daripada jumlah hierarki"
+        }
+      },
+      "favorite_projects": {
+        "no_results": "Anda tiada projek kegemaran",
+        "no_results_subtext": "Tambah satu atau beberapa projek sebagai kegemaran melalui gambaran keseluruhan mereka atau dalam senarai projek."
+      },
+      "field_value_enter_prompt": "Masukkan nilai untuk '%{field}'",
+      "filter": {
+        "description": {
+          "text_close_filter": "Untuk memilih satu entri, tinggalkan fokus, contohnya dengan menekan enter. Untuk keluar tanpa penyaringan, pilih entri (kosong) pertama.",
+          "text_open_filter": "Buka penyaring ini dengan 'ALT' dan kekunci anak panah."
+        },
+        "more_values_not_shown": "Terdapat %{total} lagi hasil, cari untuk menyaring hasil.",
+        "noneElement": "(tiada)",
+        "sorting": {
+          "criteria": {
+            "one": "Kriteria penyusunan pertama",
+            "three": "Kriteria penyusunan ketiga",
+            "two": "Kriteria penyusunan kedua"
+          }
+        },
+        "time_zone_converted": {
+          "only_end": "Sehingga %{to} dalam masa tempatan anda.",
+          "only_start": "Dari %{from} dalam masa tempatan anda.",
+          "two_values": "%{from} - %{to} dalam masa tempatan anda."
+        },
+        "value_spacer": "-"
+      },
+      "forms": {
+        "advanced_settings": "Tetapan lanjutan",
+        "load_error_message": "Terdapat ralat semasa memuatkan borang",
+        "submit_success_message": "Borang telah berjaya dihantar",
+        "validation_error_message": "Sila betulkan ralat yang terdapat dalam borang"
+      },
+      "gantt_chart": {
+        "button_activate": "Paparkan carta Gantt",
+        "button_deactivate": "Sembunyikan carta Gantt",
+        "filter": {
+          "noneSelection": "(tiada)"
+        },
+        "label": "Carta Gantt",
+        "labels": {
+          "bar": "Label bar",
+          "description": "Pilih atribut yang anda ingin tunjukkan dalam kedudukan berkaitan carta Gantt pada setiap masa. Ambil perhatian bahawa apabila hover di atas elemen, label tarikhnya akan ditunjukkan dan bukannya atribut ini.\n",
+          "farRight": "Paling kanan",
+          "left": "Kiri",
+          "right": "Kanan",
+          "title": "Konfigurasi label"
+        },
+        "quarter_label": "Q%{quarter_number}",
+        "selection_mode": {
+          "notification": "Klik pada mana-mana pakej kerja yang disorotkan untuk cipta perhubungan. Tekan escape untuk batalkan."
+        },
+        "zoom": {
+          "auto": "Zum secara auto",
+          "days": "Hari",
+          "description": "Pilih paras zum permulaan yang akan ditunjukkan apabila zum secara auto tidak tersedia.\n",
+          "in": "Zum masuk",
+          "months": "Bulan",
+          "out": "Zum keluar",
+          "quarters": "Suku Tahun",
+          "weeks": "Minggu",
+          "years": "Tahun"
+        }
+      },
+      "general_text_No": "Tidak",
+      "general_text_Yes": "Ya",
+      "general_text_no": "tidak",
+      "general_text_yes": "ya",
+      "github_integration": {
+        "github_actions": "Tindakan",
+        "pull_requests": {
+          "merged_message": "Tarik permintaan #%{pr_number} %{pr_link} untuk %{repository_link} telah %{pr_state} oleh %{github_user_link}.",
+          "message": "Tarik permintaan #%{pr_number}%{pr_link} untuk %{repository_link} dikarang oleh %{github_user_link} telah %{pr_state}.",
+          "referenced_message": "Tarik permintaan #%{pr_number} %{pr_link} untuk %{repository_link} dikarang oleh %{github_user_link} merujuk kepada pakej kerja ini.",
+          "states": {
+            "closed": "ditutup",
+            "draft": "dirangka",
+            "merged": "digabungkan",
+            "opened": "dibuka",
+            "ready_for_review": "sedia untuk disemak"
+          }
+        },
+        "tab_header": {
+          "copy_menu": {
+            "description": "Salin potongan git ke papan klip",
+            "label": "Potongan git"
+          },
+          "git_actions": {
+            "branch_name": "Nama cabang",
+            "cmd": "Cipta cabang dengan komit kosong",
+            "commit_message": "Mesej komit",
+            "copy_error": "❌ Salinan gagal!",
+            "copy_success": "✅ Disalin!",
+            "title": "Potongan cepat untuk Git"
+          },
+          "title": "Tarik permintaan"
+        },
+        "tab_prs": {
+          "empty": "Masih belum ada tarik permintaan yang dipautkan lagi. Pautkan PR yang sedia ada menggunakan kod <code>OP#%{wp_id}</code> di deskripsi PR atau ciptakan PR baru."
+        },
+        "work_packages": {
+          "tab_name": "GitHub"
+        }
+      },
+      "gitlab_integration": {
+        "gitlab_pipelines": "Saluran",
+        "tab_header_issue": {
+          "title": "Isu-isu"
+        },
+        "tab_header_mr": {
+          "copy_menu": {
+            "description": "Salin potongan git ke papan klip",
+            "label": "Potongan git"
+          },
+          "create_mr": {
+            "description": "Cipta satu Penggabungan Permintaan",
+            "label": "Cipta PP"
+          },
+          "git_actions": {
+            "branch_name": "Nama cabang",
+            "cmd": "Cipta cabang dengan komit kosong",
+            "commit_message": "Mesej komit",
+            "copy_error": "❌ Salinan gagal!",
+            "copy_success": "✅ Disalin!",
+            "title": "Potongan cepat untuk Git"
+          },
+          "title": "Penggabungan permintaan"
+        },
+        "tab_issue": {
+          "empty": "Tiada isu yang dipautkan lagi. Pautkan isu-isu yang sedia ada dengan menggunakan kod <code>OP#%{wp_id}</code> (atau <code>PP#%{wp_id}</code> untuk pautan peribadi) dalam tajuk/deskripsi isu atau cipta isu yang baru."
+        },
+        "tab_mrs": {
+          "empty": "Tiada penggabungan permintaan yang dipautkan lagi. Pautkan PP sedia ada dengan menggunakan kod <code>OP#%{wp_id}</code> (atau <code>PP#%{wp_id}</code> untuk pautan peribadi) dalam tajuk/deskripsi PP atau cipta PP yang baru."
+        },
+        "updated_on": "Dikemas kini pada",
+        "work_packages": {
+          "tab_name": "GitLab"
+        }
+      },
+      "global_search": {
+        "all_projects": "Dalam semua projek",
+        "close_search": "Tutup carian",
+        "current_project": "Dalam projek ini",
+        "current_project_and_all_descendants": "Dalam projek ini + subprojek",
+        "recently_viewed": "Dilihat baru-baru ini",
+        "search": "Cari",
+        "title": {
+          "all_projects": "semua projek",
+          "project_and_subprojects": "dan semua subprojek",
+          "search_for": "Cari untuk"
+        }
+      },
+      "grid": {
+        "add_widget": "Tambah widget",
+        "configure": "Konfigurasi widget",
+        "remove": "Buang widget",
+        "widgets": {
+          "custom_text": {
+            "title": "Teks tersuai"
+          },
+          "documents": {
+            "no_results": "Tiada dokumen lagi.",
+            "title": "Dokumen"
+          },
+          "members": {
+            "add": "Ahli",
+            "no_results": "Tiada ahli dipapar.",
+            "title": "Ahli-ahli",
+            "too_many": "Memaparkan %{count} daripada %{total} ahli.",
+            "view_all_members": "Lihat semua ahli"
+          },
+          "missing_permission": "Anda tidak mempunyai kebenaran yang diperlukan untuk melihat widget ini.",
+          "news": {
+            "at": "pada",
+            "no_results": "Tiada perkara baharu untuk dilaporkan.",
+            "title": "Berita"
+          },
+          "project_description": {
+            "no_results": "Tiada deskripsi yang tertulis lagi. Deskripsi boleh diberikan di 'Tetapan Projek'.",
+            "title": "Deskripsi projek"
+          },
+          "project_favorites": {
+            "no_results": "Kini anda tiada projek kegemaran. Tekan ikon bintang di papan pemuka projek untuk tambahkan ke kegemaran anda.",
+            "title": "Projek kegemaran"
+          },
+          "project_status": {
+            "at_risk": "Berisiko",
+            "discontinued": "Dihentikan",
+            "finished": "Telah selesai",
+            "not_set": "Belum ditetapkan",
+            "not_started": "Belum dimulakan",
+            "off_track": "Lari jadual",
+            "on_track": "Ikut jadual",
+            "title": "Status projek"
+          },
+          "subprojects": {
+            "no_results": "Tiada subprojek.",
+            "title": "Subprojek"
+          },
+          "time_entries_current_user": {
+            "displayed_days": "Hari yang dipaparkan dalam widget:",
+            "title": "Masa yang saya gunakan"
+          },
+          "time_entries_list": {
+            "no_results": "Tiada catatan masa untuk 7 hari yang lalu.",
+            "title": "Masa yang digunakan (7 hari lepas)"
+          },
+          "work_packages_accountable": {
+            "title": "Pakej kerja yang saya bertanggungjawab"
+          },
+          "work_packages_assigned": {
+            "title": "Pakej kerja yang ditugaskan kepada saya"
+          },
+          "work_packages_calendar": {
+            "title": "Kalendar"
+          },
+          "work_packages_created": {
+            "title": "Pakej kerja yang saya cipta"
+          },
+          "work_packages_graph": {
+            "title": "Graf pakej kerja"
+          },
+          "work_packages_overview": {
+            "placeholder": "Klik untuk edit ...",
+            "title": "Gambaran keseluruhan pakej kerja"
+          },
+          "work_packages_table": {
+            "title": "Jadual pakej kerja"
+          },
+          "work_packages_watched": {
+            "title": "Pakej kerja yang saya pantau"
+          }
+        }
+      },
+      "hal": {
+        "error": {
+          "edit_prohibited": "Mengedit %{attribute} disekat untuk sumber ini. Sama ada atribut ini diperolehi daripada hubungan (cth, anak) atau sebaliknya tidak boleh dikonfigurasikan.",
+          "format": {
+            "date": "%{attribute} bukan tarikh yang sah - dijangka TTTT-BB-HH."
+          },
+          "general": "Ralat telah berlaku.",
+          "update_conflict_refresh": "Klik sini untuk muat semula sumber dan kemas kini versi yang terbaru."
+        }
+      },
+      "help_texts": {
+        "show_modal": "Show help text"
+      },
+      "homescreen": {
+        "blocks": {
+          "new_features": {
+            "16_1": {
+              "standard": {
+                "new_features_html": "The release contains various new features and improvements, such as <br> <ul class=\"%{list_styling_class}\"> <li>Structure the project life cycle with phases and phase gates.</li> <li>Export meetings in PDF format.</li> <li>Set smart default options for reminders.</li> <li>Use negative lag for work package dates.</li> <li>Display hierarchy trees for hierarchy custom fields.</li> <li>Benefit from improved accessibility for the date picker with ARIA live regions.</li> </ul>\n"
+              }
+            },
+            "learn_about": "Learn more about all new features",
+            "text_new_features": "Baca berkenaan fitur-fitur baharu dan kemas kini produk."
+          }
+        }
+      },
+      "ical_sharing_modal": {
+        "copy_url_label": "Salin URL",
+        "description": "Anda boleh menggunakan URL (iCalendar) untuk melanggan kalendar ini dalam pelanggan luaran dan lihat maklumat pakej kerja terkini dari situ.",
+        "ical_generation_error_text": "Ralat berlaku semasa menjana URL kalendar.",
+        "inital_setup_error_message": "Ralat berlaku ketika sedang mengambil data.",
+        "success_message": "\"%{name}\" URL berjaya disalin ke papan klip anda. Sisipkan ia dalam kalendar pelanggan anda untuk lengkapkan langganan.",
+        "title": "Langgan kalendar",
+        "token_name_description_text": "Jika anda melanggan kalendar ini dari pelbagai peranti, nama ini akan membantu anda membezakan antara mereka dalam senarai <a href=\"my/access_token\", target=\"_blank\">token akses</a> anda.",
+        "token_name_label": "Dimanakah anda akan menggunakan ini?",
+        "token_name_placeholder": "Taip nama, cth. \"Telefon\"",
+        "warning": "Sila jangan kongsi URL ini dengan pengguna lain. Sesiapa sahaja yang mempunyai pautan ini akan boleh melihat butiran pakej kerja tanpa akaun atau kata laluan."
+      },
+      "ifc_models": {
+        "empty_warning": "Projek ini belum mempunyai sebarang model IFC.",
+        "keyboard_input_disabled": "Pemerhati tidak ada kawalan papan kekunci. Klik pada pemerhati untuk memberikan kawalan papan kekunci kepada pemerhati.",
+        "models": {
+          "ifc_models": "Model-model IFC"
+        },
+        "use_this_link_to_manage": "Gunakan pautan ini untuk kemas kini dan urus model IFC anda",
+        "views": {
+          "split": "Pemerhati dan jadual",
+          "split_cards": "Pemerhati dan kad",
+          "viewer": "Pemerhati"
+        }
+      },
+      "include_projects": {
+        "apply": "Gunakan",
+        "clear_selection": "Kosongkan pilihan",
+        "include_subprojects": "Termasuk semua sub-projek",
+        "no_results": "Tiada projek yang sepadan dengan kriteria carian anda.",
+        "search_placeholder": "Cari projek...",
+        "selected_filter": {
+          "all": "Semua projek",
+          "selected": "Hanya terpilih"
+        },
+        "title": "Projek-projek",
+        "toggle_title": "Termasuk projek",
+        "tooltip": {
+          "current_project": "Ini adalah projek yang anda terlibat dalam sekarang.",
+          "does_not_match_search": "Projek tidak sepadan dengan kriteria carian.",
+          "include_all_selected": "Projek sudah disertakan sejak Sertakan semua sub-projek didayakan."
+        }
+      },
+      "inplace": {
+        "btn_preview_disable": "Nyahdayakan previu",
+        "btn_preview_enable": "Previu",
+        "button_cancel": "%{attribute}: Batalkan",
+        "button_cancel_all": "Batalkan",
+        "button_edit": "%{attribute}: Edit",
+        "button_save": "%{attribute}: Simpan",
+        "button_save_all": "Simpan",
+        "clear_value_label": "-",
+        "errors": {
+          "maxlength": "%{field} tidak boleh mengandungi lebih daripada %{maxLength} digit",
+          "messages_on_field": "Ruang ini tidak sah: %{messages}",
+          "minlength": "%{field} tidak boleh mengandungi kurang daripada %{minLength} digit",
+          "number": "%{field} bukan nombor yang sah",
+          "required": "%{field} tidak boleh kosong"
+        },
+        "link_formatting_help": "Bantuan format teks",
+        "null_value_label": "Tiada nilai"
+      },
+      "invite_user_modal": {
+        "back": "Kembali",
+        "invite": "Jemput",
+        "message": {
+          "description": "Kami akan menghantar e-mel ke pengguna, dimana anda boleh menambah mesej peribadi di sini. Satu penerangan untuk jemputan akan berguna, atau mungkin sedikit maklumat berkenaan projek untuk bantu mereka bermula.",
+          "label": "Mesej jemputan",
+          "next_button": "Seterusnya"
+        },
+        "principal": {
+          "already_member_message": "Sudah menjadi ahli kepada %{project}",
+          "create_new_placeholder": "Cipta placeholder baharu:",
+          "invite_user": "Jemput:",
+          "label": {
+            "name": "Nama",
+            "name_or_email": "Nama atau alamat e-mel"
+          },
+          "next_button": "Seterusnya",
+          "no_results_group": "Tiada kumpulan ditemui",
+          "no_results_placeholder": "Tiada placeholder yang ditemui",
+          "no_results_user": "Tiada pengguna ditemui",
+          "required": {
+            "group": "Sila pilih kumpulan",
+            "placeholder": "Sila pilih placeholder",
+            "user": "Sila pilih pengguna"
+          }
+        },
+        "project": {
+          "label": "Projek",
+          "lacking_permission": "Sila pilih projek lain kerana anda kekurangan kebenaran untuk menugaskan pengguna ke projek yang dipilih masa ini.",
+          "lacking_permission_info": "Anda kekurangan kebenaran untuk menugaskan pengguna ke projek yang sedang dijalankan. Anda perlu memilih yang lain.",
+          "next_button": "Seterusnya",
+          "no_invite_rights": "Anda tidak dibenarkan untuk menjemput ahli ke projek ini",
+          "no_results": "Tiada projek yang ditemui",
+          "required": "Sila pilih projek"
+        },
+        "role": {
+          "description": "Ini adalah peranan yang pengguna akan menerima apabila mereka menyertai projek anda. Peranan tersebut menentukan tindakan yang mereka dibenarkan untuk ambil dan maklumat yang mereka boleh lihat. <a href=\"https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions\" target=\"_blank\"> Ketahui lebih lanjut tentang peranan dan kebenaran. </a>",
+          "label": "Peranan dalam %{project}",
+          "next_button": "Seterusnya",
+          "no_roles_found": "Tiada peranan ditemui",
+          "required": "Sila pilih peranan"
+        },
+        "success": {
+          "description": {
+            "group": "Kumpulan tersebut kini sebahagian daripada %{project}. Sementara itu anda sudah boleh merancang dengan kumpulan tersebut dan menugaskan pakej kerja sebagai contoh.",
+            "placeholder": "Placeholder kini boleh digunakan dalam %{project}. Sementara itu anda sudah boleh merancang dengan pengguna tersebut dan tugaskan pakej kerja sebagai contoh.",
+            "user": "Pengguna kini boleh log masuk untuk mengakses %{project}. Sementara itu, anda boleh merancang dengan pengguna tersebut dan tugaskan pakej kerja sebagai contoh."
+          },
+          "next_button": "Teruskan",
+          "title": "%{principal} telah dijemput!"
+        },
+        "summary": {
+          "next_button": "Hantar jemputan"
+        },
+        "title": {
+          "Group": "kumpulan",
+          "PlaceholderUser": "pengguna placeholder",
+          "User": "pengguna",
+          "invite": "Jemput pengguna",
+          "invite_principal_to_project": "Jemput %{principal} ke %{project}",
+          "invite_to_project": "Jemput %{type} ke %{project}"
+        },
+        "type": {
+          "group": {
+            "description": "Kebenaran berdasarkan peranan yang ditugaskan dalam projek terpilih",
+            "title": "Kumpulan"
+          },
+          "placeholder": {
+            "description": "Tidak mempunyai akses ke projek dan tiada e-mel yang dihantar keluar.",
+            "description_no_ee": "Tidak mempunyai akses ke projek dan tiada e-mel dihantar keluar. <br>Lihat<a href=\"%{eeHref}\" target=\"_blank\">Edisi Enterprise</a>",
+            "title": "Pengguna placeholder",
+            "title_no_ee": "Pengguna placeholder (Edisi Enterprise hanyalah tambahan)"
+          },
+          "required": "Sila pilih jenis untuk dijemput",
+          "user": {
+            "description": "Kebenaran berdasarkan peranan yang ditugaskan dalam projek terpilih",
+            "title": "Pengguna"
+          }
+        }
+      },
+      "label_activate": "Aktifkan",
+      "label_activity_show_all": "Paparkan semua aktiviti",
+      "label_activity_show_only_comments": "Paparkan aktiviti dengan komen sahaja",
+      "label_add_attachments": "Lampirkan fail",
+      "label_add_column_after": "Tambah kolum selepas",
+      "label_add_column_before": "Tambah kolum sebelum",
+      "label_add_columns": "Tambah kolum",
+      "label_add_comment": "Tambah komen",
+      "label_add_comment_title": "Komen dan taip @ untuk memaklumkan orang lain",
+      "label_add_description": "Tambah deskripsi untuk %{file}",
+      "label_add_row_after": "Tambah baris selepas",
+      "label_add_row_before": "Tambah baris sebelum",
+      "label_add_selected_columns": "Tambah kolum yang dipilih",
+      "label_added_by": "ditambah oleh",
+      "label_added_time_by": "Ditambah oleh <a href=\"%{authorLink}\">%{author} pada %{age}",
+      "label_ago": "hari yang lalu",
+      "label_all": "semua",
+      "label_all_uppercase": "Semua",
+      "label_all_work_packages": "semua pakej kerja",
+      "label_and": "dan",
+      "label_ascending": "Menaik",
+      "label_assignee": "Penerima tugasan",
+      "label_attachments": "Lampiran",
+      "label_author": "Pengarang: %{user}",
+      "label_avatar": "Avatar",
+      "label_between": "antara",
+      "label_board": "Board",
+      "label_board_locked": "Terkunci",
+      "label_board_plural": "Board",
+      "label_board_sticky": "Pelekat",
+      "label_cancel_comment": "Batalkan komen",
+      "label_change": "Tukar",
+      "label_children_derived_duration": "Pakej kerja anak diperolehi daripada tempoh",
+      "label_closed_work_packages": "ditutup",
+      "label_collapse": "Sembunyi",
+      "label_collapse_all": "Sembunyikan semua",
+      "label_collapsed": "disembunyikan",
+      "label_columns": "Kolum",
+      "label_comment": "Komen",
+      "label_committed_at": "%{committed_revision_link} pada %{date}",
+      "label_committed_link": "semakan yang dilakukan %{revision_identifier}",
+      "label_contains": "mengandungi",
+      "label_create": "Cipta",
+      "label_create_work_package": "Cipta pakej kerja baharu",
+      "label_created_by": "Dicipta oleh",
+      "label_created_on": "dicipta pada",
+      "label_current": "semasa",
+      "label_custom_queries": "Peribadi",
+      "label_date": "Tarikh",
+      "label_date_with_format": "Masukkan %{date_attribute} menggunakan format berikut: %{format}",
+      "label_deactivate": "Nyahaktifkan",
+      "label_default_queries": "Default",
+      "label_descending": "Menurun",
+      "label_description": "Deskripsi",
+      "label_details": "Butiran-butiran",
+      "label_display": "Paparan",
+      "label_drop_files": "Letakkan fail disini untuk lampirkan fail.",
+      "label_drop_folders_hint": "Anda tidak boleh memuat naik folder sebagai satu lampiran. Sila pilih fail tunggal.",
+      "label_drop_or_click_files": "Letakkan fail disini atau klik untuk melampirkan fail.",
+      "label_edit_comment": "Edit komen ini",
+      "label_edit_status": "Edit status pakej kerja tersebut",
+      "label_email": "E-mel",
+      "label_equals": "adalah",
+      "label_expand": "Kembang",
+      "label_expand_all": "Kembangkan semua",
+      "label_expand_project_menu": "Kembangkan menu projek",
+      "label_expanded": "dikembangkan",
+      "label_export": "Eksport",
+      "label_export_preparing": "Eksport sedang disediakan dan akan dimuat turun sebentar lagi.",
+      "label_favorites": "Kegemaran",
+      "label_filename": "Fail",
+      "label_files_to_upload": "Fail-fail tersebut akan dimuat naik:",
+      "label_filesize": "Saiz",
+      "label_formattable_attachment_hint": "Lampir dan pautkan fail dengan meletakkan pada ruang ini atau menyisipkan dari papan klip.",
+      "label_general": "Umum",
+      "label_global_queries": "Umum",
+      "label_greater_or_equal": ">=",
+      "label_group": "Kumpulan",
+      "label_group_by": "Kumpulkan mengikut",
+      "label_group_plural": "Kumpulan",
+      "label_hide_attributes": "Tunjukkan lebih sedikit",
+      "label_hide_column": "Sembunyikan kolum",
+      "label_hide_project_menu": "Sembunyikan menu projek",
+      "label_hour": "jam",
+      "label_hours": "jam",
+      "label_import": "Import",
+      "label_in": "dalam",
+      "label_in_less_than": "kurang daripada",
+      "label_in_more_than": "lebih daripada",
+      "label_incoming_emails": "E-mel masuk",
+      "label_information_plural": "Maklumat",
+      "label_invalid": "Tidak sah",
+      "label_last_updated_on": "Kemas kini terakhir pada",
+      "label_latest_activity": "Aktiviti terkini",
+      "label_learn_more_link": "Ketahui lebih lanjut",
+      "label_less_or_equal": "<=",
+      "label_less_than_ago": "kurang dari beberapa hari yang lalu",
+      "label_loading": "Sedang memuatkan...",
+      "label_mail_notification": "Pemberitahuan e-mel",
+      "label_manage_columns": "Urus dan susun semula kolum",
+      "label_me": "saya",
+      "label_meeting_agenda": "Agenda",
+      "label_meeting_minutes": "Minit Mesyuarat",
+      "label_meetings": "Mesyuarat-mesyuarat",
+      "label_menu_collapse": "sembunyikan",
+      "label_menu_expand": "kembangkan",
+      "label_moderate_comment": "Moderate comment",
+      "label_more_than_ago": "lebih dari beberapa hari yang lalu",
+      "label_next": "Seterusnya",
+      "label_no_color": "Tiada warna",
+      "label_no_data": "Tiada data untuk dipaparkan",
+      "label_no_date": "tiada tarikh",
+      "label_no_due_date": "tiada tarikh tamat",
+      "label_no_start_date": "tiada tarikh mula",
+      "label_no_value": "Tiada nilai",
+      "label_none": "tiada",
+      "label_not_contains": "tidak mengandungi",
+      "label_not_equals": "adalah bukan",
+      "label_on": "pada",
+      "label_open_context_menu": "Buka menu konteks",
+      "label_open_menu": "Buka menu",
+      "label_open_work_packages": "buka",
+      "label_password": "Kata laluan",
+      "label_per_page": "Setiap halaman:",
+      "label_please_wait": "Sila tunggu",
+      "label_press_enter_to_save": "Tekan enter untuk menyimpan.",
+      "label_preview": "Previu",
+      "label_previous": "Sebelumnya",
+      "label_project": "Projek",
+      "label_project_list": "Senarai projek",
+      "label_project_plural": "Projek-projek",
+      "label_public_query": "Umum",
+      "label_quote_comment": "Petik komen ini",
+      "label_recent": "Terbaru",
+      "label_rejected_files": "Fail-fail tersebut tidak dapat dimuat naik:",
+      "label_rejected_files_reason": "Fail-fail tersebut tidak boleh dimuat naik kerana saiz mereka adalah lebih besar daripada %{maximumFilesize}",
+      "label_remove": "Keluarkan",
+      "label_remove_all_files": "Padam semua fail",
+      "label_remove_column": "Buang lajur",
+      "label_remove_columns": "Keluarkan kolum yang dipilih",
+      "label_remove_file": "Padam %{fileName}",
+      "label_remove_row": "Alih keluar baris",
+      "label_remove_watcher": "Keluarkan pemerhati %{name}",
+      "label_report": "Laporan",
+      "label_repository_plural": "Repositori",
+      "label_reset": "Tetapkan semula",
+      "label_save_as": "Simpan sebagai",
+      "label_search_columns": "Cari kolum",
+      "label_select_project": "Pilih projek",
+      "label_select_watcher": "Pilih pemerhati...",
+      "label_selected_filter_list": "Penyaring yang dipilih",
+      "label_show_attributes": "Paparkan semua atribut",
+      "label_show_in_menu": "Paparkan paparan dalam menu",
+      "label_sort_by": "Susun mengikut",
+      "label_sort_higher": "Alihkan ke atas",
+      "label_sort_lower": "Alih ke bawah",
+      "label_sorted_by": "disusun mengikut",
+      "label_sorting": "Susunan",
+      "label_spent_time": "Masa yang dihabiskan",
+      "label_star_query": "Digemari",
+      "label_starred_queries": "Kegemaran",
+      "label_subject": "Subjek",
+      "label_sum": "Jumlah",
+      "label_sum_for": "Jumlah untuk",
+      "label_this_week": "minggu ini",
+      "label_time_entry_plural": "Masa yang dihabiskan",
+      "label_today": "Hari ini",
+      "label_total_amount": "Jumlah: %{amount}",
+      "label_total_progress": "%{percent}% Jumlah perkembangan",
+      "label_total_sum": "Jumlah keseluruhan",
+      "label_unwatch": "Berhenti memerhati",
+      "label_unwatch_work_package": "Berhenti memerhati pakej kerja",
+      "label_up": "Atas",
+      "label_updated_on": "dikemas kini pada",
+      "label_upload_counter": "%{done} daripada %{count} fail selesai",
+      "label_upload_notification": "Sedang memuat naik fail...",
+      "label_uploaded_by": "Dimuat naik oleh",
+      "label_user_plural": "Pengguna-pengguna",
+      "label_validation_error": "Pakej kerja tidak dapat disimpan disebabkan ralat berikut:",
+      "label_value_derived_from_children": "(nilai diperolehi daripada anak)",
+      "label_version_plural": "Versi-versi",
+      "label_view_has_changed": "Paparan ini mempunyai perubahan yang tidak disimpan. Klik untuk simpan mereka.",
+      "label_visibility_settings": "Tetapan keterlihatan",
+      "label_wait": "Sila tunggu untuk konfigurasi...",
+      "label_warning": "Amaran",
+      "label_watch": "Perhati",
+      "label_watch_work_package": "Perhatikan pakej kerja",
+      "label_watcher_added_successfully": "Pemerhati berjaya ditambah!",
+      "label_watcher_deleted_successfully": "Pemerhati berjaya dikeluarkan!",
+      "label_work_package": "Pakej kerja",
+      "label_work_package_context_menu": "Menu konteks pakej kerja",
+      "label_work_package_details_you_are_here": "Anda berada di tab %{tab} untuk %{type} %{subject}.",
+      "label_work_package_parent": "Pakej kerja induk",
+      "label_work_package_plural": "Pakej kerja",
+      "label_work_package_upload_notification": "Sedang memuat naik fail untuk Pakej kerja #%{id}: %{subject}",
+      "label_wp_id_added_by": "#%{id} ditambah oleh %{author}",
+      "modals": {
+        "button_apply": "Gunakan",
+        "button_cancel": "Batalkan",
+        "button_delete": "Padamkan",
+        "button_save": "Simpan",
+        "button_submit": "Hantar",
+        "destroy_time_entry": {
+          "text": "Adakah anda pasti anda ingin memadam entri masa yang berikut?",
+          "title": "Sahkan pemadaman entri masa"
+        },
+        "destroy_work_package": {
+          "bulk_text": "Adakah anda pasti anda ingin memadam %{label} yang berikut?",
+          "confirm_deletion_children": "Saya mengesahkan semua keturunan pakej kerja yang tersenarai akan dikeluarkan secara berulang-ulang.",
+          "deletes_children": "Semua pakej kerja anak dan keturunan mereka akan dipadamkan secara berulang-ulang.",
+          "has_children": "Pakej kerja mempunyai %{childUnits}:",
+          "single_text": "Adakah anda pasti anda ingin memadam pakej kerja",
+          "title": "Sahkan pemadaman %{label}"
+        },
+        "form_submit": {
+          "text": "Adakah anda pasti anda ingin melaksanakan tindakan ini?",
+          "title": "Sahkan untuk teruskan"
+        },
+        "label_delete_page": "Padam halaman semasa",
+        "label_name": "Nama"
+      },
+      "myTimeTracking": {
+        "noSpecificTime": "No specific time"
+      },
+      "my_page": {
+        "label": "Halaman saya"
+      },
+      "notice_bad_request": "Ralat Permintaan.",
+      "notice_job_started": "kerja bermula.",
+      "notice_no_results_to_display": "Tiada hasil yang boleh dilihat untuk dipaparkan.",
+      "notice_successful_create": "Penciptaan berjaya.",
+      "notice_successful_delete": "Pemadaman berjaya.",
+      "notice_successful_update": "Kemas kini berjaya.",
+      "notifications": {
+        "center": {
+          "and_more_users": {
+            "other": "dan %{count} yang lain"
+          },
+          "empty_state": {
+            "no_notification": "Nampaknya anda telah selesaikan semuanya.",
+            "no_notification_for_filter": "Nampaknya anda semua terperangkap untuk penapis ini.",
+            "no_notification_with_current_filter": "Nampaknya anda sudah selesai untuk penyaringan %{filter}.",
+            "no_notification_with_current_project_filter": "Nampaknya anda sudah selesai dengan projek yang dipilih.",
+            "no_selection": "Klik pemberitahuan untuk paparkan semua butiran aktiviti."
+          },
+          "label_actor_and": "dan",
+          "mark_all_read": "Tanda semua sudah dibaca",
+          "mark_all_read_confirmation": "This will mark all notifications in this view as read. Are you sure you want to do this?",
+          "mark_as_read": "Tanda sudah dibaca",
+          "new_notifications": {
+            "link_text": "Klik sini untuk memuatkan mereka.",
+            "message": "Terdapat pemberitahuan baharu."
+          },
+          "no_results": {
+            "at_all": "Pemberitahuan baharu akan muncul di sini apabila terdapat aktiviti yang berkaitan dengan anda.",
+            "with_current_filter": "Tiada pemberitahuan dalam paparan ini buat masa ini"
+          },
+          "text_update_date_by": "%{date} oleh",
+          "total_count_warning": "Sedang memaparkan %{newest_count} pemberitahuan yang terbaru. %{more_count} lagi tidak dipaparkan."
+        },
+        "date_alerts": {
+          "milestone_date": "Tarikh pencapaian",
+          "overdue": "Tertangguh",
+          "overdue_since": "since %{difference_in_days}.",
+          "property_is": "is in %{difference_in_days}.",
+          "property_is_deleted": "is deleted.",
+          "property_today": "is today.",
+          "property_was": "was %{difference_in_days} ago."
+        },
+        "no_unread": "Tiada pemberitahuan yang belum dibaca",
+        "reasons": {
+          "assigned": "Penerima tugasan",
+          "commented": "Komen",
+          "created": "Dicipta",
+          "dateAlert": "Peringatan tarikh",
+          "mentioned": "Telah disebutkan",
+          "prioritized": "Diutamakan",
+          "processed": "Diproses",
+          "reminder": "Peringatan",
+          "responsible": "Bertanggungjawab",
+          "scheduled": "Dijadualkan",
+          "shared": "Telah dikongsi",
+          "watched": "Pemerhati"
+        },
+        "reminders": {
+          "note": "Nota: “%{note}”"
+        },
+        "settings": {
+          "change_notification_settings": "Anda boleh mengubah suai <a target=\"_blank\" href=\"%{url}\">tetapan pemberitahuan</a> anda untuk memastikan anda tidak terlepas tarikh yang penting.",
+          "global": {
+            "date_alerts": {
+              "description": "Pemberitahuan secara automatik apabila tarikh penting menghampiri untuk pakej kerja terbuka yang anda terlibat (penerima tugasan, bertanggungjawab atau pemerhati).",
+              "title": "Peringatan tarikh"
+            },
+            "delayed": {
+              "description": "Pemberitahuan tambahan untuk aktiviti dalam semua projek.",
+              "title": "Tidak menyertai"
+            },
+            "immediately": {
+              "description": "Pemberitahuan untuk semua aktiviti dalam pakej kerja yang anda terlibat (penerima tugasan, bertanggungjawab, atau pemerhati).",
+              "title": "Menyertai"
+            },
+            "overdue": "Apabila tertunggak"
+          },
+          "notify_me": "Maklumkan saya",
+          "project_specific": {
+            "add": "Tambah tetapan untuk projek",
+            "already_selected": "Projek ini telah dipilih",
+            "description": "Tetapan pemberitahuan khusus projek mengatasi tetapan default diatas.",
+            "remove": "Keluarkan tetapan projek",
+            "title": "Tetapan pemberitahuan khusus projek"
+          },
+          "reasons": {
+            "assignee": "Penerima tugasan",
+            "mentioned": {
+              "description": "Terima pemberitahuan setiap kali sesiapa menyebut saya di mana saja",
+              "title": "Disebutkan"
+            },
+            "responsible": "Bertanggungjawab",
+            "shared": "Telah dikongsi",
+            "watched": "Pemerhati",
+            "work_package_commented": "Semua komen baharu",
+            "work_package_created": "Pakej kerja baharu",
+            "work_package_prioritized": "Semua perubahan utama",
+            "work_package_processed": "Semua perubahan status",
+            "work_package_scheduled": "Semua perubahan tarikh"
+          },
+          "reminders": {
+            "no_notification": "Tiada pemberitahuan",
+            "timeframes": {
+              "normal": {
+                "P1D": "1 hari sebelum",
+                "P3D": "3 hari sebelum",
+                "P7D": "1 minggu sebelum",
+                "PT0S": "hari yang sama"
+              },
+              "overdue": {
+                "P1D": "setiap hari",
+                "P3D": "setiap 3 hari",
+                "P7D": "setiap minggu"
+              }
+            }
+          },
+          "title": "Tetapan pemberitahuan"
+        },
+        "title": "Pemberitahuan"
+      },
+      "onboarding": {
+        "buttons": {
+          "got_it": "Faham",
+          "next": "Seterusnya",
+          "skip": "Langkau"
+        },
+        "steps": {
+          "backlogs": {
+            "overview": "Kendalikan kerja anda dalam paparan <b>tunggakan</b>.",
+            "sprints": "Di kanan anda mempunyai tunggakan produk dan tunggakan bug, di kiri anda mempunyai pecutan yang berkenaan. Di sini anda boleh mencipta <b>epik, cerita pengguna, dan bug</b>, utamakan dengan menarik & melepaskan dan tambah mereka ke pecutan.",
+            "task_board": "Papan tugasan menggambarkan secara visual <b>perkembangan untuk pecutan ini</b>. Klik ikon tambah (+) di sebelah cerita pengguna untuk tambah tugasan baru atau halangan. <br> Status tersebut boleh dikemas kini dengan tarik dan lepas.",
+            "task_board_arrow": "Untuk lihat <b>papan tugasan</b> anda, buka pecutan drop-down...",
+            "task_board_select": "...dan pilih entri <b>papan tugasan</b>."
+          },
+          "boards": {
+            "add": "Klik ikon tambah (+) untuk <b>mencipta kad baharu</b> atau <b>menambah kad sedia ada</b> ke senarai pada board.",
+            "drag": "Tarik dan lepaskan kad anda dalam senarai yang diberikan untuk menyusun mereka semula, atau untuk memindahkannya ke senarai lain. <br> Anda boleh klik ikon maklumat (i) di sudut kanan atas atau klik dua kali pada kad untuk membuka butirannya.",
+            "lists_basic": "Disini anda boleh mencipta pelbagai senarai (kolum) dalam board agile anda.",
+            "lists_kanban": "Disini anda boleh mencipta pelbagai senarai (kolum) dalam board anda. Fitur ini membenarkan anda untuk mencipta, sebagai contoh, <b>board Kanban</b>.",
+            "overview": "Pilih <b>board</b> untuk tukar paparan dan uruskan projek anda menggunakan paparan board agile."
+          },
+          "help_menu": "Menu Bantuan (?) menyediakan <b>sumber bantuan tambahan</b>. Di sini anda akan menjumpai panduan pengguna, video panduan dan lebih lagi. <br> Nikmati kerja anda di OpenProject!",
+          "members": "Jemput <b>ahli</b> baharu untuk sertai projek anda.",
+          "quick_add_button": "Klik ikon tambah (+) dalam navigasi pengepala untuk <b>cipta projek baharu</b> atau untuk <b>jemput rakan sekerja</b>.",
+          "sidebar_arrow": "Guna anak panah kembali di sudut kiri atas untuk kembali ke <b>menu utama</b> projek.",
+          "team_planner": {
+            "add_assignee": "Untuk memulakan, tambah penerima tugasan ke dalam perancang pasukan.",
+            "add_existing": "Cari pakej kerja sedia ada dan tarik mereka ke perancang pasukan untuk tugaskan mereka ke ahli pasukan dengan serta merta dan tentukan tarikh mula dan akhir.",
+            "calendar": "Board perancangan mingguan atau dua mingguan memaparkan semua pakej kerja yang ditugaskan ke ahli pasukan anda.",
+            "card": "Tarik pakej kerja secara mendatar untuk gerakkan mereka ke belakang atau ke hadapan dalam masa, tarik pinggir pakej kerja untuk mengubah tarikh mula dan akhir malah, tarik secara menegak ke baris berbeza untuk tugaskan mereka ke ahli yang lain.",
+            "overview": "Perancang pasukan membolehkan anda memberikan tugasan secara visual kepada ahli pasukan dan dapatkan gambaran keseluruhan tentang siapa yang mengusahakan apa."
+          },
+          "welcome": "Ikuti lawatan pengenalan selama tiga minit untuk mempelajari <b>ciri penting</b> yang paling. <br> Kami mengesyorkan anda melengkapkan langkah sehingga tamat. Anda boleh memulakan semula lawatan pada bila-bila masa.",
+          "wiki": "Dalam <b>wiki</b> anda boleh mendokumentasikan dan kongsi pengetahuan bersama pasukan anda.",
+          "wp": {
+            "back_button": "Guna anak panah kembali di sudut kiri untuk keluar dan kembali ke senarai pakej kerja.",
+            "create_button": "Butang <b>+ Cipta</b> akan menambah pakej kerja baharu ke projek anda.",
+            "full_view": "Paparan <b>butiran pakej kerja</b> tersebut menyediakan semua maklumat yang berkaitan dengan pakej kerja yang diberi, seperti deskripsi, status, keutamaan, aktiviti, kebergantungan, dan komen.",
+            "gantt_menu": "Cipta jadual projek dan garis masa dengan mudah menggunakan modul carta Gantt.",
+            "list": "Gambaran keseluruhan pakej <b>kerja</b> ini menyediakan senarai semua kerja dalam projek anda, seperti tugasan, pencapaian, fasa dan banyak lagi. <br> Pakej kerja boleh dicipta dan diedit secara langsung dari paparan ini. Untuk mengakses butiran pakej kerja tertentu, hanya klik dua kali pada barisnya.",
+            "timeline": "Di sini anda boleh <b>edit pelan projek anda</b>, cipta pakej kerja baharu, seperti tugasan, pencapaian, fasa, dan banyak lagi, serta <b>tambah kebergantungan</b>. Semua ahli pasukan boleh lihat dan kemas kini pelan terkini pada bila-bila masa.",
+            "toggler": "Sekarang mari lihat bahagian <b>pakej kerja</b>, yang memberikan anda paparan kerja anda secara terperinci."
+          }
+        }
+      },
+      "open_project_storage_modal": {
+        "waiting_subtitle": {
+          "network_off": "Terdapat masalah rangkaian.",
+          "network_on": "Rangkaian kembali. Kami sedang mencuba."
+        },
+        "waiting_title": {
+          "timeout": "Had Masa"
+        }
+      },
+      "overviews": {
+        "label": "Gambaran Keseluruhan"
+      },
+      "pagination": {
+        "no_other_page": "Anda berada di satu-satunya halaman.",
+        "pages": {
+          "next": "Pergi ke halaman seterusnya",
+          "previous": "Kembali ke halaman sebelumnya"
+        }
+      },
+      "password_confirmation": {
+        "field_description": "Anda perlu memasukkan kata laluan akaun anda untuk mengesahkan perubahan ini.",
+        "title": "Sahkan kata laluan anda untuk teruskan"
+      },
+      "placeholders": {
+        "default": "-",
+        "description": "Deskripsi: Klik untuk edit...",
+        "relation_description": "Klik untuk tambah deskripsi untuk hubungan ini",
+        "selection": "Sila pilih",
+        "subject": "Masukkan subjek di sini"
+      },
+      "project": {
+        "autocompleter": {
+          "label": "Autopelengkapan projek"
+        },
+        "click_to_switch_to_project": "Projek: %{projectname}",
+        "confirm_template_load": "Menukar templat akan memuat semula laman dan anda akan kehilangan semua input untuk borang ini. Teruskan?",
+        "context": "Konteks projek",
+        "copy": {
+          "copy_options": "Salin pilihan"
+        },
+        "no_template_selected": "(Tiada)",
+        "not_available": "Project N/A",
+        "required_outside_context": "Sila pilih projek untuk mencipta pakej kerja untuk melihat semua atribut. Anda hanya boleh memilih projek yang mempunyai jenis di atas yang telah diaktifkan.\n",
+        "use_template": "Guna templat"
+      },
+      "project_menu_details": "Butiran-butiran",
+      "relation_buttons": {
+        "abort": "Batal",
+        "add_existing": "Tambah sedia ada",
+        "add_existing_child": "Add child",
+        "add_existing_relation": "Tambah perhubungan sedia ada",
+        "add_new_child": "Cipta anak baru",
+        "add_new_relation": "Cipta perhubungan baharu",
+        "add_parent": "Tambah induk sedia ada",
+        "add_predecessor": "Tambah pendahulu",
+        "add_successor": "Add successor",
+        "change_parent": "Ubah induk",
+        "create_new": "Cipta baru",
+        "group_by_relation_type": "Kumpulkan mengikut jenis perhubungan",
+        "group_by_wp_type": "Kumpulkan mengikut jenis pakej",
+        "hierarchy_indent": "Hierarki inden",
+        "hierarchy_outdent": "Hierarki outdent",
+        "remove": "Padam perhubungan",
+        "remove_child": "Padam anak",
+        "remove_parent": "Keluarkan induk",
+        "save": "Simpan perhubungan",
+        "set_parent": "Tetapkan induk",
+        "show_relations": "Paparkan perhubungan",
+        "toggle_description": "Tukar deskripsi perhubungan",
+        "update_description": "Tetapkan atau kemas kini penerangan perhubungan ini",
+        "update_relation": "Klik untuk ubah jenis perhubungan"
+      },
+      "relation_labels": {
+        "blocked": "Disekat oleh",
+        "blocks": "Sekat",
+        "child": "Child",
+        "children": "Anak-anak",
+        "duplicated": "Diduplikasi oleh",
+        "duplicates": "Duplikasi",
+        "follows": "Mengikuti",
+        "includes": "Termasuk",
+        "parent": "Ibu bapa",
+        "partof": "Sebahagian daripada",
+        "precedes": "Mendahului",
+        "relates": "Berkaitan Dengan",
+        "relation_type": "jenis hubungan",
+        "required": "Diperlukan oleh",
+        "requires": "Memerlukan"
+      },
+      "relations": {
+        "empty": "Tiada perhubungan wujud",
+        "remove": "Padam perhubungan"
+      },
+      "relations_autocomplete": {
+        "parent_placeholder": "Pilih induk baharu atau tekan escape untuk batalkan.",
+        "placeholder": "Taip untuk cari"
+      },
+      "relations_hierarchy": {
+        "children_headline": "Anak-anak",
+        "hierarchy_headline": "Hierarki",
+        "parent_headline": "Ibu bapa"
+      },
+      "reminders": {
+        "settings": {
+          "alerts": {
+            "document_added": "Dokumen ditambah",
+            "explanation": "Pemberitahuan hari ini adalah terhad untuk pakej kerja. Anda boleh memilih untuk terus menerima makluman e-mel untuk kejadian ini sehingga mereka disertakan dalam pemberitahuan:\n",
+            "forum_messages": "Mesej forum baharu",
+            "membership_added": "Keahlian ditambah",
+            "membership_updated": "Keahlian dikemas kini",
+            "news_added": "Berita yang ditambah",
+            "news_commented": "Komen pada item berita",
+            "title": "Peringatan e-mel untuk item lain (yang bukan pakej kerja)",
+            "wiki_page_added": "Halaman wiki ditambah",
+            "wiki_page_updated": "Halaman wiki dikemas kini"
+          },
+          "daily": {
+            "add_time": "Tambah masa",
+            "enable": "Benarkan peringatan e-mel harian",
+            "explanation": "Anda akan menerima peringatan hanya untuk pemberitahuan yang belum dibaca dan hanya pada jam yang anda tentukan. %{no_time_zone}",
+            "no_time_zone": "Sehingga anda konfigurasi zon masa untuk akaun anda, masa akan ditafsirkan dalam UTC.",
+            "time_label": "Masa %{counter}:",
+            "title": "Hantar saya peringatan e-mel harian untuk pemberitahuan yang belum dibaca"
+          },
+          "immediate": {
+            "mentioned": "Serta merta apabila sesiapa @menyebut saya",
+            "personal_reminder": "Serta-merta apabila saya menerima peringatan peribadi",
+            "title": "Hantar saya peringatan e-mel"
+          },
+          "pause": {
+            "first_day": "Hari pertama",
+            "label": "Hentikan seketika peringatan e-mel harian",
+            "last_day": "Hari terakhir"
+          },
+          "title": "Peringatan e-mel",
+          "workdays": {
+            "title": "Terima peringatan e-mel pada hari-hari ini"
+          }
+        }
+      },
+      "reporting_engine": {
+        "label_remove": "Padamkan",
+        "label_response_error": "Terdapat ralat semasa mengendalikan pertanyaan."
+      },
+      "repositories": {
+        "select_branch": "Pilih cabang",
+        "select_tag": "Pilih tag"
+      },
+      "revit": {
+        "revit_add_in": "Revit Add-In",
+        "revit_add_in_settings": "Tetapan Revit Add-In"
+      },
+      "sharing": {
+        "selected_count": "%{count} dipilih",
+        "selection": {
+          "mixed": "Bercampur"
+        },
+        "share": "Kongsi"
+      },
+      "sort": {
+        "activate_asc": "aktifkan untuk gunakan penyusunan menaik",
+        "activate_dsc": "aktifkan untuk gunakan penyusunan menurun",
+        "activate_no": "aktifkan untuk membuang penyusunan",
+        "sorted_asc": "Susunan menaik digunakan, ",
+        "sorted_dsc": "Susunan menurun digunakan, ",
+        "sorted_no": "Tiada susunan digunakan, ",
+        "sorting_disabled": "penyusunan dinyahaktifkan"
+      },
+      "spot": {
+        "drop_modal": {
+          "close": "Tutup modal",
+          "focus_grab": "Ini adalah paksi fokus untuk modul. Tekan shift+tab untuk kembali ke elemen pencetus modul."
+        },
+        "filter_chip": {
+          "remove": "Keluarkan"
+        }
+      },
+      "storages": {
+        "authentication_error": "Authentication with %{storageType} failed",
+        "choose_location": "Pilih lokasi",
+        "drop_files": "Letakkan fail disini untuk dimuat naik ke %{name}.",
+        "drop_or_click_files": "Letakkan fail disini atau klik untuk dimuat naik ke %{name}.",
+        "file_links": {
+          "already_linked_directory": "Direktori ini telah dipautkan ke pakej kerja ini.",
+          "already_linked_file": "Fail ini sudah terpaut dengan pakej kerja ini.",
+          "download": "Muat turun %{fileName}",
+          "empty": "Tiada fail yang terpaut pada pakej kerja ini pada masa ini. Mula pautkan fail dengan tindakan di bawah atau dari %{storageType}.\n",
+          "link_uploaded_file_error": "Ralat berlaku semasa pautkan fail %{fileName} yang baru sahaja dimuat naik ke pakej kerja %{workPackageId}.\n",
+          "open": "Buka fail dalam storan",
+          "open_location": "Buka fail dalam lokasi",
+          "remove": "Padamkan pautan fail",
+          "remove_confirmation": "Adakah anda pasti anda ingin nyahpautkan pautan fail daripada pakej kerja ini? Nyahpautkan pautan tidak mempengaruhi fail asli dan hanya memadam sambungan ke pakej kerja ini.\n",
+          "remove_short": "Padamkan pautan",
+          "select": "Pilih fail",
+          "select_all": "Pilih semua",
+          "selection": {
+            "other": "Pautkan %{count} fail",
+            "zero": "Pilih fail untuk dipautkan"
+          },
+          "success_create": {
+            "other": "%{count} pautan fail berjaya dicipta."
+          },
+          "tooltip": {
+            "not_found": "Fail ini tidak dapat ditemui.",
+            "not_logged_in": "Sila log masuk ke dalam storan untuk mengakses fail ini.",
+            "view_not_allowed": "Anda tidak mempunyai kebenaran untuk melihat fail ini."
+          },
+          "upload_error": {
+            "403": "Fail anda (%{fileName}) tidak dapat dimuat naik oleh kerana sekatan sistem. Sila hubungi pentadbir anda untuk maklumat lanjut.\n",
+            "413": "Fail anda (%{fileName}) lebih besar daripada apa yang OpenProject boleh muat naik ke %{storageType}. Anda boleh memuat naiknya terus ke %{storageType} dahulu, kemudian pautkan fail tersebut.\n",
+            "507": "Fail anda (%{fileName}) ialah lebih besar dari kuota storan yang dibenarkan. Hubungi pentadbir anda untuk ubah suai kuota ini.\n",
+            "default": "Fail anda (%{fileName}) tidak dapat dimuat naikkan.\n",
+            "detail": {
+              "nextcloud": "Sila semak versi aplikasi Nextcloud \"Integrasi OpenProject\" terkini sudah dipasang dan hubungi pentadbir anda untuk maklumat lanjut.\n"
+            }
+          }
+        },
+        "files": {
+          "already_existing_body": "Fail dengan nama \"%{fileName}\" sudah wujud di lokasi dimana anda sedang cuba untuk memuat naik fail ini. Apakah yang anda ingin lakukan?\n",
+          "already_existing_header": "Fail ini telah wujud",
+          "cannot_create_folder": "Failed to create folder. Avoid using special characters and symbols and make sure the folder does not exist already.",
+          "directory_not_writeable": "Anda tidak mempunyai kebenaran untuk menambah fail ke dalam folder ini.",
+          "dragging_folder": "Muat naik ke %{storageType} tidak menyokong folder.",
+          "dragging_many_files": "Muat naik ke %{storageType} menyokong hanya satu fail pada satu masa.",
+          "empty_folder": "Folder ini kosong.",
+          "empty_folder_location_hint": "Klik butang di bawah untuk memuat naik fail di lokasi ini.",
+          "file_not_selectable_location": "Pemilihan fail tidak boleh dilakukan dalam proses pemilihan lokasi.",
+          "managed_project_folder_no_access": "Anda masih belum mempunyai akses ke folder projek yang dikendalikan. Sila tunggu sebentar dan cuba lagi.\n",
+          "managed_project_folder_not_available": "Folder yang dikendalikan secara automatik masih belum ditemui. Sila tunggu sebentar, muat semula halaman untuk dapatkan data terkini, dan cuba lagi.\n",
+          "project_folder_no_access": "Anda tidak mempunyai akses ke folder projek. Sila hubungi pentadbir anda untuk mendapatkan akses atau muat naik fail ke lokasi yang berbeza.\n",
+          "upload_keep_both": "Simpan kedua-duanya",
+          "upload_replace": "Gantikan"
+        },
+        "information": {
+          "authentication_error": "The request to %{storageType} could not be authenticated, that's an error.",
+          "connection_error": "Beberapa tetapan %{storageType} tidak berfungsi. Sila hubungi pentadbir %{storageType} anda.\n",
+          "live_data_error": "Ralat memperoleh butiran fail",
+          "live_data_error_description": "Beberapa data %{storageType} tidak dapat diperolehi. Sila cuba untuk memuat semula halaman ini atau hubungi pentadbir %{storageType} anda.\n",
+          "no_file_links": "Untuk mengaitkan fail-fail kepada pakej kerja ini, sila lakukan melalui %{storageType}.",
+          "not_logged_in": "Untuk tambah pautan, lihat atau muat naik fail yang berkaitan dengan pakej kerja ini, sila log masuk ke %{storageType}.\n",
+          "suggest_logout": "You can try whether logging out and back in fixes this problem.",
+          "suggest_relink": "You can try whether re-linking your account via the login button below fixes this problem."
+        },
+        "link_existing_files": "Pautkan fail sedia ada",
+        "link_files_in_storage": "Pautkan fail dalam %{storageType}",
+        "login": "log masuk %{storageType}",
+        "login_to": "Log masuk ke %{storageType}",
+        "new_folder": "Folder baru",
+        "no_connection": "Tiada sambungan %{storageType}",
+        "open_storage": "Buka %{storageType}",
+        "select_location": "Pilih lokasi",
+        "types": {
+          "default": "Storan",
+          "nextcloud": "Nextcloud",
+          "one_drive": "OneDrive/SharePoint"
+        },
+        "upload_files": "Muat naik fail"
+      },
+      "team_planner": {
+        "add_assignee": "Penerima tugasan",
+        "add_existing": "Tambah sedia ada",
+        "add_existing_title": "Tambah pakej kerja sedia ada",
+        "cannot_drag_here": "Tidak boleh memadam pakej kerja oleh kerana batasan kebenaran atau pengeditan.",
+        "cannot_drag_to_non_working_day": "Pakej kerja ini tidak boleh mula/habis pada hari tidak bekerja.",
+        "create_label": "Perancang pasukan",
+        "create_title": "Cipta perancang pasukan baharu",
+        "drag_here_to_remove": "Tarik ke sini untuk keluarkan penerima tugasan dan tarikh mula dan tamat. ",
+        "eight_weeks": "8-minggu",
+        "four_weeks": "4-minggu",
+        "modify": {
+          "errors": {
+            "fallback": "Pakej kerja ini tidak boleh diedit.",
+            "permission_denied": "Anda tidak mempunyai kebenaran yang diperlukan untuk mengubah suai ini."
+          }
+        },
+        "no_data": "Tambah penerima tugasan untuk penyediaan perancang pasukan anda.",
+        "one_week": "1-minggu",
+        "quick_add": {
+          "empty_state": "Guna ruang carian untuk mencari pakej kerja dan tarik mereka ke perancang untuk menugaskannya ke seseorang dan tetapkan tarikh mula dan habis.",
+          "search_placeholder": "Cari..."
+        },
+        "remove_assignee": "Keluarkan penerima tugasan",
+        "today": "Hari ini",
+        "two_weeks": "2-minggu",
+        "unsaved_title": "Perancangan pasukan yang belum dinamakan",
+        "work_week": "Minggu bekerja"
+      },
+      "text_are_you_sure": "Adakah anda pasti?",
+      "text_data_lost": "Semua data yang dimasukkan akan hilang.",
+      "text_query_destroy_confirmation": "Adakah anda pasti mahu memadam paparan yang dipilih?",
+      "text_user_wrote": "%{value} menulis:",
+      "text_work_packages_destroy_confirmation": "Adakah anda pasti anda ingin memadam pakej kerja yang dipilih tersebut?",
+      "time_entry": {
+        "stop": "Berhenti",
+        "title": "Masa log",
+        "tracking": "Penjejakan masa",
+        "work_package_required": "Memerlukan pemilihan pakej kerja dahulu."
+      },
+      "timer": {
+        "button_stop": "Hentikan pemasa semasa",
+        "start_new_timer": "Mulakan pemasa baharu",
+        "timer_already_running": "Untuk mula pemasa baharu, anda perlu menghentikan pemasa semasa dahulu:",
+        "timer_already_stopped": "Tiada pemasa aktif untuk pakej kerja ini, adakah anda telah menghentikannya di tetingkap lain?",
+        "tracking_time": "Masa penjejakan"
+      },
+      "tl_toolbar": {
+        "outlines": "Tahap hierarki",
+        "zooms": "Tahap zum"
+      },
+      "toolbar": {
+        "filter": "Saring",
+        "search_query_label": "Cari paparan yang disimpan",
+        "settings": {
+          "columns": "Kolum-kolum",
+          "configure_view": "Paparan konfigurasi",
+          "delete": "Padamkan",
+          "display_hierarchy": "Paparkan hierarki",
+          "display_sums": "Paparkan jumlah",
+          "export": "Eksport",
+          "group_by": "Kumpulkan mengikut",
+          "hide_hierarchy": "Sembunyikan hierarki",
+          "hide_sums": "Sembunyikan jumlah",
+          "page_settings": "Namakan semula paparan",
+          "save": "Simpan",
+          "save_as": "Simpan sebagai",
+          "share_calendar": "Langgan kalendar",
+          "sort_by": "Susun mengikut",
+          "visibility_settings": "Tetapan keterlihatan"
+        },
+        "unselected_title": "Pakej kerja"
+      },
+      "two_factor_authentication": {
+        "errors": {
+          "aborted": "Pengesahan telah dibatalkan. Sila cuba lagi."
+        },
+        "label_two_factor_authentication": "Pengesahan dua faktor"
+      },
+      "types": {
+        "attribute_groups": {
+          "confirm_reset": "Amaran: Adakah anda pasti anda ingin set semula konfigurasi borang? Ini akan set semula atribut kumpulan asal mereka dan menyahdayakan SEMUA ruang tersuai.\n",
+          "error_duplicate_group_name": "Nama %{group} digunakan lebih dari sekali. Nama kumpulan mestilah unik.",
+          "error_no_table_configured": "Sila konfigurasi jadual untuk %{group}.",
+          "more_information": "Maklumat lanjut",
+          "nevermind": "Tidak mengapa",
+          "reset_title": "Set semula konfigurasi borang",
+          "upgrade_to_ee": "Naik taraf edisi Enterprise di premis",
+          "upgrade_to_ee_text": "Wah! Jika anda perlukan tambahan ini anda sungguh pro! Bolehkah anda menyokong kami, pembangun OpenProject, dengan menjadi pelanggan edisi Enterprise?"
+        }
+      },
+      "units": {
+        "child_work_packages": {
+          "other": "%{count} pakej kerja anak"
+        },
+        "day": {
+          "one": "1 hari",
+          "other": "%{count} hari",
+          "zero": "0 hari"
+        },
+        "hour": {
+          "one": "1 j",
+          "other": "%{count} j",
+          "zero": "0 j"
+        },
+        "word": {
+          "other": "%{count} perkataan"
+        },
+        "workPackage": {
+          "other": "pakej kerja"
+        }
+      },
+      "upsell": {
+        "ee_only": "Tambahan edisi Enterprise"
+      },
+      "views": {
+        "card": "Kad-kad",
+        "list": "Jadual",
+        "timeline": "Gantt"
+      },
+      "watchers": {
+        "label_add": "Tambah pemerhati",
+        "label_discard": "Buang pemilihan",
+        "label_error_loading": "Ralat berlaku semasa memuatkan pemerhati",
+        "label_loading": "memuatkan pemerhati...",
+        "label_search_watchers": "Cari pemerhati",
+        "typeahead_placeholder": "Cari pemerhati yang mungkin"
+      },
+      "wiki_formatting": {
+        "code": "Kod sebaris",
+        "deleted": "Dipadam",
+        "heading1": "Pengepala 1",
+        "heading2": "Pengepala 2",
+        "heading3": "Pengepala 3",
+        "image": "Imej",
+        "italic": "Italic",
+        "ordered_list": "Senarai Tersusun",
+        "preformatted_text": "Teks yang telah dipraformatkan",
+        "quote": "Petikan",
+        "strong": "Kuat",
+        "underline": "Gariskan",
+        "unordered_list": "Senarai Tidak Tersusun",
+        "unquote": "Batalkan sebut harga",
+        "wiki_link": "Pautan ke halaman Wiki"
+      },
+      "work_packages": {
+        "baseline": {
+          "addition_label": "Ditambah ke paparan dalam tempoh masa perbandingan",
+          "column_incompatible": "Kolum ini tidak menunjukkan perubahan dalam mod asas.",
+          "modification_label": "Diubah suai dalam tempoh masa perbandingan",
+          "removal_label": "Dikeluarkan dari paparan dalam tempoh masa perbandingan"
+        },
+        "bulk_actions": {
+          "copy": "Salinan pukal",
+          "delete": "Pemadaman pukal",
+          "edit": "Edit pukal",
+          "move": "Perubahan projek secara pukal"
+        },
+        "button_clear": "Kosongkan",
+        "comment_added": "Komen telah berjaya ditambahkan.",
+        "comment_send_failed": "Ralat telah berlaku. Tidak dapat menghantar komen.",
+        "comment_updated": "Komen telah berjaya dikemas kini.",
+        "confirm_edit_cancel": "Adakah anda pasti anda ingin membatalkan edit pakej kerja?",
+        "copy": {
+          "title": "Salin pakej kerja"
+        },
+        "create": {
+          "button": "Cipta",
+          "header": "%{type} baharu",
+          "header_no_type": "Pakej kerja baharu (Jenis belum ditetapkan)",
+          "header_with_parent": "%{type} baharu (Anak kepada %{parent_type} #%{id})",
+          "title": "Pakej kerja baharu"
+        },
+        "default_queries": {
+          "all_open": "Buka semua",
+          "assigned_to_me": "Ditugaskan kepada saya",
+          "created_by_me": "Dicipta oleh saya",
+          "latest_activity": "Aktiviti terkini",
+          "manually_sorted": "Pertanyaan diisih secara manual baharu",
+          "milestones": "Pencapaian",
+          "overdue": "Tertangguh",
+          "recently_created": "Baru dicipta",
+          "shared_with_me": "Dikongsikan dengan saya",
+          "shared_with_users": "Dikongsi dengan pengguna",
+          "summary": "Ringkasan"
+        },
+        "description_enter_text": "Masukkan teks",
+        "description_filter": "Penyaring",
+        "description_options_hide": "Sembunyikan pilihan",
+        "description_options_show": "Paparkan pilihan",
+        "edit_attribute": "%{attribute} - Edit",
+        "faulty_query": {
+          "description": "Paparan anda salah dan tidak dapat untuk diproses.",
+          "title": "Pakej kerja tidak dapat dimuatkan."
+        },
+        "filters": {
+          "baseline_incompatible": "Penyaring atribut ini tidak diambil kira dalam mod Asas.",
+          "baseline_warning": "Mod garis panduan asas sedang aktif tetapi beberapa penyaring aktif tidak termasuk dalam perbandingan.",
+          "title": "Saring pakej kerja"
+        },
+        "hierarchy": {
+          "children_collapsed": "Paras hierarki %{level}, ditutup. Klik untuk paparkan anak yang disaring",
+          "children_expanded": "Paras hierarki %{level}, dikembangkan. Klik untuk tutup anak yang disaring",
+          "hide": "Sembunyikan mod hierarki",
+          "leaf": "Dedaun pakej kerja pada tahap %{level}.",
+          "show": "Paparkan mod hierarki",
+          "toggle_button": "Klik untuk tukar mod hierarki."
+        },
+        "inline_create": {
+          "title": "Klik di sini untuk tambah pakej kerja baharu ke senarai ini"
+        },
+        "jump_marks": {
+          "content": "Lompat ke kandungan",
+          "label_content": "Klik sini untuk langkau ke menu dan pergi ke kandungan",
+          "label_pagination": "Klik di sini untuk langkau jadual pakej kerja dan pergi ke penomboran",
+          "pagination": "Pergi ke jadual penomboran"
+        },
+        "key_value": "%{key}: %{value}",
+        "label_column_multiselect": "Ruang drop-down digabungkan: Pilih dengan kekunci anak panah, sahkan pemilihan dengan enter, padam dengan backspace",
+        "label_disable_multi_select": "Nyahaktifkan multiselect",
+        "label_enable_multi_select": "Aktifkan multiselect",
+        "label_filter_add": "Tambah penyaring",
+        "label_filter_by_text": "Menyaring secara teks",
+        "label_options": "Pilihan",
+        "limited_results": "Hanya %{count} pakej kerja boleh ditunjukkan dalam mod penyusunan manual. Sila kurangkan hasil dengan menyaring, atau tukar ke penyusunan secara automatik.",
+        "message_error_during_bulk_delete": "Ralat berlaku semasa cuba untuk memadam pakej kerja.",
+        "message_successful_bulk_delete": "Berjaya memadamkan pakej kerja.",
+        "message_successful_show_in_fullscreen": "Klik di sini untuk buka pakej kerja ini dalam paparan skrin penuh.",
+        "message_view_spent_time": "Paparkan masa yang dihabiskan untuk pakej kerja ini",
+        "message_work_package_read_only": "Pakej kerja dikunci dalam status ini. Tiada atribut selain status yang boleh diubah.",
+        "message_work_package_status_blocked": "Status pakej kerja tidak boleh ditulis kerana statusnya yang tertutup dan versi tertutup yang diberikan.",
+        "no_results": {
+          "description": "Sama ada tiada yang dicipta atau semua pakej kerja telah disaring keluar.",
+          "title": "Tiada pakej kerja untuk dipaparkan."
+        },
+        "placeholder_filter_by_text": "Subjek, deskripsi, komen, ...",
+        "placeholders": {
+          "date": "Pilih tarikh",
+          "default": "-"
+        },
+        "progress": {
+          "title": "Anggaran kerja dan perkembangan"
+        },
+        "properties": {
+          "assignee": "Penerima tugasan",
+          "author": "Pengarang",
+          "category": "Kategori",
+          "costObject": "Anggaran",
+          "createdAt": "Dicipta pada",
+          "date": "Tarikh",
+          "description": "Deskripsi",
+          "dueDate": "Tarikh tamat",
+          "duration": "Tempoh",
+          "overallCosts": "Kos keseluruhan",
+          "percentComplete": "% Selesai",
+          "percentCompleteAlternative": "Perkembangan",
+          "percentageDone": "Peratusan selesai",
+          "priority": "Keutamaan",
+          "projectName": "Projek",
+          "remainingTime": "Kerja yang berbaki",
+          "remainingWork": "Kerja yang berbaki",
+          "remainingWorkAlternative": "Waktu yang berbaki",
+          "responsible": "Bertanggungjawab",
+          "spentTime": "Masa yang dihabiskan",
+          "spentUnits": "Unit yang telah dibelanjakan",
+          "startDate": "Tarikh mula",
+          "status": "Status",
+          "storyPoints": "Titik Cerita",
+          "subject": "Subjek",
+          "subproject": "Subprojek",
+          "title": "Tajuk",
+          "type": "Jenis",
+          "updatedAt": "Dikemas kini pada",
+          "version": "Versi",
+          "versionName": "Versi",
+          "work": "Kerja",
+          "workAlternative": "Anggaran masa"
+        },
+        "property_groups": {
+          "costs": "Kos",
+          "details": "Butiran-butiran",
+          "estimatesAndTime": "Anggaran & Masa",
+          "other": "Lain-lain",
+          "people": "Orang"
+        },
+        "query": {
+          "click_to_edit_query_name": "Klik untuk edit tajuk paparan ini.",
+          "column_names": "Kolum-kolum",
+          "confirm_edit_cancel": "Adakah anda pasti ingin membatalkan edit nama paparan ini? Tajuk akan ditetapkan semula ke nilai sebelumnya.",
+          "display_sums": "Paparkan Jumlah",
+          "errors": {
+            "duplicate_query_title": "Nama paparan ini sudah wujud. Tukar juga?",
+            "not_found": "Tiada paparan seperti itu",
+            "unretrievable_query": "Tidak dapat untuk memperolehi paparan dari URL"
+          },
+          "filters": "Penyaring",
+          "group": "Kumpulkan mengikut",
+          "group_by": "Kumpulkan hasil mengikut",
+          "group_by_disabled_by_hierarchy": "Kumpulkan mengikut telah dinyahaktifkan kerana mod hierarki sedang aktif.",
+          "hide_column": "Sembunyikan kolum",
+          "hierarchy_disabled_by_group_by": "Mod hierarki dinyahaktifkan kerana hasil dikumpulkan oleh %{column}.",
+          "insert_columns": "Masukkan kolum",
+          "move_column_left": "Alihkan lajur ke kiri",
+          "move_column_right": "Alihkan lajur ke kanan",
+          "public_text": "Terbitkan paparan ini bagi membenarkan pengguna lain untuk akses paparan anda. Pengguna dengan kebenaran 'Urus paparan awam' boleh mengubah suai atau padamkan pertanyaan awam. Ini tidak akan mempengaruhi keterlihatan hasil pakej kerja dalam paparan itu dan bergantung kepada kebenaran mereka, pengguna mungkin akan melihat hasil yang berbeza.\n",
+          "rename_query_placeholder": "Nama paparan ini",
+          "sort_ascending": "Susun menaik",
+          "sort_descending": "Susun menurun",
+          "star_text": "Tandakan paparan ini sebagai kegemaran dan tambah ke bar sisi pandangan yang disimpan di sisi kiri.",
+          "text_no_results": "Tiada paparan yang sepadan ditemui."
+        },
+        "reminders": {
+          "button_label": "Tetapkan peringatan",
+          "presets": {
+            "custom": "At a particular date/time",
+            "month": "In a month",
+            "three_days": "In 3 days",
+            "tomorrow": "Tomorrow",
+            "week": "In a week"
+          },
+          "subtitle": "Anda akan menerima pemberitahuan untuk pakej kerja ini pada masa yang dipilih.",
+          "title": {
+            "edit": "Sunting peringatan",
+            "new": "Set a reminder"
+          }
+        },
+        "scheduling": {
+          "is_parent": "Tarikh pakej kerja ini disimpulkan secara automatik dari anaknya. Aktifkan 'Penjadualan Manual' untuk tetapkan tarikh.",
+          "is_switched_from_manual_to_automatic": "Tarikh pakej kerja ini mungkin perlu dikira semula selepas menukar dari penjadualan manual ke automatik kerana hubungan dengan pakej kerja lain."
+        },
+        "sharing": {
+          "show_all_users": "Paparkan kepada semua pengguna dengan siapa pakej kerja telah dikongsikan",
+          "title": "Kongsi pakej kerja"
+        },
+        "table": {
+          "configure_button": "Konfigurasi jadual pakej kerja",
+          "summary": "Jadual dengan baris pakej kerja dan kolum atribut pakej kerja.",
+          "text_inline_edit": "Kebanyakkan sel jadual ini ialah butang yang mengaktifkan kefungsian edit sebaris bagi atribut tersebut.",
+          "text_select_hint": "Pilih kotak yang sepatutnya dibuka dengan 'ALT' dan kekunci anak panah.",
+          "text_sort_hint": "Dengan pautan dalam pengepala jadual anda boleh menyusun, mengumpul, menyusun semula, mengeluarkan dan menambahkan kolum jadual."
+        },
+        "table_configuration": {
+          "button": "Konfigurasi jadual pakej kerja ini",
+          "choose_display_mode": "Papar pakej kerja sebagai",
+          "columns_help_text": "Guna ruang input diatas untuk tambah kolum ke paparan jadual anda. Anda boleh tarik dan lepas ke kolum untuk menyusun mereka semula.",
+          "default": "default",
+          "default_mode": "Senarai datar",
+          "display_settings": "Tetapan paparan",
+          "display_sums_hint": "Paparkan jumlah semua atribut yang boleh dijumlahkan dalam baris di bawah hasil jadual.",
+          "embedded_tab_disabled": "Tab konfigurasi ini tidak tersedia untuk paparan tersemat yang anda sedang edit.",
+          "hierarchy_hint": "Semua hasil jadual tersaring akan ditambah bersama leluhur mereka. Hierarki boleh dikembang dan ditutup.",
+          "hierarchy_mode": "Hierarki",
+          "highlighting": "Menyorotkan",
+          "highlighting_mode": {
+            "description": "Sorotkan dengan warna",
+            "entire_row_by": "Keseluruhan baris mengikut",
+            "inline": "Atribut yang disorotkan",
+            "inline_all": "Semua atribut",
+            "none": "Tiada sorotan",
+            "priority": "Keutamaan",
+            "status": "Status",
+            "type": "Jenis"
+          },
+          "modal_title": "Konfigurasi jadual pakej kerja",
+          "relation_filters": {
+            "filter_work_packages_by_relation_type": "Saring pakej kerja mengikut jenis hubungan"
+          },
+          "show_timeline_hint": "Paparkan satu carta gantt yang interaktif pada bahagian kanan jadual. Anda boleh ubah lebarnya dengan menarik pembahagi antara jadual dan carta gantt.",
+          "sorting_mode": {
+            "automatic": "Automatik",
+            "description": "Pilih mod untuk menyusun Pakej kerja anda:",
+            "manually": "Secara manual",
+            "warning": "Anda akan hilang penyusunan sebelumnya apabila mengaktifkan mod penyusunan automatik."
+          }
+        },
+        "tabs": {
+          "activity": "Aktiviti",
+          "files": "Fail-fail",
+          "github": "GitHub",
+          "gitlab": "GitLab",
+          "meetings": "Mesyuarat-mesyuarat",
+          "overview": "Gambaran Keseluruhan",
+          "relations": "Hubungan-hubungan",
+          "watchers": "Pemerhati-pemerhati"
+        },
+        "time_relative": {
+          "days": "hari-hari",
+          "months": "bulan-bulan",
+          "weeks": "minggu"
+        }
+      },
+      "zen_mode": {
+        "button_activate": "Aktifkan mod zen",
+        "button_deactivate": "Nyahaktifkan mod zen"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": ",",
+          "format": "%u%n",
+          "negative_format": "-%u%n",
+          "precision": 2,
+          "separator": ".",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "RM"
+        }
+      },
+      "format": {
+        "delimiter": null,
+        "precision": 3,
+        "round_mode": "default",
+        "separator": ".",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "Ribu Juta",
+            "million": "Juta",
+            "quadrillion": "Juta-juta",
+            "thousand": "Ribu",
+            "trillion": "Trilion",
+            "unit": null
+          }
+        },
+        "format": {
+          "delimiter": null,
+          "precision": 1,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "one": "Bait",
+              "other": "Bait"
+            },
+            "eb": "EB",
+            "gb": "GB",
+            "kb": "kB",
+            "mb": "MB",
+            "pb": "PB",
+            "tb": "TB",
+            "zb": "ZB"
+          }
+        }
+      },
+      "nth": {},
+      "percentage": {
+        "format": {
+          "delimiter": null,
+          "format": "%n%"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": null
+        }
+      }
+    },
+    "time": {
+      "am": "pagi",
+      "formats": {
+        "default": "%m/%d/%Y %I:%M %p",
+        "long": "%B %d, %Y %H:%M",
+        "short": "%d %b %H:%M",
+        "time": "%I:%M %p"
+      },
+      "pm": "petang"
+    }
+  }
+}

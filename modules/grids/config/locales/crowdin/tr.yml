@@ -1,0 +1,17 @@
+tr:
+  grids:
+    label_widget_in_grid: "%{grid_name} ızgarasında bulunan bileşen"
+  activerecord:
+    attributes:
+      grids/grid:
+        page: "Sayfa"
+        row_count: "Satır sayısı"
+        column_count: "Sütun sayısı"
+        widgets: "Araçlar"
+        scope: "Kapsam"
+    errors:
+      models:
+        grids/grid:
+          overlaps: 'üst üste gelmek.'
+          outside: 'Grup dışında görünmektedir.'
+          end_before_start: 'son değerin başlangıç değerinden daha büyük olması gerekir.'

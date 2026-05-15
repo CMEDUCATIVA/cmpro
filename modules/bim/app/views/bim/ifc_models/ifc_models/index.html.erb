@@ -1,0 +1,208 @@
+<%#-- copyright
+OpenProject is an open source project management software.
+Copyright (C) the OpenProject GmbH
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License version 3.
+
+OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+Copyright (C) 2006-2013 Jean-Philippe Lang
+Copyright (C) 2010-2013 the ChiliProject Team
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+See COPYRIGHT and LICENSE files for more details.
+
+++#%>
+<% html_title(t("ifc_models.label_ifc_models")) -%>
+
+<%=
+    render Primer::OpenProject::PageHeader.new do |header|
+      header.with_title { t("ifc_models.label_ifc_models") }
+      header.with_breadcrumbs(
+        [{ href: project_overview_path(@project.id), text: @project.name },
+         { href: defaults_bcf_project_ifc_models_path(@project.identifier), text: I18n.t(:"bcf.label_bcf") },
+         t("ifc_models.label_ifc_models")]
+      )
+
+      header.with_action_button(
+        tag: :a,
+        mobile_icon: :eye,
+        mobile_label: t("ifc_models.label_show_defaults"),
+        href: defaults_bcf_project_ifc_models_path,
+        aria: { label: I18n.t("ifc_models.label_show_defaults") },
+        data: { test_selector: "ifc-show-default-button" },
+        title: I18n.t("ifc_models.label_show_defaults")
+      ) do |button|
+        button.with_leading_visual_icon(icon: :eye)
+        t("ifc_models.label_show_defaults")
+      end
+    end
+%>
+
+<%=
+    if User.current.allowed_in_project?(:manage_ifc_models, @project)
+      render(Primer::OpenProject::SubHeader.new) do |subheader|
+        subheader.with_action_button(
+          scheme: :primary,
+          leading_icon: :plus,
+          label: I18n.t("ifc_models.label_new_ifc_model"),
+          data: { test_selector: "ifc-create-button" },
+          tag: :a,
+          href: new_bcf_project_ifc_model_path
+        ) do
+          ::Bim::IfcModels::IfcModel.model_name.human
+        end
+      end
+    end
+%>
+
+<% if @ifc_models.defaults.empty? %>
+  <%= render partial: "no_default_notice", locals: { project: @project } %>
+<% end %>
+
+<div data-ifc-progress-poll-url="<%= progress_bcf_project_ifc_models_path(@project, format: :json) %>"
+     data-ifc-frontend-log-url="<%= "/projects/#{@project.identifier}/bcf/frontend_log" %>">
+  <%= render ::Bim::IfcModels::TableComponent.new(rows: @ifc_models) %>
+</div>
+
+<%= nonced_javascript_tag do %>
+  (() => {
+    const boot = () => {
+    const root = document.querySelector('[data-ifc-progress-poll-url]');
+    if (!root) return;
+
+    if (window.__ifcProgressPollCleanup) {
+      window.__ifcProgressPollCleanup();
+    }
+
+    const pollUrl = root.dataset.ifcProgressPollUrl;
+    const frontendLogUrl = root.dataset.ifcFrontendLogUrl;
+    const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+    const csrfToken = csrfMeta ? csrfMeta.getAttribute('content') : null;
+    const ROW_SELECTOR = '[data-ifc-progress-row="true"]';
+    const statusCache = new Map();
+
+    const debugLog = (event, data = {}) => {
+      const payload = `[BIM::IFC][POLL] ${event} ${JSON.stringify(data)}`;
+      console.info(payload);
+
+      if (!frontendLogUrl) return;
+
+      fetch(frontendLogUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'X-Requested-With': 'XMLHttpRequest',
+          ...(csrfToken ? { 'X-CSRF-Token': csrfToken } : {})
+        },
+        credentials: 'same-origin',
+        keepalive: true,
+        body: JSON.stringify({
+          source: 'bim_ifc_progress_polling',
+          event,
+          data: payload
+        })
+      }).catch(() => undefined);
+    };
+
+    const statusColor = (status) => {
+      if (status === 'error') return '#dc2626';
+      if (status === 'processing' || status === 'completed') return '#16a34a';
+      return '#6b7280';
+    };
+
+    const updateRow = (row, data) => {
+      const progress = Math.max(0, Math.min(100, Number(data.progress) || 0));
+      const step = data.step || (data.status === 'completed' ? 'Completado' : 'Preparacion');
+
+      const bar = row.querySelector('[data-ifc-progress-bar]');
+      const text = row.querySelector('[data-ifc-progress-text]');
+      const error = row.querySelector('[data-ifc-progress-error]');
+
+      if (bar) {
+        const width = progress > 0 ? Math.max(progress, 10) : 0;
+        bar.style.width = `${width}%`;
+        bar.style.background = statusColor(data.status);
+      }
+
+      if (text) {
+        text.textContent = `${step} ${progress}%`;
+      }
+
+      if (error) {
+        error.textContent = data.error_message || '';
+      }
+    };
+
+    let intervalId = null;
+    const cleanup = () => {
+      if (intervalId !== null) {
+        window.clearInterval(intervalId);
+      }
+      if (window.__ifcProgressPollCleanup === cleanup) {
+        window.__ifcProgressPollCleanup = null;
+      }
+    };
+
+    const poll = () => {
+      const rows = Array.from(document.querySelectorAll(ROW_SELECTOR));
+      if (!rows.length) return;
+
+      const ids = rows
+        .map((row) => Number(row.dataset.ifcModelId))
+        .filter((id) => Number.isInteger(id) && id > 0);
+
+      if (!ids.length) return;
+
+      const url = `${pollUrl}?ids=${ids.join(',')}&_ts=${Date.now()}`;
+      debugLog('poll_request', { ids });
+      fetch(url, { headers: { Accept: 'application/json' }, cache: 'no-store' })
+        .then((response) => response.ok ? response.json() : Promise.reject(response.status))
+        .then((payload) => {
+          const models = (payload && payload.models) || [];
+          const map = new Map(models.map((model) => [Number(model.id), model]));
+          debugLog('poll_response', { modelCount: models.length });
+          rows.forEach((row) => {
+            const id = Number(row.dataset.ifcModelId);
+            const modelData = map.get(id);
+            if (!modelData) return;
+            updateRow(row, modelData);
+
+            const snapshot = `${modelData.status}:${modelData.progress}:${modelData.step}`;
+            if (statusCache.get(id) !== snapshot) {
+              statusCache.set(id, snapshot);
+              debugLog('poll_status_changed', { id, status: modelData.status, progress: modelData.progress, step: modelData.step });
+            }
+          });
+        })
+        .catch((error) => {
+          debugLog('poll_error', { error: String(error) });
+          return undefined;
+        });
+    };
+
+    intervalId = window.setInterval(poll, 2000);
+    debugLog('poll_boot', { pollUrl, rowCount: document.querySelectorAll(ROW_SELECTOR).length });
+    poll();
+
+    window.__ifcProgressPollCleanup = cleanup;
+    document.addEventListener('turbo:before-cache', cleanup, { once: true });
+    };
+
+    boot();
+  })();
+<% end %>

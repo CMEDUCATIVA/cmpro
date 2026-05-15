@@ -1,0 +1,82 @@
+<%#-- copyright
+OpenProject is an open source project management software.
+Copyright (C) the OpenProject GmbH
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License version 3.
+
+OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+Copyright (C) 2006-2013 Jean-Philippe Lang
+Copyright (C) 2010-2013 the ChiliProject Team
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+See COPYRIGHT and LICENSE files for more details.
+
+++#%>
+
+<% content_for :header_tags do %>
+  <% provision_gon_for_ifc_model(@ifc_models, @shown_model_ids) %>
+<% end %>
+
+<% unconverted = @shown_ifc_models.reject(&:converted?) %>
+
+<% if unconverted.any? %>
+  <%= render partial: "unconverted_notice", locals: { unconverted: unconverted } %>
+<% end %>
+
+<% auto_refresh_ids = @ifc_models.select { |model| model.pending? || model.processing? }.map(&:id) %>
+<% if auto_refresh_ids.any? %>
+  <script>
+    (function() {
+      const pendingIds = <%= raw(auto_refresh_ids.to_json) %>;
+      const progressUrl = "<%= progress_bcf_project_ifc_models_path(@project, format: :json) %>";
+      if (!pendingIds.length) return;
+
+      let tries = 0;
+      const maxTries = 120; // ~4 minutes at 2s
+      const timer = window.setInterval(async () => {
+        tries += 1;
+        if (tries > maxTries) {
+          window.clearInterval(timer);
+          return;
+        }
+
+        try {
+          const url = `${progressUrl}?ids=${pendingIds.join(",")}`;
+          const response = await fetch(url, { credentials: "same-origin" });
+          if (!response.ok) return;
+          const payload = await response.json();
+          const models = Array.isArray(payload?.models) ? payload.models : [];
+          if (!models.length) return;
+
+          const allDone = models.every((model) => {
+            const status = (model?.status || "").toString();
+            return status !== "pending" && status !== "processing";
+          });
+
+          if (allDone) {
+            window.clearInterval(timer);
+            window.location.reload();
+          }
+        } catch (_e) {
+          // keep polling
+        }
+      }, 2000);
+    })();
+  </script>
+<% end %>
+
+<openproject-base></openproject-base>

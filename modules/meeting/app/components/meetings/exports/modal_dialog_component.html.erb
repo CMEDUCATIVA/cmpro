@@ -1,0 +1,97 @@
+<%= render(
+      Primer::Alpha::Dialog.new(
+        title: I18n.t("meeting.export_pdf_dialog.title"),
+        subtitle: I18n.t("meeting.export_pdf_dialog.description"),
+        id: MODAL_ID,
+        size: :medium_portrait
+      )
+    ) do |dialog| %>
+  <% dialog.with_header(variant: :large) %>
+  <% dialog.with_body do %>
+    <%= primer_form_with(
+          url: project_meeting_path(@project, @meeting, format: :pdf),
+          method: :get,
+          data: {
+            "application-target": "dynamic",
+            controller: "meetings--export--form",
+            action: "submit->meetings--export--form#submitForm",
+            "meetings--export--form-job-status-dialog-url-value": job_status_dialog_path("_job_uuid_")
+          },
+          id: GENERATE_PDF_FORM_ID
+        ) do
+      flex_layout do |modal_body|
+        modal_body.with_row do
+          render(
+            Primer::Alpha::CheckBox.new(
+              id: "pdf_include_participants",
+              name: :participants,
+              checked: true,
+              label: I18n.t("meeting.export_pdf_dialog.include_participants.label"),
+              caption: I18n.t("meeting.export_pdf_dialog.include_participants.caption"),
+              visually_hide_label: false
+            )
+          )
+        end
+        modal_body.with_row(mt: 3) do
+          render(
+            Primer::Alpha::CheckBox.new(
+              id: "pdf_include_attachments",
+              name: :attachments,
+              checked: false,
+              label: I18n.t("meeting.export_pdf_dialog.include_attachments.label"),
+              caption: I18n.t("meeting.export_pdf_dialog.include_attachments.caption"),
+              visually_hide_label: false
+            )
+          )
+        end
+        modal_body.with_row(mt: 3) do
+          render(
+            Primer::Alpha::CheckBox.new(
+              id: "pdf_include_backlog",
+              name: :backlog,
+              checked: false,
+              label: I18n.t("meeting.export_pdf_dialog.include_backlog.label"),
+              caption: I18n.t("meeting.export_pdf_dialog.include_backlog.caption"),
+              visually_hide_label: false
+            )
+          )
+        end
+        modal_body.with_row(mt: 3) do
+          render(
+            Primer::Alpha::CheckBox.new(
+              id: "pdf_include_outcomes",
+              name: :outcomes,
+              checked: false,
+              label: I18n.t("meeting.export_pdf_dialog.include_outcomes.label"),
+              caption: I18n.t("meeting.export_pdf_dialog.include_outcomes.caption"),
+              visually_hide_label: false
+            )
+          )
+        end
+        modal_body.with_row(mt: 3) do
+          render Primer::Alpha::TextField.new(
+            id: "pdf_footer_text_right",
+            name: :footer_text_right,
+            label: I18n.t("meeting.export_pdf_dialog.footer_text.label"),
+            caption: I18n.t("meeting.export_pdf_dialog.footer_text.caption"),
+            visually_hide_label: false,
+            value: default_footer_text_right
+          )
+        end
+      end
+    end %>
+  <% end %>
+  <% dialog.with_footer do %>
+    <%= render(Primer::Beta::Button.new(data: { "close-dialog-id": MODAL_ID })) { I18n.t(:button_cancel) } %>
+    <%= render(
+          Primer::Beta::Button.new(
+            scheme: :primary,
+            type: :submit,
+            form: GENERATE_PDF_FORM_ID,
+            data: {
+              "close-dialog-id": MODAL_ID
+            }
+          )
+        ) { I18n.t("meeting.export_pdf_dialog.submit_button") } %>
+  <% end %>
+<% end %>

@@ -1,0 +1,5 @@
+<%=
+  modal_content.with_row(data: { "test-selector": "op-share-dialog-upsell-block" }) do
+    render(EnterpriseEdition::BannerComponent.new(:project_list_sharing, dismissable: true))
+  end
+%>

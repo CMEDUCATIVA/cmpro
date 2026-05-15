@@ -1,0 +1,26 @@
+<% if controller_name == 'costlog' && %w[new create edit update].include?(action_name) %>
+  <%= stylesheet_link_tag 'costos/entries', media: 'all' %>
+  <%= javascript_include_tag 'entries', nonce: content_security_policy_script_nonce %>
+  <script nonce="<%= content_security_policy_script_nonce %>">
+    window.CostosEntriesPlaceholder = "<%= j(I18n.t('costs.text_search_cost_type', default: 'Busca y selecciona un tipo de costo')) %>";
+  </script>
+<% end %>
+
+<% if controller_name == 'work_packages' %>
+  <%= javascript_include_tag 'costos/costs_by_type', nonce: content_security_policy_script_nonce %>
+<% end %>
+
+<% current_controller = params[:controller].to_s %>
+<% ifc_viewer_page = (controller_name == 'ifc_viewer' || current_controller.include?('bim/ifc_viewer')) %>
+<% ifc_models_page = current_controller.include?('bim/ifc_models') %>
+
+<% if ifc_models_page %>
+  <%= stylesheet_link_tag 'costos/ifc_status_progress', media: 'all' %>
+  <%= javascript_include_tag 'costos/ifc_status_progress', nonce: content_security_policy_script_nonce %>
+<% end %>
+
+<% if ifc_viewer_page %>
+  <%= javascript_include_tag 'costos/parche_ifc_viewer', nonce: content_security_policy_script_nonce %>
+  <%= javascript_include_tag 'costos/xeokit_config', nonce: content_security_policy_script_nonce %>
+  <%= javascript_include_tag 'costos/ifc', nonce: content_security_policy_script_nonce %>
+<% end %>

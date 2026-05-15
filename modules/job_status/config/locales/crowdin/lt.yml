@@ -1,0 +1,21 @@
+lt:
+  label_job_status_plural: "Job statuses"
+  plugin_openproject_job_status:
+    name: "OpenProject darbo būsena"
+    description: "Foninių darbų sąrašas ir būsena."
+  job_status_dialog:
+    download_starts: 'Parsisiuntimas turėtų prasidėti automatiškai.'
+    link_to_download: 'Or, %{link} to download.'
+    click_here: 'click here'
+    title: 'Foninės užduoties būklė'
+    redirect: 'Nukreipiame jūsų naršyklę.'
+    redirect_link: 'Norėdami tęsti spauskite čia.'
+    redirect_errors: 'Dėl šių klaidų jūs nebūsite automatiškai nukreiptas.'
+    errors: 'Something went wrong'
+    generic_messages:
+      not_found: 'Ši užduotis nerasta.'
+      in_queue: 'Užduotis buvo pastatyta į eilę ir netrukus bus vykdoma.'
+      in_process: 'Užduotis šiuo metu yra vykdoma.'
+      error: 'Užduoties nepavyko pabaigti.'
+      cancelled: 'Užduotis buvo nutraukta dėl klaidos.'
+      success: 'Užduotis sėkmingai užbaigta.'

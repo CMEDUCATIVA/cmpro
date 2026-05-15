@@ -1,0 +1,7 @@
+// Hide wiki menu until plugin sets ready flag to avoid flicker
+turbo-frame#wiki_main_menu:not([data-documentos-wiki-ready="1"]) {
+  visibility: hidden !important;
+}
+.menu-wiki-pages-tree:not([data-documentos-wiki-ready="1"]) {
+  visibility: hidden !important;
+}

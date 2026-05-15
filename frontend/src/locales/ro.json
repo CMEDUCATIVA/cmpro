@@ -1,0 +1,2067 @@
+{
+  "ro": {
+    "date": {
+      "abbr_day_names": [
+        "D",
+        "L",
+        "Ma",
+        "Mi",
+        "J",
+        "V",
+        "S"
+      ],
+      "abbr_month_names": [
+        null,
+        "ian",
+        "feb",
+        "mar",
+        "apr",
+        "mai",
+        "iun",
+        "iul",
+        "aug",
+        "sep",
+        "oct",
+        "noi",
+        "dec"
+      ],
+      "abbr_week": "Sapt",
+      "day_names": [
+        "Duminică",
+        "Luni",
+        "Marți",
+        "Miercuri",
+        "Joi",
+        "Vineri",
+        "Sâmbătă"
+      ],
+      "formats": {
+        "default": "%d. %m. %Y",
+        "long": "%d %B %Y",
+        "short": "%d %b"
+      },
+      "month_names": [
+        null,
+        "Ianuarie",
+        "Februarie",
+        "Martie",
+        "Aprilie",
+        "Mai",
+        "Iunie",
+        "Iulie",
+        "August",
+        "Septembrie",
+        "Octombrie",
+        "Noiembrie",
+        "Decembrie"
+      ],
+      "order": [
+        "year",
+        "month",
+        "day"
+      ]
+    },
+    "js": {
+      "admin": {
+        "enterprise": {
+          "text_expired": "expirat",
+          "text_reprieve_days_left": "%{days} zile până la sfârșitul perioadei de grație",
+          "trial": {
+            "confirmation": "Confirmarea adresei de e-mail",
+            "confirmation_info": "Ți-am trimis un e-mail în %{date} către %{email}. Te rog să verifici căsuța de e-mail și să faci clic pe link-ul de confirmare furnizat pentru a începe perioada de probă de 14 zile.\n",
+            "email_not_received": "Nu ați primit un e-mail? Puteți retrimite e-mailul cu ajutorul linkului din dreapta.",
+            "form": {
+              "domain_mismatch": "Numele de gazdă al solicitării curente nu se potrivește cu numele de gazdă configurat. Vă rugăm să verificați de două ori setările sistemului.",
+              "general_consent": "Sunt de acord cu <a target=\"_blank\" href=\"%{link_terms}\">termenii serviciului</a> și cu <a target=\"_blank\" href=\"%{link_privacy}\">politica de confidențialitate</a>.\n",
+              "invalid_email": "Adresă email invalidă",
+              "label_additional_features": "Additional features",
+              "label_company": "Companie",
+              "label_domain": "Domeniu",
+              "label_expires_at": "Expiră în",
+              "label_first_name": "Prenume",
+              "label_last_name": "Nume",
+              "label_maximum_users": "Număr maxim de utilizatori activi",
+              "label_plan": "Plan",
+              "label_starts_at": "Începe în",
+              "label_subscriber": "Abonat",
+              "receive_newsletter": "Doresc să primesc <a target=\"_blank\" href=\"%{link}\">buletinul informativ</a> OpenProject.",
+              "taken_domain": "Nu poate exista decât un singur proces activ pe domeniu.",
+              "taken_email": "Fiecare utilizator poate crea doar o singură încercare."
+            },
+            "next_steps": "Etapele următoare",
+            "quick_overview": "Obțineți o imagine de ansamblu rapidă a gestionării proiectelor și a colaborării în echipă cu OpenProject Enterprise edition.",
+            "resend_link": "Retrimite",
+            "resend_success": "E-mailul a fost retrimis. Te rog să verifici e-mailurile și să faci clic pe link-ul de confirmare furnizat.",
+            "resend_warning": "Nu s-a putut retrimite e-mailul.",
+            "session_timeout": "Sesiunea dvs. a expirat. Vă rugăm să încercați să reîncărcați pagina sau să retrimiteți e-mailul.",
+            "status_confirmed": "confirmat",
+            "status_label": "Stare:",
+            "status_waiting": "e-mail trimis - aștept confirmarea",
+            "test_ee": "Testați gratuit ediția Enterprise timp de 14 zile",
+            "try_another_email": "Sau încercați cu o altă adresă de e-mail."
+          },
+          "upsell": {
+            "become_hero": "Devino un erou!",
+            "benefits": {
+              "description": "Care sunt avantajele ediției Enterprise on-premise?",
+              "high_security": "Caracteristici de securitate",
+              "high_security_text": "Autentificare unică (SAML, OpenID Connect, CAS), grupuri LDAP.",
+              "installation": "Suport pentru instalare",
+              "installation_text": "Inginerii de software experimentați te ghidează prin procesul complet de instalare și configurare în propria infrastructură.",
+              "premium_features": "Enterprise add-on-uri",
+              "premium_features_text": "Tablouri agile, temă și logo personalizate, grafice, fluxuri de lucru inteligente cu acțiuni personalizate, căutare în text complet pentru atașamentele pachetelor de lucru și câmpuri personalizate cu selectare multiplă.",
+              "professional_support": "Suport profesional",
+              "professional_support_text": "Beneficiați de asistență fiabilă, de înaltă calitate, din partea unor ingineri de asistență seniori cu cunoștințe de specialitate în ceea ce privește utilizarea OpenProject în medii critice pentru afaceri."
+            },
+            "button_book_now": "Rezervă acum",
+            "button_contact_us": "Contactează-ne pentru o demonstrație",
+            "button_start_trial": "Începeți o încercare gratuită",
+            "button_upgrade": "Actualizează acum",
+            "confidence": "Oferim încrederea unui software de gestionare a proiectelor de clasă enterprise testat și susținut - cu Open Source și o minte deschisă.\n",
+            "enterprise_info_html": "%{feature_title} is an Enterprise <span class='spot-icon spot-icon_inline spot-icon_enterprise-addons'></span> add-on.",
+            "link_quote": "Obține o ofertă",
+            "more_info": "Mai multe informatii",
+            "text": "The OpenProject Enterprise edition builds on top of the Community edition. It includes Enterprise add-ons and professional support mainly aimed at organizations with more than 10 users that manage business critical projects with OpenProject.\n",
+            "unlimited": "Nelimitat",
+            "upgrade_info": "Te rog să treci la un plan plătit pentru a-l activa și a începe să îl utilizezi în echipa ta.",
+            "you_contribute": "Developers need to pay their bills, too. By upgrading to the Enterprise edition, you will be supporting this open source community effort and contributing to its development, maintenance and continuous improvement."
+          }
+        },
+        "type_form": {
+          "add_group": "Adaugă grup atribut",
+          "add_table": "Adaugă pachet de lucru asociat",
+          "custom_field": "Câmp personalizat",
+          "drag_to_activate": "Mutați câmpuri de aici pentru a le activa",
+          "edit_query": "Editare query",
+          "inactive": "Inactiv",
+          "new_group": "Grupare nouă",
+          "reset_to_defaults": "Resetare AVATAR implicit"
+        },
+        "work_packages_settings": {
+          "warning_progress_calculation_mode_change_from_field_to_status_html": "Changing progress calculation mode from work-based to status-based will result in all existing <i>% Complete</i> values to be lost and replaced with values associated with each status. Existing values for <i>Remaining work</i> may also be recalculated to reflect this change. This action is not reversible.",
+          "warning_progress_calculation_mode_change_from_status_to_field_html": "Changing progress calculation mode from status-based to work-based will make the <i>% Complete</i> field freely editable. If you optionally enter values for <i>Work</i> or <i>Remaining work</i>, they will also be linked to <i>% Complete</i>. Changing <i>Remaining work</i> can then update <i>% Complete</i>."
+        },
+        "working_days": {
+          "add_non_working_day": "Zi nelucrătoare",
+          "already_added_error": "O zi nelucrătoare pentru această dată există deja. Poate fi doar o zi nelucrătoare creată pentru fiecare dată unică.",
+          "calendar": {
+            "empty_state_description": "Nu sunt definite zile non-lucrătoare specifice pentru acest an. Faceţi clic pe \"+ zi nelucrătoare\" de mai jos pentru a adăuga o dată.",
+            "empty_state_header": "Zile nelucrătoare",
+            "new_date": "(nou)"
+          },
+          "change_button": "Salvează și reprogramează",
+          "change_description": "Schimbarea zilelor din săptămână care sunt considerate zile lucrătoare sau zile nelucrătoare poate afecta zilele de începere și de încheiere a tuturor pachetelor de lucru și ciclurilor de viață în toate proiectele, în acest caz.",
+          "change_title": "Modifică zilelor lucrătoare",
+          "removed_title": "Veţi elimina următoarele zile din lista de zile nelucrătoare:",
+          "warning": "Modificările ar putea dura ceva timp pentru a produce efecte. Vei fi notificat când toate pachetele de lucru relevante și ciclurile de viață ale proiectului au fost actualizate. Ești sigur că vrei să continui?\n"
+        }
+      },
+      "ajax": {
+        "hide": "Ascunde",
+        "loading": "Se încarcă…",
+        "updating": "Se actualizează…"
+      },
+      "attachments": {
+        "delete": "Șterge atașament",
+        "delete_confirmation": "Sunteți sigur că doriți să ștergeți acest fișier? Această acțiune nu este reversibilă.\n",
+        "draggable_hint": "Trageți pe câmpul editorului pentru a introduce o imagine sau un atașament de referință. Câmpurile de editor închise vor fi deschise în timp ce continuați să trageți.\n",
+        "quarantined_hint": "The file is quarantined, as a virus was found. It is not available for download."
+      },
+      "autocomplete_ng_select": {
+        "add_tag": "Add item",
+        "clear_all": "Clear all",
+        "loading": "Se încarcă...",
+        "not_found": "Niciun articol găsit",
+        "type_to_search": "Tastează pentru a căuta"
+      },
+      "autocomplete_select": {
+        "active": "Activ %{label} %{name}",
+        "placeholder": {
+          "multi": "Adaugă ”%{name}”",
+          "single": "Selectează \"%{name}\""
+        },
+        "remove": "Elimină ”%{name}”"
+      },
+      "autocompleter": {
+        "notFoundText": "Niciun articol găsit",
+        "placeholder": "Tastează pentru a căuta",
+        "project": {
+          "placeholder": "Select project"
+        }
+      },
+      "avatars": {
+        "empty_file_error": "Te rog să încarci o imagine validă (jpg, png, gif)",
+        "error_image_too_large": "Imaginea este prea mare.",
+        "label_choose_avatar": "Alegeți Avatar din fișier",
+        "text_upload_instructions": "Încarcă propriul avatar personalizat de 128 pe 128 pixeli. Fișierele mai mari vor fi redimensionate și decupate pentru a se potrivi.\nO previzualizare a avatarului tău va fi afișată înainte de a fi încărcat, după ce ai selectat o imagine.\n",
+        "uploading_avatar": "Se încarcă avatarul tău.",
+        "wrong_file_format": "Formatele permise sunt jpg, png, gif"
+      },
+      "backup": {
+        "attachments_disabled": "Atașamentele nu pot fi incluse deoarece depășesc dimensiunea maximă permisă. Poți schimba acest lucru prin configurare (necesită o repornire a serverului).",
+        "download_backup": "Descarcă backup",
+        "include_attachments": "Include atașamente",
+        "info": "Poți declanșa o copie de rezervă aici. Procesul poate dura ceva timp în funcție de mărimea datelor (mai ales atașamentele) pe care le ai. Vei primi un e-mail de îndată ce este gata.\n",
+        "last_backup": "Ultima copie de rezervă",
+        "last_backup_from": "Ultima copie de rezervă",
+        "note": "O nouă copie de rezervă va înlocui orice copie de rezervă anterioară. Se poate solicita doar un număr limitat de copii de rezervă pe zi.\n",
+        "options": "Opțiuni",
+        "request_backup": "Solicită backup",
+        "title": "Copie de rezervă OpenProject"
+      },
+      "baseline": {
+        "apply": "Aplică",
+        "clear": "Șterge",
+        "drop_down": {
+          "a_specific_date": "de la o anumită dată",
+          "between_two_specific_dates": "între două dăți specifice",
+          "last_month": "de luna trecută",
+          "last_week": "de săptămâna trecută",
+          "last_working_day": "de la ultima zi lucrătoare",
+          "none": "-",
+          "yesterday": "de ieri"
+        },
+        "from": "Din",
+        "header_description": "Evidențiază modificările făcute la această listă de la orice punct din trecut.",
+        "help_description": "Zona orară de referință",
+        "icon_tooltip": {
+          "added": "Added to view within the comparison time period",
+          "changed": "Menținut cu modificări",
+          "removed": "Removed from view within the comparison time period"
+        },
+        "legends": {
+          "changes_between": "Modificări între",
+          "changes_since": "Modificări de la",
+          "in_your_timezone": "In your local timezone:",
+          "maintained_with_changes": "Maintained with changes",
+          "no_longer_meets_filter_criteria": "No longer meets filter criteria",
+          "now_meets_filter_criteria": "Now meets filter criteria"
+        },
+        "show_changes_since": "Arată modificările",
+        "time": "Timp",
+        "time_description": "În timpul tău local: %{datetime}",
+        "to": "La",
+        "toggle_title": "Referință"
+      },
+      "bcf": {
+        "add_viewpoint": "Adaugă un punct de vedere",
+        "delete_viewpoint": "Ștergeți punctul de vedere",
+        "export": "Exportă",
+        "export_bcf_xml_file": "Exportați fișierul BCF XML (BCF versiunea 2.1)",
+        "import": "Importă",
+        "import_bcf_xml_file": "Importați fișierul BCF XML (BCF versiunea 2.1)",
+        "label_bcf": "BCF",
+        "management": "Managementul BCF",
+        "refresh": "Reîmprospătare",
+        "refresh_work_package": "Reîmprospătare pachet de lucru",
+        "show_viewpoint": "Arată punctul de vedere",
+        "viewpoint": "Punct de vedere"
+      },
+      "boards": {
+        "add_card": "Adaugă card",
+        "add_list": "Adaugă lista la planșă",
+        "add_list_modal": {
+          "labels": {
+            "assignee": "Selectați utilizatorul care urmează să fie adăugat ca o nouă listă de destinatar",
+            "status": "Selectați statutul pentru a adăuga ca o listă nouă",
+            "subproject": "Selectați subproiectul care urmează să fie adăugat ca o listă nouă",
+            "subtasks": "Selectați pachetul de lucru pentru a-l adăuga ca o listă nouă",
+            "version": "Selectați versiunea care urmează să fie adăugată ca o listă nouă"
+          },
+          "warning": {
+            "add_members": "<a href=\"%{link}\">Adaugă un nou membru la acest proiect</a> pentru a selecta din nou utilizatorii.",
+            "assignee": "Nu există niciun membru care să se potrivească cu valoarea filtrului dumneavoastră <br>",
+            "no_member": "Acest proiect nu are în prezent niciun membru care să poată fi adăugat. <br>",
+            "status": "În prezent, nu există niciun statut disponibil <br>\nFie nu există niciunul, fie toate au fost deja adăugate la bord.</br>\n"
+          }
+        },
+        "board_type": {
+          "action": "Consiliul de acțiune",
+          "action_by_attribute": "Tablă de acțiune (%{attribute})",
+          "action_text": "O tablă cu liste filtrate pe atributul %{attribute}. Mutarea pachetelor de lucru în alte liste va actualiza atributul acestora.\n",
+          "action_text_assignee": "Tablă cu coloane automate pe baza utilizatorilor atribuiți. Ideal pentru expedierea pachetelor de lucru.\n",
+          "action_text_status": "Tablă de bază în stil Kanban cu coloane pentru statusuri precum \"De făcut\", \"În curs\", \"Realizat\".\n",
+          "action_text_subprojects": "Tablă cu coloane automate pentru subproiecte. Glisarea pachetelor de lucru în alte liste actualizează (sub)proiectul în mod corespunzător.\n",
+          "action_text_subtasks": "Tablă cu coloane automate pentru subelemente. Glisarea pachetelor de lucru în alte liste actualizează în mod corespunzător lista părinte.\n",
+          "action_text_version": "Tablă cu coloane automate bazate pe atributul de versiune. Ideal pentru planificarea dezvoltării produselor.\n",
+          "action_type": {
+            "assignee": "Executant",
+            "status": "Status:",
+            "subproject": "Subproiect",
+            "subtasks": "părinte-copil",
+            "version": "Versiune:"
+          },
+          "board_type_title": {
+            "assignee": "Executant",
+            "basic": "De baza",
+            "status": "Stare",
+            "subproject": "Subproiect",
+            "subtasks": "Părinte-copil",
+            "version": "Versiune"
+          },
+          "free": "De baza",
+          "free_text": "Începe de la zero cu o planșă albă. Adaugă manual cărți și coloane pe această planșă.\n",
+          "select_attribute": "Atributul de acțiune",
+          "select_board_type": "Vă rugăm să alegeți tipul de placă de care aveți nevoie.",
+          "text": "Tip panou"
+        },
+        "click_to_remove_list": "Clic pentru a elimina această listă",
+        "configuration_modal": {
+          "display_settings": {
+            "card_mode": "Afișare sub formă de carduri",
+            "table_mode": "Afișare ca tabel"
+          },
+          "title": "Configurați această placă"
+        },
+        "create_new": "Creează panou nou",
+        "error_attribute_not_writable": "Nu se poate muta pachetul de lucru, %{attribute} nu este inscriptibil.",
+        "error_cannot_move_into_self": "Nu p0ți muta un pachet de lucru în coloana sa proprie.",
+        "error_loading_the_list": "Eroare la încărcarea listei: %{error_message}",
+        "error_permission_missing": "Lipsește permisiunea de a crea interogări publice",
+        "label_board_type": "Tipul de placă",
+        "label_unnamed_board": "Consiliul de administrație fără nume",
+        "label_unnamed_list": "Listă fără nume",
+        "lists": {
+          "delete": "Ștergeți lista"
+        },
+        "new_board": "Bord nou",
+        "text_hidden_list_warning": "Nu toate listele sunt afișate deoarece nu aveți permisiunea. Contactați administratorul pentru mai multe informații.",
+        "version": {
+          "close_version": "Închideți versiunea",
+          "closed": "Închis",
+          "edit_version": "Editați versiunea",
+          "is_closed": "Versiunea este închisă. Nu se pot adăuga elemente la această versiune.",
+          "is_locked": "Versiunea este blocată. Niciun element nu poate fi adăugat la această versiune.",
+          "lock_version": "Blocare versiune",
+          "locked": "Blocat",
+          "open_version": "Versiunea deschisă",
+          "show_version": "Arată versiunea",
+          "unlock_version": "Versiunea de deblocare"
+        }
+      },
+      "button_add": "Adaugă",
+      "button_add_watcher": "Adaugă observator",
+      "button_advanced_filter": "Filtru avansat",
+      "button_back": "Înapoi",
+      "button_back_to_list_view": "Înapoi la listă",
+      "button_cancel": "Anulează",
+      "button_change_project": "Mută în alt proiect",
+      "button_check_all": "Selectează tot",
+      "button_close": "Închide",
+      "button_close_details": "Închide vizualizare detalii",
+      "button_collapse_all": "Restrângere totală",
+      "button_configure-form": "Configurează formular",
+      "button_confirm": "Confirmă",
+      "button_continue": "Continuă",
+      "button_copy": "Copiază",
+      "button_copy_link_to_clipboard": "Copiază link-ul în clipboard",
+      "button_copy_to_clipboard": "Copiză în clipboard",
+      "button_copy_to_other_project": "Copiază în alt proiect",
+      "button_create": "Creează",
+      "button_custom-fields": "Câmpuri personalizate",
+      "button_delete": "Șterge",
+      "button_delete_watcher": "Șterge observator",
+      "button_details_view": "Vizualizare detaliată",
+      "button_duplicate": "Dublează",
+      "button_edit": "Editează",
+      "button_expand_all": "Extindere totală",
+      "button_export-atom": "Descarcă Atom",
+      "button_filter": "Filtrează",
+      "button_generate_pdf": "Generate PDF",
+      "button_list_view": "Vizualizare listă",
+      "button_log_costs": "Înregistrare costuri unitare",
+      "button_log_time": "Înregistrare timp",
+      "button_more": "Mai mult",
+      "button_more_actions": "Mai multe acțiuni",
+      "button_open_details": "Deschide vizualizare detalii",
+      "button_open_fullscreen": "Afișează pe tot ecranul",
+      "button_quote": "Citat",
+      "button_save": "Salvează",
+      "button_settings": "Setări",
+      "button_show_cards": "Afișați vizualizarea cardului",
+      "button_show_fullscreen": "Arată vizualizarea pe tot ecranul",
+      "button_show_gantt": "Arată vizualizarea Gantt",
+      "button_show_list": "Afișați vizualizarea listei",
+      "button_show_table": "Afișați vizualizarea tabelului",
+      "button_show_view": "Vizualizare pe tot ecranul",
+      "button_uncheck_all": "Deselectează tot",
+      "button_update": "Actualizează",
+      "calendar": {
+        "create_new": "Creează un calendar nou",
+        "title": "Calendar",
+        "too_many": "Există %{count} pachete de lucru în total, dar numai %{max} pot fi afișate.",
+        "unsaved_title": "Calendar fără nume"
+      },
+      "caption_rate_history": "Istoric cotă",
+      "card": {
+        "add_new": "Adaugă card nou",
+        "highlighting": {
+          "entire_card_by": "Întreaga carte de",
+          "inline": "Evidențiați în linie:"
+        },
+        "remove_from_list": "Alegeți intervalul din listă"
+      },
+      "chart": {
+        "axis_criteria": "Primul criteriu de sortare",
+        "errors": {
+          "could_not_load": "Datele pentru afișarea graficului nu au putut fi încărcate. Este posibil să nu aveți permisiunile necesare."
+        },
+        "modal_title": "pachet de lucru",
+        "tabs": {
+          "dataset": "Set de date %{number}",
+          "graph_settings": "General"
+        },
+        "type": "Tipul de diagramă",
+        "types": {
+          "bar": "Bară",
+          "doughnut": "Gogoașă",
+          "horizontal_bar": "Orizontal",
+          "line": "Linie",
+          "pie": "Plăcintă",
+          "polar_area": "Zonă polară",
+          "radar": "Radar"
+        }
+      },
+      "clipboard": {
+        "browser_error": "Your browser doesn't support copying to clipboard. Please copy it manually: %{content}",
+        "copied_successful": "Copiat cu succes în clipboard!"
+      },
+      "close_filter_title": "Închide filtrul",
+      "close_form_title": "Închide formularul",
+      "close_popup_title": "Închide pop-up",
+      "custom_actions": {
+        "date": {
+          "current_date": "Data curentă",
+          "specific": "pe"
+        }
+      },
+      "dashboards": {
+        "label": "Panou de control"
+      },
+      "description_available_columns": "Coloane disponibile",
+      "description_current_position": "Ești aici: ",
+      "description_select_work_package": "Selectează pachet de lucru #%{id}",
+      "description_subwork_package": "Copil al pachetului de lucru #%{id}",
+      "editor": {
+        "ckeditor_error": "A apărut o eroare în cadrul CKEditor",
+        "error_saving_failed": "Salvarea documentului a eșuat cu următoarea eroare: %{error}",
+        "macro": {
+          "attribute_reference": {
+            "invalid_attribute": "Atributul selectat \"%{name}\" nu există.",
+            "macro_help_tooltip": "Acest segment de text este redat în mod dinamic de o macro.",
+            "nested_macro": "This macro is recursively referencing %{model} %{id}.",
+            "not_found": "Resursa solicitată nu a fost găsită."
+          },
+          "child_pages": {
+            "button": "Legături către paginile pentru copii",
+            "hint": "Lăsați acest câmp gol pentru a lista toate paginile copil ale paginii curente. Dacă doriți să faceți referire la o altă pagină, furnizați titlul sau slug-ul acesteia.\n",
+            "include_parent": "Include părinte",
+            "page": "Pagină wiki",
+            "text": "Păstrare pagini fii ca pagini rădăcină",
+            "this_page": "această pagină"
+          },
+          "code_block": {
+            "button": "Inserează fragment de cod",
+            "language": "Limbaj de formatare",
+            "language_hint": "Introdu limbajul de formatare care va fi utilizat pentru evidențiere (dacă există suport pentru acesta).",
+            "title": "Inserați/Editați fragmentul de cod"
+          },
+          "dropdown": {
+            "chose_macro": "Alegeți macro",
+            "macros": "Macro"
+          },
+          "embedded_calendar": {
+            "text": "[Placeholder] Tabelul pachetului de lucru inserat"
+          },
+          "embedded_table": {
+            "button": "Inserați tabel pachet de lucru",
+            "text": "[Placeholder] Tabelul pachetului de lucru inserat"
+          },
+          "error": "Nu se poate extinde macroul: %{message}",
+          "toc": "Cuprins",
+          "toolbar_help": "Clic pentru a selecta piesa și pentru a afișa bara de instrumente. Dublu clic pentru a edita piesa",
+          "wiki_page_include": {
+            "button": "Includeți conținul altei pagini wiki",
+            "hint": "Include conținutul altei pagini wiki specificând titlul sau adresa. Poți include pagina wiki din cadrul altui proiect separându-le prin simbolul ”:” ca și în exemplul următor.\n",
+            "not_set": "(Pagina nu a fost încă stabilită)",
+            "page": "Pagină wiki",
+            "text": "[Placeholder] Pagină wiki inclusă"
+          },
+          "work_package_button": {
+            "button": "Creați pachet de lucru",
+            "button_style": "Folosește butonul de stil",
+            "button_style_hint": "Optional: Bifați pentru a vedea comenzile macro sub formă de butoane, nu sub formă de link.",
+            "type": "Tip pachet de lucru",
+            "with_type": "Creați pachet de lucru (Tip: %{typename})",
+            "without_type": "Creați pachet de lucru"
+          }
+        },
+        "mode": {
+          "manual": "Sursă",
+          "wysiwyg": "Comută la editorul WYSIWYG"
+        },
+        "no_revisions": "No local modifications found",
+        "preview": "Activaţi/Dezactivați previzualizarea",
+        "revisions": "Show local modifications",
+        "source_code": "Clic pentru a activa/dezactiva modul ierarhic"
+      },
+      "enumeration_activities": "Activități (durata de lucru)",
+      "enumeration_doc_categories": "Document nou",
+      "enumeration_work_package_priorities": "Priorități pentru pachetele de lucru",
+      "error": {
+        "cannot_save_changes_with_message": "Schimbările nu pot fi salvate datorită acestei erori: %{error}",
+        "embedded_table_loading": "Configurația inserată nu poate fi încarcată: %{message}",
+        "internal": "A apărut o eroare internă.",
+        "query_saving": "Configurația nu poate salvată."
+      },
+      "error_attachment_upload": "Fisierul nu a putut fi incarcat: %{error}",
+      "error_attachment_upload_permission": "Nu aveți permisiunea de a încărca fișiere pe această resursă.",
+      "error_could_not_resolve_user_name": "Nu a putut fi detectat numele utilizatorului",
+      "error_could_not_resolve_version_name": "Nu a putut fi detectat numele versiunii",
+      "exclusion_info": {
+        "modal": {
+          "content": "The status '%{status_name}' has been configured to be excluded from hierarchy totals of Work, Remaining work, and % Complete. The totals do not take this value into account.",
+          "title": "Status excluded from hierarchy totals"
+        }
+      },
+      "favorite_projects": {
+        "no_results": "You have no favorite projects",
+        "no_results_subtext": "Add one or multiple projects as favorite through their overview or in a project list."
+      },
+      "field_value_enter_prompt": "Introduceţi o valoare pentru '%{field}'",
+      "filter": {
+        "description": {
+          "text_close_filter": "Pentru a selecta o poziție schimbă prim-planul de exemplu apăsând Enter. Pentru a ieși fără filtrare selectează prima poziție (goală).",
+          "text_open_filter": "Deschideți acest filtru cu 'ALT' și tastele săgeată."
+        },
+        "more_values_not_shown": "Mai sunt %{total} rezultate, caută pentru a filtra rezultatele.",
+        "noneElement": "(nimic)",
+        "sorting": {
+          "criteria": {
+            "one": "Primul criteriu de sortare",
+            "three": "Al treilea criteriu de sortare",
+            "two": "Al doilea criteriu de sortare"
+          }
+        },
+        "time_zone_converted": {
+          "only_end": "Până la %{to} ora locală.",
+          "only_start": "Începând cu %{from} ora locală.",
+          "two_values": "%{from} - %{to} ora locală."
+        },
+        "value_spacer": "-"
+      },
+      "forms": {
+        "advanced_settings": "Setări avansate",
+        "load_error_message": "A apărut o eroare la încărcarea formularului",
+        "submit_success_message": "Formularul a fost trimis cu succes",
+        "validation_error_message": "Vă rugăm să remediaţi erorile existente în formular"
+      },
+      "gantt_chart": {
+        "button_activate": "Grafic Gantt",
+        "button_deactivate": "Grafic Gantt",
+        "filter": {
+          "noneSelection": "(nimic)"
+        },
+        "label": "Grafic Gantt",
+        "labels": {
+          "bar": "Etichete de bare",
+          "description": "Selectați atributele pe care doriți să le afișați în pozițiile respective ale graficului Gantt tot timpul. Țineți cont că atunci când planează deasupra unui element, etichetele sale vor fi afișate în locul acestor atribute.\n",
+          "farRight": "Extremă dreaptă",
+          "left": "Stânga",
+          "right": "Dreapta",
+          "title": "-- Fără etichetă --"
+        },
+        "quarter_label": "Q%{quarter_number}",
+        "selection_mode": {
+          "notification": "Dă clic pe oricare dintre pachetele de lucru pentru a crea o legătură. Apasă Escape pentru a anula."
+        },
+        "zoom": {
+          "auto": "Zoom automat",
+          "days": "Zile",
+          "description": "Selectați nivelul inițial de zoom care trebuie afișat atunci când funcția de zoom automat nu este disponibilă.\n",
+          "in": "Mărire",
+          "months": "Luni",
+          "out": "Micșorare",
+          "quarters": "Trimestre",
+          "weeks": "Săptămâni",
+          "years": "Ani"
+        }
+      },
+      "general_text_No": "Nu",
+      "general_text_Yes": "Da",
+      "general_text_no": "nu",
+      "general_text_yes": "da",
+      "github_integration": {
+        "github_actions": "Acțiuni",
+        "pull_requests": {
+          "merged_message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} has been %{pr_state} by %{github_user_link}.",
+          "message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} authored by %{github_user_link} has been %{pr_state}.",
+          "referenced_message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} authored by %{github_user_link} referenced this work package.",
+          "states": {
+            "closed": "închis",
+            "draft": "drafted",
+            "merged": "merged",
+            "opened": "opened",
+            "ready_for_review": "marked ready for review"
+          }
+        },
+        "tab_header": {
+          "copy_menu": {
+            "description": "Copiază fragmente git în clipboard",
+            "label": "Git fragmente"
+          },
+          "git_actions": {
+            "branch_name": "Nume sucursală",
+            "cmd": "Creați ramura cu un commit gol",
+            "commit_message": "Mesajul commit-ului",
+            "copy_error": "Copiere eşuată",
+            "copy_success": "Copiat",
+            "title": "Fragmente rapide pentru Git"
+          },
+          "title": "Cereri de extragere"
+        },
+        "tab_prs": {
+          "empty": "Nu există încă nicio cerere de tragere legată. Conectează un PR existent folosind codul <code>OP#%{wp_id}</code> în descrierea PR sau creează un nou PR."
+        },
+        "work_packages": {
+          "tab_name": "GitHub"
+        }
+      },
+      "gitlab_integration": {
+        "gitlab_pipelines": "Pipelines",
+        "tab_header_issue": {
+          "title": "Sunt câteva probleme cu produsele din coșul tău. Te rog mergi înapoi la pagina coșului și remediază aceste probleme înainte de finalizarea comenzii."
+        },
+        "tab_header_mr": {
+          "copy_menu": {
+            "description": "Copiază fragmente git în clipboard",
+            "label": "Git fragmente"
+          },
+          "create_mr": {
+            "description": "Create a Merge Request",
+            "label": "Create MR"
+          },
+          "git_actions": {
+            "branch_name": "Nume sucursală",
+            "cmd": "Creați ramura cu un commit gol",
+            "commit_message": "Mesajul commit-ului",
+            "copy_error": "❌ Copiere eșuată!",
+            "copy_success": "Copiat",
+            "title": "Fragmente rapide pentru Git"
+          },
+          "title": "Merge requests"
+        },
+        "tab_issue": {
+          "empty": "There are no issues linked yet. Link an existing issue by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the issue title/description or create a new issue."
+        },
+        "tab_mrs": {
+          "empty": "There are no merge requests linked yet. Link an existing MR by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the MR title/description or create a new MR."
+        },
+        "updated_on": "Actualizat pe",
+        "work_packages": {
+          "tab_name": "GitLab"
+        }
+      },
+      "global_search": {
+        "all_projects": "In toate proiectele",
+        "close_search": "Inchide cautarea",
+        "current_project": "In acest proiect",
+        "current_project_and_all_descendants": "In acest proiect + subproiecte",
+        "recently_viewed": "Vizualizate recent",
+        "search": "Căutare",
+        "title": {
+          "all_projects": "toate proiectele",
+          "project_and_subprojects": "si toate subproiectele",
+          "search_for": "Cauta dupa"
+        }
+      },
+      "grid": {
+        "add_widget": "Adaugă widget",
+        "configure": "Configurați widget-ul",
+        "remove": "Eliminați widget-ul",
+        "widgets": {
+          "custom_text": {
+            "title": "Text customizat"
+          },
+          "documents": {
+            "no_results": "Încă nu există documente.",
+            "title": "Documente"
+          },
+          "members": {
+            "add": "Membru",
+            "no_results": "Nu există membri vizibili.",
+            "title": "Membri",
+            "too_many": "Afișarea a %{count} din %{total} membri.",
+            "view_all_members": "Vezi toți membrii"
+          },
+          "missing_permission": "Nu ai drepturile necesare pentru a vizualiza acest widget.",
+          "news": {
+            "at": "la",
+            "no_results": "Nimic nou de raportat.",
+            "title": "Noutăţi"
+          },
+          "project_description": {
+            "no_results": "Nu a fost scrisă încă nicio descriere. Aceasta poate fi adăugată în \"Setări proiect\".",
+            "title": "Descriere proiect"
+          },
+          "project_favorites": {
+            "no_results": "Nu ai niciun proiect favorit. Clic pe pictograma cu steluță din tabloul de bord al proiectului pentru a adăuga unul la favorite.",
+            "title": "Proiecte favorite"
+          },
+          "project_status": {
+            "at_risk": "În pericol",
+            "discontinued": "Anulat",
+            "finished": "Finalizat",
+            "not_set": "Nesetat",
+            "not_started": "Neînceput",
+            "off_track": "Întârziat",
+            "on_track": "În lucru",
+            "title": "Stare proiect"
+          },
+          "subprojects": {
+            "no_results": "Cu subproiecte",
+            "title": "Subproiecte"
+          },
+          "time_entries_current_user": {
+            "displayed_days": "Zile afișate în lista de activități a proiectului",
+            "title": "Timpul meu consumat"
+          },
+          "time_entries_list": {
+            "no_results": "Nu există înregistrări de timp pentru ultimele 7 zile.",
+            "title": "Timp consumat (ultimele 7 zile)"
+          },
+          "work_packages_accountable": {
+            "title": "Pachete de lucru pentru care sunt responsabil"
+          },
+          "work_packages_assigned": {
+            "title": "Pachete de lucru atribuite mie"
+          },
+          "work_packages_calendar": {
+            "title": "Calendar"
+          },
+          "work_packages_created": {
+            "title": "Pachete de lucru create de mine"
+          },
+          "work_packages_graph": {
+            "title": "Graficul pachetelor de lucru"
+          },
+          "work_packages_overview": {
+            "placeholder": "Dă clic pentru a edita acest meniu.",
+            "title": "Prezentare generală pachete de lucru"
+          },
+          "work_packages_table": {
+            "title": "Tabelul pachetelor de lucru"
+          },
+          "work_packages_watched": {
+            "title": "Pachete de lucru supravegheate de mine"
+          }
+        }
+      },
+      "hal": {
+        "error": {
+          "edit_prohibited": "Editarea %{attribute} este blocată pentru această resursă. Fie acest atribut este derivat din relații (de exemplu, copii), fie nu poate fi configurat în alt mod.",
+          "format": {
+            "date": "%{attribute} nu este o dată validă - Este necesar formatul AAAA-LL-ZZ."
+          },
+          "general": "A apărut o eroare.",
+          "update_conflict_refresh": "Faceți clic aici pentru a reîmprospăta resursa și a o actualiza la cea mai nouă versiune."
+        }
+      },
+      "help_texts": {
+        "show_modal": "Show help text"
+      },
+      "homescreen": {
+        "blocks": {
+          "new_features": {
+            "16_1": {
+              "standard": {
+                "new_features_html": "Publicarea conține diverse caracteristici noi și îmbunătățiri, cum ar fi <br> <ul class=\"%{list_styling_class}\"> <li>Structura ciclul de viață al proiectului cu etape și faze.</li> <li>Ședințe la export în format PDF.</li> <li>Setează opțiuni implicite inteligente pentru mementouri.</li> <li>Utilizați decalajul negativ pentru pachetele de lucru.</li> <li>Afișați copaci ierarhici pentru câmpuri personalizate ierarhice.</li> <li>Beneficiază de o mai bună accesibilitate pentru selectorul de date cu regiunile vii ARIA</li> </ul>\n"
+              }
+            },
+            "learn_about": "Learn more about all new features",
+            "text_new_features": "Citește despre noile caracteristici și actualizări de produse."
+          }
+        }
+      },
+      "ical_sharing_modal": {
+        "copy_url_label": "Copiază URL",
+        "description": "You can use the URL (iCalendar) to subscribe to this calendar in an external client and view up-to-date work package information from there.",
+        "ical_generation_error_text": "An error occured while generating the calendar URL.",
+        "inital_setup_error_message": "An error occured while fetching data.",
+        "success_message": "URL-ul \"%{name}\" a fost copiat cu succes în clipboard-ul tău. Lipiți-l în clientul calendar pentru a finaliza abonamentul.",
+        "title": "Subscribe to calendar",
+        "token_name_description_text": "If you subscribe to this calendar from multiple devices, this name will help you distinguish between them in your <a href=\"my/access_token\", target=\"_blank\">access tokens</a> list.",
+        "token_name_label": "Where will you be using this?",
+        "token_name_placeholder": "Type a name, e.g. \"Phone\"",
+        "warning": "Please don't share this URL with other users. Anyone with this link will be able to view work package details without an account or password."
+      },
+      "ifc_models": {
+        "empty_warning": "Acest proiect nu are încă niciun model IFC.",
+        "keyboard_input_disabled": "Vizualizatorul nu dispune de comenzi de tastatură. Faceți clic pe vizualizator pentru a da control de tastatură vizualizatorului.",
+        "models": {
+          "ifc_models": "Modele IFC"
+        },
+        "use_this_link_to_manage": "Utilizează acest link pentru a încărca și gestiona modelele IFC",
+        "views": {
+          "split": "Vizualizator și tabel",
+          "split_cards": "Vizualizator și carduri",
+          "viewer": "Vizualizare"
+        }
+      },
+      "include_projects": {
+        "apply": "Aplică",
+        "clear_selection": "Anulează selecția",
+        "include_subprojects": "Include toate subproiectele",
+        "no_results": "Niciun proiect nu corespunde criteriilor de căutare.",
+        "search_placeholder": "Caută proiect...",
+        "selected_filter": {
+          "all": "Toate Proiectele",
+          "selected": "Numai selecția"
+        },
+        "title": "Proiecte",
+        "toggle_title": "Include proiecte",
+        "tooltip": {
+          "current_project": "Acesta este proiectul curent în care vă aflați.",
+          "does_not_match_search": "Proiectul nu corespunde criteriilor de căutare.",
+          "include_all_selected": "Proiectul este deja inclus, din moment ce opțiunea Include toate subproiectele este activată."
+        }
+      },
+      "inplace": {
+        "btn_preview_disable": "Dezactivare previzualizare",
+        "btn_preview_enable": "Previzualizare",
+        "button_cancel": "%{attribute}: Anulează",
+        "button_cancel_all": "Anulează",
+        "button_edit": "%{attribute}: Editare",
+        "button_save": "%{attribute}: Salvează",
+        "button_save_all": "Salvează",
+        "clear_value_label": "-",
+        "errors": {
+          "maxlength": "%{field} nu poate conține mai mult de %{maxLength} cifre",
+          "messages_on_field": "Acest câmp este invalid: %{messages}",
+          "minlength": "%{field} nu poate conține mai puțin de %{minLength} cifre",
+          "number": "%{field} nu este un număr valid",
+          "required": "%{field} nu poate fi gol"
+        },
+        "link_formatting_help": "Ajutor pentru formatarea textului",
+        "null_value_label": "Nici o valoare"
+      },
+      "invite_user_modal": {
+        "back": "Înapoi",
+        "invite": "Invită",
+        "message": {
+          "description": "Vom trimite un e-mail utilizatorului, la care puteți adăuga un mesaj personal aici. Ar putea fi utilă o explicație pentru invitație sau poate câteva informații despre proiect pentru a-i ajuta să înceapă.",
+          "label": "Mesaj invitație",
+          "next_button": "Înainte"
+        },
+        "principal": {
+          "already_member_message": "Deja membru al %{project}",
+          "create_new_placeholder": "Creați un nou spațiu rezervat:",
+          "invite_user": "Invită",
+          "label": {
+            "name": "Nume",
+            "name_or_email": "Numele și adresa dvs. de e-mail."
+          },
+          "next_button": "Înainte",
+          "no_results_group": "Nu au fost găsite grupuri",
+          "no_results_placeholder": "Nu au fost găsiți spații libere",
+          "no_results_user": "Nu au fost găsiți utilizatori",
+          "required": {
+            "group": "Te rog selectează un grup",
+            "placeholder": "Te rog selectează un substituent",
+            "user": "Te rog selectează un utilizator"
+          }
+        },
+        "project": {
+          "label": "Proiect",
+          "lacking_permission": "Te rog selectează un alt proiect, deoarece nu ai permisiuni pentru a atribui utilizatori la cel selectat în prezent.",
+          "lacking_permission_info": "Nu aveți permisiunea de a atribui utilizatori la proiectul în care vă aflați în prezent. Trebuie să selectați un alt proiect.",
+          "next_button": "Înainte",
+          "no_invite_rights": "Nu aveți voie să invitați membri în acest proiect",
+          "no_results": "Nu au fost găsite proiecte",
+          "required": "Te rog selectează un proiect"
+        },
+        "role": {
+          "description": "This is the role that the user will receive when they join your project. Rolul definește acțiunile pe care utilizatorul are voie să le întreprindă și informațiile pe care le poate vedea. <a href=\"https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions\" target=\"_blank\"> Aflați mai multe despre roluri și permisiuni. </a>",
+          "label": "Rolul în %{project}",
+          "next_button": "Înainte",
+          "no_roles_found": "Nu au fost găsite roluri",
+          "required": "Te rog selectează un rol"
+        },
+        "success": {
+          "description": {
+            "group": "Grupul este acum o parte din %{project}. Între timp, puteți deja să planificați cu acest grup și să atribuiți pachete de lucru, de exemplu.",
+            "placeholder": "Marca de poziție poate fi utilizată acum în %{project}. Între timp, puteți deja să planificați cu acel utilizator și să atribuiți pachete de lucru, de exemplu.",
+            "user": "Utilizatorul se poate autentifica acum pentru a accesa %{project}. Între timp, puteți deja să planificați cu acel utilizator și să atribuiți pachete de lucru, de exemplu."
+          },
+          "next_button": "Continuă",
+          "title": "%{principal} a fost invitat!"
+        },
+        "summary": {
+          "next_button": "Trimite invitație"
+        },
+        "title": {
+          "Group": "grup",
+          "PlaceholderUser": "utilizator placeholder",
+          "User": "utilizator",
+          "invite": "Invitare utilizator",
+          "invite_principal_to_project": "Invitați %{principal} la %{project}",
+          "invite_to_project": "Invitați %{type} la %{project}"
+        },
+        "type": {
+          "group": {
+            "description": "Permisiuni bazate pe rolul atribuit în proiectul selectat",
+            "title": "Grup"
+          },
+          "placeholder": {
+            "description": "Nu are acces la proiect și nu se trimite niciun e-mail.",
+            "description_no_ee": "Nu are acces la proiect și nu se trimite niciun e-mail.  <br>Verificați<a href=\"%{eeHref}\" ținta=\"_blank\">ediția Enterprise</a>",
+            "title": "Utilizator placeholder",
+            "title_no_ee": "Utilizator de tip Placeholder (add-on numai pentru ediția Enterprise)"
+          },
+          "required": "Te rog selectează tipul de invitat",
+          "user": {
+            "description": "Permisiuni bazate pe rolul atribuit în proiectul selectat",
+            "title": "Utilizator"
+          }
+        }
+      },
+      "label_activate": "Activează",
+      "label_activity_show_all": "Arată toate activitățile",
+      "label_activity_show_only_comments": "Arată doar activitățile cu comentarii",
+      "label_add_attachments": "Atașează fișiere",
+      "label_add_column_after": "Adaugă coloană după",
+      "label_add_column_before": "Adaugă coloană înainte",
+      "label_add_columns": "Adaugă coloane",
+      "label_add_comment": "Adaugă comentariu",
+      "label_add_comment_title": "Comentează și tastează @ pentru a notifica alte persoane",
+      "label_add_description": "Adaugă o descriere pentru %{file}",
+      "label_add_row_after": "Adaugă rând după",
+      "label_add_row_before": "Adaugă rând înainte",
+      "label_add_selected_columns": "Adaugă coloanele selectate",
+      "label_added_by": "adăugat de",
+      "label_added_time_by": "Adăugat de <a href=\"%{authorLink}\">%{author}</a> acum %{age}",
+      "label_ago": "zile în urmă",
+      "label_all": "toate",
+      "label_all_uppercase": "Toate",
+      "label_all_work_packages": "toate pachetele de lucru",
+      "label_and": "și",
+      "label_ascending": "Crescător",
+      "label_assignee": "Executant",
+      "label_attachments": "Atașamente",
+      "label_author": "Autor: %{user}",
+      "label_avatar": "Avatar",
+      "label_between": "între",
+      "label_board": "Tablă",
+      "label_board_locked": "Blocat",
+      "label_board_plural": "Panouri",
+      "label_board_sticky": "Lipicios",
+      "label_cancel_comment": "Anulează comentariu",
+      "label_change": "Modifică",
+      "label_children_derived_duration": "Durata derivată a pachetului de lucru pentru copii",
+      "label_closed_work_packages": "închis",
+      "label_collapse": "Restrângere",
+      "label_collapse_all": "Restrângere totală",
+      "label_collapsed": "restrâns",
+      "label_columns": "Coloane",
+      "label_comment": "Comentariu",
+      "label_committed_at": "%{committed_revision_link} la data de %{date}",
+      "label_committed_link": "revizia încărcată %{revision_identifier}",
+      "label_contains": "conţine",
+      "label_create": "Creează",
+      "label_create_work_package": "Creează pachet de lucru nou",
+      "label_created_by": "Creat de",
+      "label_created_on": "creat la data de",
+      "label_current": "current",
+      "label_custom_queries": "Privat",
+      "label_date": "Dată",
+      "label_date_with_format": "Introduceţi %{date_attribute} folosind următorul format: %{format}",
+      "label_deactivate": "Dezactivează",
+      "label_default_queries": "Implicit",
+      "label_descending": "Descrescător",
+      "label_description": "Descriere",
+      "label_details": "Detalii",
+      "label_display": "Afișare",
+      "label_drop_files": "Aruncați fișierele aici pentru a atașa fișiere.",
+      "label_drop_folders_hint": "Nu poți încărca dosare ca atașament. Te rog selectează fișiere individuale.",
+      "label_drop_or_click_files": "Trage fișierele aici sau clic aici pentru a atașa.",
+      "label_edit_comment": "Editare comentariu",
+      "label_edit_status": "Editați starea pachetului de lucru",
+      "label_email": "E-mail",
+      "label_equals": "este",
+      "label_expand": "Extindere",
+      "label_expand_all": "Extindere totală",
+      "label_expand_project_menu": "Deschideți meniul proiectului",
+      "label_expanded": "extins",
+      "label_export": "Exportă",
+      "label_export_preparing": "Exportul este în curs de pregătire și va fi descărcat în curând.",
+      "label_favorites": "Favorite",
+      "label_filename": "Fișier",
+      "label_files_to_upload": "Următoarele fişiere vor fi încărcate:",
+      "label_filesize": "Dimensiune",
+      "label_formattable_attachment_hint": "Atașați și legați fișiere prin plasarea în acest câmp sau prin lipirea din clipboard.",
+      "label_general": "General",
+      "label_global_queries": "Public",
+      "label_greater_or_equal": ">=",
+      "label_group": "Grup",
+      "label_group_by": "Grupează după",
+      "label_group_plural": "Grupuri",
+      "label_hide_attributes": "Arată mai puţin",
+      "label_hide_column": "Ascunde coloana",
+      "label_hide_project_menu": "Închideți meniul proiectului",
+      "label_hour": "oră",
+      "label_hours": "ore",
+      "label_import": "Importă",
+      "label_in": "în",
+      "label_in_less_than": "în mai puțin de",
+      "label_in_more_than": "în mai mult de",
+      "label_incoming_emails": "E-mailuri primite",
+      "label_information_plural": "Informații",
+      "label_invalid": "Invalid",
+      "label_last_updated_on": "Ultima actualizare la data de",
+      "label_latest_activity": "Activitate recentă",
+      "label_learn_more_link": "Aflați mai multe",
+      "label_less_or_equal": "<=",
+      "label_less_than_ago": "acum mai puțin de zile",
+      "label_loading": "Se încarcă...",
+      "label_mail_notification": "Notificări prin e-mail",
+      "label_manage_columns": "Manage and reorder columns",
+      "label_me": "eu",
+      "label_meeting_agenda": "Agendă",
+      "label_meeting_minutes": "Minute",
+      "label_meetings": "Întâlniri",
+      "label_menu_collapse": "restrângere",
+      "label_menu_expand": "extindere",
+      "label_moderate_comment": "Moderate comment",
+      "label_more_than_ago": "acum mai mult de zile",
+      "label_next": "Înainte",
+      "label_no_color": "Nicio culoare",
+      "label_no_data": "Nu există date de afișat",
+      "label_no_date": "fără dată",
+      "label_no_due_date": "fără dată finalizare",
+      "label_no_start_date": "fără dată început",
+      "label_no_value": "Nici o valoare",
+      "label_none": "niciunul",
+      "label_not_contains": "nu conține",
+      "label_not_equals": "nu este",
+      "label_on": "pe",
+      "label_open_context_menu": "Deschideți meniul contextual",
+      "label_open_menu": "Deschidere meniu",
+      "label_open_work_packages": "deschise",
+      "label_password": "Parolă",
+      "label_per_page": "Pe pagină:",
+      "label_please_wait": "Așteptați",
+      "label_press_enter_to_save": "Apăsați tasta ”Enter” pentru a salva.",
+      "label_preview": "Previzualizează",
+      "label_previous": "Înapoi",
+      "label_project": "Proiect",
+      "label_project_list": "Listă proiecte",
+      "label_project_plural": "Proiecte",
+      "label_public_query": "Public",
+      "label_quote_comment": "Citare comentariu",
+      "label_recent": "Recente",
+      "label_rejected_files": "Următoarele fişiere nu pot fi încărcate:",
+      "label_rejected_files_reason": "Aceste fişiere nu pot fi încărcate deoarece mărimea lor este mai mare decât %{maximumFilesize}",
+      "label_remove": "Eliminare",
+      "label_remove_all_files": "Șterge toate fișierele",
+      "label_remove_column": "Elimină coloana",
+      "label_remove_columns": "Elimină coloane selectate",
+      "label_remove_file": "Ştergere %{fileName}",
+      "label_remove_row": "Elimina rand",
+      "label_remove_watcher": "Eliminare observator %{name}",
+      "label_report": "Raportare",
+      "label_repository_plural": "Repo-uri",
+      "label_reset": "Resetare",
+      "label_save_as": "Salvează ca",
+      "label_search_columns": "Search a column",
+      "label_select_project": "Selectează un proiect",
+      "label_select_watcher": "Selectaţi un observator...",
+      "label_selected_filter_list": "Filtre selectate",
+      "label_show_attributes": "Afișați toate câmpurile",
+      "label_show_in_menu": "Vizualizați configurația în meniu",
+      "label_sort_by": "Sortează după",
+      "label_sort_higher": "Mută în sus",
+      "label_sort_lower": "Mută în jos",
+      "label_sorted_by": "sortează după",
+      "label_sorting": "Sortare",
+      "label_spent_time": "Timp consumat",
+      "label_star_query": "Favorite",
+      "label_starred_queries": "Favorit",
+      "label_subject": "Subiect",
+      "label_sum": "Sumă",
+      "label_sum_for": "Suma pentru",
+      "label_this_week": "săptămâna curentă",
+      "label_time_entry_plural": "Timp consumat",
+      "label_today": "Azi",
+      "label_total_amount": "Total: %{amount}",
+      "label_total_progress": "%{percent} % Progres total",
+      "label_total_sum": "Suma totală",
+      "label_unwatch": "Nu mai urmări",
+      "label_unwatch_work_package": "Oprește urmărirea pachetului de lucru",
+      "label_up": "Sus",
+      "label_updated_on": "actualizat la data de",
+      "label_upload_counter": "%{done} din %{count} de fişiere terminate",
+      "label_upload_notification": "Se încarcă fișierele...",
+      "label_uploaded_by": "Încărcat de",
+      "label_user_plural": "Utilizatori",
+      "label_validation_error": "Pachetul de lucru nu a putut fi salvat din cauza următoarelor erori:",
+      "label_value_derived_from_children": "(valoare derivată de la copii)",
+      "label_version_plural": "Versiuni",
+      "label_view_has_changed": "Această vizualizare are modificări nesalvate. Faceți clic pentru a le salva.",
+      "label_visibility_settings": "Setări vizibilitate",
+      "label_wait": "Vă rugăm să aşteptaţi pentru configurare...",
+      "label_warning": "Avertizare",
+      "label_watch": "Monitorizare",
+      "label_watch_work_package": "Urmărește pachetul de lucru",
+      "label_watcher_added_successfully": "Observator adăugat cu succes!",
+      "label_watcher_deleted_successfully": "Observator eliminat cu succes!",
+      "label_work_package": "Pachet de lucru",
+      "label_work_package_context_menu": "Work package context menu",
+      "label_work_package_details_you_are_here": "Sunteți pe fila %{tab} pentru %{type} %{subject}.",
+      "label_work_package_parent": "Pachet de lucru părinte",
+      "label_work_package_plural": "Pachete de lucru",
+      "label_work_package_upload_notification": "Fişierele pentru pachetul de lucru #%{id}: %{subject} sunt în curs de încărcare",
+      "label_wp_id_added_by": "#%{id} adaugat de %{author}",
+      "modals": {
+        "button_apply": "Aplică",
+        "button_cancel": "Anulează",
+        "button_delete": "Șterge",
+        "button_save": "Salvează",
+        "button_submit": "Trimite",
+        "destroy_time_entry": {
+          "text": "Ești sigur că vrei să ștergi următoarea înregistrare a timpului?",
+          "title": "Confirmarea ștergerii înregistrării timpului"
+        },
+        "destroy_work_package": {
+          "bulk_text": "Ești sigur că vrei să ștergi următoarele %{label}?",
+          "confirm_deletion_children": "Recunosc că TOȚI descendenții pachetelor de lucru enumerate vor fi eliminați în mod recursiv.",
+          "deletes_children": "De asemenea, toate pachetele de lucru minore și descendenții acestora vor fi șterse în mod recursiv.",
+          "has_children": "Pachetul de lucru conține %{childUnits}:",
+          "single_text": "Ești sigur că vrei să ștergi pachetul de lucru",
+          "title": "Confirmați ștergerea %{label}"
+        },
+        "form_submit": {
+          "text": "Sunteți sigur/ă că doriți să realizați această acțiune?",
+          "title": "Confirmați pentru a continua"
+        },
+        "label_delete_page": "Șterge pagina curentă",
+        "label_name": "Nume"
+      },
+      "myTimeTracking": {
+        "noSpecificTime": "No specific time"
+      },
+      "my_page": {
+        "label": "Pagina mea"
+      },
+      "notice_bad_request": "Cerere invalidă.",
+      "notice_job_started": "munca începută.",
+      "notice_no_results_to_display": "Fara rezultate vizibile de afisat.",
+      "notice_successful_create": "Creare reușită.",
+      "notice_successful_delete": "Ştergere reuşită.",
+      "notice_successful_update": "Actualizare reușită.",
+      "notifications": {
+        "center": {
+          "and_more_users": {
+            "few": "și %{count} alții",
+            "one": "și încă unul",
+            "other": "și %{count} alții"
+          },
+          "empty_state": {
+            "no_notification": "Se pare că ești cu toate la zi.",
+            "no_notification_for_filter": "Looks like you are all caught up for this filter.",
+            "no_notification_with_current_filter": "Se pare că ești la zi cu filtrul %{filter}.",
+            "no_notification_with_current_project_filter": "Se pare că v-ați pus la punct cu proiectul selectat.",
+            "no_selection": "Faceți clic pe o notificare pentru a vizualiza toate detaliile activității."
+          },
+          "label_actor_and": "și",
+          "mark_all_read": "Marchează toate ca și citite",
+          "mark_all_read_confirmation": "This will mark all notifications in this view as read. Are you sure you want to do this?",
+          "mark_as_read": "Marchează ca Citit",
+          "new_notifications": {
+            "link_text": "Click here to load them.",
+            "message": "Există notificări noi."
+          },
+          "no_results": {
+            "at_all": "Aici vor apărea notificări noi atunci când există o activitate care te interesează.",
+            "with_current_filter": "Nu există notificări în această vizualizare în acest moment"
+          },
+          "text_update_date_by": "%{date} de",
+          "total_count_warning": "Se afișează %{newest_count} cele mai recente notificări. %{more_count} în plus nu sunt afișate."
+        },
+        "date_alerts": {
+          "milestone_date": "Dată etapă",
+          "overdue": "Restanțe",
+          "overdue_since": "de %{difference_in_days}",
+          "property_is": "este în %{difference_in_days}",
+          "property_is_deleted": "este ștearsă.",
+          "property_today": "este azi.",
+          "property_was": "a fost acum %{difference_in_days}"
+        },
+        "no_unread": "Nu sunt notificari necitite",
+        "reasons": {
+          "assigned": "Executant",
+          "commented": "Cu comentarii",
+          "created": "Creat pe",
+          "dateAlert": "Alertă dată",
+          "mentioned": "Menţionat",
+          "prioritized": "Prioritized",
+          "processed": "Procesat",
+          "reminder": "Reminder",
+          "responsible": "Responsabil",
+          "scheduled": "Planificat",
+          "shared": "Partajat",
+          "watched": "Observator"
+        },
+        "reminders": {
+          "note": "Note: “%{note}”"
+        },
+        "settings": {
+          "change_notification_settings": "Poți modifica setările <a target=\"_blank\" href=\"%{url}\">de notificare</a> pentru a te asigura că nu pierzi niciodată o actualizare importantă.",
+          "global": {
+            "date_alerts": {
+              "description": "Notificări automate atunci când se apropie dăți importante pentru pachetele de lucru deschise în care ești implicat (desemnat, responsabil sau observator).",
+              "title": "Alerte dăți"
+            },
+            "delayed": {
+              "description": "Notificări suplimentare pentru activitățile din toate proiectele.",
+              "title": "Unde nu participi"
+            },
+            "immediately": {
+              "description": "Notificări pentru toate activitățile din pachetele de lucru în care ești implicat (desemnat, responsabil sau observator).",
+              "title": "Participant"
+            },
+            "overdue": "În caz de întârziere"
+          },
+          "notify_me": "Notifică-mă",
+          "project_specific": {
+            "add": "Adaugă o setare pentru proiect",
+            "already_selected": "Acest proiect este deja selectat",
+            "description": "Aceste setări specifice proiectului prevalează asupra setărilor implicite de mai sus.",
+            "remove": "Eliminați setările proiectului",
+            "title": "Setări notificare specifice proiectului"
+          },
+          "reasons": {
+            "assignee": "Executant",
+            "mentioned": {
+              "description": "Primesc o notificare de fiecare dată când cineva mă menționează oriunde",
+              "title": "Menţionat"
+            },
+            "responsible": "Responsabil",
+            "shared": "Partajat",
+            "watched": "Observator",
+            "work_package_commented": "Toate comentariile noi",
+            "work_package_created": "Pachete de lucru noi",
+            "work_package_prioritized": "Toate modificările de prioritate",
+            "work_package_processed": "Toate modificările de stare",
+            "work_package_scheduled": "Toate modificările dății"
+          },
+          "reminders": {
+            "no_notification": "Nicio notificare",
+            "timeframes": {
+              "normal": {
+                "P1D": "cu 1 zi înainte",
+                "P3D": "cu 3 zile înainte",
+                "P7D": " cu o săptămână înainte ",
+                "PT0S": "în aceeași zi"
+              },
+              "overdue": {
+                "P1D": "zilnic",
+                "P3D": "la fiecare 3 zile",
+                "P7D": "săptămânal"
+              }
+            }
+          },
+          "title": "Setări notificare"
+        },
+        "title": "Notificări"
+      },
+      "onboarding": {
+        "buttons": {
+          "got_it": "Am înțeles",
+          "next": "Înainte",
+          "skip": "Sari"
+        },
+        "steps": {
+          "backlogs": {
+            "overview": "Gestionează-ți munca în vizualizarea <b>backlogs</b>.",
+            "sprints": "În dreapta aveți lista de rezultate și erorile restante, în stânga aveți sprintele respective. Aici poți crea <b>epicuri, povestiri pentru utilizatori și erori</b>, prioritizează prin drag & drop și adaugă-le la un sprint.",
+            "task_board": "Grupul de lucru vizualizează progresul <b>pentru această iterație</b>. Dă click pe pictograma plus (+) de lângă o cerință de utilizator pentru a adăuga sarcini noi sau impedimente. <br> Starea poate fi actualizată cu glisare și plasare.",
+            "task_board_arrow": "Pentru a vedea <b>panoul de sarcini</b>, deschideți meniul Sprint...",
+            "task_board_select": "... și selectați intrarea <b>Task board</b>."
+          },
+          "boards": {
+            "add": "Faceți clic pe pictograma plus (+) pentru a <b>crea un nou card</b> sau <b>adăugați un card existent</b> în lista de pe bord.",
+            "drag": "Trage și aruncă cartonașele dintr-o listă dată pentru a le reordona sau muta în altă listă. <br> Poți da click pe pictograma (i) din colțul din dreapta sus sau poți face dublu clic pe un card pentru a-i deschide detaliile.",
+            "lists_basic": "Aici puteți crea mai multe liste (coloane) în cadrul panoului agile.",
+            "lists_kanban": "Aici puteţi crea mai multe liste (coloane) în cadrul secţiunii. Această funcţie vă permite să creaţi o <b>tabelă Kanban</b>, de exemplu.",
+            "overview": "Selectează secțiunile <b></b> pentru a schimba vizualizarea și administrarea proiectului tău folosind vizualizarea secțiunilor agile."
+          },
+          "help_menu": "Meniul Ajutor (?) oferă <b>resurse suplimentare de ajutor</b>. Aici puteți găsi un ghid de utilizator, un ghid util pentru videoclipuri și multe altele. <br> Bucurați-vă de munca dumneavoastră cu OpenProject!",
+          "members": "Invitați noi <b>membri</b> să se alăture proiectului dumneavoastră.",
+          "quick_add_button": "Dă click pe pictograma plus (+) din antetul navigării pentru a <b>crea un nou proiect</b> sau <b>invita colaboratori</b>.",
+          "sidebar_arrow": "Folosește săgeata de întoarcere din colțul din stânga sus pentru a te întoarce în meniul <b>al proiectului</b>.",
+          "team_planner": {
+            "add_assignee": "Pentru a începe, adăugați persoane desemnate în planificatorul echipei.",
+            "add_existing": "Căutați pachetele de lucru existente și glisați-le în planificatorul echipei pentru a le atribui instantaneu unui membru al echipei și pentru a defini datele de început și de sfârșit.",
+            "calendar": "Tabloul de planificare săptămânală sau bisăptămânală afișează toate pachetele de lucru atribuite membrilor echipei dumneavoastră.",
+            "card": "Trage pachetele de lucru pe orizontală pentru a le muta înapoi sau înainte în timp, trage marginile pentru a schimba datele de început și de sfârșit și chiar trage-le pe verticală pe un alt rând pentru a le atribui unui alt membru.",
+            "overview": "Planificatorul de echipă vă permite să atribuiți vizual sarcini membrilor echipei și să obțineți o imagine de ansamblu a persoanelor care lucrează la ce."
+          },
+          "welcome": "Take a three-minute introduction tour to learn the most <b>important features</b>. <br> We recommend completing the steps until the end. You can restart the tour any time.",
+          "wiki": "În cadrul <b>Wiki</b> puteți documenta și împărtăși cunoștințe împreună cu echipa dumneavoastră.",
+          "wp": {
+            "back_button": "Utilizează săgeata de întoarcere din colțul din stânga sus pentru a ieși și pentru a reveni la lista pachetelor de lucru.",
+            "create_button": "Butonul <b>Creează</b> va adăuga un nou pachet de lucru la proiectul tău.",
+            "full_view": "Vizualizarea <b>pentru detaliile pachetului de lucru</b> furnizează toate informațiile relevante referitoare la un anumit pachet de lucru, cum ar fi descrierea, starea, prioritatea, activitățile, dependențele si comentariile.",
+            "gantt_menu": "Create project schedules and timelines effortlessly using the Gantt chart module.",
+            "list": "Acest pachet <b>de lucru</b> oferă o listă a tuturor activităților din proiectul tău, cum ar fi sarcini, jaloane, faze și altele. <br> Pachetele de lucru pot fi create și editate direct din acest punct de vedere. Pentru a accesa detaliile unui anumit pachet de lucru, fă dublu clic pe rând.",
+            "timeline": "Aici puteţi <b>edita planul de proiect</b>, crea noi pachete de lucru, cum ar fi sarcini, repere de etapă, faze și multe altele, precum și <b>adaugă dependențe</b>. Toți membrii echipei pot vedea și actualiza cel mai recent plan în orice moment.",
+            "toggler": "Acum să ne uităm la secțiunea <b>Pachet de lucru</b>, care vă oferă o vizualizare mai detaliată a activității dumneavoastră."
+          }
+        }
+      },
+      "open_project_storage_modal": {
+        "waiting_subtitle": {
+          "network_off": "There is a network problem.",
+          "network_on": "Network is back. We are trying."
+        },
+        "waiting_title": {
+          "timeout": "Expirat"
+        }
+      },
+      "overviews": {
+        "label": "Prezentare generală"
+      },
+      "pagination": {
+        "no_other_page": "Sunteți pe pagina unică.",
+        "pages": {
+          "next": "Avansare la pagina următoare",
+          "previous": "Înapoi la pagina precedentă"
+        }
+      },
+      "password_confirmation": {
+        "field_description": "Trebuie să introduceţi parola contului dumneavoastră pentru a confirma această schimbare.",
+        "title": "Vă rugăm să confirmați parola dumneavoastră pentru a continua"
+      },
+      "placeholders": {
+        "default": "-",
+        "description": "Descriere: Clic pentru editare ...",
+        "relation_description": "Clic pentru a adăuga o descriere pentru această relație",
+        "selection": "Te rog selectează",
+        "subject": "Introduceţi subiectul aici"
+      },
+      "project": {
+        "autocompleter": {
+          "label": "Completarea automată a proiectului"
+        },
+        "click_to_switch_to_project": "Proiect: %{projectname}",
+        "confirm_template_load": "Schimbarea șablonului va reîncărca pagina și veți pierde toate datele introduse în acest formular. Continuați?",
+        "context": "Contextul proiectului",
+        "copy": {
+          "copy_options": "Opțiuni de copiere"
+        },
+        "no_template_selected": "(Nimic)",
+        "not_available": "Project N/A",
+        "required_outside_context": "Vă rugăm să alegeți un proiect în care să creați pachetul de lucru pentru a vedea toate atributele. Puteți selecta numai proiectele care au tipul de mai sus activat.\n",
+        "use_template": "Utilizează șablon"
+      },
+      "project_menu_details": "Detalii",
+      "relation_buttons": {
+        "abort": "Anulează",
+        "add_existing": "Adaugă existent",
+        "add_existing_child": "Adăugare fiu",
+        "add_existing_relation": "Adaugă relație existentă",
+        "add_new_child": "Creează copil nou",
+        "add_new_relation": "Crează o nouă relație",
+        "add_parent": "Adaugă părinte existent",
+        "add_predecessor": "Adăugați predecesorul",
+        "add_successor": "Add successor",
+        "change_parent": "Modifică părinte",
+        "create_new": "Creează nou",
+        "group_by_relation_type": "Grupează dupa tipul legăturii",
+        "group_by_wp_type": "Grupează după tipul packetului de lucru",
+        "hierarchy_indent": "Indentare ierarhie",
+        "hierarchy_outdent": "Elimină ierarhia",
+        "remove": "Eliminare relație",
+        "remove_child": "Elimină copil",
+        "remove_parent": "Elimină părinte",
+        "save": "Salvează relația",
+        "set_parent": "Setează părinte",
+        "show_relations": "Arată relațiile",
+        "toggle_description": "Comută descrierea relației",
+        "update_description": "Setează sau actualizează descrierea acestei relații",
+        "update_relation": "Clic pentru a schimba tipul de legătură"
+      },
+      "relation_labels": {
+        "blocked": "Blocat de",
+        "blocks": "Blochează",
+        "child": "Child",
+        "children": "Copii",
+        "duplicated": "Dublat de",
+        "duplicates": "Dublează",
+        "follows": "Urmează",
+        "includes": "Include",
+        "parent": "Părinte",
+        "partof": "Parte din",
+        "precedes": "Precede",
+        "relates": "În relație cu",
+        "relation_type": "tip relație",
+        "required": "Cerut de",
+        "requires": "Necesită"
+      },
+      "relations": {
+        "empty": "Nu există relații",
+        "remove": "Elimină relație"
+      },
+      "relations_autocomplete": {
+        "parent_placeholder": "Alege un nou părinte sau apasă Escape pentru a anula.",
+        "placeholder": "Tastează pentru a căuta"
+      },
+      "relations_hierarchy": {
+        "children_headline": "Copii",
+        "hierarchy_headline": "Ierarhie",
+        "parent_headline": "Părinte"
+      },
+      "reminders": {
+        "settings": {
+          "alerts": {
+            "document_added": "Documente adăugate",
+            "explanation": "Astăzi, notificările se limitează la pachetele de lucru. Puteți alege să continuați să primiți alerte prin e-mail pentru aceste evenimente până când acestea vor fi incluse în notificări:\n",
+            "forum_messages": "Mesaje noi pe forum",
+            "membership_added": "Adaugă membri",
+            "membership_updated": "Membrii actualizați",
+            "news_added": "Noutăți adăugate",
+            "news_commented": "Comentariu la o știre",
+            "title": "Alerte prin e-mail pentru alte elemente (care nu sunt pachete de lucru)",
+            "wiki_page_added": "Pagină wiki adăugată",
+            "wiki_page_updated": "Pagină wiki actualizată"
+          },
+          "daily": {
+            "add_time": "Adaugă timp",
+            "enable": "Activează reamintirile zilnice prin e-mail",
+            "explanation": "Vei primi aceste reamintiri numai pentru notificările necitite și numai la câteva ore specificate. %{no_time_zone}",
+            "no_time_zone": "Până când configurezi un fus orar pentru contul tău, orele vor fi interpretate ca fiind în UTC.",
+            "time_label": "Timp %{counter}:",
+            "title": "Trimite-mi reamintiri zilnice prin e-mail pentru notificările necitite"
+          },
+          "immediate": {
+            "mentioned": "Imediat când cineva mă @menționează",
+            "personal_reminder": "Imediat când primesc reamintiri personale",
+            "title": "Trimiteți-mi un e-mail de reamintire"
+          },
+          "pause": {
+            "first_day": "Prima zi",
+            "label": "Întrerupe temporar reamintirile zilnice prin e-mail",
+            "last_day": "Ultima zi"
+          },
+          "title": "Reamintiri e-mail",
+          "workdays": {
+            "title": "Primește reamintiri prin e-mail în aceste zile"
+          }
+        }
+      },
+      "reporting_engine": {
+        "label_remove": "Șterge",
+        "label_response_error": "S-a produs o eroare în tratarea interogării."
+      },
+      "repositories": {
+        "select_branch": "Selectare ramură",
+        "select_tag": "Selectare etichetă"
+      },
+      "revit": {
+        "revit_add_in": "Supliment Revit",
+        "revit_add_in_settings": "Setări Revit Add-In"
+      },
+      "sharing": {
+        "selected_count": "%{count} selected",
+        "selection": {
+          "mixed": "Amestecat"
+        },
+        "share": "Distribuie"
+      },
+      "sort": {
+        "activate_asc": "activează pentru a ordona ascendent",
+        "activate_dsc": "activează pentru a ordona descendent",
+        "activate_no": "activați pentru a înlătura sortarea",
+        "sorted_asc": "Ordonare ascendentă aplicată, ",
+        "sorted_dsc": "Ordonare descendentă aplicată, ",
+        "sorted_no": "Nu a fost selectată nicio sortare ",
+        "sorting_disabled": "sortarea este dezactivată"
+      },
+      "spot": {
+        "drop_modal": {
+          "close": "Close modal",
+          "focus_grab": "Aceasta este o ancoră de focalizare pentru modalități. Apăsați shift+tab pentru a reveni la elementul de declanșare modal."
+        },
+        "filter_chip": {
+          "remove": "Eliminare"
+        }
+      },
+      "storages": {
+        "authentication_error": "Authentication with %{storageType} failed",
+        "choose_location": "Alege Locația",
+        "drop_files": "Lăsați fișierele aici pentru a le încărca pe %{name}.",
+        "drop_or_click_files": "Lăsați fișierele aici sau faceți clic pentru a le încărca pe %{name}.",
+        "file_links": {
+          "already_linked_directory": "Acest director este deja conectat la acest pachet de lucru.",
+          "already_linked_file": "Acest fișier este deja legat la acest pachet de lucru.",
+          "download": "Descarcă %{fileName}",
+          "empty": "În prezent, nu există fișiere legate de acest pachet de lucru. Începeți să legați fișierele cu acțiunea de mai jos sau din interiorul %{storageType}.\n",
+          "link_uploaded_file_error": "A apărut o eroare la conectarea fișierului încărcat recent '%{fileName}' la pachetul de lucru %{workPackageId}.\n",
+          "open": "Deschide fişierul pe stocare",
+          "open_location": "Deschide fișierul în locație",
+          "remove": "Elimină link-ul fișierului",
+          "remove_confirmation": "Sigur doriți să deconectați fișierul de la acest pachet de lucru? Deconectarea nu afectează fișierul original și doar elimină conexiunea la acest pachet de lucru.\n",
+          "remove_short": "Ștergeți linkul",
+          "select": "Selectează fișiere",
+          "select_all": "Selectează tot",
+          "selection": {
+            "few": "Link %{count} fișiere",
+            "one": "Link 1 fișier",
+            "other": "Link %{count} de fișiere",
+            "zero": "Selectaţi fişierele pentru a conecta"
+          },
+          "success_create": {
+            "few": "A creat cu succes %{count} legături de fișiere.",
+            "one": "A creat cu succes 1 legătură de fișier.",
+            "other": "A creat cu succes %{count} de legături de fișiere."
+          },
+          "tooltip": {
+            "not_found": "This file cannot be found.",
+            "not_logged_in": "Please log in to the storage to access this file.",
+            "view_not_allowed": "Nu ai permisiune pentru a vedea acest fișier."
+          },
+          "upload_error": {
+            "403": "Fişierul (%{fileName}) nu a putut fi încărcat din cauza restricţiilor de sistem. Vă rugăm să contactaţi administratorul pentru mai multe informaţii.\n",
+            "413": "Fișierul tău (%{fileName}) este mai mare decât ce poate încărca OpenProject la %{storageType}. Îl puteţi încărca direct la %{storageType} înainte şi apoi să legaţi fişierul.\n",
+            "507": "Fişierul (%{fileName}) este mai mare decât cota de stocare permisă. Contactaţi administratorul pentru a modifica această cotă.\n",
+            "default": "Your file (%{fileName}) could not be uploaded.\n",
+            "detail": {
+              "nextcloud": "Please check that the latest version of the Nextcloud App \"OpenProject Integration\" is installed and contact your administrator for more information.\n"
+            }
+          }
+        },
+        "files": {
+          "already_existing_body": "Un fișier cu numele \"%{fileName}\" există deja în locația în care încercați să încărcați acest fișier. Ce ai vrea să faci?\n",
+          "already_existing_header": "Acest fișier există deja",
+          "cannot_create_folder": "Failed to create folder. Avoid using special characters and symbols and make sure the folder does not exist already.",
+          "directory_not_writeable": "Nu aveţi permisiunea de a adăuga fişiere în acest folder.",
+          "dragging_folder": "The upload to %{storageType} does not support folders.",
+          "dragging_many_files": "Încărcarea către %{storageType} suportă doar un singur fișier simultan.",
+          "empty_folder": "Acest director este gol.",
+          "empty_folder_location_hint": "Faceţi clic pe butonul de mai jos pentru a încărca fişierul în această locaţie.",
+          "file_not_selectable_location": "Selectarea unui fișier nu este posibilă în procesul de alegere a unei locații.",
+          "managed_project_folder_no_access": "You have no access yet to the managed project folder. Please wait a bit and try again.\n",
+          "managed_project_folder_not_available": "The automatically managed project folder was not yet found. Please wait a bit, reload the page to fetch the newest data, and try again.\n",
+          "project_folder_no_access": "You have no access to the project folder. Please, contact your administrator to get access or upload the file in another location.\n",
+          "upload_keep_both": "Păstrați ambele",
+          "upload_replace": "Înlocuiește"
+        },
+        "information": {
+          "authentication_error": "The request to %{storageType} could not be authenticated, that's an error.",
+          "connection_error": "Unele setări %{storageType} nu funcționează. Vă rugăm să contactați administratorul %{storageType}.\n",
+          "live_data_error": "Eroare la preluarea detaliilor fișierului",
+          "live_data_error_description": "Unele date %{storageType} nu au putut fi preluate. Încercați să reîncărcați această pagină sau contactați administratorul %{storageType}.\n",
+          "no_file_links": "Pentru a conecta fișierele la acest pachet de lucru, vă rugăm să le faceți prin intermediul %{storageType}.",
+          "not_logged_in": "Pentru a adăuga un link, vezi sau încarcă fișiere asociate cu acest pachet de lucru, te rog să te autentifici la %{storageType}.\n",
+          "suggest_logout": "You can try whether logging out and back in fixes this problem.",
+          "suggest_relink": "You can try whether re-linking your account via the login button below fixes this problem."
+        },
+        "link_existing_files": "Legaţi fişierele existente",
+        "link_files_in_storage": "Link-ul fişierelor în %{storageType}",
+        "login": "%{storageType} autentificare",
+        "login_to": "Autentificare în %{storageType}",
+        "new_folder": "New folder",
+        "no_connection": "Nu există %{storageType} conexiune",
+        "open_storage": "Deschide %{storageType}",
+        "select_location": "Selectează locația",
+        "types": {
+          "default": "Depozitare",
+          "nextcloud": "Nextcloud",
+          "one_drive": "OneDrive/SharePoint"
+        },
+        "upload_files": "Încarcă fişiere"
+      },
+      "team_planner": {
+        "add_assignee": "Executant",
+        "add_existing": "Adaugă existent",
+        "add_existing_title": "Adaugă pachete de lucru existente",
+        "cannot_drag_here": "Nu se poate elimina pachetul de lucru din cauza permisiunilor sau restricțiilor de editare.",
+        "cannot_drag_to_non_working_day": "Acest pachet de lucru nu poate să înceapă/se încheie într-o zi nelucrătoare.",
+        "create_label": "Planificator echipă",
+        "create_title": "Creează planificare echipă nouă",
+        "drag_here_to_remove": "Trageți aici pentru a elimina responsabilul și a începe și a termina datele.",
+        "eight_weeks": "opt săptămâni",
+        "four_weeks": "patru săptămâni",
+        "modify": {
+          "errors": {
+            "fallback": "Acest pachet de lucru nu poate fi editat.",
+            "permission_denied": "Nu aveți permisiunile necesare pentru a modifica acest lucru."
+          }
+        },
+        "no_data": "Adăugați persoane desemnate pentru a vă configura planificatorul echipei.",
+        "one_week": "o săptămână",
+        "quick_add": {
+          "empty_state": "Utilizează câmpul de căutare pentru a găsi pachete de lucru și trage-le în planificare pentru a-l atribui cuiva și defini datele de început și de sfârșit.",
+          "search_placeholder": "Caută..."
+        },
+        "remove_assignee": "Înlătură responsabil",
+        "today": "Azi",
+        "two_weeks": "două săptămâni",
+        "unsaved_title": "Planificator de echipă nenumit",
+        "work_week": "Săptămână de lucru"
+      },
+      "text_are_you_sure": "Ești sigur?",
+      "text_data_lost": "Toate datele introduse vor fi pierdute.",
+      "text_query_destroy_confirmation": "Sunteți sigur că doriți să ștergeți vizualizarea selectată?",
+      "text_user_wrote": "%{value} a scris:",
+      "text_work_packages_destroy_confirmation": "Sunteți sigur că doriți ștergerea pachetelor de lucru selectate?",
+      "time_entry": {
+        "stop": "Stop",
+        "title": "Registru timp",
+        "tracking": "Monitorizare efort",
+        "work_package_required": "Necesită să se selecteze mai întâi un pachet de lucru."
+      },
+      "timer": {
+        "button_stop": "Stop current timer",
+        "start_new_timer": "Start new timer",
+        "timer_already_running": "To start a new timer, you must first stop the current timer:",
+        "timer_already_stopped": "No active timer for this work package, have you stopped it in another window?",
+        "tracking_time": "Tracking time"
+      },
+      "tl_toolbar": {
+        "outlines": "Nivel ierarhic",
+        "zooms": "Orizont de timp"
+      },
+      "toolbar": {
+        "filter": "Filtrează",
+        "search_query_label": "Căutați vizualizări salvate",
+        "settings": {
+          "columns": "Coloane",
+          "configure_view": "Configurează vizualizarea",
+          "delete": "Șterge",
+          "display_hierarchy": "Afișați ierarhia",
+          "display_sums": "Afişare totaluri",
+          "export": "Exportă",
+          "group_by": "Grupează după",
+          "hide_hierarchy": "Ascundeți ierarhia",
+          "hide_sums": "Ascundere totaluri",
+          "page_settings": "Redenumește vizualizare",
+          "save": "Salvează",
+          "save_as": "Salvează ca",
+          "share_calendar": "Subscribe to calendar",
+          "sort_by": "Sortează după",
+          "visibility_settings": "Setări vizibilitate"
+        },
+        "unselected_title": "Pachet de lucru"
+      },
+      "two_factor_authentication": {
+        "errors": {
+          "aborted": "The authentication was cancelled. Please try again."
+        },
+        "label_two_factor_authentication": "Autentificare doi factori"
+      },
+      "types": {
+        "attribute_groups": {
+          "confirm_reset": "Atenție: Ești sigur că vrei să resetați conjurația formularului? Această acțiune va reseta toate atributele înapoi la grupul implicit și va dezactiva TOATE câmpurile personalizate.\n",
+          "error_duplicate_group_name": "Numele %{group} este utilizat de mai multe ori. Fiecare grup trebuie să aibă un nume unic.",
+          "error_no_table_configured": "Vă rugăm să configurați un tabel pentru %{group}.",
+          "more_information": "Mai multe informatii",
+          "nevermind": "Asta e...",
+          "reset_title": "Resetare configurare formular",
+          "upgrade_to_ee": "Actualizare la ediția Enterprise on-premise",
+          "upgrade_to_ee_text": "Wow! Dacă aveți nevoie de acest add-on sunteți un super profesionist! Vrei să ne sprijini pe noi, dezvoltatorii OpenSource, devenind client al ediției Enterprise?"
+        }
+      },
+      "units": {
+        "child_work_packages": {
+          "few": "%{count} descendenți ai pachetului de lucru",
+          "one": "Un pachet de lucru descendent",
+          "other": "%{count} copii din pachetul de lucru"
+        },
+        "day": {
+          "one": "o zi",
+          "other": "%{count} zile",
+          "zero": "0 zile"
+        },
+        "hour": {
+          "one": "1 oră",
+          "other": "%{count} ora",
+          "zero": "0 ore"
+        },
+        "word": {
+          "few": "%{count} words",
+          "one": "1 word",
+          "other": "%{count} words"
+        },
+        "workPackage": {
+          "few": "pachete de lucru",
+          "one": "pachet de lucru",
+          "other": "pachete de lucru"
+        }
+      },
+      "upsell": {
+        "ee_only": "Add-on pentru ediția Enterprise"
+      },
+      "views": {
+        "card": "Carduri",
+        "list": "Tabel",
+        "timeline": "Gantt"
+      },
+      "watchers": {
+        "label_add": "Adaugă observatori",
+        "label_discard": "Renunțare la selecţie",
+        "label_error_loading": "A apărut o eroare în timpul încărcării observatorilor",
+        "label_loading": "se încarcă observatorii...",
+        "label_search_watchers": "Caută observator",
+        "typeahead_placeholder": "Căutarea de posibili observatori"
+      },
+      "wiki_formatting": {
+        "code": "Limbaj de programare",
+        "deleted": "Taiat",
+        "heading1": "Titlu 1",
+        "heading2": "Titlu 2",
+        "heading3": "Titlu 3",
+        "image": "Imagine",
+        "italic": "Italic",
+        "ordered_list": "Listă ordonată",
+        "preformatted_text": "Text preformatat",
+        "quote": "Citare",
+        "strong": "Aldin",
+        "underline": "Subliniat",
+        "unordered_list": "Listă neordonată",
+        "unquote": "Elimină formatare citat",
+        "wiki_link": "Link la o pagină Wiki"
+      },
+      "work_packages": {
+        "baseline": {
+          "addition_label": "Added to view within the comparison time period",
+          "column_incompatible": "This column does not show changes in Baseline mode.",
+          "modification_label": "Modified within the comparison time period",
+          "removal_label": "Removed from view within the comparison time period"
+        },
+        "bulk_actions": {
+          "copy": "Copiază mai multe elemente",
+          "delete": "Șterge mai multe element",
+          "edit": "Editează mai multe elemente",
+          "move": "Modificare identificator proiect"
+        },
+        "button_clear": "Șterge",
+        "comment_added": "Comentariul a fost adăugat cu succes.",
+        "comment_send_failed": "A apărut o eroare. Comentariul nu a putut fi salvat.",
+        "comment_updated": "Comentariul a fost actualizat cu succes.",
+        "confirm_edit_cancel": "Sunteți sigur că doriți să renunțați la editarea pachetului de lucru?",
+        "copy": {
+          "title": "Copiază pachet de lucru"
+        },
+        "create": {
+          "button": "Creează",
+          "header": "Nou %{type}",
+          "header_no_type": "Nou pachet de lucru (Tipul incă nu a fost stabilit)",
+          "header_with_parent": "Nou %{type} (Copil al %{parent_type} #%{id})",
+          "title": "Pachet de lucru nou"
+        },
+        "default_queries": {
+          "all_open": "Toate deschise",
+          "assigned_to_me": "Atribuit mie",
+          "created_by_me": "Creat de mine",
+          "latest_activity": "Activitate recentă",
+          "manually_sorted": "Interogare nouă sortată manual",
+          "milestones": "Etape",
+          "overdue": "Restanțe",
+          "recently_created": "Creat de",
+          "shared_with_me": "Partajate cu mine",
+          "shared_with_users": "Partajate cu utilizatorii",
+          "summary": "Rezumat"
+        },
+        "description_enter_text": "Introduceţi textul",
+        "description_filter": "Filtrează",
+        "description_options_hide": "Ascundere opțiuni",
+        "description_options_show": "Afișare opțiuni",
+        "edit_attribute": "%{attribute} - Editare",
+        "faulty_query": {
+          "description": "Vederea ta este eronată și nu a putut fi prelucrată.",
+          "title": "Pachetele de lucru nu au putut fi încărcate."
+        },
+        "filters": {
+          "baseline_incompatible": "This filter attribute is not taken into consideration in Baseline mode.",
+          "baseline_warning": "Baseline mode is on but some of your active filters are not included in the comparison.",
+          "title": "Filtrează pachete de lucru"
+        },
+        "hierarchy": {
+          "children_collapsed": "Nivelul ierarhic %{level}, prăbușit. Faceți clic pentru a afișa copiii filtrați",
+          "children_expanded": "Nivelul ierarhic %{level}, extins. Faceți clic pentru a restrânge copiii filtrați",
+          "hide": "Ascundeți modul ierarhic",
+          "leaf": "Frunza pachetului de lucru la nivelul %{level}.",
+          "show": "Afișați modul ierarhic",
+          "toggle_button": "Clic pentru a activa/dezactiva modul ierarhic."
+        },
+        "inline_create": {
+          "title": "Click aici pentru a adăuga un nou pachet de lucru în listă"
+        },
+        "jump_marks": {
+          "content": "Săriți la conținut",
+          "label_content": "Click aici pentru a sări peste tabelul cu pachete de lucru și a ajunge la paginare",
+          "label_pagination": "Click aici pentru a sări peste tabelul cu pachete de lucru și a ajunge la paginare",
+          "pagination": "Salt la paginarea tabelului"
+        },
+        "key_value": "%{key}: %{value}",
+        "label_column_multiselect": "Câmp desfășurat combinat: selectaţi cu săgețile, confirmați alegerea cu enter, ştergeţi cu backspace",
+        "label_disable_multi_select": "Dezactivare selecție multiplă",
+        "label_enable_multi_select": "Activare selecție multiplă",
+        "label_filter_add": "Adaugă filtru",
+        "label_filter_by_text": "Filtrează după text",
+        "label_options": "Opțiuni",
+        "limited_results": "Numai pachetele de lucru %{count} pot fi afișate în modul de sortare manuală. Te rog să reduci rezultatele prin filtrare sau să treci la sortare automată.",
+        "message_error_during_bulk_delete": "A apărut o eroare la ștergerea pachetelor de lucru.",
+        "message_successful_bulk_delete": "Pachetele de lucru au fost șterse cu succes.",
+        "message_successful_show_in_fullscreen": "Click aici pentru a afișa acest pachet de lucru pe tot ecranul.",
+        "message_view_spent_time": "Arată timpul consumat pentru acest pachet de lucru",
+        "message_work_package_read_only": "Pachetul de lucru este blocat în acest statut. Niciun alt atribut în afară de status nu poate fi modificat.",
+        "message_work_package_status_blocked": "Starea pachetului de lucru nu poate fi scrisă din cauza statutului închis și a versiunii închise care au fost atribuite.",
+        "no_results": {
+          "description": "Nu a fost creat niciun pachet de lucru, sau toate sunt eliminate prin filtru.",
+          "title": "Nu sunt pachete de lucru de afișat."
+        },
+        "placeholder_filter_by_text": "Subiect, descriere, comentarii, ...",
+        "placeholders": {
+          "date": "Selectează data",
+          "default": "-"
+        },
+        "progress": {
+          "title": "Estimări și progrese lucrare"
+        },
+        "properties": {
+          "assignee": "Executant",
+          "author": "Autor",
+          "category": "Categorie",
+          "costObject": "Buget",
+          "createdAt": "Creat pe",
+          "date": "Dată",
+          "description": "Descriere",
+          "dueDate": "Dată finalizare",
+          "duration": "Durată",
+          "overallCosts": "Costuri totale",
+          "percentComplete": "% finalizată",
+          "percentCompleteAlternative": "Progres",
+          "percentageDone": "Procent realizat",
+          "priority": "Prioritate",
+          "projectName": "Proiect",
+          "remainingTime": "Muncă rămasă",
+          "remainingWork": "Muncă rămasă",
+          "remainingWorkAlternative": "Ore",
+          "responsible": "Responsabil",
+          "spentTime": "Timp consumat",
+          "spentUnits": "Unități cheltuite",
+          "startDate": "Dată început",
+          "status": "Stare",
+          "storyPoints": "Puncte cerință",
+          "subject": "Subiect",
+          "subproject": "Subproiect",
+          "title": "Titlu",
+          "type": "Tip",
+          "updatedAt": "Actualizat pe",
+          "version": "Versiune",
+          "versionName": "Versiune",
+          "work": "Muncă",
+          "workAlternative": "Durata estimată"
+        },
+        "property_groups": {
+          "costs": "Costuri",
+          "details": "Detalii",
+          "estimatesAndTime": "Estimări și Durate",
+          "other": "Altele",
+          "people": "Persoane"
+        },
+        "query": {
+          "click_to_edit_query_name": "Câmpul %s este gol. Click aici pentru a-l edita.",
+          "column_names": "Coloane",
+          "confirm_edit_cancel": "Ești sigur că vrei să anulezi editarea numelui acestei vizualizări? Titlul va fi setat la valoarea anterioară.",
+          "display_sums": "Afişare totaluri",
+          "errors": {
+            "duplicate_query_title": "Numele acestei vizualizări există deja. Să-l schimbăm oricum?",
+            "not_found": "Vezi",
+            "unretrievable_query": "Nu se poate prelua vizualizarea din URL"
+          },
+          "filters": "Filtre",
+          "group": "Grupează după",
+          "group_by": "Grupare rezultate",
+          "group_by_disabled_by_hierarchy": "Gruparea este dezactivată deoarece modul ierarhic este activ.",
+          "hide_column": "Ascunde coloana",
+          "hierarchy_disabled_by_group_by": "Modul ierarhic este dezactivat deoarece rezultatele sunt grupate în %{column}.",
+          "insert_columns": "Inserează coloane",
+          "move_column_left": "Mută coloana la stânga",
+          "move_column_right": "Mută coloana la dreapta",
+          "public_text": "Publicați această vizualizare, permițând altor utilizatori să vă acceseze vizualizarea. Utilizatorii cu permisiunea \"Manage public views\" pot modifica sau elimina interogarea publică. Acest lucru nu afectează vizibilitatea rezultatelor pachetului de lucru în vizualizarea respectivă și, în funcție de permisiunile lor, utilizatorii pot vedea rezultate diferite.\n",
+          "rename_query_placeholder": "Vezi",
+          "sort_ascending": "Ordonează ascendent",
+          "sort_descending": "Ordonează descendent",
+          "star_text": "Marcați această vizualizare ca favorită și adăugați-o la bara laterală de vizualizări salvate din stânga.",
+          "text_no_results": "Nu au fost găsite vizualizări corespunzătoare."
+        },
+        "reminders": {
+          "button_label": "Set reminder",
+          "presets": {
+            "custom": "At a particular date/time",
+            "month": "In a month",
+            "three_days": "In 3 days",
+            "tomorrow": "Tomorrow",
+            "week": "In a week"
+          },
+          "subtitle": "You will receive a notification for this work package at the chosen time.",
+          "title": {
+            "edit": "Edit reminder",
+            "new": "Set a reminder"
+          }
+        },
+        "scheduling": {
+          "is_parent": "Datele acestui pachet de lucru sunt deduse automat din copiii săi. Activați \"Programare manuală\" pentru a stabili datele.",
+          "is_switched_from_manual_to_automatic": "Este posibil ca datele acestui pachet de lucru să trebuiască să fie recalculate după trecerea de la programarea manuală la cea automată din cauza relațiilor cu alte pachete de lucru."
+        },
+        "sharing": {
+          "show_all_users": "Arată toți utilizatorilor cu care pachetul de lucru a fost partajat",
+          "title": "Share work package"
+        },
+        "table": {
+          "configure_button": "Configurarea tabelului pachetului de lucru",
+          "summary": "Tabel cu pachete de lucru pe rânduri şi câmpurile pachetelor pe coloane.",
+          "text_inline_edit": "Majoritatea celulelor din acest tabel sunt butoane care activează editarea \"inline\" a câmpului respectiv.",
+          "text_select_hint": "Casetele de selectare ar trebui să fie deschise cu 'ALT' si tastele săgeată.",
+          "text_sort_hint": "Cu link-urile din capul de tabel poți sorta, grupa, reordona, elimina și adăuga coloane la tabel."
+        },
+        "table_configuration": {
+          "button": "Configurați acest tabel al pachetului de lucru",
+          "choose_display_mode": "Afișare pachete de lucru din subproiecte pe pagina proiectului principal",
+          "columns_help_text": "Utilizează datele de mai sus pentru a adăuga sau elimina coloane în vizualizarea tabelului. Poți glisa și plasa coloanele pentru a le reordona.",
+          "default": "implicit",
+          "default_mode": "Listă",
+          "display_settings": "Setări afișare",
+          "display_sums_hint": "Afișarea sumelor tuturor atributelor însumabile pe un rând sub rezultatele tabelului.",
+          "embedded_tab_disabled": "Această filă de configurare nu este disponibilă pentru vizualizarea încorporată pe care o editezi.",
+          "hierarchy_hint": "Toate rezultatele tabelelor filtrate vor fi completate cu strămoșii lor. Ierarhiile pot fi extinse și restrânse.",
+          "hierarchy_mode": "Ierarhie",
+          "highlighting": "Fără evidențiere",
+          "highlighting_mode": {
+            "description": "Nicio culoare",
+            "entire_row_by": "Întregul rând pe tipuri",
+            "inline": "Evidențiați atributul (atributele) inline",
+            "inline_all": "Toate atributele",
+            "none": "Fără evidențiere",
+            "priority": "Prioritate",
+            "status": "Stare",
+            "type": "Tip"
+          },
+          "modal_title": "Configurația tabelului pachetului de lucru",
+          "relation_filters": {
+            "filter_work_packages_by_relation_type": "Filtrează pachetele de lucru după tipul relației"
+          },
+          "show_timeline_hint": "Afișați o diagramă Gantt interactivă în partea dreaptă a tabelului. Puteți modifica lățimea acestuia trăgând de separatorul dintre tabel și graficul gantt.",
+          "sorting_mode": {
+            "automatic": "Automat",
+            "description": "Alegeți modul de sortare a pachetelor de lucru:",
+            "manually": "Manual",
+            "warning": "La activarea modului de sortare automată, veți pierde sortarea anterioară."
+          }
+        },
+        "tabs": {
+          "activity": "Activitate",
+          "files": "Fişiere",
+          "github": "GitHub",
+          "gitlab": "GitLab",
+          "meetings": "Întâlniri",
+          "overview": "Prezentare generală",
+          "relations": "Relații",
+          "watchers": "Observatori"
+        },
+        "time_relative": {
+          "days": "zile",
+          "months": "luni",
+          "weeks": "săptămâni"
+        }
+      },
+      "zen_mode": {
+        "button_activate": "Activează modul zen",
+        "button_deactivate": "Dezactivează modul zen"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": ".",
+          "format": "%n %u",
+          "negative_format": "-%u%n",
+          "precision": 2,
+          "separator": ",",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "RON"
+        }
+      },
+      "format": {
+        "delimiter": null,
+        "precision": 3,
+        "round_mode": "default",
+        "separator": ",",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "miliard",
+            "million": "milion",
+            "quadrillion": "quadrilion",
+            "thousand": "mie",
+            "trillion": "trilion",
+            "unit": null
+          }
+        },
+        "format": {
+          "delimiter": null,
+          "precision": 1,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "few": "Bytes",
+              "one": "Byte",
+              "other": "Bytes"
+            },
+            "eb": "EB",
+            "gb": "GB",
+            "kb": "kB",
+            "mb": "MB",
+            "pb": "PB",
+            "tb": "TB",
+            "zb": "ZB"
+          }
+        }
+      },
+      "nth": {},
+      "percentage": {
+        "format": {
+          "delimiter": ",",
+          "format": "%n%"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": null
+        }
+      }
+    },
+    "time": {
+      "am": "AM",
+      "formats": {
+        "default": "%d-%m-%Y %I:%M %p",
+        "long": "%d %B %Y, %H:%M",
+        "short": "%d %b %H:%M",
+        "time": "%I:%M %p"
+      },
+      "pm": "PM"
+    }
+  }
+}

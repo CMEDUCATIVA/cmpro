@@ -1,0 +1,2053 @@
+{
+  "zh-CN": {
+    "date": {
+      "abbr_day_names": [
+        "周日",
+        "周一",
+        "周二",
+        "周三",
+        "周四",
+        "周五",
+        "周六"
+      ],
+      "abbr_month_names": [
+        null,
+        "1月",
+        "2月",
+        "3月",
+        "4月",
+        "5月",
+        "6月",
+        "7月",
+        "8月",
+        "9月",
+        "10月",
+        "11月",
+        "12月"
+      ],
+      "abbr_week": "Wk",
+      "day_names": [
+        "星期日",
+        "星期一",
+        "星期二 ",
+        "星期三",
+        "星期四",
+        "星期五 ",
+        "星期六 "
+      ],
+      "formats": {
+        "default": "%m/%d/%Y",
+        "long": "%B %d, %Y",
+        "short": "%b %d"
+      },
+      "month_names": [
+        null,
+        "1月",
+        "2月",
+        "3月",
+        "4月",
+        "5月",
+        "6月",
+        "7月",
+        "8月",
+        "9月",
+        "10月",
+        "11 月",
+        "12月"
+      ],
+      "order": [
+        "：年",
+        "：月",
+        "：日"
+      ]
+    },
+    "js": {
+      "admin": {
+        "enterprise": {
+          "text_expired": "已过期",
+          "text_reprieve_days_left": "距宽限期结束还有 %{days} 天",
+          "trial": {
+            "confirmation": "确认电子邮件地址",
+            "confirmation_info": "我们在 %{date}向您的 %{email} 发送了一封电子邮件。请查看您的电子邮件并点击提供的确认链接以开始 14 天的试用。\n",
+            "email_not_received": "没有收到电子邮件？您可以使用右侧的链接重新发送电子邮件。",
+            "form": {
+              "domain_mismatch": "当前请求的主机名与配置的主机名不匹配。请仔细检查您的系统设置。",
+              "general_consent": "我同意<a target=\"_blank\" href=\"%{link_terms}\">服务条款</a>和<a target=\"_blank\" href=\"%{link_privacy}\">隐私政策</a>。\n",
+              "invalid_email": "电子邮件地址无效",
+              "label_additional_features": "附加功能",
+              "label_company": "公司",
+              "label_domain": "域",
+              "label_expires_at": "到期时间",
+              "label_first_name": "名字",
+              "label_last_name": "姓氏",
+              "label_maximum_users": "最大活动用户数",
+              "label_plan": "计划",
+              "label_starts_at": "开始时间：",
+              "label_subscriber": "订阅者",
+              "receive_newsletter": "我想要接收 OpenProject <a target=\"_blank\" href=\"%{link}\">简报</a>。",
+              "taken_domain": "每个域名只能有一个活动的试用。",
+              "taken_email": "每个用户只能创建一个试用。"
+            },
+            "next_steps": "后续步骤",
+            "quick_overview": "用 OpenProject 企业版，快速了解项目管理和团队协作的概况。",
+            "resend_link": "重新发送",
+            "resend_success": "已重新发送电子邮件。请查看您的电子邮件并点击提供的确认链接。",
+            "resend_warning": "无法重新发送电子邮件。",
+            "session_timeout": "您的会话超时。请尝试重新加载该页面或重新发送电子邮件。",
+            "status_confirmed": "已确认",
+            "status_label": "状态：",
+            "status_waiting": "电子邮件已发送 - 等待确认",
+            "test_ee": "免费体验企业版 14 天",
+            "try_another_email": "或者尝试使用另一个电子邮件地址。"
+          },
+          "upsell": {
+            "become_hero": "成为英雄！",
+            "benefits": {
+              "description": "本地部署的 Enterprise edition 具有哪些优势？",
+              "high_security": "安全功能",
+              "high_security_text": "单点登录（SAML，OpenID Connect，CAS），LDAP 组。\n\n\n\n",
+              "installation": "安装支持",
+              "installation_text": "经验丰富的软件工程师将指导您在自己的基础设施中完成整个安装和设置过程。",
+              "premium_features": "企业版附加组件",
+              "premium_features_text": "敏捷面板，自定义主题和徽标，图表，包含自定义操作的智能工作流，全文搜索工作包附件和多选自定义字段。",
+              "professional_support": "专业支持",
+              "professional_support_text": "从高级支持工程师那里获得可靠的个性化支持，这些工程师拥有在业务关键型环境中运行 OpenProject 的专业知识。"
+            },
+            "button_book_now": "立即预订",
+            "button_contact_us": "联系我们获取演示",
+            "button_start_trial": "开始免费试用",
+            "button_upgrade": "立即升级",
+            "confidence": "我们秉承开源和开放心态，有信心提供经得起考验和充分支持的企业级项目管理软件。\n",
+            "enterprise_info_html": "%{feature_title} 是一个企业版<span class='spot-icon spot-icon_inline spot-icon_enterprise-addons'></span>的附加功能。",
+            "link_quote": "获取报价",
+            "more_info": "更多信息",
+            "text": "OpenProject 企业版是在社区版的基础上构建的。它包括企业版插件和专业支持，主要面向使用 OpenProject 管理业务关键项目的具有 10 个以上用户的组织。\n",
+            "unlimited": "不受限制",
+            "upgrade_info": "请升级到付费方案，以激活并开始在您的团队中使用该功能。",
+            "you_contribute": "开发者在本项目中付出了大量努力。通过升级到企业版，您将支持此项开源社区工作，并为其开发、维护和持续改进做出贡献。"
+          }
+        },
+        "type_form": {
+          "add_group": "增加属性组",
+          "add_table": "添加相关工作包表",
+          "custom_field": "自定义字段",
+          "drag_to_activate": "从此处拖动字段将其激活",
+          "edit_query": "编辑查询",
+          "inactive": "非活动",
+          "new_group": "新建组",
+          "reset_to_defaults": "重置为默认值"
+        },
+        "work_packages_settings": {
+          "warning_progress_calculation_mode_change_from_field_to_status_html": "将进度计算模式从基于工时的方式改为基于状态，将会导致所有现有的 <i>%完整的</i> 值丢失，并被与每个状态相关的值所替代。 <i>剩余工时</i> 的现有值也可能被重新计算，以反映这种变化。此操作不可逆转。",
+          "warning_progress_calculation_mode_change_from_status_to_field_html": "将进度计算模式从基于状态改为基于工时，将使<i>完成 %</i>字段可自由编辑。如果您选择输入<i>工时</i>或<i>剩余工时</i>的值，它们也将与<i>完成 %</i>相关联。更改<i>剩余工时</i>就可以更新<i>完成 %</i>。"
+        },
+        "working_days": {
+          "add_non_working_day": "非工作日",
+          "already_added_error": "该日期已存在非工作日。每个唯一日期只能创建一个非工作日。",
+          "calendar": {
+            "empty_state_description": "没有为今年定义特定的非工作日。请点击下方的“+ 非工作日”添加一个日期。",
+            "empty_state_header": "非工作日",
+            "new_date": "(新)"
+          },
+          "change_button": "保存并重新安排",
+          "change_description": "在这种情况下，更改一周中哪几天被视为工作日或非工作日会影响所有项目中所有工作包和生命周期的开始和结束日期。",
+          "change_title": "更改工作日",
+          "removed_title": "您将从非工作日列表中删除以下日期：",
+          "warning": "更改可能需要一些时间才能生效。所有相关工作包和项目生命周期更新后，您将收到通知。 您确定要继续吗？\n"
+        }
+      },
+      "ajax": {
+        "hide": "隐藏",
+        "loading": "正在加载…",
+        "updating": "正在更新…"
+      },
+      "attachments": {
+        "delete": "删除附件",
+        "delete_confirmation": "确定要删除此规则吗？此操作无法撤消。\n",
+        "draggable_hint": "将图片或附件拖到编辑区内即可添加。鼠标在关闭的编辑区上停留将打开这个编辑区。\n",
+        "quarantined_hint": "该文件由于发现了病毒已被隔离。该文件不可下载。"
+      },
+      "autocomplete_ng_select": {
+        "add_tag": "添加项目",
+        "clear_all": "全部清除",
+        "loading": "加载中...",
+        "not_found": "未找到项目",
+        "type_to_search": "键入内容进行搜索"
+      },
+      "autocomplete_select": {
+        "active": "活跃的%{label} %{name}",
+        "placeholder": {
+          "multi": "添加“%{name}”",
+          "single": "选择“%{name}”"
+        },
+        "remove": "删除%{name}"
+      },
+      "autocompleter": {
+        "notFoundText": "没有找到条目",
+        "placeholder": "键入内容进行搜索",
+        "project": {
+          "placeholder": "选择项目"
+        }
+      },
+      "avatars": {
+        "empty_file_error": "请上传一个有效的图像 (jpg, png, gif)",
+        "error_image_too_large": "图像太大。",
+        "label_choose_avatar": "从文件中选择头像",
+        "text_upload_instructions": "上传您的自定义头像，大小为128像素 × 128像素。较大的文件将被调整大小和裁剪以匹配要求。\n一旦您选择了图像，在上传之前将显示头像的预览。\n",
+        "uploading_avatar": "上传您的头像。",
+        "wrong_file_format": "允许的格式是 jpg、png、gif"
+      },
+      "backup": {
+        "attachments_disabled": "可能无法包含附件，因为超过了最大文件限制。您可以配置修改限制（需要重新启动服务器）。",
+        "download_backup": "下载备份",
+        "include_attachments": "包含附件",
+        "info": "您可以在此处触发备份。该过程可能需要一些时间，具体取决于您的数据量（尤其是附件）。准备就绪后，您将收到一封电子邮件。\n",
+        "last_backup": "上次备份",
+        "last_backup_from": "上次备份自",
+        "note": "新备份将覆盖任何之前的备份。每天只能请求有限次数的备份。\n",
+        "options": "选项",
+        "request_backup": "请求备份",
+        "title": "备份 OpenProject"
+      },
+      "baseline": {
+        "apply": "应用",
+        "clear": "清除",
+        "drop_down": {
+          "a_specific_date": "特定日期",
+          "between_two_specific_dates": "两个具体日期之间",
+          "last_month": "上个月",
+          "last_week": "上周",
+          "last_working_day": "最后一个工作日",
+          "none": "-",
+          "yesterday": "昨天"
+        },
+        "from": "从",
+        "header_description": "高亮显示过去对该清单所作的修改。",
+        "help_description": "基准参考时区。",
+        "icon_tooltip": {
+          "added": "在比较时间段内添加到视图",
+          "changed": "保留修改",
+          "removed": "在比较时间段内从视图删除"
+        },
+        "legends": {
+          "changes_between": "此范围内的更改：",
+          "changes_since": "更改自",
+          "in_your_timezone": "在您的本地时区：",
+          "maintained_with_changes": "保持更改",
+          "no_longer_meets_filter_criteria": "不再符合过滤条件",
+          "now_meets_filter_criteria": "现在符合过滤条件"
+        },
+        "show_changes_since": "显示更改自",
+        "time": "时间",
+        "time_description": "在您的本地时间: %{datetime}",
+        "to": "到",
+        "toggle_title": "基线"
+      },
+      "bcf": {
+        "add_viewpoint": "添加视点",
+        "delete_viewpoint": "删除视点",
+        "export": "导出",
+        "export_bcf_xml_file": "导出 BCF XML 文件（BCF 版本 2.1）",
+        "import": "导入",
+        "import_bcf_xml_file": "导入 BCF XML 文件（BCF 版本 2.1）",
+        "label_bcf": "BCF",
+        "management": "BCF 管理",
+        "refresh": "刷新",
+        "refresh_work_package": "刷新工作包",
+        "show_viewpoint": "显示视点",
+        "viewpoint": "视点"
+      },
+      "boards": {
+        "add_card": "添加卡片",
+        "add_list": "将列表添加到面板",
+        "add_list_modal": {
+          "labels": {
+            "assignee": "选择要添加到新受理人列表的用户",
+            "status": "选择要添加到新列表的状态",
+            "subproject": "选择要添加到新列表的子项目",
+            "subtasks": "选择要添加到新列表的工作包",
+            "version": "选择要添加到新列表的版本"
+          },
+          "warning": {
+            "add_members": "<a href=\"%{link}\">向此项目添加一个新成员</a>以重新选择用户。",
+            "assignee": "没有任何成员与您的筛选值匹配。<br>",
+            "no_member": "此项目目前没有可以添加的成员。  <br>",
+            "status": "目前没有可用的状态。<br>\n可能没有问题，或者它们已被全部添加到问题板中。\n"
+          }
+        },
+        "board_type": {
+          "action": "操作面板",
+          "action_by_attribute": "操作面板 (%{attribute})",
+          "action_text": "一个在 %{attribute} 属性上具有筛选列表的面板。将工作包移动到其他列表会更新其属性。\n",
+          "action_text_assignee": "基于分配给用户的自动列看板，是分派工作包非常理想的工具。\n",
+          "action_text_status": "基本看板样式的面板，包含“待办”、“正在进行”、“已完成”等状态的列。\n",
+          "action_text_subprojects": "具有子项目自动列的面板。将工作包拖动到其他列表会相应地更新（子）项目。\n",
+          "action_text_subtasks": "具有子元素自动列的面板。将工作包拖动到其他列表会相应地更新父项。\n",
+          "action_text_version": "基于版本属性的自动列面板。用于产品开发规划。\n",
+          "action_type": {
+            "assignee": "受理人",
+            "status": "状态",
+            "subproject": "子项目",
+            "subtasks": "父子",
+            "version": "版本"
+          },
+          "board_type_title": {
+            "assignee": "受理人",
+            "basic": "基础",
+            "status": "状态",
+            "subproject": "子项目",
+            "subtasks": "父子",
+            "version": "版本"
+          },
+          "free": "基本",
+          "free_text": "从头开始使用空白面板，将卡片和列手动添加到此面板。\n",
+          "select_attribute": "操作属性",
+          "select_board_type": "请选择您需要的面板类型。",
+          "text": "面板类型"
+        },
+        "click_to_remove_list": "点击以移除此列表",
+        "configuration_modal": {
+          "display_settings": {
+            "card_mode": "显示为卡片",
+            "table_mode": "显示为表"
+          },
+          "title": "配置此面板"
+        },
+        "create_new": "创建新面板",
+        "error_attribute_not_writable": "无法移动工作包，%{attribute} 不可写。",
+        "error_cannot_move_into_self": "您不能将工作包移动到其自己的列中。",
+        "error_loading_the_list": "加载列表时出错：%{error_message}",
+        "error_permission_missing": "缺少创建公共查询的权限",
+        "label_board_type": "面板类型",
+        "label_unnamed_board": "未命名面板",
+        "label_unnamed_list": "未命名列表",
+        "lists": {
+          "delete": "删除列表"
+        },
+        "new_board": "新建面板",
+        "text_hidden_list_warning": "并未显示所有列表，因为您缺少权限。有关详细信息，请联系您的管理员。",
+        "version": {
+          "close_version": "关闭版本",
+          "closed": "已关闭",
+          "edit_version": "编辑版本",
+          "is_closed": "版本已关闭。无法向此版本添加项目。",
+          "is_locked": "版本已锁定。无法向此版本添加项目。",
+          "lock_version": "锁定版本",
+          "locked": "锁定",
+          "open_version": "打开版本",
+          "show_version": "显示版本",
+          "unlock_version": "解锁版本"
+        }
+      },
+      "button_add": "添加",
+      "button_add_watcher": "添加关注者",
+      "button_advanced_filter": "高级筛选",
+      "button_back": "返回",
+      "button_back_to_list_view": "返回列表视图",
+      "button_cancel": "取消",
+      "button_change_project": "移动到另一个项目",
+      "button_check_all": "全选",
+      "button_close": "关闭",
+      "button_close_details": "关闭详情视图",
+      "button_collapse_all": "全部折叠",
+      "button_configure-form": "配置表单",
+      "button_confirm": "确认",
+      "button_continue": "继续",
+      "button_copy": "复制",
+      "button_copy_link_to_clipboard": "将链接复制到剪贴板",
+      "button_copy_to_clipboard": "复制到剪贴板",
+      "button_copy_to_other_project": "复制到其他项目",
+      "button_create": "创建",
+      "button_custom-fields": "自定义字段",
+      "button_delete": "删除",
+      "button_delete_watcher": "删除关注者",
+      "button_details_view": "详细信息视图",
+      "button_duplicate": "复制",
+      "button_edit": "编辑",
+      "button_expand_all": "全部展开",
+      "button_export-atom": "下载 Atom",
+      "button_filter": "筛选器",
+      "button_generate_pdf": "生成 PDF",
+      "button_list_view": "列表视图",
+      "button_log_costs": "记录单位成本",
+      "button_log_time": "记录时间",
+      "button_more": "更多",
+      "button_more_actions": "更多操作",
+      "button_open_details": "打开详情视图",
+      "button_open_fullscreen": "打开全屏视图",
+      "button_quote": "引用",
+      "button_save": "保存",
+      "button_settings": "设置",
+      "button_show_cards": "显示卡片视图",
+      "button_show_fullscreen": "显示全屏视图",
+      "button_show_gantt": "显示甘特图",
+      "button_show_list": "显示列表视图",
+      "button_show_table": "显示表视图",
+      "button_show_view": "全屏视图",
+      "button_uncheck_all": "全部不选",
+      "button_update": "更新",
+      "calendar": {
+        "create_new": "创建新日历",
+        "title": "日历",
+        "too_many": "总共有 %{count} 个工作包，但只能显示 %{max} 个。",
+        "unsaved_title": "未命名日历"
+      },
+      "caption_rate_history": "费率历史记录",
+      "card": {
+        "add_new": "添加新卡",
+        "highlighting": {
+          "entire_card_by": "整个卡",
+          "inline": "突出显示内联："
+        },
+        "remove_from_list": "从列表中移除卡"
+      },
+      "chart": {
+        "axis_criteria": "轴条件",
+        "errors": {
+          "could_not_load": "无法加载用于显示图表的数据。可能缺少必要的权限。"
+        },
+        "modal_title": "工作包图配置",
+        "tabs": {
+          "dataset": "数据集 %{number}",
+          "graph_settings": "通用"
+        },
+        "type": "图表类型",
+        "types": {
+          "bar": "条形图",
+          "doughnut": "圆环图",
+          "horizontal_bar": "水平条形图",
+          "line": "线图",
+          "pie": "饼图",
+          "polar_area": "极地区域图",
+          "radar": "雷达图"
+        }
+      },
+      "clipboard": {
+        "browser_error": "您的浏览器不支持复制到剪贴板，请手动复制：%{content}",
+        "copied_successful": "成功复制到剪贴板！"
+      },
+      "close_filter_title": "关闭过滤器",
+      "close_form_title": "关闭表单",
+      "close_popup_title": "关闭弹出窗口",
+      "custom_actions": {
+        "date": {
+          "current_date": "当前日期",
+          "specific": "于"
+        }
+      },
+      "dashboards": {
+        "label": "仪表板"
+      },
+      "description_available_columns": "可用的列",
+      "description_current_position": "您现在的位置：",
+      "description_select_work_package": "选择工作包 #%{id}",
+      "description_subwork_package": "子工作包 #%{id}",
+      "editor": {
+        "ckeditor_error": "CKEditor 发生错误",
+        "error_saving_failed": "保存文档失败，出现以下错误：%{error}",
+        "macro": {
+          "attribute_reference": {
+            "invalid_attribute": "所选属性 '%{name}' 不存在。",
+            "macro_help_tooltip": "此文本段正由宏动态呈现。",
+            "nested_macro": "该宏递归引用 %{model} %{id}。",
+            "not_found": "无法找到请求的资源"
+          },
+          "child_pages": {
+            "button": "链接至子页面",
+            "hint": "将此字段留空可列出当前页面的所有子页面。如果您想引用不同的页面，请提供其标题或标识符。\n",
+            "include_parent": "包括上级",
+            "page": "维基页面",
+            "text": "[Placeholder] 子页面链接",
+            "this_page": "本页"
+          },
+          "code_block": {
+            "button": "插入代码片段",
+            "language": "格式化语言",
+            "language_hint": "输入将用于突出显示（如果支持）的格式化语言。",
+            "title": "插入/编辑代码片段"
+          },
+          "dropdown": {
+            "chose_macro": "选择宏",
+            "macros": "宏"
+          },
+          "embedded_calendar": {
+            "text": "[Placeholder]嵌入式日历"
+          },
+          "embedded_table": {
+            "button": "嵌入工作包表",
+            "text": "[Placeholder] 嵌入式工作包表"
+          },
+          "error": "无法展开宏：%{message}",
+          "toc": "目录",
+          "toolbar_help": "单击可以选择微件并显示工具栏。双击可以编辑微件",
+          "wiki_page_include": {
+            "button": "包括另一个维基页面的内容",
+            "hint": "通过指定其标题或简短链接来包含其他维基页面的内容。\n您可以通过使用冒号分隔另一个项目的维基页面，如下例所示。\n",
+            "not_set": "（页面未设置）",
+            "page": "维基页面",
+            "text": "[Placeholder] 包含的维基页面"
+          },
+          "work_package_button": {
+            "button": "插入创建工作包按钮",
+            "button_style": "使用按键风格",
+            "button_style_hint": "可选：选中以使宏显示为按钮，而不是链接。",
+            "type": "工作包类型",
+            "with_type": "创建工作包（类型：%{typename}）",
+            "without_type": "创建工作包"
+          }
+        },
+        "mode": {
+          "manual": "切换到 Markdown ",
+          "wysiwyg": "切换到 WYSIWYG 编辑器"
+        },
+        "no_revisions": "未找到本地修改",
+        "preview": "切换预览模式",
+        "revisions": "显示本地修改",
+        "source_code": "切换 Markdown 模式"
+      },
+      "enumeration_activities": "活动 （时间跟踪）",
+      "enumeration_doc_categories": "文档类别",
+      "enumeration_work_package_priorities": "工作包优先级",
+      "error": {
+        "cannot_save_changes_with_message": "由于%{error} 原因，无法保存您的更改。",
+        "embedded_table_loading": "无法加载嵌入式视图：%{message}",
+        "internal": "发生了内部错误。",
+        "query_saving": "无法保存此视图。"
+      },
+      "error_attachment_upload": "文件上传失败: %{error}",
+      "error_attachment_upload_permission": "您没有上传文件到此资源的权限。",
+      "error_could_not_resolve_user_name": "不能确定用户名",
+      "error_could_not_resolve_version_name": "无法解析版本名称",
+      "exclusion_info": {
+        "modal": {
+          "content": "状态 \"%{status_name}\"已被配置为排除在 \"工时\"、\"剩余工时 \"和 \"完成百分比 \"的层次结构总计中。总计不考虑该值。",
+          "title": "从层次结构总计中排除的状态"
+        }
+      },
+      "favorite_projects": {
+        "no_results": "您没有收藏的项目",
+        "no_results_subtext": "通过项目概览或项目列表添加一个或多个项目作为收藏夹。"
+      },
+      "field_value_enter_prompt": "为'%{field}'输入值",
+      "filter": {
+        "description": {
+          "text_close_filter": "要选择一个条目，请离开焦点，例如可以按 Enter。要在不使用筛选器的情况下离开，请选择第一个（空）条目。",
+          "text_open_filter": "使用 ALT 和方向键打开筛选器。"
+        },
+        "more_values_not_shown": "还有 %{total} 条结果，搜索以筛选结果。",
+        "noneElement": "(无)",
+        "sorting": {
+          "criteria": {
+            "one": "第一个排序条件",
+            "three": "第三个排序条件",
+            "two": "第二个排序条件"
+          }
+        },
+        "time_zone_converted": {
+          "only_end": "至您的当地时间 %{to} 结束。",
+          "only_start": "从您的当地时间 %{from} 开始。",
+          "two_values": "%{from} - %{to}（以您的当地时间为基准）。"
+        },
+        "value_spacer": "-"
+      },
+      "forms": {
+        "advanced_settings": "高级设置",
+        "load_error_message": "加载表单时出错",
+        "submit_success_message": "表单已成功提交",
+        "validation_error_message": "请修正表单中存在的错误"
+      },
+      "gantt_chart": {
+        "button_activate": "显示甘特图",
+        "button_deactivate": "隐藏甘特图",
+        "filter": {
+          "noneSelection": "（无）"
+        },
+        "label": "甘特图",
+        "labels": {
+          "bar": "条形标签",
+          "description": "选择要始终在甘特图的相应位置显示的属性。请注意，将鼠标悬停在元素上时会显示其日期标签，而不是这些属性。\n",
+          "farRight": "最右",
+          "left": "左",
+          "right": "右",
+          "title": "标签配置"
+        },
+        "quarter_label": "第 %{quarter_number} 季度",
+        "selection_mode": {
+          "notification": "点击任何高亮显示的工作包以创建关系。按 Escape 键可以取消。"
+        },
+        "zoom": {
+          "auto": "自动缩放",
+          "days": "天",
+          "description": "选择自动缩放不可用时应显示的初始缩放级别。\n",
+          "in": "放大",
+          "months": "月",
+          "out": "缩小",
+          "quarters": "季度",
+          "weeks": "周",
+          "years": "年"
+        }
+      },
+      "general_text_No": "否",
+      "general_text_Yes": "是",
+      "general_text_no": "否",
+      "general_text_yes": "是",
+      "github_integration": {
+        "github_actions": "操作",
+        "pull_requests": {
+          "merged_message": "%{repository_link} 的拉取请求 #%{pr_number} %{pr_link} 已被%{github_user_link} %{pr_state}。",
+          "message": "由 %{github_user_link} 创作的 %{repository_link} 的拉取请求 #%{pr_number} %{pr_link} 已被%{pr_state}。",
+          "referenced_message": "由 %{github_user_link} 创作的 %{repository_link} 的拉取请求 #%{pr_number} %{pr_link} 引用了此工作包。",
+          "states": {
+            "closed": "关闭",
+            "draft": "草稿",
+            "merged": "已合并",
+            "opened": "已打开",
+            "ready_for_review": "标记为可供审核"
+          }
+        },
+        "tab_header": {
+          "copy_menu": {
+            "description": "将 Git 代码段复制到剪贴板",
+            "label": "Git 代码段"
+          },
+          "git_actions": {
+            "branch_name": "分支名称",
+            "cmd": "使用空提交创建分支",
+            "commit_message": "提交消息",
+            "copy_error": "❌ 复制失败！",
+            "copy_success": "✅ 已复制！",
+            "title": "Git 快速代码段"
+          },
+          "title": "拉取请求"
+        },
+        "tab_prs": {
+          "empty": "尚未链接任何拉取请求。请使用拉取请求描述中的代码 <code>OP#%{wp_id}</code> 链接现有拉取请求，或者创建新的拉取请求。"
+        },
+        "work_packages": {
+          "tab_name": "GitHub"
+        }
+      },
+      "gitlab_integration": {
+        "gitlab_pipelines": "管道",
+        "tab_header_issue": {
+          "title": "问题"
+        },
+        "tab_header_mr": {
+          "copy_menu": {
+            "description": "将 Git 代码段复制到剪贴板",
+            "label": "Git 代码段"
+          },
+          "create_mr": {
+            "description": "创建合并请求",
+            "label": "创建合并请求"
+          },
+          "git_actions": {
+            "branch_name": "分支名称",
+            "cmd": "使用空提交创建分支",
+            "commit_message": "提交消息",
+            "copy_error": "❌ 复制失败！",
+            "copy_success": "✅ 已复制！",
+            "title": "Git 快速代码段"
+          },
+          "title": "合并请求"
+        },
+        "tab_issue": {
+          "empty": "尚未链接任何问题。请在问题标题/描述中使用代码 <code>OP#%{wp_id}</code>（对于不公开链接，使用代码 <code>PP#%{wp_id}</code>）链接现有问题，或者创建新问题。"
+        },
+        "tab_mrs": {
+          "empty": "尚未链接任何合并请求。请在合并请求标题/描述中使用代码 <code>OP#%{wp_id}</code>（对于不公开链接，使用代码 <code>PP#%{wp_id}</code>）链接现有合并请求，或者创建新的合并请求。"
+        },
+        "updated_on": "更新时间",
+        "work_packages": {
+          "tab_name": "GitLab"
+        }
+      },
+      "global_search": {
+        "all_projects": "在所有项目中",
+        "close_search": "关闭搜索",
+        "current_project": "在当前项目中",
+        "current_project_and_all_descendants": "在当前项目和子项目中",
+        "recently_viewed": "最近浏览",
+        "search": "搜索",
+        "title": {
+          "all_projects": "所有项目",
+          "project_and_subprojects": "和所有子项目",
+          "search_for": "搜索"
+        }
+      },
+      "grid": {
+        "add_widget": "添加微件",
+        "configure": "配置微件",
+        "remove": "移除微件",
+        "widgets": {
+          "custom_text": {
+            "title": "自定义文本"
+          },
+          "documents": {
+            "no_results": "没有文档。",
+            "title": "文档"
+          },
+          "members": {
+            "add": "成员",
+            "no_results": "无可见成员。",
+            "title": "成员",
+            "too_many": "正在显示 %{count} 个成员，总共 %{total} 个。",
+            "view_all_members": "查看所有成员"
+          },
+          "missing_permission": "您没有查看此微件所需的权限。",
+          "news": {
+            "at": "位置：",
+            "no_results": "没有新消息报告。",
+            "title": "新闻"
+          },
+          "project_description": {
+            "no_results": "尚未写入任何描述。可以在“项目设置”中提供一个描述。",
+            "title": "项目描述"
+          },
+          "project_favorites": {
+            "no_results": "您目前没有收藏项目，单击项目仪表板中的星形图标将项目添加到收藏夹。",
+            "title": "收藏的项目"
+          },
+          "project_status": {
+            "at_risk": "有风险",
+            "discontinued": "已中断",
+            "finished": "已完成",
+            "not_set": "未设置",
+            "not_started": "未开始",
+            "off_track": "偏离计划",
+            "on_track": "按计划进行",
+            "title": "项目状态"
+          },
+          "subprojects": {
+            "no_results": "无子项目。",
+            "title": "子项目"
+          },
+          "time_entries_current_user": {
+            "displayed_days": "微件中显示的天数：",
+            "title": "我花费的时间"
+          },
+          "time_entries_list": {
+            "no_results": "过去7天没有时间记录。",
+            "title": "花费时间 (最近 7天)"
+          },
+          "work_packages_accountable": {
+            "title": "我负责的工作包"
+          },
+          "work_packages_assigned": {
+            "title": "分配给我的工作包"
+          },
+          "work_packages_calendar": {
+            "title": "日历"
+          },
+          "work_packages_created": {
+            "title": "我创建的工作包"
+          },
+          "work_packages_graph": {
+            "title": "工作包图"
+          },
+          "work_packages_overview": {
+            "placeholder": "点击以编辑…",
+            "title": "工作包概览"
+          },
+          "work_packages_table": {
+            "title": "工作包表"
+          },
+          "work_packages_watched": {
+            "title": "我关注的工作包"
+          }
+        }
+      },
+      "hal": {
+        "error": {
+          "edit_prohibited": "已阻止对此工作包编辑 %{attribute}。此属性来自于关系继承(如子项目)或其他无法配置的来源。",
+          "format": {
+            "date": "%{attribute} 不是有效日期 - 需要 YYYY-MM-DD。"
+          },
+          "general": "发生错误。",
+          "update_conflict_refresh": "点击此处刷新资源并更新到最新版本。"
+        }
+      },
+      "help_texts": {
+        "show_modal": "显示帮助文本"
+      },
+      "homescreen": {
+        "blocks": {
+          "new_features": {
+            "16_1": {
+              "standard": {
+                "new_features_html": "该版本包含各种新功能和改进，例如<br><ul class=\"%{list_styling_class}\"><li>使用阶段和阶段关口构建项目生命周期。</li><li>以 PDF 格式导出会议。</li><li>为提醒设置智能默认选项。</li><li>对工作包日期使用负滞后。</li><li>为层次结构自定义字段显示结构树。</li><li>受益于 ARIA 实时区域日期选择器的无障碍功能改进。</li> </ul>\n"
+              }
+            },
+            "learn_about": "详细了解所有新功能",
+            "text_new_features": "了解新功能和产品更新。"
+          }
+        }
+      },
+      "ical_sharing_modal": {
+        "copy_url_label": "复制链接",
+        "description": "您可以使用 URL (iCalendar) 在外部客户端中订阅此日历，并从外部客户端查看最新工作包信息。",
+        "ical_generation_error_text": "生成日历 URL 时出错。",
+        "inital_setup_error_message": "获取数据时发生错误。",
+        "success_message": "URL“%{name}”已成功复制到剪贴板。请将其粘贴到日历客户端中以完成订阅。",
+        "title": "订阅日历",
+        "token_name_description_text": "如果您从多个设备订阅此日历，此名称将有助于在<a href=\"my/access_token\", target=\"_blank\">访问令牌</a>列表中区分它们。",
+        "token_name_label": "您将在哪里使用它？",
+        "token_name_placeholder": "输入名称，例如“Phone”",
+        "warning": "请不要与其他用户共享此 URL 。拥有这个链接的任何人都可以在没有帐户或密码的情况下查看工作包的详细信息。"
+      },
+      "ifc_models": {
+        "empty_warning": "此项目还没有任何 IFC 模型。",
+        "keyboard_input_disabled": "查看器没有键盘控件。点击该查看器可以使其控制键盘。",
+        "models": {
+          "ifc_models": "IFC 模型"
+        },
+        "use_this_link_to_manage": "使用此链接上传和管理您的 IFC 模型",
+        "views": {
+          "split": "查看器和表",
+          "split_cards": "查看器和卡片",
+          "viewer": "查看器"
+        }
+      },
+      "include_projects": {
+        "apply": "应用",
+        "clear_selection": "清除选择",
+        "include_subprojects": "包含所有子项目",
+        "no_results": "没有项目符合您的搜索条件。",
+        "search_placeholder": "搜索项目…",
+        "selected_filter": {
+          "all": "所有项目",
+          "selected": "仅限所选"
+        },
+        "title": "项目",
+        "toggle_title": "包含项目",
+        "tooltip": {
+          "current_project": "这是您当前所在的项目。",
+          "does_not_match_search": "项目不符合搜索条件。",
+          "include_all_selected": "自启用“包含所有子项目”后已包含的项目。"
+        }
+      },
+      "inplace": {
+        "btn_preview_disable": "禁用预览",
+        "btn_preview_enable": "预览",
+        "button_cancel": "%{attribute}: 取消",
+        "button_cancel_all": "取消",
+        "button_edit": "%{attribute}: 编辑",
+        "button_save": "%{attribute}: 保存",
+        "button_save_all": "保存",
+        "clear_value_label": "-",
+        "errors": {
+          "maxlength": "%{field} 不能超过 %{maxLength} 位数",
+          "messages_on_field": "此字段无效：%{messages}",
+          "minlength": "%{field} 不能少于 %{minLength} 位数",
+          "number": "%{field} 不是一个有效的数字",
+          "required": "%{field} 不能为空"
+        },
+        "link_formatting_help": "文本格式帮助",
+        "null_value_label": "无值"
+      },
+      "invite_user_modal": {
+        "back": "返回",
+        "invite": "邀请",
+        "message": {
+          "description": "我们将向用户发送一封电子邮件，您可以在此处添加要向其发送的个人消息。提供邀请说明可能会很有用，您也可以添加一些有关该项目的信息以帮助他们开始。",
+          "label": "邀请消息",
+          "next_button": "下一个"
+        },
+        "principal": {
+          "already_member_message": "已经是 %{project} 的成员",
+          "create_new_placeholder": "创建新的占位符：",
+          "invite_user": "邀请：",
+          "label": {
+            "name": "名称",
+            "name_or_email": "用户名或电子邮件地址"
+          },
+          "next_button": "下一个",
+          "no_results_group": "没有找到组",
+          "no_results_placeholder": "没有找到占位符",
+          "no_results_user": "没有找到用户",
+          "required": {
+            "group": "请选择一个组",
+            "placeholder": "请选择一个占位符",
+            "user": "请选择一个用户"
+          }
+        },
+        "project": {
+          "label": "项目",
+          "lacking_permission": "请选择其他项目，因为您缺少将用户分配至当前所选项目的权限。",
+          "lacking_permission_info": "您缺少将用户分配至您当前所在项目的权限。您需要选择其他项目。",
+          "next_button": "下一个",
+          "no_invite_rights": "您无权邀请成员加入此项目",
+          "no_results": "没有找到项目",
+          "required": "请选择一个项目"
+        },
+        "role": {
+          "description": "这是用户在加入您的项目时将获得的角色。角色定义了允许其执行哪些操作以及允许其查看哪些信息。<a href=\"https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions\" target=\"_blank\">详细了解角色和权限</a>。",
+          "label": "%{project} 中的角色",
+          "next_button": "下一个",
+          "no_roles_found": "没有找到角色",
+          "required": "请选择一个角色"
+        },
+        "success": {
+          "description": {
+            "group": "该组现已加入 %{project}。同时，您已经可以与该组一起制定计划并分配工作包等。",
+            "placeholder": "现在可以在 %{project} 中使用占位符。同时，您已经可以与该用户一起制定计划并分配工作包等。",
+            "user": "该用户现在可以登录以访问 %{project}。同时，您已经可以与该用户一起制定计划并分配工作包等。"
+          },
+          "next_button": "继续",
+          "title": "%{principal} 已被邀请！"
+        },
+        "summary": {
+          "next_button": "发送邀请"
+        },
+        "title": {
+          "Group": "组",
+          "PlaceholderUser": "占位符用户",
+          "User": "用户",
+          "invite": "邀请用户",
+          "invite_principal_to_project": "邀请 %{principal} 加入 %{project}",
+          "invite_to_project": "邀请%{type}加入 %{project}"
+        },
+        "type": {
+          "group": {
+            "description": "基于所选项目中所分配角色的权限",
+            "title": "组"
+          },
+          "placeholder": {
+            "description": "无法访问该项目并且未发送电子邮件。",
+            "description_no_ee": "无法访问该项目并且未发送电子邮件。<br>请参见 <a href=\"%{eeHref}\" target=\"_blank\">Enterprise edition</a>",
+            "title": "占位符用户",
+            "title_no_ee": "占位符用户（Enterprise edition 特定功能）"
+          },
+          "required": "请选择要邀请的类型",
+          "user": {
+            "description": "基于所选项目中所分配角色的权限",
+            "title": "用户"
+          }
+        }
+      },
+      "label_activate": "激活",
+      "label_activity_show_all": "显示所有项目",
+      "label_activity_show_only_comments": "仅显示批注的活动",
+      "label_add_attachments": "添加文件",
+      "label_add_column_after": "之后添加列",
+      "label_add_column_before": "在之前添加列",
+      "label_add_columns": "添加列",
+      "label_add_comment": "添加评论",
+      "label_add_comment_title": "写下评论并输入@ 以通知其他人",
+      "label_add_description": "为%{file} 添加说明",
+      "label_add_row_after": "之后添加行",
+      "label_add_row_before": "之前添加行",
+      "label_add_selected_columns": "添加所选的列",
+      "label_added_by": "添加自",
+      "label_added_time_by": "由 <a href=%{authorLink}>%{author}</a> 在 %{age} 添加",
+      "label_ago": "天前",
+      "label_all": "所有",
+      "label_all_uppercase": "全部",
+      "label_all_work_packages": "所有工作包",
+      "label_and": "和",
+      "label_ascending": "升序",
+      "label_assignee": "指定",
+      "label_attachments": "附件",
+      "label_author": "作者: %{user}",
+      "label_avatar": "头像",
+      "label_between": "介于",
+      "label_board": "面板",
+      "label_board_locked": "锁定",
+      "label_board_plural": "看板",
+      "label_board_sticky": "置顶",
+      "label_cancel_comment": "取消注释",
+      "label_change": "更改",
+      "label_children_derived_duration": "工作包的子项派生持续时间",
+      "label_closed_work_packages": "关闭",
+      "label_collapse": "折叠",
+      "label_collapse_all": "全部折叠",
+      "label_collapsed": "折叠",
+      "label_columns": "列",
+      "label_comment": "评论",
+      "label_committed_at": "在 %{date} %{committed_revision_link}",
+      "label_committed_link": "上传的修订 %{revision_identifier}",
+      "label_contains": "包含",
+      "label_create": "创建",
+      "label_create_work_package": "创建新工作包",
+      "label_created_by": "创建自",
+      "label_created_on": "创建于",
+      "label_current": "当前",
+      "label_custom_queries": "不公开",
+      "label_date": "日期",
+      "label_date_with_format": "以%{format} 的格式输入 %{date_attribute}",
+      "label_deactivate": "停用",
+      "label_default_queries": "默认",
+      "label_descending": "降序",
+      "label_description": "描述",
+      "label_details": "详细信息",
+      "label_display": "显示",
+      "label_drop_files": "将文件拖拽到此处以附加文件。",
+      "label_drop_folders_hint": "您不能将文件夹作为附件上载。请选择单个文件。",
+      "label_drop_or_click_files": "将文件拖至此处，或点击附加文件。",
+      "label_edit_comment": "编辑此注释",
+      "label_edit_status": "编辑工作包的状态",
+      "label_email": "电子邮件",
+      "label_equals": "是",
+      "label_expand": "展开",
+      "label_expand_all": "全部展开",
+      "label_expand_project_menu": "展开项目菜单",
+      "label_expanded": "展开",
+      "label_export": "导出",
+      "label_export_preparing": "导出文件已开始准备并将很快被下载。",
+      "label_favorites": "收藏夹",
+      "label_filename": "文件",
+      "label_files_to_upload": "这些文件将被上传:",
+      "label_filesize": "大小",
+      "label_formattable_attachment_hint": "将文件拖拽到此区域或从剪贴板粘贴以附加文件",
+      "label_general": "通用",
+      "label_global_queries": "公开",
+      "label_greater_or_equal": ">=",
+      "label_group": "组",
+      "label_group_by": "分组按照",
+      "label_group_plural": "组",
+      "label_hide_attributes": "隐藏显示",
+      "label_hide_column": "隐藏列",
+      "label_hide_project_menu": "折叠项目菜单",
+      "label_hour": "小时",
+      "label_hours": "小时",
+      "label_import": "导入",
+      "label_in": "在",
+      "label_in_less_than": "在小于",
+      "label_in_more_than": "在多于",
+      "label_incoming_emails": "传入电子邮件",
+      "label_information_plural": "信息",
+      "label_invalid": "无效",
+      "label_last_updated_on": "最后更新于",
+      "label_latest_activity": "最新活动",
+      "label_learn_more_link": "了解更多信息",
+      "label_less_or_equal": "<=",
+      "label_less_than_ago": "小于数日前",
+      "label_loading": "正在加载...",
+      "label_mail_notification": "电子邮件通知",
+      "label_manage_columns": "管理和重新排序列",
+      "label_me": "我",
+      "label_meeting_agenda": "议程",
+      "label_meeting_minutes": "会议记录",
+      "label_meetings": "会议",
+      "label_menu_collapse": "折叠",
+      "label_menu_expand": "展开",
+      "label_moderate_comment": "审核评论",
+      "label_more_than_ago": "更多天前",
+      "label_next": "下一个",
+      "label_no_color": "无颜色",
+      "label_no_data": "没有要显示的数据",
+      "label_no_date": "无日期",
+      "label_no_due_date": "没有完成日期",
+      "label_no_start_date": "没有开始日期",
+      "label_no_value": "无值",
+      "label_none": "无",
+      "label_not_contains": "不包含",
+      "label_not_equals": "不是",
+      "label_on": "于",
+      "label_open_context_menu": "打开菜单目录",
+      "label_open_menu": "打开菜单",
+      "label_open_work_packages": "打开",
+      "label_password": "密码",
+      "label_per_page": "每页：",
+      "label_please_wait": "请稍等",
+      "label_press_enter_to_save": "按回车键可以保存。",
+      "label_preview": "预览",
+      "label_previous": "上一个",
+      "label_project": "项目",
+      "label_project_list": "项目列表",
+      "label_project_plural": "项目",
+      "label_public_query": "公开",
+      "label_quote_comment": "引用这个评论",
+      "label_recent": "最近",
+      "label_rejected_files": "这些文件无法上传:",
+      "label_rejected_files_reason": "这些文件不能上传，因为它们大于 %{maximumFilesize}",
+      "label_remove": "移除",
+      "label_remove_all_files": "删除所有文件",
+      "label_remove_column": "移除列",
+      "label_remove_columns": "移除选择的列",
+      "label_remove_file": "删除 %{fileName}",
+      "label_remove_row": "移除行",
+      "label_remove_watcher": "删除关注者 %{name}",
+      "label_report": "报告",
+      "label_repository_plural": "存储库",
+      "label_reset": "重置",
+      "label_save_as": "另存为",
+      "label_search_columns": "搜索列",
+      "label_select_project": "选择项目",
+      "label_select_watcher": "选择一个关注者...",
+      "label_selected_filter_list": "已选筛选器",
+      "label_show_attributes": "显示所有属性",
+      "label_show_in_menu": "在菜单中显示视图",
+      "label_sort_by": "排序按",
+      "label_sort_higher": "向上移动",
+      "label_sort_lower": "向下移动",
+      "label_sorted_by": "排序按",
+      "label_sorting": "排序",
+      "label_spent_time": "已耗工时",
+      "label_star_query": "收藏夹",
+      "label_starred_queries": "收藏夹",
+      "label_subject": "主题",
+      "label_sum": "总计",
+      "label_sum_for": "总和",
+      "label_this_week": "这一周",
+      "label_time_entry_plural": "已耗工时",
+      "label_today": "今天",
+      "label_total_amount": "总计: %{amount}",
+      "label_total_progress": "%{percent} %总进度",
+      "label_total_sum": "总和",
+      "label_unwatch": "取消关注",
+      "label_unwatch_work_package": "取消工作包关注",
+      "label_up": "向上",
+      "label_updated_on": "更新于",
+      "label_upload_counter": "%{count} 个中的 %{done} 个文件已完成",
+      "label_upload_notification": "正在上传文件…",
+      "label_uploaded_by": "上传者",
+      "label_user_plural": "用户",
+      "label_validation_error": "由于下列错误，无法保存工作包:",
+      "label_value_derived_from_children": "（来自子项的值）",
+      "label_version_plural": "版本",
+      "label_view_has_changed": "此视图有未保存的更改。单击以保存。",
+      "label_visibility_settings": "可见性设置",
+      "label_wait": "请等待配置...",
+      "label_warning": "警告",
+      "label_watch": "关注",
+      "label_watch_work_package": "关注工作包",
+      "label_watcher_added_successfully": "已成功添加关注者！",
+      "label_watcher_deleted_successfully": "已成功删除关注者！",
+      "label_work_package": "工作包",
+      "label_work_package_context_menu": "工作包上下文菜单",
+      "label_work_package_details_you_are_here": "您位于%{type}%{subject}的“%{tab}”选项卡上。",
+      "label_work_package_parent": "父工作包",
+      "label_work_package_plural": "工作包",
+      "label_work_package_upload_notification": "正在为 #%{id}: %{subject} 工作包上传文件",
+      "label_wp_id_added_by": "#%{id}，由 %{author} 添加",
+      "modals": {
+        "button_apply": "应用",
+        "button_cancel": "取消",
+        "button_delete": "删除",
+        "button_save": "保存",
+        "button_submit": "提交",
+        "destroy_time_entry": {
+          "text": "确定要删除以下时间条目？",
+          "title": "确认删除时间条目"
+        },
+        "destroy_work_package": {
+          "bulk_text": "确定要删除以下%{label}吗？",
+          "confirm_deletion_children": "我确认所列工作包的全部子工作包都将递归移除。",
+          "deletes_children": "所有子工作包及其子级也将递归删除。",
+          "has_children": "工作包有 %{childUnits}:",
+          "single_text": "确定要删除此工作包吗？",
+          "title": "确认删除%{label}"
+        },
+        "form_submit": {
+          "text": "是否确定想要执行此操作？",
+          "title": "确认已继续"
+        },
+        "label_delete_page": "删除当前页面",
+        "label_name": "名称"
+      },
+      "myTimeTracking": {
+        "noSpecificTime": "未指定时间"
+      },
+      "my_page": {
+        "label": "我的页面"
+      },
+      "notice_bad_request": "错误的请求。",
+      "notice_job_started": "作业已开始。",
+      "notice_no_results_to_display": "无可供显示的结果。",
+      "notice_successful_create": "成功创建。",
+      "notice_successful_delete": "成功删除。",
+      "notice_successful_update": "成功更新。",
+      "notifications": {
+        "center": {
+          "and_more_users": {
+            "other": "和 %{count} 个其他"
+          },
+          "empty_state": {
+            "no_notification": "看起来您已查看所有通知。",
+            "no_notification_for_filter": "看起来你已经处理完了这个筛选器的所有内容。",
+            "no_notification_with_current_filter": "看起来您已查看“%{filter}”筛选器的所有通知。",
+            "no_notification_with_current_project_filter": "看起来您已查看所选项目的所有通知。",
+            "no_selection": "点击通知可查看所有活动详细信息。"
+          },
+          "label_actor_and": "和",
+          "mark_all_read": "全部标记为已读",
+          "mark_all_read_confirmation": "将把此视图中的所有通知标记为已读。确定吗？",
+          "mark_as_read": "标记为已读",
+          "new_notifications": {
+            "link_text": "点击此处加载。",
+            "message": "有新的通知。"
+          },
+          "no_results": {
+            "at_all": "有与您有关的活动将在此处显示新的通知。",
+            "with_current_filter": "目前此视图中没有通知"
+          },
+          "text_update_date_by": "%{date}，",
+          "total_count_warning": "正在显示 %{newest_count} 条最新通知。还有 %{more_count} 条未显示。"
+        },
+        "date_alerts": {
+          "milestone_date": "里程碑日期",
+          "overdue": "逾期",
+          "overdue_since": "自 %{difference_in_days}起。",
+          "property_is": "%{difference_in_days}后。",
+          "property_is_deleted": "已删除。",
+          "property_today": "今天。",
+          "property_was": "%{difference_in_days}前。"
+        },
+        "no_unread": "没有未读通知",
+        "reasons": {
+          "assigned": "指定人",
+          "commented": "已评论",
+          "created": "已创建",
+          "dateAlert": "日期提醒",
+          "mentioned": "被提及",
+          "prioritized": "已优先",
+          "processed": "已处理",
+          "reminder": "提醒",
+          "responsible": "负责人",
+          "scheduled": "已计划",
+          "shared": "已共享",
+          "watched": "关注者"
+        },
+        "reminders": {
+          "note": "注：\"%{note}\""
+        },
+        "settings": {
+          "change_notification_settings": "您可以修改您的<a target=\"_blank\" href=\"%{url}\">通知设置</a>，以确保您不会错过重要的更新。",
+          "global": {
+            "date_alerts": {
+              "description": "当你参与的开放工作包（作为受理人、负责人或关注者）的重要日期临近时，自动发送通知。",
+              "title": "日期提醒"
+            },
+            "delayed": {
+              "description": "在所有项目中通知您所有活动。",
+              "title": "不参与"
+            },
+            "immediately": {
+              "description": "对于你参与的所有工作包（受理人、负责人或关注者），可以设置通知以接收所有活动的提醒。",
+              "title": "参与"
+            },
+            "overdue": "逾期时"
+          },
+          "notify_me": "通知我",
+          "project_specific": {
+            "add": "为项目添加设置",
+            "already_selected": "此项目已经选定",
+            "description": "这些特定于项目的设置会覆盖上面的默认设置。\n",
+            "remove": "移除项目设置",
+            "title": "项目特定通知设置"
+          },
+          "reasons": {
+            "assignee": "受理人",
+            "mentioned": {
+              "description": "每当有人在任何位置提及我时都接收通知",
+              "title": "被提及"
+            },
+            "responsible": "负责人",
+            "shared": "共享",
+            "watched": "关注者",
+            "work_package_commented": "所有新评论",
+            "work_package_created": "新工作包",
+            "work_package_prioritized": "所有优先级更改",
+            "work_package_processed": "所有状态更改",
+            "work_package_scheduled": "所有日期更改"
+          },
+          "reminders": {
+            "no_notification": "无通知",
+            "timeframes": {
+              "normal": {
+                "P1D": "提前 1 天",
+                "P3D": "提前 3 天",
+                "P7D": "提前一周",
+                "PT0S": "当天"
+              },
+              "overdue": {
+                "P1D": "每天",
+                "P3D": "每 3 天",
+                "P7D": "每周"
+              }
+            }
+          },
+          "title": "通知设置"
+        },
+        "title": "通知"
+      },
+      "onboarding": {
+        "buttons": {
+          "got_it": "已知晓",
+          "next": "下一个",
+          "skip": "跳过"
+        },
+        "steps": {
+          "backlogs": {
+            "overview": "在<b>待办清单</b>视图中管理您的工作。",
+            "sprints": "右侧为产品待办清单和缺陷待办清单，左侧为各自的冲刺 (Sprint)。在这里，您可以创建<b>长篇故事、用户故事和错误</b>，通过拖放来确定优先级，以及将它们添加到冲刺 (sprint) 中。",
+            "task_board": "任务面板可以将<b>此冲刺 (sprint) 的进度</b>可视化。点击用户故事旁边的加号 (+) 图标可添加新任务或障碍。<br>状态可以通过拖放更新。",
+            "task_board_arrow": "要查看您的<b>任务面板</b>，请打开冲刺 (sprint) 下拉菜单…",
+            "task_board_select": "…并选择<b>任务面板</b>条目。"
+          },
+          "boards": {
+            "add": "点击加号 (+) 图标可<b>创建新卡片</b>或<b>添加现有卡片</b>到面板上的列表中。",
+            "drag": "在给定列表中拖放您的卡片以重新排序，或者将卡片移动到其他列表中。<br>您可以点击右上角的信息 (i) 图标或双击卡片可打开其详细信息。",
+            "lists_basic": "在这里，您可以在敏捷面板内创建多个列表（列）。",
+            "lists_kanban": "在此，您可以在面板中创建多个列表（列）。例如，此功使让您可以创建<b>看板面板</b>。",
+            "overview": "选择<b>面板</b>以切换视图并使用敏捷面板视图管理您的项目。"
+          },
+          "help_menu": "帮助 (?) 菜单中提供了<b>其他帮助资源</b>。您可以在这里找到用户指南、实用的使用方法视频等内容。<br>使用 OpenProject 尽情享受您的工作吧！",
+          "members": "邀请新<b>成员</b>加入您的项目。",
+          "quick_add_button": "点击标题导航中的加号 (+) 图标可<b>创建新项目</b>或<b>邀请同事</b>。",
+          "sidebar_arrow": "使用左上角的返回箭头可返回到项目的<b>主菜单</b>。",
+          "team_planner": {
+            "add_assignee": "首先，请将受理人添加到工作组规划器。",
+            "add_existing": "搜索现有工作包并将其拖动到工作组规划器，以立即将其分配给团队成员并定义开始日期和结束日期。",
+            "calendar": "单周或双周规划面板可以显示分配给您的团队成员的所有工作包。",
+            "card": "水平拖动工作包以前移或后移其时间，拖动边缘以更改开始日期和结束日期，甚至可以将其垂直拖动到不同的行以分配给其他成员。",
+            "overview": "工作组规划器使您可以直观地为团队成员分配任务，并全面了解哪些成员正在处理哪些工作。"
+          },
+          "welcome": "通过三分钟的导览了解<b>最重要的功能</b> 。<br>我们建议您完成所有步骤。您可以随时重新浏览介绍。",
+          "wiki": "在 <b>维基</b> 中，您可以记录并与您的团队共享知识。",
+          "wp": {
+            "back_button": "使用左上角的返回箭头可退出并返回到工作包列表。",
+            "create_button": "<b>+ 创建</b>按钮将为您的项目添加一个新工作包。",
+            "full_view": "<b>工作包详细信息</b>视图中提供了与给定工作包有关的所有相关信息，例如其描述、状态、优先级、活动、依赖项和评论。",
+            "gantt_menu": "使用甘特图模块轻松创建项目时间表和时间线。",
+            "list": "此<b>工作</b>包概览提供了包含项目中所有工作的列表，例如任务、里程碑、阶段等。<br>可以直接从此视图创建和编辑工作包。要访问特定工作包的详细信息，只需双击该行即可。",
+            "timeline": "您可以在此<b>编辑您的项目计划</b>、创建新的工作包（例如任务、里程碑、阶段等）以及<b>添加依赖项</b>。所有团队成员都可以随时查看和更新最新计划。",
+            "toggler": "现在我们来看一下<b>工作包</b>部分，工作包提供了更详细的工作视图。"
+          }
+        }
+      },
+      "open_project_storage_modal": {
+        "waiting_subtitle": {
+          "network_off": "网络有问题。",
+          "network_on": "网络已恢复。我们正在努力。"
+        },
+        "waiting_title": {
+          "timeout": "超时"
+        }
+      },
+      "overviews": {
+        "label": "概述"
+      },
+      "pagination": {
+        "no_other_page": "您位于唯一页面上。",
+        "pages": {
+          "next": "前进到下一页",
+          "previous": "返回到上一页"
+        }
+      },
+      "password_confirmation": {
+        "field_description": "输入密码以确认更改",
+        "title": "输入密码以继续"
+      },
+      "placeholders": {
+        "default": "-",
+        "description": "描述：点击以编辑…",
+        "relation_description": "点击为此关系添加描述",
+        "selection": "请选择",
+        "subject": "在此处输入标题"
+      },
+      "project": {
+        "autocompleter": {
+          "label": "项目自动补全"
+        },
+        "click_to_switch_to_project": "项目: %{projectname}",
+        "confirm_template_load": "切换模板将重新加载页面，您将丢失此表单上的所有输入。是否继续？",
+        "context": "项目上下文",
+        "copy": {
+          "copy_options": "复制选项"
+        },
+        "no_template_selected": "（无）",
+        "not_available": "项目 N/A",
+        "required_outside_context": "请选择要创建工作包的项目以查看所有属性。 您只能选择已激活上述类型的项目。\n",
+        "use_template": "使用模板"
+      },
+      "project_menu_details": "详细信息",
+      "relation_buttons": {
+        "abort": "放弃",
+        "add_existing": "添加现有",
+        "add_existing_child": "增加现有的子任务",
+        "add_existing_relation": "添加现有关系",
+        "add_new_child": "创建新的子任务",
+        "add_new_relation": "创建新的关系",
+        "add_parent": "添加现有的上一级",
+        "add_predecessor": "添加前置项",
+        "add_successor": "添加后置项",
+        "change_parent": "更改父级",
+        "create_new": "新建",
+        "group_by_relation_type": "按关系类型分组",
+        "group_by_wp_type": "按工作包类型分组",
+        "hierarchy_indent": "缩进层次结构",
+        "hierarchy_outdent": "减少缩进层次结构",
+        "remove": "删除关系",
+        "remove_child": "删除子任务",
+        "remove_parent": "删除父级",
+        "save": "保存关系",
+        "set_parent": "设置父级",
+        "show_relations": "显示关系",
+        "toggle_description": "切换关系描述",
+        "update_description": "设置或更新此关系的描述",
+        "update_relation": "点击以更改关系类型"
+      },
+      "relation_labels": {
+        "blocked": "阻止于",
+        "blocks": "阻止",
+        "child": "子级",
+        "children": "子任务",
+        "duplicated": "复制于",
+        "duplicates": "重复项",
+        "follows": "后置于",
+        "includes": "包括",
+        "parent": "父级",
+        "partof": "隶属于",
+        "precedes": "前置于",
+        "relates": "关于",
+        "relation_type": "关系类型",
+        "required": "请求",
+        "requires": "需要"
+      },
+      "relations": {
+        "empty": "不存在关联",
+        "remove": "删除关系"
+      },
+      "relations_autocomplete": {
+        "parent_placeholder": "选择新父级，或按 Escape 键来取消。",
+        "placeholder": "键入内容进行搜索"
+      },
+      "relations_hierarchy": {
+        "children_headline": "子任务",
+        "hierarchy_headline": "层次结构",
+        "parent_headline": "父级"
+      },
+      "reminders": {
+        "settings": {
+          "alerts": {
+            "document_added": "添加文档",
+            "explanation": "今日提醒仅限于工作包。您可以选择继续接收这些事件的电子邮件提醒，直到它们被包含在通知中。\n",
+            "forum_messages": "新的论坛消息",
+            "membership_added": "添加成员",
+            "membership_updated": "更新成员",
+            "news_added": "添加新闻",
+            "news_commented": "评论新闻",
+            "title": "其他项目（非工作包）的电子邮件提醒",
+            "wiki_page_added": "添加维基页面",
+            "wiki_page_updated": "更新维基页面"
+          },
+          "daily": {
+            "add_time": "添加时间",
+            "enable": "启用每日电子邮件提醒",
+            "explanation": "只有存在未读通知时，您才会在指定的时间收到这些提醒。%{no_time_zone}",
+            "no_time_zone": "除非您为帐户配置时区，否则将以 UTC 显示时间。",
+            "time_label": "时间 %{counter}：",
+            "title": "向我发送针对未读通知的每日电子邮件提醒"
+          },
+          "immediate": {
+            "mentioned": "当有人@提及我时立即提醒",
+            "personal_reminder": "收到个人提醒后立即发送",
+            "title": "向我发送电子邮件提醒"
+          },
+          "pause": {
+            "first_day": "第一天",
+            "label": "临时暂停每日电子邮件提醒",
+            "last_day": "最后一天"
+          },
+          "title": "电子邮件提醒",
+          "workdays": {
+            "title": "在如下日期接收电子邮件提醒"
+          }
+        }
+      },
+      "reporting_engine": {
+        "label_remove": "删除",
+        "label_response_error": "处理查询时出错。"
+      },
+      "repositories": {
+        "select_branch": "选择分支",
+        "select_tag": "选择标签"
+      },
+      "revit": {
+        "revit_add_in": "Revit 加载项",
+        "revit_add_in_settings": "Revit 加载项设置"
+      },
+      "sharing": {
+        "selected_count": "%{count} 已选择",
+        "selection": {
+          "mixed": "混合"
+        },
+        "share": "共享"
+      },
+      "sort": {
+        "activate_asc": "激活以进行升序排序",
+        "activate_dsc": "激活以进行降序排序",
+        "activate_no": "激活以移除排序",
+        "sorted_asc": "升序排列已应用， ",
+        "sorted_dsc": "降序排列已应用， ",
+        "sorted_no": "无序已应用， ",
+        "sorting_disabled": "排序被禁用"
+      },
+      "spot": {
+        "drop_modal": {
+          "close": "关闭模式",
+          "focus_grab": "该信息是模态框的焦点锚点。按 Shift+Tab 可以返回到模态框的触发元素。"
+        },
+        "filter_chip": {
+          "remove": "移除"
+        }
+      },
+      "storages": {
+        "authentication_error": "%{storageType} 认证失败",
+        "choose_location": "选择地点",
+        "drop_files": "将文件放置到此处以上传 %{name}",
+        "drop_or_click_files": "将文件拖到此处或单击以将其上传到 %{name}。",
+        "file_links": {
+          "already_linked_directory": "此目录已连接到该工作包。",
+          "already_linked_file": "此文件已链接到该工作包。",
+          "download": "下载 %{fileName}",
+          "empty": "当前的工作包没有链接的文件。请用下面操作或在%{storageType}内开始链接文件。\n",
+          "link_uploaded_file_error": "在链接最近上传的文件 '%{fileName}' 到工作包 %{workPackageId} 时出现错误。\n",
+          "open": "在存储上打开文件",
+          "open_location": "在位置打开文件",
+          "remove": "移除文件链接",
+          "remove_confirmation": "确定要取消文件与此工作包的链接吗？取消链接不会影响原始文件，只会移除与此工作包的关联。\n",
+          "remove_short": "移除链接",
+          "select": "选择文件",
+          "select_all": "全选",
+          "selection": {
+            "other": "链接 %{count} 个文件",
+            "zero": "选择文件以链接"
+          },
+          "success_create": {
+            "other": "您成功地创建了 %{count} 个文件链接。"
+          },
+          "tooltip": {
+            "not_found": "找不到此文件。",
+            "not_logged_in": "请登录到存储区来访问此文件。",
+            "view_not_allowed": "您无权查看此文件。"
+          },
+          "upload_error": {
+            "403": "由于系统限制，无法上传您的文件 (%{fileName})。请联系您的管理员了解更多信息。\n",
+            "413": "您的文件 (%{fileName}) 超出 OpenProject 可以上传到 %{storageType} 的文件大小。您可以先将其直接上传到 %{storageType}，然后再链接该文件。\n",
+            "507": "您的文件 (%{fileName}) 已超出存储配额允许的范围。请联系您的管理员修改此配额。\n",
+            "default": "您的文件 (%{fileName}) 无法被上传。\n",
+            "detail": {
+              "nextcloud": "请检查是否安装了最新版本的 Nextcloud 应用程序 \"OpenProject Integration\"，如需更多信息，请联系您的管理员。\n"
+            }
+          }
+        },
+        "files": {
+          "already_existing_body": "名称为“%{fileName}”的文件在您要将此文件上传到的位置已经存在。您要执行什么操作？\n",
+          "already_existing_header": "此文件已存在",
+          "cannot_create_folder": "创建文件夹失败。避免使用特殊字符和符号，并确保该文件夹尚不存在。",
+          "directory_not_writeable": "您无权将文件添加到此文件夹。",
+          "dragging_folder": "上传到 %{storageType} 不支持文件夹。",
+          "dragging_many_files": "上传到 %{storageType} 的每次仅支持一个文件。",
+          "empty_folder": "此文件夹为空。",
+          "empty_folder_location_hint": "点击下方按钮以上传文件到此位置。",
+          "file_not_selectable_location": "选择位置过程中无法选中文件。",
+          "managed_project_folder_no_access": "您目前还无法访问托管项目文件夹。请稍等片刻，然后重试。\n",
+          "managed_project_folder_not_available": "尚未找到自动托管的项目文件夹。请稍等片刻，重新加载页面以获取最新数据，然后重试。\n",
+          "project_folder_no_access": "您没有访问项目文件夹的权限。请联系您的管理员访问或上传文件到另一个位置。\n",
+          "upload_keep_both": "保留两者",
+          "upload_replace": "替换"
+        },
+        "information": {
+          "authentication_error": "无法对 %{storageType} 的请求进行身份验证，这是一个错误。",
+          "connection_error": "某些 %{storageType} 设置不起作用。请联系您的 %{storageType} 管理员。\n",
+          "live_data_error": "获取文件详情时出错",
+          "live_data_error_description": "无法获取某些 %{storageType} 数据。请尝试重新加载此页面，或者联系您的 %{storageType} 管理员。\n",
+          "no_file_links": "要将文件链接到此工作包，请通过 %{storageType} 执行此操作。",
+          "not_logged_in": "要添加链接、查看或上传与此工作包相关的文件，请登录 %{storageType}。\n",
+          "suggest_logout": "您可以尝试重新登录修复这个问题。",
+          "suggest_relink": "您可以尝试通过下面的登录按钮重新链接您的帐户来解决这个问题。"
+        },
+        "link_existing_files": "链接已有文件",
+        "link_files_in_storage": "链接 %{storageType} 中的文件",
+        "login": "%{storageType} 登录",
+        "login_to": "登录 %{storageType}",
+        "new_folder": "新文件夹",
+        "no_connection": "无 %{storageType} 连接",
+        "open_storage": "打开 %{storageType}",
+        "select_location": "选择位置",
+        "types": {
+          "default": "存储",
+          "nextcloud": "Nextcloud",
+          "one_drive": "OneDrive/SharePoint"
+        },
+        "upload_files": "上传文件"
+      },
+      "team_planner": {
+        "add_assignee": "受理人",
+        "add_existing": "添加现有",
+        "add_existing_title": "添加现有工作包",
+        "cannot_drag_here": "由于权限或编辑限制，无法移除工作包。",
+        "cannot_drag_to_non_working_day": "这个工作包不能在非工作日开始/完成。",
+        "create_label": "工作组规划器",
+        "create_title": "创建新的工作组规划器",
+        "drag_here_to_remove": "拖动到此处可移除受理人及开始日期和结束日期。",
+        "eight_weeks": "8 周",
+        "four_weeks": "4 周",
+        "modify": {
+          "errors": {
+            "fallback": "无法编辑此工作包。",
+            "permission_denied": "您没有修改此项的必要权限。"
+          }
+        },
+        "no_data": "添加受理人以设置您的工作组规划器。",
+        "one_week": "1 周",
+        "quick_add": {
+          "empty_state": "使用搜索字段查找工作包并将它们拖动到规划工具以将其分配给某人并定义开始日期和结束日期。",
+          "search_placeholder": "搜索…"
+        },
+        "remove_assignee": "移除受理人",
+        "today": "今天",
+        "two_weeks": "2 周",
+        "unsaved_title": "未命名的工作组规划器",
+        "work_week": "工作周"
+      },
+      "text_are_you_sure": "是否确定？",
+      "text_data_lost": "输入的所有数据将全部丢失。",
+      "text_query_destroy_confirmation": "确定要删除所选视图吗？",
+      "text_user_wrote": "%{value} 写道：",
+      "text_work_packages_destroy_confirmation": "确实要删除所选的工作包吗?",
+      "time_entry": {
+        "stop": "停止",
+        "title": "记录时间",
+        "tracking": "时间跟踪",
+        "work_package_required": "需要先选择一个工作包。"
+      },
+      "timer": {
+        "button_stop": "停止当前计时器",
+        "start_new_timer": "启动新计时器",
+        "timer_already_running": "要启动新计时器，必须先停止当前计时器：",
+        "timer_already_stopped": "此工作包没有激活的计时器，您是否已在其他窗口中将其停止？",
+        "tracking_time": "跟踪时间"
+      },
+      "tl_toolbar": {
+        "outlines": "层次结构级别",
+        "zooms": "缩放级别"
+      },
+      "toolbar": {
+        "filter": "筛选器",
+        "search_query_label": "搜索已保存的视图",
+        "settings": {
+          "columns": "列",
+          "configure_view": "配置视图",
+          "delete": "删除",
+          "display_hierarchy": "显示层次结构",
+          "display_sums": "显示汇总",
+          "export": "导出",
+          "group_by": "分组依据",
+          "hide_hierarchy": "隐藏层次结构",
+          "hide_sums": "隐藏汇总",
+          "page_settings": "重命名视图",
+          "save": "保存",
+          "save_as": "另存为",
+          "share_calendar": "订阅日历",
+          "sort_by": "排序依据",
+          "visibility_settings": "可见性设置"
+        },
+        "unselected_title": "工作包"
+      },
+      "two_factor_authentication": {
+        "errors": {
+          "aborted": "身份验证已取消。请重试。"
+        },
+        "label_two_factor_authentication": "双因子认证"
+      },
+      "types": {
+        "attribute_groups": {
+          "confirm_reset": "警告：确定想要重置表单配置吗？这会将属性重置为它们的默认组，并禁用所有自定义字段。\n",
+          "error_duplicate_group_name": "名称 %{group} 已多次使用。组名不能重复。",
+          "error_no_table_configured": "请为 %{group} 配置一个表。",
+          "more_information": "更多信息",
+          "nevermind": "我愿意",
+          "reset_title": "重置表单配置",
+          "upgrade_to_ee": "升级到本地部署的 Enterprise edition",
+          "upgrade_to_ee_text": "哇！如果您需要此插件，那么您是位超级行家！您是否考虑成为我们的企业版客户，以支持我们这些开源开发者？"
+        }
+      },
+      "units": {
+        "child_work_packages": {
+          "other": "%{count} 子工作包"
+        },
+        "day": {
+          "one": "1 天",
+          "other": "%{count} 天",
+          "zero": "0 天"
+        },
+        "hour": {
+          "one": "1 小时",
+          "other": "%{count} 小时",
+          "zero": "0 小时"
+        },
+        "word": {
+          "other": " %{count} 个单词"
+        },
+        "workPackage": {
+          "other": "工作包"
+        }
+      },
+      "upsell": {
+        "ee_only": "企业版附加组件"
+      },
+      "views": {
+        "card": "卡片",
+        "list": "表",
+        "timeline": "甘特图"
+      },
+      "watchers": {
+        "label_add": "添加关注者",
+        "label_discard": "放弃选择",
+        "label_error_loading": "加载关注者时出错",
+        "label_loading": "正在加载关注者...",
+        "label_search_watchers": "搜索关注者",
+        "typeahead_placeholder": "查找可能的关注者"
+      },
+      "wiki_formatting": {
+        "code": "内联代码",
+        "deleted": "已删除",
+        "heading1": "标题 1",
+        "heading2": "标题 2",
+        "heading3": "标题 3",
+        "image": "图片",
+        "italic": "斜体",
+        "ordered_list": "顺序列表",
+        "preformatted_text": "预格式化文本",
+        "quote": "引用",
+        "strong": "加强",
+        "underline": "下划线",
+        "unordered_list": "无序列表",
+        "unquote": "取消引用",
+        "wiki_link": "链接到一个维基页面"
+      },
+      "work_packages": {
+        "baseline": {
+          "addition_label": "在比较时间段内添加到视图",
+          "column_incompatible": "此列在基线模式下不显示更改。",
+          "modification_label": "在比较时间段内修改",
+          "removal_label": "在比较时间段内从视图删除"
+        },
+        "bulk_actions": {
+          "copy": "批量复制",
+          "delete": "批量删除",
+          "edit": "批量编辑",
+          "move": "批量更改项目"
+        },
+        "button_clear": "清除",
+        "comment_added": "注释已成功添加。",
+        "comment_send_failed": "出错。无法提交评论。",
+        "comment_updated": "注释已成功更新。",
+        "confirm_edit_cancel": "是否确定想要取消编辑工作包？",
+        "copy": {
+          "title": "复制工作包"
+        },
+        "create": {
+          "button": "创建",
+          "header": "新 %{type}",
+          "header_no_type": "新工作包(类型尚未设置)",
+          "header_with_parent": "新的 %{type} （%{parent_type} #%{id} 子）",
+          "title": "新工作包"
+        },
+        "default_queries": {
+          "all_open": "全部打开",
+          "assigned_to_me": "分配给我",
+          "created_by_me": "我创建的",
+          "latest_activity": "最新活动",
+          "manually_sorted": "新的手动排序查询",
+          "milestones": "里程碑",
+          "overdue": "逾期",
+          "recently_created": "最近创建",
+          "shared_with_me": "与我分享",
+          "shared_with_users": "与用户共享",
+          "summary": "摘要"
+        },
+        "description_enter_text": "输入文本",
+        "description_filter": "筛选器",
+        "description_options_hide": "隐藏选项",
+        "description_options_show": "显示选项",
+        "edit_attribute": "%{attribute} - 编辑",
+        "faulty_query": {
+          "description": "您的视图不正确，无法处理。",
+          "title": "无法加载工作包。"
+        },
+        "filters": {
+          "baseline_incompatible": "在基线模式下，将不考虑此筛选器属性。",
+          "baseline_warning": "基线模式已开启，但您的一些活动过滤器未包含在比较中。",
+          "title": "筛选工作包"
+        },
+        "hierarchy": {
+          "children_collapsed": "层次结构级别 %{level} 已折叠。单击以显示筛选的子任务",
+          "children_expanded": "层次结构级别 %{level} 已展开。单击以折叠筛选的子任务",
+          "hide": "隐藏层次结构模式",
+          "leaf": "工作包叶处于 %{level} 级。",
+          "show": "显示层次结构模式",
+          "toggle_button": "单击以切换层次结构模式。"
+        },
+        "inline_create": {
+          "title": "单击此处将新工作包添加至此列表"
+        },
+        "jump_marks": {
+          "content": "跳到内容",
+          "label_content": "单击此处跳过菜单，转到内容",
+          "label_pagination": "单击此处跳过工作包表格并转到分页",
+          "pagination": "跳转到表格分页"
+        },
+        "key_value": "%{key}: %{value}",
+        "label_column_multiselect": "组合式的下拉字段: 使用箭头键选择，用 enter 键确认选择，用退格键删除",
+        "label_disable_multi_select": "禁用多选",
+        "label_enable_multi_select": "启用多选",
+        "label_filter_add": "添加筛选器",
+        "label_filter_by_text": "按文本筛选",
+        "label_options": "选项",
+        "limited_results": "手动排序模式下只能显示 %{count} 个工作包。请通过筛选减少结果，或者切换到自动排序模式。",
+        "message_error_during_bulk_delete": "试图删除工作包时出错。",
+        "message_successful_bulk_delete": "已成功删除工作包。",
+        "message_successful_show_in_fullscreen": "单击此处以全屏视图打开此工作包。",
+        "message_view_spent_time": "显示这个工作包所花费的时间",
+        "message_work_package_read_only": "工作包被锁定在此状态。除状态外，其他属性均不可更改。",
+        "message_work_package_status_blocked": "由于处于关闭状态并且分配了关闭版本，因此工作包状态不可写。",
+        "no_results": {
+          "description": "没有已创建的工作包或所有工作包都被筛选排除。",
+          "title": "没有要显示的工作包。"
+        },
+        "placeholder_filter_by_text": "主题, 描述, 评论,..。",
+        "placeholders": {
+          "date": "选择日期",
+          "default": "-"
+        },
+        "progress": {
+          "title": "工时估计和进展"
+        },
+        "properties": {
+          "assignee": "受理人",
+          "author": "作者",
+          "category": "类别",
+          "costObject": "预算",
+          "createdAt": "创建于",
+          "date": "日期",
+          "description": "描述",
+          "dueDate": "完成日期",
+          "duration": "时长",
+          "overallCosts": "总成本",
+          "percentComplete": "完成百分比",
+          "percentCompleteAlternative": "进度",
+          "percentageDone": "完成百分比",
+          "priority": "优先级",
+          "projectName": "项目",
+          "remainingTime": "剩余的工作",
+          "remainingWork": "剩余工时",
+          "remainingWorkAlternative": "剩余小时数",
+          "responsible": "责任人",
+          "spentTime": "已耗工时",
+          "spentUnits": "已支出单位成本",
+          "startDate": "开始日期",
+          "status": "状态",
+          "storyPoints": "故事点",
+          "subject": "主题",
+          "subproject": "子项目",
+          "title": "标题",
+          "type": "类型",
+          "updatedAt": "更新时间",
+          "version": "版本",
+          "versionName": "版本",
+          "work": "工时",
+          "workAlternative": "估算工时"
+        },
+        "property_groups": {
+          "costs": "成本",
+          "details": "详细信息",
+          "estimatesAndTime": "估计与时间",
+          "other": "其他",
+          "people": "人员"
+        },
+        "query": {
+          "click_to_edit_query_name": "单击可以编辑此视图的标题。",
+          "column_names": "列",
+          "confirm_edit_cancel": "确定要取消编辑此视图的名称吗？标题将重置为上一个值。",
+          "display_sums": "显示汇总",
+          "errors": {
+            "duplicate_query_title": "此视图的名称已存在。仍要更改？",
+            "not_found": "无此视图",
+            "unretrievable_query": "无法从 URL 检索视图"
+          },
+          "filters": "筛选器",
+          "group": "分组按照",
+          "group_by": "汇总结果根据",
+          "group_by_disabled_by_hierarchy": "分组依据已禁用，因为层次结构模式处于活动状态。",
+          "hide_column": "隐藏列",
+          "hierarchy_disabled_by_group_by": "层次结构模式已禁用，因为结果依据 %{column} 分组。",
+          "insert_columns": "插入列",
+          "move_column_left": "左移列",
+          "move_column_right": "右移列",
+          "public_text": "发布此视图，以允许其他用户访问您的视图。具有“管理公共视图”权限的用户可以修改或移除公共查询。这不会影响工作包结果在该视图中的可见性，并且用户可能会看到不同的结果，具体取决于他们的权限。\n",
+          "rename_query_placeholder": "此视图的名称",
+          "sort_ascending": "升序排序",
+          "sort_descending": "降序排序",
+          "star_text": "将此视图标记为收藏项，并添加到左侧的已保存视图边栏中。",
+          "text_no_results": "未找到匹配的视图。"
+        },
+        "reminders": {
+          "button_label": "设置提醒",
+          "presets": {
+            "custom": "在某个特定日期/时间",
+            "month": "一个月后",
+            "three_days": "3 天后",
+            "tomorrow": "明天",
+            "week": "一周后"
+          },
+          "subtitle": "您将在所选时间收到此工作包的通知。",
+          "title": {
+            "edit": "编辑提醒",
+            "new": "设置提醒"
+          }
+        },
+        "scheduling": {
+          "is_parent": "此工作包的日期会自动从其子项推导出。可激活“手动计划”来设置日期。",
+          "is_switched_from_manual_to_automatic": "由于与其他工作包的关系，在从手动计划切换为自动计划后，此工作包的日期可能需要重新计算。"
+        },
+        "sharing": {
+          "show_all_users": "显示与之共享工作包的所有用户",
+          "title": "共享工作包"
+        },
+        "table": {
+          "configure_button": "配置工作包表",
+          "summary": "行为工作包且列为工作包属性的表格。",
+          "text_inline_edit": "大多数此表格的单元格为激活工作包属性的直接编辑功能的按钮。",
+          "text_select_hint": "请使用Alt+方向键打开选择框。",
+          "text_sort_hint": "使用表格标题中的链接，您可以对表格中的列排序、分组、重排序、删除和添加。"
+        },
+        "table_configuration": {
+          "button": "配置当前工作包表",
+          "choose_display_mode": "将工作包显示为",
+          "columns_help_text": "使用上面的输入字段向表视图中添加列。您可以拖放列来将它们重新排序。",
+          "default": "默认",
+          "default_mode": "扁平列表",
+          "display_settings": "显示设置",
+          "display_sums_hint": "在表结果下方一行中显示所有可累加属性的总和。",
+          "embedded_tab_disabled": "此配置选项卡不适用于您正在编辑的嵌入式视图。",
+          "hierarchy_hint": "所有过滤的表结果都将使用其上级进行扩充。 可以展开和折叠层次结构。",
+          "hierarchy_mode": "层次结构",
+          "highlighting": "突出显示",
+          "highlighting_mode": {
+            "description": "使用颜色突出显示",
+            "entire_row_by": "整行",
+            "inline": "高亮显示的属性",
+            "inline_all": "全部属性",
+            "none": "无突出显示",
+            "priority": "优先级",
+            "status": "状态",
+            "type": "类型"
+          },
+          "modal_title": "工作包表配置",
+          "relation_filters": {
+            "filter_work_packages_by_relation_type": "按关系类型筛选工作包"
+          },
+          "show_timeline_hint": "在表格的右侧显示交互式甘特图。 您可以通过拖动表格和甘特图之间的分隔线来更改其宽度。",
+          "sorting_mode": {
+            "automatic": "自动",
+            "description": "选择对您的工作包排序的模式：",
+            "manually": "手动",
+            "warning": "激活自动排序模式时，您将丢失以前的排序结果。"
+          }
+        },
+        "tabs": {
+          "activity": "活动",
+          "files": "文件",
+          "github": "GitHub",
+          "gitlab": "GitLab",
+          "meetings": "会议",
+          "overview": "概述",
+          "relations": "关系",
+          "watchers": "关注者"
+        },
+        "time_relative": {
+          "days": "天",
+          "months": "月",
+          "weeks": "周"
+        }
+      },
+      "zen_mode": {
+        "button_activate": "激活 zen 模式",
+        "button_deactivate": "取消激活 zen 模式"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": ",",
+          "format": "%u %n",
+          "negative_format": "-%u%n",
+          "precision": 2,
+          "separator": ".",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "CN¥"
+        }
+      },
+      "format": {
+        "delimiter": null,
+        "precision": 3,
+        "round_mode": "default",
+        "separator": ".",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "十亿",
+            "million": "百万",
+            "quadrillion": "千兆",
+            "thousand": "千",
+            "trillion": "兆",
+            "unit": null
+          }
+        },
+        "format": {
+          "delimiter": null,
+          "precision": 1,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "other": "字节"
+            },
+            "eb": "EB",
+            "gb": "GB",
+            "kb": "kB",
+            "mb": "MB",
+            "pb": "PB",
+            "tb": "TB",
+            "zb": "ZB"
+          }
+        }
+      },
+      "nth": {},
+      "percentage": {
+        "format": {
+          "delimiter": null,
+          "format": "%n%"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": null
+        }
+      }
+    },
+    "time": {
+      "am": "上午",
+      "formats": {
+        "default": "%m/%d/%Y %I:%M %p",
+        "long": "%B %d, %Y %H:%M",
+        "short": "%d %b %H:%M",
+        "time": "%I:%M %p"
+      },
+      "pm": "下午"
+    }
+  }
+}

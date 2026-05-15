@@ -1,0 +1,150 @@
+<% contact = local_assigns[:contact] || @contact %>
+<% relation_scope = WhatsappWorkPackageRelation.where(project: @project) %>
+<% if contact&.chat_id.present? %>
+  <% relation_scope = relation_scope.where("contact_profile_id = ? OR chat_id = ?", contact.id, contact.chat_id) %>
+<% else %>
+  <% relation_scope = relation_scope.where(contact_profile_id: contact.id) %>
+<% end %>
+<% wp_relation = relation_scope.order(created_at: :desc).first %>
+<% work_package = wp_relation&.work_package %>
+<% statuses_payload = [] %>
+<% current_status = nil %>
+<% if work_package.present? %>
+  <% current_status = work_package.status %>
+  <% statuses = WorkPackages::UpdateContract.new(work_package, User.current).assignable_statuses %>
+  <% statuses_payload = statuses.map { |status| { id: status.id, name: status.name, color: status.color&.hexcode.to_s } } %>
+<% end %>
+<div data-contacto-work-package-meta
+     data-work-package-id="<%= work_package&.id %>"
+     data-work-package-subject="<%= work_package&.subject.to_s %>"
+     data-work-package-url="<%= work_package ? project_work_package_path(@project, work_package) : "" %>"></div>
+<div data-contacto-work-package-statuses
+     data-statuses="<%= ERB::Util.html_escape(statuses_payload.to_json) %>"
+     data-current-status-id="<%= current_status&.id.to_s %>"
+     data-current-status-color="<%= current_status&.color&.hexcode.to_s %>"
+     data-work-package-id="<%= work_package&.id.to_s %>"></div>
+
+<%= form_with model: contact,
+              scope: :contact,
+              url: whatsapp_plugin_project_contactos_update_path(@project, contact.id),
+              method: :patch,
+              local: true,
+              data: { contacto_edit_form: true, contacto_id: contact.id } do |f| %>
+  <% base_fields = [
+    { key: "base:first_name", label: "Nombres", type: "text", field: :first_name },
+    { key: "base:last_name", label: "Apellidos", type: "text", field: :last_name },
+    { key: "base:email", label: "Email", type: "text", field: :email },
+    { key: "base:phone", label: "Telefono", type: "text", field: :phone },
+    { key: "base:company", label: "Empresa", type: "text", field: :company },
+    { key: "base:country", label: "Pais", type: "text", field: :country },
+    { key: "base:state", label: "Estado/Provincia", type: "text", field: :state },
+    { key: "base:city", label: "Ciudad", type: "text", field: :city },
+    { key: "base:address", label: "Direccion", type: "text", field: :address },
+    { key: "base:postal_code", label: "Codigo postal", type: "text", field: :postal_code },
+    { key: "base:birthday", label: "Fecha de nacimiento", type: "date", field: :birthday },
+    { key: "base:job_title", label: "Cargo", type: "text", field: :job_title },
+    { key: "base:tags_text", label: "Tags", type: "text", field: :tags_text, placeholder: "vip, lead" },
+    { key: "base:points", label: "Puntos", type: "number", field: :points },
+  ] %>
+  <% custom_fields = (@contact_fields || []).map { |field| { key: "custom:#{field.id}", kind: :custom, field: field } } %>
+  <% all_fields = base_fields + custom_fields %>
+  <% base_order = [
+    "base:first_name",
+    "base:last_name",
+    "base:email",
+    "base:phone",
+    "base:company",
+    "base:country",
+    "base:state",
+    "base:city",
+    "base:address",
+    "base:postal_code",
+    "base:birthday",
+    "base:job_title",
+    "base:tags_text",
+    "base:points"
+  ] %>
+  <% custom_order = @contact_fields.map { |field| "custom:#{field.id}" } %>
+  <% order = base_order + custom_order %>
+  <% if order.any? %>
+    <% ordered = [] %>
+    <% order.each do |key| %>
+      <% found = all_fields.find { |item| item[:key] == key } %>
+      <% ordered << found if found %>
+    <% end %>
+    <% all_fields.each do |item| %>
+      <% ordered << item unless ordered.include?(item) %>
+    <% end %>
+    <% all_fields = ordered %>
+  <% end %>
+
+  <div class="contacto-grid">
+    <% all_fields.each do |item| %>
+      <div class="contacto-form-field-item" data-contacto-field-item data-field-key="<%= item[:key] %>">
+        <% if item[:kind] == :custom %>
+          <div class="contacto-field-label-row"><label><%= item[:field].name %></label></div>
+          <%= render "contactos/field_input", field: item[:field], contact: contact %>
+        <% else %>
+          <div class="contacto-field-label-row"><label><%= item[:label] %></label></div>
+          <% field_id = "contacto-#{item[:field]}-edit" %>
+          <% if item[:field] == :tags_text %>
+            <div class="contacto-tags-input"
+                 data-contacto-tags-input
+                 data-tags="<%= ERB::Util.html_escape(Array(contact.tags).to_json) %>">
+              <button type="button"
+                      class="contacto-tags-toggle"
+                      data-contacto-tags-toggle>
+                Seleccionar etiquetas
+              </button>
+              <%= f.hidden_field :tags_text,
+                                 value: Array(contact.tags).join(", "),
+                                 data: { contacto_tags_hidden: true } %>
+              <div class="contacto-tags-chips" data-contacto-tags-chips></div>
+              <div class="contacto-tags-dropdown is-hidden" data-contacto-tags-dropdown></div>
+            </div>
+          <% elsif item[:field] == :phone %>
+            <div class="contacto-phone-input">
+              <div class="wa-new-chat-country-wrap">
+                <input class="wa-new-chat-country-input"
+                       type="text"
+                       aria-label="Pais"
+                       data-contacto-country-input />
+                <div class="wa-new-chat-country-list is-hidden" data-contacto-country-list></div>
+              </div>
+              <%= f.text_field item[:field], id: field_id, class: "contacto-phone-number", data: { contacto_phone_input: true } %>
+            </div>
+          <% elsif item[:field] == :country %>
+            <div class="contacto-country-input">
+              <div class="wa-new-chat-country-wrap">
+                <input class="wa-new-chat-country-input"
+                       type="text"
+                       aria-label="Pais"
+                       data-contacto-country-name-input
+                       value="<%= contact.country.to_s %>" />
+                <div class="wa-new-chat-country-list is-hidden" data-contacto-country-name-list></div>
+              </div>
+              <%= f.hidden_field :country, value: contact.country.to_s, data: { contacto_country_hidden: true } %>
+            </div>
+          <% elsif item[:field] == :email %>
+            <div class="contacto-input-icon">
+              <span class="contacto-input-icon-svg" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                </svg>
+              </span>
+              <%= f.text_field item[:field], id: field_id, class: "contacto-input-with-icon" %>
+            </div>
+          <% elsif item[:type] == "date" %>
+            <%= f.date_field item[:field], id: field_id %>
+          <% elsif item[:type] == "textarea" %>
+            <%= f.text_area item[:field], id: field_id %>
+          <% elsif item[:type] == "number" %>
+            <%= f.number_field item[:field], id: field_id %>
+          <% else %>
+            <%= f.text_field item[:field], id: field_id %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

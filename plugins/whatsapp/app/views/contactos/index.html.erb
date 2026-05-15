@@ -1,0 +1,700 @@
+<% content_for :header_tags do %>
+  <meta name="current-user-id" content="<%= User.current.id %>">
+  <%= stylesheet_link_tag "contacto", media: "all" %>
+  <%= javascript_include_tag "contacto", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "click_edit", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "contacto_delete", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "contacto_grabado", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "nextcloud_contacto", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "openproject-whatsapp-countries", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+<% end %>
+
+<% hidden_fields = @table_settings&.hidden_fields || [] %>
+<% filter_fields = [
+  { key: "name", label: "Nombre", type: "text" },
+  { key: "first_name", label: "Nombre (primer)", type: "text" },
+  { key: "last_name", label: "Apellidos", type: "text" },
+  { key: "email", label: "Email", type: "text" },
+  { key: "phone", label: "Telefono", type: "text" },
+  { key: "company", label: "Empresa", type: "text" },
+  { key: "status", label: "Estado", type: "text" },
+  { key: "source", label: "Origen", type: "text" },
+  { key: "points", label: "Puntos", type: "number" },
+  { key: "open_email", label: "Open email", type: "number" },
+  { key: "created_at", label: "Fecha de registro", type: "date" },
+  { key: "external_id", label: "External ID", type: "text" },
+  { key: "assigned_to_id", label: "Responsable", type: "user" },
+  { key: "last_interaction_at", label: "Ultima Actualizacion", type: "date" },
+  { key: "tags", label: "Tags", type: "tags", options: @tag_map.map { |tag| tag[:name].to_s }.reject(&:blank?).uniq.sort },
+  { key: "address", label: "Direccion", type: "text" },
+  { key: "city", label: "Ciudad", type: "text" },
+  { key: "state", label: "Estado/Provincia", type: "text" },
+  { key: "country", label: "Pais", type: "text" },
+  { key: "postal_code", label: "Codigo postal", type: "text" },
+  { key: "job_title", label: "Cargo", type: "text" },
+  { key: "birthday", label: "Nacimiento", type: "date" },
+  { key: "notes", label: "Notas", type: "text" }
+] %>
+<% @contact_fields.each do |field| %>
+  <% filter_fields << {
+    key: "custom:#{field.id}",
+    label: field.name,
+    type: field.field_type,
+    custom_name: field.name,
+    options: Array(field.options)
+  } %>
+<% end %>
+<% filters_json = @filters[:builder].to_json %>
+<% filters_for_links = { q: @filters[:q], sort: @filters[:sort], assigned_to_id: @filters[:assigned_to_id], filters_json: filters_json } %>
+<div class="contacto-shell"
+     data-contacto-project="<%= @project.id %>"
+     data-contacto-user-id="<%= User.current.id %>"
+     data-contacto-favorite-url-template="<%= whatsapp_plugin_project_whatsapp_chat_favorite_path(@project, id: '__CHAT_ID__') %>"
+     data-contacto-table-settings-url="<%= whatsapp_plugin_project_contactos_table_settings_path(@project) %>"
+     data-contacto-field-order-url="<%= whatsapp_plugin_project_contactos_fields_order_path(@project) %>"
+     data-contacto-form-order-url="<%= whatsapp_plugin_project_contactos_fields_form_order_path(@project) %>"
+     data-contacto-edit-panel-url-template="<%= whatsapp_plugin_project_contactos_edit_panel_path(@project, "__CONTACT_ID__") %>"
+     data-contacto-wp-statuses-url-template="<%= whatsapp_plugin_project_whatsapp_work_package_statuses_path(@project, id: "__ID__") %>"
+     data-contacto-hidden-fields="<%= ERB::Util.html_escape(hidden_fields.to_json) %>"
+     data-contacto-column-order="<%= ERB::Util.html_escape((@table_settings&.column_order || []).to_json) %>"
+     data-contacto-column-widths="<%= ERB::Util.html_escape((@table_settings&.column_widths || {}).to_json) %>"
+     data-contacto-advanced-filters="<%= ERB::Util.html_escape((@table_settings&.advanced_filters || {}).to_json) %>"
+     data-contacto-filter-fields="<%= ERB::Util.html_escape(filter_fields.to_json) %>"
+     data-contacto-users="<%= ERB::Util.html_escape(@users.map { |user| { id: user.id, name: user.name } }.to_json) %>"
+     data-contacto-tags="<%= ERB::Util.html_escape(@tag_map.to_json) %>"
+     data-contacto-tags-upsert-url="<%= whatsapp_plugin_project_contactos_tags_upsert_path(@project) %>"
+     data-contacto-tags-color-url="<%= whatsapp_plugin_project_contactos_tags_color_path(@project, "__ID__") %>"
+     data-contacto-tags-rename-url="<%= whatsapp_plugin_project_contactos_tags_rename_path(@project, "__ID__") %>"
+     data-contacto-tags-destroy-url="<%= whatsapp_plugin_project_contactos_tags_destroy_path(@project, "__ID__") %>"
+     data-contacto-call-activity-url-template="<%= whatsapp_plugin_project_contactos_call_activity_path(@project, "__CONTACT_ID__") %>"
+     data-contacto-call-history-url-template="<%= whatsapp_plugin_project_contactos_call_history_path(@project, "__CONTACT_ID__") %>"
+     data-contacto-call-history-destroy-url-template="<%= whatsapp_plugin_project_contactos_call_history_destroy_path(@project, "__CONTACT_ID__", history_id: "__HISTORY_ID__") %>"
+     data-contacto-call-recorder-log-url-template="<%= whatsapp_plugin_project_contactos_recorder_log_path(@project, "__CONTACT_ID__") %>"
+     data-contacto-call-recorder-preview-url-template="<%= whatsapp_plugin_project_contactos_recorder_preview_path(@project, "__CONTACT_ID__") %>"
+     data-contacto-pause-activity-url="<%= whatsapp_plugin_project_contactos_pause_activity_path(@project) %>"
+     data-contacto-macros-list-url="<%= whatsapp_plugin_project_email_flows_list_path(@project, macros_only: 1) %>"
+     data-contacto-macros-run-url="<%= whatsapp_plugin_project_email_flows_run_path(@project) %>"
+     data-contacto-bulk-assign-url="<%= whatsapp_plugin_project_contactos_bulk_assign_path(@project) %>"
+     data-contacto-tags-admin="<%= User.current.admin? %>">
+  <div class="contacto-header">
+    <div>
+      <div class="contacto-title">Contactos</div>
+    </div>
+    <div class="contacto-actions">
+      <%= link_to "Historial", whatsapp_plugin_project_contactos_history_path(@project), class: "contacto-btn contacto-btn-ghost", data: { turbo: false } %>
+      <button type="button" class="contacto-btn contacto-btn-ghost contacto-pause-shortcut" data-contacto-pause-open title="Pausa breve" aria-label="Pausa breve">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stopwatch" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z"/>
+          <path d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64l.012-.013.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5M8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3"/>
+        </svg>
+      </button>
+      <%= link_to "Duplicados", whatsapp_plugin_project_contactos_duplicates_path(@project), class: "contacto-btn contacto-btn-ghost" %>
+      <%= link_to "Exportar CSV", whatsapp_plugin_project_contactos_export_path(@project), class: "contacto-btn contacto-btn-ghost" %>
+      <%= link_to "Exportar Excel", whatsapp_plugin_project_contactos_export_path(@project, format: "xlsx"), class: "contacto-btn contacto-btn-ghost" %>
+      <button type="button" class="contacto-btn contacto-btn-ghost" data-contacto-toggle="fields">Campos personalizados</button>
+      <button type="button" class="contacto-btn" data-contacto-toggle="create">Nuevo contacto</button>
+      <div class="contacto-header-menu">
+        <button type="button"
+                class="contacto-btn contacto-btn-ghost contacto-header-menu-toggle"
+                title="Mas acciones"
+                aria-label="Mas acciones"
+                data-contacto-header-menu-toggle="true">
+          &#x22EE;
+        </button>
+        <div class="contacto-header-dropdown is-hidden" role="menu" data-contacto-header-menu="true">
+          <div class="contacto-header-arrow" role="none"></div>
+          <div class="contacto-header-body" role="none">
+            <button type="button" class="contacto-header-item" data-contacto-toggle="create" role="menuitem">Nuevo contacto</button>
+            <button type="button" class="contacto-header-item" data-contacto-open-tag-create="true" role="menuitem">Etiquetas</button>
+            <button type="button" class="contacto-header-item" data-contacto-toggle="fields" role="menuitem">Campos personalizados</button>
+            <button type="button" class="contacto-header-item" data-contacto-open-columns-modal="true" role="menuitem">Ordenar por</button>
+            <%= link_to "Historial", whatsapp_plugin_project_contactos_history_path(@project), class: "contacto-header-item", data: { turbo: false }, role: "menuitem" %>
+            <%= link_to "Duplicados", whatsapp_plugin_project_contactos_duplicates_path(@project), class: "contacto-header-item", role: "menuitem" %>
+            <%= link_to "Exportar CSV", whatsapp_plugin_project_contactos_export_path(@project), class: "contacto-header-item", role: "menuitem" %>
+            <%= link_to "Exportar Excel", whatsapp_plugin_project_contactos_export_path(@project, format: "xlsx"), class: "contacto-header-item", role: "menuitem" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contacto-layout">
+    <div class="contacto-main">
+      <div class="contacto-table-controls">
+        <form class="contacto-advanced-form" method="get" action="<%= whatsapp_plugin_project_contactos_path(@project) %>">
+          <div class="contacto-advanced-bar" data-contacto-advanced-bar>
+            <div class="contacto-search-wrap">
+              <input id="contacto-q"
+                     name="q"
+                     type="text"
+                     value="<%= @filters[:q] %>"
+                     placeholder="Buscar en contactos"
+                     data-contacto-global-search />
+              <span class="contacto-search-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+              </span>
+              <button class="contacto-filter-icon" type="button" data-contacto-toggle-advanced aria-label="Filtros" title="Filtros">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                  <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+                </svg>
+              </button>
+            </div>
+            <div class="contacto-filter-assigned">
+              <select id="contacto-assigned-to-filter" name="assigned_to_id" title="Filtrar por responsable">
+                <option value="">Responsable</option>
+                <% @users.each do |user| %>
+                  <option value="<%= user.id %>" <%= "selected" if @filters[:assigned_to_id].to_s == user.id.to_s %>><%= user.name %></option>
+                <% end %>
+              </select>
+            </div>
+            <div class="contacto-macro-bulk" data-contacto-macro-bulk>
+              <select class="contacto-macro-select" data-contacto-macro-select>
+                <option value="">Seleccione macro</option>
+              </select>
+              <button type="button"
+                      class="contacto-btn contacto-btn-ghost contacto-macro-run"
+                      data-contacto-macro-run
+                      title="Ejecutar macro"
+                      aria-label="Ejecutar macro"
+                      disabled>
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <path d="M19.4357 13.9174C20.8659 13.0392 20.8659 10.9608 19.4357 10.0826L9.55234 4.01389C8.05317 3.09335 6.125 4.17205 6.125 5.93128L6.125 18.0688C6.125 19.828 8.05317 20.9067 9.55234 19.9861L19.4357 13.9174Z" fill="#323544"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="contacto-advanced-panel is-hidden" data-contacto-advanced-panel>
+            <div class="contacto-advanced-builder" data-contacto-filter-builder>
+              <div class="contacto-advanced-header">
+                <div class="contacto-advanced-title">Filtros avanzados</div>
+                <div class="contacto-advanced-actions">
+                  <button class="contacto-btn contacto-btn-ghost" type="button" data-contacto-add-rule>Agregar regla</button>
+                  <button class="contacto-btn contacto-btn-ghost" type="button" data-contacto-add-group>Agregar grupo</button>
+                </div>
+              </div>
+              <div class="contacto-advanced-groups" data-contacto-groups></div>
+              <div class="contacto-advanced-footer">
+                <button class="contacto-btn" type="submit" name="apply" value="1">Guardar filtro</button>
+              </div>
+            </div>
+          </div>
+
+          <input type="hidden" name="filters_json" data-contacto-filters-json value="<%= ERB::Util.html_escape(filters_json) %>" />
+        </form>
+        <div class="contacto-table-toolbar">
+          <div class="contacto-col-dropdown is-hidden" data-contacto-col-dropdown>
+            <div class="contacto-col-search">
+              <input type="text" placeholder="Buscar campo..." data-contacto-col-search />
+            </div>
+            <div class="contacto-col-list" data-contacto-col-list></div>
+          </div>
+        </div>
+        <div class="contacto-table-per-page">
+          <form method="get" action="<%= whatsapp_plugin_project_contactos_path(@project) %>">
+            <input type="hidden" name="q" value="<%= @filters[:q] %>" />
+            <input type="hidden" name="sort" value="<%= @filters[:sort] %>" />
+            <input type="hidden" name="assigned_to_id" value="<%= @filters[:assigned_to_id].to_s %>" />
+            <input type="hidden" name="filters_json" value="<%= ERB::Util.html_escape(filters_json) %>" />
+            <select id="contacto-per-page" name="per_page" onchange="this.form.submit()">
+              <% [10, 25, 50, 100, 300].each do |size| %>
+                <option value="<%= size %>" <%= "selected" if @pagination[:per_page] == size %>><%= size %></option>
+              <% end %>
+            </select>
+          </form>
+        </div>
+      </div>
+      <div class="contacto-table-wrap contacto-table-wrap-main">
+        <table class="contacto-table is-loading" data-contacto-table="true">
+          <thead>
+            <tr>
+              <th data-field="select"
+                  data-fixed="left"
+                  class="contacto-col-select is-sticky-left">
+                <input type="checkbox" data-contacto-select-all aria-label="Seleccionar todos" />
+              </th>
+              <th data-field="name" class="<%= 'is-hidden' if hidden_fields.include?('name') %>">Nombre<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="phone" class="<%= 'is-hidden' if hidden_fields.include?('phone') %>">Telefono<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="email" class="<%= 'is-hidden' if hidden_fields.include?('email') %>">Email<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="external_id" class="<%= 'is-hidden' if hidden_fields.include?('external_id') %>">External ID<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="tags" class="<%= 'is-hidden' if hidden_fields.include?('tags') %>">Tags<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="status" class="<%= 'is-hidden' if hidden_fields.include?('status') %>">Estado<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="source" class="<%= 'is-hidden' if hidden_fields.include?('source') %>">Origen<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="address" class="<%= 'is-hidden' if hidden_fields.include?('address') %>">Direccion<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="city" class="<%= 'is-hidden' if hidden_fields.include?('city') %>">Ciudad<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="state" class="<%= 'is-hidden' if hidden_fields.include?('state') %>">Estado/Provincia<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="country" class="<%= 'is-hidden' if hidden_fields.include?('country') %>">Pais<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="postal_code" class="<%= 'is-hidden' if hidden_fields.include?('postal_code') %>">Codigo postal<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="company" class="<%= 'is-hidden' if hidden_fields.include?('company') %>">Empresa<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="job_title" class="<%= 'is-hidden' if hidden_fields.include?('job_title') %>">Cargo<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="birthday" class="<%= 'is-hidden' if hidden_fields.include?('birthday') %>">Nacimiento<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="notes" class="<%= 'is-hidden' if hidden_fields.include?('notes') %>">Notas<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="points" class="<%= 'is-hidden' if hidden_fields.include?('points') %>">Puntos<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="open_email" class="<%= 'is-hidden' if hidden_fields.include?('open_email') %>">Open email<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <th data-field="registration_date"
+                  class="<%= 'is-hidden' if hidden_fields.include?('registration_date') %>">
+                Fecha de registro
+                <button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button>
+              </th>
+              <th data-field="last_interaction"
+                  class="<%= 'is-hidden' if hidden_fields.include?('last_interaction') %>">
+                Ultima Actualizacion
+                <button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button>
+              </th>
+              <th data-field="assigned_to" class="<%= 'is-hidden' if hidden_fields.include?('assigned_to') %>">Responsable<button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button></th>
+              <% @contact_fields.each do |field| %>
+                <% field_key = "custom:#{field.id}" %>
+                <th data-field="<%= field_key %>"
+                    data-field-type="<%= field.field_type %>"
+                    data-field-options="<%= ERB::Util.html_escape(Array(field.options).to_json) %>"
+                    data-field-custom-name="<%= field.name %>"
+                    class="<%= 'is-hidden' if hidden_fields.include?(field_key) %>">
+                  <%= field.name %><button class="contacto-col-chevron" type="button" title="Opciones" data-contacto-col-menu="true">&#x25BE;</button>
+                </th>
+              <% end %>
+              <th data-field="settings"
+                  data-fixed="right"
+                  class="contacto-col-settings is-sticky-right"
+                  title="Ajuste">
+                <button type="button"
+                        class="contacto-btn contacto-btn-ghost contacto-col-add"
+                        title="Agregar columnas"
+                        data-contacto-col-add="true">
+                  &#9881;
+                </button>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if @contacts.any? %>
+              <% @contacts.each do |contact| %>
+                <tr data-contacto-id="<%= contact.id %>"
+                    data-contacto-chat-id="<%= contact.chat_id.to_i %>"
+                    data-contacto-call-logged="<%= contact.last_call_activity_at.present? ? "1" : "0" %>"
+                    data-contacto-update-url="<%= whatsapp_plugin_project_contactos_update_path(@project, contact.id) %>">
+                  <td data-field="select" data-fixed="left" class="contacto-col-select is-sticky-left">
+                    <input type="checkbox"
+                           data-contacto-select-row
+                           value="<%= contact.id %>"
+                           aria-label="Seleccionar contacto" />
+                  </td>
+                  <td data-field="name"
+                      data-first-name="<%= contact.first_name.to_s %>"
+                      data-last-name="<%= contact.last_name.to_s %>"
+                      class="<%= 'is-hidden' if hidden_fields.include?('name') %>">
+                    <div class="contacto-name">
+                      <button type="button"
+                              class="contacto-name-link"
+                              data-contacto-open-edit="true">
+                        <%= [contact.first_name, contact.last_name].join(" ").strip.presence || "Sin nombre" %>
+                      </button>
+                      <% if contact.chat&.favorite %>
+                        <span class="contacto-badge">★</span>
+                      <% end %>
+                    </div>
+                    <div class="contacto-subline"><%= contact.company.to_s %></div>
+                  </td>
+                  <td data-field="phone" data-value="<%= contact.phone.to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('phone') %>">
+                    <span class="contacto-phone-cell">
+                      <button type="button"
+                              class="contacto-phone-action <%= 'is-logged' if contact.last_call_activity_at.present? %>"
+                              data-contacto-call-open
+                              title="Registrar llamada"
+                              aria-label="Registrar llamada">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone contacto-phone-icon-outline" viewBox="0 0 16 16" aria-hidden="true">
+                          <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill contacto-phone-icon-fill" viewBox="0 0 16 16" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                        </svg>
+                      </button>
+                      <span><%= contact.phone.to_s %></span>
+                    </span>
+                  </td>
+                  <td data-field="email" data-value="<%= contact.email.to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('email') %>"><%= contact.email.to_s %></td>
+                  <td data-field="external_id" data-value="<%= contact.external_id.to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('external_id') %>"><%= contact.external_id.to_s %></td>
+                  <td data-field="tags" data-value="<%= Array(contact.tags).join(', ') %>" class="<%= 'is-hidden' if hidden_fields.include?('tags') %>">
+                    <div class="contacto-tag-list"
+                         data-contacto-tag-list
+                         data-tags="<%= ERB::Util.html_escape(Array(contact.tags).to_json) %>"></div>
+                  </td>
+                  <% wp_meta = @contact_wp_meta && @contact_wp_meta[contact.id] %>
+                  <% wp_status_value = wp_meta && wp_meta[:status_name].to_s.presence ? wp_meta[:status_name].to_s : contact.status.to_s %>
+                  <td data-field="status" data-value="<%= wp_status_value %>" class="<%= 'is-hidden' if hidden_fields.include?('status') %>">
+                    <% if wp_meta && wp_meta[:work_package_id].present? %>
+                      <select class="contacto-nc-select contacto-wp-status-select"
+                              data-contacto-table-wp-status
+                              data-wp-status-work-package-id="<%= wp_meta[:work_package_id] %>"
+                              data-wp-status-current-id="<%= wp_meta[:status_id].to_s %>"
+                              data-wp-status-color="<%= wp_meta[:status_color].to_s %>">
+                        <% if wp_meta[:status_id].present? %>
+                          <option value="<%= wp_meta[:status_id] %>" data-color="<%= wp_meta[:status_color].to_s %>"><%= wp_status_value %></option>
+                        <% else %>
+                          <option value=""><%= wp_status_value.presence || "Sin estado" %></option>
+                        <% end %>
+                      </select>
+                    <% else %>
+                      <%= wp_status_value %>
+                    <% end %>
+                  </td>
+                  <td data-field="source" data-value="<%= contact.source.to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('source') %>"><%= contact.source.to_s %></td>
+                  <td data-field="address" data-value="<%= contact.address.to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('address') %>"><%= contact.address.to_s %></td>
+                  <td data-field="city" data-value="<%= contact.city.to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('city') %>"><%= contact.city.to_s %></td>
+                  <td data-field="state" data-value="<%= contact.state.to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('state') %>"><%= contact.state.to_s %></td>
+                  <td data-field="country" data-value="<%= contact.country.to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('country') %>"><%= contact.country.to_s %></td>
+                  <td data-field="postal_code" data-value="<%= contact.postal_code.to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('postal_code') %>"><%= contact.postal_code.to_s %></td>
+                  <td data-field="company" data-value="<%= contact.company.to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('company') %>"><%= contact.company.to_s %></td>
+                  <td data-field="job_title" data-value="<%= contact.job_title.to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('job_title') %>"><%= contact.job_title.to_s %></td>
+                  <td data-field="birthday" data-value="<%= contact.birthday&.strftime('%Y-%m-%d').to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('birthday') %>"><%= contact.birthday.to_s %></td>
+                  <td data-field="notes" data-value="<%= contact.notes.to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('notes') %>"><%= contact.notes.to_s %></td>
+                  <td data-field="points" data-value="<%= contact.points.to_i %>" class="<%= 'is-hidden' if hidden_fields.include?('points') %>"><%= contact.points.to_i %></td>
+                  <% open_email_count = (@contact_open_email_counts || {})[contact.id].to_i %>
+                  <td data-field="open_email" data-value="<%= open_email_count %>" class="<%= 'is-hidden' if hidden_fields.include?('open_email') %>"><%= open_email_count %></td>
+                  <td data-field="registration_date" data-value="<%= contact.created_at&.strftime('%Y-%m-%dT%H:%M').to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('registration_date') %>"><%= format_contact_time(contact.created_at) %></td>
+                  <% last_update = contact.last_interaction_at || contact.updated_at %>
+                  <td data-field="last_interaction" data-value="<%= last_update&.strftime('%Y-%m-%dT%H:%M').to_s %>" class="<%= 'is-hidden' if hidden_fields.include?('last_interaction') %>"><%= format_contact_time(last_update) %></td>
+                  <td data-field="assigned_to" data-value="<%= contact.assigned_to_id.to_i %>" class="<%= 'is-hidden' if hidden_fields.include?('assigned_to') %>"><%= contact.assigned_to&.name.to_s %></td>
+                  <% @contact_fields.each do |field| %>
+                    <% field_key = "custom:#{field.id}" %>
+                    <% values = contact.custom_fields.is_a?(Hash) ? contact.custom_fields : {} %>
+                    <% raw_value = values[field.name] %>
+                    <% display_value = raw_value.is_a?(Array) ? raw_value.join(", ") : raw_value.to_s %>
+                    <td data-field="<%= field_key %>"
+                        data-value="<%= display_value %>"
+                        data-json="<%= ERB::Util.html_escape(raw_value.to_json) %>"
+                        class="<%= 'is-hidden' if hidden_fields.include?(field_key) %>">
+                      <%= display_value %>
+                    </td>
+                  <% end %>
+                  <td data-field="settings" data-fixed="right" class="contacto-col-settings is-sticky-right">
+                    <div class="contacto-settings-menu">
+                      <button type="button"
+                              class="btn btn-basic btn-sm"
+                              data-contacto-settings>
+                        ...
+                      </button>
+                      <div class="contacto-settings-dropdown is-hidden" role="menu">
+                        <div class="contacto-settings-arrow" role="none"></div>
+                        <div class="contacto-settings-body" role="none">
+                          <button type="button"
+                                  class="contacto-settings-item"
+                                  data-contacto-edit="true"
+                                  data-contacto-edit-panel-url="<%= whatsapp_plugin_project_contactos_edit_panel_path(@project, contact.id) %>"
+                                  role="menuitem">
+                            Editar
+                          </button>
+                          <% if contact.chat_id.present? %>
+                            <%= link_to "Chat",
+                                        whatsapp_plugin_project_whatsapp_path(@project, chat_id: contact.chat_id),
+                                        class: "contacto-settings-item",
+                                        role: "menuitem" %>
+                            <button type="button"
+                                    class="contacto-settings-item"
+                                    data-contacto-favorite="true"
+                                    data-chat-id="<%= contact.chat_id %>"
+                                    role="menuitem">
+                              <%= contact.chat&.favorite ? "Quitar favorito" : "Favorito" %>
+                            </button>
+                          <% end %>
+                          <%= button_to "Eliminar",
+                                        whatsapp_plugin_project_contactos_destroy_path(@project, contact.id),
+                                        method: :delete,
+                                        class: "contacto-settings-item contacto-settings-danger",
+                                        form: { data: { contacto_confirm: "true" } } %>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              <% end %>
+            <% else %>
+              <tr>
+                <td colspan="<%= 22 + @contact_fields.size %>" class="contacto-empty">Sin contactos.</td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="contacto-table-footer">
+        <div class="contacto-results-hint">
+          <% if @pagination[:total].positive? %>
+            <% start_index = @pagination[:offset] + 1 %>
+            <% end_index = @pagination[:offset] + @contacts.size %>
+            Mostrando <%= start_index %>-<%= end_index %> de <%= @pagination[:total] %>
+          <% else %>
+            Mostrando 0 de 0
+          <% end %>
+        </div>
+        <div class="contacto-pagination">
+          <% if @pagination[:total_pages] > 1 %>
+            <% current_page = @pagination[:page] %>
+            <% total_pages = @pagination[:total_pages] %>
+            <% window_start = [current_page - 2, 1].max %>
+            <% window_end = [current_page + 2, total_pages].min %>
+            <% if window_start > 1 %>
+                <%= link_to "1", whatsapp_plugin_project_contactos_path(@project, filters_for_links.merge(per_page: @pagination[:per_page], page: 1)), class: "contacto-page" %>
+              <% if window_start > 2 %>
+                <span class="contacto-page-ellipsis">...</span>
+              <% end %>
+            <% end %>
+            <% (window_start..window_end).each do |page| %>
+              <% if page == current_page %>
+                <span class="contacto-page is-active"><%= page %></span>
+              <% else %>
+                <%= link_to page, whatsapp_plugin_project_contactos_path(@project, filters_for_links.merge(per_page: @pagination[:per_page], page: page)), class: "contacto-page" %>
+              <% end %>
+            <% end %>
+            <% if window_end < total_pages %>
+              <% if window_end < total_pages - 1 %>
+                <span class="contacto-page-ellipsis">...</span>
+              <% end %>
+              <%= link_to total_pages, whatsapp_plugin_project_contactos_path(@project, filters_for_links.merge(per_page: @pagination[:per_page], page: total_pages)), class: "contacto-page" %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <aside class="contacto-side"></aside>
+  </div>
+
+  <div class="contacto-columns-modal is-hidden" data-contacto-columns-modal aria-hidden="true">
+    <div class="contacto-columns-modal-backdrop" data-contacto-columns-close></div>
+    <div class="spot-modal spot-modal_wide contacto-columns-modal-panel" role="dialog" aria-modal="true" aria-labelledby="contacto-columns-modal-title">
+      <div id="contacto-columns-modal-title" class="spot-modal--header">Configuración de tabla de contactos</div>
+      <div class="spot-divider"></div>
+      <div class="spot-modal--body spot-container">
+        <div class="contacto-columns-modal-tabs">
+          <button type="button" class="contacto-columns-modal-tab is-active">COLUMNAS</button>
+        </div>
+        <div class="contacto-columns-modal-content">
+          <label class="contacto-columns-modal-label" for="contacto-columns-search">Añadir columnas</label>
+          <div class="contacto-columns-modal-picker">
+            <input id="contacto-columns-search"
+                   type="text"
+                   class="contacto-columns-modal-search"
+                   placeholder="Buscar una columna"
+                   data-contacto-columns-search />
+            <div class="contacto-columns-modal-available is-hidden" data-contacto-columns-available></div>
+          </div>
+
+          <div class="contacto-columns-modal-label contacto-columns-modal-label-drag">Gestionar y reordenar columnas</div>
+          <div class="contacto-columns-modal-selected" data-contacto-columns-selected></div>
+          <div class="contacto-columns-modal-status" data-contacto-columns-status></div>
+        </div>
+      </div>
+      <div class="spot-action-bar">
+        <div class="spot-action-bar--right">
+          <button type="button" class="button button_no-margin spot-modal--cancel-button spot-action-bar--action" data-contacto-columns-close>Cancelar</button>
+          <button type="button" class="button button_no-margin -primary spot-action-bar--action" data-contacto-columns-apply>Aplicar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contacto-drawer-overlay" data-contacto-overlay="fields"></div>
+  <aside class="contacto-drawer" data-contacto-panel="fields" aria-hidden="true" data-contacto-fields-panel-url="<%= whatsapp_plugin_project_contactos_fields_panel_path(@project) %>">
+    <div class="contacto-drawer-header">
+      <div class="contacto-drawer-title">Campos personalizados</div>
+      <button type="button" class="contacto-drawer-close" data-contacto-close="fields" aria-label="Cerrar">
+        &#x2715;
+      </button>
+    </div>
+    <div class="contacto-drawer-body">
+      <div data-contacto-fields-panel>
+        <%= render "contactos/fields_panel" %>
+      </div>
+    </div>
+    <div class="contacto-drawer-toolbar">
+      <button type="submit" class="contacto-btn" form="contacto-create-field-form">Crear campo</button>
+    </div>
+  </aside>
+
+  <div class="contacto-tag-create-modal is-hidden" data-contacto-tag-create-modal aria-hidden="true">
+    <div class="contacto-tag-create-backdrop" data-contacto-tag-create-close></div>
+    <div class="contacto-tag-create-dialog" role="dialog" aria-modal="true" aria-labelledby="contacto-tag-create-title">
+      <div class="contacto-tag-create-header">
+        <div>
+          <div class="contacto-drawer-title" id="contacto-tag-create-title">Etiquetas</div>
+        </div>
+      </div>
+      <div class="contacto-tag-create-body">
+        <label class="contacto-tag-create-label" for="contacto-tag-create-name">Nombre</label>
+        <input id="contacto-tag-create-name"
+               type="text"
+               class="contacto-tag-create-input"
+               placeholder="Ej. VIP, Cliente, Lead"
+               data-contacto-tag-create-name />
+        <div class="contacto-tag-create-label">Color</div>
+        <div class="contacto-tag-create-colors" data-contacto-tag-create-colors>
+          <% WhatsappContactTag::PRIMARY_COLORS.each_with_index do |color, index| %>
+            <button type="button"
+                    class="contacto-tag-create-color<%= ' is-active' if index.zero? %>"
+                    style="background-color:<%= color %>"
+                    data-contacto-tag-create-color="<%= color %>"
+                    aria-label="Seleccionar color <%= color %>"></button>
+          <% end %>
+        </div>
+        <div class="contacto-tag-create-list-wrap">
+          <div class="contacto-tag-create-list-header">
+            <span class="contacto-tag-create-label">Etiquetas creadas</span>
+            <span class="contacto-tag-create-list-hint"></span>
+          </div>
+          <div class="contacto-tag-create-list" data-contacto-tag-create-list></div>
+        </div>
+        <div class="contacto-tag-create-status" data-contacto-tag-create-status></div>
+      </div>
+      <div class="contacto-tag-create-actions">
+        <button type="button" class="contacto-btn contacto-btn-ghost" data-contacto-tag-create-close>Cancelar</button>
+        <button type="button" class="contacto-btn" data-contacto-tag-create-save>Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="contacto-drawer-overlay" data-contacto-overlay="create"></div>
+  <aside class="contacto-drawer" data-contacto-panel="create" aria-hidden="true">
+    <div class="contacto-drawer-header">
+      <div>
+        <div class="contacto-drawer-title" data-contacto-create-title>Nuevo contacto</div>
+        <div class="contacto-drawer-subtitle" data-contacto-create-external></div>
+      </div>
+      <button type="button" class="contacto-drawer-close" data-contacto-close="create" aria-label="Cerrar">
+        &#x2715;
+      </button>
+    </div>
+    <div class="contacto-drawer-body">
+      <div class="contacto-edit-main">
+        <%= render "contactos/create_panel" %>
+      </div>
+    </div>
+    <div class="contacto-drawer-toolbar">
+      <button type="button" class="contacto-btn" data-contacto-submit="create">Guardar</button>
+    </div>
+  </aside>
+
+  <div class="contacto-drawer-overlay" data-contacto-overlay="edit"></div>
+  <aside class="contacto-drawer" data-contacto-panel="edit" aria-hidden="true">
+    <div class="contacto-drawer-header">
+      <div class="contacto-drawer-title" data-contacto-edit-title>Editar contacto</div>
+      <button type="button" class="contacto-drawer-close" data-contacto-close="edit" aria-label="Cerrar">
+        &#x2715;
+      </button>
+    </div>
+    <div class="contacto-drawer-body">
+      <div class="contacto-edit-main" data-contacto-edit-body>
+        <div class="contacto-drawer-empty">Selecciona un contacto para editar.</div>
+      </div>
+      <div class="contacto-edit-extra" data-nextcloud-init="true">
+        <div class="contacto-field-label-row"><label class="contacto-field-label">Paquete de Trabajo</label></div>
+        <div class="contacto-nc-input-wrap">
+          <input type="text"
+                 class="contacto-nc-input"
+                 data-contacto-work-package
+                 placeholder="Work Package"
+                 readonly
+                 disabled />
+          <button type="button"
+                  class="contacto-nc-input-action"
+                  data-contacto-work-package-open
+                  aria-label="Abrir paquete de trabajo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-up-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M6.364 13.5a.5.5 0 0 0 .5.5H13.5a1.5 1.5 0 0 0 1.5-1.5v-10A1.5 1.5 0 0 0 13.5 1h-10A1.5 1.5 0 0 0 2 2.5v6.636a.5.5 0 1 0 1 0V2.5a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5H6.864a.5.5 0 0 0-.5.5"/>
+              <path fill-rule="evenodd" d="M11 5.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793l-8.147 8.146a.5.5 0 0 0 .708.708L10 6.707V10.5a.5.5 0 0 0 1 0z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="contacto-nc-row">
+          <div class="contacto-field-label-row"><label class="contacto-field-label">Estado</label></div>
+          <select class="contacto-nc-select" data-contacto-work-package-status disabled></select>
+        </div>
+        <div class="contacto-call-history" data-contacto-call-history>
+          <div class="contacto-field-label-row"><label class="contacto-field-label">Historial de llamada</label></div>
+          <div class="contacto-call-history-list" data-contacto-call-history-list>
+            <div class="contacto-call-history-empty">Sin historial de llamadas.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contacto-drawer-toolbar">
+      <button type="button" class="contacto-btn" data-contacto-submit="edit">Guardar</button>
+    </div>
+  </aside>
+
+  <div class="contacto-call-modal is-hidden" data-contacto-call-modal aria-hidden="true">
+    <div class="contacto-call-modal-backdrop" data-contacto-call-close></div>
+    <div class="contacto-call-modal-panel" role="dialog" aria-modal="true" aria-label="Registrar llamada">
+      <div class="contacto-call-modal-header">
+        <div class="contacto-call-modal-title">Registrar llamada</div>
+        <button type="button" class="contacto-call-modal-close" data-contacto-call-close aria-label="Cerrar">×</button>
+      </div>
+      <div class="contacto-call-modal-body">
+        <div class="contacto-call-row">
+          <label for="contacto-call-outcome">Resultado de llamada</label>
+          <select id="contacto-call-outcome" data-contacto-call-outcome>
+            <option value="">Seleccione</option>
+            <option value="Ocupado">Ocupado</option>
+            <option value="Avanzo la conversacion">Avanzo la conversacion</option>
+            <option value="Interesado">Interesado</option>
+            <option value="No contesta">No contesta</option>
+            <option value="Numero equivocado">Numero equivocado</option>
+            <option value="No interesado">No interesado</option>
+            <option value="Aplazado">Aplazado</option>
+          </select>
+        </div>
+        <div class="contacto-call-row">
+          <label for="contacto-call-note">Nota</label>
+          <textarea id="contacto-call-note" rows="5" data-contacto-call-note placeholder="Escribe una nota de la llamada..."></textarea>
+        </div>
+        <div class="contacto-call-row contacto-call-recorder" data-contacto-call-recorder>
+          <label>Grabacion</label>
+          <audio preload="auto"
+                 class="contacto-call-recorder-audio is-hidden"
+                 data-contacto-call-recorder-audio></audio>
+          <div class="contacto-call-waveform is-hidden" data-contacto-call-waveform>
+            <canvas class="contacto-call-waveform-canvas"
+                    data-contacto-call-waveform-canvas
+                    width="640"
+                    height="88"></canvas>
+            <div class="contacto-call-waveform-ruler" data-contacto-call-waveform-ruler>
+              <span>0:00</span>
+              <span>0:00</span>
+              <span>0:00</span>
+              <span>0:00</span>
+              <span>0:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contacto-call-modal-actions">
+        <button type="button" class="contacto-btn contacto-btn-ghost" data-contacto-call-dial>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+          </svg>
+          Llamar
+        </button>
+        <button type="button" class="contacto-btn" data-contacto-call-save>Registrar llamada</button>
+        <button type="button" class="contacto-btn contacto-btn-ghost" data-contacto-call-close>Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="contacto-pause-modal is-hidden" data-contacto-pause-modal aria-hidden="true">
+    <div class="contacto-pause-modal-backdrop" data-contacto-pause-close></div>
+    <div class="contacto-pause-modal-panel" role="dialog" aria-modal="true" aria-label="Pausa breve">
+      <div class="contacto-pause-modal-header">
+        <div class="contacto-pause-modal-title">Pausa breve</div>
+        <button type="button" class="contacto-call-modal-close" data-contacto-pause-close aria-label="Cerrar">&#x2715;</button>
+      </div>
+      <div class="contacto-pause-modal-body">
+        <div class="contacto-pause-modal-timer" data-contacto-pause-timer>00:00:00</div>
+        <div class="contacto-pause-modal-hint" data-contacto-pause-hint>Inicia para comenzar a medir tu pausa.</div>
+      </div>
+      <div class="contacto-pause-modal-actions">
+        <button type="button" class="contacto-btn contacto-btn-ghost" data-contacto-pause-start>Iniciar</button>
+        <button type="button" class="contacto-btn" data-contacto-pause-finish disabled="disabled">Finalizar</button>
+      </div>
+    </div>
+  </div>
+</div>

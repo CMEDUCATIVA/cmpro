@@ -1,0 +1,73 @@
+<%= stylesheet_link_tag "contacto", media: "all" %>
+<%= javascript_include_tag "contacto", nonce: true, data: { turbo_track: "reload" } %>
+
+<div class="contacto-shell"
+     data-contacto-project="<%= @project.id %>"
+     data-contacto-tags="<%= ERB::Util.html_escape(@tag_map.to_json) %>"
+     data-contacto-tags-upsert-url="<%= whatsapp_plugin_project_contactos_tags_upsert_path(@project) %>"
+     data-contacto-tags-color-url="<%= whatsapp_plugin_project_contactos_tags_color_path(@project, "__ID__") %>"
+     data-contacto-tags-rename-url="<%= whatsapp_plugin_project_contactos_tags_rename_path(@project, "__ID__") %>"
+     data-contacto-tags-destroy-url="<%= whatsapp_plugin_project_contactos_tags_destroy_path(@project, "__ID__") %>"
+     data-contacto-tags-admin="<%= User.current.admin? %>">
+  <div class="contacto-header">
+    <div>
+      <div class="contacto-title"><%= [@contact.first_name, @contact.last_name].join(" ").strip.presence || "Contacto" %></div>
+      <div class="contacto-subtitle"><%= @contact.company.to_s %></div>
+    </div>
+    <div class="contacto-actions">
+      <%= link_to "Volver", whatsapp_plugin_project_contactos_path(@project), class: "contacto-btn contacto-btn-ghost" %>
+      <% if @contact.chat_id.present? %>
+        <%= link_to "Abrir chat", whatsapp_plugin_project_whatsapp_path(@project, chat_id: @contact.chat_id), class: "contacto-btn" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="contacto-layout">
+    <div class="contacto-main">
+      <div class="contacto-card">
+        <div class="contacto-card-title">Detalles</div>
+        <div class="contacto-grid">
+          <div>
+            <label>Telefono</label>
+            <div><%= @contact.phone.to_s %></div>
+          </div>
+          <div>
+            <label>Email</label>
+            <div><%= @contact.email.to_s %></div>
+          </div>
+          <div>
+            <label>Estado</label>
+            <div><%= @contact.status.to_s %></div>
+          </div>
+          <div>
+            <label>Origen</label>
+            <div><%= @contact.source.to_s %></div>
+          </div>
+          <div>
+            <label>Puntos</label>
+            <div><%= @contact.points.to_i %></div>
+          </div>
+          <div>
+            <label>Responsable</label>
+            <div><%= @contact.assigned_to&.name.to_s %></div>
+          </div>
+          <div>
+            <label>Tags</label>
+            <div>
+              <div class="contacto-tag-list"
+                   data-contacto-tag-list
+                   data-tags="<%= ERB::Util.html_escape(Array(@contact.tags).to_json) %>"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="contacto-side">
+      <div class="contacto-card">
+        <div class="contacto-card-title">Editar contacto</div>
+        <%= render "contactos/edit_panel", contact: @contact %>
+      </div>
+    </aside>
+  </div>
+</div>

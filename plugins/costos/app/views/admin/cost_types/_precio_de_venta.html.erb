@@ -1,0 +1,9 @@
+<%# Columna "Precio de venta" - obtiene el CostRate vigente y muestra sale_rate %>
+<%
+  fixed_date = local_assigns.fetch(:fixed_date, Time.zone.today)
+  rate_source = cost_type.rate_at(fixed_date) || cost_type.rates.order(valid_from: :desc).first
+  sale_rate_value = rate_source&.sale_rate
+  display_rate = sale_rate_value.nil? ? nil : Struct.new(:rate).new(sale_rate_value)
+  display_value = sale_rate_value.nil? ? "" : to_currency_with_empty(display_rate)
+%>
+<%= content_tag :td, display_value, class: "currency" %>

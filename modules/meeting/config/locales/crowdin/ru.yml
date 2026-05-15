@@ -1,0 +1,475 @@
+#-- copyright
+#OpenProject is an open source project management software.
+#Copyright (C) the OpenProject GmbH
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License version 3.
+#OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+#Copyright (C) 2006-2013 Jean-Philippe Lang
+#Copyright (C) 2010-2013 the ChiliProject Team
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License
+#as published by the Free Software Foundation; either version 2
+#of the License, or (at your option) any later version.
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with this program; if not, write to the Free Software
+#Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#See COPYRIGHT and LICENSE files for more details.
+#++
+#English strings go here for Rails i18n
+ru:
+  plugin_openproject_meeting:
+    name: "Совещание OpenProject"
+    description: >-
+      Этот модуль добавляет поддержку совещаний в проектах. Совещания могут быть запланированы, выбрав приглашенных из того же проекта. Повестка дня может быть создана и отправлена приглашенным лицам. После совещания можно выбрать участников и создать протокол на основе повестки дня. Протокол может быть отправлен всем участникам и приглашенным.
+  activerecord:
+    attributes:
+      meeting:
+        type: "Тип совещания"
+        location: "Расположение"
+        duration: "Длительность"
+        notes: "Заметки"
+        participants: "Участники"
+        participant:
+          one: "1 Участник"
+          few: "%{count} Участников"
+          many: "%{count} Участников"
+          other: "%{count} Участников"
+        participants_attended: "Участники"
+        participants_invited: "Приглашенные"
+        project: "Проект"
+        start_date: "Дата"
+        start_time: "Время начала"
+        start_time_hour: "Время начала"
+      meeting_agenda_item:
+        title: "Заголовок"
+        author: "Автор"
+        duration_in_minutes: "мин"
+        description: "Примечания"
+        presenter: "Ведущий"
+      meeting_section:
+        title: "Заголовок"
+      recurring_meeting:
+        frequency: "Частота"
+        interval: "Промежуток"
+        start_date: "Начинается"
+        start_time: "Время начала"
+        start_time_hour: "Время начала"
+        end_after: "Серия совещаний заканчивается"
+        end_date: "Дате окончания"
+        iterations: "События"
+    errors:
+      models:
+        recurring_meeting:
+          must_cover_existing_meetings:
+            one: "В серии есть одно открытое совещание, которое не включено в новый график. Измените график, чтобы включить все существующие совещания."
+            other: "В серии есть %{count} открытых совещаний, которые не включены в новый график. Измените график, чтобы включить все существующие совещания."
+            format: "%{message}"
+      messages:
+        invalid_time_format: "недопустимое время. Требуемый формат: ЧЧ:ММ"
+    models:
+      recurring_meeting: "Повторяющееся совещание"
+      meeting: "Однократное совещание"
+      meeting_agenda_item: "Пункт повестки"
+      meeting_agenda: "Повестка дня"
+      meeting_section: "Раздел"
+  activity:
+    filter:
+      meeting: "Совещания"
+    item:
+      meeting_agenda_item:
+        duration:
+          added: "установлено в %{value}"
+          added_html: "установлено в <i>%{value}</i>"
+          removed: "удалено"
+          updated: "изменено с %{old_value} на %{value}"
+          updated_html: "изменено с <i>%{old_value}</i> на <i>%{value}</i>"
+        position:
+          updated: "переупорядочено"
+        work_package:
+          updated: "изменено с %{old_value} на %{value}"
+          updated_html: "изменено с <i>%{old_value}</i> на <i>%{value}</i>"
+  description_attended: "участие"
+  description_invite: "приглашено"
+  events:
+    meeting: Совещание изменено
+    meeting_agenda: Повестка совещания изменена
+    meeting_agenda_closed: Повестка совещания закрыта
+    meeting_agenda_opened: Повестка совещания открыта
+    meeting_minutes: Править  протокол заседания
+    meeting_minutes_created: Создан протокол заседания
+  error_notification_with_errors: "Не удалось отправить уведомление. Следующие получатели не могут быть уведомлены: %{recipients}"
+  label_meeting: "Совещание"
+  label_meeting_plural: "Совещания"
+  label_meeting_new: "Новое совещание"
+  label_meeting_new_dynamic: "Новое однократное совещание"
+  label_meeting_new_recurring: "Новое повторяющееся совещание"
+  label_meeting_create: "Создать совещание"
+  label_meeting_copy: "Копировать совещание"
+  label_meeting_edit: "Измененить совещание"
+  label_meeting_agenda: "Повестка дня"
+  label_meeting_minutes: "Протокол(-ы)"
+  label_meeting_close: "Закрыть"
+  label_meeting_open: "Открыть"
+  label_meeting_index_delete: "Удалить"
+  label_meeting_open_this_meeting: "Открыть это совещание"
+  label_meeting_agenda_close: "Закрыть повестку для начала протоколирования"
+  label_meeting_date_time: "Дата/Время"
+  label_meeting_date_and_time: "Дата и время"
+  label_meeting_diff: "Различия"
+  label_recurring_meeting: "Повторяющееся совещание"
+  label_recurring_meeting_part_of: "Часть серии совещаний"
+  label_recurring_meeting_new: "Новое повторяющееся совещание"
+  label_recurring_meeting_plural: "Повторяющиеся совещания"
+  label_template: "Шаблон"
+  label_recurring_meeting_view: "Посмотреть серию совещаний"
+  label_recurring_meeting_create: "Открыть"
+  label_recurring_meeting_copy: "Копировать как одноразовое"
+  label_recurring_meeting_cancel: "Отменить это событие"
+  label_recurring_meeting_delete: "Удалить событие"
+  label_recurring_meeting_restore: "Восстановить это событие"
+  label_recurring_meeting_schedule: "Расписание"
+  label_recurring_meeting_next_occurrence: "Следующее событие"
+  label_recurring_meeting_no_end_date: "Есть и другие запланированные совещания (%{schedule})."
+  label_recurring_meeting_more:
+    one: "Есть еще одно запланированное совещание (%{schedule})."
+    few: "Есть еще %{count} запланированных совещаний (%{schedule})."
+    many: "Есть еще %{count} запланированных совещаний (%{schedule})."
+    other: "Есть еще %{count} запланированных совещаний (%{schedule})."
+  label_recurring_meeting_more_past:
+    one: "Есть еще одно прошедшее совещание."
+    few: "Есть еще %{count} прошедших совещаний."
+    many: "Есть еще %{count} прошедших совещаний."
+    other: "Есть еще %{count} прошедших совещаний."
+  label_recurring_meeting_show_more: "Показать больше"
+  label_recurring_meeting_series_create: "Создать серию совещаний"
+  label_recurring_meeting_series_edit: "Изменить серию совещаний"
+  label_recurring_meeting_series_delete: "Удалить серию совещаний"
+  label_recurring_meeting_series_end: "Завершить серию совещаний"
+  label_recurring_meeting_series_end_now: "Завершите серию сейчас"
+  label_meeting_more:
+    one: "Есть еще одно совещание."
+    few: "Есть еще %{count} совещания."
+    many: "Есть еще %{count} совещаний."
+    other: "Есть еще %{count} совещаний."
+  label_my_meetings: "Мои совещания"
+  label_all_meetings: "Все совещания"
+  label_upcoming_meetings: "Предстоящие совещания"
+  label_past_meetings: "Прошедшие совещания"
+  label_upcoming_meetings_short: "Предстоящие"
+  label_past_meetings_short: "Прошедшие"
+  label_involvement: "Вовлеченность"
+  label_invitations: "Приглашения"
+  label_invited_user: "Приглашенный пользователь"
+  label_past_invitations: "Прошлые приглашения"
+  label_attended: "Участвовал"
+  label_attended_user: "Участвовавший пользователь"
+  label_created_by_me: "Создано мной"
+  label_notify: "Отправка на рецензию"
+  label_icalendar: "Отправить iCalendar"
+  label_icalendar_download: "Скачать мероприятие iCalendar"
+  label_view_meeting_series: "Посмотреть серию совещаний"
+  label_meeting_series: "Серия совещаний"
+  label_version: "Версия"
+  label_time_zone: "Часовой пояс"
+  label_start_date: "Дата начала"
+  meeting:
+    participants:
+      template: "Эти участники будут автоматически приглашаться на все будущие совещания по мере их создания."
+    attachments:
+      template: "Эти прикрепленные файлы будут включены во все последующие совещания этой серии."
+      text: "Прикрепленные файлы доступны всем участникам совещания. Вы также можете перенести их в примечания к пунктам повестки дня."
+    copy:
+      title: "Копировать совещание %{title}"
+      attachments: "Копировать вложения"
+      attachments_text: "Копировать все прикрепленные файлы в новое совещание"
+      agenda: "Копировать повестку"
+      agenda_items: "Копировать пункты повестки дня"
+      agenda_text: "Копировать повестку старого совещания"
+      participants: "Копировать список участников"
+      to_clipboard: "Копировать в буфер обмена"
+    email:
+      send_emails: "Отправить email участникам"
+      send_invitation_emails: >
+        Немедленно отправьте приглашение по электронной почте участникам, выбранным выше. Вы также можете сделать это вручную в любое время позже.
+      send_invitation_emails_structured: "Отправить приглашение по электронной почте сразу всем участникам. Вы также можете сделать это вручную в любое время."
+      open_meeting_link: "Открыть совещание"
+      open_my_meetings_link: "Перейти к списку моих совещаний"
+      series:
+        title: "[%{project_name}] Серия совещаний '%{title}'"
+        summary: "%{actor} создал новую серию совещаний '%{title}'"
+      series_rescheduled:
+        title: "[%{project_name}] Серия совещаний '%{title}' перенесена"
+        summary: "%{actor} изменил расписание серии совещаний '%{title}'"
+        old_schedule: "Старое расписание"
+        new_schedule: "Новое расписание"
+      invited:
+        summary: "%{actor} отправил вам приглашение на совещание '%{title}'"
+      cancelled:
+        header: "Отменено: совещание '%{title}'"
+        header_occurrence: "Отменено: событие совещания '%{title}'"
+        header_series: "Отменено: серия совещаний '%{title}'"
+        summary_occurrence: "Событие '%{title}' было отменено %{actor}."
+        summary_series: "Серия совещаний '%{title}' была отменена %{actor}."
+        summary: "'%{title}' было отменено %{actor}."
+        date_time: "Запланированная дата/время"
+      rescheduled:
+        header: "Совещание '%{title}' было перенесено"
+        summary: "Совещание '%{title}' было перенесено %{actor}"
+        body: "Совещание '%{title}' было перенесено %{actor}."
+        old_date_time: "Старые дата/время"
+        new_date_time: "Новые дата/время"
+    label_mail_all_participants: "Отправить письмо всем участникам"
+    types:
+      one_time: "Однократная"
+      recurring: "Периодичность"
+      recurring_text: "Создать серию совещаний с динамическим шаблоном для каждого события."
+      structured_text: "Организуйте своё совещание в виде списка пунктов повестки, при необходимости связав их с пакетом работ."
+      structured_text_copy: "При копировании совещания в настоящее время не скопируются связанные с ним пункты повестки, будут скопированы только детали"
+    copied: "Скопировано с совещания #%{id}"
+    delete_dialog:
+      one_time:
+        title: "Удалить совещание"
+        heading: "Удалить это совещание?"
+        confirmation_message_html: >
+          Это действие не обратимо. Пожалуйста, действуйте с осторожностью.
+      occurrence:
+        title: "Отменить это событие"
+        heading: "Отменить это событие?"
+        confirmation_message_html: >
+          Любая информация о совещании, не включенная в шаблон, будет потеряна. Вы хотите продолжить?
+        confirm_button: "Отменить событие"
+    blankslate:
+      title: "Нет совещаний для отображения"
+      desc: "Нет совещаний, удовлетворяющих критериям активного фильтра."
+    label_export_pdf: "Экспорт в PDF"
+    export:
+      your_meeting_export: "Совещание экспортируется"
+    export_pdf_dialog:
+      title: Экспорт в PDF
+      description: Создать печатный PDF-файл этого совещания в текущем состоянии.
+      include_participants:
+        label: Включить список участников
+        caption: Список участников будет представлен выше повестки дня совещания.
+      include_attachments:
+        label: Включить список вложений
+        caption: Список с именами файлов вложений будет добавлен в конце.
+      include_backlog:
+        label: Включить бэклог
+        caption: Элементы бэклога обычно не считаются частью совещания, но вы можете включить их.
+      include_outcomes:
+        label: Включить итоги повестки дня
+        caption: Если результаты вашей повестки дня содержат конфиденциальную информацию, вы можете не включать их в экспорт.
+      footer_text:
+        label: Текст нижнего колонтитула
+        caption: Этот текст появится на каждой странице с правой стороны нижнего колонтитула.
+      submit_button: Скачать
+  meeting_section:
+    untitled_title: "Раздел без названия"
+    delete_confirmation: "Удаление раздела также удалит все пункты его повестки дня. Вы уверены, что хотите это сделать?"
+    placeholder_title: "Новый раздел"
+    empty_text: "Перенесите элементы сюда или создайте новые"
+  recurring_meeting:
+    ended_blankslate:
+      title: "Серия совещаний закончена"
+      message: "Эта серия совещаний подошла к концу. Предстоящих совещаний не будет. "
+      action: "Вы по-прежнему можете просматривать прошедшие совещания или редактировать серию совещаний, чтобы расширить ее."
+    occurrence:
+      infoline: "Это совещание является частью повторяющейся серии совещаний."
+      error_no_next: "Следующее событие для этого совещания не состоится."
+      first_already_exists: "Первое событие этой серии совещаний уже произошло."
+      first_created: >
+        Первое совещание было успешно создано из шаблона. Все последующие совещания будут создаваться автоматически в момент предыдущего.
+    template:
+      button_finalize: "Открыть первое совещание"
+      blank_title: "Ваш шаблон серии совещаний пуст"
+      description: >
+        Этот шаблон будет использоваться каждый раз, когда будут создаваться новые совещания в серии. Вы можете добавить в этот шаблон пункты повестки дня, участников и вложения.
+      blankslate_finalize: >
+        По завершении подготовки шаблона нажмите кнопку '%{button_title}', чтобы завершить установку и запланировать первое совещание этой серии.
+      label_view_template: "Посмотреть шаблон"
+      label_edit_template: "Изменить шаблон"
+      banner_html: >
+        В настоящее время вы редактируете шаблон серии совещаний: %{link}. Каждое новое совещание в этой серии будет использовать этот шаблон. Изменения не повлияют на прошлые или уже созданные совещания.
+    frequency:
+      x_daily:
+        one: "Каждый день"
+        few: "Каждые %{count} дня"
+        many: "Каждые %{count} дней"
+        other: "Каждые %{count} дней"
+      x_weekly:
+        one: "Каждую неделю"
+        few: "Каждые %{count} недели"
+        many: "Каждые %{count} недели"
+        other: "Каждые %{count} недели"
+      every_weekday: "Каждый %{day_of_the_week}"
+      working_days: "Каждый рабочий день"
+    end_after:
+      never: "никогда"
+      specific_date: "после конкретной даты"
+      iterations: "после нескольких событий"
+    starts: "Начало"
+    in_words:
+      daily_interval: "Каждые %{interval} дней"
+      working_days: "Каждый рабочий день"
+      weekly: "Каждую неделю в %{weekday}"
+      weekly_interval: "Каждые %{interval} недель в %{weekday}"
+      frequency: "%{base} в %{time}"
+      full: "%{base} в %{time}, заканчивается %{end_date}"
+      full_past: "%{base} в %{time}, закончился %{end_date}"
+      never_ending: "%{base} в %{time}"
+    open:
+      title: "Повестка дня открыта"
+      subtitle: >
+        Открытые совещания имеют повестки дня, которые могут быть отредактированы и показаны в разделе «Мои совещания». Изменения в шаблоне серии совещаний не влияют на уже открытые совещания.
+      blankslate:
+        title: "В данный момент открытых совещаний нет"
+        desc: "Вы можете вручную открыть запланированное совещание, нажав на кнопку Открыть"
+    planned:
+      title: "Запланированно"
+      subtitle: >
+        Следующие совещания запланированы в расписании повторяющихся совещаний, но пока не открыты. Каждый раз, когда начинается запланированное совещание, для вас автоматически откроется следующее совещание. Вы также можете вручную открыть запланированные совещания, чтобы импортировать шаблон и начать редактировать повестку дня.
+      blankslate:
+        title: "Больше нет запланированных совещаний"
+        desc: >
+          В этой серии дополнительных совещаний не запланировано. Чтобы запланировать дополнительные совещания или продлить серию, перейдите к шаблону и отредактируйте детали, чтобы изменить дату окончания, частоту или интервал.
+    delete_dialog:
+      title: "Удалить серию совещаний"
+      heading: "Удалить эту серию совещаний навсегда?"
+      confirmation_message_html:
+        zero: >
+          Серия совещаний <strong>%{title}</strong> не содержит ни одного совещания. Серия будет удалена для всех. Пожалуйста, действуйте с осторожностью.
+        one: >
+          Удаление <strong>%{title}</strong> также удалит одно вхождение в эту серию. Это действие необратимо. Пожалуйста, действуйте с осторожностью.
+        other: >
+          Удаление <strong>%{title}</strong> удалит все %{count} вхождений в эту серию. Это действие необратимо. Пожалуйста, действуйте с осторожностью.
+    scheduled_delete_dialog:
+      title: "Отменить это событие"
+      heading: "Отменить это событие?"
+      confirmation_message_html: >
+        Любая информация о совещании, не включенная в шаблон, будет потеряна. Вы хотите продолжить?
+      confirm_button: "Отменить событие"
+    end_series_dialog:
+      title: "Завершить серию совещаний"
+  notice_successful_notification: "Уведомление успешно отправленно"
+  notice_timezone_missing: Не установлен часовой пояс и применена %{zone}. Чтобы выбрать часовой пояс, пожалуйста, нажмите сюда.
+  notice_meeting_updated: "Эта страница была обновлена кем-то другим. Перезагрузите страницу, чтобы просмотреть изменения."
+  permission_create_meetings: "Создание совещания"
+  permission_edit_meetings: "Изменить совещания"
+  permission_delete_meetings: "Удалить совещания"
+  permission_view_meetings: "Просмотреть совещания"
+  permission_manage_agendas: "Управление повестками"
+  permission_manage_agendas_explanation: "Позволяет управлять пунктами повестки для Динамического совещания."
+  permission_manage_outcomes: "Управление результатами"
+  permission_send_meeting_invites_and_outcomes: "Рассылать приглашения на собрания и результаты их проведения участникам"
+  project_module_meetings: "Совещания"
+  text_duration_in_hours: "Длительность в часах"
+  text_in_hours: "в часах"
+  text_meeting_agenda_for_meeting: 'Повестка дня встречи «%{meeting}»'
+  text_meeting_series_end_early_heading: "Удалить будущие события?"
+  text_meeting_series_end_early: "Завершение серии удалит любые будущие открытые или запланированные события совещания"
+  text_meeting_closing_are_you_sure: "Вы уверены, что хотите закрыть повестку дня собрания?"
+  text_meeting_agenda_open_are_you_sure: "Все изменения в протоколах будут перезаписаны! Продолжить?"
+  text_meeting_minutes_for_meeting: 'Протокол совещания «%{meeting}»'
+  text_notificiation_invited: "Это сообщение содержит запись ics для совещания ниже:"
+  text_meeting_empty_heading: "Совещание пусто"
+  text_meeting_empty_description1: "Начните с добавления пунктов повестки ниже. Каждый пункт может быть простым, как заголовок, но вы также можете добавить дополнительные сведения, такие как продолжительность и примечания."
+  text_meeting_empty_description2: 'Вы также можете добавить ссылки на существующие пакеты работ. Когда вы это сделаете, соответствующие заметки будут автоматически отображаться на вкладке «Совещания» пакета работ.'
+  label_meeting_empty_action: "Добавить пункт повестки"
+  label_meeting_actions: "Действия совещания"
+  label_meeting_edit_title: "Изменить название совещания"
+  label_meeting_delete: "Удалить совещание"
+  label_meeting_created_by: "Автор"
+  label_meeting_last_updated: "Последнее обновление"
+  label_meeting_reload: "Перезагрузить"
+  label_meeting_index_today: "Сегодня"
+  label_meeting_index_tomorrow: "Завтра"
+  label_meeting_index_this_week: "Позже на этой неделе"
+  label_meeting_index_later: "На следующей неделе и позже"
+  label_agenda_items: "Пункты повестки"
+  label_agenda_items_reordered: "переупорядочено"
+  label_agenda_item_add: "Добавить пункт повестки"
+  label_agenda_item_remove_from_agenda: "Исключить из повестки"
+  label_agenda_item_remove_from_backlog: "Удалить из бэклога"
+  label_agenda_item_undisclosed_wp: "Пакет работ #%{id} невидим"
+  label_agenda_item_deleted_wp: "Ссылка на удалённый пакет работ"
+  label_agenda_item_actions: "Действия по пунктам повестки"
+  label_agenda_item_move_to_next: "Переместить на следующее совещание"
+  label_agenda_item_move_to_backlog: "Переместить в бэклог"
+  label_agenda_item_move_to_current_meeting: "Переместить на текущую встречу"
+  label_agenda_item_move_to_top: "В начало"
+  label_agenda_item_move_to_bottom: "В конец"
+  label_agenda_item_move_up: "Вверх"
+  label_agenda_item_move_down: "Вниз"
+  label_agenda_item_add_notes: "Добавить заметки"
+  label_agenda_item_add_outcome: "Добавить расход"
+  label_agenda_item_work_package_add: "Добавить пакет работ"
+  label_agenda_item_work_package: "Пакет работ по пунктам повестки"
+  label_section_rename: "Переименовать раздел"
+  label_agenda_outcome: "Расход"
+  label_agenda_outcome_actions: "Действия по расходам"
+  label_agenda_outcome_edit: "Редактировать результат"
+  label_agenda_outcome_delete: "Удалить результат"
+  text_outcome_not_editable_anymore: "Этот результат больше не редактируется."
+  text_outcome_cannot_be_added: "Результат больше нельзя добавить."
+  label_backlog_clear: "Очистить бэклог"
+  label_backlog_clear_button: "Очистить все"
+  text_backlog_clear_error: "При попытке очистить бэклог произошла одна или несколько ошибок."
+  label_agenda_backlog: "Накопившееся отставание в повестке дня"
+  text_agenda_backlog: >
+    Этот список невыполненных работ уникален для данного разового собрания. Вы можете перетаскивать элементы, чтобы добавлять или удалять их из повестки дня собрания.
+  label_agenda_backlog_clear_title: "Очистить бэклог по повестке дня?"
+  text_agenda_backlog_clear_description: >
+    Вы уверены, что хотите удалить все пункты повестки дня? Это действие необратимо.
+  label_series_backlog: "Журнал серий"
+  text_series_backlog: >
+    Бэклог используется для всех вхождений этой серии. Вы можете перетащить элементы из и обратно для их добавления или удаления с конкретной встречи.
+  label_series_backlog_clear_title: "Очистить бэклог серии?"
+  text_series_backlog_clear_description: >
+    Это приведет к удалению всех элементов в бэклоге серии, который разделен со всеми встречами в этой серии. Вы уверены, что хотите продолжить? Это действие необратимо.
+  text_agenda_item_title: 'Пункт повестки "%{title}"'
+  text_agenda_work_package_deleted: 'Пункт повестки для удаленного пакета работ'
+  text_deleted_agenda_item: 'Удаленный пункт повестки'
+  label_initial_meeting_details: "Встреча"
+  label_meeting_details: "Детали совещания"
+  label_meeting_series_details: "Подробности серии совещаний"
+  label_meeting_details_edit: "Изменить сведения о совещании"
+  label_meeting_state: "Статус совещания"
+  label_meeting_state_open: "Открыть"
+  label_meeting_state_closed: "Закрыть"
+  label_meeting_state_agenda_created: "Повестка дня создана"
+  label_meeting_state_planned: "Запланировано"
+  label_meeting_state_cancelled: "Отменено"
+  label_meeting_state_skipped: "Пропущен"
+  label_meeting_state_in_progress: "В процессе"
+  label_meeting_reopen_action: "Открыть совещание заново"
+  label_meeting_close_action: "Закрыть совещание"
+  label_meeting_in_progress_action: "Начать совещание"
+  text_meeting_open_description: "Совещание открыто. Вы можете добавлять/удалять пункты повестки дня и редактировать их так, как захотите. Как только повестка дня будет готова, отметьте ее как \"в процессе\" для документирования результатов."
+  text_meeting_closed_description: "Это совещание является закрытым. Вы не можете добавлять/удалять пункты повестки."
+  text_meeting_in_progress_description: "Совещание в процессе. Вы можете документировать результаты для каждого пункта повестки дня, переупорядочить их и даже добавить новые. После завершения совещания вы можете пометить его как закрытое для блокировки."
+  text_meeting_open_dropdown_description: "Любые существующие результаты останутся, но пользователи не смогут добавлять новые результаты."
+  text_meeting_in_progress_dropdown_description: "Итоги совещания, такие как информация или решения, принятые в ходе совещания."
+  text_meeting_closed_dropdown_description: "Совещание закрыто. Вы больше не можете изменять пункты повестки дня или его результаты."
+  label_meeting_manage_participants: "Управление участниками"
+  label_meeting_no_participants: "Нет участников"
+  label_meeting_show_hide_participants: "Показать/скрыть %{count} больше"
+  label_meeting_show_all_participants: "Показать все"
+  label_meeting_add_participants: "Добавить участников"
+  text_meeting_not_editable_anymore: "Это совещание больше нельзя редактировать."
+  text_meeting_not_present_anymore: "Это совещание было удалено. Пожалуйста, выберите другое."
+  label_add_work_package_to_meeting_dialog_title: "Добавить пакет работ в совещание"
+  label_add_work_package_to_meeting_dialog_button: "Добавить в совещание"
+  label_meeting_selection_caption: "Этот пакет работ можно добавить только к открытым предстоящим встречам."
+  text_add_work_package_to_meeting_description: "Пакет работ может быть добавлен к одному или нескольким совещаниям для обсуждения. Любые заметки об этом также видны здесь."
+  text_agenda_item_no_notes: "Примечания отсутствуют"
+  text_agenda_item_not_editable_anymore: "Этот пункт повестки больше не редактируется."
+  text_agenda_item_move_next_meeting: "Вы уверены, что хотите перенести это на следующее совещание на %{date} в %{time}?"
+  text_agenda_item_moved_to_next_meeting: "Пункт повестки дня перенесен на следующее совещание на %{date}"
+  text_work_package_has_no_upcoming_meeting_agenda_items: "Этот пакет работ пока не включен в повестку предстоящего совещания."
+  text_agenda_item_move_next_meeting_cancelled: "Не удалось переместить на следующее совещание, так как оно было отменено."
+  text_work_package_add_to_meeting_hint: 'Используйте кнопку "Добавить к совещанию", чтобы добавить этот пакет работ к предстоящему совещанию.'
+  text_work_package_has_no_past_meeting_agenda_items: "Этот пакет работ не упоминался на прошлом совещании."

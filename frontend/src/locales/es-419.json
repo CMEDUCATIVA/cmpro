@@ -1,0 +1,2063 @@
+{
+  "es-419": {
+    "date": {
+      "abbr_day_names": [
+        "dom",
+        "lun",
+        "mar",
+        "mié",
+        "jue",
+        "vie",
+        "sáb"
+      ],
+      "abbr_month_names": [
+        null,
+        "ene",
+        "feb",
+        "mar",
+        "abr",
+        "may",
+        "jun",
+        "jul",
+        "ago",
+        "sep",
+        "oct",
+        "nov",
+        "dic"
+      ],
+      "abbr_week": "Wk",
+      "day_names": [
+        "domingo",
+        "lunes",
+        "martes",
+        "miércoles",
+        "jueves",
+        "viernes",
+        "sábado"
+      ],
+      "formats": {
+        "default": "%d/%m/%Y",
+        "long": "%A, %d de %B de %Y",
+        "short": "%d de %b"
+      },
+      "month_names": [
+        null,
+        "enero",
+        "febrero",
+        "marzo",
+        "abril",
+        "mayo",
+        "junio",
+        "julio",
+        "agosto",
+        "septiembre",
+        "octubre",
+        "noviembre",
+        "diciembre"
+      ],
+      "order": [
+        "day",
+        "month",
+        "year"
+      ]
+    },
+    "js": {
+      "admin": {
+        "enterprise": {
+          "text_expired": "expired",
+          "text_reprieve_days_left": "%{days} days until end of grace period",
+          "trial": {
+            "confirmation": "Confirmation of email address",
+            "confirmation_info": "We sent you an email on %{date} to %{email}. Please check your inbox and click the confirmation link provided to start your 14 days trial.\n",
+            "email_not_received": "You did not receive an email? You can resend the email with the link on the right.",
+            "form": {
+              "domain_mismatch": "The current request host name does not match the configured host name. Please double check your system settings.",
+              "general_consent": "I agree with the <a target=\"_blank\" href=\"%{link_terms}\">terms of service</a> and the <a target=\"_blank\" href=\"%{link_privacy}\">privacy policy</a>.\n",
+              "invalid_email": "Invalid email address",
+              "label_additional_features": "Additional features",
+              "label_company": "Company",
+              "label_domain": "Domain",
+              "label_expires_at": "Expires at",
+              "label_first_name": "First name",
+              "label_last_name": "Last name",
+              "label_maximum_users": "Maximum active users",
+              "label_plan": "Plan",
+              "label_starts_at": "Starts at",
+              "label_subscriber": "Subscriber",
+              "receive_newsletter": "I want to receive the OpenProject <a target=\"_blank\" href=\"%{link}\">newsletter</a>.",
+              "taken_domain": "There can only be one active trial per domain.",
+              "taken_email": "Each user can only create one trial."
+            },
+            "next_steps": "Next steps",
+            "quick_overview": "Get a quick overview of project management and team collaboration with OpenProject Enterprise edition.",
+            "resend_link": "Resend",
+            "resend_success": "Email has been resent. Please check your emails and click the confirmation link provided.",
+            "resend_warning": "Could not resend email.",
+            "session_timeout": "Your session timed out. Please try to reload the page or resend email.",
+            "status_confirmed": "confirmed",
+            "status_label": "Status:",
+            "status_waiting": "email sent - waiting for confirmation",
+            "test_ee": "Test the Enterprise edition 14 days for free",
+            "try_another_email": "Or try it with another email address."
+          },
+          "upsell": {
+            "become_hero": "Become a hero!",
+            "benefits": {
+              "description": "What are the benefits of the Enterprise on-premises edition?",
+              "high_security": "Security features",
+              "high_security_text": "Single sign on (SAML, OpenID Connect, CAS), LDAP groups.",
+              "installation": "Installation support",
+              "installation_text": "Experienced software engineers guide you through the complete installation and setup process in your own infrastructure.",
+              "premium_features": "Enterprise add-ons",
+              "premium_features_text": "Agile boards, custom theme and logo, graphs, intelligent workflows with custom actions, full text search for work package attachments and multi-select custom fields.",
+              "professional_support": "Professional support",
+              "professional_support_text": "Get reliable, high-touch support from senior support engineers with expert knowledge about running OpenProject in business-critical environments."
+            },
+            "button_book_now": "Book now",
+            "button_contact_us": "Contact us for a demo",
+            "button_start_trial": "Start free trial",
+            "button_upgrade": "Upgrade now",
+            "confidence": "We deliver the confidence of a tested and supported enterprise-class project management software - with Open Source and an open mind.\n",
+            "enterprise_info_html": "%{feature_title} is an Enterprise <span class='spot-icon spot-icon_inline spot-icon_enterprise-addons'></span> add-on.",
+            "link_quote": "Get a quote",
+            "more_info": "More information",
+            "text": "The OpenProject Enterprise edition builds on top of the Community edition. It includes Enterprise add-ons and professional support mainly aimed at organizations with more than 10 users that manage business critical projects with OpenProject.\n",
+            "unlimited": "Unlimited",
+            "upgrade_info": "Please upgrade to a paid plan to activate and start using it in your team.",
+            "you_contribute": "Developers need to pay their bills, too. By upgrading to the Enterprise edition, you will be supporting this open source community effort and contributing to its development, maintenance and continuous improvement."
+          }
+        },
+        "type_form": {
+          "add_group": "Add attribute group",
+          "add_table": "Add table of related work packages",
+          "custom_field": "Custom field",
+          "drag_to_activate": "Drag fields from here to activate them",
+          "edit_query": "Edit query",
+          "inactive": "Inactive",
+          "new_group": "New group",
+          "reset_to_defaults": "Reset to defaults"
+        },
+        "work_packages_settings": {
+          "warning_progress_calculation_mode_change_from_field_to_status_html": "Changing progress calculation mode from work-based to status-based will result in all existing <i>% Complete</i> values to be lost and replaced with values associated with each status. Existing values for <i>Remaining work</i> may also be recalculated to reflect this change. This action is not reversible.",
+          "warning_progress_calculation_mode_change_from_status_to_field_html": "Changing progress calculation mode from status-based to work-based will make the <i>% Complete</i> field freely editable. If you optionally enter values for <i>Work</i> or <i>Remaining work</i>, they will also be linked to <i>% Complete</i>. Changing <i>Remaining work</i> can then update <i>% Complete</i>."
+        },
+        "working_days": {
+          "add_non_working_day": "Non-working day",
+          "already_added_error": "A non-working day for this date exists already. There can only be one non-working day created for each unique date.",
+          "calendar": {
+            "empty_state_description": "No specific non-working days are defined for this year. Click on \"+ Non-working day\" below to add a date.",
+            "empty_state_header": "Non-working days",
+            "new_date": "(new)"
+          },
+          "change_button": "Save and reschedule",
+          "change_description": "Changing which days of the week are considered working days or non-working days can affect the start and finish days of all work packages and life cycles in all projects in this instance.",
+          "change_title": "Change working days",
+          "removed_title": "You will remove the following days from the non-working days list:",
+          "warning": "The changes might take some time to take effect. You will be notified when all relevant work packages and project life cycles have been updated.\n\nAre you sure you want to continue?\n"
+        }
+      },
+      "ajax": {
+        "hide": "Hide",
+        "loading": "Loading…",
+        "updating": "Updating…"
+      },
+      "attachments": {
+        "delete": "Delete attachment",
+        "delete_confirmation": "Are you sure you want to delete this file? This action is not reversible.\n",
+        "draggable_hint": "Drag on editor field to inline image or reference attachment. Closed editor fields will be opened while you keep dragging.\n",
+        "quarantined_hint": "The file is quarantined, as a virus was found. It is not available for download."
+      },
+      "autocomplete_ng_select": {
+        "add_tag": "Add item",
+        "clear_all": "Clear all",
+        "loading": "Loading...",
+        "not_found": "No items found",
+        "type_to_search": "Type to search"
+      },
+      "autocomplete_select": {
+        "active": "Active %{label} %{name}",
+        "placeholder": {
+          "multi": "Add \"%{name}\"",
+          "single": "Select \"%{name}\""
+        },
+        "remove": "Remove %{name}"
+      },
+      "autocompleter": {
+        "notFoundText": "No items found",
+        "placeholder": "Type to search",
+        "project": {
+          "placeholder": "Select project"
+        }
+      },
+      "avatars": {
+        "empty_file_error": "Please upload a valid image (jpg, png, gif)",
+        "error_image_too_large": "Image is too large.",
+        "label_choose_avatar": "Choose Avatar from file",
+        "text_upload_instructions": "Upload your own custom avatar of 128 by 128 pixels. Larger files will be resized and cropped to match.\nA preview of your avatar will be shown before uploading, once you selected an image.\n",
+        "uploading_avatar": "Uploading your avatar.",
+        "wrong_file_format": "Allowed formats are jpg, png, gif"
+      },
+      "backup": {
+        "attachments_disabled": "Attachments may not be included since they exceed the maximum overall size allowed. You can change this via the configuration (requires a server restart).",
+        "download_backup": "Download backup",
+        "include_attachments": "Include attachments",
+        "info": "You can trigger a backup here. The process can take some time depending on the amount of data (especially attachments) you have. You will receive an email once it's ready.\n",
+        "last_backup": "Last backup",
+        "last_backup_from": "Last backup from",
+        "note": "A new backup will override any previous one. Only a limited number of backups per day can be requested.\n",
+        "options": "Options",
+        "request_backup": "Request backup",
+        "title": "Backup OpenProject"
+      },
+      "baseline": {
+        "apply": "Apply",
+        "clear": "Clear",
+        "drop_down": {
+          "a_specific_date": "a specific date",
+          "between_two_specific_dates": "between two specific dates",
+          "last_month": "last month",
+          "last_week": "last week",
+          "last_working_day": "last working day",
+          "none": "-",
+          "yesterday": "yesterday"
+        },
+        "from": "From",
+        "header_description": "Highlight changes made to this list since any point in the past.",
+        "help_description": "Reference time zone for the baseline.",
+        "icon_tooltip": {
+          "added": "Added to view within the comparison time period",
+          "changed": "Maintained with modifications",
+          "removed": "Removed from view within the comparison time period"
+        },
+        "legends": {
+          "changes_between": "Changes between",
+          "changes_since": "Changes since",
+          "in_your_timezone": "In your local timezone:",
+          "maintained_with_changes": "Maintained with changes",
+          "no_longer_meets_filter_criteria": "No longer meets filter criteria",
+          "now_meets_filter_criteria": "Now meets filter criteria"
+        },
+        "show_changes_since": "Show changes since",
+        "time": "Time",
+        "time_description": "In your local time: %{datetime}",
+        "to": "To",
+        "toggle_title": "Baseline"
+      },
+      "bcf": {
+        "add_viewpoint": "Add viewpoint",
+        "delete_viewpoint": "Delete viewpoint",
+        "export": "Export",
+        "export_bcf_xml_file": "Export BCF XML file (BCF version 2.1)",
+        "import": "Import",
+        "import_bcf_xml_file": "Import BCF XML file (BCF version 2.1)",
+        "label_bcf": "BCF",
+        "management": "BCF management",
+        "refresh": "Refresh",
+        "refresh_work_package": "Refresh work package",
+        "show_viewpoint": "Show viewpoint",
+        "viewpoint": "Viewpoint"
+      },
+      "boards": {
+        "add_card": "Add card",
+        "add_list": "Add list to board",
+        "add_list_modal": {
+          "labels": {
+            "assignee": "Select user to add as a new assignee list",
+            "status": "Select status to add as a new list",
+            "subproject": "Select subproject to add as a new list",
+            "subtasks": "Select work package to add as a new list",
+            "version": "Select version to add as a new list"
+          },
+          "warning": {
+            "add_members": "<a href=\"%{link}\">Add a new member to this project</a> to select users again.",
+            "assignee": "There isn't any member matched with your filter value.  <br>",
+            "no_member": "This project currently does not have any members that can be added.  <br>",
+            "status": "There is currently no status available. <br>\nEither there are none or they have all already been added to the board.\n"
+          }
+        },
+        "board_type": {
+          "action": "Action board",
+          "action_by_attribute": "Action board (%{attribute})",
+          "action_text": "A board with filtered lists on %{attribute} attribute. Moving work packages to other lists will update their attribute.\n",
+          "action_text_assignee": "Board with automated columns based on assigned users. Ideal for dispatching work packages.\n",
+          "action_text_status": "Basic kanban style board with columns for status such as To Do, In Progress, Done.\n",
+          "action_text_subprojects": "Board with automated columns for subprojects. Dragging work packages to other lists updates the (sub-)project accordingly.\n",
+          "action_text_subtasks": "Board with automated columns for sub-elements.  Dragging work packages to other lists updates the parent accordingly.\n",
+          "action_text_version": "Board with automated columns based on the version attribute. Ideal for planning product development.\n",
+          "action_type": {
+            "assignee": "assignee",
+            "status": "status",
+            "subproject": "subproject",
+            "subtasks": "parent-child",
+            "version": "version"
+          },
+          "board_type_title": {
+            "assignee": "Assignee",
+            "basic": "Basic",
+            "status": "Status",
+            "subproject": "Subproject",
+            "subtasks": "Parent-child",
+            "version": "Version"
+          },
+          "free": "basic",
+          "free_text": "Start from scratch with a blank board. Manually add cards and columns to this board.\n",
+          "select_attribute": "Action attribute",
+          "select_board_type": "Please choose the type of board you need.",
+          "text": "Board type"
+        },
+        "click_to_remove_list": "Click to remove this list",
+        "configuration_modal": {
+          "display_settings": {
+            "card_mode": "Display as cards",
+            "table_mode": "Display as table"
+          },
+          "title": "Configure this board"
+        },
+        "create_new": "Create new board",
+        "error_attribute_not_writable": "Cannot move the work package, %{attribute} is not writable.",
+        "error_cannot_move_into_self": "You can not move a work package into its own column.",
+        "error_loading_the_list": "Error loading the list: %{error_message}",
+        "error_permission_missing": "The permission to create public queries is missing",
+        "label_board_type": "Board type",
+        "label_unnamed_board": "Unnamed board",
+        "label_unnamed_list": "Unnamed list",
+        "lists": {
+          "delete": "Delete list"
+        },
+        "new_board": "New board",
+        "text_hidden_list_warning": "Not all lists are displayed because you lack the permission. Contact your admin for more information.",
+        "version": {
+          "close_version": "Close version",
+          "closed": "Closed",
+          "edit_version": "Edit version",
+          "is_closed": "Version is closed. No items can be added to this version.",
+          "is_locked": "Version is locked. No items can be added to this version.",
+          "lock_version": "Lock version",
+          "locked": "Locked",
+          "open_version": "Open version",
+          "show_version": "Show version",
+          "unlock_version": "Unlock version"
+        }
+      },
+      "button_add": "Add",
+      "button_add_watcher": "Add watcher",
+      "button_advanced_filter": "Advanced filter",
+      "button_back": "Back",
+      "button_back_to_list_view": "Back to list view",
+      "button_cancel": "Cancel",
+      "button_change_project": "Move to another project",
+      "button_check_all": "Check all",
+      "button_close": "Close",
+      "button_close_details": "Close details view",
+      "button_collapse_all": "Collapse all",
+      "button_configure-form": "Configure form",
+      "button_confirm": "Confirm",
+      "button_continue": "Continue",
+      "button_copy": "Copy",
+      "button_copy_link_to_clipboard": "Copy link to clipboard",
+      "button_copy_to_clipboard": "Copy to clipboard",
+      "button_copy_to_other_project": "Duplicate in another project",
+      "button_create": "Create",
+      "button_custom-fields": "Custom fields",
+      "button_delete": "Delete",
+      "button_delete_watcher": "Delete watcher",
+      "button_details_view": "Details view",
+      "button_duplicate": "Duplicate",
+      "button_edit": "Edit",
+      "button_expand_all": "Expand all",
+      "button_export-atom": "Download Atom",
+      "button_filter": "Filter",
+      "button_generate_pdf": "Generate PDF",
+      "button_list_view": "List view",
+      "button_log_costs": "Log unit costs",
+      "button_log_time": "Log time",
+      "button_more": "More",
+      "button_more_actions": "More actions",
+      "button_open_details": "Open details view",
+      "button_open_fullscreen": "Open fullscreen view",
+      "button_quote": "Quote",
+      "button_save": "Save",
+      "button_settings": "Settings",
+      "button_show_cards": "Show card view",
+      "button_show_fullscreen": "Show fullscreen view",
+      "button_show_gantt": "Show Gantt view",
+      "button_show_list": "Show list view",
+      "button_show_table": "Show table view",
+      "button_show_view": "Fullscreen view",
+      "button_uncheck_all": "Uncheck all",
+      "button_update": "Update",
+      "calendar": {
+        "create_new": "Create new calendar",
+        "title": "Calendar",
+        "too_many": "There are %{count} work packages in total, but only %{max} can be shown.",
+        "unsaved_title": "Unnamed calendar"
+      },
+      "caption_rate_history": "Rate history",
+      "card": {
+        "add_new": "Add new card",
+        "highlighting": {
+          "entire_card_by": "Entire card by",
+          "inline": "Highlight inline:"
+        },
+        "remove_from_list": "Remove card from list"
+      },
+      "chart": {
+        "axis_criteria": "Axis criteria",
+        "errors": {
+          "could_not_load": "The data to display the graph could not be loaded. The necessary permissions may be lacking."
+        },
+        "modal_title": "Work package graph configuration",
+        "tabs": {
+          "dataset": "Dataset %{number}",
+          "graph_settings": "General"
+        },
+        "type": "Chart type",
+        "types": {
+          "bar": "Bar",
+          "doughnut": "Doughnut",
+          "horizontal_bar": "Horizontal bar",
+          "line": "Line",
+          "pie": "Pie",
+          "polar_area": "Polar area",
+          "radar": "Radar"
+        }
+      },
+      "clipboard": {
+        "browser_error": "Your browser doesn't support copying to clipboard. Please copy it manually: %{content}",
+        "copied_successful": "Successfully copied to clipboard!"
+      },
+      "close_filter_title": "Close filter",
+      "close_form_title": "Close form",
+      "close_popup_title": "Close popup",
+      "custom_actions": {
+        "date": {
+          "current_date": "Current date",
+          "specific": "on"
+        }
+      },
+      "dashboards": {
+        "label": "Dashboard"
+      },
+      "description_available_columns": "Available Columns",
+      "description_current_position": "You are here: ",
+      "description_select_work_package": "Select work package #%{id}",
+      "description_subwork_package": "Child of work package #%{id}",
+      "editor": {
+        "ckeditor_error": "An error occurred within CKEditor",
+        "error_saving_failed": "Saving the document failed with the following error: %{error}",
+        "macro": {
+          "attribute_reference": {
+            "invalid_attribute": "The selected attribute '%{name}' does not exist.",
+            "macro_help_tooltip": "This text segment is being dynamically rendered by a macro.",
+            "nested_macro": "This macro is recursively referencing %{model} %{id}.",
+            "not_found": "Requested resource could not be found"
+          },
+          "child_pages": {
+            "button": "Links to child pages",
+            "hint": "Leave this field empty to list all child pages of the current page. If you want to reference a different page, provide its title or slug.\n",
+            "include_parent": "Include parent",
+            "page": "Wiki page",
+            "text": "[Placeholder] Links to child pages of",
+            "this_page": "this page"
+          },
+          "code_block": {
+            "button": "Insert code snippet",
+            "language": "Formatting language",
+            "language_hint": "Enter the formatting language that will be used for highlighting (if supported).",
+            "title": "Insert / edit Code snippet"
+          },
+          "dropdown": {
+            "chose_macro": "Choose macro",
+            "macros": "Macros"
+          },
+          "embedded_calendar": {
+            "text": "[Placeholder] Embedded calendar"
+          },
+          "embedded_table": {
+            "button": "Embed work package table",
+            "text": "[Placeholder] Embedded work package table"
+          },
+          "error": "Cannot expand macro: %{message}",
+          "toc": "Table of contents",
+          "toolbar_help": "Click to select widget and show the toolbar. Double-click to edit widget",
+          "wiki_page_include": {
+            "button": "Include content of another wiki page",
+            "hint": "Include the content of another wiki page by specifying its title or slug.\nYou can include the wiki page of another project by separating them with a colon like the following example.\n",
+            "not_set": "(Page not yet set)",
+            "page": "Wiki page",
+            "text": "[Placeholder] Included wiki page of"
+          },
+          "work_package_button": {
+            "button": "Insert create work package button",
+            "button_style": "Use button style",
+            "button_style_hint": "Optional: Check to make macro appear as a button, not as a link.",
+            "type": "Work package type",
+            "with_type": "Create work package (Type: %{typename})",
+            "without_type": "Create work package"
+          }
+        },
+        "mode": {
+          "manual": "Switch to Markdown source",
+          "wysiwyg": "Switch to WYSIWYG editor"
+        },
+        "no_revisions": "No local modifications found",
+        "preview": "Toggle preview mode",
+        "revisions": "Show local modifications",
+        "source_code": "Toggle Markdown source mode"
+      },
+      "enumeration_activities": "Activities (time tracking)",
+      "enumeration_doc_categories": "Document categories",
+      "enumeration_work_package_priorities": "Work package priorities",
+      "error": {
+        "cannot_save_changes_with_message": "Cannot save your changes due to the following error: %{error}",
+        "embedded_table_loading": "The embedded view could not be loaded: %{message}",
+        "internal": "An internal error has occurred.",
+        "query_saving": "The view could not be saved."
+      },
+      "error_attachment_upload": "File failed to upload: %{error}",
+      "error_attachment_upload_permission": "You don't have the permission to upload files on this resource.",
+      "error_could_not_resolve_user_name": "Couldn't resolve user name",
+      "error_could_not_resolve_version_name": "Couldn't resolve version name",
+      "exclusion_info": {
+        "modal": {
+          "content": "The status '%{status_name}' has been configured to be excluded from hierarchy totals of Work, Remaining work, and % Complete. The totals do not take this value into account.",
+          "title": "Status excluded from hierarchy totals"
+        }
+      },
+      "favorite_projects": {
+        "no_results": "You have no favorite projects",
+        "no_results_subtext": "Add one or multiple projects as favorite through their overview or in a project list."
+      },
+      "field_value_enter_prompt": "Enter a value for '%{field}'",
+      "filter": {
+        "description": {
+          "text_close_filter": "To select an entry leave the focus for example by pressing enter. To leave without filter select the first (empty) entry.",
+          "text_open_filter": "Open this filter with 'ALT' and arrow keys."
+        },
+        "more_values_not_shown": "There are %{total} more results, search to filter results.",
+        "noneElement": "(none)",
+        "sorting": {
+          "criteria": {
+            "one": "First sorting criteria",
+            "three": "Third sorting criteria",
+            "two": "Second sorting criteria"
+          }
+        },
+        "time_zone_converted": {
+          "only_end": "Till %{to} in your local time.",
+          "only_start": "From %{from} in your local time.",
+          "two_values": "%{from} - %{to} in your local time."
+        },
+        "value_spacer": "-"
+      },
+      "forms": {
+        "advanced_settings": "Advanced settings",
+        "load_error_message": "There was an error loading the form",
+        "submit_success_message": "The form was successfully submitted",
+        "validation_error_message": "Please fix the errors present in the form"
+      },
+      "gantt_chart": {
+        "button_activate": "Show Gantt chart",
+        "button_deactivate": "Hide Gantt chart",
+        "filter": {
+          "noneSelection": "(none)"
+        },
+        "label": "Gantt chart",
+        "labels": {
+          "bar": "Bar labels",
+          "description": "Select the attributes you want to be shown in the respective positions of the Gantt chart at all times. Note that when hovering over an element, its date labels will be shown instead of these attributes.\n",
+          "farRight": "Far right",
+          "left": "Left",
+          "right": "Right",
+          "title": "Label configuration"
+        },
+        "quarter_label": "Q%{quarter_number}",
+        "selection_mode": {
+          "notification": "Click on any highlighted work package to create the relation. Press escape to cancel."
+        },
+        "zoom": {
+          "auto": "Auto zoom",
+          "days": "Days",
+          "description": "Select the initial zoom level that should be shown when autozoom is not available.\n",
+          "in": "Zoom in",
+          "months": "Months",
+          "out": "Zoom out",
+          "quarters": "Quarters",
+          "weeks": "Weeks",
+          "years": "Years"
+        }
+      },
+      "general_text_No": "No",
+      "general_text_Yes": "Yes",
+      "general_text_no": "no",
+      "general_text_yes": "yes",
+      "github_integration": {
+        "github_actions": "Actions",
+        "pull_requests": {
+          "merged_message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} has been %{pr_state} by %{github_user_link}.",
+          "message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} authored by %{github_user_link} has been %{pr_state}.",
+          "referenced_message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} authored by %{github_user_link} referenced this work package.",
+          "states": {
+            "closed": "closed",
+            "draft": "drafted",
+            "merged": "merged",
+            "opened": "opened",
+            "ready_for_review": "marked ready for review"
+          }
+        },
+        "tab_header": {
+          "copy_menu": {
+            "description": "Copy git snippets to clipboard",
+            "label": "Git snippets"
+          },
+          "git_actions": {
+            "branch_name": "Branch name",
+            "cmd": "Create branch with empty commit",
+            "commit_message": "Commit message",
+            "copy_error": "❌ Copy failed!",
+            "copy_success": "✅ Copied!",
+            "title": "Quick snippets for Git"
+          },
+          "title": "Pull requests"
+        },
+        "tab_prs": {
+          "empty": "There are no pull requests linked yet. Link an existing PR by using the code <code>OP#%{wp_id}</code> in the PR description or create a new PR."
+        },
+        "work_packages": {
+          "tab_name": "GitHub"
+        }
+      },
+      "gitlab_integration": {
+        "gitlab_pipelines": "Pipelines",
+        "tab_header_issue": {
+          "title": "Issues"
+        },
+        "tab_header_mr": {
+          "copy_menu": {
+            "description": "Copy git snippets to clipboard",
+            "label": "Git snippets"
+          },
+          "create_mr": {
+            "description": "Create a Merge Request",
+            "label": "Create MR"
+          },
+          "git_actions": {
+            "branch_name": "Branch name",
+            "cmd": "Create branch with empty commit",
+            "commit_message": "Commit message",
+            "copy_error": "❌ Copy failed!",
+            "copy_success": "✅ Copied!",
+            "title": "Quick snippets for Git"
+          },
+          "title": "Merge requests"
+        },
+        "tab_issue": {
+          "empty": "There are no issues linked yet. Link an existing issue by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the issue title/description or create a new issue."
+        },
+        "tab_mrs": {
+          "empty": "There are no merge requests linked yet. Link an existing MR by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the MR title/description or create a new MR."
+        },
+        "updated_on": "Updated on",
+        "work_packages": {
+          "tab_name": "GitLab"
+        }
+      },
+      "global_search": {
+        "all_projects": "In all projects",
+        "close_search": "Close search",
+        "current_project": "In this project",
+        "current_project_and_all_descendants": "In this project + subprojects",
+        "recently_viewed": "Recently viewed",
+        "search": "Search",
+        "title": {
+          "all_projects": "all projects",
+          "project_and_subprojects": "and all subprojects",
+          "search_for": "Search for"
+        }
+      },
+      "grid": {
+        "add_widget": "Add widget",
+        "configure": "Configure widget",
+        "remove": "Remove widget",
+        "widgets": {
+          "custom_text": {
+            "title": "Custom text"
+          },
+          "documents": {
+            "no_results": "No documents yet.",
+            "title": "Documents"
+          },
+          "members": {
+            "add": "Member",
+            "no_results": "No visible members.",
+            "title": "Members",
+            "too_many": "Displaying %{count} of %{total} members.",
+            "view_all_members": "View all members"
+          },
+          "missing_permission": "You don't have the necessary permissions to view this widget.",
+          "news": {
+            "at": "at",
+            "no_results": "Nothing new to report.",
+            "title": "News"
+          },
+          "project_description": {
+            "no_results": "No description has been written yet. One can be provided in the 'Project settings'.",
+            "title": "Project description"
+          },
+          "project_favorites": {
+            "no_results": "You currently have no favorite projects. Click on the star icon in the project dashboard to add one to your favorites.",
+            "title": "Favorite projects"
+          },
+          "project_status": {
+            "at_risk": "At risk",
+            "discontinued": "Discontinued",
+            "finished": "Finished",
+            "not_set": "Not set",
+            "not_started": "Not started",
+            "off_track": "Off track",
+            "on_track": "On track",
+            "title": "Project status"
+          },
+          "subprojects": {
+            "no_results": "No subprojects.",
+            "title": "Subprojects"
+          },
+          "time_entries_current_user": {
+            "displayed_days": "Days displayed in the widget:",
+            "title": "My spent time"
+          },
+          "time_entries_list": {
+            "no_results": "No time entries for the last 7 days.",
+            "title": "Spent time (last 7 days)"
+          },
+          "work_packages_accountable": {
+            "title": "Work packages I am accountable for"
+          },
+          "work_packages_assigned": {
+            "title": "Work packages assigned to me"
+          },
+          "work_packages_calendar": {
+            "title": "Calendar"
+          },
+          "work_packages_created": {
+            "title": "Work packages created by me"
+          },
+          "work_packages_graph": {
+            "title": "Work packages graph"
+          },
+          "work_packages_overview": {
+            "placeholder": "Click to edit ...",
+            "title": "Work packages overview"
+          },
+          "work_packages_table": {
+            "title": "Work packages table"
+          },
+          "work_packages_watched": {
+            "title": "Work packages watched by me"
+          }
+        }
+      },
+      "hal": {
+        "error": {
+          "edit_prohibited": "Editing %{attribute} is blocked for this resource. Either this attribute is derived from relations (e.g, children) or otherwise not configurable.",
+          "format": {
+            "date": "%{attribute} is no valid date - YYYY-MM-DD expected."
+          },
+          "general": "An error has occurred.",
+          "update_conflict_refresh": "Click here to refresh the resource and update to the newest version."
+        }
+      },
+      "help_texts": {
+        "show_modal": "Show help text"
+      },
+      "homescreen": {
+        "blocks": {
+          "new_features": {
+            "16_1": {
+              "standard": {
+                "new_features_html": "The release contains various new features and improvements, such as <br> <ul class=\"%{list_styling_class}\">\n  <li>Structure the project life cycle with phases and phase gates.</li>\n  <li>Export meetings in PDF format.</li>\n  <li>Set smart default options for reminders.</li>\n  <li>Use negative lag for work package dates.</li>\n  <li>Display hierarchy trees for hierarchy custom fields.</li>\n  <li>Benefit from improved accessibility for the date picker with ARIA live regions.</li>\n</ul>\n"
+              }
+            },
+            "learn_about": "Learn more about all new features",
+            "text_new_features": "Read about new features and product updates."
+          }
+        }
+      },
+      "ical_sharing_modal": {
+        "copy_url_label": "Copy URL",
+        "description": "You can use the URL (iCalendar) to subscribe to this calendar in an external client and view up-to-date work package information from there.",
+        "ical_generation_error_text": "An error occured while generating the calendar URL.",
+        "inital_setup_error_message": "An error occured while fetching data.",
+        "success_message": "The URL \"%{name}\" was successfully copied to your clipboard. Paste it in your calendar client to complete the subscription.",
+        "title": "Subscribe to calendar",
+        "token_name_description_text": "If you subscribe to this calendar from multiple devices, this name will help you distinguish between them in your <a href=\"my/access_token\", target=\"_blank\">access tokens</a> list.",
+        "token_name_label": "Where will you be using this?",
+        "token_name_placeholder": "Type a name, e.g. \"Phone\"",
+        "warning": "Please don't share this URL with other users. Anyone with this link will be able to view work package details without an account or password."
+      },
+      "ifc_models": {
+        "empty_warning": "This project does not yet have any IFC models.",
+        "keyboard_input_disabled": "Viewer does not have keyboard controls. Click on the viewer to give keyboard control to the viewer.",
+        "models": {
+          "ifc_models": "IFC models"
+        },
+        "use_this_link_to_manage": "Use this link to upload and manage your IFC models",
+        "views": {
+          "split": "Viewer and table",
+          "split_cards": "Viewer and cards",
+          "viewer": "Viewer"
+        }
+      },
+      "include_projects": {
+        "apply": "Apply",
+        "clear_selection": "Clear selection",
+        "include_subprojects": "Include all sub-projects",
+        "no_results": "No project matches your search criteria.",
+        "search_placeholder": "Search project...",
+        "selected_filter": {
+          "all": "All projects",
+          "selected": "Only selected"
+        },
+        "title": "Projects",
+        "toggle_title": "Include projects",
+        "tooltip": {
+          "current_project": "This is the current project you are in.",
+          "does_not_match_search": "Project does not match the search criteria.",
+          "include_all_selected": "Project already included since Include all sub-projects is enabled."
+        }
+      },
+      "inplace": {
+        "btn_preview_disable": "Disable preview",
+        "btn_preview_enable": "Preview",
+        "button_cancel": "%{attribute}: Cancel",
+        "button_cancel_all": "Cancel",
+        "button_edit": "%{attribute}: Edit",
+        "button_save": "%{attribute}: Save",
+        "button_save_all": "Save",
+        "clear_value_label": "-",
+        "errors": {
+          "maxlength": "%{field} cannot contain more than %{maxLength} digit(s)",
+          "messages_on_field": "This field is invalid: %{messages}",
+          "minlength": "%{field} cannot contain less than %{minLength} digit(s)",
+          "number": "%{field} is not a valid number",
+          "required": "%{field} cannot be empty"
+        },
+        "link_formatting_help": "Text formatting help",
+        "null_value_label": "No value"
+      },
+      "invite_user_modal": {
+        "back": "Back",
+        "invite": "Invite",
+        "message": {
+          "description": "We will send an email to the user, to which you can add a personal message here. An explanation for the invitation could be useful, or prehaps a bit of information regarding the project to help them get started.",
+          "label": "Invitation message",
+          "next_button": "Next"
+        },
+        "principal": {
+          "already_member_message": "Already a member of %{project}",
+          "create_new_placeholder": "Create new placeholder:",
+          "invite_user": "Invite:",
+          "label": {
+            "name": "Name",
+            "name_or_email": "Name or email address"
+          },
+          "next_button": "Next",
+          "no_results_group": "No groups were found",
+          "no_results_placeholder": "No placeholders were found",
+          "no_results_user": "No users were found",
+          "required": {
+            "group": "Please select a group",
+            "placeholder": "Please select a placeholder",
+            "user": "Please select a user"
+          }
+        },
+        "project": {
+          "label": "Project",
+          "lacking_permission": "Please select a different project since you lack permissions to assign users to the currently selected.",
+          "lacking_permission_info": "You lack the permission to assign users to the project you are currently in. You need to select a different one.",
+          "next_button": "Next",
+          "no_invite_rights": "You are not allowed to invite members to this project",
+          "no_results": "No projects were found",
+          "required": "Please select a project"
+        },
+        "role": {
+          "description": "This is the role that the user will receive when they join your project. The role defines which actions they are allowed to take and which information they are allowed to see. <a href=\"https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions\" target=\"_blank\"> Learn more about roles and permissions. </a>",
+          "label": "Role in %{project}",
+          "next_button": "Next",
+          "no_roles_found": "No roles were found",
+          "required": "Please select a role"
+        },
+        "success": {
+          "description": {
+            "group": "The group is now a part of %{project}. Meanwhile you can already plan with that group and assign work packages for instance.",
+            "placeholder": "The placeholder can now be used in %{project}. Meanwhile you can already plan with that user and assign work packages for instance.",
+            "user": "The user can now log in to access %{project}. Meanwhile you can already plan with that user and assign work packages for instance."
+          },
+          "next_button": "Continue",
+          "title": "%{principal} was invited!"
+        },
+        "summary": {
+          "next_button": "Send invitation"
+        },
+        "title": {
+          "Group": "group",
+          "PlaceholderUser": "placeholder user",
+          "User": "user",
+          "invite": "Invite user",
+          "invite_principal_to_project": "Invite %{principal} to %{project}",
+          "invite_to_project": "Invite %{type} to %{project}"
+        },
+        "type": {
+          "group": {
+            "description": "Permissions based on the assigned role in the selected project",
+            "title": "Group"
+          },
+          "placeholder": {
+            "description": "Has no access to the project and no emails are sent out.",
+            "description_no_ee": "Has no access to the project and no emails are sent out. <br>Check out the <a href=\"%{eeHref}\" target=\"_blank\">Enterprise edition</a>",
+            "title": "Placeholder user",
+            "title_no_ee": "Placeholder user (Enterprise edition only add-on)"
+          },
+          "required": "Please select the type to be invited",
+          "user": {
+            "description": "Permissions based on the assigned role in the selected project",
+            "title": "User"
+          }
+        }
+      },
+      "label_activate": "Activate",
+      "label_activity_show_all": "Show all activities",
+      "label_activity_show_only_comments": "Show activities with comments only",
+      "label_add_attachments": "Attach files",
+      "label_add_column_after": "Add column after",
+      "label_add_column_before": "Add column before",
+      "label_add_columns": "Add columns",
+      "label_add_comment": "Add comment",
+      "label_add_comment_title": "Comment and type @ to notify other people",
+      "label_add_description": "Add a description for %{file}",
+      "label_add_row_after": "Add row after",
+      "label_add_row_before": "Add row before",
+      "label_add_selected_columns": "Add selected columns",
+      "label_added_by": "added by",
+      "label_added_time_by": "Added by <a href=\"%{authorLink}\">%{author}</a> at %{age}",
+      "label_ago": "days ago",
+      "label_all": "all",
+      "label_all_uppercase": "All",
+      "label_all_work_packages": "all work packages",
+      "label_and": "and",
+      "label_ascending": "Ascending",
+      "label_assignee": "Assignee",
+      "label_attachments": "Attachments",
+      "label_author": "Author: %{user}",
+      "label_avatar": "Avatar",
+      "label_between": "between",
+      "label_board": "Board",
+      "label_board_locked": "Locked",
+      "label_board_plural": "Boards",
+      "label_board_sticky": "Sticky",
+      "label_cancel_comment": "Cancel comment",
+      "label_change": "Change",
+      "label_children_derived_duration": "Work package's children derived duration",
+      "label_closed_work_packages": "closed",
+      "label_collapse": "Collapse",
+      "label_collapse_all": "Collapse all",
+      "label_collapsed": "collapsed",
+      "label_columns": "Columns",
+      "label_comment": "Comment",
+      "label_committed_at": "%{committed_revision_link} at %{date}",
+      "label_committed_link": "committed revision %{revision_identifier}",
+      "label_contains": "contains",
+      "label_create": "Create",
+      "label_create_work_package": "Create new work package",
+      "label_created_by": "Created by",
+      "label_created_on": "created on",
+      "label_current": "current",
+      "label_custom_queries": "Private",
+      "label_date": "Date",
+      "label_date_with_format": "Enter the %{date_attribute} using the following format: %{format}",
+      "label_deactivate": "Deactivate",
+      "label_default_queries": "Default",
+      "label_descending": "Descending",
+      "label_description": "Description",
+      "label_details": "Details",
+      "label_display": "Display",
+      "label_drop_files": "Drop files here to attach files.",
+      "label_drop_folders_hint": "You cannot upload folders as an attachment. Please select single files.",
+      "label_drop_or_click_files": "Drop files here or click to attach files.",
+      "label_edit_comment": "Edit this comment",
+      "label_edit_status": "Edit the status of the work package",
+      "label_email": "Email",
+      "label_equals": "is",
+      "label_expand": "Expand",
+      "label_expand_all": "Expand all",
+      "label_expand_project_menu": "Expand project menu",
+      "label_expanded": "expanded",
+      "label_export": "Export",
+      "label_export_preparing": "The export is being prepared and will be downloaded shortly.",
+      "label_favorites": "Favorites",
+      "label_filename": "File",
+      "label_files_to_upload": "These files will be uploaded:",
+      "label_filesize": "Size",
+      "label_formattable_attachment_hint": "Attach and link files by dropping on this field, or pasting from the clipboard.",
+      "label_general": "General",
+      "label_global_queries": "Public",
+      "label_greater_or_equal": ">=",
+      "label_group": "Group",
+      "label_group_by": "Group by",
+      "label_group_plural": "Groups",
+      "label_hide_attributes": "Show less",
+      "label_hide_column": "Hide column",
+      "label_hide_project_menu": "Collapse project menu",
+      "label_hour": "hour",
+      "label_hours": "hours",
+      "label_import": "Import",
+      "label_in": "in",
+      "label_in_less_than": "in less than",
+      "label_in_more_than": "in more than",
+      "label_incoming_emails": "Incoming emails",
+      "label_information_plural": "Information",
+      "label_invalid": "Invalid",
+      "label_last_updated_on": "Last updated on",
+      "label_latest_activity": "Latest activity",
+      "label_learn_more_link": "Learn more",
+      "label_less_or_equal": "<=",
+      "label_less_than_ago": "less than days ago",
+      "label_loading": "Loading...",
+      "label_mail_notification": "Email notifications",
+      "label_manage_columns": "Manage and reorder columns",
+      "label_me": "me",
+      "label_meeting_agenda": "Agenda",
+      "label_meeting_minutes": "Minutes",
+      "label_meetings": "Meetings",
+      "label_menu_collapse": "collapse",
+      "label_menu_expand": "expand",
+      "label_moderate_comment": "Moderate comment",
+      "label_more_than_ago": "more than days ago",
+      "label_next": "Next",
+      "label_no_color": "No color",
+      "label_no_data": "No data to display",
+      "label_no_date": "no date",
+      "label_no_due_date": "no finish date",
+      "label_no_start_date": "no start date",
+      "label_no_value": "No value",
+      "label_none": "none",
+      "label_not_contains": "doesn't contain",
+      "label_not_equals": "is not",
+      "label_on": "on",
+      "label_open_context_menu": "Open context menu",
+      "label_open_menu": "Open menu",
+      "label_open_work_packages": "open",
+      "label_password": "Password",
+      "label_per_page": "Per page:",
+      "label_please_wait": "Please wait",
+      "label_press_enter_to_save": "Press enter to save.",
+      "label_preview": "Preview",
+      "label_previous": "Previous",
+      "label_project": "Project",
+      "label_project_list": "Project lists",
+      "label_project_plural": "Projects",
+      "label_public_query": "Public",
+      "label_quote_comment": "Quote this comment",
+      "label_recent": "Recent",
+      "label_rejected_files": "These files cannot be uploaded:",
+      "label_rejected_files_reason": "These files cannot be uploaded as their size is greater than %{maximumFilesize}",
+      "label_remove": "Remove",
+      "label_remove_all_files": "Delete all files",
+      "label_remove_column": "Remove column",
+      "label_remove_columns": "Remove selected columns",
+      "label_remove_file": "Delete %{fileName}",
+      "label_remove_row": "Remove row",
+      "label_remove_watcher": "Remove watcher %{name}",
+      "label_report": "Report",
+      "label_repository_plural": "Repositories",
+      "label_reset": "Reset",
+      "label_save_as": "Save as",
+      "label_search_columns": "Search a column",
+      "label_select_project": "Select a project",
+      "label_select_watcher": "Select a watcher...",
+      "label_selected_filter_list": "Selected filters",
+      "label_show_attributes": "Show all attributes",
+      "label_show_in_menu": "Show view in menu",
+      "label_sort_by": "Sort by",
+      "label_sort_higher": "Move up",
+      "label_sort_lower": "Move down",
+      "label_sorted_by": "sorted by",
+      "label_sorting": "Sorting",
+      "label_spent_time": "Spent time",
+      "label_star_query": "Favored",
+      "label_starred_queries": "Favorite",
+      "label_subject": "Subject",
+      "label_sum": "Sum",
+      "label_sum_for": "Sum for",
+      "label_this_week": "this week",
+      "label_time_entry_plural": "Spent time",
+      "label_today": "Today",
+      "label_total_amount": "Total: %{amount}",
+      "label_total_progress": "%{percent}% Total progress",
+      "label_total_sum": "Total sum",
+      "label_unwatch": "Unwatch",
+      "label_unwatch_work_package": "Unwatch work package",
+      "label_up": "Up",
+      "label_updated_on": "updated on",
+      "label_upload_counter": "%{done} of %{count} files finished",
+      "label_upload_notification": "Uploading files...",
+      "label_uploaded_by": "Uploaded by",
+      "label_user_plural": "Users",
+      "label_validation_error": "The work package could not be saved due to the following errors:",
+      "label_value_derived_from_children": "(value derived from children)",
+      "label_version_plural": "Versions",
+      "label_view_has_changed": "This view has unsaved changes. Click to save them.",
+      "label_visibility_settings": "Visibility settings",
+      "label_wait": "Please wait for configuration...",
+      "label_warning": "Warning",
+      "label_watch": "Watch",
+      "label_watch_work_package": "Watch work package",
+      "label_watcher_added_successfully": "Watcher successfully added!",
+      "label_watcher_deleted_successfully": "Watcher successfully deleted!",
+      "label_work_package": "Work package",
+      "label_work_package_context_menu": "Work package context menu",
+      "label_work_package_details_you_are_here": "You are on the %{tab} tab for %{type} %{subject}.",
+      "label_work_package_parent": "Parent work package",
+      "label_work_package_plural": "Work packages",
+      "label_work_package_upload_notification": "Uploading files for Work package #%{id}: %{subject}",
+      "label_wp_id_added_by": "#%{id} added by %{author}",
+      "modals": {
+        "button_apply": "Apply",
+        "button_cancel": "Cancel",
+        "button_delete": "Delete",
+        "button_save": "Save",
+        "button_submit": "Submit",
+        "destroy_time_entry": {
+          "text": "Are you sure you want to delete the following time entry?",
+          "title": "Confirm deletion of time entry"
+        },
+        "destroy_work_package": {
+          "bulk_text": "Are you sure you want to delete the following %{label}?",
+          "confirm_deletion_children": "I acknowledge that ALL descendants of the listed work packages will be recursively removed.",
+          "deletes_children": "All child work packages and their descendants will also be recursively deleted.",
+          "has_children": "The work package has %{childUnits}:",
+          "single_text": "Are you sure you want to delete the work package",
+          "title": "Confirm deletion of %{label}"
+        },
+        "form_submit": {
+          "text": "Are you sure you want to perform this action?",
+          "title": "Confirm to continue"
+        },
+        "label_delete_page": "Delete current page",
+        "label_name": "Name"
+      },
+      "myTimeTracking": {
+        "noSpecificTime": "No specific time"
+      },
+      "notice_bad_request": "Bad Request.",
+      "notice_job_started": "job started.",
+      "notice_no_results_to_display": "No visible results to display.",
+      "notice_successful_create": "Successful creation.",
+      "notice_successful_delete": "Successful deletion.",
+      "notice_successful_update": "Successful update.",
+      "notifications": {
+        "center": {
+          "and_more_users": {
+            "one": "and 1 other",
+            "other": "and %{count} others"
+          },
+          "empty_state": {
+            "no_notification": "Looks like you are all caught up.",
+            "no_notification_for_filter": "Looks like you are all caught up for this filter.",
+            "no_notification_with_current_filter": "Looks like you are all caught up for %{filter} filter.",
+            "no_notification_with_current_project_filter": "Looks like you are all caught up with the selected project.",
+            "no_selection": "Click on a notification to view all activity details."
+          },
+          "label_actor_and": "and",
+          "mark_all_read": "Mark all as read",
+          "mark_all_read_confirmation": "This will mark all notifications in this view as read. Are you sure you want to do this?",
+          "mark_as_read": "Mark as read",
+          "new_notifications": {
+            "link_text": "Click here to load them.",
+            "message": "There are new notifications."
+          },
+          "no_results": {
+            "at_all": "New notifications will appear here when there is activity that concerns you.",
+            "with_current_filter": "There are no notifications in this view at the moment"
+          },
+          "text_update_date_by": "%{date} by",
+          "total_count_warning": "Showing the %{newest_count} most recent notifications. %{more_count} more are not displayed."
+        },
+        "date_alerts": {
+          "milestone_date": "Milestone date",
+          "overdue": "Overdue",
+          "overdue_since": "since %{difference_in_days}.",
+          "property_is": "is in %{difference_in_days}.",
+          "property_is_deleted": "is deleted.",
+          "property_today": "is today.",
+          "property_was": "was %{difference_in_days} ago."
+        },
+        "no_unread": "No unread notifications",
+        "reasons": {
+          "assigned": "Assignee",
+          "commented": "Commented",
+          "created": "Created",
+          "dateAlert": "Date alert",
+          "mentioned": "Mentioned",
+          "prioritized": "Prioritized",
+          "processed": "Processed",
+          "reminder": "Reminder",
+          "responsible": "Accountable",
+          "scheduled": "Scheduled",
+          "shared": "Shared",
+          "watched": "Watcher"
+        },
+        "reminders": {
+          "note": "Note: “%{note}”"
+        },
+        "settings": {
+          "change_notification_settings": "You can modify your <a target=\"_blank\" href=\"%{url}\">notification settings</a> to ensure you never miss an important update.",
+          "global": {
+            "date_alerts": {
+              "description": "Automatic notifications when important dates are approaching for open work packages you are involved in (assignee, accountable or watcher).",
+              "title": "Date alerts"
+            },
+            "delayed": {
+              "description": "Additional notifications for activities in all projects.",
+              "title": "Non-participating"
+            },
+            "immediately": {
+              "description": "Notifications for all activities in work packages you are involved in (assignee, accountable or watcher).",
+              "title": "Participating"
+            },
+            "overdue": "When overdue"
+          },
+          "notify_me": "Notify me",
+          "project_specific": {
+            "add": "Add setting for project",
+            "already_selected": "This project is already selected",
+            "description": "These project-specific settings override default settings above.",
+            "remove": "Remove project settings",
+            "title": "Project-specific notification settings"
+          },
+          "reasons": {
+            "assignee": "Assignee",
+            "mentioned": {
+              "description": "Receive a notification every time someone mentions me anywhere",
+              "title": "Mentioned"
+            },
+            "responsible": "Accountable",
+            "shared": "Shared",
+            "watched": "Watcher",
+            "work_package_commented": "All new comments",
+            "work_package_created": "New work packages",
+            "work_package_prioritized": "All priority changes",
+            "work_package_processed": "All status changes",
+            "work_package_scheduled": "All date changes"
+          },
+          "reminders": {
+            "no_notification": "No notification",
+            "timeframes": {
+              "normal": {
+                "P1D": "1 day before",
+                "P3D": "3 days before",
+                "P7D": "a week before",
+                "PT0S": "same day"
+              },
+              "overdue": {
+                "P1D": "every day",
+                "P3D": "every 3 days",
+                "P7D": "every week"
+              }
+            }
+          },
+          "title": "Notification settings"
+        },
+        "title": "Notifications"
+      },
+      "onboarding": {
+        "buttons": {
+          "got_it": "Got it",
+          "next": "Next",
+          "skip": "Skip"
+        },
+        "steps": {
+          "backlogs": {
+            "overview": "Manage your work in the <b>backlogs</b> view.",
+            "sprints": "On the right you have the product backlog and the bug backlog, on the left you have the respective sprints. Here you can create <b>epics, user stories, and bugs</b>, prioritize via drag & drop and add them to a sprint.",
+            "task_board": "The task board visualizes the <b>progress for this sprint</b>. Click on the plus (+) icon next to a user story to add new tasks or impediments. <br> The status can be updated by drag and drop.",
+            "task_board_arrow": "To see your <b>task board</b>, open the sprint drop-down...",
+            "task_board_select": "...and select the <b>task board</b> entry."
+          },
+          "boards": {
+            "add": "Click on the plus (+) icon to <b>create a new card</b> or <b>add an existing card</b> to the list on the board.",
+            "drag": "Drag and drop your cards within a given list to reorder them, or to move them to another list. <br> You can click the info (i) icon in the upper right-hand corner or double-click a card to open its details.",
+            "lists_basic": "Here you can create multiple lists (columns) within your agile board.",
+            "lists_kanban": "Here you can create multiple lists (columns) within your board. This feature allows you to create a <b>Kanban board</b>, for example.",
+            "overview": "Select <b>boards</b> to shift the view and manage your project using the agile boards view."
+          },
+          "help_menu": "The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with OpenProject!",
+          "members": "Invite new <b>members</b> to join your project.",
+          "quick_add_button": "Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>.",
+          "sidebar_arrow": "Use the return arrow in the top left corner to return to the project’s <b>main menu</b>.",
+          "team_planner": {
+            "add_assignee": "To get started, add assignees to the team planner.",
+            "add_existing": "Search for existing work packages and drag them to the team planner to instantly assign them to a team member and define start and end dates.",
+            "calendar": "The weekly or biweekly planning board displays all work packages assigned to your team members.",
+            "card": "Drag work packages horizontally to move them backwards or forwards in time, drag the edges to change start and end dates and even drag them vertically to a different row to assign them to another member.",
+            "overview": "The team planner lets you visually assign tasks to team members and get an overview of who is working on what."
+          },
+          "welcome": "Take a three-minute introduction tour to learn the most <b>important features</b>. <br> We recommend completing the steps until the end. You can restart the tour any time.",
+          "wiki": "Within the <b>wiki</b> you can document and share knowledge together with your team.",
+          "wp": {
+            "back_button": "Use the return arrow in the top left corner to exit and return to the work package list.",
+            "create_button": "The <b>+ Create</b> button will add a new work package to your project.",
+            "full_view": "The <b>work package details</b> view provides all the relevant information pertaining to a given work package, such as its description, status, priority, activities, dependencies, and comments.",
+            "gantt_menu": "Create project schedules and timelines effortlessly using the Gantt chart module.",
+            "list": "This <b>work</b> package overview provides a list of all the work in your project, such as tasks, milestones, phases, and more. <br> Work packages can be created and edited directly from this view. To access the details of a particular work package, simply double-click its row.",
+            "timeline": "Here you can <b>edit your project plan</b>, create new work packages, such as tasks, milestones, phases, and more, as well as <b>add dependencies</b>. All team members can see and update the latest plan at any time.",
+            "toggler": "Now let's have a look at the <b>work package</b> section, which gives you a more detailed view of your work."
+          }
+        }
+      },
+      "open_project_storage_modal": {
+        "waiting_subtitle": {
+          "network_off": "There is a network problem.",
+          "network_on": "Network is back. We are trying."
+        },
+        "waiting_title": {
+          "timeout": "Timeout"
+        }
+      },
+      "overviews": {
+        "label": "Overview"
+      },
+      "pagination": {
+        "no_other_page": "You are on the only page.",
+        "pages": {
+          "next": "Forward to the next page",
+          "previous": "Back to the previous page"
+        }
+      },
+      "password_confirmation": {
+        "field_description": "You need to enter your account password to confirm this change.",
+        "title": "Confirm your password to continue"
+      },
+      "placeholders": {
+        "default": "-",
+        "description": "Description: Click to edit...",
+        "relation_description": "Click to add description for this relation",
+        "selection": "Please select",
+        "subject": "Enter subject here"
+      },
+      "project": {
+        "autocompleter": {
+          "label": "Project autocompletion"
+        },
+        "click_to_switch_to_project": "Project: %{projectname}",
+        "confirm_template_load": "Switching the template will reload the page and you will lose all input to this form. Continue?",
+        "context": "Project context",
+        "copy": {
+          "copy_options": "Copy options"
+        },
+        "no_template_selected": "(None)",
+        "not_available": "Project N/A",
+        "required_outside_context": "Please choose a project to create the work package in to see all attributes. You can only select projects which have the type above activated.\n",
+        "use_template": "Use template"
+      },
+      "project_menu_details": "Details",
+      "relation_buttons": {
+        "abort": "Abort",
+        "add_existing": "Add existing",
+        "add_existing_child": "Add child",
+        "add_existing_relation": "Add existing relation",
+        "add_new_child": "Create new child",
+        "add_new_relation": "Create new relation",
+        "add_parent": "Add existing parent",
+        "add_predecessor": "Add predecessor",
+        "add_successor": "Add successor",
+        "change_parent": "Change parent",
+        "create_new": "Create new",
+        "group_by_relation_type": "Group by relation type",
+        "group_by_wp_type": "Group by work package type",
+        "hierarchy_indent": "Indent hierarchy",
+        "hierarchy_outdent": "Outdent hierarchy",
+        "remove": "Remove relation",
+        "remove_child": "Remove child",
+        "remove_parent": "Remove parent",
+        "save": "Save relation",
+        "set_parent": "Set parent",
+        "show_relations": "Show relations",
+        "toggle_description": "Toggle relation description",
+        "update_description": "Set or update description of this relation",
+        "update_relation": "Click to change the relation type"
+      },
+      "relation_labels": {
+        "blocked": "Blocked by",
+        "blocks": "Blocks",
+        "child": "Child",
+        "children": "Children",
+        "duplicated": "Duplicated by",
+        "duplicates": "Duplicates",
+        "follows": "Follows",
+        "includes": "Includes",
+        "parent": "Parent",
+        "partof": "Part of",
+        "precedes": "Precedes",
+        "relates": "Related To",
+        "relation_type": "relation type",
+        "required": "Required by",
+        "requires": "Requires"
+      },
+      "relations": {
+        "empty": "No relation exists",
+        "remove": "Remove relation"
+      },
+      "relations_autocomplete": {
+        "parent_placeholder": "Choose new parent or press escape to cancel.",
+        "placeholder": "Type to search"
+      },
+      "relations_hierarchy": {
+        "children_headline": "Children",
+        "hierarchy_headline": "Hierarchy",
+        "parent_headline": "Parent"
+      },
+      "reminders": {
+        "settings": {
+          "alerts": {
+            "document_added": "Documents added",
+            "explanation": "Notifications today are limited to work packages. You can choose to continue receiving email alerts for these events until they are included in notifications:\n",
+            "forum_messages": "New forum messages",
+            "membership_added": "Membership added",
+            "membership_updated": "Membership updated",
+            "news_added": "News added",
+            "news_commented": "Comment on a news item",
+            "title": "Email alerts for other items (that are not work packages)",
+            "wiki_page_added": "Wiki page added",
+            "wiki_page_updated": "Wiki page updated"
+          },
+          "daily": {
+            "add_time": "Add time",
+            "enable": "Enable daily email reminders",
+            "explanation": "You will receive these reminders only for unread notifications and only at hours you specify. %{no_time_zone}",
+            "no_time_zone": "Until you configure a time zone for your account, the times will be interpreted to be in UTC.",
+            "time_label": "Time %{counter}:",
+            "title": "Send me daily email reminders for unread notifications"
+          },
+          "immediate": {
+            "mentioned": "Immediately when someone @mentions me",
+            "personal_reminder": "Immediately when I receive a personal reminder",
+            "title": "Send me an email reminder"
+          },
+          "pause": {
+            "first_day": "First day",
+            "label": "Temporarily pause daily email reminders",
+            "last_day": "Last day"
+          },
+          "title": "Email reminders",
+          "workdays": {
+            "title": "Receive email reminders on these days"
+          }
+        }
+      },
+      "reporting_engine": {
+        "label_remove": "Delete",
+        "label_response_error": "There was an error handling the query."
+      },
+      "repositories": {
+        "select_branch": "Select branch",
+        "select_tag": "Select tag"
+      },
+      "revit": {
+        "revit_add_in": "Revit Add-In",
+        "revit_add_in_settings": "Revit Add-In settings"
+      },
+      "sharing": {
+        "selected_count": "%{count} selected",
+        "selection": {
+          "mixed": "Mixed"
+        },
+        "share": "Share"
+      },
+      "sort": {
+        "activate_asc": "activate to apply an ascending sort",
+        "activate_dsc": "activate to apply a descending sort",
+        "activate_no": "activate to remove the sort",
+        "sorted_asc": "Ascending sort applied, ",
+        "sorted_dsc": "Descending sort applied, ",
+        "sorted_no": "No sort applied, ",
+        "sorting_disabled": "sorting is disabled"
+      },
+      "spot": {
+        "drop_modal": {
+          "close": "Close modal",
+          "focus_grab": "This is a focus anchor for modals. Press shift+tab to go back to the modal trigger element."
+        },
+        "filter_chip": {
+          "remove": "Remove"
+        }
+      },
+      "storages": {
+        "authentication_error": "Authentication with %{storageType} failed",
+        "choose_location": "Choose location",
+        "drop_files": "Drop files here to upload them to %{name}.",
+        "drop_or_click_files": "Drop files here or click to upload them to %{name}.",
+        "file_links": {
+          "already_linked_directory": "This directory is already linked to this work package.",
+          "already_linked_file": "This file is already linked to this work package.",
+          "download": "Download %{fileName}",
+          "empty": "Currently there are no linked files to this work package. Start linking files with the action below or from within %{storageType}.\n",
+          "link_uploaded_file_error": "An error occurred linking the recently uploaded file '%{fileName}' to the work package %{workPackageId}.\n",
+          "open": "Open file on storage",
+          "open_location": "Open file in location",
+          "remove": "Remove file link",
+          "remove_confirmation": "Are you sure you want to unlink the file from this work package? Unlinking does not affect the original file and only removes the connection to this work package.\n",
+          "remove_short": "Remove link",
+          "select": "Select files",
+          "select_all": "Select all",
+          "selection": {
+            "one": "Link 1 file",
+            "other": "Link %{count} files",
+            "zero": "Select files to link"
+          },
+          "success_create": {
+            "one": "Successfully created 1 file link.",
+            "other": "Successfully created %{count} file links."
+          },
+          "tooltip": {
+            "not_found": "This file cannot be found.",
+            "not_logged_in": "Please log in to the storage to access this file.",
+            "view_not_allowed": "You have no permission to see this file."
+          },
+          "upload_error": {
+            "403": "Your file (%{fileName}) could not be uploaded due to system restrictions. Please contact your administrator for more information.\n",
+            "413": "Your file (%{fileName}) is bigger than what OpenProject can upload to %{storageType}. You can upload it directly to %{storageType} first and then link the file.\n",
+            "507": "Your file (%{fileName}) is bigger than the storage quota allows. Contact your administrator to modify this quota.\n",
+            "default": "Your file (%{fileName}) could not be uploaded.\n",
+            "detail": {
+              "nextcloud": "Please check that the latest version of the Nextcloud App \"OpenProject Integration\" is installed and contact your administrator for more information.\n"
+            }
+          }
+        },
+        "files": {
+          "already_existing_body": "A file with the name \"%{fileName}\" already exists in the location where you are trying to upload this file. What would you like to do?\n",
+          "already_existing_header": "This file already exists",
+          "cannot_create_folder": "Failed to create folder. Avoid using special characters and symbols and make sure the folder does not exist already.",
+          "directory_not_writeable": "You do not have permission to add files to this folder.",
+          "dragging_folder": "The upload to %{storageType} does not support folders.",
+          "dragging_many_files": "The upload to %{storageType} supports only one file at once.",
+          "empty_folder": "This folder is empty.",
+          "empty_folder_location_hint": "Click the button below to upload the file to this location.",
+          "file_not_selectable_location": "Selecting a file is not possible in the process of choosing a location.",
+          "managed_project_folder_no_access": "You have no access yet to the managed project folder. Please wait a bit and try again.\n",
+          "managed_project_folder_not_available": "The automatically managed project folder was not yet found. Please wait a bit, reload the page to fetch the newest data, and try again.\n",
+          "project_folder_no_access": "You have no access to the project folder. Please, contact your administrator to get access or upload the file in another location.\n",
+          "upload_keep_both": "Keep both",
+          "upload_replace": "Replace"
+        },
+        "information": {
+          "authentication_error": "The request to %{storageType} could not be authenticated, that's an error.",
+          "connection_error": "Some %{storageType} settings are not working. Please contact your %{storageType} administrator.\n",
+          "live_data_error": "Error fetching file details",
+          "live_data_error_description": "Some %{storageType} data could not be fetched. Please try to reload this page or contact your %{storageType} administrator.\n",
+          "no_file_links": "In order to link files to this work package please do it via %{storageType}.",
+          "not_logged_in": "To add a link, see or upload files related to this work package, please login to %{storageType}.\n",
+          "suggest_logout": "You can try whether logging out and back in fixes this problem.",
+          "suggest_relink": "You can try whether re-linking your account via the login button below fixes this problem."
+        },
+        "link_existing_files": "Link existing files",
+        "link_files_in_storage": "Link files in %{storageType}",
+        "login": "%{storageType} login",
+        "login_to": "Login to %{storageType}",
+        "new_folder": "New folder",
+        "no_connection": "No %{storageType} connection",
+        "open_storage": "Open %{storageType}",
+        "select_location": "Select location",
+        "types": {
+          "default": "Storage",
+          "nextcloud": "Nextcloud",
+          "one_drive": "OneDrive/SharePoint"
+        },
+        "upload_files": "Upload files"
+      },
+      "team_planner": {
+        "add_assignee": "Assignee",
+        "add_existing": "Add existing",
+        "add_existing_title": "Add existing work packages",
+        "cannot_drag_here": "Cannot remove the work package due to permissions or editing restrictions.",
+        "cannot_drag_to_non_working_day": "This work package cannot start/finish on a non-working day.",
+        "create_label": "Team planner",
+        "create_title": "Create new team planner",
+        "drag_here_to_remove": "Drag here to remove assignee and start and end dates.",
+        "eight_weeks": "8-week",
+        "four_weeks": "4-week",
+        "modify": {
+          "errors": {
+            "fallback": "This work package cannot be edited.",
+            "permission_denied": "You do not have the necessary permissions to modify this."
+          }
+        },
+        "no_data": "Add assignees to set up your team planner.",
+        "one_week": "1-week",
+        "quick_add": {
+          "empty_state": "Use the search field to find work packages and drag them to the planner to assign it to someone and define start and end dates.",
+          "search_placeholder": "Search..."
+        },
+        "remove_assignee": "Remove assignee",
+        "today": "Today",
+        "two_weeks": "2-week",
+        "unsaved_title": "Unnamed team planner",
+        "work_week": "Work week"
+      },
+      "text_are_you_sure": "Are you sure?",
+      "text_data_lost": "All entered data will be lost.",
+      "text_query_destroy_confirmation": "Are you sure you want to delete the selected view?",
+      "text_user_wrote": "%{value} wrote:",
+      "text_work_packages_destroy_confirmation": "Are you sure you want to delete the selected work package(s)?",
+      "time_entry": {
+        "stop": "Stop",
+        "title": "Log time",
+        "tracking": "Time tracking",
+        "work_package_required": "Requires selecting a work package first."
+      },
+      "timer": {
+        "button_stop": "Stop current timer",
+        "start_new_timer": "Start new timer",
+        "timer_already_running": "To start a new timer, you must first stop the current timer:",
+        "timer_already_stopped": "No active timer for this work package, have you stopped it in another window?",
+        "tracking_time": "Tracking time"
+      },
+      "tl_toolbar": {
+        "outlines": "Hierarchy level",
+        "zooms": "Zoom level"
+      },
+      "toolbar": {
+        "filter": "Filter",
+        "search_query_label": "Search saved views",
+        "settings": {
+          "columns": "Columns",
+          "configure_view": "Configure view",
+          "delete": "Delete",
+          "display_hierarchy": "Display hierarchy",
+          "display_sums": "Display sums",
+          "export": "Export",
+          "group_by": "Group by",
+          "hide_hierarchy": "Hide hierarchy",
+          "hide_sums": "Hide sums",
+          "page_settings": "Rename view",
+          "save": "Save",
+          "save_as": "Save as",
+          "share_calendar": "Subscribe to calendar",
+          "sort_by": "Sort by",
+          "visibility_settings": "Visibility settings"
+        },
+        "unselected_title": "Work package"
+      },
+      "two_factor_authentication": {
+        "errors": {
+          "aborted": "The authentication was cancelled. Please try again."
+        },
+        "label_two_factor_authentication": "Two-factor authentication"
+      },
+      "types": {
+        "attribute_groups": {
+          "confirm_reset": "Warning: Are you sure you want to reset the form configuration? This will reset the attributes to their default group and disable ALL custom fields.\n",
+          "error_duplicate_group_name": "The name %{group} is used more than once. Group names must be unique.",
+          "error_no_table_configured": "Please configure a table for %{group}.",
+          "more_information": "More information",
+          "nevermind": "Nevermind",
+          "reset_title": "Reset form configuration",
+          "upgrade_to_ee": "Upgrade to Enterprise on-premises edition",
+          "upgrade_to_ee_text": "Wow! If you need this add-on you are a super pro! Would you mind supporting us OpenSource developers by becoming an Enterprise edition client?"
+        }
+      },
+      "units": {
+        "child_work_packages": {
+          "one": "one child work package",
+          "other": "%{count} work package children"
+        },
+        "day": {
+          "one": "1 day",
+          "other": "%{count} days",
+          "zero": "0 days"
+        },
+        "hour": {
+          "one": "1 h",
+          "other": "%{count} h",
+          "zero": "0 h"
+        },
+        "word": {
+          "one": "1 word",
+          "other": "%{count} words"
+        },
+        "workPackage": {
+          "one": "work package",
+          "other": "work packages"
+        }
+      },
+      "upsell": {
+        "ee_only": "Enterprise edition add-on"
+      },
+      "views": {
+        "card": "Cards",
+        "list": "Table",
+        "timeline": "Gantt"
+      },
+      "watchers": {
+        "label_add": "Add watchers",
+        "label_discard": "Discard selection",
+        "label_error_loading": "An error occurred while loading the watchers",
+        "label_loading": "loading watchers...",
+        "label_search_watchers": "Search watchers",
+        "typeahead_placeholder": "Search for possible watchers"
+      },
+      "wiki_formatting": {
+        "code": "Inline Code",
+        "deleted": "Deleted",
+        "heading1": "Heading 1",
+        "heading2": "Heading 2",
+        "heading3": "Heading 3",
+        "image": "Image",
+        "italic": "Italic",
+        "ordered_list": "Ordered List",
+        "preformatted_text": "Preformatted Text",
+        "quote": "Quote",
+        "strong": "Strong",
+        "underline": "Underline",
+        "unordered_list": "Unordered List",
+        "unquote": "Unquote",
+        "wiki_link": "Link to a Wiki page"
+      },
+      "work_packages": {
+        "baseline": {
+          "addition_label": "Added to view within the comparison time period",
+          "column_incompatible": "This column does not show changes in Baseline mode.",
+          "modification_label": "Modified within the comparison time period",
+          "removal_label": "Removed from view within the comparison time period"
+        },
+        "bulk_actions": {
+          "copy": "Bulk copy",
+          "delete": "Bulk delete",
+          "edit": "Bulk edit",
+          "move": "Bulk change of project"
+        },
+        "button_clear": "Clear",
+        "comment_added": "The comment was successfully added.",
+        "comment_send_failed": "An error has occurred. Could not submit the comment.",
+        "comment_updated": "The comment was successfully updated.",
+        "confirm_edit_cancel": "Are you sure you want to cancel editing the work package?",
+        "copy": {
+          "title": "Copy work package"
+        },
+        "create": {
+          "button": "Create",
+          "header": "New %{type}",
+          "header_no_type": "New work package (Type not yet set)",
+          "header_with_parent": "New %{type} (Child of %{parent_type} #%{id})",
+          "title": "New work package"
+        },
+        "default_queries": {
+          "all_open": "All open",
+          "assigned_to_me": "Assigned to me",
+          "created_by_me": "Created by me",
+          "latest_activity": "Latest activity",
+          "manually_sorted": "New manually sorted query",
+          "milestones": "Milestones",
+          "overdue": "Overdue",
+          "recently_created": "Recently created",
+          "shared_with_me": "Shared with me",
+          "shared_with_users": "Shared with users",
+          "summary": "Summary"
+        },
+        "description_enter_text": "Enter text",
+        "description_filter": "Filter",
+        "description_options_hide": "Hide options",
+        "description_options_show": "Show options",
+        "edit_attribute": "%{attribute} - Edit",
+        "faulty_query": {
+          "description": "Your view is erroneous and could not be processed.",
+          "title": "Work packages could not be loaded."
+        },
+        "filters": {
+          "baseline_incompatible": "This filter attribute is not taken into consideration in Baseline mode.",
+          "baseline_warning": "Baseline mode is on but some of your active filters are not included in the comparison.",
+          "title": "Filter work packages"
+        },
+        "hierarchy": {
+          "children_collapsed": "Hierarchy level %{level}, collapsed. Click to show the filtered children",
+          "children_expanded": "Hierarchy level %{level}, expanded. Click to collapse the filtered children",
+          "hide": "Hide hierarchy mode",
+          "leaf": "Work package leaf at level %{level}.",
+          "show": "Show hierarchy mode",
+          "toggle_button": "Click to toggle hierarchy mode."
+        },
+        "inline_create": {
+          "title": "Click here to add a new work package to this list"
+        },
+        "jump_marks": {
+          "content": "Jump to content",
+          "label_content": "Click here to skip over the menu and go to the content",
+          "label_pagination": "Click here to skip over the work packages table and go to pagination",
+          "pagination": "Jump to table pagination"
+        },
+        "key_value": "%{key}: %{value}",
+        "label_column_multiselect": "Combined dropdown field: Select with arrow keys, confirm selection with enter, delete with backspace",
+        "label_disable_multi_select": "Disable multiselect",
+        "label_enable_multi_select": "Enable multiselect",
+        "label_filter_add": "Add filter",
+        "label_filter_by_text": "Filter by text",
+        "label_options": "Options",
+        "limited_results": "Only %{count} work packages can be shown in manual sorting mode. Please reduce the results by filtering, or switch to automatic sorting.",
+        "message_error_during_bulk_delete": "An error occurred while trying to delete work packages.",
+        "message_successful_bulk_delete": "Successfully deleted work packages.",
+        "message_successful_show_in_fullscreen": "Click here to open this work package in fullscreen view.",
+        "message_view_spent_time": "Show spent time for this work package",
+        "message_work_package_read_only": "Work package is locked in this status. No attribute other than status can be altered.",
+        "message_work_package_status_blocked": "Work package status is not writable due to closed status and closed version being assigned.",
+        "no_results": {
+          "description": "Either none have been created or all work packages are filtered out.",
+          "title": "No work packages to display."
+        },
+        "placeholder_filter_by_text": "Subject, description, comments, ...",
+        "placeholders": {
+          "date": "Select date",
+          "default": "-"
+        },
+        "progress": {
+          "title": "Work estimates and progress"
+        },
+        "properties": {
+          "assignee": "Assignee",
+          "author": "Author",
+          "category": "Category",
+          "costObject": "Budget",
+          "createdAt": "Created on",
+          "date": "Date",
+          "description": "Description",
+          "dueDate": "Finish date",
+          "duration": "Duration",
+          "overallCosts": "Overall costs",
+          "percentComplete": "% Complete",
+          "percentCompleteAlternative": "Progress",
+          "percentageDone": "Percentage done",
+          "priority": "Priority",
+          "projectName": "Project",
+          "remainingTime": "Remaining work",
+          "remainingWork": "Remaining work",
+          "remainingWorkAlternative": "Remaining hours",
+          "responsible": "Responsible",
+          "spentTime": "Spent time",
+          "spentUnits": "Spent units",
+          "startDate": "Start date",
+          "status": "Status",
+          "storyPoints": "Story Points",
+          "subject": "Subject",
+          "subproject": "Subproject",
+          "title": "Title",
+          "type": "Type",
+          "updatedAt": "Updated on",
+          "version": "Version",
+          "versionName": "Version",
+          "work": "Work",
+          "workAlternative": "Estimated time"
+        },
+        "property_groups": {
+          "costs": "Costs",
+          "details": "Details",
+          "estimatesAndTime": "Estimates & Time",
+          "other": "Other",
+          "people": "People"
+        },
+        "query": {
+          "click_to_edit_query_name": "Click to edit title of this view.",
+          "column_names": "Columns",
+          "confirm_edit_cancel": "Are you sure you want to cancel editing the name of this view? Title will be set back to previous value.",
+          "display_sums": "Display Sums",
+          "errors": {
+            "duplicate_query_title": "Name of this view already exists. Change anyway?",
+            "not_found": "There is no such view",
+            "unretrievable_query": "Unable to retrieve view from URL"
+          },
+          "filters": "Filters",
+          "group": "Group by",
+          "group_by": "Group results by",
+          "group_by_disabled_by_hierarchy": "Group by is disabled due to the hierarchy mode being active.",
+          "hide_column": "Hide column",
+          "hierarchy_disabled_by_group_by": "Hierarchy mode is disabled due to results being grouped by %{column}.",
+          "insert_columns": "Insert columns",
+          "move_column_left": "Move column left",
+          "move_column_right": "Move column right",
+          "public_text": "Publish this view, allowing other users to access your view. Users with the 'Manage public views' permission can modify or remove public query. This does not affect the visibility of work package results in that view and depending on their permissions, users may see different results.\n",
+          "rename_query_placeholder": "Name of this view",
+          "sort_ascending": "Sort ascending",
+          "sort_descending": "Sort descending",
+          "star_text": "Mark this view as favorite and add to the saved views sidebar on the left.",
+          "text_no_results": "No matching views were found."
+        },
+        "reminders": {
+          "button_label": "Set reminder",
+          "presets": {
+            "custom": "At a particular date/time",
+            "month": "In a month",
+            "three_days": "In 3 days",
+            "tomorrow": "Tomorrow",
+            "week": "In a week"
+          },
+          "subtitle": "You will receive a notification for this work package at the chosen time.",
+          "title": {
+            "edit": "Edit reminder",
+            "new": "Set a reminder"
+          }
+        },
+        "scheduling": {
+          "is_parent": "The dates of this work package are automatically deduced from its children. Activate 'Manual scheduling' to set the dates.",
+          "is_switched_from_manual_to_automatic": "The dates of this work package may need to be recalculated after switching from manual to automatic scheduling due to relationships with other work packages."
+        },
+        "sharing": {
+          "show_all_users": "Show all users with whom the work package has been shared with",
+          "title": "Share work package"
+        },
+        "table": {
+          "configure_button": "Configure work package table",
+          "summary": "Table with rows of work package and columns of work package attributes.",
+          "text_inline_edit": "Most cells of this table are buttons that activate inline-editing functionality of that attribute.",
+          "text_select_hint": "Select boxes should be opened with 'ALT' and arrow keys.",
+          "text_sort_hint": "With the links in the table headers you can sort, group, reorder, remove and add table columns."
+        },
+        "table_configuration": {
+          "button": "Configure this work package table",
+          "choose_display_mode": "Display work packages as",
+          "columns_help_text": "Use the input field above to add columns to your table view. You can drag and drop the columns to reorder them.",
+          "default": "default",
+          "default_mode": "Flat list",
+          "display_settings": "Display settings",
+          "display_sums_hint": "Display sums of all summable attributes in a row below the table results.",
+          "embedded_tab_disabled": "This configuration tab is not available for the embedded view you are editing.",
+          "hierarchy_hint": "All filtered table results will be augmented with their ancestors. Hierarchies can be expanded and collapsed.",
+          "hierarchy_mode": "Hierarchy",
+          "highlighting": "Highlighting",
+          "highlighting_mode": {
+            "description": "Highlight with color",
+            "entire_row_by": "Entire row by",
+            "inline": "Highlighted attribute(s)",
+            "inline_all": "All attributes",
+            "none": "No highlighting",
+            "priority": "Priority",
+            "status": "Status",
+            "type": "Type"
+          },
+          "modal_title": "Work package table configuration",
+          "relation_filters": {
+            "filter_work_packages_by_relation_type": "Filter work packages by relation type"
+          },
+          "show_timeline_hint": "Show an interactive gantt chart on the right side of the table. You can change its width by dragging the divider between table and gantt chart.",
+          "sorting_mode": {
+            "automatic": "Automatic",
+            "description": "Chose the mode to sort your Work packages:",
+            "manually": "Manually",
+            "warning": "You will lose your previous sorting when activating the automatic sorting mode."
+          }
+        },
+        "tabs": {
+          "activity": "Activity",
+          "files": "Files",
+          "github": "GitHub",
+          "gitlab": "GitLab",
+          "meetings": "Meetings",
+          "overview": "Overview",
+          "relations": "Relations",
+          "watchers": "Watchers"
+        },
+        "time_relative": {
+          "days": "days",
+          "months": "months",
+          "weeks": "weeks"
+        }
+      },
+      "zen_mode": {
+        "button_activate": "Activate zen mode",
+        "button_deactivate": "Deactivate zen mode"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": ",",
+          "format": "%u%n",
+          "negative_format": "-%u%n",
+          "precision": 2,
+          "separator": ".",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "¤"
+        }
+      },
+      "format": {
+        "delimiter": ",",
+        "precision": 2,
+        "round_mode": "default",
+        "separator": ".",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "mil millones",
+            "million": {
+              "one": "millón",
+              "other": "millones"
+            },
+            "quadrillion": "mil billones",
+            "thousand": "mil",
+            "trillion": {
+              "one": "billón",
+              "other": "billones"
+            },
+            "unit": null
+          }
+        },
+        "format": {
+          "delimiter": ",",
+          "precision": 3,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "one": "Byte",
+              "other": "Bytes"
+            },
+            "eb": "EB",
+            "gb": "GB",
+            "kb": "KB",
+            "mb": "MB",
+            "pb": "PB",
+            "tb": "TB",
+            "zb": "ZB"
+          }
+        }
+      },
+      "nth": {},
+      "percentage": {
+        "format": {
+          "delimiter": ",",
+          "format": "%n%"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": ","
+        }
+      }
+    },
+    "time": {
+      "am": "am",
+      "formats": {
+        "default": "%a, %d de %b de %Y a las %H:%M:%S %Z",
+        "long": "%A, %d de %B de %Y a las %I:%M %p",
+        "short": "%d de %b a las %H:%M hrs",
+        "time": "%I:%M %p"
+      },
+      "pm": "pm"
+    }
+  }
+}

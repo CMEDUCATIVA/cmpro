@@ -1,0 +1,148 @@
+/* Animación de pulso neón futurista para el botón */
+@keyframes neon-pulse {
+  0% { 
+    box-shadow: 
+      0 0 20px rgba(139, 92, 246, 0.6),
+      0 0 40px rgba(139, 92, 246, 0.4),
+      0 0 60px rgba(139, 92, 246, 0.2),
+      0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  50% { 
+    box-shadow: 
+      0 0 30px rgba(139, 92, 246, 0.8),
+      0 0 60px rgba(139, 92, 246, 0.6),
+      0 0 90px rgba(139, 92, 246, 0.4),
+      0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  100% { 
+    box-shadow: 
+      0 0 20px rgba(139, 92, 246, 0.6),
+      0 0 40px rgba(139, 92, 246, 0.4),
+      0 0 60px rgba(139, 92, 246, 0.2),
+      0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes ia-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,99,235,0.6); }
+  70% { box-shadow: 0 0 0 14px rgba(37,99,235,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,99,235,0); }
+}
+
+.op-ia-avatar-static-glow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow:
+    0 0 6px rgba(168, 85, 247, 0.7),
+    0 0 12px rgba(59, 130, 246, 0.5);
+}
+
+/* Estilos responsive para la ventana de chat */
+#ia-chat-window {
+  /* Pantallas grandes (escritorio) - MUY ANCHO */
+  width: 720px;
+  height: calc(100vh - 200px);
+  max-width: calc(100vw - 40px);
+  max-height: 850px;
+  min-height: 600px;
+}
+
+/* Tablets y pantallas medianas - mantener como está */
+@media (max-width: 1024px) {
+  #ia-chat-window {
+    width: 380px;
+    height: 650px;
+  }
+}
+
+/* Tablets pequeñas */
+@media (max-width: 768px) {
+  #ia-chat-window {
+    width: 380px;
+    height: 550px;
+    right: 10px !important;
+    bottom: 70px !important;
+  }
+  
+  #ia-chat-toggle-btn {
+    right: 10px !important;
+    bottom: 10px !important;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  #ia-chat-window {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 100px);
+    right: 10px !important;
+    bottom: 10px !important;
+    border-radius: 12px;
+  }
+  
+  #ia-chat-toggle-btn {
+    right: 10px !important;
+    bottom: 10px !important;
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+  
+  /* Ajustar padding en móviles para aprovechar espacio */
+  #ia-chat-messages {
+    padding: 14px !important;
+    gap: 10px !important;
+  }
+  
+  #ia-chat-form {
+    padding: 12px !important;
+  }
+}
+
+/* Pantallas muy grandes (monitores grandes) - AÚN MÁS ANCHO */
+@media (min-width: 1920px) {
+  #ia-chat-window {
+    width: 850px;
+    height: calc(100vh - 180px);
+    max-height: 950px;
+  }
+}
+
+/* Scroll personalizado para el área de mensajes */
+#ia-chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#ia-chat-messages::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+  border-radius: 3px;
+}
+
+#ia-chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 3px;
+}
+
+#ia-chat-messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+.ia-agent-option {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #ececec;
+  text-align: left;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ia-agent-option:hover,
+.ia-agent-option[data-active="true"] {
+  background: #3a3a3a;
+  color: #ececec;
+}

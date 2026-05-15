@@ -1,0 +1,189 @@
+<div class="wa-settings-content" data-wa-settings-panel="templates">
+  <div class="wa-settings-section-title">Plantillas de WhatsApp</div>
+  <div class="wa-template-layout">
+    <div class="wa-template-editor">
+      <div class="wa-template-card-title">Nueva plantilla</div>
+      <%= form_with url: whatsapp_plugin_project_whatsapp_templates_path(@project),
+                    scope: :template,
+                    method: :post,
+                    local: true,
+                    multipart: true,
+                    html: { class: "wa-template-form", data: { wa_template_form: true } } do |f| %>
+        <label class="wa-settings-label" for="wa-template-name">Nombre</label>
+        <%= f.text_field :name, id: "wa-template-name", class: "wa-settings-input", required: true %>
+
+        <label class="wa-settings-label" for="wa-template-type">Tipo</label>
+        <%= f.select :template_type,
+                     [["Solo texto", "text"],
+                      ["Texto + Imagen", "text_image"],
+                      ["Texto + Video", "text_video"],
+                      ["Texto + Archivo", "text_file"],
+                      ["Imagen", "image"],
+                      ["Video", "video"],
+                      ["Nota de Voz", "audio"],
+                      ["Archivo", "file"]],
+                     {},
+                     id: "wa-template-type",
+                     class: "wa-settings-input",
+                     data: { wa_template_type: true } %>
+        <div class="wa-settings-help is-hidden" data-wa-template-voice-note-help>
+          Nota de voz: solo se acepta .ogg/.opus (audio/ogg; codecs=opus).
+        </div>
+
+        <div class="wa-template-text-wrap" data-wa-template-text>
+          <label class="wa-settings-label" for="wa-template-body">Texto</label>
+          <%= f.text_area :body_text, id: "wa-template-body", class: "wa-settings-input", rows: 4, data: { wa_template_body: true } %>
+        </div>
+
+        <div class="wa-template-media-wrap" data-wa-template-media>
+          <label class="wa-settings-label" for="wa-template-media-source">Fuente de media</label>
+          <select id="wa-template-media-source" class="wa-settings-input" data-wa-template-media-source>
+            <option value="upload">Subir archivo</option>
+            <option value="url">Usar URL</option>
+          </select>
+          <div class="wa-settings-help wa-template-video-help is-hidden" data-wa-template-video-help>
+            Video: maximo 50MB.
+          </div>
+          <div class="wa-settings-help wa-template-video-error is-hidden" data-wa-template-video-error>
+            El archivo supera 50MB. Selecciona un video mas pequeno.
+          </div>
+
+          <div class="wa-template-media-upload" data-wa-template-media-upload>
+            <div class="wa-template-file-row">
+              <%= f.file_field :media_file, id: "wa-template-media-file", class: "wa-template-file-input", data: { wa_template_media_file: true } %>
+              <span class="wa-template-file-current" data-wa-template-current-file data-placeholder="Ningun archivo seleccionado"></span>
+            </div>
+          </div>
+
+          <div class="wa-template-media-url is-hidden" data-wa-template-media-url>
+            <label class="wa-settings-label" for="wa-template-media-url">URL</label>
+            <%= f.text_field :media_url, id: "wa-template-media-url", class: "wa-settings-input", data: { wa_template_media_url: true } %>
+          </div>
+        </div>
+
+        <div class="wa-template-preview-bubble" data-wa-template-preview-bubble></div>
+
+        <button class="wa-settings-button" type="submit">Guardar plantilla</button>
+      <% end %>
+    </div>
+
+    <div class="wa-template-list">
+      <div class="wa-template-card-title">Plantillas guardadas</div>
+      <% if @whatsapp_templates.blank? %>
+        <div class="wa-settings-text">Sin plantillas creadas.</div>
+      <% else %>
+        <div class="wa-template-scroll">
+          <% @whatsapp_templates.each do |template| %>
+            <div class="wa-template-item">
+              <div class="wa-template-item-head">
+                <div>
+                  <div class="wa-template-name"><%= template.name %></div>
+                </div>
+                <div class="wa-template-actions">
+                  <button type="button" class="wa-settings-button" data-wa-template-edit-toggle>Editar</button>
+                  <%= button_to "Eliminar",
+                                whatsapp_plugin_project_whatsapp_template_destroy_path(@project, template.id),
+                                method: :delete,
+                                class: "wa-settings-button wa-settings-button-danger",
+                                form: { data: { wa_template_delete_form: true } } %>
+                </div>
+              </div>
+            </div>
+
+            <div class="wa-template-edit is-hidden" data-wa-template-edit>
+              <div class="wa-template-edit-backdrop" data-wa-template-edit-cancel></div>
+              <div class="wa-template-edit-panel">
+              <%= form_with url: whatsapp_plugin_project_whatsapp_template_path(@project, template.id),
+                            scope: :template,
+                            method: :patch,
+                            local: true,
+                            multipart: true,
+                            html: { class: "wa-template-form", data: { wa_template_form: true } } do |f| %>
+                <label class="wa-settings-label">Nombre</label>
+                <%= f.text_field :name, class: "wa-settings-input", value: template.name, required: true %>
+
+              <label class="wa-settings-label">Tipo</label>
+              <%= f.select :template_type,
+                           [["Solo texto", "text"],
+                            ["Texto + Imagen", "text_image"],
+                            ["Texto + Video", "text_video"],
+                            ["Texto + Archivo", "text_file"],
+                            ["Imagen", "image"],
+                            ["Video", "video"],
+                            ["Nota de Voz", "audio"],
+                            ["Archivo", "file"]],
+                           { selected: template.template_type },
+                           class: "wa-settings-input",
+                           data: { wa_template_type: true } %>
+              <div class="wa-settings-help is-hidden" data-wa-template-voice-note-help>
+                Nota de voz: solo se acepta .ogg/.opus (audio/ogg; codecs=opus).
+              </div>
+
+              <div class="wa-template-text-wrap" data-wa-template-text>
+                <label class="wa-settings-label">Texto</label>
+                <%= f.text_area :body_text, class: "wa-settings-input", rows: 4, value: template.body_text, data: { wa_template_body: true } %>
+              </div>
+
+              <div class="wa-template-media-wrap" data-wa-template-media>
+                <label class="wa-settings-label">Fuente de media</label>
+                <select class="wa-settings-input" data-wa-template-media-source>
+                  <option value="upload">Subir archivo</option>
+                  <option value="url">Usar URL</option>
+                </select>
+                <div class="wa-settings-help wa-template-video-help is-hidden" data-wa-template-video-help>
+                  Video: maximo 50MB.
+                </div>
+                <div class="wa-settings-help wa-template-video-error is-hidden" data-wa-template-video-error>
+                  El archivo supera 50MB. Selecciona un video mas pequeno.
+                </div>
+                <div class="wa-template-media-upload" data-wa-template-media-upload>
+                  <div class="wa-template-file-row">
+                    <%= f.file_field :media_file, class: "wa-template-file-input", data: { wa_template_media_file: true } %>
+                    <% current_file = template.file_name.to_s.presence %>
+                    <% if current_file.blank? && template.media_url.present? %>
+                      <% begin %>
+                        <% current_file = File.basename(URI.parse(template.media_url.to_s).path.to_s) %>
+                      <% rescue StandardError %>
+                        <% current_file = nil %>
+                      <% end %>
+                    <% end %>
+                    <% current_type = template.content_type.to_s.presence %>
+                    <% current_size =
+                         template.file_size.presence ||
+                           (template.storage_path.present? && File.exist?(template.storage_path.to_s) ? File.size(template.storage_path.to_s) : nil) %>
+                    <span class="wa-template-file-current"
+                          data-wa-template-current-file
+                          data-placeholder="Ningun archivo seleccionado"
+                          data-file-name="<%= current_file.to_s %>"
+                          data-file-type="<%= current_type.to_s %>"
+                          data-file-size="<%= current_size.to_s %>">
+                      <% if current_file.present? %>
+                        <%= current_file %>
+                        <% if current_size.present? %>
+                          <span class="wa-template-file-meta">- <%= number_to_human_size(current_size) %></span>
+                        <% end %>
+                      <% end %>
+                    </span>
+                  </div>
+                </div>
+                <div class="wa-template-media-url is-hidden" data-wa-template-media-url>
+                  <label class="wa-settings-label">URL</label>
+                  <%= f.text_field :media_url, class: "wa-settings-input", value: template.media_url, data: { wa_template_media_url: true } %>
+                </div>
+              </div>
+
+              <div class="wa-template-preview-bubble" data-wa-template-preview-bubble></div>
+
+                <div class="wa-template-edit-actions">
+                  <button type="button" class="wa-settings-button" data-wa-template-edit-cancel>Cancelar</button>
+                  <button class="wa-settings-button" type="submit">Guardar cambios</button>
+                </div>
+              <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

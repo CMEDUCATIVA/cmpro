@@ -1,0 +1,2060 @@
+{
+  "si": {
+    "date": {
+      "abbr_day_names": [
+        "හිරු",
+        "මොන්",
+        "ටූයි",
+        "වෙඩ්",
+        "තු",
+        "ෆ්රී",
+        "සැට්"
+      ],
+      "abbr_month_names": [
+        null,
+        "ජෑන්",
+        "පෙබරවාරි",
+        "මාර්තු",
+        "අප්රේල්",
+        "මැයි",
+        "ජුනි",
+        "ජූලි",
+        "අගෝ",
+        "සැප්",
+        "ඔක්",
+        "නොවැම්බර්",
+        "දෙසැම්බර්"
+      ],
+      "abbr_week": "Wk",
+      "day_names": [
+        "ඉරිදා",
+        "සඳුදා",
+        "අඟහරුවාදා",
+        "බදාදා",
+        "බ්රහස්පතින්දා",
+        "සිකුරාදා",
+        "සෙනසුරාදා"
+      ],
+      "formats": {
+        "default": "%Y/%m/%d",
+        "long": "%Y %B %d",
+        "short": "%b %d"
+      },
+      "month_names": [
+        null,
+        "ජනවාරි",
+        "පෙබරවාරි",
+        "මාර්තු",
+        "අප්රේල්",
+        "මැයි",
+        "ජූනි",
+        "ජූලි",
+        "අගෝස්තු",
+        "සැප්තැම්බර්",
+        "ඔක්තෝබර්",
+        "නොවැම්බර්",
+        "දෙසැම්බර්"
+      ],
+      "order": [
+        ":වර්ෂය",
+        ":මාසය",
+        ":දවස"
+      ]
+    },
+    "js": {
+      "admin": {
+        "enterprise": {
+          "text_expired": "expired",
+          "text_reprieve_days_left": "%{days} days until end of grace period",
+          "trial": {
+            "confirmation": "Confirmation of email address",
+            "confirmation_info": "We sent you an email on %{date} to %{email}. Please check your inbox and click the confirmation link provided to start your 14 days trial.\n",
+            "email_not_received": "You did not receive an email? You can resend the email with the link on the right.",
+            "form": {
+              "domain_mismatch": "The current request host name does not match the configured host name. Please double check your system settings.",
+              "general_consent": "I agree with the <a target=\"_blank\" href=\"%{link_terms}\">terms of service</a> and the <a target=\"_blank\" href=\"%{link_privacy}\">privacy policy</a>.\n",
+              "invalid_email": "Invalid email address",
+              "label_additional_features": "Additional features",
+              "label_company": "Company",
+              "label_domain": "Domain",
+              "label_expires_at": "කල් ඉකුත්",
+              "label_first_name": "මුල් නම",
+              "label_last_name": "අවසාන නම",
+              "label_maximum_users": "උපරිම ක්රියාකාරී පරිශීලකයින්",
+              "label_plan": "Plan",
+              "label_starts_at": "Starts at",
+              "label_subscriber": "ග්රාහකයා",
+              "receive_newsletter": "I want to receive the OpenProject <a target=\"_blank\" href=\"%{link}\">newsletter</a>.",
+              "taken_domain": "There can only be one active trial per domain.",
+              "taken_email": "Each user can only create one trial."
+            },
+            "next_steps": "Next steps",
+            "quick_overview": "Get a quick overview of project management and team collaboration with OpenProject Enterprise edition.",
+            "resend_link": "Resend",
+            "resend_success": "Email has been resent. Please check your emails and click the confirmation link provided.",
+            "resend_warning": "Could not resend email.",
+            "session_timeout": "Your session timed out. Please try to reload the page or resend email.",
+            "status_confirmed": "confirmed",
+            "status_label": "Status:",
+            "status_waiting": "email sent - waiting for confirmation",
+            "test_ee": "Test the Enterprise edition 14 days for free",
+            "try_another_email": "Or try it with another email address."
+          },
+          "upsell": {
+            "become_hero": "වීරයෙක් වෙන්න!",
+            "benefits": {
+              "description": "What are the benefits of the Enterprise on-premises edition?",
+              "high_security": "Security features",
+              "high_security_text": "Single sign on (SAML, OpenID Connect, CAS), LDAP groups.",
+              "installation": "Installation support",
+              "installation_text": "Experienced software engineers guide you through the complete installation and setup process in your own infrastructure.",
+              "premium_features": "Enterprise add-ons",
+              "premium_features_text": "Agile boards, custom theme and logo, graphs, intelligent workflows with custom actions, full text search for work package attachments and multi-select custom fields.",
+              "professional_support": "වෘත්තීය සහාය",
+              "professional_support_text": "Get reliable, high-touch support from senior support engineers with expert knowledge about running OpenProject in business-critical environments."
+            },
+            "button_book_now": "Book now",
+            "button_contact_us": "Contact us for a demo",
+            "button_start_trial": "Start free trial",
+            "button_upgrade": "Upgrade now",
+            "confidence": "We deliver the confidence of a tested and supported enterprise-class project management software - with Open Source and an open mind.\n",
+            "enterprise_info_html": "%{feature_title} is an Enterprise <span class='spot-icon spot-icon_inline spot-icon_enterprise-addons'></span> add-on.",
+            "link_quote": "Get a quote",
+            "more_info": "වැඩි විස්තර",
+            "text": "The OpenProject Enterprise edition builds on top of the Community edition. It includes Enterprise add-ons and professional support mainly aimed at organizations with more than 10 users that manage business critical projects with OpenProject.\n",
+            "unlimited": "Unlimited",
+            "upgrade_info": "Please upgrade to a paid plan to activate and start using it in your team.",
+            "you_contribute": "Developers need to pay their bills, too. By upgrading to the Enterprise edition, you will be supporting this open source community effort and contributing to its development, maintenance and continuous improvement."
+          }
+        },
+        "type_form": {
+          "add_group": "ගුණාංග පිරිසක් එකතු කරන්න",
+          "add_table": "අදාළ වැඩ පැකේජ වගුව එකතු කරන්න",
+          "custom_field": "අභිරුචි ක්ෂේත්රය",
+          "drag_to_activate": "ඒවා සක්රිය කිරීම සඳහා මෙතැන් සිට ක්ෂේත්ර ඇදගෙන යන්න",
+          "edit_query": "විමසුම සංස්කරණය කරන්න",
+          "inactive": "අක්රිය",
+          "new_group": "නව කණ්ඩායම",
+          "reset_to_defaults": "පැහැර හැරීම් නැවත සකසන්න"
+        },
+        "work_packages_settings": {
+          "warning_progress_calculation_mode_change_from_field_to_status_html": "Changing progress calculation mode from work-based to status-based will result in all existing <i>% Complete</i> values to be lost and replaced with values associated with each status. Existing values for <i>Remaining work</i> may also be recalculated to reflect this change. This action is not reversible.",
+          "warning_progress_calculation_mode_change_from_status_to_field_html": "Changing progress calculation mode from status-based to work-based will make the <i>% Complete</i> field freely editable. If you optionally enter values for <i>Work</i> or <i>Remaining work</i>, they will also be linked to <i>% Complete</i>. Changing <i>Remaining work</i> can then update <i>% Complete</i>."
+        },
+        "working_days": {
+          "add_non_working_day": "Non-working day",
+          "already_added_error": "A non-working day for this date exists already. There can only be one non-working day created for each unique date.",
+          "calendar": {
+            "empty_state_description": "No specific non-working days are defined for this year. Click on \"+ Non-working day\" below to add a date.",
+            "empty_state_header": "Non-working days",
+            "new_date": "(new)"
+          },
+          "change_button": "Save and reschedule",
+          "change_description": "Changing which days of the week are considered working days or non-working days can affect the start and finish days of all work packages and life cycles in all projects in this instance.",
+          "change_title": "Change working days",
+          "removed_title": "You will remove the following days from the non-working days list:",
+          "warning": "The changes might take some time to take effect. You will be notified when all relevant work packages and project life cycles have been updated. Are you sure you want to continue?\n"
+        }
+      },
+      "ajax": {
+        "hide": "සඟවන්න",
+        "loading": "Loading…",
+        "updating": "Updating…"
+      },
+      "attachments": {
+        "delete": "Delete attachment",
+        "delete_confirmation": "Are you sure you want to delete this file? This action is not reversible.\n",
+        "draggable_hint": "පේළිගත රූපය හෝ යොමු ඇමුණුමක් කර්තෘ ක්ෂේත්රය මත ඇදගෙන යන්න. ඔබ ඇදගෙන යන අතරතුර සංවෘත සංස්කාරක ක්ෂේත්ර විවෘත කරනු ඇත.\n",
+        "quarantined_hint": "The file is quarantined, as a virus was found. It is not available for download."
+      },
+      "autocomplete_ng_select": {
+        "add_tag": "Add item",
+        "clear_all": "Clear all",
+        "loading": "පැටවීම...",
+        "not_found": "No items found",
+        "type_to_search": "සෙවීමට ටයිප් කරන්න"
+      },
+      "autocomplete_select": {
+        "active": "ක්රියාකාරී %{label} %{name}",
+        "placeholder": {
+          "multi": "එකතු කරන්න \"%{name}”",
+          "single": "තෝරන්න \"%{name}”"
+        },
+        "remove": "%{name}ඉවත් කරන්න"
+      },
+      "autocompleter": {
+        "notFoundText": "No items found",
+        "placeholder": "සෙවීමට ටයිප් කරන්න",
+        "project": {
+          "placeholder": "Select project"
+        }
+      },
+      "avatars": {
+        "empty_file_error": "කරුණාකර වලංගු රූපයක් උඩුගත කරන්න (jpg, png, gif)",
+        "error_image_too_large": "රූපය ඉතා විශාලයි.",
+        "label_choose_avatar": "ගොනුව සිට Avatar තෝරන්න",
+        "text_upload_instructions": "128 පික්සල විසින් 128 ඔබේ ම අභිරුචි avatar උඩුගත කරන්න. විශාල ගොනු නැවත සකස් කිරීමට හා ගැලපෙන මුහුණදී ඇත.\nඔබ රූපයක් තෝරාගත් පසු ඔබගේ අවතාරයේ පෙරදසුනක් උඩුගත කිරීමට පෙර පෙන්වනු ලැබේ.\n",
+        "uploading_avatar": "ඔබගේ අවතාරය උඩුගත කිරීම.",
+        "wrong_file_format": "අවසර ලත් ආකෘති jpg, png, gif වේ"
+      },
+      "backup": {
+        "attachments_disabled": "Attachments may not be included since they exceed the maximum overall size allowed. You can change this via the configuration (requires a server restart).",
+        "download_backup": "Download backup",
+        "include_attachments": "Include attachments",
+        "info": "You can trigger a backup here. The process can take some time depending on the amount of data (especially attachments) you have. You will receive an email once it's ready.\n",
+        "last_backup": "Last backup",
+        "last_backup_from": "Last backup from",
+        "note": "A new backup will override any previous one. Only a limited number of backups per day can be requested.\n",
+        "options": "විකල්ප",
+        "request_backup": "Request backup",
+        "title": "Backup OpenProject"
+      },
+      "baseline": {
+        "apply": "අයදුම් කරන්න",
+        "clear": "පැහැදිලි",
+        "drop_down": {
+          "a_specific_date": "a specific date",
+          "between_two_specific_dates": "between two specific dates",
+          "last_month": "පසුගිය මාසයේ",
+          "last_week": "පසුගිය සතියේ",
+          "last_working_day": "last working day",
+          "none": "-",
+          "yesterday": "ඊයේ"
+        },
+        "from": "සිට",
+        "header_description": "Highlight changes made to this list since any point in the past.",
+        "help_description": "Reference time zone for the baseline.",
+        "icon_tooltip": {
+          "added": "Added to view within the comparison time period",
+          "changed": "Maintained with modifications",
+          "removed": "Removed from view within the comparison time period"
+        },
+        "legends": {
+          "changes_between": "Changes between",
+          "changes_since": "Changes since",
+          "in_your_timezone": "In your local timezone:",
+          "maintained_with_changes": "Maintained with changes",
+          "no_longer_meets_filter_criteria": "No longer meets filter criteria",
+          "now_meets_filter_criteria": "Now meets filter criteria"
+        },
+        "show_changes_since": "Show changes since",
+        "time": "Time",
+        "time_description": "In your local time: %{datetime}",
+        "to": "කිරීමට",
+        "toggle_title": "Baseline"
+      },
+      "bcf": {
+        "add_viewpoint": "Add viewpoint",
+        "delete_viewpoint": "Delete viewpoint",
+        "export": "අපනයන",
+        "export_bcf_xml_file": "Export BCF XML file (BCF version 2.1)",
+        "import": "ආනයන",
+        "import_bcf_xml_file": "Import BCF XML file (BCF version 2.1)",
+        "label_bcf": "BCF",
+        "management": "BCF management",
+        "refresh": "නැවුම් කරන්න",
+        "refresh_work_package": "Refresh work package",
+        "show_viewpoint": "Show viewpoint",
+        "viewpoint": "Viewpoint"
+      },
+      "boards": {
+        "add_card": "Add card",
+        "add_list": "Add list to board",
+        "add_list_modal": {
+          "labels": {
+            "assignee": "Select user to add as a new assignee list",
+            "status": "Select status to add as a new list",
+            "subproject": "Select subproject to add as a new list",
+            "subtasks": "Select work package to add as a new list",
+            "version": "Select version to add as a new list"
+          },
+          "warning": {
+            "add_members": "<a href=\"%{link}\">Add a new member to this project</a> to select users again.",
+            "assignee": "There isn't any member matched with your filter value.  <br>",
+            "no_member": "This project currently does not have any members that can be added.  <br>",
+            "status": "There is currently no status available. <br>\nEither there are none or they have all already been added to the board.\n"
+          }
+        },
+        "board_type": {
+          "action": "Action board",
+          "action_by_attribute": "Action board (%{attribute})",
+          "action_text": "A board with filtered lists on %{attribute} attribute. Moving work packages to other lists will update their attribute.\n",
+          "action_text_assignee": "Board with automated columns based on assigned users. Ideal for dispatching work packages.\n",
+          "action_text_status": "Basic kanban style board with columns for status such as To Do, In Progress, Done.\n",
+          "action_text_subprojects": "Board with automated columns for subprojects. Dragging work packages to other lists updates the (sub-)project accordingly.\n",
+          "action_text_subtasks": "Board with automated columns for sub-elements. Dragging work packages to other lists updates the parent accordingly.\n",
+          "action_text_version": "Board with automated columns based on the version attribute. Ideal for planning product development.\n",
+          "action_type": {
+            "assignee": "assignee",
+            "status": "status",
+            "subproject": "subproject",
+            "subtasks": "parent-child",
+            "version": "version"
+          },
+          "board_type_title": {
+            "assignee": "අස්ගිනී",
+            "basic": "Basic",
+            "status": "තත්වය",
+            "subproject": "උප ව්යාපෘතිය",
+            "subtasks": "Parent-child",
+            "version": "අනුවාදය"
+          },
+          "free": "basic",
+          "free_text": "Start from scratch with a blank board. Manually add cards and columns to this board.\n",
+          "select_attribute": "Action attribute",
+          "select_board_type": "Please choose the type of board you need.",
+          "text": "Board type"
+        },
+        "click_to_remove_list": "Click to remove this list",
+        "configuration_modal": {
+          "display_settings": {
+            "card_mode": "Display as cards",
+            "table_mode": "Display as table"
+          },
+          "title": "Configure this board"
+        },
+        "create_new": "Create new board",
+        "error_attribute_not_writable": "Cannot move the work package, %{attribute} is not writable.",
+        "error_cannot_move_into_self": "You can not move a work package into its own column.",
+        "error_loading_the_list": "Error loading the list: %{error_message}",
+        "error_permission_missing": "The permission to create public queries is missing",
+        "label_board_type": "Board type",
+        "label_unnamed_board": "Unnamed board",
+        "label_unnamed_list": "Unnamed list",
+        "lists": {
+          "delete": "Delete list"
+        },
+        "new_board": "New board",
+        "text_hidden_list_warning": "Not all lists are displayed because you lack the permission. Contact your admin for more information.",
+        "version": {
+          "close_version": "අනුවාදය වසන්න",
+          "closed": "වසා",
+          "edit_version": "අනුවාදය සංස්කරණය",
+          "is_closed": "Version is closed. No items can be added to this version.",
+          "is_locked": "Version is locked. No items can be added to this version.",
+          "lock_version": "අනුවාදය අගුලුදමන්න",
+          "locked": "අගුළු දමා ඇත",
+          "open_version": "අනුවාදය විවෘතකරන්න",
+          "show_version": "අනුවාදය පෙන්වන්න",
+          "unlock_version": "අනුවාදය අගුලුහරින්න"
+        }
+      },
+      "button_add": "එකතු කරන්න",
+      "button_add_watcher": "මුරකරු එකතු කරන්න",
+      "button_advanced_filter": "උසස් පෙරහන",
+      "button_back": "ආපසු",
+      "button_back_to_list_view": "ලැයිස්තු දැක්ම වෙත ආපසු",
+      "button_cancel": "අවලංගු කරන්න",
+      "button_change_project": "Move to another project",
+      "button_check_all": "සියල්ල පරීක්ෂා කරන්න",
+      "button_close": "වසන්න",
+      "button_close_details": "වසන්න විස්තර දැක්ම",
+      "button_collapse_all": "සියල්ල කඩා වැටෙන්න",
+      "button_configure-form": "පෝරමය සකසන්න",
+      "button_confirm": "තහවුරු කරන්න",
+      "button_continue": "ඉදිරියට යන්න",
+      "button_copy": "පිටපත් කරන්න",
+      "button_copy_link_to_clipboard": "Copy link to clipboard",
+      "button_copy_to_clipboard": "පසුරු පුවරුවට පිටපත් කරන්න",
+      "button_copy_to_other_project": "Duplicate in another project",
+      "button_create": "සාදන්න",
+      "button_custom-fields": "අභිරුචි ක්ෂේත්ර",
+      "button_delete": "මකන්න",
+      "button_delete_watcher": "මුරකරු මකන්න",
+      "button_details_view": "විස්තර දැක්ම",
+      "button_duplicate": "අනුපිටපත්",
+      "button_edit": "සංස්කරණය කරන්න",
+      "button_expand_all": "සියල්ල පුළුල්",
+      "button_export-atom": "බාගත කරන්න පරමාණුව",
+      "button_filter": "පෙරහන්",
+      "button_generate_pdf": "Generate PDF",
+      "button_list_view": "ලැයිස්තුව දැක්ම",
+      "button_log_costs": "Log unit costs",
+      "button_log_time": "ලොග් වේලාව",
+      "button_more": "තවත්",
+      "button_more_actions": "More actions",
+      "button_open_details": "විවෘත විස්තර දැක්ම",
+      "button_open_fullscreen": "පූර්ණ තිර දර්ශනය විවෘත කරන්න",
+      "button_quote": "උපුටා",
+      "button_save": "සුරකින්න",
+      "button_settings": "සැකසුම්",
+      "button_show_cards": "කාඩ් දැක්ම පෙන්වන්න",
+      "button_show_fullscreen": "Show fullscreen view",
+      "button_show_gantt": "Show Gantt view",
+      "button_show_list": "ලැයිස්තු දර්ශනය පෙන්වන්න",
+      "button_show_table": "Show table view",
+      "button_show_view": "පූර්ණ තිර දර්ශනය",
+      "button_uncheck_all": "සියල්ල ඉවත් කරන්න",
+      "button_update": "යාවත්කාලීන",
+      "calendar": {
+        "create_new": "Create new calendar",
+        "title": "දින දර්ශනය",
+        "too_many": "සම්පූර්ණ වැඩ පැකේජ %{count} ක් ඇත, නමුත් පෙන්විය හැක්කේ %{max} පමණි.",
+        "unsaved_title": "Unnamed calendar"
+      },
+      "caption_rate_history": "Rate history",
+      "card": {
+        "add_new": "නව කාඩ් එකතු කරන්න",
+        "highlighting": {
+          "entire_card_by": "මුළු කාඩ්පත",
+          "inline": "පේළිගත ඉස්මතු:"
+        },
+        "remove_from_list": "ලැයිස්තුවෙන් කාඩ් ඉවත් කරන්න"
+      },
+      "chart": {
+        "axis_criteria": "අක්ෂ නිර්ණායක",
+        "errors": {
+          "could_not_load": "ප්රස්ථාරය ප්රදර්ශනය කිරීම සඳහා දත්ත පටවා ගත නොහැකි විය. අවශ්ය අවසරයන් නොමැති විය හැකිය."
+        },
+        "modal_title": "වැඩ පැකේජය ප්රස්ථාර වින්යාසය",
+        "tabs": {
+          "dataset": "දත්ත සමුදාය %{number}",
+          "graph_settings": "පොදු"
+        },
+        "type": "සටහන වර්ගය",
+        "types": {
+          "bar": "බාර්",
+          "doughnut": "ඩග්නට්",
+          "horizontal_bar": "තිරස් තීරුව",
+          "line": "මාර්ගය",
+          "pie": "පයි",
+          "polar_area": "ධ්රැව ප්රදේශය",
+          "radar": "රේඩාර්"
+        }
+      },
+      "clipboard": {
+        "browser_error": "Your browser doesn't support copying to clipboard. Please copy it manually: %{content}",
+        "copied_successful": "Successfully copied to clipboard!"
+      },
+      "close_filter_title": "පෙරහන් වසන්න",
+      "close_form_title": "සමීප ආකෘතිය",
+      "close_popup_title": "උත්පතන වසන්න",
+      "custom_actions": {
+        "date": {
+          "current_date": "වත්මන් දිනය",
+          "specific": "මත"
+        }
+      },
+      "dashboards": {
+        "label": "Dashboard"
+      },
+      "description_available_columns": "ලබා ගත හැකි තීරු",
+      "description_current_position": "ඔයා මෙහෙයි: ",
+      "description_select_work_package": "වැඩ පැකේජය තෝරන්න #%{id}",
+      "description_subwork_package": "වැඩ පැකේජය දරුවා #%{id}",
+      "editor": {
+        "ckeditor_error": "An error occurred within CKEditor",
+        "error_saving_failed": "පහත දැක්වෙන දෝෂය සමඟ ලේඛනය සුරැකීම අසාර්ථක විය: %{error}",
+        "macro": {
+          "attribute_reference": {
+            "invalid_attribute": "The selected attribute '%{name}' does not exist.",
+            "macro_help_tooltip": "This text segment is being dynamically rendered by a macro.",
+            "nested_macro": "This macro is recursively referencing %{model} %{id}.",
+            "not_found": "Requested resource could not be found"
+          },
+          "child_pages": {
+            "button": "ළමා පිටු වලට සබැඳි",
+            "hint": "වත්මන් පිටුවේ සියලුම ළමා පිටු ලැයිස්තුගත කිරීම සඳහා මෙම ක්ෂේත්රය හිස්ව තබන්න. ඔබට වෙනත් පිටුවක් යොමු කිරීමට අවශ්ය නම්, එහි මාතෘකාව හෝ ස්ලූග් ලබා දෙන්න.\n",
+            "include_parent": "දෙමව්පියන් ඇතුළත් කරන්න",
+            "page": "විකි පිටුව",
+            "text": "[Placeholder] ළමා පිටු වෙත සබැඳි",
+            "this_page": "මෙම පිටුව"
+          },
+          "code_block": {
+            "button": "ස්නිපෙට් කේතය ඇතුල් කරන්න",
+            "language": "හැඩතල භාෂාව",
+            "language_hint": "අවධාරණය කිරීම සඳහා භාවිතා කරනු ලබන ආකෘතිකරණ භාෂාව ඇතුළත් කරන්න (සහාය දක්වන්නේ නම්).",
+            "title": "ඇතුලත් කරන්න/සංස්කරණය කේතය ස්නිපෙට්"
+          },
+          "dropdown": {
+            "chose_macro": "Choose macro",
+            "macros": "මැක්රෝස්"
+          },
+          "embedded_calendar": {
+            "text": "[Placeholder] කාවැද්දූ දින දර්ශනය"
+          },
+          "embedded_table": {
+            "button": "කාවැද්දූ වැඩ පැකේජය වගුව",
+            "text": "[Placeholder] කාවැද්දූ වැඩ පැකේජය වගුව"
+          },
+          "error": "Cannot expand macro: %{message}",
+          "toc": "අන්තර්ගත වගුව",
+          "toolbar_help": "විජට් තෝරා ගැනීමට ක්ලික් කරන්න සහ මෙවලම් තීරුව පෙන්වන්න. විජට් සංස්කරණය කිරීමට ද්වි-ක්ලික් කරන්න",
+          "wiki_page_include": {
+            "button": "වෙනත් විකි පිටුවක අන්තර්ගතය ඇතුළත් කරන්න",
+            "hint": "එහි මාතෘකාව හෝ ස්ලූග් සඳහන් කිරීමෙන් තවත් විකි පිටුවක අන්තර්ගතය ඇතුළත් කරන්න.\nපහත දැක්වෙන උදාහරණය වැනි මහා බඩවැල සමඟ වෙන් කිරීමෙන් ඔබට වෙනත් ව්යාපෘතියක විකි පිටුව ඇතුළත් කළ හැකිය.\n",
+            "not_set": "(පිටුව තවමත් සකසා නැත)",
+            "page": "විකි පිටුව",
+            "text": "[Placeholder] විකි පිටුවේ ඇතුළත්"
+          },
+          "work_package_button": {
+            "button": "වැඩ පැකේජ බොත්තම නිර්මාණය කරන්න ඇතුල් කරන්න",
+            "button_style": "බොත්තම ශෛලිය භාවිතා",
+            "button_style_hint": "විකල්ප: සාර්ව සබැඳියක් ලෙස නොව බොත්තමක් ලෙස පෙනී සිටීමට පරීක්ෂා කරන්න.",
+            "type": "වැඩ පැකේජය වර්ගය",
+            "with_type": "වැඩ පැකේජය සාදන්න (වර්ගය: %{typename})",
+            "without_type": "වැඩ පැකේජයක් සාදන්න"
+          }
+        },
+        "mode": {
+          "manual": "මාර්ක්ඩවුන් ප්රභවයට මාරු වන්න",
+          "wysiwyg": "WYSIWYG සංස්කාරකය වෙත මාරු වන්න"
+        },
+        "no_revisions": "No local modifications found",
+        "preview": "පෙරදසුනෙහි මාදිලිය ටොගල් කරන්න",
+        "revisions": "Show local modifications",
+        "source_code": "සලකුණු කිරීමේ ප්රභව ප්රකාරය ටොගල් කරන්න"
+      },
+      "enumeration_activities": "ක්රියාකාරකම් (කාලය සොයා ගැනීම)",
+      "enumeration_doc_categories": "Document categories",
+      "enumeration_work_package_priorities": "වැඩ පැකේජ ප්රමුඛතා",
+      "error": {
+        "cannot_save_changes_with_message": "පහත දැක්වෙන දෝෂය හේතුවෙන් ඔබගේ වෙනස්කම් සුරැකිය නොහැක: %{error}",
+        "embedded_table_loading": "කාවැද්දූ දර්ශනය පටවා ගත නොහැකි විය: %{message}",
+        "internal": "අභ්යන්තර දෝෂයක් සිදුවී ඇත.",
+        "query_saving": "දැක්ම ගැලවීම කළ නොහැකි විය."
+      },
+      "error_attachment_upload": "ගොනුව උඩුගත කිරීමට අසමත් විය: %{error}",
+      "error_attachment_upload_permission": "මෙම සම්පත මත ගොනු උඩුගත කිරීමට ඔබට අවසර නැත.",
+      "error_could_not_resolve_user_name": "පරිශීලක නාමය විසඳිය නොහැක",
+      "error_could_not_resolve_version_name": "අනුවාදයේ නම විසඳිය නොහැක",
+      "exclusion_info": {
+        "modal": {
+          "content": "The status '%{status_name}' has been configured to be excluded from hierarchy totals of Work, Remaining work, and % Complete. The totals do not take this value into account.",
+          "title": "Status excluded from hierarchy totals"
+        }
+      },
+      "favorite_projects": {
+        "no_results": "You have no favorite projects",
+        "no_results_subtext": "Add one or multiple projects as favorite through their overview or in a project list."
+      },
+      "field_value_enter_prompt": "'%{field}' සඳහා වටිනාකමක් ඇතුළත් කරන්න",
+      "filter": {
+        "description": {
+          "text_close_filter": "ඇතුලත් කිරීමක් තෝරා ගැනීමට ඇතුලත් කරන්න එබීමෙන් උදාහරණයක් ලෙස අවධානය යොමු තබන්න. පෙරහන නොමැතිව පිටව යාමට පළමු (හිස්) ප්රවේශය තෝරන්න.",
+          "text_open_filter": "මෙම පෙරණය 'ALT' සහ ඊතල යතුරු සමඟ විවෘත කරන්න."
+        },
+        "more_values_not_shown": "There are %{total} more results, search to filter results.",
+        "noneElement": "(කිසිවක් නැත)",
+        "sorting": {
+          "criteria": {
+            "one": "පළමු තෝරා බේරා ගැනීමේ නිර්ණායක",
+            "three": "තෙවන තෝරා බේරා ගැනීමේ නිර්ණායක",
+            "two": "දෙවන තෝරා බේරා ගැනීමේ නිර්ණායක"
+          }
+        },
+        "time_zone_converted": {
+          "only_end": "ඔබගේ දේශීය වේලාව තුළ %{to} දක්වා.",
+          "only_start": "ඔබේ දේශීය කාලය තුළ %{from} සිට.",
+          "two_values": "%{from} - %{to} ඔබේ දේශීය කාලය තුළ."
+        },
+        "value_spacer": "-"
+      },
+      "forms": {
+        "advanced_settings": "උසස් සැකසුම්",
+        "load_error_message": "There was an error loading the form",
+        "submit_success_message": "The form was successfully submitted",
+        "validation_error_message": "Please fix the errors present in the form"
+      },
+      "gantt_chart": {
+        "button_activate": "Gantt සටහන පෙන්වන්න",
+        "button_deactivate": "Gantt සටහන සඟවන්න",
+        "filter": {
+          "noneSelection": "(කිසිවක් නැත)"
+        },
+        "label": "ගැන්ට් සටහන",
+        "labels": {
+          "bar": "බාර් ලේබල්",
+          "description": "Select the attributes you want to be shown in the respective positions of the Gantt chart at all times. Note that when hovering over an element, its date labels will be shown instead of these attributes.\n",
+          "farRight": "ඈත හරි",
+          "left": "වම",
+          "right": "අයිතිය",
+          "title": "ලේබල් වින්යාසය"
+        },
+        "quarter_label": "Q%{quarter_number}",
+        "selection_mode": {
+          "notification": "සම්බන්ධතාවය නිර්මාණය කිරීම සඳහා ඕනෑම උද්දීපනය කළ වැඩ පැකේජයක් මත ක්ලික් කරන්න. අවලංගු කිරීමට මාධ්ය ගැලවීම."
+        },
+        "zoom": {
+          "auto": "වාහන විශාලනය",
+          "days": "දින",
+          "description": "ස්වයංසූම් ලබා ගත නොහැකි විට පෙන්විය යුතු ආරම්භක විශාලන මට්ටම තෝරන්න.\n",
+          "in": "විශාලනය",
+          "months": "මාස",
+          "out": "විශාලනය",
+          "quarters": "නිල නිවාස",
+          "weeks": "සති",
+          "years": "අවුරුදු"
+        }
+      },
+      "general_text_No": "නැත",
+      "general_text_Yes": "ඔව්",
+      "general_text_no": "නැත",
+      "general_text_yes": "ඔව්",
+      "github_integration": {
+        "github_actions": "ක්‍රියාමාර්ග",
+        "pull_requests": {
+          "merged_message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} has been %{pr_state} by %{github_user_link}.",
+          "message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} authored by %{github_user_link} has been %{pr_state}.",
+          "referenced_message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} authored by %{github_user_link} referenced this work package.",
+          "states": {
+            "closed": "වසා",
+            "draft": "drafted",
+            "merged": "merged",
+            "opened": "opened",
+            "ready_for_review": "marked ready for review"
+          }
+        },
+        "tab_header": {
+          "copy_menu": {
+            "description": "Copy git snippets to clipboard",
+            "label": "Git snippets"
+          },
+          "git_actions": {
+            "branch_name": "Branch name",
+            "cmd": "Create branch with empty commit",
+            "commit_message": "Commit message",
+            "copy_error": "❌ Copy failed!",
+            "copy_success": "✅ Copied!",
+            "title": "Quick snippets for Git"
+          },
+          "title": "Pull requests"
+        },
+        "tab_prs": {
+          "empty": "There are no pull requests linked yet. Link an existing PR by using the code <code>OP#%{wp_id}</code> in the PR description or create a new PR."
+        },
+        "work_packages": {
+          "tab_name": "GitHub"
+        }
+      },
+      "gitlab_integration": {
+        "gitlab_pipelines": "Pipelines",
+        "tab_header_issue": {
+          "title": "ගැටළු"
+        },
+        "tab_header_mr": {
+          "copy_menu": {
+            "description": "Copy git snippets to clipboard",
+            "label": "Git snippets"
+          },
+          "create_mr": {
+            "description": "Create a Merge Request",
+            "label": "Create MR"
+          },
+          "git_actions": {
+            "branch_name": "Branch name",
+            "cmd": "Create branch with empty commit",
+            "commit_message": "Commit message",
+            "copy_error": "❌ Copy failed!",
+            "copy_success": "✅ Copied!",
+            "title": "Quick snippets for Git"
+          },
+          "title": "Merge requests"
+        },
+        "tab_issue": {
+          "empty": "There are no issues linked yet. Link an existing issue by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the issue title/description or create a new issue."
+        },
+        "tab_mrs": {
+          "empty": "There are no merge requests linked yet. Link an existing MR by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the MR title/description or create a new MR."
+        },
+        "updated_on": "යාවත්කාලීන කරන ලදි",
+        "work_packages": {
+          "tab_name": "GitLab"
+        }
+      },
+      "global_search": {
+        "all_projects": "සියලු ව්යාපෘති",
+        "close_search": "සෙවුම වසන්න",
+        "current_project": "මෙම ව්යාපෘතියේ",
+        "current_project_and_all_descendants": "මෙම ව්යාපෘතිය+උප ව්යාපෘති",
+        "recently_viewed": "Recently viewed",
+        "search": "සොයන්න",
+        "title": {
+          "all_projects": "සියලු ව්යාපෘති",
+          "project_and_subprojects": "සහ සියළු උප ව්යාපෘති",
+          "search_for": "සඳහා සොයන්න"
+        }
+      },
+      "grid": {
+        "add_widget": "Add widget",
+        "configure": "Configure widget",
+        "remove": "Remove widget",
+        "widgets": {
+          "custom_text": {
+            "title": "Custom text"
+          },
+          "documents": {
+            "no_results": "No documents yet.",
+            "title": "Documents"
+          },
+          "members": {
+            "add": "සාමාජික",
+            "no_results": "No visible members.",
+            "title": "සාමාජිකයන්",
+            "too_many": "Displaying %{count} of %{total} members.",
+            "view_all_members": "View all members"
+          },
+          "missing_permission": "You don't have the necessary permissions to view this widget.",
+          "news": {
+            "at": "at",
+            "no_results": "Nothing new to report.",
+            "title": "පුවත්"
+          },
+          "project_description": {
+            "no_results": "No description has been written yet. One can be provided in the 'Project settings'.",
+            "title": "Project description"
+          },
+          "project_favorites": {
+            "no_results": "You currently have no favorite projects. Click on the star icon in the project dashboard to add one to your favorites.",
+            "title": "Favorite projects"
+          },
+          "project_status": {
+            "at_risk": "අවදානමට",
+            "discontinued": "Discontinued",
+            "finished": "Finished",
+            "not_set": "Not set",
+            "not_started": "Not started",
+            "off_track": "ධාවන පථය",
+            "on_track": "ධාවන පථයේ",
+            "title": "ව්යාපෘති තත්ත්වය"
+          },
+          "subprojects": {
+            "no_results": "No subprojects.",
+            "title": "උප ව්යාපෘති"
+          },
+          "time_entries_current_user": {
+            "displayed_days": "Days displayed in the widget:",
+            "title": "My spent time"
+          },
+          "time_entries_list": {
+            "no_results": "No time entries for the last 7 days.",
+            "title": "Spent time (last 7 days)"
+          },
+          "work_packages_accountable": {
+            "title": "Work packages I am accountable for"
+          },
+          "work_packages_assigned": {
+            "title": "මට පවරා ඇති වැඩ පැකේජ"
+          },
+          "work_packages_calendar": {
+            "title": "දින දර්ශනය"
+          },
+          "work_packages_created": {
+            "title": "Work packages created by me"
+          },
+          "work_packages_graph": {
+            "title": "Work packages graph"
+          },
+          "work_packages_overview": {
+            "placeholder": "Click to edit ...",
+            "title": "Work packages overview"
+          },
+          "work_packages_table": {
+            "title": "Work packages table"
+          },
+          "work_packages_watched": {
+            "title": "Work packages watched by me"
+          }
+        }
+      },
+      "hal": {
+        "error": {
+          "edit_prohibited": "සංස්කරණය %{attribute} මෙම සම්පත සඳහා අවහිර කර ඇත. එක්කෝ මෙම ගුණාංගය සම්බන්ධතා වලින් ව්යුත්පන්න වී ඇත (උදා: දරුවන්) හෝ වෙනත් ආකාරයකින් වින්යාසගත කළ නොහැක.",
+          "format": {
+            "date": "%{attribute} වලංගු දිනයක් නොවේ - YYY-MM-DD අපේක්ෂා කෙරේ."
+          },
+          "general": "දෝෂයක් සිදුවී ඇත.",
+          "update_conflict_refresh": "මෙහි ක්ලික් කරන්න සම්පත නැවුම් කිරීමට සහ නවතම අනුවාදයට යාවත්කාලීන කරන්න."
+        }
+      },
+      "help_texts": {
+        "show_modal": "Show help text"
+      },
+      "homescreen": {
+        "blocks": {
+          "new_features": {
+            "16_1": {
+              "standard": {
+                "new_features_html": "The release contains various new features and improvements, such as <br> <ul class=\"%{list_styling_class}\"> <li>Structure the project life cycle with phases and phase gates.</li> <li>Export meetings in PDF format.</li> <li>Set smart default options for reminders.</li> <li>Use negative lag for work package dates.</li> <li>Display hierarchy trees for hierarchy custom fields.</li> <li>Benefit from improved accessibility for the date picker with ARIA live regions.</li> </ul>\n"
+              }
+            },
+            "learn_about": "Learn more about all new features",
+            "text_new_features": "නව විශේෂාංග සහ නිෂ්පාදන යාවත්කාලීන කිරීම් ගැන කියවන්න."
+          }
+        }
+      },
+      "ical_sharing_modal": {
+        "copy_url_label": "Copy URL",
+        "description": "You can use the URL (iCalendar) to subscribe to this calendar in an external client and view up-to-date work package information from there.",
+        "ical_generation_error_text": "An error occured while generating the calendar URL.",
+        "inital_setup_error_message": "An error occured while fetching data.",
+        "success_message": "The URL \"%{name}\" was successfully copied to your clipboard. Paste it in your calendar client to complete the subscription.",
+        "title": "Subscribe to calendar",
+        "token_name_description_text": "If you subscribe to this calendar from multiple devices, this name will help you distinguish between them in your <a href=\"my/access_token\", target=\"_blank\">access tokens</a> list.",
+        "token_name_label": "Where will you be using this?",
+        "token_name_placeholder": "Type a name, e.g. \"Phone\"",
+        "warning": "Please don't share this URL with other users. Anyone with this link will be able to view work package details without an account or password."
+      },
+      "ifc_models": {
+        "empty_warning": "This project does not yet have any IFC models.",
+        "keyboard_input_disabled": "Viewer does not have keyboard controls. Click on the viewer to give keyboard control to the viewer.",
+        "models": {
+          "ifc_models": "IFC models"
+        },
+        "use_this_link_to_manage": "Use this link to upload and manage your IFC models",
+        "views": {
+          "split": "Viewer and table",
+          "split_cards": "Viewer and cards",
+          "viewer": "Viewer"
+        }
+      },
+      "include_projects": {
+        "apply": "අයදුම් කරන්න",
+        "clear_selection": "Clear selection",
+        "include_subprojects": "Include all sub-projects",
+        "no_results": "No project matches your search criteria.",
+        "search_placeholder": "Search project...",
+        "selected_filter": {
+          "all": "All projects",
+          "selected": "Only selected"
+        },
+        "title": "ව්‍යාපෘති",
+        "toggle_title": "Include projects",
+        "tooltip": {
+          "current_project": "This is the current project you are in.",
+          "does_not_match_search": "Project does not match the search criteria.",
+          "include_all_selected": "Project already included since Include all sub-projects is enabled."
+        }
+      },
+      "inplace": {
+        "btn_preview_disable": "පෙරදසුන අක්රීය කරන්න",
+        "btn_preview_enable": "පෙරදසුන",
+        "button_cancel": "%{attribute}: අවලංගු කරන්න",
+        "button_cancel_all": "අවලංගු කරන්න",
+        "button_edit": "%{attribute}: සංස්කරණය කරන්න",
+        "button_save": "%{attribute}: සුරකින්න",
+        "button_save_all": "සුරකින්න",
+        "clear_value_label": "-",
+        "errors": {
+          "maxlength": "%{field} ඉලක්කම් %{maxLength} ට වඩා අඩංගු විය නොහැක (ය)",
+          "messages_on_field": "මෙම ක්ෂේත්රය අවලංගුයි: %{messages}",
+          "minlength": "%{field} ඉලක්කම් %{minLength} ට වඩා අඩු අඩංගු විය නොහැක (ය)",
+          "number": "%{field} වලංගු අංකයක් නොවේ",
+          "required": "%{field} හිස් විය නොහැක"
+        },
+        "link_formatting_help": "පෙළ හැඩතල ගැන්වීම උදව්",
+        "null_value_label": "වටිනාකමක් නැත"
+      },
+      "invite_user_modal": {
+        "back": "ආපසු",
+        "invite": "Invite",
+        "message": {
+          "description": "We will send an email to the user, to which you can add a personal message here. An explanation for the invitation could be useful, or prehaps a bit of information regarding the project to help them get started.",
+          "label": "Invitation message",
+          "next_button": "ඊළඟ"
+        },
+        "principal": {
+          "already_member_message": "Already a member of %{project}",
+          "create_new_placeholder": "Create new placeholder:",
+          "invite_user": "Invite:",
+          "label": {
+            "name": "නම",
+            "name_or_email": "Name or email address"
+          },
+          "next_button": "ඊළඟ",
+          "no_results_group": "No groups were found",
+          "no_results_placeholder": "No placeholders were found",
+          "no_results_user": "No users were found",
+          "required": {
+            "group": "Please select a group",
+            "placeholder": "Please select a placeholder",
+            "user": "Please select a user"
+          }
+        },
+        "project": {
+          "label": "ව්යාපෘති",
+          "lacking_permission": "Please select a different project since you lack permissions to assign users to the currently selected.",
+          "lacking_permission_info": "You lack the permission to assign users to the project you are currently in. You need to select a different one.",
+          "next_button": "ඊළඟ",
+          "no_invite_rights": "You are not allowed to invite members to this project",
+          "no_results": "No projects were found",
+          "required": "Please select a project"
+        },
+        "role": {
+          "description": "This is the role that the user will receive when they join your project. The role defines which actions they are allowed to take and which information they are allowed to see. <a href=\"https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions\" target=\"_blank\"> Learn more about roles and permissions. </a>",
+          "label": "Role in %{project}",
+          "next_button": "ඊළඟ",
+          "no_roles_found": "No roles were found",
+          "required": "Please select a role"
+        },
+        "success": {
+          "description": {
+            "group": "The group is now a part of %{project}. Meanwhile you can already plan with that group and assign work packages for instance.",
+            "placeholder": "The placeholder can now be used in %{project}. Meanwhile you can already plan with that user and assign work packages for instance.",
+            "user": "The user can now log in to access %{project}. Meanwhile you can already plan with that user and assign work packages for instance."
+          },
+          "next_button": "ඉදිරියට යන්න",
+          "title": "%{principal} was invited!"
+        },
+        "summary": {
+          "next_button": "ආරාධනය යවන්න"
+        },
+        "title": {
+          "Group": "group",
+          "PlaceholderUser": "placeholder user",
+          "User": "user",
+          "invite": "පරිශීලකයාට ආරාධනා කරන්න",
+          "invite_principal_to_project": "Invite %{principal} to %{project}",
+          "invite_to_project": "Invite %{type} to %{project}"
+        },
+        "type": {
+          "group": {
+            "description": "Permissions based on the assigned role in the selected project",
+            "title": "කණ්ඩායම"
+          },
+          "placeholder": {
+            "description": "Has no access to the project and no emails are sent out.",
+            "description_no_ee": "Has no access to the project and no emails are sent out. <br>Check out the <a href=\"%{eeHref}\" target=\"_blank\">Enterprise edition</a>",
+            "title": "Placeholder user",
+            "title_no_ee": "Placeholder user (Enterprise edition only add-on)"
+          },
+          "required": "Please select the type to be invited",
+          "user": {
+            "description": "Permissions based on the assigned role in the selected project",
+            "title": "පරිශීලක"
+          }
+        }
+      },
+      "label_activate": "සක්රිය කරන්න",
+      "label_activity_show_all": "සියලුම ක්රියාකාරකම් පෙන්වන්න",
+      "label_activity_show_only_comments": "අදහස් දැක්වීම් සමඟ පමණක් ක්රියාකාරකම් පෙන්වන්න",
+      "label_add_attachments": "Attach files",
+      "label_add_column_after": "පසු තීරුව එකතු කරන්න",
+      "label_add_column_before": "පෙර තීරුව එකතු කරන්න",
+      "label_add_columns": "තීරු එකතු කරන්න",
+      "label_add_comment": "අදහස් එක් කරන්න",
+      "label_add_comment_title": "අනෙක් අයට දැනුම් දීම සඳහා අදහස් දක්වන්න සහ @ ටයිප් කරන්න",
+      "label_add_description": "%{file}සඳහා විස්තරයක් එක් කරන්න",
+      "label_add_row_after": "පසු පේළිය එකතු කරන්න",
+      "label_add_row_before": "පෙර පේළිය එකතු කරන්න",
+      "label_add_selected_columns": "තෝරාගත් තීරු එකතු කරන්න",
+      "label_added_by": "විසින් එකතු කරන ලදි",
+      "label_added_time_by": "Added by <a href=\"%{authorLink}\">%{author}</a> at %{age}",
+      "label_ago": "දින කිහිපයකට පෙර",
+      "label_all": "සියලු",
+      "label_all_uppercase": "සියලු",
+      "label_all_work_packages": "සියලුම වැඩ පැකේජ",
+      "label_and": "සහ",
+      "label_ascending": "නැගීම",
+      "label_assignee": "අස්ගිනී",
+      "label_attachments": "ඇමුණුම්",
+      "label_author": "කර්තෘ: %{user}",
+      "label_avatar": "අවතාර්",
+      "label_between": "අතර",
+      "label_board": "මණ්ඩලය",
+      "label_board_locked": "අගුළු දමා ඇත",
+      "label_board_plural": "පුවරු",
+      "label_board_sticky": "ඇලවෙන",
+      "label_cancel_comment": "අදහස් අවලංගු කරන්න",
+      "label_change": "වෙනස් කරන්න",
+      "label_children_derived_duration": "Work package's children derived duration",
+      "label_closed_work_packages": "වසා",
+      "label_collapse": "බිඳවැටීම",
+      "label_collapse_all": "සියල්ල කඩා වැටෙන්න",
+      "label_collapsed": "කඩා වැටී",
+      "label_columns": "තීරු",
+      "label_comment": "අදහස් දක්වන්න",
+      "label_committed_at": "%{committed_revision_link} දී %{date}",
+      "label_committed_link": "කැපවූ සංශෝධනය %{revision_identifier}",
+      "label_contains": "අඩංගු",
+      "label_create": "සාදන්න",
+      "label_create_work_package": "නව වැඩ පැකේජයක් සාදන්න",
+      "label_created_by": "විසින් නිර්මාණය",
+      "label_created_on": "මත නිර්මාණය",
+      "label_current": "current",
+      "label_custom_queries": "Private",
+      "label_date": "දිනය",
+      "label_date_with_format": "පහත දැක්වෙන ආකෘතිය භාවිතා කරමින් %{date_attribute} ඇතුල් කරන්න: %{format}",
+      "label_deactivate": "අක්රිය කරන්න",
+      "label_default_queries": "පෙරනිමි",
+      "label_descending": "බැස යාම",
+      "label_description": "විස්තරය",
+      "label_details": "විස්තර",
+      "label_display": "සංදර්ශකය",
+      "label_drop_files": "Drop files here to attach files.",
+      "label_drop_folders_hint": "ඔබට ෆෝල්ඩර ඇමුණුමක් ලෙස උඩුගත කළ නොහැක. කරුණාකර තනි ගොනු තෝරන්න.",
+      "label_drop_or_click_files": "Drop files here or click to attach files.",
+      "label_edit_comment": "මෙම අදහස සංස්කරණය කරන්න",
+      "label_edit_status": "වැඩ පැකේජයේ තත්වය සංස්කරණය කරන්න",
+      "label_email": "ඊ-තැපැල්",
+      "label_equals": "වේ",
+      "label_expand": "පුළුල්",
+      "label_expand_all": "සියල්ල පුළුල්",
+      "label_expand_project_menu": "ව්යාපෘති මෙනුව පුළුල් කරන්න",
+      "label_expanded": "පුළුල්",
+      "label_export": "අපනයන",
+      "label_export_preparing": "The export is being prepared and will be downloaded shortly.",
+      "label_favorites": "Favorites",
+      "label_filename": "ගොනුව",
+      "label_files_to_upload": "මෙම ගොනු උඩුගත කරනු ඇත:",
+      "label_filesize": "ප්‍රමාණය",
+      "label_formattable_attachment_hint": "අමුණන්න සහ සම්බන්ධ ගොනු මෙම ක්ෂේත්රය මත අතහැර, හෝ පසුරු පුවරුවේ සිට ඇලවීම.",
+      "label_general": "පොදු",
+      "label_global_queries": "පොදු",
+      "label_greater_or_equal": ">=",
+      "label_group": "කණ්ඩායම",
+      "label_group_by": "කණ්ඩායම විසින්",
+      "label_group_plural": "කණ්ඩායම්",
+      "label_hide_attributes": "අඩු පෙන්වන්න",
+      "label_hide_column": "තීරුව සඟවන්න",
+      "label_hide_project_menu": "ව්යාපෘති මෙනුව බිඳ වැටීම",
+      "label_hour": "පැය",
+      "label_hours": "පැය",
+      "label_import": "ආනයන",
+      "label_in": "තුළ",
+      "label_in_less_than": "වඩා අඩු",
+      "label_in_more_than": "වඩා වැඩි",
+      "label_incoming_emails": "ලැබෙන විද්යුත් තැපැල්",
+      "label_information_plural": "තොරතුරු",
+      "label_invalid": "Invalid",
+      "label_last_updated_on": "අවසන් වරට යාවත්කාලීන කරන ලදි",
+      "label_latest_activity": "නවතම ක්රියාකාරකම්",
+      "label_learn_more_link": "වැඩිදුර ඉගෙන ගන්න",
+      "label_less_or_equal": "<=",
+      "label_less_than_ago": "දින ගණනකට පෙර",
+      "label_loading": "පැටවීම...",
+      "label_mail_notification": "වි-ල් ස්කිනිම්",
+      "label_manage_columns": "Manage and reorder columns",
+      "label_me": "මට",
+      "label_meeting_agenda": "Agenda",
+      "label_meeting_minutes": "Minutes",
+      "label_meetings": "Meetings",
+      "label_menu_collapse": "බිඳවැටීම",
+      "label_menu_expand": "පුළුල්",
+      "label_moderate_comment": "Moderate comment",
+      "label_more_than_ago": "දින කිහිපයකට පෙර",
+      "label_next": "ඊළඟ",
+      "label_no_color": "වර්ණ නැත",
+      "label_no_data": "ප්රදර්ශනය කිරීමට දත්ත නොමැත",
+      "label_no_date": "no date",
+      "label_no_due_date": "no finish date",
+      "label_no_start_date": "ආරම්භක දිනයක් නැත",
+      "label_no_value": "වටිනාකමක් නැත",
+      "label_none": "කිසිවක් නැත",
+      "label_not_contains": "අඩංගු නොවේ",
+      "label_not_equals": "නැත",
+      "label_on": "මත",
+      "label_open_context_menu": "සන්දර්භය මෙනුව විවෘත කරන්න",
+      "label_open_menu": "මෙනුව විවෘත කරන්න",
+      "label_open_work_packages": "විවෘත",
+      "label_password": "මුරපදය",
+      "label_per_page": "එක් පිටුවකට:",
+      "label_please_wait": "කරුණාකර රැඳී සිටින්න",
+      "label_press_enter_to_save": "සුරැකීමට ඔබන්න ඇතුල් කරන්න.",
+      "label_preview": "පෙරදසුන",
+      "label_previous": "පසුගිය",
+      "label_project": "ව්යාපෘති",
+      "label_project_list": "Project lists",
+      "label_project_plural": "ව්‍යාපෘති",
+      "label_public_query": "පොදු",
+      "label_quote_comment": "මෙම අදහස උපුටා දක්වන්න",
+      "label_recent": "මෑත",
+      "label_rejected_files": "මෙම ගොනු උඩුගත කළ නොහැක:",
+      "label_rejected_files_reason": "ඔවුන්ගේ ප්රමාණය %{maximumFilesize}ට වඩා වැඩි බැවින් මෙම ගොනු උඩුගත කළ නොහැක",
+      "label_remove": "ඉවත් කරන්න",
+      "label_remove_all_files": "සියලුම ගොනු මකන්න",
+      "label_remove_column": "තීරුව ඉවත් කරන්න",
+      "label_remove_columns": "තෝරාගත් තීරු ඉවත් කරන්න",
+      "label_remove_file": "%{fileName}මකන්න",
+      "label_remove_row": "පේළිය ඉවත් කරන්න",
+      "label_remove_watcher": "මුරකරු ඉවත් කරන්න %{name}",
+      "label_report": "වාර්තාව",
+      "label_repository_plural": "ගබඩාවලදී",
+      "label_reset": "යළි පිහිටුවීම",
+      "label_save_as": "ලෙස සුරකින්න",
+      "label_search_columns": "Search a column",
+      "label_select_project": "ව්යාපෘතියක් තෝරන්න",
+      "label_select_watcher": "මුරකරුවෙකු තෝරන්න...",
+      "label_selected_filter_list": "තෝරාගත් පෙරහන්",
+      "label_show_attributes": "සියලු ගුණාංග පෙන්වන්න",
+      "label_show_in_menu": "මෙනුවේ දර්ශනය පෙන්වන්න",
+      "label_sort_by": "විසින් වර්ග",
+      "label_sort_higher": "ඉහළට ගෙනයන්න",
+      "label_sort_lower": "පහළට ගෙනයන්න",
+      "label_sorted_by": "විසින් වර්ග",
+      "label_sorting": "තෝරා බේරා ගැනීමේ",
+      "label_spent_time": "වැය කළ කාලය",
+      "label_star_query": "අනුග්රහය",
+      "label_starred_queries": "Favorite",
+      "label_subject": "විෂය",
+      "label_sum": "මුදල",
+      "label_sum_for": "මුදල",
+      "label_this_week": "මේ සතියේ",
+      "label_time_entry_plural": "වැය කළ කාලය",
+      "label_today": "Today",
+      "label_total_amount": "මුළු: %{amount}",
+      "label_total_progress": "%{percent}% මුළු ප්රගතිය",
+      "label_total_sum": "Total sum",
+      "label_unwatch": "අසන්න",
+      "label_unwatch_work_package": "වැඩ පැකේජය අසන්න",
+      "label_up": "ඉහළට",
+      "label_updated_on": "යාවත්කාලීන කරන ලදි",
+      "label_upload_counter": "%{done} ගොනු %{count} අවසන්",
+      "label_upload_notification": "ගොනු උඩුගත කිරීම...",
+      "label_uploaded_by": "විසින් උඩුගත",
+      "label_user_plural": "පරිශීලකයන්",
+      "label_validation_error": "පහත සඳහන් දෝෂ හේතුවෙන් වැඩ පැකේජය සුරැකිය නොහැකි විය:",
+      "label_value_derived_from_children": "(දරුවන්ගෙන් ලබාගත් වටිනාකම)",
+      "label_version_plural": "අනුවාද",
+      "label_view_has_changed": "මෙම මතය නොගැලවූ වෙනස්කම් ඇත. ඒවා සුරැකීමට ක්ලික් කරන්න.",
+      "label_visibility_settings": "දෘශ්යතා සැකසුම්",
+      "label_wait": "කරුණාකර වින්යාසය සඳහා රැඳී සිටින්න...",
+      "label_warning": "අවවාදය",
+      "label_watch": "වොච්",
+      "label_watch_work_package": "වැඩ පැකේජය නරඹන්න",
+      "label_watcher_added_successfully": "මුරකරු සාර්ථකව එකතු කළා!",
+      "label_watcher_deleted_successfully": "මුරකරු සාර්ථකව මකා දමන ලදි!",
+      "label_work_package": "වැඩ පැකේජය",
+      "label_work_package_context_menu": "Work package context menu",
+      "label_work_package_details_you_are_here": "You are on the %{tab} tab for %{type} %{subject}.",
+      "label_work_package_parent": "Parent work package",
+      "label_work_package_plural": "වැඩ පැකේජ",
+      "label_work_package_upload_notification": "වැඩ පැකේජය සඳහා ගොනු උඩුගත කිරීම #%{id}: %{subject}",
+      "label_wp_id_added_by": "#%{id} විසින් එකතු කරන ලද %{author}",
+      "modals": {
+        "button_apply": "අයදුම් කරන්න",
+        "button_cancel": "අවලංගු කරන්න",
+        "button_delete": "මකන්න",
+        "button_save": "සුරකින්න",
+        "button_submit": "ඉදිරිපත් කරන්න",
+        "destroy_time_entry": {
+          "text": "Are you sure you want to delete the following time entry?",
+          "title": "Confirm deletion of time entry"
+        },
+        "destroy_work_package": {
+          "bulk_text": "Are you sure you want to delete the following %{label}?",
+          "confirm_deletion_children": "ලැයිස්තුගත වැඩ පැකේජ වලින් පැවත එන සියලුම දෙනා නැවත නැවතත් ඉවත් කරන බව මම පිළිගනිමි.",
+          "deletes_children": "සියලුම ළමා වැඩ පැකේජ සහ ඔවුන්ගෙන් පැවත එන්නන් ද නැවත නැවතත් මකා දැමෙනු ඇත.",
+          "has_children": "වැඩ පැකේජයට %{childUnits}ඇත:",
+          "single_text": "Are you sure you want to delete the work package",
+          "title": "%{label}මකාදැමීම තහවුරු කරන්න"
+        },
+        "form_submit": {
+          "text": "ඔබට මෙම ක්රියාව කිරීමට අවශ්ය බව ඔබට විශ්වාසද?",
+          "title": "දිගටම කරගෙන යාමට තහවුරු කරන්න"
+        },
+        "label_delete_page": "වත්මන් පිටුව මකන්න",
+        "label_name": "නම"
+      },
+      "myTimeTracking": {
+        "noSpecificTime": "No specific time"
+      },
+      "my_page": {
+        "label": "My page"
+      },
+      "notice_bad_request": "නරක ඉල්ලීම.",
+      "notice_job_started": "job started.",
+      "notice_no_results_to_display": "ප්රදර්ශනය කිරීමට දෘශ්යමාන ප්රති results ල නොමැත.",
+      "notice_successful_create": "සාර්ථක නිර්මාණය.",
+      "notice_successful_delete": "සාර්ථක මකාදැමීම.",
+      "notice_successful_update": "සාර්ථක යාවත්කාලීන කිරීම.",
+      "notifications": {
+        "center": {
+          "and_more_users": {
+            "one": "and 1 other",
+            "other": "and %{count} others"
+          },
+          "empty_state": {
+            "no_notification": "Looks like you are all caught up.",
+            "no_notification_for_filter": "Looks like you are all caught up for this filter.",
+            "no_notification_with_current_filter": "Looks like you are all caught up for %{filter} filter.",
+            "no_notification_with_current_project_filter": "Looks like you are all caught up with the selected project.",
+            "no_selection": "Click on a notification to view all activity details."
+          },
+          "label_actor_and": "සහ",
+          "mark_all_read": "Mark all as read",
+          "mark_all_read_confirmation": "This will mark all notifications in this view as read. Are you sure you want to do this?",
+          "mark_as_read": "Mark as read",
+          "new_notifications": {
+            "link_text": "Click here to load them.",
+            "message": "There are new notifications."
+          },
+          "no_results": {
+            "at_all": "New notifications will appear here when there is activity that concerns you.",
+            "with_current_filter": "There are no notifications in this view at the moment"
+          },
+          "text_update_date_by": "%{date} by",
+          "total_count_warning": "Showing the %{newest_count} most recent notifications. %{more_count} more are not displayed."
+        },
+        "date_alerts": {
+          "milestone_date": "Milestone date",
+          "overdue": "Overdue",
+          "overdue_since": "since %{difference_in_days}.",
+          "property_is": "is in %{difference_in_days}.",
+          "property_is_deleted": "is deleted.",
+          "property_today": "is today.",
+          "property_was": "was %{difference_in_days} ago."
+        },
+        "no_unread": "නොකියවූ දැනුම්දීම් නැත",
+        "reasons": {
+          "assigned": "අස්ගිනී",
+          "commented": "අදහස් දැක්වීය",
+          "created": "Created",
+          "dateAlert": "Date alert",
+          "mentioned": "Mentioned",
+          "prioritized": "Prioritized",
+          "processed": "Processed",
+          "reminder": "Reminder",
+          "responsible": "වගවීම",
+          "scheduled": "නියමිත",
+          "shared": "Shared",
+          "watched": "මුරකරු"
+        },
+        "reminders": {
+          "note": "Note: “%{note}”"
+        },
+        "settings": {
+          "change_notification_settings": "You can modify your <a target=\"_blank\" href=\"%{url}\">notification settings</a> to ensure you never miss an important update.",
+          "global": {
+            "date_alerts": {
+              "description": "Automatic notifications when important dates are approaching for open work packages you are involved in (assignee, accountable or watcher).",
+              "title": "Date alerts"
+            },
+            "delayed": {
+              "description": "Additional notifications for activities in all projects.",
+              "title": "Non-participating"
+            },
+            "immediately": {
+              "description": "Notifications for all activities in work packages you are involved in (assignee, accountable or watcher).",
+              "title": "Participating"
+            },
+            "overdue": "When overdue"
+          },
+          "notify_me": "Notify me",
+          "project_specific": {
+            "add": "Add setting for project",
+            "already_selected": "This project is already selected",
+            "description": "These project-specific settings override default settings above.",
+            "remove": "Remove project settings",
+            "title": "Project-specific notification settings"
+          },
+          "reasons": {
+            "assignee": "අස්ගිනී",
+            "mentioned": {
+              "description": "Receive a notification every time someone mentions me anywhere",
+              "title": "Mentioned"
+            },
+            "responsible": "වගවීම",
+            "shared": "Shared",
+            "watched": "මුරකරු",
+            "work_package_commented": "All new comments",
+            "work_package_created": "New work packages",
+            "work_package_prioritized": "All priority changes",
+            "work_package_processed": "All status changes",
+            "work_package_scheduled": "All date changes"
+          },
+          "reminders": {
+            "no_notification": "No notification",
+            "timeframes": {
+              "normal": {
+                "P1D": "1 day before",
+                "P3D": "3 days before",
+                "P7D": "a week before",
+                "PT0S": "same day"
+              },
+              "overdue": {
+                "P1D": "every day",
+                "P3D": "every 3 days",
+                "P7D": "every week"
+              }
+            }
+          },
+          "title": "Notification settings"
+        },
+        "title": "Notifications"
+      },
+      "onboarding": {
+        "buttons": {
+          "got_it": "ඒක ගත්තා",
+          "next": "ඊළඟ",
+          "skip": "මගහරින්න"
+        },
+        "steps": {
+          "backlogs": {
+            "overview": "Manage your work in the <b>backlogs</b> view.",
+            "sprints": "On the right you have the product backlog and the bug backlog, on the left you have the respective sprints. Here you can create <b>epics, user stories, and bugs</b>, prioritize via drag & drop and add them to a sprint.",
+            "task_board": "The task board visualizes the <b>progress for this sprint</b>. Click on the plus (+) icon next to a user story to add new tasks or impediments. <br> The status can be updated by drag and drop.",
+            "task_board_arrow": "To see your <b>task board</b>, open the sprint drop-down...",
+            "task_board_select": "...and select the <b>task board</b> entry."
+          },
+          "boards": {
+            "add": "Click on the plus (+) icon to <b>create a new card</b> or <b>add an existing card</b> to the list on the board.",
+            "drag": "Drag and drop your cards within a given list to reorder them, or to move them to another list. <br> You can click the info (i) icon in the upper right-hand corner or double-click a card to open its details.",
+            "lists_basic": "Here you can create multiple lists (columns) within your agile board.",
+            "lists_kanban": "Here you can create multiple lists (columns) within your board. This feature allows you to create a <b>Kanban board</b>, for example.",
+            "overview": "Select <b>boards</b> to shift the view and manage your project using the agile boards view."
+          },
+          "help_menu": "The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with OpenProject!",
+          "members": "Invite new <b>members</b> to join your project.",
+          "quick_add_button": "Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>.",
+          "sidebar_arrow": "Use the return arrow in the top left corner to return to the project’s <b>main menu</b>.",
+          "team_planner": {
+            "add_assignee": "To get started, add assignees to the team planner.",
+            "add_existing": "Search for existing work packages and drag them to the team planner to instantly assign them to a team member and define start and end dates.",
+            "calendar": "The weekly or biweekly planning board displays all work packages assigned to your team members.",
+            "card": "Drag work packages horizontally to move them backwards or forwards in time, drag the edges to change start and end dates and even drag them vertically to a different row to assign them to another member.",
+            "overview": "The team planner lets you visually assign tasks to team members and get an overview of who is working on what."
+          },
+          "welcome": "Take a three-minute introduction tour to learn the most <b>important features</b>. <br> We recommend completing the steps until the end. You can restart the tour any time.",
+          "wiki": "Within the <b>wiki</b> you can document and share knowledge together with your team.",
+          "wp": {
+            "back_button": "Use the return arrow in the top left corner to exit and return to the work package list.",
+            "create_button": "The <b>+ Create</b> button will add a new work package to your project.",
+            "full_view": "The <b>work package details</b> view provides all the relevant information pertaining to a given work package, such as its description, status, priority, activities, dependencies, and comments.",
+            "gantt_menu": "Create project schedules and timelines effortlessly using the Gantt chart module.",
+            "list": "This <b>work</b> package overview provides a list of all the work in your project, such as tasks, milestones, phases, and more. <br> Work packages can be created and edited directly from this view. To access the details of a particular work package, simply double-click its row.",
+            "timeline": "Here you can <b>edit your project plan</b>, create new work packages, such as tasks, milestones, phases, and more, as well as <b>add dependencies</b>. All team members can see and update the latest plan at any time.",
+            "toggler": "Now let's have a look at the <b>work package</b> section, which gives you a more detailed view of your work."
+          }
+        }
+      },
+      "open_project_storage_modal": {
+        "waiting_subtitle": {
+          "network_off": "There is a network problem.",
+          "network_on": "Network is back. We are trying."
+        },
+        "waiting_title": {
+          "timeout": "Timeout"
+        }
+      },
+      "overviews": {
+        "label": "දළ විශ්ලේෂණය"
+      },
+      "pagination": {
+        "no_other_page": "ඔබ සිටින්නේ එකම පිටුවේ ය.",
+        "pages": {
+          "next": "ඊළඟ පිටුවට ඉදිරියට යන්න",
+          "previous": "පෙර පිටුවට ආපසු යන්න"
+        }
+      },
+      "password_confirmation": {
+        "field_description": "මෙම වෙනස තහවුරු කිරීම සඳහා ඔබගේ ගිණුමේ මුරපදය ඇතුළත් කළ යුතුය.",
+        "title": "දිගටම කරගෙන යාමට ඔබගේ මුරපදය තහවුරු කරන්න"
+      },
+      "placeholders": {
+        "default": "-",
+        "description": "Description: Click to edit...",
+        "relation_description": "මෙම සම්බන්ධයෙන් විස්තර එකතු කිරීමට ක්ලික් කරන්න",
+        "selection": "කරුණාකර තෝරන්න",
+        "subject": "මෙහි විෂය ඇතුලත් කරන්න"
+      },
+      "project": {
+        "autocompleter": {
+          "label": "ව්යාපෘති ස්වයංක්රීයව නිම කිරීම"
+        },
+        "click_to_switch_to_project": "Project: %{projectname}",
+        "confirm_template_load": "Switching the template will reload the page and you will lose all input to this form. Continue?",
+        "context": "ව්යාපෘති සන්දර්භය",
+        "copy": {
+          "copy_options": "Copy options"
+        },
+        "no_template_selected": "(None)",
+        "not_available": "Project N/A",
+        "required_outside_context": "කරුණාකර සියලු ගුණාංග බැලීමට වැඩ පැකේජය නිර්මාණය කිරීම සඳහා ව්යාපෘතියක් තෝරන්න. ඔබට තෝරා ගත හැක්කේ ඉහත ආකාරයේ සක්රිය කර ඇති ව්යාපෘති පමණි.\n",
+        "use_template": "Use template"
+      },
+      "project_menu_details": "විස්තර",
+      "relation_buttons": {
+        "abort": "අවෙර්ට්",
+        "add_existing": "පවතින එකතු කරන්න",
+        "add_existing_child": "Add child",
+        "add_existing_relation": "පවතින සම්බන්ධතාවය එකතු කරන්න",
+        "add_new_child": "නව දරුවෙකු නිර්මාණය කරන්න",
+        "add_new_relation": "නව සම්බන්ධතාවයක් සාදන්න",
+        "add_parent": "දැනට පවතින මව් එකතු කරන්න",
+        "add_predecessor": "පූර්වගාමියා එකතු කරන්න",
+        "add_successor": "Add successor",
+        "change_parent": "මාපිය වෙනස් කරන්න",
+        "create_new": "නව නිර්මාණය",
+        "group_by_relation_type": "සම්බන්ධයක් වර්ගය අනුව සමූහය",
+        "group_by_wp_type": "වැඩ පැකේජ වර්ගය අනුව සමූහය",
+        "hierarchy_indent": "ඉන්ඩන්ට් ධූරාවලිය",
+        "hierarchy_outdent": "Outdent ධූරාවලිය",
+        "remove": "සම්බන්ධතාවය ඉවත් කරන්න",
+        "remove_child": "දරුවා ඉවත් කරන්න",
+        "remove_parent": "දෙමව්පියන් ඉවත් කරන්න",
+        "save": "සම්බන්ධතාවය සුරකින්න",
+        "set_parent": "මව් සකසන්න",
+        "show_relations": "Show relations",
+        "toggle_description": "සම්බන්ධතා විස්තරය ටොගල් කරන්න",
+        "update_description": "මෙම සම්බන්ධතාවය පිළිබඳ විස්තරය සකසන්න හෝ යාවත්කාලීන කරන්න",
+        "update_relation": "සම්බන්ධතා වර්ගය වෙනස් කිරීමට ක්ලික් කරන්න"
+      },
+      "relation_labels": {
+        "blocked": "විසින් අවහිර කර ඇත",
+        "blocks": "බ්ලොක්",
+        "child": "Child",
+        "children": "දරුවන්",
+        "duplicated": "විසින් අනුපිටපත්",
+        "duplicates": "අනුපිටපත්",
+        "follows": "පහත දැක්වේ",
+        "includes": "ඇතුළත් වේ",
+        "parent": "මාපිය",
+        "partof": "කොටසක්",
+        "precedes": "පෙර",
+        "relates": "සම්බන්ධ කිරීම",
+        "relation_type": "සම්බන්ධතා වර්ගය",
+        "required": "විසින් අවශ්ය",
+        "requires": "අවශ්ය"
+      },
+      "relations": {
+        "empty": "සම්බන්ධයක් නොමැත",
+        "remove": "සම්බන්ධතාවය ඉවත් කරන්න"
+      },
+      "relations_autocomplete": {
+        "parent_placeholder": "අවලංගු කිරීමට නව මව් හෝ මාධ්ය පැන තෝරන්න.",
+        "placeholder": "සෙවීමට ටයිප් කරන්න"
+      },
+      "relations_hierarchy": {
+        "children_headline": "දරුවන්",
+        "hierarchy_headline": "ධූරාවලිය",
+        "parent_headline": "මාපිය"
+      },
+      "reminders": {
+        "settings": {
+          "alerts": {
+            "document_added": "Documents added",
+            "explanation": "Notifications today are limited to work packages. You can choose to continue receiving email alerts for these events until they are included in notifications:\n",
+            "forum_messages": "New forum messages",
+            "membership_added": "Membership added",
+            "membership_updated": "Membership updated",
+            "news_added": "පුවත් එකතු",
+            "news_commented": "Comment on a news item",
+            "title": "Email alerts for other items (that are not work packages)",
+            "wiki_page_added": "විකි පිටුව එකතු කරන ලදි",
+            "wiki_page_updated": "විකි පිටුව යාවත්කාලීන කරන ලදි"
+          },
+          "daily": {
+            "add_time": "Add time",
+            "enable": "Enable daily email reminders",
+            "explanation": "You will receive these reminders only for unread notifications and only at hours you specify. %{no_time_zone}",
+            "no_time_zone": "Until you configure a time zone for your account, the times will be interpreted to be in UTC.",
+            "time_label": "Time %{counter}:",
+            "title": "Send me daily email reminders for unread notifications"
+          },
+          "immediate": {
+            "mentioned": "Immediately when someone @mentions me",
+            "personal_reminder": "Immediately when I receive a personal reminder",
+            "title": "Send me an email reminder"
+          },
+          "pause": {
+            "first_day": "First day",
+            "label": "Temporarily pause daily email reminders",
+            "last_day": "Last day"
+          },
+          "title": "Email reminders",
+          "workdays": {
+            "title": "Receive email reminders on these days"
+          }
+        }
+      },
+      "reporting_engine": {
+        "label_remove": "මකන්න",
+        "label_response_error": "There was an error handling the query."
+      },
+      "repositories": {
+        "select_branch": "ශාඛාව තෝරන්න",
+        "select_tag": "ටැගය තෝරන්න"
+      },
+      "revit": {
+        "revit_add_in": "Revit Add-In",
+        "revit_add_in_settings": "Revit Add-In settings"
+      },
+      "sharing": {
+        "selected_count": "%{count} selected",
+        "selection": {
+          "mixed": "Mixed"
+        },
+        "share": "Share"
+      },
+      "sort": {
+        "activate_asc": "නැගී එන ආකාරයේ අයදුම් කිරීමට සක්රිය",
+        "activate_dsc": "අවරෝහණ ආකාරයක අයදුම් කිරීමට සක්රිය",
+        "activate_no": "වර්ග කිරීම ඉවත් කිරීමට සක්රිය",
+        "sorted_asc": "නැගී එන ආකාරයේ අයදුම්, ",
+        "sorted_dsc": "බැස වර්ග අයදුම්, ",
+        "sorted_no": "කිසිදු ආකාරයක අයදුම්, ",
+        "sorting_disabled": "වර්ග කිරීම අක්රීය කර ඇත"
+      },
+      "spot": {
+        "drop_modal": {
+          "close": "Close modal",
+          "focus_grab": "This is a focus anchor for modals. Press shift+tab to go back to the modal trigger element."
+        },
+        "filter_chip": {
+          "remove": "ඉවත් කරන්න"
+        }
+      },
+      "storages": {
+        "authentication_error": "Authentication with %{storageType} failed",
+        "choose_location": "Choose location",
+        "drop_files": "Drop files here to upload them to %{name}.",
+        "drop_or_click_files": "Drop files here or click to upload them to %{name}.",
+        "file_links": {
+          "already_linked_directory": "This directory is already linked to this work package.",
+          "already_linked_file": "This file is already linked to this work package.",
+          "download": "Download %{fileName}",
+          "empty": "Currently there are no linked files to this work package. Start linking files with the action below or from within %{storageType}.\n",
+          "link_uploaded_file_error": "An error occurred linking the recently uploaded file '%{fileName}' to the work package %{workPackageId}.\n",
+          "open": "Open file on storage",
+          "open_location": "Open file in location",
+          "remove": "Remove file link",
+          "remove_confirmation": "Are you sure you want to unlink the file from this work package? Unlinking does not affect the original file and only removes the connection to this work package.\n",
+          "remove_short": "Remove link",
+          "select": "Select files",
+          "select_all": "සියල්ල තෝරන්න",
+          "selection": {
+            "one": "Link 1 file",
+            "other": "Link %{count} files",
+            "zero": "Select files to link"
+          },
+          "success_create": {
+            "one": "Successfully created 1 file link.",
+            "other": "Successfully created %{count} file links."
+          },
+          "tooltip": {
+            "not_found": "This file cannot be found.",
+            "not_logged_in": "Please log in to the storage to access this file.",
+            "view_not_allowed": "You have no permission to see this file."
+          },
+          "upload_error": {
+            "403": "Your file (%{fileName}) could not be uploaded due to system restrictions. Please contact your administrator for more information.\n",
+            "413": "Your file (%{fileName}) is bigger than what OpenProject can upload to %{storageType}. You can upload it directly to %{storageType} first and then link the file.\n",
+            "507": "Your file (%{fileName}) is bigger than the storage quota allows. Contact your administrator to modify this quota.\n",
+            "default": "Your file (%{fileName}) could not be uploaded.\n",
+            "detail": {
+              "nextcloud": "Please check that the latest version of the Nextcloud App \"OpenProject Integration\" is installed and contact your administrator for more information.\n"
+            }
+          }
+        },
+        "files": {
+          "already_existing_body": "A file with the name \"%{fileName}\" already exists in the location where you are trying to upload this file. What would you like to do?\n",
+          "already_existing_header": "This file already exists",
+          "cannot_create_folder": "Failed to create folder. Avoid using special characters and symbols and make sure the folder does not exist already.",
+          "directory_not_writeable": "You do not have permission to add files to this folder.",
+          "dragging_folder": "The upload to %{storageType} does not support folders.",
+          "dragging_many_files": "The upload to %{storageType} supports only one file at once.",
+          "empty_folder": "This folder is empty.",
+          "empty_folder_location_hint": "Click the button below to upload the file to this location.",
+          "file_not_selectable_location": "Selecting a file is not possible in the process of choosing a location.",
+          "managed_project_folder_no_access": "You have no access yet to the managed project folder. Please wait a bit and try again.\n",
+          "managed_project_folder_not_available": "The automatically managed project folder was not yet found. Please wait a bit, reload the page to fetch the newest data, and try again.\n",
+          "project_folder_no_access": "You have no access to the project folder. Please, contact your administrator to get access or upload the file in another location.\n",
+          "upload_keep_both": "Keep both",
+          "upload_replace": "ප්රතිස්ථාපනය කරන්න"
+        },
+        "information": {
+          "authentication_error": "The request to %{storageType} could not be authenticated, that's an error.",
+          "connection_error": "Some %{storageType} settings are not working. Please contact your %{storageType} administrator.\n",
+          "live_data_error": "Error fetching file details",
+          "live_data_error_description": "Some %{storageType} data could not be fetched. Please try to reload this page or contact your %{storageType} administrator.\n",
+          "no_file_links": "In order to link files to this work package please do it via %{storageType}.",
+          "not_logged_in": "To add a link, see or upload files related to this work package, please login to %{storageType}.\n",
+          "suggest_logout": "You can try whether logging out and back in fixes this problem.",
+          "suggest_relink": "You can try whether re-linking your account via the login button below fixes this problem."
+        },
+        "link_existing_files": "Link existing files",
+        "link_files_in_storage": "Link files in %{storageType}",
+        "login": "%{storageType} login",
+        "login_to": "Login to %{storageType}",
+        "new_folder": "New folder",
+        "no_connection": "No %{storageType} connection",
+        "open_storage": "Open %{storageType}",
+        "select_location": "Select location",
+        "types": {
+          "default": "Storage",
+          "nextcloud": "Nextcloud",
+          "one_drive": "OneDrive/SharePoint"
+        },
+        "upload_files": "Upload files"
+      },
+      "team_planner": {
+        "add_assignee": "අස්ගිනී",
+        "add_existing": "පවතින එකතු කරන්න",
+        "add_existing_title": "Add existing work packages",
+        "cannot_drag_here": "Cannot remove the work package due to permissions or editing restrictions.",
+        "cannot_drag_to_non_working_day": "This work package cannot start/finish on a non-working day.",
+        "create_label": "Team planner",
+        "create_title": "Create new team planner",
+        "drag_here_to_remove": "Drag here to remove assignee and start and end dates.",
+        "eight_weeks": "8-week",
+        "four_weeks": "4-week",
+        "modify": {
+          "errors": {
+            "fallback": "This work package cannot be edited.",
+            "permission_denied": "You do not have the necessary permissions to modify this."
+          }
+        },
+        "no_data": "Add assignees to set up your team planner.",
+        "one_week": "1-week",
+        "quick_add": {
+          "empty_state": "Use the search field to find work packages and drag them to the planner to assign it to someone and define start and end dates.",
+          "search_placeholder": "Search..."
+        },
+        "remove_assignee": "Remove assignee",
+        "today": "Today",
+        "two_weeks": "2-week",
+        "unsaved_title": "Unnamed team planner",
+        "work_week": "Work week"
+      },
+      "text_are_you_sure": "ඔබට විශ්වාසද?",
+      "text_data_lost": "All entered data will be lost.",
+      "text_query_destroy_confirmation": "තෝරාගත් දර්ශනය මකා දැමීමට ඔබට අවශ්යද?",
+      "text_user_wrote": "%{value} ලිවීය:",
+      "text_work_packages_destroy_confirmation": "ඔබ තෝරාගත් වැඩ පැකේජය (න්) මකා දැමීමට අවශ්ය බව ඔබට විශ්වාසද?",
+      "time_entry": {
+        "stop": "Stop",
+        "title": "ලොග් වේලාව",
+        "tracking": "ෙසොයා ගැනීෙම්",
+        "work_package_required": "පළමුව වැඩ පැකේජයක් තෝරා ගැනීම අවශ්ය වේ."
+      },
+      "timer": {
+        "button_stop": "Stop current timer",
+        "start_new_timer": "Start new timer",
+        "timer_already_running": "To start a new timer, you must first stop the current timer:",
+        "timer_already_stopped": "No active timer for this work package, have you stopped it in another window?",
+        "tracking_time": "Tracking time"
+      },
+      "tl_toolbar": {
+        "outlines": "ධූරාවලිය මට්ටම",
+        "zooms": "විශාලන මට්ටම"
+      },
+      "toolbar": {
+        "filter": "පෙරහන්",
+        "search_query_label": "සුරකින ලද අදහස් සොයන්න",
+        "settings": {
+          "columns": "තීරු",
+          "configure_view": "Configure view",
+          "delete": "මකන්න",
+          "display_hierarchy": "ධූරාවලිය පෙන්වන්න",
+          "display_sums": "සංදර්ශකය",
+          "export": "අපනයන",
+          "group_by": "කණ්ඩායම විසින්",
+          "hide_hierarchy": "ධූරාවලිය සඟවන්න",
+          "hide_sums": "සඟවන්න",
+          "page_settings": "දැක්ම නැවත නම්",
+          "save": "සුරකින්න",
+          "save_as": "ලෙස සුරකින්න",
+          "share_calendar": "Subscribe to calendar",
+          "sort_by": "විසින් වර්ග",
+          "visibility_settings": "දෘශ්යතා සැකසුම්"
+        },
+        "unselected_title": "වැඩ පැකේජය"
+      },
+      "two_factor_authentication": {
+        "errors": {
+          "aborted": "The authentication was cancelled. Please try again."
+        },
+        "label_two_factor_authentication": "Two-factor authentication"
+      },
+      "types": {
+        "attribute_groups": {
+          "confirm_reset": "අවවාදයයි: ආකෘති වින්යාසය නැවත සැකසීමට ඔබට අවශ්යද? මෙය ඔවුන්ගේ පෙරනිමි කණ්ඩායමට ගුණාංග නැවත සකස් කර සියලුම අභිරුචි ක්ෂේත්ර අක්රීය කරනු ඇත.\n",
+          "error_duplicate_group_name": "%{group} නම එක් වරකට වඩා භාවිතා වේ. කණ්ඩායම් නම් අද්විතීය විය යුතුය.",
+          "error_no_table_configured": "කරුණාකර %{group}සඳහා වගුවක් වින්යාස කරන්න.",
+          "more_information": "වැඩි විස්තර",
+          "nevermind": "කිසි විටෙකත් මනස",
+          "reset_title": "ආකෘති වින්යාසය සකසන්න",
+          "upgrade_to_ee": "Upgrade to Enterprise on-premises edition",
+          "upgrade_to_ee_text": "Wow! If you need this add-on you are a super pro! Would you mind supporting us OpenSource developers by becoming an Enterprise edition client?"
+        }
+      },
+      "units": {
+        "child_work_packages": {
+          "one": "එක් ළමා වැඩ පැකේජය",
+          "other": "%{count} වැඩ පැකේජය දරුවන්"
+        },
+        "day": {
+          "one": "දින 1",
+          "other": "%{count} දින",
+          "zero": "0 days"
+        },
+        "hour": {
+          "one": "1 h",
+          "other": "%{count} ඌ",
+          "zero": "0 ඌ"
+        },
+        "word": {
+          "one": "1 word",
+          "other": "%{count} words"
+        },
+        "workPackage": {
+          "one": "වැඩ පැකේජය",
+          "other": "වැඩ පැකේජ"
+        }
+      },
+      "upsell": {
+        "ee_only": "Enterprise edition add-on"
+      },
+      "views": {
+        "card": "පත්",
+        "list": "මේසය",
+        "timeline": "ගැන්ට්"
+      },
+      "watchers": {
+        "label_add": "මුරකරුවන් එකතු කරන්න",
+        "label_discard": "තෝරා ගැනීම ඉවතලන්න",
+        "label_error_loading": "මුරකරුවන් පැටවීම අතරතුර දෝෂයක් ඇති විය",
+        "label_loading": "පැටවුම් මුරකරුවන්...",
+        "label_search_watchers": "මුරකරුවන් සොයන්න",
+        "typeahead_placeholder": "හැකි මුරකරුවන් සොයන්න"
+      },
+      "wiki_formatting": {
+        "code": "පේළිගත කේතය",
+        "deleted": "මකා දැමූ",
+        "heading1": "ශීර්ෂය 1",
+        "heading2": "ශීර්ෂය 2",
+        "heading3": "ශීර්ෂය 3",
+        "image": "පින්තූරය",
+        "italic": "ඇල අකුරු",
+        "ordered_list": "නියෝග ලැයිස්තුව",
+        "preformatted_text": "පෙර ආකෘතිකරණය කරන ලද පෙළ",
+        "quote": "උපුටා",
+        "strong": "ශක්තිමත්",
+        "underline": "යටින් ඉරි",
+        "unordered_list": "නියෝග නොකළ ලැයිස්තුව",
+        "unquote": "උපුටා දක්වන්න",
+        "wiki_link": "විකි පිටුවකට සබැඳිය"
+      },
+      "work_packages": {
+        "baseline": {
+          "addition_label": "Added to view within the comparison time period",
+          "column_incompatible": "This column does not show changes in Baseline mode.",
+          "modification_label": "Modified within the comparison time period",
+          "removal_label": "Removed from view within the comparison time period"
+        },
+        "bulk_actions": {
+          "copy": "තොග පිටපතක්",
+          "delete": "තොග මකන්න",
+          "edit": "තොග සංස්කරණය",
+          "move": "ව්යාපෘතියේ තොග වෙනසක්"
+        },
+        "button_clear": "පැහැදිලි",
+        "comment_added": "අදහස් දැක්වීම සාර්ථකව එකතු කරන ලදී.",
+        "comment_send_failed": "දෝෂයක් සිදුවී ඇත. අදහස ඉදිරිපත් කළ නොහැකි විය.",
+        "comment_updated": "අදහස් දැක්වීම සාර්ථකව යාවත්කාලීන කරන ලදී.",
+        "confirm_edit_cancel": "ඔබට වැඩ පැකේජය සංස්කරණය කිරීම අවලංගු කිරීමට අවශ්ය බව ඔබට විශ්වාසද?",
+        "copy": {
+          "title": "වැඩ පැකේජය පිටපත් කරන්න"
+        },
+        "create": {
+          "button": "සාදන්න",
+          "header": "අලුත් %{type}",
+          "header_no_type": "නව වැඩ පැකේජය (ටයිප් තවමත් සකසා නැත)",
+          "header_with_parent": "නව %{type} ( %{parent_type} #%{id}දරුවා)",
+          "title": "නව වැඩ පැකේජය"
+        },
+        "default_queries": {
+          "all_open": "සියල්ල විවෘතයි",
+          "assigned_to_me": "මට පවරනු ලැබේ",
+          "created_by_me": "මා විසින් නිර්මාණය කරන ලදී",
+          "latest_activity": "නවතම ක්රියාකාරකම්",
+          "manually_sorted": "New manually sorted query",
+          "milestones": "Milestones",
+          "overdue": "Overdue",
+          "recently_created": "මෑතකදී නිර්මාණය",
+          "shared_with_me": "Shared with me",
+          "shared_with_users": "Shared with users",
+          "summary": "සාරාංශය"
+        },
+        "description_enter_text": "පෙළ ඇතුලත් කරන්න",
+        "description_filter": "පෙරහන්",
+        "description_options_hide": "විකල්ප සඟවන්න",
+        "description_options_show": "විකල්ප පෙන්වන්න",
+        "edit_attribute": "%{attribute} - සංස්කරණය කරන්න",
+        "faulty_query": {
+          "description": "ඔබේ මතය වැරදියි. එය ක්රියාවට නැංවිය නොහැක.",
+          "title": "වැඩ පැකේජ පටවා ගත නොහැකි විය."
+        },
+        "filters": {
+          "baseline_incompatible": "This filter attribute is not taken into consideration in Baseline mode.",
+          "baseline_warning": "Baseline mode is on but some of your active filters are not included in the comparison.",
+          "title": "පෙරහන් වැඩ පැකේජ"
+        },
+        "hierarchy": {
+          "children_collapsed": "ධූරාවලියේ මට්ටම %{level}, බිඳ වැටුණි. පෙරීම දරුවන්ට පෙන්වීමට ක්ලික් කරන්න",
+          "children_expanded": "ධූරාවලියේ මට්ටම %{level}, පුළුල් විය. පෙරහන් කළ දරුවන් බිඳ වැටීම සඳහා ක්ලික් කරන්න",
+          "hide": "ධූරාවලිය මාදිලිය සඟවන්න",
+          "leaf": "%{level}මට්ටමේ වැඩ පැකේජ කොළ.",
+          "show": "ධූරාවලිය මාදිලිය පෙන්වන්න",
+          "toggle_button": "ධූරාවලිය මාදිලිය ටොගල් කිරීමට ක්ලික් කරන්න."
+        },
+        "inline_create": {
+          "title": "මෙම ලැයිස්තුවට නව වැඩ පැකේජයක් එක් කිරීමට මෙහි ක්ලික් කරන්න"
+        },
+        "jump_marks": {
+          "content": "අන්තර්ගතයට පනින්න",
+          "label_content": "මෙනුව හරහා මඟ හැරීමට සහ අන්තර්ගතයට යන්න මෙහි ක්ලික් කරන්න",
+          "label_pagination": "වැඩ පැකේජ වගුව හරහා මඟ හැරීමට සහ පේනිෂන් වෙත යන්න මෙහි ක්ලික් කරන්න",
+          "pagination": "මේසය පේනීම වෙත පනින්න"
+        },
+        "key_value": "%{key}: %{value}",
+        "label_column_multiselect": "ඒකාබද්ධ බිංදු ක්ෂේත්රය: ඊතල යතුරු සමඟ තෝරන්න, ඇතුල් කිරීම සමඟ තේරීම තහවුරු කරන්න, පසුබිම් අවකාශය සමඟ මකා දමන්න",
+        "label_disable_multi_select": "බහුකාර්ය අක්රීය කරන්න",
+        "label_enable_multi_select": "බහුතේරීම් සක්රීය කරන්න",
+        "label_filter_add": "පෙරහන් එකතු කරන්න",
+        "label_filter_by_text": "පෙළ අනුව පෙරහන්",
+        "label_options": "විකල්ප",
+        "limited_results": "Only %{count} work packages can be shown in manual sorting mode. Please reduce the results by filtering, or switch to automatic sorting.",
+        "message_error_during_bulk_delete": "වැඩ පැකේජ මකා දැමීමට උත්සාහ කරන අතරතුර දෝෂයක් සිදුවිය.",
+        "message_successful_bulk_delete": "සාර්ථකව මකා දැමූ වැඩ පැකේජ.",
+        "message_successful_show_in_fullscreen": "සම්පූර්ණ තිර දර්ශනය තුළ මෙම වැඩ පැකේජය විවෘත කිරීමට මෙහි ක්ලික් කරන්න.",
+        "message_view_spent_time": "මෙම වැඩ පැකේජය සඳහා ගත කළ කාලය පෙන්වන්න",
+        "message_work_package_read_only": "වැඩ පැකේජය මෙම තත්වය තුළ අගුලු දමා ඇත. තත්වය හැර වෙනත් කිසිදු ගුණාංගයක් වෙනස් කළ නොහැක.",
+        "message_work_package_status_blocked": "සංවෘත තත්ත්වය සහ සංවෘත අනුවාදය පවරා ඇති නිසා වැඩ පැකේජ තත්ත්වය ලිවිය නොහැකි ය.",
+        "no_results": {
+          "description": "එක්කෝ කිසිවක් නිර්මාණය කර නැත හෝ සියලු වැඩ පැකේජ පෙරීම ඇත.",
+          "title": "ප්රදර්ශනය කිරීමට වැඩ පැකේජ නොමැත."
+        },
+        "placeholder_filter_by_text": "විෂය, විස්තරය, අදහස්,...",
+        "placeholders": {
+          "date": "Select date",
+          "default": "-"
+        },
+        "progress": {
+          "title": "Work estimates and progress"
+        },
+        "properties": {
+          "assignee": "අස්ගිනී",
+          "author": "කර්තෘ",
+          "category": "ප්රවර්ගය",
+          "costObject": "Budget",
+          "createdAt": "මත නිර්මාණය",
+          "date": "දිනය",
+          "description": "විස්තරය",
+          "dueDate": "අවසන් දිනය",
+          "duration": "කාල සීමාව",
+          "overallCosts": "Overall costs",
+          "percentComplete": "% Complete",
+          "percentCompleteAlternative": "Progress",
+          "percentageDone": "ප්රතිශතය සිදු",
+          "priority": "ප්රමුඛතාව",
+          "projectName": "ව්යාපෘති",
+          "remainingTime": "Remaining work",
+          "remainingWork": "Remaining work",
+          "remainingWorkAlternative": "ඉතිරි පැය",
+          "responsible": "වගකිව යුතු",
+          "spentTime": "වැය කළ කාලය",
+          "spentUnits": "Spent units",
+          "startDate": "ආරම්භක දිනය",
+          "status": "තත්වය",
+          "storyPoints": "කතන්දර කරුණු",
+          "subject": "විෂය",
+          "subproject": "උප ව්යාපෘතිය",
+          "title": "මාතෘකාව",
+          "type": "වර්ගය",
+          "updatedAt": "යාවත්කාලීන කරන ලදි",
+          "version": "අනුවාදය",
+          "versionName": "අනුවාදය",
+          "work": "Work",
+          "workAlternative": "ඇස්තමේන්තුගත කාලය"
+        },
+        "property_groups": {
+          "costs": "Costs",
+          "details": "විස්තර",
+          "estimatesAndTime": "ඇස්තමේන්තු සහ වේලාව",
+          "other": "වෙනත්",
+          "people": "ජනතාව"
+        },
+        "query": {
+          "click_to_edit_query_name": "මෙම දර්ශනයේ මාතෘකාව සංස්කරණය කිරීමට ක්ලික් කරන්න.",
+          "column_names": "තීරු",
+          "confirm_edit_cancel": "ඔබට මෙම දර්ශනයේ නම සංස්කරණය කිරීම අවලංගු කිරීමට අවශ්ය බව ඔබට විශ්වාසද? මාතෘකාව පෙර වටිනාකමට නැවත සකසනු ඇත.",
+          "display_sums": "සංදර්ශකය",
+          "errors": {
+            "duplicate_query_title": "මෙම දර්ශනයේ නම දැනටමත් පවතී. කෙසේ හෝ වෙනස් කරන්න?",
+            "not_found": "එවැනි මතයක් නොමැත",
+            "unretrievable_query": "URL වෙතින් දැක්ම ලබා ගැනීමට නොහැකි විය"
+          },
+          "filters": "පෙරහන්",
+          "group": "කණ්ඩායම විසින්",
+          "group_by": "කණ්ඩායම් ප්රතිඵල විසින්",
+          "group_by_disabled_by_hierarchy": "ධූරාවලියේ මාදිලිය ක්රියාකාරී වීම හේතුවෙන් සමූහය අක්රීය වේ.",
+          "hide_column": "තීරුව සඟවන්න",
+          "hierarchy_disabled_by_group_by": "%{column}විසින් කාණ්ඩගත කර ඇති ප්රති results ල හේතුවෙන් ධූරාවලියේ මාදිලිය අක්රිය වේ.",
+          "insert_columns": "Insert columns",
+          "move_column_left": "තීරුව වමට ගෙනයන්න",
+          "move_column_right": "තීරුව දකුණට ගෙනයන්න",
+          "public_text": "මෙම මතය ප්රකාශයට පත් කරන්න, වෙනත් පරිශීලකයින්ට ඔබගේ දැක්ම වෙත ප්රවේශ වීමට ඉඩ සලසයි. 'මහජන අදහස් කළමනාකරණය කරන්න' අවසරය ඇති පරිශීලකයින්ට මහජන විමසුම වෙනස් කිරීමට හෝ ඉවත් කිරීමට හැකිය. එම දර්ශනයේ වැඩ පැකේජ ප්රති results ල දෘශ්යතාවයට මෙය බලපාන්නේ නැති අතර ඔවුන්ගේ අවසර මත පදනම්ව පරිශීලකයින්ට විවිධ ප්රති results ල දැකිය හැකිය.\n",
+          "rename_query_placeholder": "මෙම දර්ශනයේ නම",
+          "sort_ascending": "නැගී එන වර්ග",
+          "sort_descending": "බැස වර්ග",
+          "star_text": "මෙම දර්ශනය ප්රියතම ලෙස සලකුණු කර වම් පසින් සුරකින ලද අදහස් පැති තීරුවේ එකතු කරන්න.",
+          "text_no_results": "ගැලපෙන අදහස් කිසිවක් සොයාගත නොහැකි විය."
+        },
+        "reminders": {
+          "button_label": "Set reminder",
+          "presets": {
+            "custom": "At a particular date/time",
+            "month": "In a month",
+            "three_days": "In 3 days",
+            "tomorrow": "Tomorrow",
+            "week": "In a week"
+          },
+          "subtitle": "You will receive a notification for this work package at the chosen time.",
+          "title": {
+            "edit": "Edit reminder",
+            "new": "Set a reminder"
+          }
+        },
+        "scheduling": {
+          "is_parent": "The dates of this work package are automatically deduced from its children. Activate 'Manual scheduling' to set the dates.",
+          "is_switched_from_manual_to_automatic": "The dates of this work package may need to be recalculated after switching from manual to automatic scheduling due to relationships with other work packages."
+        },
+        "sharing": {
+          "show_all_users": "Show all users with whom the work package has been shared with",
+          "title": "Share work package"
+        },
+        "table": {
+          "configure_button": "වැඩ පැකේජ වගුව සකසන්න",
+          "summary": "වැඩ පැකේජයේ පේළි සහ වැඩ පැකේජ ගුණාංගවල තීරු සහිත වගුව.",
+          "text_inline_edit": "මෙම වගුවේ බොහෝ සෛල එම ගුණාංගයේ පේලි-සංස්කරණ ක්රියාකාරිත්වය සක්රිය කරන බොත්තම් වේ.",
+          "text_select_hint": "තෝරන්න පෙට්ටි 'ALT' සහ ඊතල යතුරු සමඟ විවෘත කළ යුතුය.",
+          "text_sort_hint": "වගු ශීර්ෂයන්හි ඇති සබැඳි සමඟ ඔබට වගු තීරු වර්ග කිරීම, කණ්ඩායම් කිරීම, නැවත සකස් කිරීම, ඉවත් කිරීම සහ එකතු කිරීම කළ හැකිය."
+        },
+        "table_configuration": {
+          "button": "මෙම වැඩ පැකේජ වගුව සකසන්න",
+          "choose_display_mode": "වැඩ පැකේජ ලෙස පෙන්වන්න",
+          "columns_help_text": "Use the input field above to add columns to your table view. You can drag and drop the columns to reorder them.",
+          "default": "පෙරනිමි",
+          "default_mode": "පැතලි ලැයිස්තුව",
+          "display_settings": "දර්ශන සැකසුම්",
+          "display_sums_hint": "වගු ප්රතිඵලවලට පහළින් පේළියක සියලු සාරාංශගත ගුණාංගවල සාරාංශ දර්ශනය කරන්න.",
+          "embedded_tab_disabled": "This configuration tab is not available for the embedded view you are editing.",
+          "hierarchy_hint": "සියළුම පෙරූ වගු ප්රතිඵල ඔවුන්ගේ මුතුන් මිත්තන් සමඟ වැඩි දියුණු කරනු ඇත. ධූරාවලිය පුළුල් කර බිඳ දැමිය හැකිය.",
+          "hierarchy_mode": "ධූරාවලිය",
+          "highlighting": "උද්දීපනය",
+          "highlighting_mode": {
+            "description": "වර්ණය සමඟ ඉස්මතු කරන්න",
+            "entire_row_by": "මුළු පේළිය",
+            "inline": "උද්දීපිත ගුණාංගය (ය)",
+            "inline_all": "සියලු ගුණාංග",
+            "none": "කිසිදු අවධාරණය",
+            "priority": "ප්රමුඛතාව",
+            "status": "තත්වය",
+            "type": "වර්ගය"
+          },
+          "modal_title": "වැඩ පැකේජය වගු වින්යාසය",
+          "relation_filters": {
+            "filter_work_packages_by_relation_type": "සම්බන්ධතා වර්ගය අනුව වැඩ පැකේජ පෙරහන් කරන්න"
+          },
+          "show_timeline_hint": "වගුවේ දකුණු පැත්තේ අන්තර් ක්රියාකාරී ගැන්ට් ප්රස්ථාරයක් පෙන්වන්න. වගුව සහ ගැන්ට් ප්රස්ථාරය අතර බෙදුම්කරු ඇදගෙන යාමෙන් ඔබට එහි පළල වෙනස් කළ හැකිය.",
+          "sorting_mode": {
+            "automatic": "ස්වයංක්රීය",
+            "description": "ඔබගේ වැඩ පැකේජ වර්ග කිරීම සඳහා මාදිලිය තෝරා ගන්න:",
+            "manually": "අතින්",
+            "warning": "ස්වයංක්රීය තෝරා බේරා ගැනීමේ මාදිලිය සක්රිය විට ඔබ ඔබේ පෙර තෝරා බේරා ගැනීමේ අහිමි වනු ඇත."
+          }
+        },
+        "tabs": {
+          "activity": "ක්‍රියාකාරකම",
+          "files": "ගොනු",
+          "github": "GitHub",
+          "gitlab": "GitLab",
+          "meetings": "Meetings",
+          "overview": "දළ විශ්ලේෂණය",
+          "relations": "සබඳතා",
+          "watchers": "මුරකරුවන්"
+        },
+        "time_relative": {
+          "days": "දින",
+          "months": "මාස",
+          "weeks": "සති"
+        }
+      },
+      "zen_mode": {
+        "button_activate": "සක්රිය මාදිලිය",
+        "button_deactivate": "සෙන් මාදිලිය අක්රිය"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": ",",
+          "format": "%u%n",
+          "negative_format": "-%u%n",
+          "precision": 2,
+          "separator": ".",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "$"
+        }
+      },
+      "format": {
+        "delimiter": null,
+        "precision": 3,
+        "round_mode": "default",
+        "separator": ".",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "Billion",
+            "million": "Million",
+            "quadrillion": "Quadrillion",
+            "thousand": "Thousand",
+            "trillion": "Trillion",
+            "unit": null
+          }
+        },
+        "format": {
+          "delimiter": null,
+          "precision": 1,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "one": "බයිට",
+              "other": "බයිට්"
+            },
+            "eb": "EB",
+            "gb": "ගි.බ.",
+            "kb": "කි.බ.",
+            "mb": "මෙ.බ.",
+            "pb": "PB",
+            "tb": "ටෙ.බ.",
+            "zb": "ZB"
+          }
+        }
+      },
+      "nth": {},
+      "percentage": {
+        "format": {
+          "delimiter": null,
+          "format": "%n%"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": null
+        }
+      }
+    },
+    "time": {
+      "am": "පෙ.ව.",
+      "formats": {
+        "default": "%Y %I/%m/%d:%M %p",
+        "long": "%Y %B %d %H:%M",
+        "short": "%d %b %H:%M",
+        "time": "%I:%M %p"
+      },
+      "pm": "ප.ව."
+    }
+  }
+}

@@ -1,0 +1,166 @@
+<aside class="contacto-side">
+  <div class="contacto-card contacto-card-flat" data-contacto-panel="create">
+    <div class="contacto-create-toolbar">
+      <div class="contacto-drawer-title" data-contacto-create-title>Nuevo contacto</div>
+    </div>
+    <%= form_with url: whatsapp_plugin_project_contactos_create_path(@project), method: :post, local: true, scope: :contact do |f| %>
+      <% base_fields = [
+        { key: "base:first_name", label: "Nombres", type: "text", field: :first_name },
+        { key: "base:last_name", label: "Apellidos", type: "text", field: :last_name },
+        { key: "base:email", label: "Email", type: "text", field: :email },
+        { key: "base:phone", label: "Telefono", type: "text", field: :phone },
+        { key: "base:external_id", label: "External ID", type: "text", field: :external_id },
+        { key: "base:company", label: "Empresa", type: "text", field: :company },
+        { key: "base:status", label: "Estado", type: "text", field: :status },
+        { key: "base:source", label: "Origen", type: "text", field: :source },
+        { key: "base:tags_text", label: "Tags", type: "text", field: :tags_text, placeholder: "vip, lead" },
+        { key: "base:points", label: "Puntos", type: "number", field: :points },
+        { key: "base:notes", label: "Notas", type: "textarea", field: :notes }
+      ] %>
+      <% custom_fields = (@contact_fields || []).map { |field| { key: "custom:#{field.id}", kind: :custom, field: field } } %>
+      <% all_fields = base_fields + custom_fields %>
+  <% base_order = [
+    "base:first_name",
+    "base:last_name",
+    "base:email",
+    "base:phone",
+    "base:company",
+    "base:country",
+    "base:state",
+    "base:city",
+    "base:address",
+    "base:postal_code",
+    "base:birthday",
+    "base:job_title",
+    "base:tags_text",
+    "base:points"
+  ] %>
+  <% custom_order = @contact_fields.map { |field| "custom:#{field.id}" } %>
+  <% order = base_order + custom_order %>
+      <% if order.any? %>
+        <% ordered = [] %>
+        <% order.each do |key| %>
+          <% found = all_fields.find { |item| item[:key] == key } %>
+          <% ordered << found if found %>
+        <% end %>
+        <% all_fields.each do |item| %>
+          <% ordered << item unless ordered.include?(item) %>
+        <% end %>
+        <% all_fields = ordered %>
+      <% end %>
+      <div class="contacto-card-title">Campos</div>
+      <div class="contacto-field-groups" data-contacto-field-groups>
+        <% contact = WhatsappContactProfile.new %>
+        <% all_fields.each_slice(3) do |group| %>
+          <div class="contacto-field-group" data-contacto-field-group data-field-ids="<%= group.map { |item| item[:key] }.join(",") %>" draggable="true">
+            <div class="contacto-grid">
+                <% group.each do |item| %>
+                  <div class="contacto-form-field-item" data-contacto-field-item data-field-key="<%= item[:key] %>" draggable="true">
+                    <% if item[:kind] == :custom %>
+                      <label><%= item[:field].name %></label>
+                      <%= render "contactos/field_input", field: item[:field], contact: contact %>
+                    <% else %>
+                      <label><%= item[:label] %></label>
+                    <% field_id = "contacto-#{item[:field]}-side" %>
+                    <% if item[:field] == :tags_text %>
+                      <div class="contacto-tags-input"
+                           data-contacto-tags-input
+                           data-tags="[]">
+                        <button type="button"
+                                class="contacto-tags-toggle"
+                                data-contacto-tags-toggle>
+                          Seleccionar etiquetas
+                        </button>
+                        <%= f.hidden_field :tags_text, data: { contacto_tags_hidden: true } %>
+                        <div class="contacto-tags-chips" data-contacto-tags-chips></div>
+                        <div class="contacto-tags-dropdown is-hidden" data-contacto-tags-dropdown></div>
+                      </div>
+                    <% elsif item[:field] == :phone %>
+                      <div class="contacto-phone-input">
+                        <div class="wa-new-chat-country-wrap">
+                          <input class="wa-new-chat-country-input"
+                                 type="text"
+                                 aria-label="Pais"
+                                 data-contacto-country-input />
+                          <div class="wa-new-chat-country-list is-hidden" data-contacto-country-list></div>
+                        </div>
+                        <%= f.text_field item[:field], id: field_id, placeholder: item[:placeholder], class: "contacto-phone-number", data: { contacto_phone_input: true } %>
+                      </div>
+                    <% elsif item[:type] == "textarea" %>
+                      <%= f.text_area item[:field], id: field_id %>
+                    <% elsif item[:type] == "number" %>
+                      <%= f.number_field item[:field], id: field_id %>
+                    <% else %>
+                      <%= f.text_field item[:field], id: field_id, placeholder: item[:placeholder] %>
+                    <% end %>
+                    <% end %>
+                  </div>
+                <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <button class="contacto-btn contacto-btn-full" type="submit">Guardar</button>
+    <% end %>
+  </div>
+
+  <div class="contacto-card">
+    <div class="contacto-card-title">Importar contactos</div>
+    <%= form_with url: whatsapp_plugin_project_contactos_import_path(@project), method: :post, local: true, multipart: true do |f| %>
+      <div class="contacto-grid">
+        <div>
+          <label for="contacto-file">Archivo CSV o Excel</label>
+          <%= f.file_field :file, id: "contacto-file" %>
+        </div>
+      </div>
+      <button class="contacto-btn contacto-btn-full" type="submit">Importar</button>
+    <% end %>
+  </div>
+
+  <div class="contacto-card">
+    <div class="contacto-card-title">Campos personalizados</div>
+    <%= form_with url: whatsapp_plugin_project_contactos_fields_path(@project), scope: :field, method: :post, local: true, data: { contacto_field_form: true } do |f| %>
+      <div class="contacto-grid">
+        <div>
+          <label for="contacto-field-name-side">Nombre</label>
+          <%= f.text_field :name, id: "contacto-field-name-side" %>
+        </div>
+        <div>
+          <label for="contacto-field-type-side">Tipo</label>
+          <%= f.select :field_type, [["Texto", "text"], ["Numero", "number"], ["Fecha", "date"], ["Lista", "select"]], {}, id: "contacto-field-type-side", data: { contacto_field_type: true } %>
+        </div>
+        <div class="contacto-field-options" data-contacto-field-options>
+          <label>Opciones de la lista</label>
+          <div class="contacto-field-options-list" data-contacto-field-options-list></div>
+          <button type="button" class="contacto-btn contacto-btn-ghost contacto-field-option-add" data-contacto-field-option-add>
+            Agregar opcion
+          </button>
+          <%= f.hidden_field :options_text, data: { contacto_field_options_input: true } %>
+        </div>
+        <div>
+          <label for="contacto-field-required-side">Requerido</label>
+          <%= f.select :required, [["No", false], ["Si", true]], {}, id: "contacto-field-required-side" %>
+        </div>
+      </div>
+      <button class="contacto-btn contacto-btn-full" type="submit">Crear campo</button>
+    <% end %>
+
+    <div class="contacto-field-list">
+      <% @contact_fields.each do |field| %>
+        <div class="contacto-field-item">
+          <div>
+            <strong><%= field.name %></strong>
+            <div class="contacto-field-meta"><%= field.field_type %></div>
+          </div>
+          <div class="contacto-field-actions">
+            <%= button_to "Desactivar",
+                          whatsapp_plugin_project_contactos_field_path(@project, field.id),
+                          method: :delete,
+                          form: { data: { contacto_confirm: "true" } },
+                          class: "contacto-link contacto-link-danger" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</aside>

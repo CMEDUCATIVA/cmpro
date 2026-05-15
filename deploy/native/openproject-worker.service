@@ -1,0 +1,20 @@
+[Unit]
+Description=OpenProject Custom Worker
+After=network.target postgresql.service openproject-custom-web.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=openproject
+Group=openproject
+WorkingDirectory=/opt/openproject-custom
+EnvironmentFile=/etc/openproject-custom/openproject.env
+Environment=PATH=/opt/openproject-custom/vendor/ruby-3.4.4/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/opt/openproject-custom/vendor/ruby-3.4.4/bin/bundle exec good_job start
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target
+

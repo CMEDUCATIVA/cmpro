@@ -1,0 +1,206 @@
+<section class="op-email-email--section" id="email-templates">
+  <h3>Plantillas</h3>
+
+  <div class="op-email-email--split">
+  <div class="op-email-email--panel op-email-email--template-panel">
+    <div class="op-email-email--panel-title">
+      <%= @template&.persisted? ? "Editar plantilla" : "Nueva plantilla" %>
+    </div>
+    <% if @template&.errors&.any? %>
+      <div class="op-email-email--flash is-alert">
+        <%= @template.errors.full_messages.join(", ") %>
+      </div>
+    <% end %>
+    <%= form_with model: @template,
+                  url: @template&.persisted? ? whatsapp_plugin_project_email_template_update_path(@project, @template.id) : whatsapp_plugin_project_email_templates_create_path(@project),
+                  method: @template&.persisted? ? :patch : :post,
+                  class: "op-email-email--form",
+                  html: { multipart: true } do |form| %>
+      <div class="op-email-email--grid">
+        <div class="op-email-email--field">
+          <%= form.label :smtp_source, "Usar SMTP" %>
+          <%= form.select :smtp_source,
+                          options_for_select(smtp_source_options, @template&.smtp_source.presence || default_smtp_source_for_forms),
+                          {},
+                          class: "op-email-email--input" %>
+        </div>
+        <div class="op-email-email--field">
+          <%= form.label :sender_name, "Nombre del remitente" %>
+          <%= form.select :sender_name,
+                          options_for_select(@sender_names || [], @template&.sender_name),
+                          { include_blank: "Por defecto" },
+                          class: "op-email-email--input" %>
+        </div>
+      </div>
+      <div class="op-email-email--field">
+        <%= form.label :name, "Nombre" %>
+        <%= form.text_field :name, class: "op-email-email--input" %>
+      </div>
+      <div class="op-email-email--field">
+        <%= form.label :subject, "Asunto" %>
+        <%= form.text_field :subject, class: "op-email-email--input" %>
+      </div>
+      <div class="op-email-email--field">
+        <%= form.label :editor_mode, "Tipo de editor" %>
+        <%= form.select :editor_mode,
+                        [["Editor de correo", "editor"], ["Editor Html", "html"]],
+                        {},
+                        class: "op-email-email--input",
+                        data: { email_template_mode: true } %>
+      </div>
+      <div class="op-email-email--field op-email-email--template-tokens">
+        <div class="op-email-email--template-tokens-label">Variables disponibles</div>
+        <div class="op-email-email--template-tokens-row">
+          <% tokens = [
+               { label: "Contacto: Nombre", token: "contact.name" },
+               { label: "Contacto: Email", token: "contact.email" },
+               { label: "Contacto: Telefono", token: "contact.phone" },
+               { label: "Fecha de hoy", token: "date.today" },
+               { label: "Hora actual", token: "time.now" }
+             ] %>
+          <% custom_tokens =
+               WhatsappContactField
+                 .where(project: @project, active: true, add_to_variables: true)
+                 .order(Arel.sql("position IS NULL, position ASC, name ASC"))
+                 .map do |field|
+                   key = field.name.to_s.downcase.gsub(/[^a-z0-9]+/, "_").gsub(/^_|_$/, "")
+                   { label: "Contacto: #{field.name}", token: "contact.custom.#{key}" }
+                 end %>
+          <% tokens = tokens + custom_tokens %>
+          <% tokens.each do |item| %>
+            <button type="button"
+                    class="op-email-email--template-token-chip"
+                    data-email-template-token="<%= "{{#{item[:token]}}}" %>"
+                    draggable="true">
+              <%= item[:label] %>
+            </button>
+          <% end %>
+        </div>
+        <div class="op-email-email--template-tokens-hint">Haz click o arrastra al contenido.</div>
+      </div>
+      <div class="op-email-email--field">
+        <%= form.label :body, "Contenido" %>
+        <% editor_id = @template&.persisted? ? "email_template_body_#{@template.id}" : "email_template_body_new" %>
+        <div class="op-email-email--template-editor" data-email-template-editor>
+          <div class="op-email-email--template-ckeditor" data-email-template-ckeditor>
+            <%= form.text_area :body,
+                               id: editor_id,
+                               class: "op-email-email--textarea",
+                               data: { email_template_body: true } %>
+            <%= wikitoolbar_for editor_id, preview_context: { project: @project } %>
+            <div class="op-email-email--field">
+              <%= form.file_field :attachments,
+                                  multiple: true,
+                                  class: "op-email-email--input op-email-email--file-input",
+                                  id: "email_template_attachments",
+                                  data: { email_template_attachments: true } %>
+              <label for="email_template_attachments" class="op-email-email--file-icon" title="Adjuntar archivos">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+                  <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
+                </svg>
+              </label>
+              <div class="op-email-email--attachments-list" data-email-template-attachments-list></div>
+              <% if @template&.persisted? && @template.email_template_attachments.any? %>
+                <div class="op-email-email--attachments-list">
+                  <% @template.email_template_attachments.each do |attachment| %>
+                    <div class="op-email-email--attachments-item">
+                      <span><%= attachment.file_name %></span>
+                      <%= link_to "Eliminar",
+                                  whatsapp_plugin_project_email_template_attachment_destroy_path(@project, @template.id, attachment.id),
+                                  method: :delete,
+                                  data: { confirm: "Eliminar adjunto?" } %>
+                    </div>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="op-email-email--template-html" data-email-template-html>
+            <div class="op-email-email--code-editor" data-email-template-code-editor>
+              <div class="op-email-email--line-numbers" data-email-template-line-numbers></div>
+              <%= form.text_area :body_html,
+                                 class: "op-email-email--textarea op-email-email--code-textarea",
+                                 rows: 10,
+                                 placeholder: "<html>...</html>",
+                                 data: { email_template_html_input: true, email_template_body_html: true } %>
+            </div>
+            <div class="op-email-email--field">
+              <%= form.file_field :attachments,
+                                  multiple: true,
+                                  class: "op-email-email--input op-email-email--file-input",
+                                  id: "email_template_attachments_html",
+                                  data: { email_template_attachments: true } %>
+              <label for="email_template_attachments_html" class="op-email-email--file-icon" title="Adjuntar archivos">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+                  <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
+                </svg>
+              </label>
+              <div class="op-email-email--attachments-list" data-email-template-attachments-list></div>
+              <% if @template&.persisted? && @template.email_template_attachments.any? %>
+                <div class="op-email-email--attachments-list">
+                  <% @template.email_template_attachments.each do |attachment| %>
+                    <div class="op-email-email--attachments-item">
+                      <span><%= attachment.file_name %></span>
+                      <%= link_to "Eliminar",
+                                  whatsapp_plugin_project_email_template_attachment_destroy_path(@project, @template.id, attachment.id),
+                                  method: :delete,
+                                  data: { confirm: "Eliminar adjunto?" } %>
+                    </div>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+            <label class="op-email-email--checkbox op-email-email--html-preview-toggle">
+              <input type="checkbox" data-email-template-preview-toggle>
+              Mostrar preview flotante
+            </label>
+            <label class="op-email-email--checkbox op-email-email--html-preview-toggle">
+              <%= form.check_box :open_tracking_enabled %>
+              Activar Open Tracking
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="op-email-email--actions">
+        <%= form.submit @template&.persisted? ? "Guardar cambios" : "Crear plantilla", class: "op-email-email--button" %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="op-email-email--panel">
+    <div class="op-email-email--panel-title">Plantillas guardadas</div>
+    <% if @templates.empty? %>
+      <div class="op-email-email--empty">Sin plantillas.</div>
+    <% else %>
+      <table class="op-email-email--table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Asunto</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @templates.each do |template| %>
+            <tr>
+              <td><%= truncate(template.name.to_s, length: 15) %></td>
+              <td><%= truncate(template.subject.to_s, length: 15) %></td>
+              <td class="op-email-email--table-actions">
+                <%= link_to "Editar", whatsapp_plugin_project_email_template_edit_path(@project, template.id) %>
+                <%= link_to "Desactivar",
+                            whatsapp_plugin_project_email_template_destroy_path(@project, template.id),
+                            method: :delete,
+                            data: { confirm: "Desactivar plantilla?" } %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+    <div class="op-email-email--html-preview-float is-hidden" data-email-template-html-preview>
+      <div class="op-email-email--html-preview-title">Preview HTML</div>
+      <div class="op-email-email--html-preview-body" data-email-template-html-preview-body></div>
+    </div>
+  </div>
+  </div>
+</section>

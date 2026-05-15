@@ -1,0 +1,1142 @@
+.op-email-email--flow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: calc(100vh - 240px);
+}
+
+.op-email-email--flow-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.op-email-email--flow-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.op-email-email--flow-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr) 260px;
+  gap: 12px;
+  min-height: 520px;
+  align-items: start;
+}
+
+.op-email-email--flow-canvas {
+  cursor: grab;
+}
+
+.op-email-email--flow-canvas.is-panning {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.op-email-email--flow-sidebar,
+.op-email-email--flow-properties {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.op-email-email--flow-node-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.op-email-email--flow-group {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #ffffff;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.op-email-email--flow-group-toggle {
+  width: 100%;
+  border: none;
+  background: #ffffff;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: none;
+  outline: none;
+}
+
+.op-email-email--flow-group-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.op-email-email--flow-group-icon {
+  color: #6b7280;
+  display: inline-flex;
+  align-items: center;
+}
+
+.op-email-email--flow-group-icon svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.op-email-email--flow-group-chevron {
+  transition: transform 0.2s ease;
+  color: #94a3b8;
+}
+
+.op-email-email--flow-group.is-open .op-email-email--flow-group-chevron {
+  transform: rotate(90deg);
+}
+
+.op-email-email--flow-group-body {
+  padding: 0 10px 10px;
+  display: none;
+}
+
+.op-email-email--flow-group.is-open .op-email-email--flow-group-body {
+  display: grid;
+}
+.op-email-email--flow-dropdown {
+  position: relative;
+  min-width: 240px;
+  margin-bottom: 10px;
+}
+
+.op-email-email--flow-dropdown-input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+.op-email-email--flow-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  z-index: 50;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.op-email-email--flow-dropdown-menu.is-hidden {
+  display: none;
+}
+
+.op-email-email--flow-dropdown-item {
+  padding: 8px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.op-email-email--flow-dropdown-item.is-active {
+  background: #eff6ff;
+  font-weight: 600;
+}
+
+.op-email-email--flow-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 80;
+}
+
+.op-email-email--flow-modal.is-hidden {
+  display: none;
+}
+
+.op-email-email--flow-modal-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  width: min(360px, 90vw);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
+.op-email-email--flow-modal-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.op-email-email--flow-modal-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.op-email-email--flow-modal-input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+.op-email-email--flow-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.op-email-email--flow-inline {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.op-email-email--flow-node {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #f8fafc;
+  cursor: pointer;
+  text-align: left;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.op-email-email--flow-history {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  padding: 12px;
+}
+
+.op-email-email--flow-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.op-email-email--flow-history-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.op-email-email--flow-history-list {
+  display: grid;
+  gap: 8px;
+}
+
+.op-email-email--flow-history-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.op-email-email--flow-history-item-header {
+  width: 100%;
+  border: none;
+  background: #f8fafc;
+  cursor: pointer;
+  text-align: left;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.op-email-email--flow-history-flow-name {
+  font-weight: 600;
+  color: #111827;
+}
+
+.op-email-email--flow-history-item-meta {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.op-email-email--flow-history-item-body {
+  display: none;
+  border-top: 1px solid #e5e7eb;
+  padding: 8px 10px;
+  background: #fff;
+}
+
+.op-email-email--flow-history-item.is-open .op-email-email--flow-history-item-body {
+  display: block;
+}
+
+.op-email-email--flow-history-counters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.op-email-email--flow-history-detail-list {
+  display: grid;
+  gap: 6px;
+}
+
+.op-email-email--flow-history-detail-item {
+  border: 1px solid #eef2f7;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+.op-email-email--flow-history-detail-top {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.op-email-email--flow-history-detail-body {
+  font-size: 12px;
+  color: #111827;
+  margin-top: 2px;
+}
+
+.op-email-email--flow-history-empty {
+  color: #6b7280;
+  font-size: 13px;
+  padding: 8px 0;
+}
+
+.op-email-email--flow-node svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.op-email-email--flow-node:hover {
+  background: #eef2f7;
+}
+
+.op-email-email--flow-canvas {
+  position: relative;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f8fafc;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+.op-email-email--flow-canvas-title {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.op-email-email--flow-canvas-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.op-email-email--flow-canvas-viewport {
+  position: relative;
+  flex: 1;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.op-email-email--flow-inner-clip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.op-email-email--flow-zoom-label {
+  font-size: 12px;
+  color: #6b7280;
+  min-width: 48px;
+  text-align: center;
+}
+
+.op-email-email--flow-canvas-action {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #111827;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.op-email-email--flow-canvas-action:hover {
+  border-color: #cbd5f5;
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
+  transform: translateY(-1px);
+}
+
+.op-email-email--flow-canvas-action.is-danger {
+  color: #dc2626;
+  border-color: #fecaca;
+}
+
+.op-email-email--flow-canvas-action.is-danger:hover {
+  border-color: #fca5a5;
+}
+
+.op-email-email--flow-inner {
+  position: relative;
+  z-index: 10;
+  min-width: 4200px;
+  min-height: 2600px;
+  transform-origin: 0 0;
+}
+
+.op-email-email--flow-edges {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.op-email-email--flow-edges path {
+  pointer-events: none;
+}
+
+.op-email-email--flow-edge-buttons {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.op-email-email--flow-edge-button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 1.5px solid #dc2626;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.op-email-email--flow-node-box {
+  position: absolute;
+  z-index: 10;
+  min-width: 360px;
+  max-width: 495px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+  padding: 10px 10px 30px;
+  cursor: move;
+  user-select: none;
+}
+
+.op-email-email--flow-node-box.is-selected {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.3);
+}
+
+.op-email-email--flow-node-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.op-email-email--flow-node-title-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.op-email-email--flow-node-icon {
+  display: inline-flex;
+  color: #4b5563;
+}
+
+.op-email-email--flow-node-icon.is-green svg,
+.op-email-email--flow-node-icon.is-green {
+  color: #16a34a;
+}
+
+.op-email-email--flow-whatsapp-preview {
+  margin-top: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 10px;
+  background: #f9fafb;
+}
+
+.op-email-email--flow-whatsapp-preview-title {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.op-email-email--flow-whatsapp-preview-bubble {
+  background: #dcfce7;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.op-email-email--flow-whatsapp-preview-bubble img,
+.op-email-email--flow-whatsapp-preview-bubble video {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.op-email-email--flow-node-meta {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.op-email-email--flow-node-chips {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.op-email-email--flow-node-chips-label {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.op-email-email--flow-node-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.op-email-email--flow-node-chip {
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  color: #374151;
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.op-email-email--flow-node-chip.is-active {
+  background: #dcfce7;
+  border-color: #22c55e;
+  color: #15803d;
+}
+
+.op-email-email--flow-node-menu-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+}
+
+.op-email-email--flow-node-menu {
+  position: absolute;
+  top: 26px;
+  right: 8px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  padding: 6px;
+  z-index: 20;
+  min-width: 160px;
+}
+
+.op-email-email--flow-node-menu.is-hidden {
+  display: none;
+}
+
+.op-email-email--flow-node-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.op-email-email--flow-node-menu-item:hover {
+  background: #f3f4f6;
+}
+
+.op-email-email--flow-node-menu-item.is-danger {
+  color: #dc2626;
+}
+
+.op-email-email--flow-connector {
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.op-email-email--flow-connector.is-multi {
+  gap: 12px;
+}
+
+.op-email-email--flow-connector-item {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+}
+
+.op-email-email--flow-connector-label {
+  font-size: 10px;
+  color: #6b7280;
+}
+
+.op-email-email--flow-connector-btn {
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  border-radius: 999px;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #111827;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.op-email-email--flow-connector-btn:hover {
+  transform: translateY(-1px);
+  border-color: #94a3b8;
+}
+
+.op-email-email--flow-connector-btn.is-active {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+.op-email-email--flow-properties-body {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.op-email-email--flow-webhook {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.op-email-email--flow-webhook-url {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  align-items: center;
+}
+
+.op-email-email--flow-webhook-mapping {
+  display: grid;
+  gap: 6px;
+}
+
+.op-email-email--flow-webhook-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.op-email-email--flow-webhook-hint {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.op-email-email--flow-webhook-history-title {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.op-email-email--flow-webhook-history-list {
+  display: grid;
+  gap: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.op-email-email--flow-webhook-history-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 6px 8px;
+  background: #ffffff;
+  font-size: 11px;
+  display: grid;
+  gap: 4px;
+}
+
+.op-email-email--flow-webhook-history-item span {
+  color: #6b7280;
+}
+
+.op-email-email--flow-webhook-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-size: 11px;
+}
+
+.op-email-email--flow-webhook-history-left {
+  color: #111827;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.op-email-email--flow-webhook-history-when {
+  color: #111827;
+}
+
+.op-email-email--flow-webhook-history-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #6b7280;
+}
+
+.op-email-email--flow-webhook-history-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.op-email-email--flow-webhook-history-status.is-ok {
+  color: #16a34a;
+}
+
+.op-email-email--flow-webhook-history-status.is-error {
+  color: #dc2626;
+}
+
+.op-email-email--flow-webhook-history-chevron {
+  color: #6b7280;
+  transition: transform 0.2s ease;
+}
+
+.op-email-email--flow-webhook-history-body {
+  display: none;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.op-email-email--flow-history-highlight {
+  background: #fff3b0;
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-weight: 600;
+}
+
+.op-email-email--flow-webhook-history-item.is-open .op-email-email--flow-webhook-history-body {
+  display: block;
+}
+
+.op-email-email--flow-webhook-history-item.is-open .op-email-email--flow-webhook-history-chevron {
+  transform: rotate(90deg);
+}
+
+.op-email-email--flow-webhook-history-body pre {
+  margin: 6px 0 0;
+  padding: 6px;
+  background: #f9fafb;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 11px;
+}
+
+.op-email-email--flow-history-title {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.op-email-email--flow-history-toggle {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  color: #111827;
+}
+
+.op-email-email--flow-payload-body.is-hidden,
+.op-email-email--flow-history-title.is-hidden {
+  display: none;
+}
+
+.op-email-email--flow-history-check {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.op-email-email--flow-history-check svg {
+  display: block;
+}
+
+.op-email-email--flow-webhook-history-error {
+  color: #dc2626;
+  margin-top: 4px;
+}
+
+.op-email-email--flow-history-clear {
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.op-email-email--flow-rule {
+  display: grid;
+  gap: 6px;
+  border: 1px dashed #e5e7eb;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.op-email-email--flow-map-row {
+  display: grid;
+  gap: 6px;
+  border: 1px dashed #e5e7eb;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.op-email-email--flow-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  cursor: pointer;
+  color: #111827;
+}
+
+.op-email-email--flow-map-chevron {
+  color: #94a3b8;
+  transition: transform 0.2s ease;
+}
+
+.op-email-email--flow-map-body {
+  display: none;
+  gap: 6px;
+}
+
+.op-email-email--flow-map-row.is-open .op-email-email--flow-map-body {
+  display: grid;
+}
+
+.op-email-email--flow-map-row.is-open .op-email-email--flow-map-chevron {
+  transform: rotate(90deg);
+}
+
+.op-email-email--flow-rule-remove {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.op-email-email--flow-properties-body label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.op-email-email--flow-help {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.op-email-email--flow-help-success {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.op-email-email--flow-help-icon svg {
+  display: block;
+}
+
+.op-email-email--flow-input,
+.op-email-email--flow-textarea,
+.op-email-email--flow-select {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+.op-email-email--flow-textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.op-email-email--flow-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #111827;
+}
+
+.op-email-email--flow-checkbox input {
+  width: 14px;
+  height: 14px;
+}
+
+.op-email-email--flow-contact-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.op-email-email--flow-contact-list {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 6px;
+  max-height: 180px;
+  overflow: auto;
+  background: #ffffff;
+}
+
+.op-email-email--flow-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #111827;
+  padding: 4px 2px;
+  cursor: pointer;
+}
+
+.op-email-email--flow-contact-item input {
+  width: 14px;
+  height: 14px;
+}
+
+.op-email-email--flow-contact-empty {
+  font-size: 12px;
+  color: #6b7280;
+  padding: 6px;
+}
+
+.op-email-email--flow-contact-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #111827;
+  background: #f9fafb;
+  margin-bottom: 6px;
+}
+
+.op-email-email--flow-contact-remove {
+  border: 1px solid #fca5a5;
+  background: #fff5f5;
+  color: #b91c1c;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.op-email-email--flow-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.op-email-email--flow-toggle-label {
+  font-size: 12px;
+  color: #111827;
+}
+
+.op-email-email--flow-toggle {
+  border: 1px solid #a3a3a3;
+  background: #bdbdbd;
+  border-radius: 999px;
+  height: 22px;
+  width: 45px;
+  padding: 0 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  position: relative;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.op-email-email--flow-toggle.is-on {
+  background: #1877f2;
+  border-color: #1558b0;
+}
+
+.op-email-email--flow-toggle-text {
+  flex: 1;
+  text-align: left;
+  padding-left: 4px;
+}
+
+.op-email-email--flow-toggle-text-off {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 4px;
+  color: #f3f4f6;
+}
+
+.op-email-email--flow-toggle.is-on .op-email-email--flow-toggle-text-off {
+  visibility: hidden;
+}
+
+.op-email-email--flow-toggle:not(.is-on) .op-email-email--flow-toggle-text-on {
+  visibility: hidden;
+}
+
+.op-email-email--flow-toggle-knob {
+  position: absolute;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.op-email-email--flow-toggle.is-on .op-email-email--flow-toggle-knob {
+  transform: translateX(19px);
+}
+
+.op-email-email--flow-properties-empty {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+.op-email-email--flow-node-progress {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #1f2937;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin: 4px 0 0 0;
+}
+
+.op-email-email--flow-node-progress-clock {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.op-email-email--flow-node-progress.is-running .op-email-email--flow-node-progress-clock {
+  animation: op-flow-spin 1.2s linear infinite;
+}
+
+@keyframes op-flow-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 1100px) {
+  .op-email-email--flow-layout {
+    grid-template-columns: 1fr;
+  }
+}

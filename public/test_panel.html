@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Panel IFC Properties</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .test-controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .test-btn:hover {
+            background: #2563eb;
+        }
+        .mock-bim-viewer {
+            background: white;
+            height: 400px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 18px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/ifc_properties/floating_panel.css">
+</head>
+<body>
+    <div class="test-controls">
+        <h2>🧪 Prueba del Panel IFC Properties</h2>
+        <p>Usa estos botones para probar la funcionalidad del panel:</p>
+        
+        <button class="test-btn" onclick="showPanel()">🔍 Mostrar Panel</button>
+        <button class="test-btn" onclick="hidePanel()">❌ Ocultar Panel</button>
+        <button class="test-btn" onclick="showLoading()">⏳ Estado Carga</button>
+        <button class="test-btn" onclick="showEmpty()">📭 Estado Vacío</button>
+        <button class="test-btn" onclick="showError()">⚠️ Estado Error</button>
+        <button class="test-btn" onclick="simulateClick()">🎯 Simular Clic BIM</button>
+    </div>
+
+    <div class="mock-bim-viewer">
+        🏗️ Simulador del Visor BIM<br>
+        <small>El panel flotante aparecerá sobre esta área</small>
+    </div>
+
+    <script src="/assets/ifc_properties/floating_panel.js"></script>
+    <script>
+        // Funciones de prueba
+        function showPanel() {
+            if (window.ifcPropertiesPanel) {
+                window.ifcPropertiesPanel.show();
+                console.log('✅ Panel mostrado');
+            } else {
+                console.error('❌ Panel no inicializado');
+            }
+        }
+
+        function hidePanel() {
+            if (window.ifcPropertiesPanel) {
+                window.ifcPropertiesPanel.hide();
+                console.log('✅ Panel ocultado');
+            }
+        }
+
+        function showLoading() {
+            if (window.ifcPropertiesPanel) {
+                window.ifcPropertiesPanel.show();
+                window.ifcPropertiesPanel.showLoadingState();
+                console.log('✅ Estado de carga mostrado');
+            }
+        }
+
+        function showEmpty() {
+            if (window.ifcPropertiesPanel) {
+                window.ifcPropertiesPanel.show();
+                window.ifcPropertiesPanel.showEmptyState();
+                console.log('✅ Estado vacío mostrado');
+            }
+        }
+
+        function showError() {
+            if (window.ifcPropertiesPanel) {
+                window.ifcPropertiesPanel.show();
+                window.ifcPropertiesPanel.showErrorState('Error de prueba del sistema');
+                console.log('✅ Estado de error mostrado');
+            }
+        }
+
+        function simulateClick() {
+            if (window.ifcPropertiesPanel) {
+                window.ifcPropertiesPanel.loadElementData('test-guid-12345');
+                console.log('✅ Clic simulado en elemento BIM');
+            }
+        }
+
+        // Verificar inicialización
+        setTimeout(() => {
+            if (window.ifcPropertiesPanel) {
+                console.log('🎉 Panel IFC Properties inicializado correctamente');
+                console.log('📋 Métodos disponibles:', Object.getOwnPropertyNames(Object.getPrototypeOf(window.ifcPropertiesPanel)));
+            } else {
+                console.error('❌ Error: Panel no se inicializó');
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

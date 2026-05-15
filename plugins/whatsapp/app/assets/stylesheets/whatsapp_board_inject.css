@@ -1,0 +1,79 @@
+.wa-board-chat-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 32vw;
+  min-width: 340px;
+  max-width: 560px;
+  height: calc(100vh - 16px);
+  background: #ffffff;
+  border-left: 1px solid #e5e7eb;
+  box-shadow: -12px 0 24px rgba(0, 0, 0, 0.12);
+  z-index: 20000;
+  display: flex;
+  flex-direction: column;
+}
+
+.wa-board-chat-panel.is-hidden {
+  display: none;
+}
+
+.wa-board-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.wa-board-chat-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.wa-board-chat-close {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.wa-board-chat-iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+}
+
+.wa-menu-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wa-menu-item .wa-menu-icon {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  margin-right: 8px;
+}
+
+.wa-menu-item .wa-menu-label {
+  display: inline-block;
+}
+
+@media (max-width: 1100px) {
+  .wa-board-chat-panel {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .wa-board-chat-panel {
+    width: 100vw;
+    max-width: none;
+    min-width: 0;
+  }
+}

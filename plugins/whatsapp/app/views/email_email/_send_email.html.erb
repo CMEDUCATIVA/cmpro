@@ -1,0 +1,194 @@
+<section class="op-email-email--section" id="email-send">
+  <h3>Envios</h3>
+
+  <%= form_with url: whatsapp_plugin_project_email_send_create_path(@project),
+                method: :post,
+                scope: :email,
+                class: "op-email-email--form",
+                html: { multipart: true } do |form| %>
+  <div class="op-email-email--split">
+    <div class="op-email-email--panel op-email-email--template-panel">
+      <div class="op-email-email--grid">
+        <div class="op-email-email--field">
+          <%= form.label :scheduled_at, "Programar envio" %>
+          <%= form.datetime_field :scheduled_at,
+                                  class: "op-email-email--input",
+                                  value: params.dig(:email, :scheduled_at).to_s %>
+        </div>
+        <div class="op-email-email--field">
+          <label class="op-email-email--checkbox">
+            <%= form.check_box :bypass_rate_limit, checked: params.dig(:email, :bypass_rate_limit).to_s == "1" %>
+            Omitir limite global (envio especial)
+          </label>
+        </div>
+      </div>
+
+      <div data-email-recipients-scope>
+        <div class="op-email-email--field">
+          <%= form.label :emails, "Destinarios (separados por coma o espacio)" %>
+          <div class="op-email-email--token-input" data-email-token-input>
+            <div class="op-email-email--chips" data-email-chips></div>
+            <input type="text"
+                   class="op-email-email--token-field"
+                   placeholder="ej: user@dominio.com"
+                   data-email-token-field />
+            <input type="hidden"
+                   name="email[emails]"
+                   value="<%= params.dig(:email, :emails).to_s %>"
+                   data-email-token-hidden
+                   data-email-emails-field />
+          </div>
+          <label class="op-email-email--checkbox op-email-email--checkbox-inline">
+            <%= check_box_tag "email[send_to_self_recipients]",
+                              "1",
+                              params.dig(:email, :send_to_self_recipients).to_s == "1" %>
+            Enviarme una copia
+          </label>
+        </div>
+
+        <div class="op-email-email--field">
+          <label>Enviar correo a usuarios pertenecientes al proyecto</label>
+          <% selected_ids = Array(params.dig(:email, :user_ids)).map(&:to_s) %>
+          <div class="op-email-email--recipients-picker" data-email-recipients-picker>
+            <button type="button" class="op-email-email--button is-secondary op-email-email--recipients-toggle" data-email-recipients-toggle>
+              Seleccionar usuarios
+            </button>
+            <div class="op-email-email--recipients-menu is-hidden" data-email-recipients-menu>
+              <% @members.each do |member| %>
+                <label class="op-email-email--recipient-item">
+                  <input type="checkbox"
+                         name="email[user_ids][]"
+                         value="<%= member.id %>"
+                         data-email-recipient-checkbox
+                         data-email-address="<%= member.mail %>"
+                         <%= "checked" if selected_ids.include?(member.id.to_s) %>>
+                  <span><%= member.name %> (<%= member.mail %>)</span>
+                </label>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="op-email-email--field"
+           data-email-templates="<%= j(@templates.map { |template| { id: template.id, body: template.body.to_s } }.to_json) %>">
+        <%= form.label :template_id, "Plantillas" %>
+        <%= form.select :template_id,
+                        options_from_collection_for_select(@templates, :id, :name, params.dig(:email, :template_id)),
+                        { include_blank: "Sin plantilla" },
+                        class: "op-email-email--input",
+                        data: { email_template_selector: true } %>
+      </div>
+      <div class="op-email-email--field">
+        <label class="op-email-email--checkbox">
+          <%= form.check_box :open_tracking_enabled, checked: params.dig(:email, :open_tracking_enabled).to_s == "1" %>
+          Activar Open Tracking
+        </label>
+      </div>
+
+      <div class="op-email-email--field">
+        <div class="op-email-email--actions op-email-email--actions-inline">
+          <button type="button" class="op-email-email--button is-secondary op-email-email--compose-button" data-email-compose>
+            Redactar
+          </button>
+          <%= form.submit "Enviar Plantilla", class: "op-email-email--button", disabled: true, data: { email_send_button: true } %>
+        </div>
+      </div>
+
+      <div class="op-email-email--hint">
+        <% if @settings&.global_rate_limit_active? %>
+          Cadencia global activa:
+          <strong><%= @settings.global_rate_limit_count %></strong>
+          correos cada
+          <strong><%= @settings.global_rate_limit_period_value %> <%= @settings.global_rate_limit_period_unit == "second" ? "segundos" : (@settings.global_rate_limit_period_unit == "minute" ? "minutos" : "horas") %></strong>.
+        <% else %>
+          Cadencia global desactivada.
+        <% end %>
+      </div>
+    </div>
+
+    <div class="op-email-email--panel">
+      <div class="op-email-email--panel-title">Envios recientes</div>
+      <div class="op-email-email--recent"
+           data-email-recent
+           data-email-recent-url="<%= whatsapp_plugin_project_email_recent_deliveries_path(@project) %>">
+        <div class="op-email-email--empty" data-email-recent-empty>Cargando...</div>
+        <table class="op-email-email--table is-hidden" data-email-recent-table>
+          <thead>
+            <tr>
+              <th>Asunto</th>
+              <th>Estado</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody data-email-recent-body></tbody>
+        </table>
+      </div>
+
+      <div class="op-email-email--compose-panel is-hidden" data-email-compose-panel>
+        <div class="op-email-email--compose-header">
+          <div class="op-email-email--compose-title">Redactar</div>
+          <button type="button" class="op-email-email--compose-close" data-email-compose-close>&#x2715;</button>
+        </div>
+
+        <div class="op-email-email--field op-email-email--field-row">
+          <div class="op-email-email--field op-email-email--field-stack">
+            <%= form.label :sender_name, "Nombre del remitente" %>
+            <%= form.select :sender_name,
+                            options_for_select(@sender_names, params.dig(:email, :sender_name)),
+                            { include_blank: "Por defecto" },
+                            class: "op-email-email--input" %>
+          </div>
+          <div class="op-email-email--field op-email-email--field-stack">
+            <%= form.label :smtp_source, "Usar SMTP" %>
+            <%= form.select :smtp_source,
+                            options_for_select(smtp_source_options, params.dig(:email, :smtp_source).presence || default_smtp_source_for_forms),
+                            {},
+                            class: "op-email-email--input" %>
+          </div>
+        </div>
+
+        <div class="op-email-email--field">
+          <%= form.label :subject, "Asunto" %>
+          <%= form.text_field :subject,
+                              class: "op-email-email--input",
+                              placeholder: "Asunto del correo",
+                              value: params.dig(:email, :subject).to_s %>
+        </div>
+
+        <div class="op-email-email--field">
+          <%= form.label :body, "Contenido" %>
+          <div class="op-email-email--editor" data-email-editor>
+            <%= form.text_area :body,
+                               id: "email_body",
+                               class: "op-email-email--textarea",
+                               value: params.dig(:email, :body).to_s %>
+            <%= wikitoolbar_for "email_body", preview_context: { project: @project } %>
+            <div class="op-email-email--editor-lock" data-email-editor-lock>
+              Contenido bloqueado por plantilla seleccionada.
+            </div>
+          </div>
+        </div>
+
+        <div class="op-email-email--field">
+          <%= form.file_field :attachments,
+                              multiple: true,
+                              class: "op-email-email--input op-email-email--file-input",
+                              id: "email_attachments",
+                              data: { email_attachments_input: true } %>
+          <label for="email_attachments" class="op-email-email--file-icon" title="Adjuntar archivos">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+              <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
+            </svg>
+          </label>
+          <div class="op-email-email--attachments-list" data-email-attachments-list></div>
+        </div>
+
+        <div class="op-email-email--actions">
+          <%= form.submit "Enviar", class: "op-email-email--button", data: { email_compose_send: true } %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</section>

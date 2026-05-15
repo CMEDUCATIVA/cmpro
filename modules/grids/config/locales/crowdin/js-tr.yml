@@ -1,0 +1,64 @@
+tr:
+  js:
+    grid:
+      add_widget: 'Bileşen ekle'
+      remove: 'Bileşeni kaldır'
+      configure: 'Bileşeni yapılandır'
+      widgets:
+        missing_permission: "Bu bileşeni görüntülemek için gerekli izinlere sahip değilsiniz."
+        custom_text:
+          title: 'Özel metin'
+        documents:
+          title: 'Belgeler'
+          no_results: 'Henüz belge yok.'
+        members:
+          title: 'Üyeler'
+          no_results: 'Görünür üye yok.'
+          view_all_members: 'Tüm üyeleri göster'
+          add: 'Üye'
+          too_many: '%{total} üyelerin %{count} sayısını gösteriliyor.'
+        news:
+          title: 'Haberler'
+          at: 'en'
+          no_results: 'Rapor için yeni birşey bulunamadı.'
+        project_description:
+          title: 'Proje tanımı'
+          no_results: "Henüz bir açıklama yazılmadı. Biri 'Proje ayarları' içinde sağlanabilir."
+        project_status:
+          title: 'Proje durumu'
+          not_started: 'Başlatılmadı'
+          on_track: 'Takipte'
+          off_track: 'Hedeften uzaklaşmış'
+          at_risk: 'Riskli'
+          not_set: 'Ayarlanmadı'
+          finished: 'Tamamlandı'
+          discontinued: 'Durduruldu'
+        subprojects:
+          title: 'Alt Projeler'
+          no_results: 'Alt proje yok.'
+        project_favorites:
+          title: 'Favori projeler'
+          no_results: 'Şu anda favori projeniz yok. Favorilerinize bir proje eklemek için proje gösterge panelindeki yıldız simgesine tıklayın.'
+        time_entries_current_user:
+          title: 'Geçirdiğim zaman'
+          displayed_days: 'Widget''te görüntülenen günler:'
+        time_entries_list:
+          title: 'Harcanan zaman (son 7 gün)'
+          no_results: 'Son 7 gündür zaman girişi yapılmadı.'
+        work_packages_accountable:
+          title: "Sorumlusu olduğum iş paketleri"
+        work_packages_assigned:
+          title: 'Bana atanan iş paketleri'
+        work_packages_created:
+          title: 'Oluşturduğum iş paketleri'
+        work_packages_watched:
+          title: 'Takip ettiğim iş paketleri'
+        work_packages_table:
+          title: 'İş paketleri tablosu'
+        work_packages_graph:
+          title: 'İş paketleri grafiği'
+        work_packages_calendar:
+          title: 'Takvim'
+        work_packages_overview:
+          title: 'İş paketlerine genel bakış'
+          placeholder: 'Düzenlemek için tıkla ...'

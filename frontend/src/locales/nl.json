@@ -1,0 +1,2060 @@
+{
+  "nl": {
+    "date": {
+      "abbr_day_names": [
+        "Zo",
+        "Ma",
+        "Di",
+        "Wo",
+        "Do",
+        "Vr",
+        "Za"
+      ],
+      "abbr_month_names": [
+        null,
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "Mei",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Okt",
+        "Nov",
+        "Dec"
+      ],
+      "abbr_week": "Wk",
+      "day_names": [
+        "Zondag",
+        "Maandag",
+        "Dinsdag",
+        "Woensdag",
+        "Donderdag",
+        "Vrijdag",
+        "Zaterdag"
+      ],
+      "formats": {
+        "default": "%d-%m-%Y",
+        "long": "%B %d, %Y",
+        "short": "%b %d"
+      },
+      "month_names": [
+        null,
+        "Januari",
+        "Februari",
+        "Maart",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Augustus",
+        "September",
+        "Oktober",
+        "November",
+        "December"
+      ],
+      "order": [
+        "jaar",
+        "maand",
+        "dag"
+      ]
+    },
+    "js": {
+      "admin": {
+        "enterprise": {
+          "text_expired": "verlopen",
+          "text_reprieve_days_left": "%{days} dagen tot het einde van de genadeperiode",
+          "trial": {
+            "confirmation": "Bevestiging van het e-mailadres",
+            "confirmation_info": "We hebben je een e-mail gestuurd op %{date} naar %{email}. Controleer uw inbox en klik op de bevestigingslink om uw proefperiode van 14 dagen te starten.\n",
+            "email_not_received": "U heeft geen e-mail ontvangen? U kunt de e-mail opnieuw versturen met de link aan de rechterkant.",
+            "form": {
+              "domain_mismatch": "De huidige hostnaam van de aanvraag komt niet overeen met de geconfigureerde hostnaam. Controleer uw systeeminstellingen.",
+              "general_consent": "Ik ga akkoord met de <a target=\"_blank\" href=\"%{link_terms}\">gebruiksvoorwaarden</a> en het <a target=\"_blank\" href=\"%{link_privacy}\">privacybeleid</a>.\n",
+              "invalid_email": "Ongeldig e-mailadres",
+              "label_additional_features": "Additional features",
+              "label_company": "Bedrijfsnaam",
+              "label_domain": "Domein",
+              "label_expires_at": "Verloopt op",
+              "label_first_name": "Voornaam",
+              "label_last_name": "Achternaam",
+              "label_maximum_users": "Maximum aantal actieve gebruikers",
+              "label_plan": "Pakket",
+              "label_starts_at": "Start op",
+              "label_subscriber": "Abonnee",
+              "receive_newsletter": "Ik wil de OpenProject <a target=\"_blank\" href=\"%{link}\">nieuwsbrief</a> ontvangen.",
+              "taken_domain": "Er kan slechts één actieve proefperiode per domein zijn.",
+              "taken_email": "Elke gebruiker kan slechts één proefperiode aanmaken."
+            },
+            "next_steps": "Volgende stappen",
+            "quick_overview": "Get a quick overview of project management and team collaboration with OpenProject Enterprise edition.",
+            "resend_link": "Opnieuw verzenden",
+            "resend_success": "E-mail is opnieuw verstuurd. Controleer uw e-mails en klik op de link ter bevestiging.",
+            "resend_warning": "Kon e-mail niet opnieuw verzenden.",
+            "session_timeout": "Uw sessie is verlopen. Probeer de pagina te herladen of e-mail opnieuw te verzenden.",
+            "status_confirmed": "bevestigd",
+            "status_label": "Status:",
+            "status_waiting": "E-mail verzonden - wacht op bevestiging",
+            "test_ee": "Test de Enterprise-editie 14 dagen gratis",
+            "try_another_email": "Of probeer het met een ander e-mailadres."
+          },
+          "upsell": {
+            "become_hero": "Word een held!",
+            "benefits": {
+              "description": "What are the benefits of the Enterprise on-premises edition?",
+              "high_security": "Beveiliging functies",
+              "high_security_text": "Single sign on (SAML, OpenID Connect, CAS), LDAP groups.",
+              "installation": "Installatie ondersteuning",
+              "installation_text": "Ervaren softwareingenieurs begeleiden u door het volledige installatieproces in uw eigen infrastructuur.",
+              "premium_features": "Enterprise add-ons",
+              "premium_features_text": "Agile borden, aangepast thema en logo, grafieken, intelligente workflows met aangepaste acties, volledige tekst zoeken voor werkpakket bijlagen en meervoudige aangepaste velden.",
+              "professional_support": "Professionele ondersteuning",
+              "professional_support_text": "Krijg betrouwbare, krachtige ondersteuning van ervaren ondersteunende ingenieurs met deskundige kennis over het functioneren van OpenProject in zakelijke kritieke omgevingen."
+            },
+            "button_book_now": "Direct boeken",
+            "button_contact_us": "Neem contact met ons op voor een demo",
+            "button_start_trial": "Start gratis proefperiode",
+            "button_upgrade": "Nu upgraden",
+            "confidence": "We bieden het vertrouwen van een geteste en ondersteunde software voor projectbeheer van enterprise-class - met Open Source en een open geest.\n",
+            "enterprise_info_html": "%{feature_title} is an Enterprise <span class='spot-icon spot-icon_inline spot-icon_enterprise-addons'></span> add-on.",
+            "link_quote": "Vraag een offerte aan",
+            "more_info": "Meer informatie",
+            "text": "The OpenProject Enterprise edition builds on top of the Community edition. It includes Enterprise add-ons and professional support mainly aimed at organizations with more than 10 users that manage business critical projects with OpenProject.\n",
+            "unlimited": "Onbeperkt",
+            "upgrade_info": "Gelieve te upgraden naar een betaald abonnement om het te activeren en te beginnen met het gebruik ervan in uw team.",
+            "you_contribute": "Developers need to pay their bills, too. By upgrading to the Enterprise edition, you will be supporting this open source community effort and contributing to its development, maintenance and continuous improvement."
+          }
+        },
+        "type_form": {
+          "add_group": "Toevoegen van nieuwe attribuutgroepen",
+          "add_table": "Tabel van verwante werkpakketten toevoegen",
+          "custom_field": "Aangepast veld",
+          "drag_to_activate": "Sleep velden uit hier om ze te activeren",
+          "edit_query": "Zoekopdracht bewerken",
+          "inactive": "Inactief",
+          "new_group": "Nieuwe groep",
+          "reset_to_defaults": "Standaardinstellingen herstellen"
+        },
+        "work_packages_settings": {
+          "warning_progress_calculation_mode_change_from_field_to_status_html": "Changing progress calculation mode from work-based to status-based will result in all existing <i>% Complete</i> values to be lost and replaced with values associated with each status. Existing values for <i>Remaining work</i> may also be recalculated to reflect this change. This action is not reversible.",
+          "warning_progress_calculation_mode_change_from_status_to_field_html": "Changing progress calculation mode from status-based to work-based will make the <i>% Complete</i> field freely editable. If you optionally enter values for <i>Work</i> or <i>Remaining work</i>, they will also be linked to <i>% Complete</i>. Changing <i>Remaining work</i> can then update <i>% Complete</i>."
+        },
+        "working_days": {
+          "add_non_working_day": "Vrije dagen",
+          "already_added_error": "A non-working day for this date exists already. There can only be one non-working day created for each unique date.",
+          "calendar": {
+            "empty_state_description": "No specific non-working days are defined for this year. Click on \"+ Non-working day\" below to add a date.",
+            "empty_state_header": "Vrije dagen",
+            "new_date": "(nieuw)"
+          },
+          "change_button": "Opslaan en opnieuw plannen",
+          "change_description": "Changing which days of the week are considered working days or non-working days can affect the start and finish days of all work packages and life cycles in all projects in this instance.",
+          "change_title": "Wijzig werkdagen",
+          "removed_title": "Je verwijdert de volgende dagen uit de lijst van niet-werkdagen:",
+          "warning": "The changes might take some time to take effect. You will be notified when all relevant work packages and project life cycles have been updated. Are you sure you want to continue?\n"
+        }
+      },
+      "ajax": {
+        "hide": "Verberg",
+        "loading": "Laden…",
+        "updating": "Bijwerken…"
+      },
+      "attachments": {
+        "delete": "Bijlage verwijderen",
+        "delete_confirmation": "Weet je zeker dat je dit bestand wilt verwijderen? Deze actie is niet omkeerbaar.\n",
+        "draggable_hint": "Sleep op het invoerveld naar in line afbeelding of verwijzing bijlage. Gesloten invoervelden wordt geopend terwijl u blijft slepen.\n",
+        "quarantined_hint": "The file is quarantined, as a virus was found. It is not available for download."
+      },
+      "autocomplete_ng_select": {
+        "add_tag": "Add item",
+        "clear_all": "Alles wissen",
+        "loading": "Laden...",
+        "not_found": "Geen items gevonden",
+        "type_to_search": "Typ om te zoeken"
+      },
+      "autocomplete_select": {
+        "active": "Actieve %{label} %{name}",
+        "placeholder": {
+          "multi": "Toevoegen \"%{name}\"",
+          "single": "Selecteer \"%{name}\""
+        },
+        "remove": "Verwijder %{name}"
+      },
+      "autocompleter": {
+        "notFoundText": "Geen items gevonden",
+        "placeholder": "Typ om te zoeken",
+        "project": {
+          "placeholder": "Select project"
+        }
+      },
+      "avatars": {
+        "empty_file_error": "Upload een geldige afbeelding (jpg, png, gif)",
+        "error_image_too_large": "De afbeelding is te groot.",
+        "label_choose_avatar": "Kies Avatar van bestand",
+        "text_upload_instructions": "Upload je eigen avatar van 128 voor 128 pixels. Grotere bestanden zullen worden geschaald en bijgesneden om overeen te komen. Een voorbeeld van je avatar wordt getoond voor het uploaden, zodra je een afbeelding hebt geselecteerd.\n",
+        "uploading_avatar": "Je afbeelding uploaden.",
+        "wrong_file_format": "Toegestane formaten zijn jpg, png, gif"
+      },
+      "backup": {
+        "attachments_disabled": "Bijlagen mogen niet worden opgenomen omdat ze de maximaal toegestane grootte overschrijden. U kunt dit wijzigen via de configuratie (vereist een herstart van de server).",
+        "download_backup": "Back-up downloaden",
+        "include_attachments": "Inclusief bijlagen",
+        "info": "Je kunt hier een back-up activeren. Het proces kan enige tijd in beslag nemen, afhankelijk van het aantal gegevens (met name de bijlagen) die je hebt. Je ontvangt een e-mail zodra het klaar is.\n",
+        "last_backup": "Laatste back-up",
+        "last_backup_from": "Laatste back-up van",
+        "note": "Een nieuwe back-up zal elke vorige overschrijven. Alleen een beperkt aantal back-ups per dag kunnen worden aangevraagd.\n",
+        "options": "Opties",
+        "request_backup": "Back-up aanvragen",
+        "title": "OpenProject back-uppen"
+      },
+      "baseline": {
+        "apply": "Toepassen",
+        "clear": "Wissen",
+        "drop_down": {
+          "a_specific_date": "een specifieke datum",
+          "between_two_specific_dates": "tussen twee specifieke datums",
+          "last_month": "vorige maand",
+          "last_week": "Vorige week",
+          "last_working_day": "laatste werkdag",
+          "none": "-",
+          "yesterday": "gisteren"
+        },
+        "from": "Van",
+        "header_description": "Markeer wijzigingen die sindsdien in deze lijst zijn aangebracht.",
+        "help_description": "Reference time zone for the baseline.",
+        "icon_tooltip": {
+          "added": "Added to view within the comparison time period",
+          "changed": "Behoud met wijzigingen",
+          "removed": "Removed from view within the comparison time period"
+        },
+        "legends": {
+          "changes_between": "Veranderingen tussen",
+          "changes_since": "Veranderingen sinds",
+          "in_your_timezone": "In je lokale tijdzone:",
+          "maintained_with_changes": "Behoud met wijzigingen",
+          "no_longer_meets_filter_criteria": "Voldoet niet langer aan filtercriteria",
+          "now_meets_filter_criteria": "Voldoet nu aan filtercriteria"
+        },
+        "show_changes_since": "Toon wijzigingen sinds",
+        "time": "Tijd",
+        "time_description": "In uw lokale tijd: %{datetime}",
+        "to": "Aan",
+        "toggle_title": "Baseline"
+      },
+      "bcf": {
+        "add_viewpoint": "Perspectief toevoegen",
+        "delete_viewpoint": "Verwijder perspectief",
+        "export": "Exporteren",
+        "export_bcf_xml_file": "Exporteer BCF XML bestand (BCF versie 2.1)",
+        "import": "Importeren",
+        "import_bcf_xml_file": "BCF XML-bestand importeren (BCF versie 2.1)",
+        "label_bcf": "BCF",
+        "management": "BCF beheer",
+        "refresh": "Vernieuwen",
+        "refresh_work_package": "Werkpakket vernieuwen",
+        "show_viewpoint": "Toon perspectief",
+        "viewpoint": "Perspectief"
+      },
+      "boards": {
+        "add_card": "Kaart toevoegen",
+        "add_list": "Lijst toevoegen aan bord",
+        "add_list_modal": {
+          "labels": {
+            "assignee": "Selecteer gebruiker om toe te voegen als nieuwe taakontvangerlijst",
+            "status": "Selecteer status om toe te voegen als nieuwe lijst",
+            "subproject": "Selecteer subproject om als nieuwe lijst toe te voegen",
+            "subtasks": "Selecteer werkpakket om toe te voegen als nieuwe lijst",
+            "version": "Selecteer versie om toe te voegen als nieuwe lijst"
+          },
+          "warning": {
+            "add_members": "<a href=\"%{link}\">Voeg een nieuw deelnemer toe aan dit project</a> om gebruikers opnieuw te selecteren.",
+            "assignee": "Er is geen lid dat overeenkomt met uw filterwaarde.  <br>",
+            "no_member": "Dit project heeft momenteel geen deelnemers die kunnen worden toegevoegd.  <br>",
+            "status": "Er is momenteel geen status beschikbaar. <br>\nEr zijn geen of ze zijn allemaal al toegevoegd aan het bord.\n"
+          }
+        },
+        "board_type": {
+          "action": "Actiebord",
+          "action_by_attribute": "Actiebord (%{attribute})",
+          "action_text": "Een bord met gefilterde lijsten op %{attribute} attribuut. Het verplaatsen van werkpakketten naar andere lijsten zal hun attribuut bijwerken.\n",
+          "action_text_assignee": "Bord met geautomatiseerde kolommen gebaseerd op toegewezen gebruikers. Ideaal voor verzenden van werkpakketten.\n",
+          "action_text_status": "Basis kanban stijl board met kolommen voor status zoals Doen, Gereed.\n",
+          "action_text_subprojects": "Bord met geautomatiseerde kolommen voor subprojecten. Werkpakketten naar andere lijsten verplaatsen, werkt het (sub)project dienovereenkomstig bij.\n",
+          "action_text_subtasks": "Bord met geautomatiseerde kolommen voor subelementen. Het verslepen van werkpakketten naar andere lijsten werkt de bovenliggende map bij.\n",
+          "action_text_version": "Board met geautomatiseerde kolommen op basis van het versienummer. Ideaal voor het plannen van productontwikkeling.\n",
+          "action_type": {
+            "assignee": "Toegewezene",
+            "status": "Status",
+            "subproject": "subprojekt",
+            "subtasks": "ouder-kind",
+            "version": "Versie"
+          },
+          "board_type_title": {
+            "assignee": "Toegewezene",
+            "basic": "Basis",
+            "status": "Status",
+            "subproject": "Subproject",
+            "subtasks": "Ouder-kind",
+            "version": "Versie"
+          },
+          "free": "basis",
+          "free_text": "Begin vanaf nul met een leeg bord. Voeg handmatig kaarten en kolommen toe aan dit bord.\n",
+          "select_attribute": "Actie attribuut",
+          "select_board_type": "Kies het type bord dat je nodig hebt.",
+          "text": "Type bord"
+        },
+        "click_to_remove_list": "Klik om deze lijst te verwijderen",
+        "configuration_modal": {
+          "display_settings": {
+            "card_mode": "Als kaarten weergeven",
+            "table_mode": "Als tabel weergeven"
+          },
+          "title": "Configureer dit bord"
+        },
+        "create_new": "Maak een nieuw bord",
+        "error_attribute_not_writable": "Kan werkpakket niet verplaatsen, %{attribute} is niet schrijfbaar.",
+        "error_cannot_move_into_self": "Je kunt een werkpakket niet in zijn eigen kolom verplaatsen.",
+        "error_loading_the_list": "Fout bij laden van de lijst: %{error_message}",
+        "error_permission_missing": "Geen toestemming om openbare zoekopdrachten te maken",
+        "label_board_type": "Type bord",
+        "label_unnamed_board": "Naamloos bord",
+        "label_unnamed_list": "Naamloze lijst",
+        "lists": {
+          "delete": "Lijst verwijderen"
+        },
+        "new_board": "Nieuw bord",
+        "text_hidden_list_warning": "Niet alle lijsten worden weergegeven omdat u niet bevoegd bent. Contacteer uw beheerder voor meer informatie.",
+        "version": {
+          "close_version": "Versies sluiten",
+          "closed": "Gesloten",
+          "edit_version": "Versie bewerken",
+          "is_closed": "Versie is gesloten. Er kunnen geen items aan deze versie worden toegevoegd.",
+          "is_locked": "Versie is vergrendeld. Er kunnen geen items aan deze versie worden toegevoegd.",
+          "lock_version": "Versie vergrendelen",
+          "locked": "Vergrendeld",
+          "open_version": "Versie openen",
+          "show_version": "Versie tonen",
+          "unlock_version": "Versie ontgrendelen"
+        }
+      },
+      "button_add": "Toevoegen",
+      "button_add_watcher": "Watcher toevoegen",
+      "button_advanced_filter": "Geavanceerde filter",
+      "button_back": "Terug",
+      "button_back_to_list_view": "Terug naar het overzicht",
+      "button_cancel": "Annuleren",
+      "button_change_project": "Move to another project",
+      "button_check_all": "Selecteer alles",
+      "button_close": "Sluiten",
+      "button_close_details": "Sluit detailweergave",
+      "button_collapse_all": "Alles inklappen",
+      "button_configure-form": "Formulier configureren",
+      "button_confirm": "Accepteren",
+      "button_continue": "Ga verder",
+      "button_copy": "Kopieer",
+      "button_copy_link_to_clipboard": "Link naar klembord kopiëren",
+      "button_copy_to_clipboard": "Kopiëren naar het klembord",
+      "button_copy_to_other_project": "Duplicate in another project",
+      "button_create": "Maken",
+      "button_custom-fields": "Aangepaste velden",
+      "button_delete": "Verwijderen",
+      "button_delete_watcher": "Kijkers verwijderen",
+      "button_details_view": "Details overzicht",
+      "button_duplicate": "Dupliceren",
+      "button_edit": "Wijzig",
+      "button_expand_all": "Alles uitklappen",
+      "button_export-atom": "Download Atom",
+      "button_filter": "Filter",
+      "button_generate_pdf": "Generate PDF",
+      "button_list_view": "Lijstweergave",
+      "button_log_costs": "Registreer kost per eenheid",
+      "button_log_time": "Gelogde tijd",
+      "button_more": "Meer",
+      "button_more_actions": "Meer acties",
+      "button_open_details": "Open detailweergave",
+      "button_open_fullscreen": "Open volledig scherm",
+      "button_quote": "Citeer",
+      "button_save": "Opslaan",
+      "button_settings": "Instellingen",
+      "button_show_cards": "Toon kaartweergave",
+      "button_show_fullscreen": "Volledig scherm weergeven",
+      "button_show_gantt": "Toon Gantt-weergave",
+      "button_show_list": "Toon lijstweergave",
+      "button_show_table": "Tabel weergave tonen",
+      "button_show_view": "Fullscreen weergave",
+      "button_uncheck_all": "Deselecteer alles",
+      "button_update": "Bijwerken",
+      "calendar": {
+        "create_new": "Nieuwe agenda aanmaken",
+        "title": "Kalender",
+        "too_many": "Er zijn in totaal %{count} werkpakketten, maar alleen %{max} kan worden getoond.",
+        "unsaved_title": "Naamloze agenda"
+      },
+      "caption_rate_history": "Tarief geschiedenis",
+      "card": {
+        "add_new": "Nieuwe kaart toevoegen",
+        "highlighting": {
+          "entire_card_by": "Gehele kaart door",
+          "inline": "Markeer inline:"
+        },
+        "remove_from_list": "Verwijder kaart uit lijst"
+      },
+      "chart": {
+        "axis_criteria": "As criteria",
+        "errors": {
+          "could_not_load": "Kon gegevens om de grafiek weer te geven niet laden. Mogelijk ontbreken de benodigde machtigingen."
+        },
+        "modal_title": "Werkpakket grafiek configuratie",
+        "tabs": {
+          "dataset": "Dataset %{number}",
+          "graph_settings": "Algemeen"
+        },
+        "type": "Grafiek type",
+        "types": {
+          "bar": "Balk",
+          "doughnut": "Donut",
+          "horizontal_bar": "Horizontale balk",
+          "line": "Lijn",
+          "pie": "Taart",
+          "polar_area": "Poolstreek",
+          "radar": "Radar"
+        }
+      },
+      "clipboard": {
+        "browser_error": "Uw browser ondersteunt kopiëren naar het klembord niet. Kopieer het handmatig: %{content}",
+        "copied_successful": "Succesvol gekopieerd naar klembord!"
+      },
+      "close_filter_title": "Sluit filter",
+      "close_form_title": "Sluit formulier",
+      "close_popup_title": "Popup sluiten",
+      "custom_actions": {
+        "date": {
+          "current_date": "Huidige datum",
+          "specific": "op"
+        }
+      },
+      "dashboards": {
+        "label": "Dashboard"
+      },
+      "description_available_columns": "Beschikbare kolommen",
+      "description_current_position": "U bent hier: ",
+      "description_select_work_package": "Selecteer werk pakket #%{id}",
+      "description_subwork_package": "Kind van werkpakket #%{id}",
+      "editor": {
+        "ckeditor_error": "Er is een fout opgetreden in CKEditor",
+        "error_saving_failed": "Het opslaan van het document is mislukt met de volgende foutmelding:%{error}",
+        "macro": {
+          "attribute_reference": {
+            "invalid_attribute": "Het geselecteerde attribuut '%{name}' bestaat niet.",
+            "macro_help_tooltip": "Dit tekstsegment wordt dynamisch weergegeven door een macro.",
+            "nested_macro": "This macro is recursively referencing %{model} %{id}.",
+            "not_found": "Gevraagde bron kan niet worden gevonden"
+          },
+          "child_pages": {
+            "button": "Links naar onderliggende pagina 's",
+            "hint": "Laat dit veld leeg om alle onderliggende pagina's van de huidige pagina weer te geven. Als u wilt verwijzen naar een andere pagina, geef de titel of de witruimte van de pagina in.\n",
+            "include_parent": "Inclusief bovenliggende",
+            "page": "Wikipagina",
+            "text": "[Placeholder] links naar onderliggende pagina's van",
+            "this_page": "deze pagina"
+          },
+          "code_block": {
+            "button": "Codefragment invoegen",
+            "language": "Opmaaktaal",
+            "language_hint": "Voer de opmaaktaal die wordt gebruikt voor het benadrukken(indien ondersteund).",
+            "title": "Insert / codefragment bewerken"
+          },
+          "dropdown": {
+            "chose_macro": "Kies macro",
+            "macros": "Macro's"
+          },
+          "embedded_calendar": {
+            "text": "[Placeholder] ingesloten kalender"
+          },
+          "embedded_table": {
+            "button": "Werk pakket tabel insluiten",
+            "text": "[Placeholder] ingesloten werkpakket tabel"
+          },
+          "error": "Macro: %{message} kan niet worden uitgebreid",
+          "toc": "Inhoudsopgave",
+          "toolbar_help": "Klik op widget en geef de werkbalk weer. Dubbelklikken om de widget te bewerken",
+          "wiki_page_include": {
+            "button": "Inhoud van een andere wikipagina opnemen",
+            "hint": "Neem de inhoud van een andere wikipagina op door de de titel of de witruimte rond de pagina in te geven.\nU kunt de wikipagina van een ander project opnemen door deze te scheiden met een dubbele punt zoals in het volgende voorbeeld.\n",
+            "not_set": "(Pagina nog niet ingesteld)",
+            "page": "Wikipagina",
+            "text": "[Placeholder] opgenomen wikipagina van"
+          },
+          "work_package_button": {
+            "button": "Voegen werk pakket knop maken In",
+            "button_style": "Gebruik knopstijl",
+            "button_style_hint": "Optioneel: Controleer of de macro wordt weergegeven als een knop, niet als een link.",
+            "type": "Werkpakket type",
+            "with_type": "Werkpakket maken (Type: %{typename})",
+            "without_type": "Nieuw werkpakket maken"
+          }
+        },
+        "mode": {
+          "manual": "Schakel naar de bron van het Markdown",
+          "wysiwyg": "Schakel over naar de WYSIWYG-Editor"
+        },
+        "no_revisions": "No local modifications found",
+        "preview": "Voorbeeld modus wijzigen",
+        "revisions": "Show local modifications",
+        "source_code": "Wissel Markdown bronmodus"
+      },
+      "enumeration_activities": "Activiteiten (tijdregistratie)",
+      "enumeration_doc_categories": "Document categorieën",
+      "enumeration_work_package_priorities": "Werkpakket prioriteiten",
+      "error": {
+        "cannot_save_changes_with_message": "Uw wijzigingen vanwege de volgende fout niet opslaan: %{error}",
+        "embedded_table_loading": "De ingesloten weergave kon niet worden geladen: %{message}",
+        "internal": "Een interne fout is opgetreden.",
+        "query_saving": "Het overzicht kon niet bewaard worden."
+      },
+      "error_attachment_upload": "Bestand uploaden mislukt: %{error}",
+      "error_attachment_upload_permission": "U bent niet gemachtigd om bestanden naar deze bron te uploaden.",
+      "error_could_not_resolve_user_name": "Kan de gebruikersnaam niet vinden",
+      "error_could_not_resolve_version_name": "Kan de verstane niet vinden",
+      "exclusion_info": {
+        "modal": {
+          "content": "The status '%{status_name}' has been configured to be excluded from hierarchy totals of Work, Remaining work, and % Complete. The totals do not take this value into account.",
+          "title": "Status excluded from hierarchy totals"
+        }
+      },
+      "favorite_projects": {
+        "no_results": "U heeft geen favoriete projecten",
+        "no_results_subtext": "Add one or multiple projects as favorite through their overview or in a project list."
+      },
+      "field_value_enter_prompt": "Breng een waarde in voor veld '%{field}'",
+      "filter": {
+        "description": {
+          "text_close_filter": "Om een item te verlaten, verlaat dan de focus bijvoorbeeld door het drukken op de enter-toets. Om een item zonder filter te verlaten, selecteer het eerste (lege) item.",
+          "text_open_filter": "Open dit filter met de 'ALT'-knop en toetsenbord pijlen."
+        },
+        "more_values_not_shown": "Er zijn nog %{total} resultaten, zoeken om de resultaten te filteren.",
+        "noneElement": "(geen)",
+        "sorting": {
+          "criteria": {
+            "one": "Eerste sorteercriteria",
+            "three": "Derde sorteercriteria",
+            "two": "Tweede sorteercriteria"
+          }
+        },
+        "time_zone_converted": {
+          "only_end": "Tot %{to} in uw lokale tijd.",
+          "only_start": "Van %{from} in uw lokale tijd.",
+          "two_values": "%{from} - %{to} in uw lokale tijd."
+        },
+        "value_spacer": "-"
+      },
+      "forms": {
+        "advanced_settings": "Geavanceerde instellingen",
+        "load_error_message": "Er is een fout opgetreden bij het laden van het formulier",
+        "submit_success_message": "Het formulier is met succes verzonden",
+        "validation_error_message": "Corrigeer de fouten in het formulier"
+      },
+      "gantt_chart": {
+        "button_activate": "Toon Gantt-diagram",
+        "button_deactivate": "Verberg Gantt-diagram",
+        "filter": {
+          "noneSelection": "(geen)"
+        },
+        "label": "Gantt-grafiek",
+        "labels": {
+          "bar": "Bar etiketten",
+          "description": "Selecteer de attributen die u te allen tijde wilt laten zien in de respectieve posities van het Gantt-diagram. Merk op dat wanneer de muis over een element beweegt, de datum labels worden getoond in plaats van deze eigenschappen.\n",
+          "farRight": "Uiterst rechts",
+          "left": "Linkerkant",
+          "right": "Rechterkant",
+          "title": "Label configuratie"
+        },
+        "quarter_label": "Q%{quarter_number}",
+        "selection_mode": {
+          "notification": "Klik op elk gemarkeerde werkpakket om een relatie te maken. Druk op escape om te annuleren."
+        },
+        "zoom": {
+          "auto": "Auto-zoom",
+          "days": "Dagen",
+          "description": "Selecteer het oorspronkelijke zoomniveau dat moet worden weergegeven wanneer autozoom niet beschikbaar is.\n",
+          "in": "Inzoomen",
+          "months": "Maanden",
+          "out": "Uitzoomen",
+          "quarters": "Kwartalen",
+          "weeks": "Weken",
+          "years": "Jaren"
+        }
+      },
+      "general_text_No": "Nee",
+      "general_text_Yes": "Ja",
+      "general_text_no": "Nee",
+      "general_text_yes": "Ja",
+      "github_integration": {
+        "github_actions": "Acties",
+        "pull_requests": {
+          "merged_message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} has been %{pr_state} by %{github_user_link}.",
+          "message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} authored by %{github_user_link} has been %{pr_state}.",
+          "referenced_message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} authored by %{github_user_link} referenced this work package.",
+          "states": {
+            "closed": "gesloten",
+            "draft": "drafted",
+            "merged": "samengevoegd",
+            "opened": "geopend",
+            "ready_for_review": "gemarkeerd als klaar voor review"
+          }
+        },
+        "tab_header": {
+          "copy_menu": {
+            "description": "Git snippets kopiëren naar klembord",
+            "label": "Git snippets"
+          },
+          "git_actions": {
+            "branch_name": "Branch naam",
+            "cmd": "Maak branch met lege commit",
+            "commit_message": "Commit bericht",
+            "copy_error": "❌ Kopiëren mislukt!",
+            "copy_success": "✅ Gekopieerd!",
+            "title": "Snelle snippets voor Git"
+          },
+          "title": "Pull requests"
+        },
+        "tab_prs": {
+          "empty": "Er zijn nog geen pull requests gekoppeld. Koppel een bestaande PR door de code <code>OP#%{wp_id}</code> in de PR-beschrijving te gebruiken of maak een nieuwe PR."
+        },
+        "work_packages": {
+          "tab_name": "GitHub"
+        }
+      },
+      "gitlab_integration": {
+        "gitlab_pipelines": "Pipelines",
+        "tab_header_issue": {
+          "title": "Problemen"
+        },
+        "tab_header_mr": {
+          "copy_menu": {
+            "description": "Git snippets kopiëren naar klembord",
+            "label": "Git snippets"
+          },
+          "create_mr": {
+            "description": "Maak samenvoegingsverzoek aan",
+            "label": "Create MR"
+          },
+          "git_actions": {
+            "branch_name": "Branch naam",
+            "cmd": "Maak branch met lege commit",
+            "commit_message": "Commit bericht",
+            "copy_error": "❌ Kopiëren mislukt!",
+            "copy_success": "✅ Gekopieerd!",
+            "title": "Snelle snippets voor Git"
+          },
+          "title": "Samenvoegverzoeken"
+        },
+        "tab_issue": {
+          "empty": "There are no issues linked yet. Link an existing issue by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the issue title/description or create a new issue."
+        },
+        "tab_mrs": {
+          "empty": "There are no merge requests linked yet. Link an existing MR by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the MR title/description or create a new MR."
+        },
+        "updated_on": "Bijgewerkt op",
+        "work_packages": {
+          "tab_name": "GitLab"
+        }
+      },
+      "global_search": {
+        "all_projects": "Voor alle projecten",
+        "close_search": "Sluit zoekopdracht",
+        "current_project": "In dit project",
+        "current_project_and_all_descendants": "In dit project + subprojecten",
+        "recently_viewed": "Recent bekeken",
+        "search": "Zoeken",
+        "title": {
+          "all_projects": "alle projecten",
+          "project_and_subprojects": "en alle subprojecten",
+          "search_for": "Zoeken naar"
+        }
+      },
+      "grid": {
+        "add_widget": "Widget toevoegen",
+        "configure": "Widget configureren",
+        "remove": "Widget verwijderen",
+        "widgets": {
+          "custom_text": {
+            "title": "Aangepaste tekst"
+          },
+          "documents": {
+            "no_results": "Geen documenten.",
+            "title": "Documenten"
+          },
+          "members": {
+            "add": "Deelnemer",
+            "no_results": "Geen zichtbare leden.",
+            "title": "Leden",
+            "too_many": "Weergave van %{count} van %{total} leden.",
+            "view_all_members": "Alle leden bekijken"
+          },
+          "missing_permission": "U hebt niet de vereiste rechten om deze widget te bekijken.",
+          "news": {
+            "at": "bij",
+            "no_results": "Niets nieuws om te rapporteren.",
+            "title": "Nieuws"
+          },
+          "project_description": {
+            "no_results": "Er is nog geen beschrijving geschreven. Er kan een vermelding worden verstrekt in de 'Projectinstellingen'.",
+            "title": "Projectbeschrijving"
+          },
+          "project_favorites": {
+            "no_results": "U hebt momenteel geen favoriete projecten. Klik op het sterpictogram in het projectdashboard om er een aan uw favorieten toe te voegen.",
+            "title": "Favoriete projecten"
+          },
+          "project_status": {
+            "at_risk": "In gevaar",
+            "discontinued": "Stopgezet",
+            "finished": "Afgewerkt",
+            "not_set": "Niet ingesteld",
+            "not_started": "Nog niet gestart",
+            "off_track": "Buiten schema",
+            "on_track": "Op schema",
+            "title": "Projectstatus"
+          },
+          "subprojects": {
+            "no_results": "Geen subprojecten.",
+            "title": "Subprojecten"
+          },
+          "time_entries_current_user": {
+            "displayed_days": "Dagen weergegeven in de widget:",
+            "title": "Mijn bestede tijd"
+          },
+          "time_entries_list": {
+            "no_results": "Geen tijd items voor de afgelopen 7 dagen.",
+            "title": "Besteed tijd (laatste 7 dagen)"
+          },
+          "work_packages_accountable": {
+            "title": "Werkpakketten waar ik verantwoordelijk voor ben"
+          },
+          "work_packages_assigned": {
+            "title": "Werkpakketten toegewezen aan mij"
+          },
+          "work_packages_calendar": {
+            "title": "Kalender"
+          },
+          "work_packages_created": {
+            "title": "Werkpakketten gemaakt door mij werk werk"
+          },
+          "work_packages_graph": {
+            "title": "Werkpakketten grafiek"
+          },
+          "work_packages_overview": {
+            "placeholder": "Klik om te bewerken ...",
+            "title": "Werkpakketten Overzicht"
+          },
+          "work_packages_table": {
+            "title": "Werkpakketten tabel"
+          },
+          "work_packages_watched": {
+            "title": "Werkpakketten bekeken door mij"
+          }
+        }
+      },
+      "hal": {
+        "error": {
+          "edit_prohibited": "Het bewerken van %{attribute} is geblokkeerd voor deze bron. Dit attribuut is afgeleid van relaties (bijv. kinderen) of anders niet configureerbaar.",
+          "format": {
+            "date": "%{attribute} is geen geldige datum - JJJJ-MM-DD verwacht."
+          },
+          "general": "Er is een fout opgetreden.",
+          "update_conflict_refresh": "Klik hier om de bron te vernieuwen en bij te werken naar de nieuwste versie."
+        }
+      },
+      "help_texts": {
+        "show_modal": "Show help text"
+      },
+      "homescreen": {
+        "blocks": {
+          "new_features": {
+            "16_1": {
+              "standard": {
+                "new_features_html": "The release contains various new features and improvements, such as <br> <ul class=\"%{list_styling_class}\"> <li>Structure the project life cycle with phases and phase gates.</li> <li>Export meetings in PDF format.</li> <li>Set smart default options for reminders.</li> <li>Use negative lag for work package dates.</li> <li>Display hierarchy trees for hierarchy custom fields.</li> <li>Benefit from improved accessibility for the date picker with ARIA live regions.</li> </ul>\n"
+              }
+            },
+            "learn_about": "Learn more about all new features",
+            "text_new_features": "Lees over nieuwe functies en product-updates."
+          }
+        }
+      },
+      "ical_sharing_modal": {
+        "copy_url_label": "URL kopiëren",
+        "description": "You can use the URL (iCalendar) to subscribe to this calendar in an external client and view up-to-date work package information from there.",
+        "ical_generation_error_text": "Er is een fout opgetreden tijdens het genereren van de agenda-URL.",
+        "inital_setup_error_message": "Er is een fout opgetreden tijdens het ophalen van gegevens.",
+        "success_message": "The URL \"%{name}\" was successfully copied to your clipboard. Paste it in your calendar client to complete the subscription.",
+        "title": "Abonneren op agenda",
+        "token_name_description_text": "If you subscribe to this calendar from multiple devices, this name will help you distinguish between them in your <a href=\"my/access_token\", target=\"_blank\">access tokens</a> list.",
+        "token_name_label": "Waar gaat u dit gebruiken?",
+        "token_name_placeholder": "Typ een naam, bijv. \"Telefoon\"",
+        "warning": "Please don't share this URL with other users. Anyone with this link will be able to view work package details without an account or password."
+      },
+      "ifc_models": {
+        "empty_warning": "Dit project heeft nog geen IFC-modellen.",
+        "keyboard_input_disabled": "Viewer heeft geen toetsenbord besturingselementen. Klik op de viewer om toetsenbord besturing aan de viewer te geven.",
+        "models": {
+          "ifc_models": "IFC modellen"
+        },
+        "use_this_link_to_manage": "Gebruik deze link om je IFC-modellen te uploaden en te beheren",
+        "views": {
+          "split": "Bekijker en tabel",
+          "split_cards": "Bekijker en kaarten",
+          "viewer": "Bekijker"
+        }
+      },
+      "include_projects": {
+        "apply": "Toepassen",
+        "clear_selection": "Selectie wissen",
+        "include_subprojects": "Inclusief alle sub-projecten",
+        "no_results": "Geen enkel project komt overeen met uw zoekcriteria.",
+        "search_placeholder": "Zoek project",
+        "selected_filter": {
+          "all": "Alle projecten",
+          "selected": "Alleen geselecteerd"
+        },
+        "title": "Projecten",
+        "toggle_title": "Inclusief de projecten",
+        "tooltip": {
+          "current_project": "Dit is het huidige project waarin u zich bevindt.",
+          "does_not_match_search": "Het project komt niet overeen met de zoekcriteria.",
+          "include_all_selected": "Project al opgenomen omdat alle subprojecten zijn ingeschakeld."
+        }
+      },
+      "inplace": {
+        "btn_preview_disable": "Voorbeeld uitschakelen",
+        "btn_preview_enable": "Voorbeeld",
+        "button_cancel": "%{attribute}: Afbreken",
+        "button_cancel_all": "Annuleren",
+        "button_edit": "%{attribute}: Bewerken",
+        "button_save": "%{attribute}: Bewaren",
+        "button_save_all": "Opslaan",
+        "clear_value_label": "-",
+        "errors": {
+          "maxlength": "%{field} mag niet meer dan %{maxLength} teken(s) bevatten",
+          "messages_on_field": "Het veld is ongeldig: %{messages}",
+          "minlength": "%{field} mag niet minder dan %{minLength} teken(s) bevatten",
+          "number": "%{field} is geen geldig nummer",
+          "required": "%{field} mag niet leeg zijn"
+        },
+        "link_formatting_help": "Help voor tekstopmaak",
+        "null_value_label": "Geen waarde"
+      },
+      "invite_user_modal": {
+        "back": "Terug",
+        "invite": "Uitnodigen",
+        "message": {
+          "description": "We will send an email to the user, to which you can add a personal message here. An explanation for the invitation could be useful, or prehaps a bit of information regarding the project to help them get started.",
+          "label": "Uitnodigings bericht",
+          "next_button": "Volgende"
+        },
+        "principal": {
+          "already_member_message": "Al lid van %{project}",
+          "create_new_placeholder": "Maak een nieuwe tijdelijke gebruiker:",
+          "invite_user": "Uitnodigen:",
+          "label": {
+            "name": "Naam",
+            "name_or_email": "Naam of e-mailadres"
+          },
+          "next_button": "Volgende",
+          "no_results_group": "Er zijn geen groepen gevonden.",
+          "no_results_placeholder": "Geen tijdelijke gebruikers gevonden",
+          "no_results_user": "Geen gebruikers gevonden",
+          "required": {
+            "group": "Selecteer een groep",
+            "placeholder": "Selecteer een tijdelijke gebruiker",
+            "user": "Selecteer een gebruiker"
+          }
+        },
+        "project": {
+          "label": "Project",
+          "lacking_permission": "Selecteer een ander project omdat u geen rechten heeft om gebruikers toe te wijzen aan de geselecteerde projecten.",
+          "lacking_permission_info": "U heeft geen toestemming om gebruikers toe te wijzen aan het project waar u zich momenteel in bevindt. U moet een andere selecteren.",
+          "next_button": "Volgende",
+          "no_invite_rights": "U bent niet bevoegd om deelnemers uit te nodigen voor dit project",
+          "no_results": "Er zijn geen projecten gevonden",
+          "required": "Selecteer een project"
+        },
+        "role": {
+          "description": "This is the role that the user will receive when they join your project. The role defines which actions they are allowed to take and which information they are allowed to see. <a href=\"https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions\" target=\"_blank\"> Learn more about roles and permissions. </a>",
+          "label": "Rol in %{project}",
+          "next_button": "Volgende",
+          "no_roles_found": "Geen rollen gevonden",
+          "required": "Selecteer een rol"
+        },
+        "success": {
+          "description": {
+            "group": "De groep is nu een deel van %{project}. Ondertussen kun je al plannen maken met die groep en werkpakketten toewijzen, bijvoorbeeld.",
+            "placeholder": "De tijdelijke gebruiker kan nu worden gebruikt in %{project}. Ondertussen kunt u deze gebruiker al plannen en werkpakketten toewijzen, bijvoorbeeld.",
+            "user": "De gebruiker kan nu inloggen om toegang te krijgen tot %{project}. Ondertussen kan je met die gebruiker al plannen en werkpakketten toewijzen, bijvoorbeeld."
+          },
+          "next_button": "Ga verder",
+          "title": "%{principal} is uitgenodigd!"
+        },
+        "summary": {
+          "next_button": "Verstuur uitnodiging"
+        },
+        "title": {
+          "Group": "Groep",
+          "PlaceholderUser": "Tijdelijke gebruiker",
+          "User": "gebruiker",
+          "invite": "Gebruiker uitnodigen",
+          "invite_principal_to_project": "Nodig %{principal} uit voor %{project}",
+          "invite_to_project": "Nodig %{type} uit voor %{project}"
+        },
+        "type": {
+          "group": {
+            "description": "Permissies gebaseerd op de toegewezen rol in het geselecteerde project",
+            "title": "Groep"
+          },
+          "placeholder": {
+            "description": "Heeft geen toegang tot het project en er worden geen e-mails verstuurd.",
+            "description_no_ee": "Has no access to the project and no emails are sent out. <br>Check out the <a href=\"%{eeHref}\" target=\"_blank\">Enterprise edition</a>",
+            "title": "Tijdelijke gebruiker",
+            "title_no_ee": "Placeholder user (Enterprise edition only add-on)"
+          },
+          "required": "Selecteer het type om uit te nodigen",
+          "user": {
+            "description": "Permissies gebaseerd op de toegewezen rol in het geselecteerde project",
+            "title": "Gebruiker"
+          }
+        }
+      },
+      "label_activate": "Activeren",
+      "label_activity_show_all": "Geef alle activiteiten weer",
+      "label_activity_show_only_comments": "Geef alleen activiteiten met commentaar weer",
+      "label_add_attachments": "Bestanden toevoegen",
+      "label_add_column_after": "Kolom toevoegen",
+      "label_add_column_before": "Kolom invoegen",
+      "label_add_columns": "Kolommen toevoegen",
+      "label_add_comment": "Commentaar toevoegen",
+      "label_add_comment_title": "Plaats een opmerking en gebruik het @-teken om anderen te informeren",
+      "label_add_description": "Een beschrijving voor %{file} toevoegen",
+      "label_add_row_after": "Rij toevoegen",
+      "label_add_row_before": "Rij invoegen",
+      "label_add_selected_columns": "Geselecteerde kolommen toevoegen",
+      "label_added_by": "toegevoegd door",
+      "label_added_time_by": "Toegevoegd door <a href=\"%{authorLink}\">%{author}</a> op %{age}",
+      "label_ago": "dagen geleden",
+      "label_all": "alle",
+      "label_all_uppercase": "Alle",
+      "label_all_work_packages": "alle werkpakketten",
+      "label_and": "en",
+      "label_ascending": "Oplopend",
+      "label_assignee": "Toegewezene",
+      "label_attachments": "Bijlagen",
+      "label_author": "Auteur: %{user}",
+      "label_avatar": "Avatar",
+      "label_between": "tussen",
+      "label_board": "Bord",
+      "label_board_locked": "Vergrendeld",
+      "label_board_plural": "Borden",
+      "label_board_sticky": "Sticky",
+      "label_cancel_comment": "Annuleer reactie",
+      "label_change": "Wijzigen",
+      "label_children_derived_duration": "Kinderen van het werkpakket afgeleide duur",
+      "label_closed_work_packages": "gesloten",
+      "label_collapse": "Samenvouwen",
+      "label_collapse_all": "Alles inklappen",
+      "label_collapsed": "samengevouwen",
+      "label_columns": "Kolommen",
+      "label_comment": "Commentaar",
+      "label_committed_at": "%{committed_revision_link} op %{date}",
+      "label_committed_link": "gepleegde herziening %{revision_identifier}",
+      "label_contains": "bevat",
+      "label_create": "Maken",
+      "label_create_work_package": "Nieuw werkpakket maken",
+      "label_created_by": "Gemaakt door",
+      "label_created_on": "gecreëerd op",
+      "label_current": "current",
+      "label_custom_queries": "Privé",
+      "label_date": "Datum",
+      "label_date_with_format": "Geef de %{date_attribute} met gebruik van volgend formaat: %{format}",
+      "label_deactivate": "Deactiveren",
+      "label_default_queries": "Standaard",
+      "label_descending": "Aflopend",
+      "label_description": "Omschrijving",
+      "label_details": "Details",
+      "label_display": "Weergave",
+      "label_drop_files": "Sleep bestanden hierheen om bestanden toe te voegen.",
+      "label_drop_folders_hint": "U kunt geen mappen uploaden als bijlage. Selecteer a. u. b. enkele bestanden.",
+      "label_drop_or_click_files": "Sleep bestanden hierheen of klik om bestanden toe te voegen.",
+      "label_edit_comment": "Deze opmerking bewerken",
+      "label_edit_status": "De status van het werkpakket bewerken",
+      "label_email": "E-mail",
+      "label_equals": "is",
+      "label_expand": "Uitbreiden",
+      "label_expand_all": "Alles uitklappen",
+      "label_expand_project_menu": "Menu project uitvouwen",
+      "label_expanded": "uitgebreid",
+      "label_export": "Exporteren",
+      "label_export_preparing": "De export wordt voorbereid en wordt binnenkort gedownload.",
+      "label_favorites": "Favorieten",
+      "label_filename": "Bestand",
+      "label_files_to_upload": "Deze bestanden worden geüpload:",
+      "label_filesize": "Grootte",
+      "label_formattable_attachment_hint": "Hecht en link bestanden door deze in dit veld te slepen, of plak deze vanuit het klembord.",
+      "label_general": "Algemeen",
+      "label_global_queries": "Publiek",
+      "label_greater_or_equal": ">=",
+      "label_group": "Groep",
+      "label_group_by": "Groeperen op",
+      "label_group_plural": "Groepen",
+      "label_hide_attributes": "Toon minder",
+      "label_hide_column": "Verberg kolom",
+      "label_hide_project_menu": "Project menu samenvouwen",
+      "label_hour": "uur",
+      "label_hours": "uren",
+      "label_import": "Importeren",
+      "label_in": "in",
+      "label_in_less_than": "in minder dan",
+      "label_in_more_than": "in meer dan",
+      "label_incoming_emails": "Inkomende e-mails",
+      "label_information_plural": "Informatie",
+      "label_invalid": "Ongeldig",
+      "label_last_updated_on": "Laatst geüpdatet op",
+      "label_latest_activity": "Laatste Activiteit",
+      "label_learn_more_link": "Meer informatie",
+      "label_less_or_equal": "<=",
+      "label_less_than_ago": "minder dan dagen geleden",
+      "label_loading": "Laden...",
+      "label_mail_notification": "E-mailnotificaties",
+      "label_manage_columns": "Manage and reorder columns",
+      "label_me": "ik",
+      "label_meeting_agenda": "Agenda",
+      "label_meeting_minutes": "Notulen",
+      "label_meetings": "Vergaderingen",
+      "label_menu_collapse": "samenvouwen",
+      "label_menu_expand": "uitbreiden",
+      "label_moderate_comment": "Moderate comment",
+      "label_more_than_ago": "meer dan dagen geleden",
+      "label_next": "Volgende",
+      "label_no_color": "Geen kleur",
+      "label_no_data": "Geen gegevens om weer te geven",
+      "label_no_date": "geen datum",
+      "label_no_due_date": "geen einddatum",
+      "label_no_start_date": "geen startdatum",
+      "label_no_value": "Geen waarde",
+      "label_none": "geen",
+      "label_not_contains": "bevat geen",
+      "label_not_equals": "is niet",
+      "label_on": "op",
+      "label_open_context_menu": "Toon context menu",
+      "label_open_menu": "Menu openen",
+      "label_open_work_packages": "Open",
+      "label_password": "Wachtwoord",
+      "label_per_page": "Per pagina:",
+      "label_please_wait": "Een ogenblik geduld",
+      "label_press_enter_to_save": "Druk op Enter om te bewaren.",
+      "label_preview": "Voorbeeld",
+      "label_previous": "Vorige",
+      "label_project": "Project",
+      "label_project_list": "Projectlijsten",
+      "label_project_plural": "Projecten",
+      "label_public_query": "Publiek",
+      "label_quote_comment": "Citeer dit commentaar",
+      "label_recent": "Recent",
+      "label_rejected_files": "Deze bestanden kunnen niet worden geüpload:",
+      "label_rejected_files_reason": "Deze bestanden kunnen niet worden geüpload gezien hun grootte groter dan %{maximumFilesize} is",
+      "label_remove": "Verwijder",
+      "label_remove_all_files": "Verwijder alle bestanden",
+      "label_remove_column": "Kolom verwijderen",
+      "label_remove_columns": "Verwijder geselecteerde kolommen",
+      "label_remove_file": "%{fileName} verwijderen",
+      "label_remove_row": "Rij verwijderen",
+      "label_remove_watcher": "Volger %{name} verwijderen",
+      "label_report": "Rapport",
+      "label_repository_plural": "Repositories",
+      "label_reset": "Herstel",
+      "label_save_as": "Opslaan als",
+      "label_search_columns": "Search a column",
+      "label_select_project": "Selecteer een project",
+      "label_select_watcher": "Kies een toezichter...",
+      "label_selected_filter_list": "Geselecteerde filters",
+      "label_show_attributes": "Toon alle kenmerken",
+      "label_show_in_menu": "Toon overzicht in menu",
+      "label_sort_by": "Sorteer op",
+      "label_sort_higher": "Omhoog",
+      "label_sort_lower": "Omlaag",
+      "label_sorted_by": "gesorteerd door",
+      "label_sorting": "Sortering",
+      "label_spent_time": "Bestede tijd",
+      "label_star_query": "Favoriet",
+      "label_starred_queries": "Favoriete",
+      "label_subject": "Onderwerp",
+      "label_sum": "Som",
+      "label_sum_for": "Som voor",
+      "label_this_week": "deze week",
+      "label_time_entry_plural": "Bestede tijd",
+      "label_today": "Vandaag",
+      "label_total_amount": "Totaal: %{amount}",
+      "label_total_progress": "%{percent}% totale vooruitgang",
+      "label_total_sum": "Totale som",
+      "label_unwatch": "Niet meer volgen",
+      "label_unwatch_work_package": "Stop met het bekijken van werkpakket",
+      "label_up": "Omhoog",
+      "label_updated_on": "bijgewerkt op",
+      "label_upload_counter": "%{done} van %{count} bestanden afgerond",
+      "label_upload_notification": "Uploaden van bestanden...",
+      "label_uploaded_by": "Geüpload door",
+      "label_user_plural": "Gebruikers",
+      "label_validation_error": "Het werkpakket kon niet worden opgeslagen vanwege de volgende fouten:",
+      "label_value_derived_from_children": "(waarde afgeleid van kinderen)",
+      "label_version_plural": "Versies",
+      "label_view_has_changed": "Deze weergave heeft niet-opgeslagen wijzigingen. Klik om ze op te slaan.",
+      "label_visibility_settings": "Zichtbaarheidsinstellingen",
+      "label_wait": "Moment geduld a.u.b. voor configuratie...",
+      "label_warning": "Waarschuwing",
+      "label_watch": "Volgen",
+      "label_watch_work_package": "Bekijk werkpakket",
+      "label_watcher_added_successfully": "Toezichthouder succesvol toegevoegd!",
+      "label_watcher_deleted_successfully": "Toezichthouder succesvol verwijderd!",
+      "label_work_package": "Werkpakket",
+      "label_work_package_context_menu": "Contextmenu werkpakket",
+      "label_work_package_details_you_are_here": "You are on the %{tab} tab for %{type} %{subject}.",
+      "label_work_package_parent": "Bovenliggend werkpakket",
+      "label_work_package_plural": "Werkpakketten",
+      "label_work_package_upload_notification": "Uploaden van bestanden voor werk pakket #%{id}: %{subject}",
+      "label_wp_id_added_by": "#%{id} toegevoegd door %{author}",
+      "modals": {
+        "button_apply": "Toepassen",
+        "button_cancel": "Annuleren",
+        "button_delete": "Verwijderen",
+        "button_save": "Opslaan",
+        "button_submit": "Verzenden",
+        "destroy_time_entry": {
+          "text": "Are you sure you want to delete the following time entry?",
+          "title": "Confirm deletion of time entry"
+        },
+        "destroy_work_package": {
+          "bulk_text": "Weet u zeker dat u de volgende %{label} wilt verwijderen?",
+          "confirm_deletion_children": "Ik erken dat alle onderliggende werkpakketten van de weergegeven werkpakketten verwijderd worden.",
+          "deletes_children": "Alle onderliggende werkpakketten en hun nakomelingen ook worden verwijderd.",
+          "has_children": "Het werkpakket heeft %{childUnits}:",
+          "single_text": "Weet u zeker dat u het werkpakket wilt verwijderen",
+          "title": "Bevestig verwijdering van %{label}"
+        },
+        "form_submit": {
+          "text": "Weet u zeker dat u deze actie wilt uitvoeren?",
+          "title": "Bevestigen om verder te gaan"
+        },
+        "label_delete_page": "Verwijder huidige pagina",
+        "label_name": "Naam"
+      },
+      "myTimeTracking": {
+        "noSpecificTime": "No specific time"
+      },
+      "my_page": {
+        "label": "Mijn pagina"
+      },
+      "notice_bad_request": "Foute ingave.",
+      "notice_job_started": "taak gestart.",
+      "notice_no_results_to_display": "Geen zichtbare resultaten om weer te geven.",
+      "notice_successful_create": "Aanmaak geslaagd.",
+      "notice_successful_delete": "Verwijdering geslaagd.",
+      "notice_successful_update": "Succesvolle wijziging.",
+      "notifications": {
+        "center": {
+          "and_more_users": {
+            "one": "en 1 ander",
+            "other": "en %{count} anderen"
+          },
+          "empty_state": {
+            "no_notification": "Het lijkt erop dat u helemaal bij bent.",
+            "no_notification_for_filter": "Looks like you are all caught up for this filter.",
+            "no_notification_with_current_filter": "Het lijkt erop dat je allemaal bij bent met %{filter} filter.",
+            "no_notification_with_current_project_filter": "Looks like you are all caught up with the selected project.",
+            "no_selection": "Klik op een melding om alle activiteit details te bekijken."
+          },
+          "label_actor_and": "en",
+          "mark_all_read": "Alles als gelezen markeren",
+          "mark_all_read_confirmation": "This will mark all notifications in this view as read. Are you sure you want to do this?",
+          "mark_as_read": "Als gelezen markeren",
+          "new_notifications": {
+            "link_text": "Klik hier om ze te laden.",
+            "message": "Er zijn nieuwe meldingen."
+          },
+          "no_results": {
+            "at_all": "New notifications will appear here when there is activity that concerns you.",
+            "with_current_filter": "Er zijn geen meldingen in deze weergave op dit moment"
+          },
+          "text_update_date_by": "%{date} door",
+          "total_count_warning": "De %{newest_count} meest recente meldingen weergeven. %{more_count} meer worden niet weergegeven."
+        },
+        "date_alerts": {
+          "milestone_date": "Milestone date",
+          "overdue": "Te laat",
+          "overdue_since": "since %{difference_in_days}.",
+          "property_is": "is in %{difference_in_days}.",
+          "property_is_deleted": "is deleted.",
+          "property_today": "is today.",
+          "property_was": "was %{difference_in_days} ago."
+        },
+        "no_unread": "Geen ongelezen meldingen",
+        "reasons": {
+          "assigned": "Toegewezene",
+          "commented": "Becommentarieerd",
+          "created": "Gemaakt",
+          "dateAlert": "Date alert",
+          "mentioned": "Genoemd",
+          "prioritized": "Prioritized",
+          "processed": "Verwerkt",
+          "reminder": "Reminder",
+          "responsible": "Verantwoording afleggen",
+          "scheduled": "Gepland",
+          "shared": "Gedeeld",
+          "watched": "Kijker"
+        },
+        "reminders": {
+          "note": "Note: “%{note}”"
+        },
+        "settings": {
+          "change_notification_settings": "You can modify your <a target=\"_blank\" href=\"%{url}\">notification settings</a> to ensure you never miss an important update.",
+          "global": {
+            "date_alerts": {
+              "description": "Automatic notifications when important dates are approaching for open work packages you are involved in (assignee, accountable or watcher).",
+              "title": "Date alerts"
+            },
+            "delayed": {
+              "description": "Extra meldingen voor activiteiten in alle projecten.",
+              "title": "Niet-deelnemend"
+            },
+            "immediately": {
+              "description": "Notifications for all activities in work packages you are involved in (assignee, accountable or watcher).",
+              "title": "Deelnemend"
+            },
+            "overdue": "Wanneer achterstallig"
+          },
+          "notify_me": "Waarschuw mij",
+          "project_specific": {
+            "add": "Instelling voor project toevoegen",
+            "already_selected": "Dit project is al geselecteerd",
+            "description": "These project-specific settings override default settings above.",
+            "remove": "Projectinstellingen verwijderen",
+            "title": "Project-specifieke meldingsinstellingen"
+          },
+          "reasons": {
+            "assignee": "Toegewezene",
+            "mentioned": {
+              "description": "Ontvang een melding elke keer dat iemand mij ergens noemt",
+              "title": "Genoemd"
+            },
+            "responsible": "Verantwoording afleggen",
+            "shared": "Gedeeld",
+            "watched": "Kijker",
+            "work_package_commented": "Alle nieuwe reacties",
+            "work_package_created": "Nieuwe werkpakketten",
+            "work_package_prioritized": "Alle prioriteitswijzigingen",
+            "work_package_processed": "Alle statuswijzigingen",
+            "work_package_scheduled": "Alle datum wijzigingen "
+          },
+          "reminders": {
+            "no_notification": "Geen melding",
+            "timeframes": {
+              "normal": {
+                "P1D": "1 dag ervoor",
+                "P3D": "3 dagen ervoor",
+                "P7D": "een week ervoor",
+                "PT0S": "dezelfde dag"
+              },
+              "overdue": {
+                "P1D": "elke dag",
+                "P3D": "elke 3 dagen",
+                "P7D": "elke week"
+              }
+            }
+          },
+          "title": "Instellingen voor meldingen"
+        },
+        "title": "Meldingen"
+      },
+      "onboarding": {
+        "buttons": {
+          "got_it": "Begrepen",
+          "next": "Volgende",
+          "skip": "Overslaan"
+        },
+        "steps": {
+          "backlogs": {
+            "overview": "Beheer uw werk in de <b>backlogs</b> weergave.",
+            "sprints": "Aan de rechterkant hebt u de product backlog en de bug backlog, aan de linkerkant de respectievelijke sprints. Hier kunt u <b>epics, user stories en bugs</b> maken, prioriteren door ze te slepen en ze toevoegen aan een sprint.",
+            "task_board": "Het taakbord geeft de <b>vooruitgang voor deze sprint</b> weer. Klik op het plus (+) pictogram naast een verhaal om nieuwe taken of belemmeringen toe te voegen. <br> De status kan worden bijgewerkt door slepen en neerzetten.",
+            "task_board_arrow": "Om uw <b>taakbord</b>te zien, opent u de sprint drop-down...",
+            "task_board_select": "...en selecteer het <b>taakbord</b> item."
+          },
+          "boards": {
+            "add": "Klik op het plus (+) icoon om <b>een nieuwe kaart te creëren</b> of <b>een bestaande kaart  toe te voegen</b> aan de lijst op het bord.",
+            "drag": "Sleep uw kaarten in een bepaalde lijst om ze te rangschikken of om ze naar een andere lijst te verplaatsen. <br> U kunt op het info pictogram (i) in de rechterbovenhoek klikken of dubbelklikken op een kaart om de details te openen.",
+            "lists_basic": "Hier kun je meerdere lijsten (kolommen) maken binnen je agile bord.",
+            "lists_kanban": "Hier kunt u meerdere lijsten (kolommen) binnen uw bord maken. Met deze functie kunt u bijvoorbeeld een <b>Kanban board</b>maken.",
+            "overview": "Selecteer <b>borden</b> om het overzicht te verschuiven en uw project te beheren met behulp van de agile borden weergave."
+          },
+          "help_menu": "Het Help (?) menu biedt <b>extra hulpbronnen</b>. Hier vindt u een gebruikershandleiding, handige how-to videos en meer. <br> Veel plezier met uw werk met OpenProject!",
+          "members": "Nodig nieuwe <b>leden</b> uit om deel te nemen aan uw project.",
+          "quick_add_button": "Klik op het plus (+) pictogram in de koptekst navigatie om <b>een nieuw project te maken</b> of <b>collega's uit te nodigen</b>.",
+          "sidebar_arrow": "Gebruik de terug pijl in de linkerbovenhoek om terug te keren naar het project <b>hoofdmenu</b>.",
+          "team_planner": {
+            "add_assignee": "Voeg taakontvangers toe aan de teamplanner om te beginnen.",
+            "add_existing": "Zoek naar bestaande werkpakketten en sleep ze naar de teamplanner om ze direct toe te wijzen aan een teamlid en definieer begin- en einddata.",
+            "calendar": "Het wekelijkse of tweewekelijkse planningsbord toont alle werkpakketten die zijn toegewezen aan je teamleden.",
+            "card": "Sleep de werkpakketten horizontaal om ze achteruit of naar voren te bewegen op tijd, sleep de randen om begin- en einddatums te wijzigen en sleep ze zelfs verticaal naar een andere rij om ze toe te wijzen aan een andere lid.",
+            "overview": "Met de teamplanner kunt u taken visueel toewijzen aan teamleden en een overzicht krijgen over wie er aan wat werkt."
+          },
+          "welcome": "Take a three-minute introduction tour to learn the most <b>important features</b>. <br> We recommend completing the steps until the end. You can restart the tour any time.",
+          "wiki": "Binnen de <b>wiki</b> kunt u kennis delen en documenteren met uw team.",
+          "wp": {
+            "back_button": "Gebruik de terug pijl in de linkerbovenhoek om af te sluiten en terug te gaan naar de werkpakketlijst.",
+            "create_button": "De knop <b>+ Aanmaken</b> zal een nieuw werkpakket toevoegen aan uw project.",
+            "full_view": "De <b>werkpakket details</b> weergave biedt alle relevante informatie over een bepaald werkpakket. zoals z'n beschrijving, status, prioriteit, activiteiten, afhankelijkheden en opmerkingen.",
+            "gantt_menu": "Create project schedules and timelines effortlessly using the Gantt chart module.",
+            "list": "Dit <b>werk</b> pakket overzicht biedt een overzicht van al het werk in uw project, zoals taken, mijlpalen, fases en meer. <br> Werkpakketten kunnen direct vanuit deze weergave worden gemaakt en bewerkt. Om toegang te krijgen tot de details van een bepaald werkpakket, dubbelklik gewoon op de rij.",
+            "timeline": "Hier kunt u <b>uw projectplan</b>bewerken, nieuwe werkpakketten maken, zoals taken, mijlpalen, fasen, en meer en <b>afhankelijkheden toevoegen</b>. Alle teamleden kunnen de laatste planning op elk moment zien en bijwerken.",
+            "toggler": "Laten we nu een kijkje nemen in de sectie <b>werkpakket</b> die u een meer gedetailleerde weergave van uw werk geeft."
+          }
+        }
+      },
+      "open_project_storage_modal": {
+        "waiting_subtitle": {
+          "network_off": "There is a network problem.",
+          "network_on": "Network is back. We are trying."
+        },
+        "waiting_title": {
+          "timeout": "Time-out"
+        }
+      },
+      "overviews": {
+        "label": "Overzicht"
+      },
+      "pagination": {
+        "no_other_page": "U bent op de enige pagina.",
+        "pages": {
+          "next": "Vooruit naar volgende pagina",
+          "previous": "Terug naar de vorige pagina"
+        }
+      },
+      "password_confirmation": {
+        "field_description": "U moet uw wachtwoord invoeren om deze wijziging te bevestigen.",
+        "title": "Voer uw wachtwoord in om door te gaan"
+      },
+      "placeholders": {
+        "default": "-",
+        "description": "Beschrijving: Klik om te bewerken...",
+        "relation_description": "Klik om een beschrijving voor deze relatie toe te voegen",
+        "selection": "Gelieve te selecteren",
+        "subject": "Onderwerp hier invoeren"
+      },
+      "project": {
+        "autocompleter": {
+          "label": "Project auto aanvullen"
+        },
+        "click_to_switch_to_project": "Project: %{projectname}",
+        "confirm_template_load": "Switching the template will reload the page and you will lose all input to this form. Continue?",
+        "context": "Context van het project",
+        "copy": {
+          "copy_options": "Opties kopiëren"
+        },
+        "no_template_selected": "(Geen)",
+        "not_available": "Project N/A",
+        "required_outside_context": "Kies een project om het werkpakket in te creëren om alle attributen te zien. U kunt alleen projecten selecteren waarvan het type hierboven is geactiveerd.\n",
+        "use_template": "Sjabloon gebruiken"
+      },
+      "project_menu_details": "Details",
+      "relation_buttons": {
+        "abort": "Annuleren",
+        "add_existing": "Bestaande toevoegen",
+        "add_existing_child": "Voeg subdocument toe",
+        "add_existing_relation": "Bestaande relatie toevoegen",
+        "add_new_child": "Maak nieuw kind",
+        "add_new_relation": "Maak nieuwe relatie",
+        "add_parent": "Voeg bestaande ouder toe",
+        "add_predecessor": "Toevoegen van de voorganger",
+        "add_successor": "Add successor",
+        "change_parent": "Wijzig bovenliggende pagina",
+        "create_new": "Nieuwe aanmaken",
+        "group_by_relation_type": "Groep per relatietype",
+        "group_by_wp_type": "Groep per werkpakkettype",
+        "hierarchy_indent": "Inspringen hiërarchie",
+        "hierarchy_outdent": "Uitspringen hiërarchie",
+        "remove": "Relatie verwijderen",
+        "remove_child": "Verwijder kind",
+        "remove_parent": "Verwijder bovenliggende map",
+        "save": "Sla relatie op",
+        "set_parent": "Stel bovenliggend in",
+        "show_relations": "Relaties tonen",
+        "toggle_description": "Wissel de relatie beschrijving",
+        "update_description": "Kies of wijzig beschrijving van deze relatie",
+        "update_relation": "Klik op het type relatie wijzigen"
+      },
+      "relation_labels": {
+        "blocked": "Geblokkeerd door",
+        "blocks": "Blokken",
+        "child": "Kind",
+        "children": "Subdocumenten",
+        "duplicated": "Gekopieerd door",
+        "duplicates": "Kopies",
+        "follows": "Volgt",
+        "includes": "Bevat",
+        "parent": "Bovenliggend werkpakket",
+        "partof": "Onderdeel van",
+        "precedes": "Gaat vooraf aan",
+        "relates": "Verwant Met",
+        "relation_type": "relatie type",
+        "required": "Vereist door",
+        "requires": "Vereist"
+      },
+      "relations": {
+        "empty": "Er bestaat geen relatie",
+        "remove": "Relatie verwijderen"
+      },
+      "relations_autocomplete": {
+        "parent_placeholder": "Kies nieuwe ouder of druk op escape om te annuleren.",
+        "placeholder": "Typ om te zoeken"
+      },
+      "relations_hierarchy": {
+        "children_headline": "Subdocumenten",
+        "hierarchy_headline": "Hiërarchie",
+        "parent_headline": "Bovenliggend werkpakket"
+      },
+      "reminders": {
+        "settings": {
+          "alerts": {
+            "document_added": "Documenten toegevoegd",
+            "explanation": "Meldingen vandaag zijn beperkt tot werkpakketten. U kunt ervoor kiezen om e-mailmeldingen voor deze gebeurtenissen te blijven ontvangen totdat ze zijn opgenomen in meldingen:\n",
+            "forum_messages": "Nieuwe forumberichten",
+            "membership_added": "Lidmaatschap toegevoegd",
+            "membership_updated": "Lidmaatschap bijgewerkt",
+            "news_added": "Nieuws toegevoegd",
+            "news_commented": "Reageer op een nieuwsitem",
+            "title": "E-mail meldingen voor andere items (die geen werkpakketten zijn)",
+            "wiki_page_added": "Wiki-pagina toegevoegd",
+            "wiki_page_updated": "Wiki-pagina bijgewerkt"
+          },
+          "daily": {
+            "add_time": "Tijd toevoegen",
+            "enable": "Dagelijkse e-mailherinneringen inschakelen",
+            "explanation": "You will receive these reminders only for unread notifications and only at hours you specify. %{no_time_zone}",
+            "no_time_zone": "Until you configure a time zone for your account, the times will be interpreted to be in UTC.",
+            "time_label": "Tijd %{counter}:",
+            "title": "Stuur me dagelijkse herinneringen voor ongelezen meldingen"
+          },
+          "immediate": {
+            "mentioned": "Onmiddellijk wanneer iemand @vermeldt",
+            "personal_reminder": "Immediately when I receive a personal reminder",
+            "title": "Stuur me een e-mail herinnering"
+          },
+          "pause": {
+            "first_day": "Eerste dag",
+            "label": "Temporarily pause daily email reminders",
+            "last_day": "Laatste dag"
+          },
+          "title": "E-mail herinneringen",
+          "workdays": {
+            "title": "Ontvang herinneringen per e-mail op deze dagen"
+          }
+        }
+      },
+      "reporting_engine": {
+        "label_remove": "Verwijderen",
+        "label_response_error": "Er is een fout opgetreden tijdens het verwerken van het verzoek."
+      },
+      "repositories": {
+        "select_branch": "Selecteer pad",
+        "select_tag": "Selecteer label"
+      },
+      "revit": {
+        "revit_add_in": "Revit toevoeging",
+        "revit_add_in_settings": "Revit toevoeging instellingen"
+      },
+      "sharing": {
+        "selected_count": "%{count} geselecteerd",
+        "selection": {
+          "mixed": "Gemengd"
+        },
+        "share": "Deel"
+      },
+      "sort": {
+        "activate_asc": "activeren om de oplopende sorteervolgorde toe te passen",
+        "activate_dsc": "activeren als u wilt een aflopende sorteervolgorde toepassen",
+        "activate_no": "activeer om de sortering te verwijderen",
+        "sorted_asc": "Oplopende sorteervolgorde toegepast, ",
+        "sorted_dsc": "Aflopende sorteervolgorde toegepast, ",
+        "sorted_no": "Geen sortering toegepast, ",
+        "sorting_disabled": "sorteren is uitgeschakeld"
+      },
+      "spot": {
+        "drop_modal": {
+          "close": "Close modal",
+          "focus_grab": "This is a focus anchor for modals. Press shift+tab to go back to the modal trigger element."
+        },
+        "filter_chip": {
+          "remove": "Verwijder"
+        }
+      },
+      "storages": {
+        "authentication_error": "Authentication with %{storageType} failed",
+        "choose_location": "Kies locatie",
+        "drop_files": "Sleep bestanden hier om ze te uploaden naar %{name}.",
+        "drop_or_click_files": "Sleep bestanden hier naartoe of klik om ze te uploaden naar %{name}.",
+        "file_links": {
+          "already_linked_directory": "Deze map is al gekoppeld aan dit werkpakket.",
+          "already_linked_file": "Dit bestand is al gekoppeld aan dit werkpakket.",
+          "download": "Downloaden %{fileName}",
+          "empty": "Currently there are no linked files to this work package. Start linking files with the action below or from within %{storageType}.\n",
+          "link_uploaded_file_error": "An error occurred linking the recently uploaded file '%{fileName}' to the work package %{workPackageId}.\n",
+          "open": "Open bestand in opslag",
+          "open_location": "Open bestand op locatie",
+          "remove": "Bestandslink verwijderen",
+          "remove_confirmation": "Weet u zeker dat u het bestand van dit werkpakket wilt ontkoppelen? Ontkoppelen heeft geen invloed op het oorspronkelijke bestand en verwijdert alleen de verbinding met dit werkpakket.\n",
+          "remove_short": "Koppeling verwijderen",
+          "select": "Selecteer bestanden",
+          "select_all": "Alles selecteren",
+          "selection": {
+            "one": "Link 1 bestand",
+            "other": "Link %{count} bestanden",
+            "zero": "Selecteer bestanden om te koppelen"
+          },
+          "success_create": {
+            "one": "Successfully created 1 file link.",
+            "other": "Successfully created %{count} file links."
+          },
+          "tooltip": {
+            "not_found": "Dit bestand kan niet worden gevonden.",
+            "not_logged_in": "Please log in to the storage to access this file.",
+            "view_not_allowed": "U heeft geen toestemming om dit bestand te bekijken."
+          },
+          "upload_error": {
+            "403": "Your file (%{fileName}) could not be uploaded due to system restrictions. Please contact your administrator for more information.\n",
+            "413": "Your file (%{fileName}) is bigger than what OpenProject can upload to %{storageType}. You can upload it directly to %{storageType} first and then link the file.\n",
+            "507": "Your file (%{fileName}) is bigger than the storage quota allows. Contact your administrator to modify this quota.\n",
+            "default": "Uw bestand (%{fileName}) kon niet worden geüpload.\n",
+            "detail": {
+              "nextcloud": "Please check that the latest version of the Nextcloud App \"OpenProject Integration\" is installed and contact your administrator for more information.\n"
+            }
+          }
+        },
+        "files": {
+          "already_existing_body": "Er bestaat al een bestand met de naam \"%{fileName}\" op de locatie waar u dit bestand probeert te uploaden. Wat wil je doen?\n",
+          "already_existing_header": "Dit bestand bestaat al",
+          "cannot_create_folder": "Failed to create folder. Avoid using special characters and symbols and make sure the folder does not exist already.",
+          "directory_not_writeable": "U bent niet gemachtigd om bestanden toe te voegen aan deze map.",
+          "dragging_folder": "De upload naar %{storageType} ondersteunt geen mappen.",
+          "dragging_many_files": "The upload to %{storageType} supports only one file at once.",
+          "empty_folder": "Deze map is leeg.",
+          "empty_folder_location_hint": "Klik op de knop hieronder om het bestand te uploaden naar deze locatie.",
+          "file_not_selectable_location": "Het selecteren van een bestand is niet mogelijk tijdens het kiezen van een locatie.",
+          "managed_project_folder_no_access": "U hebt nog geen toegang tot de beheerde projectmap. Wacht even en probeer het opnieuw.\n",
+          "managed_project_folder_not_available": "The automatically managed project folder was not yet found. Please wait a bit, reload the page to fetch the newest data, and try again.\n",
+          "project_folder_no_access": "You have no access to the project folder. Please, contact your administrator to get access or upload the file in another location.\n",
+          "upload_keep_both": "Beide behouden",
+          "upload_replace": "Vervang"
+        },
+        "information": {
+          "authentication_error": "The request to %{storageType} could not be authenticated, that's an error.",
+          "connection_error": "Sommige %{storageType} instellingen werken niet. Neem contact op met uw %{storageType} beheerder.\n",
+          "live_data_error": "Fout bij ophalen bestand details",
+          "live_data_error_description": "Sommige %{storageType} gegevens konden niet worden opgehaald. Probeer deze pagina te herladen of neem contact op met uw %{storageType} beheerder.\n",
+          "no_file_links": "Om bestanden te koppelen aan dit werkpakket, doe het via %{storageType}.",
+          "not_logged_in": "Om een link toetevoegen, bekijk of upload bestanden gerelateerd aan dit werkpakket, log dan in op %{storageType}.\n",
+          "suggest_logout": "You can try whether logging out and back in fixes this problem.",
+          "suggest_relink": "You can try whether re-linking your account via the login button below fixes this problem."
+        },
+        "link_existing_files": "Bestaande bestanden koppelen",
+        "link_files_in_storage": "Koppel bestanden aan %{storageType}",
+        "login": "%{storageType} login",
+        "login_to": "Inloggen op %{storageType}",
+        "new_folder": "New folder",
+        "no_connection": "Geen %{storageType} verbinding",
+        "open_storage": "%{storageType} openen",
+        "select_location": "Selecteer locatie",
+        "types": {
+          "default": "Opslag",
+          "nextcloud": "Nextcloud",
+          "one_drive": "OneDrive/SharePoint"
+        },
+        "upload_files": "Bestanden uploaden"
+      },
+      "team_planner": {
+        "add_assignee": "Toegewezene",
+        "add_existing": "Bestaande toevoegen",
+        "add_existing_title": "Bestaande werkpakketten toevoegen",
+        "cannot_drag_here": "Kan het werkpakket niet verwijderen vanwege machtigingen of bewerkingsbeperkingen.",
+        "cannot_drag_to_non_working_day": "Dit werkpakket kan niet starten/eindigen op een niet-werkdag.",
+        "create_label": "Team planner",
+        "create_title": "Maak een nieuwe teamplanner",
+        "drag_here_to_remove": "Sleep hierheen om taakontvanger en start- en einddata te verwijderen.",
+        "eight_weeks": "8 weken",
+        "four_weeks": "4 weken",
+        "modify": {
+          "errors": {
+            "fallback": "Dit werkpakket kan niet worden bewerkt.",
+            "permission_denied": "U heeft niet de benodigde rechten om dit te wijzigen."
+          }
+        },
+        "no_data": "Voeg taakontvangers toe om uw team planner op te zetten.",
+        "one_week": "1-week",
+        "quick_add": {
+          "empty_state": "Gebruik het zoekveld om werkpakketten te vinden en sleep ze naar de planner om toe te wijzen aan iemand en begin- en einddatums te definiëren.",
+          "search_placeholder": "Zoeken ..."
+        },
+        "remove_assignee": "Verwijder verantwoordelijke",
+        "today": "Vandaag",
+        "two_weeks": "2-week",
+        "unsaved_title": "Naamloze teamplanner",
+        "work_week": "Werkweek"
+      },
+      "text_are_you_sure": "Weet u het zeker?",
+      "text_data_lost": "Alle ingevoerde gegevens zullen verloren gaan.",
+      "text_query_destroy_confirmation": "Weet u zeker dat u het geselecteerde overzicht wilt verwijderen?",
+      "text_user_wrote": "%{value} schreef:",
+      "text_work_packages_destroy_confirmation": "Weet u zeker dat u geselecteerd(e) werkpakket(ten) wilt verwijderen?",
+      "time_entry": {
+        "stop": "Stop",
+        "title": "Gelogde tijd",
+        "tracking": "Tijdregistratie",
+        "work_package_required": "Vereist eerst een werkpakket te selecteren."
+      },
+      "timer": {
+        "button_stop": "Stop current timer",
+        "start_new_timer": "Start new timer",
+        "timer_already_running": "To start a new timer, you must first stop the current timer:",
+        "timer_already_stopped": "No active timer for this work package, have you stopped it in another window?",
+        "tracking_time": "Tracking time"
+      },
+      "tl_toolbar": {
+        "outlines": "Niveau van de hiërarchie",
+        "zooms": "Zoom niveau"
+      },
+      "toolbar": {
+        "filter": "Filter",
+        "search_query_label": "Zoek opgeslagen weergaven",
+        "settings": {
+          "columns": "Kolommen",
+          "configure_view": "Weergave configureren",
+          "delete": "Verwijderen",
+          "display_hierarchy": "De hiërarchie Weergeven",
+          "display_sums": "Toon sommen",
+          "export": "Exporteren",
+          "group_by": "Groeperen op",
+          "hide_hierarchy": "Hiërarchie modus verbergen",
+          "hide_sums": "Verberg sommen",
+          "page_settings": "Hernoem weergave",
+          "save": "Opslaan",
+          "save_as": "Opslaan als",
+          "share_calendar": "Abonneren op agenda",
+          "sort_by": "Sorteer op",
+          "visibility_settings": "Zichtbaarheidsinstellingen"
+        },
+        "unselected_title": "Werkpakket"
+      },
+      "two_factor_authentication": {
+        "errors": {
+          "aborted": "De verificatie is geannuleerd. Probeer het opnieuw."
+        },
+        "label_two_factor_authentication": "Twee-staps authenticatie"
+      },
+      "types": {
+        "attribute_groups": {
+          "confirm_reset": "Waarschuwing: Weet u zeker dat u de configuratie van het formulier wilt herstellen? Dit herstelt de kenmerken hun standaardgroep, deselecteerd de selectievakjes van de zichtbaarheid, en schakeld alle aangepaste velden uit.\n",
+          "error_duplicate_group_name": "De groep naam %{group} word meer dan één keer gebruikt. Groep namen moeten uniek zijn.",
+          "error_no_table_configured": "Gelieve een tabel voor %{group} instellen.",
+          "more_information": "Meer informatie",
+          "nevermind": "Geen aandacht",
+          "reset_title": "Reset formulier configuratie",
+          "upgrade_to_ee": "Upgrade to Enterprise on-premises edition",
+          "upgrade_to_ee_text": "Wow! If you need this add-on you are a super pro! Would you mind supporting us OpenSource developers by becoming an Enterprise edition client?"
+        }
+      },
+      "units": {
+        "child_work_packages": {
+          "one": "één onderliggend werkpakket",
+          "other": "%{count} werkpakket kinderen"
+        },
+        "day": {
+          "one": "1 dag",
+          "other": "%{count} dagen",
+          "zero": "0 dagen"
+        },
+        "hour": {
+          "one": "1 u",
+          "other": "%{count} u",
+          "zero": "0 uur"
+        },
+        "word": {
+          "one": "1 word",
+          "other": "%{count} words"
+        },
+        "workPackage": {
+          "one": "werkpakket",
+          "other": "werkpakketten"
+        }
+      },
+      "upsell": {
+        "ee_only": "Enterprise edition add-on"
+      },
+      "views": {
+        "card": "Kaarten",
+        "list": "Tabel",
+        "timeline": "Gantt"
+      },
+      "watchers": {
+        "label_add": "Kijkers toevoegen",
+        "label_discard": "Selectie verwijderen",
+        "label_error_loading": "Er is een fout opgetreden tijdens het laden van de volgers",
+        "label_loading": "volgers worden geladen...",
+        "label_search_watchers": "Zoek volgers",
+        "typeahead_placeholder": "Zoek naar mogelijke toezichthouders"
+      },
+      "wiki_formatting": {
+        "code": "Inline-code",
+        "deleted": "Verwijderd",
+        "heading1": "Hoofding 1",
+        "heading2": "Hoofding 2",
+        "heading3": "Hoofding 3",
+        "image": "Afbeelding",
+        "italic": "Schuingedrukt",
+        "ordered_list": "Geordende Lijst",
+        "preformatted_text": "Voorgeformateerde Tekst",
+        "quote": "Citeer",
+        "strong": "Vet",
+        "underline": "Onderlijnd",
+        "unordered_list": "Ongeordende Lijst",
+        "unquote": "Einde citaat",
+        "wiki_link": "Link naar een Wiki-pagina"
+      },
+      "work_packages": {
+        "baseline": {
+          "addition_label": "Added to view within the comparison time period",
+          "column_incompatible": "This column does not show changes in Baseline mode.",
+          "modification_label": "Modified within the comparison time period",
+          "removal_label": "Removed from view within the comparison time period"
+        },
+        "bulk_actions": {
+          "copy": "Selectie kopiëren",
+          "delete": "Selectie verwijderen",
+          "edit": "Aanpassen in bulk",
+          "move": "Bulk verandering van project"
+        },
+        "button_clear": "Wissen",
+        "comment_added": "De opmerking is succesvol toegevoegd.",
+        "comment_send_failed": "Er is een fout opgetreden. De opmerking is niet ingediend.",
+        "comment_updated": "De opmerking is succesvol bijgewerkt.",
+        "confirm_edit_cancel": "Bent u zeker dat u het bewerken van het werkpakket wilt annuleren?",
+        "copy": {
+          "title": "Werkpakketten kopiëren"
+        },
+        "create": {
+          "button": "Maken",
+          "header": "Nieuw %{type}",
+          "header_no_type": "Nieuw werkpakket (Type nog niet ingesteld)",
+          "header_with_parent": "Nieuw %{type} (Kind van %{parent_type} #%{id})",
+          "title": "Nieuw werkpakket"
+        },
+        "default_queries": {
+          "all_open": "Alles open",
+          "assigned_to_me": "Toegewezen aan mij",
+          "created_by_me": "Gemaakt door mijzelf",
+          "latest_activity": "Laatste Activiteit",
+          "manually_sorted": "Nieuwe handmatig gesorteerde query",
+          "milestones": "Mijlpalen",
+          "overdue": "Te laat",
+          "recently_created": "Onlangs gecreëerd",
+          "shared_with_me": "Shared with me",
+          "shared_with_users": "Gedeeld met gebruikers",
+          "summary": "Samenvatting"
+        },
+        "description_enter_text": "Tekst invoeren",
+        "description_filter": "Filter",
+        "description_options_hide": "Verberg opties",
+        "description_options_show": "Toon opties",
+        "edit_attribute": "%{attribute} - Bewerken",
+        "faulty_query": {
+          "description": "Uw overzicht is onjuist en kan niet worden verwerkt.",
+          "title": "Werkpakketten konden niet worden geladen."
+        },
+        "filters": {
+          "baseline_incompatible": "This filter attribute is not taken into consideration in Baseline mode.",
+          "baseline_warning": "Baseline mode is on but some of your active filters are not included in the comparison.",
+          "title": "Filter werkpakketten"
+        },
+        "hierarchy": {
+          "children_collapsed": "Hiërarchie niveau %{level}, samengevouwen. Klik om te tonen van de gefilterde kinderen",
+          "children_expanded": "Hiërarchie niveau %{level}, uitgebreid. Klik op om samen te vouwen van de gefilterde kinderen",
+          "hide": "Hiërarchie modus verbergen",
+          "leaf": "Werkpakket blad op niveau %{level}.",
+          "show": "Toon hiërarchie modus",
+          "toggle_button": "Klik hierop om de hiërarchie modus te schakelen."
+        },
+        "inline_create": {
+          "title": "Klik hier om een nieuw werkpakket aan deze lijst toe te voegen"
+        },
+        "jump_marks": {
+          "content": "Ga naar inhoud",
+          "label_content": "Klik hier om het menu overslaan en ga naar de inhoud",
+          "label_pagination": "Klik hier om de tabel werk pakketten over te slaan en ga naar paginering",
+          "pagination": "Ga naar de tabelpaginering"
+        },
+        "key_value": "%{key}: %{value}",
+        "label_column_multiselect": "Gecombineerd met dropdown-veld: Selecteer met richtingstoetsen, bevestig selectie met enter, verwijder met backspace",
+        "label_disable_multi_select": "Laat meerkeuze niet toe",
+        "label_enable_multi_select": "Laat meerkeuze toe",
+        "label_filter_add": "Filter toevoegen",
+        "label_filter_by_text": "Filter op tekst",
+        "label_options": "Opties",
+        "limited_results": "Only %{count} work packages can be shown in manual sorting mode. Please reduce the results by filtering, or switch to automatic sorting.",
+        "message_error_during_bulk_delete": "Een fout is opgetreden bij het proberen verwijderen van werkpakketten.",
+        "message_successful_bulk_delete": "Werkpakketten succesvol verwijderd.",
+        "message_successful_show_in_fullscreen": "Klik hier om dit werkpakket te openen in volledig scherm.",
+        "message_view_spent_time": "Toon bestede tijd voor dit werkpakket",
+        "message_work_package_read_only": "Werkpakket is opgesloten in deze status. Geen kenmerk dan status kan worden gewijzigd.",
+        "message_work_package_status_blocked": "Werkpakket status is niet schrijfbaar vanwege gesloten status en gesloten toegewezen versie.",
+        "no_results": {
+          "description": "Ofwel zijn er geen gecreëerd ofwel zijn alle werkpakketten uitgefilterd.",
+          "title": "Geen werkpakketten om te tonen."
+        },
+        "placeholder_filter_by_text": "Onderwerp, beschrijving, commentaar, ...",
+        "placeholders": {
+          "date": "Datum selecteren",
+          "default": "-"
+        },
+        "progress": {
+          "title": "Work estimates and progress"
+        },
+        "properties": {
+          "assignee": "Toegewezene",
+          "author": "Auteur",
+          "category": "Categorie",
+          "costObject": "Begroting",
+          "createdAt": "Gemaakt op",
+          "date": "Datum",
+          "description": "Omschrijving",
+          "dueDate": "Einddatum",
+          "duration": "Duur",
+          "overallCosts": "Totale kosten",
+          "percentComplete": "% Voltooid",
+          "percentCompleteAlternative": "Progress",
+          "percentageDone": "Procent klaar",
+          "priority": "Prioriteit",
+          "projectName": "Project",
+          "remainingTime": "Resterend werk",
+          "remainingWork": "Resterend werk",
+          "remainingWorkAlternative": "Resterende uren",
+          "responsible": "Verantwoordelijk",
+          "spentTime": "Bestede tijd",
+          "spentUnits": "Eenheden uitgegeven",
+          "startDate": "Startdatum",
+          "status": "Status",
+          "storyPoints": "Verhaal punten",
+          "subject": "Onderwerp",
+          "subproject": "Subproject",
+          "title": "Titel",
+          "type": "Type",
+          "updatedAt": "Bijgewerkt op",
+          "version": "Versie",
+          "versionName": "Versie",
+          "work": "Werk",
+          "workAlternative": "Geschatte tijd"
+        },
+        "property_groups": {
+          "costs": "Kosten",
+          "details": "Details",
+          "estimatesAndTime": "Schattingen en tijden",
+          "other": "Overige",
+          "people": "Mensen"
+        },
+        "query": {
+          "click_to_edit_query_name": "Klik om de titel van de weergave te bewerken.",
+          "column_names": "Kolommen",
+          "confirm_edit_cancel": "Weet u zeker dat u wilt stoppen met het bewerken van de naam van deze weergave? De Titel zal terug naar vorige waarde worden ingesteld.",
+          "display_sums": "Bedragen weergeven",
+          "errors": {
+            "duplicate_query_title": "Naam van deze weergave bestaat al. Toch wijzigen?",
+            "not_found": "Deze weergave bestaat niet",
+            "unretrievable_query": "Het is onmogelijk om de weergave van de url op te halen"
+          },
+          "filters": "Filters",
+          "group": "Groeperen op",
+          "group_by": "Groepeer resultaten op",
+          "group_by_disabled_by_hierarchy": "Groeperen is uitgeschakeld als gevolg van de hiërarchie-modus actief.",
+          "hide_column": "Verberg kolom",
+          "hierarchy_disabled_by_group_by": "Hiërarchie-modus is uitgeschakeld als gevolg van de resultaten die worden gegroepeerd op %{column}.",
+          "insert_columns": "Kolommen invoegen",
+          "move_column_left": "Verplaats kolom naar links",
+          "move_column_right": "Verplaats kolom naar rechts",
+          "public_text": "Publiceer deze weergave zodat andere gebruikers er toegang tot hebben. Gebruikers met de 'Openbare weergave beheren' rechten kunnen openbare query wijzigen of verwijderen. Dit heeft geen invloed op de zichtbaarheid van werkpakket resultaten in die weergave en afhankelijk van hun permissies, kunnen gebruikers verschillende resultaten zien.\n",
+          "rename_query_placeholder": "Naam van deze weergave",
+          "sort_ascending": "Sorteer opgaand",
+          "sort_descending": "Sorteer afgaand",
+          "star_text": "Markeer deze weergave als favoriet en voeg toe aan de opgeslagen weergaven zijbalk links.",
+          "text_no_results": "Geen overeenkomende weergaven werden gevonden."
+        },
+        "reminders": {
+          "button_label": "Set reminder",
+          "presets": {
+            "custom": "At a particular date/time",
+            "month": "In a month",
+            "three_days": "In 3 days",
+            "tomorrow": "Tomorrow",
+            "week": "In a week"
+          },
+          "subtitle": "You will receive a notification for this work package at the chosen time.",
+          "title": {
+            "edit": "Edit reminder",
+            "new": "Set a reminder"
+          }
+        },
+        "scheduling": {
+          "is_parent": "The dates of this work package are automatically deduced from its children. Activate 'Manual scheduling' to set the dates.",
+          "is_switched_from_manual_to_automatic": "The dates of this work package may need to be recalculated after switching from manual to automatic scheduling due to relationships with other work packages."
+        },
+        "sharing": {
+          "show_all_users": "Show all users with whom the work package has been shared with",
+          "title": "Werkpakket delen"
+        },
+        "table": {
+          "configure_button": "Configureer werkpakkettabel",
+          "summary": "Tabel met rijen van werkpakket en kolommen werk pakket kenmerken.",
+          "text_inline_edit": "De meeste cellen van deze tabel zijn knoppen die de inline-bewerken functionaliteit van dat kenmerk te activeren.",
+          "text_select_hint": "Selecteer vakken die moeten worden geopend met 'ALT' en pijl.",
+          "text_sort_hint": "Met de koppelingen in de tabelkoppen kunt u sorteren, groeperen, rangschikken, verwijderen en tabelkolommen toevoegen."
+        },
+        "table_configuration": {
+          "button": "Configureer deze werkpakkettabel",
+          "choose_display_mode": "Werkpakketten weergeven als",
+          "columns_help_text": "Use the input field above to add columns to your table view. You can drag and drop the columns to reorder them.",
+          "default": "standaard",
+          "default_mode": "Platte lijst",
+          "display_settings": "Weergave-instellingen",
+          "display_sums_hint": "Waarden van alle optelbare attributen in een rij onder de tabel resultaten weergeven.",
+          "embedded_tab_disabled": "This configuration tab is not available for the embedded view you are editing.",
+          "hierarchy_hint": "Alle gefilterde tabel resultaten zal worden uitgebreid met hun voorouders. Hiërarchieën kunnen worden uitgevouwen en samengevouwen.",
+          "hierarchy_mode": "Hiërarchie",
+          "highlighting": "Markering",
+          "highlighting_mode": {
+            "description": "Markeren met kleur",
+            "entire_row_by": "Hele rij door",
+            "inline": "Gemarkeerde attribute(s)",
+            "inline_all": "Alle kenmerken",
+            "none": "Geen markering",
+            "priority": "Prioriteit",
+            "status": "Status",
+            "type": "Type"
+          },
+          "modal_title": "Werk pakket tabel configuratie",
+          "relation_filters": {
+            "filter_work_packages_by_relation_type": "Filter werkpakketten op relatietype"
+          },
+          "show_timeline_hint": "Toon een interactieve Gantt-diagram aan de rechterkant van de tabel. U kunt de breedte wijzigen door de scheidingslijn tussen de tabel en Gantt-diagram te slepen.",
+          "sorting_mode": {
+            "automatic": "Automatisch",
+            "description": "Kies de modus om uw werkpakketten te sorteren:",
+            "manually": "Handmatig",
+            "warning": "U verliest uw vorige sortering bij activeren van de automatische sorteringsmodus."
+          }
+        },
+        "tabs": {
+          "activity": "Activiteit",
+          "files": "Bestanden",
+          "github": "GitHub",
+          "gitlab": "GitLab",
+          "meetings": "Vergaderingen",
+          "overview": "Overzicht",
+          "relations": "Relaties",
+          "watchers": "Volgers"
+        },
+        "time_relative": {
+          "days": "dagen",
+          "months": "maanden",
+          "weeks": "weken"
+        }
+      },
+      "zen_mode": {
+        "button_activate": "Zen-modus activeren",
+        "button_deactivate": "Deactiveren van zen modus"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": ".",
+          "format": "%u %n",
+          "negative_format": "-%u%n",
+          "precision": 2,
+          "separator": ",",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "€"
+        }
+      },
+      "format": {
+        "delimiter": null,
+        "precision": 3,
+        "round_mode": "default",
+        "separator": ".",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "miljard",
+            "million": "miljoen",
+            "quadrillion": "biljard",
+            "thousand": "duizend",
+            "trillion": "biljoen",
+            "unit": null
+          }
+        },
+        "format": {
+          "delimiter": null,
+          "precision": 1,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "one": "Byte",
+              "other": "Bytes"
+            },
+            "eb": "EB",
+            "gb": "GB",
+            "kb": "kB",
+            "mb": "MB",
+            "pb": "PB",
+            "tb": "TB",
+            "zb": "ZB"
+          }
+        }
+      },
+      "nth": {},
+      "percentage": {
+        "format": {
+          "delimiter": null,
+          "format": "%n%"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": null
+        }
+      }
+    },
+    "time": {
+      "am": "am",
+      "formats": {
+        "default": "%m/%d/%Y %I:%M %p",
+        "long": "%B %d, %Y %H:%M",
+        "short": "%d %b %H:%M",
+        "time": "%I:%M %p"
+      },
+      "pm": "PM"
+    }
+  }
+}

@@ -1,0 +1,463 @@
+#-- copyright
+#OpenProject is an open source project management software.
+#Copyright (C) the OpenProject GmbH
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License version 3.
+#OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+#Copyright (C) 2006-2013 Jean-Philippe Lang
+#Copyright (C) 2010-2013 the ChiliProject Team
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License
+#as published by the Free Software Foundation; either version 2
+#of the License, or (at your option) any later version.
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with this program; if not, write to the Free Software
+#Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#See COPYRIGHT and LICENSE files for more details.
+#++
+#English strings go here for Rails i18n
+it:
+  plugin_openproject_meeting:
+    name: "Riunione OpenProject"
+    description: >-
+      Questo modulo aggiunge funzioni per supportare le riunioni del progetto a OpenProject. Gli incontri possono essere programmati selezionando gli invitati dello stesso progetto per partecipare alla riunione. Si può creare un ordine del giorno e inviarlo agli invitati. Dopo la riunione, i partecipanti possono essere selezionati e i verbali possono essere creati in base all'ordine del giorno. Infine, i verbali possono essere inviati a tutti i partecipanti e agli invitati.
+  activerecord:
+    attributes:
+      meeting:
+        type: "Tipo di riunione"
+        location: "Luogo"
+        duration: "Durata"
+        notes: "Note"
+        participants: "Partecipanti"
+        participant:
+          one: "1 partecipante"
+          other: "%{count} partecipanti"
+        participants_attended: "Invitati"
+        participants_invited: "Invitati"
+        project: "Progetto"
+        start_date: "Data"
+        start_time: "Ora di inizio"
+        start_time_hour: "Ora di inizio"
+      meeting_agenda_item:
+        title: "Titolo"
+        author: "Autore"
+        duration_in_minutes: "min"
+        description: "Note"
+        presenter: "Presentatore"
+      meeting_section:
+        title: "Titolo"
+      recurring_meeting:
+        frequency: "Frequenza"
+        interval: "Intervallo"
+        start_date: "Inizio il"
+        start_time: "Ora di inizio"
+        start_time_hour: "Ora di inizio"
+        end_after: "Termine della serie di riunioni"
+        end_date: "Data di scadenza"
+        iterations: "Ricorrenze"
+    errors:
+      models:
+        recurring_meeting:
+          must_cover_existing_meetings:
+            one: "C'è una riunione aperta nella serie che non è coperta dal nuovo programma. Adatta il programma per includere tutte le riunioni esistenti."
+            other: "Ci sono %{count} riunioni aperte nella serie che non sono coperte dal nuovo programma. Adatta il programma per includere tutte le riunioni esistenti."
+            format: "%{message}"
+      messages:
+        invalid_time_format: "non è un tempo valido. Formato richiesto: HH: mm"
+    models:
+      recurring_meeting: "Riunione ricorrente"
+      meeting: "Riunione una tantum"
+      meeting_agenda_item: "Attività"
+      meeting_agenda: "Ordine del giorno"
+      meeting_section: "Sezione"
+  activity:
+    filter:
+      meeting: "Riunioni"
+    item:
+      meeting_agenda_item:
+        duration:
+          added: "impostato a %{value}"
+          added_html: "impostato a <i>%{value}</i>"
+          removed: "rimosso"
+          updated: "modificato da %{old_value} a %{value}"
+          updated_html: "modificato da <i>%{old_value}</i> a <i>%{value}</i>"
+        position:
+          updated: "riordinato"
+        work_package:
+          updated: "modificato da %{old_value} a %{value}"
+          updated_html: "modificato da <i>%{old_value}</i> a <i>%{value}</i>"
+  description_attended: "ha partecipato"
+  description_invite: "invitato"
+  events:
+    meeting: Riunione modificata
+    meeting_agenda: Agenda riunione modificata
+    meeting_agenda_closed: Agenda riunione chiusa
+    meeting_agenda_opened: Agenda riunione aperta
+    meeting_minutes: Verbali riunione modificati
+    meeting_minutes_created: Verbale riunione creato
+  error_notification_with_errors: "Impossibile inviare notifica. Non è possibile notificare i seguenti destinatari: %{recipients}"
+  label_meeting: "Riunione"
+  label_meeting_plural: "Riunioni"
+  label_meeting_new: "Nuova riunione"
+  label_meeting_new_dynamic: "Nuova riunione una tantum"
+  label_meeting_new_recurring: "Nuova riunione ricorrente"
+  label_meeting_create: "Crea riunione"
+  label_meeting_copy: "Copia riunione"
+  label_meeting_edit: "Modifica riunione"
+  label_meeting_agenda: "Ordine del giorno"
+  label_meeting_minutes: "Verbali"
+  label_meeting_close: "Chiuso"
+  label_meeting_open: "Aperto"
+  label_meeting_index_delete: "Elimina"
+  label_meeting_open_this_meeting: "Apri questa riunione"
+  label_meeting_agenda_close: "Chiudere l'agenda per iniziare i verbali"
+  label_meeting_date_time: "Data/ora"
+  label_meeting_date_and_time: "Data e ora"
+  label_meeting_diff: "Differenza"
+  label_recurring_meeting: "Riunione ricorrente"
+  label_recurring_meeting_part_of: "Parte di una serie di riunioni"
+  label_recurring_meeting_new: "Nuova riunione ricorrente"
+  label_recurring_meeting_plural: "Riunioni ricorrenti"
+  label_template: "Modello"
+  label_recurring_meeting_view: "Visualizza la serie di riunioni"
+  label_recurring_meeting_create: "Apri"
+  label_recurring_meeting_copy: "Copia come una tantum"
+  label_recurring_meeting_cancel: "Annulla questa ricorrenza"
+  label_recurring_meeting_delete: "Elimina ricorrenza"
+  label_recurring_meeting_restore: "Ripristina questa ricorrenza"
+  label_recurring_meeting_schedule: "Programma"
+  label_recurring_meeting_next_occurrence: "Occorrenza successiva"
+  label_recurring_meeting_no_end_date: "Ci sono altre riunioni programmate (%{schedule})."
+  label_recurring_meeting_more:
+    one: "C'è un'altra riunione programmata (%{schedule})."
+    other: "Ci sono altre %{count} riunioni programmate (%{schedule})."
+  label_recurring_meeting_more_past:
+    one: "C'è un'altra riunione passata."
+    other: "Ci sono altre %{count} riunioni passate."
+  label_recurring_meeting_show_more: "Mostra di più"
+  label_recurring_meeting_series_create: "Crea serie di riunioni"
+  label_recurring_meeting_series_edit: "Modifica serie di riunioni"
+  label_recurring_meeting_series_delete: "Elimina serie di riunioni"
+  label_recurring_meeting_series_end: "Termina serie di riunioni"
+  label_recurring_meeting_series_end_now: "Temina la serie ora"
+  label_meeting_more:
+    one: "C'è un'altra riunione."
+    other: "Ci sono altre %{count} riunioni."
+  label_my_meetings: "Le mie riunioni"
+  label_all_meetings: "Tutte le riunioni"
+  label_upcoming_meetings: "Prossime riunioni"
+  label_past_meetings: "Riunioni precedenti"
+  label_upcoming_meetings_short: "In programma"
+  label_past_meetings_short: "Passato"
+  label_involvement: "Coinvolgimento"
+  label_invitations: "Inviti"
+  label_invited_user: "Utente invitato"
+  label_past_invitations: "Inviti passati"
+  label_attended: "Ha partecipato"
+  label_attended_user: "Utente presente"
+  label_created_by_me: "Creato da me"
+  label_notify: "Invia per revisione"
+  label_icalendar: "Invia iCalendar"
+  label_icalendar_download: "Scarica l'evento iCalendar"
+  label_view_meeting_series: "Visualizza la serie di riunioni"
+  label_meeting_series: "Serie di riunioni"
+  label_version: "Versione"
+  label_time_zone: "Fuso orario"
+  label_start_date: "Data di inizio"
+  meeting:
+    participants:
+      template: "Questi partecipanti saranno invitati automaticamente a tutte le riunioni future, man mano che vengono create."
+    attachments:
+      template: "Questi file allegati saranno inclusi in tutte le prossime riunioni della serie."
+      text: "I file allegati sono disponibili per tutti i partecipanti alla riunione. Puoi anche trascinarli nelle note dei punti all'ordine del giorno."
+    copy:
+      title: "Copia riunione: %{title}"
+      attachments: "Copia allegati"
+      attachments_text: "Copia tutti i file allegati nella nuova riunione"
+      agenda: "Copia ordine del giorno"
+      agenda_items: "Copia punti all'ordine del giorno"
+      agenda_text: "Copia l'ordine del giorno della vecchia riunione"
+      participants: "Copia elenco dei partecipanti"
+      to_clipboard: "Copia negli appunti"
+    email:
+      send_emails: "Invia e-mail ai partecipanti"
+      send_invitation_emails: >
+        Invia immediatamente un invito via e-mail ai partecipanti selezionati in precedenza. Puoi anche farlo manualmente in qualsiasi momento.
+      send_invitation_emails_structured: "Invia immediatamente un invito via e-mail a tutti i partecipanti. Puoi anche farlo manualmente in qualsiasi momento."
+      open_meeting_link: "Apri riunione"
+      open_my_meetings_link: "Vai alle mie riunioni"
+      series:
+        title: "[%{project_name}] Serie di riunioni \"%{title}\""
+        summary: "%{actor} ha organizzato una nuova serie di riunioni \"%{title}\""
+      series_rescheduled:
+        title: "[%{project_name}] Serie di riunioni \"%{title}\" riprogrammati"
+        summary: "%{actor} ha modificato l'ordine del giorno della serie di riunioni \"%{title}\""
+        old_schedule: "Ordine del giorno precedente"
+        new_schedule: "Ordine del giorno nuovo"
+      invited:
+        summary: "%{actor} ti ha inviato un invito per la riunione \"%{title}\""
+      cancelled:
+        header: "Cancellata: riunione \"%{title}\""
+        header_occurrence: "Cancellata: occorrenza della riunione \"%{title}\""
+        header_series: "Cancellata: serie di riunioni \"%{title}\""
+        summary_occurrence: "Un'occorrenza di \"%{title}\" è stata cancellata da %{actor}."
+        summary_series: "La serie di riunioni \"%{title}\" è stata cancellata da %{actor}."
+        summary: "\"%{title}\" è stata cancellata da %{actor}."
+        date_time: "Data/ora programmata"
+      rescheduled:
+        header: "La riunione \"%{title}\" è stata riprogrammata"
+        summary: "La riunione \"%{title}\" è stata riprogrammata da %{actor}"
+        body: "La riunione \"%{title}\" è stata riprogrammata da %{actor}."
+        old_date_time: "Data/ora precedente"
+        new_date_time: "Nuova data/ora"
+    label_mail_all_participants: "Invia e-mail a tutti i partecipanti"
+    types:
+      one_time: "Una tantum"
+      recurring: "Ricorrente"
+      recurring_text: "Crea una serie di riunioni con modello dinamico per ogni ricorrenza."
+      structured_text: "Organizza la tua riunione come un elenco dinamico di punti all'ordine del giorno, collegandoli facoltativamente a una macro-attività."
+      structured_text_copy: "La copia di una riunione al momento non copierà gli elementi dell'ordine del giorno della riunione, ma solo i dettagli"
+    copied: "Copiato dalla riunione #%{id}"
+    delete_dialog:
+      one_time:
+        title: "Cancella la riunione"
+        heading: "Cancellare questa riunione?"
+        confirmation_message_html: >
+          Questa azione è irreversibile. Procedi con cautela.
+      occurrence:
+        title: "Cancella l'occorrenza della riunione"
+        heading: "Cancellare questa occorrenza della riunione?"
+        confirmation_message_html: >
+          Qualsiasi informazione sulla riunione non contenuta nel modello andrà persa. Vuole continuare?
+        confirm_button: "Cancella l'occorrenza"
+    blankslate:
+      title: "Nessuna riunione da visualizzare"
+      desc: "Non ci sono riunioni che soddisfano i criteri del filtro attivo."
+    label_export_pdf: "Esporta PDF"
+    export:
+      your_meeting_export: "Riunione in corso di esportazione"
+    export_pdf_dialog:
+      title: Esporta PDF
+      description: Genera un file PDF stampabile di questa riunione allo stato attuale.
+      include_participants:
+        label: Includi l'elenco dei partecipanti
+        caption: L'elenco dei partecipanti sarà preimpostato sopra l'ordine del giorno della riunione.
+      include_attachments:
+        label: Includi l'elenco degli allegati
+        caption: Alla fine verrà aggiunto un elenco contenente i nomi dei file degli allegati.
+      include_backlog:
+        label: Includi backlog
+        caption: Di solito gli elementi del backlog non vengono considerati parte integrante di una riunione, ma è possibile scegliere di includerli.
+      include_outcomes:
+        label: Includi esiti dell'ordine del giorno
+        caption: Se i risultati dell'agenda contengono informazioni riservate, puoi scegliere di non includerli nell'esportazione.
+      footer_text:
+        label: Testo del piè di pagina
+        caption: Questo testo apparirà in ogni pagina a destra nel piè di pagina.
+      submit_button: Scarica
+  meeting_section:
+    untitled_title: "Sezione senza titolo"
+    delete_confirmation: "L'eliminazione della sezione eliminerà anche tutti i suoi elementi dell'ordine del giorno. Continuare?"
+    placeholder_title: "Nuova sezione"
+    empty_text: "Trascina gli elementi qui o creane una nuova"
+  recurring_meeting:
+    ended_blankslate:
+      title: "Serie di riunioni terminata"
+      message: "Questa serie di riunioni è giunta al termine. Non ci sono altre riunioni. "
+      action: "Può ancora visualizzare le occorrenze passate o modificare la serie di riunioni per estenderla."
+    occurrence:
+      infoline: "Questa riunione fa parte di una serie di riunioni ricorrenti."
+      error_no_next: "Non ci sono ricorrenze successive per questa riunione."
+      first_already_exists: "La prima occorrenza di questa serie di riunioni è già istanziata."
+      first_created: >
+        La prima riunione è stata creata con successo dal modello. Tutte le riunioni future saranno create automaticamente al momento della ricorrenza precedente.
+    template:
+      button_finalize: "Apri la prima riunione"
+      blank_title: "Il modello della tua serie di riunioni è vuoto"
+      description: >
+        Questo modello verrà utilizzato ogni volta che verranno create nuove riunioni della serie. A questo modello può aggiungere punti dell'ordine del giorno, partecipanti e allegati.
+      blankslate_finalize: >
+        Quando hai finito di preparare questo modello, clicca sul pulsante '%{button_title}' in alto per terminare l'impostazione e programmare la prima riunione della serie.
+      label_view_template: "Visualizza modello"
+      label_edit_template: "Modifica modello"
+      banner_html: >
+        Stai attualmente modificando un modello di una serie di riunioni: %{link}. Ogni nuova ricorrenza di una riunione della serie userà questo modello. Le modifiche non influenzeranno le riunioni passate o già create.
+    frequency:
+      x_daily:
+        one: "Ogni giorno"
+        other: "Ogni %{count} giorni"
+      x_weekly:
+        one: "Ogni settimana"
+        other: "Ogni %{count} settimane"
+      every_weekday: "Ogni %{day_of_the_week}"
+      working_days: "Ogni giorno lavorativo"
+    end_after:
+      never: "mai"
+      specific_date: "dopo una data specifica"
+      iterations: "dopo un certo numero di occorrenze"
+    starts: "Inizio"
+    in_words:
+      daily_interval: "Ogni %{interval} giorni"
+      working_days: "Ogni giorno lavorativo"
+      weekly: "Ogni settimana di %{weekday}"
+      weekly_interval: "Ogni %{interval} settimane di %{weekday}"
+      frequency: "%{base} alle ore %{time}"
+      full: "%{base} alle ore %{time}, fine alle ore %{end_date}"
+      full_past: "%{base} alle ore %{time}, finita alle ore %{end_date}"
+      never_ending: "%{base} alle ore %{time}"
+    open:
+      title: "Ordine del giorno aperto"
+      subtitle: >
+        Le riunioni aperte hanno ordini del giorno che possono essere modificati e vengono visualizzate nella sezione "Le mie riunioni" dei singoli utenti. Le modifiche al modello della serie di riunioni non influiscono sulle occorrenze delle riunioni già aperte.
+      blankslate:
+        title: "Non ci sono riunioni aperte al momento"
+        desc: "Può aprire manualmente una riunione pianificata cliccando sul pulsante \"Apri\" qui di seguito"
+    planned:
+      title: "Pianificate"
+      subtitle: >
+        Le seguenti riunioni sono pianificate nel calendario delle riunioni ricorrenti, ma non sono ancora aperte. Ogni volta che inizia una riunione pianificata, la successiva verrà automaticamente aperta per te. Puoi anche aprire manualmente le riunioni pianificate per importare il modello e iniziare a modificare l'ordine del giorno.
+      blankslate:
+        title: "Non ci sono più riunioni programmate"
+        desc: >
+          Non sono previsti altre riunioni in questa serie. Per pianificare altre riunioni o estendere la serie, vai al modello e modifica i dettagli del meeting per cambiare la data di fine, la frequenza o l'intervallo.
+    delete_dialog:
+      title: "Elimina serie di riunioni"
+      heading: "Cancellare definitivamente questa serie di riunioni?"
+      confirmation_message_html:
+        zero: >
+          La serie di riunioni <strong>%{title}</strong> non ha alcuna occorrenza di riunione. La serie sarà cancellata per tutti. Procedi con cautela.
+        one: >
+          Eliminando <strong>%{title}</strong> eliminerai anche un'occorrenza di questa serie. Questa azione non è reversibile. Procedi con cautela.
+        other: >
+          Eliminando <strong>%{title}</strong> cancellerai tutte le %{count} occorrenze in questa serie. Questa azione non è reversibile. Procedi con cautela.
+    scheduled_delete_dialog:
+      title: "Cancella l'occorrenza della riunione"
+      heading: "Cancellare questa occorrenza della riunione?"
+      confirmation_message_html: >
+        Qualsiasi informazione sulla riunione non contenuta nel modello andrà persa. Vuole continuare?
+      confirm_button: "Cancella l'occorrenza"
+    end_series_dialog:
+      title: "Termina serie di riunioni"
+  notice_successful_notification: "Notifica inviata con successo"
+  notice_timezone_missing: Nessun fuso orario è impostato e la %{zone} è un requisito necessario. Per scegliere il tuo fuso orario, fare clic qui.
+  notice_meeting_updated: "Questa pagina è stata aggiornata da qualcun altro. Ricarica per visualizzare le modifiche."
+  permission_create_meetings: "Creare riunioni"
+  permission_edit_meetings: "Modificare riunioni"
+  permission_delete_meetings: "Annullare riunioni"
+  permission_view_meetings: "Vedere riunioni"
+  permission_manage_agendas: "Gestire gli ordini del giorno"
+  permission_manage_agendas_explanation: "Consente di gestire gli elementi dell'ordine del giorno della Riunione dinamica."
+  permission_manage_outcomes: "Gestisci risultati"
+  permission_send_meeting_invites_and_outcomes: "Invia inviti alla riunione e risultati ai partecipanti"
+  project_module_meetings: "Riunioni"
+  text_duration_in_hours: "Durata in ore"
+  text_in_hours: "in ore"
+  text_meeting_agenda_for_meeting: 'ordine del giorno della riunione "%{meeting}"'
+  text_meeting_series_end_early_heading: "Cancellare le occorrenze future?"
+  text_meeting_series_end_early: "La chiusura della serie cancellerà tutte le future occorrenze di riunioni aperte o programmate"
+  text_meeting_closing_are_you_sure: "Vuoi davvero chiudere l'agenda di questa riunione?"
+  text_meeting_agenda_open_are_you_sure: "Questo sovrascriverà tutte le modifiche nei verbali! Vuoi continuare?"
+  text_meeting_minutes_for_meeting: 'verbali per l''incontro "%{meeting}"'
+  text_notificiation_invited: "Questa mail contiene un elemento di riunione ics qui in seguito:"
+  text_meeting_empty_heading: "La tua riunione è vuota"
+  text_meeting_empty_description1: "Inizia con l'aggiunta di elementi dell'ordine del giorno qui sotto. Ogni elemento può essere semplice come solo un titolo, ma è anche possibile aggiungere ulteriori dettagli come durata e note."
+  text_meeting_empty_description2: 'Puoi anche aggiungere riferimenti alle macro-attività esistenti. Quando lo fai, le note correlate saranno automaticamente visibili nella scheda "Riunioni" della macro-attività.'
+  label_meeting_empty_action: "Aggiungi punto all'ordine del giorno"
+  label_meeting_actions: "Azioni di riunione"
+  label_meeting_edit_title: "Modifica titolo riunione"
+  label_meeting_delete: "Annulla la riunione"
+  label_meeting_created_by: "Creato da"
+  label_meeting_last_updated: "Ultimo aggiornamento"
+  label_meeting_reload: "Ricarica"
+  label_meeting_index_today: "Oggi"
+  label_meeting_index_tomorrow: "Domani"
+  label_meeting_index_this_week: "Più tardi questa settimana"
+  label_meeting_index_later: "La prossima settimana e più tardi"
+  label_agenda_items: "Punti all'ordine del giorno"
+  label_agenda_items_reordered: "riordinato"
+  label_agenda_item_add: "Aggiungi punto all'ordine del giorno"
+  label_agenda_item_remove_from_agenda: "Rimuovi dall'ordine del giorno"
+  label_agenda_item_remove_from_backlog: "Rimuovi dal backlog"
+  label_agenda_item_undisclosed_wp: "Macro-attività #%{id} non visibile"
+  label_agenda_item_deleted_wp: "Riferimento della macro-attività eliminato"
+  label_agenda_item_actions: "Azioni all'ordine del giorno"
+  label_agenda_item_move_to_next: "Sposta alla prossima riunione"
+  label_agenda_item_move_to_backlog: "Sposta nel backlog"
+  label_agenda_item_move_to_current_meeting: "Sposta alla riunione attuale"
+  label_agenda_item_move_to_top: "Sposta in cima"
+  label_agenda_item_move_to_bottom: "Sposta in fondo"
+  label_agenda_item_move_up: "Sposta su"
+  label_agenda_item_move_down: "Sposta giu"
+  label_agenda_item_add_notes: "Aggiungi nota"
+  label_agenda_item_add_outcome: "Aggiungi risultato"
+  label_agenda_item_work_package_add: "Aggiungi macro-attività"
+  label_agenda_item_work_package: "Macro-attività nei punti all'ordine del giorno"
+  label_section_rename: "Rinomina sezione"
+  label_agenda_outcome: "Risultato"
+  label_agenda_outcome_actions: "Azioni di risultato dell'ordine del giorno"
+  label_agenda_outcome_edit: "Modifica risultato"
+  label_agenda_outcome_delete: "Rimuovi risultato"
+  text_outcome_not_editable_anymore: "Questo risultato non è più modificabile."
+  text_outcome_cannot_be_added: "Non è più possibile aggiungere un risultato."
+  label_backlog_clear: "Ripulisci il backlog"
+  label_backlog_clear_button: "Cancella tutto"
+  text_backlog_clear_error: "Si sono verificati uno o più errori durante il tentativo di ripulire il backlog."
+  label_agenda_backlog: "Backlog dell'ordine del giorno"
+  text_agenda_backlog: >
+    Questo backlog è unico per questa riunione una tantum. Puoi trascinare gli elementi dentro e fuori per aggiungerli o rimuoverli dall'ordine del giorno della riunione.
+  label_agenda_backlog_clear_title: "Ripulire il backlog dell'ordine del giorno?"
+  text_agenda_backlog_clear_description: >
+    Vuoi davvero rimuovere tutti gli elementi attualmente presenti nel backlog dell'ordine del giorno? Questa azione non è reversibile.
+  label_series_backlog: "Backlog della serie"
+  text_series_backlog: >
+    Il backlog è condiviso con tutte le occorrenze di questa serie. Puoi trascinare gli elementi dentro e fuori per aggiungerli o rimuoverli da una particolare riunione.
+  label_series_backlog_clear_title: "Ripulire il backlog della serie?"
+  text_series_backlog_clear_description: >
+    Questa operazione rimuoverà tutti gli elementi del backlog, che è condiviso con tutte le riunioni della serie. Vuoi continuare? Questa azione è irreversibile.
+  text_agenda_item_title: 'Punto all''ordine del giorno "%{title}"'
+  text_agenda_work_package_deleted: 'Punto all''ordine del giorno per la macro-attività cancellata'
+  text_deleted_agenda_item: 'Punto all''ordine del giorno cancellato'
+  label_initial_meeting_details: "Riunione"
+  label_meeting_details: "Dettagli della riunione"
+  label_meeting_series_details: "Dettagli della serie di riunioni"
+  label_meeting_details_edit: "Modifica dettagli riunione"
+  label_meeting_state: "Stato della riunione"
+  label_meeting_state_open: "Aperte"
+  label_meeting_state_closed: "Chiuso"
+  label_meeting_state_agenda_created: "Ordine del giorno creato"
+  label_meeting_state_planned: "Pianificata"
+  label_meeting_state_cancelled: "Annullato"
+  label_meeting_state_skipped: "Saltato"
+  label_meeting_state_in_progress: "In corso"
+  label_meeting_reopen_action: "Riapri la riunione"
+  label_meeting_close_action: "Chiudi riunione"
+  label_meeting_in_progress_action: "Inizia riunione"
+  text_meeting_open_description: "Questa riunione è aperta. Puoi aggiungere/rimuovere i punti all'ordine del giorno e modificarli come vuoi. Una volta che l'ordine del giorno è pronto, contrassegna come in corso per documentare i risultati."
+  text_meeting_closed_description: "Questa riunione è chiusa. Non puoi più aggiungere/rimuovere i punti all'ordine del giorno."
+  text_meeting_in_progress_description: "Questa riunione è in corso. È possibile documentare i risultati per ogni punto all'ordine del giorno, riorganizzarli, e anche aggiungerne di nuovi. Una volta completata la riunione, è possibile contrassegnarla come chiusa per bloccarla."
+  text_meeting_open_dropdown_description: "Eventuali risultati esistenti rimarranno, ma gli utenti non potranno aggiungere nuovi risultati."
+  text_meeting_in_progress_dropdown_description: "Documenta i risultati, come le esigenze informative o le decisioni prese durante la riunione."
+  text_meeting_closed_dropdown_description: "Questa riunione è chiusa. Non puoi più modificare i punti all'ordine del giorno."
+  label_meeting_manage_participants: "Gestisci partecipanti"
+  label_meeting_no_participants: "Nessun partecipante"
+  label_meeting_show_hide_participants: "Mostra/nascondi altri %{count}"
+  label_meeting_show_all_participants: "Mostra tutti"
+  label_meeting_add_participants: "Aggiungi partecipanti"
+  text_meeting_not_editable_anymore: "Questa riunione non è più modificabile."
+  text_meeting_not_present_anymore: "Questa riunione è stata eliminata. Seleziona un'altra riunione."
+  label_add_work_package_to_meeting_dialog_title: "Aggiungi macro-attività alla riunione"
+  label_add_work_package_to_meeting_dialog_button: "Aggiungi alla riunione"
+  label_meeting_selection_caption: "È solo possibile aggiungere questa macro-attività alle prossime riunioni o a quelle in corso."
+  text_add_work_package_to_meeting_description: "Una macro-attività può essere aggiunta a una o più riunioni per la discussione. Tutte le note che la riguardano sono visibili anche qui."
+  text_agenda_item_no_notes: "Nessuna nota fornita"
+  text_agenda_item_not_editable_anymore: "Questo punto dell'ordine del giorno non è più modificabile."
+  text_agenda_item_move_next_meeting: "Vuoi davvero spostarlo alla prossima riunione il giorno %{date} alle ore %{time}?"
+  text_agenda_item_moved_to_next_meeting: "Punto all'ordine del giorno spostato alla prossima riunione, il giorno %{date}"
+  text_work_package_has_no_upcoming_meeting_agenda_items: "Questa macro-attività non è ancora programmata in un prossimo ordine del giorno di riunione."
+  text_agenda_item_move_next_meeting_cancelled: "Impossibile passare alla riunione successiva perché è stata annullata."
+  text_work_package_add_to_meeting_hint: 'Utilizzare il pulsante "Aggiungi alla riunione" per aggiungere questa macro-attività a una riunione imminente.'
+  text_work_package_has_no_past_meeting_agenda_items: "Questa macro-attività non è stato menzionata in una riunione precedente."

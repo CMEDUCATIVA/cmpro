@@ -1,0 +1,8 @@
+<%
+  path = whatsapp_plugin_project_contactos_menu_path(@project, **params.permit(:q, :sort, :assigned_to_id, :filters_json, :per_page, :page))
+%>
+<%= turbo_frame_tag "contactos_sidemenu",
+                    src: path,
+                    target: "_top",
+                    data: { turbo: false },
+                    loading: :lazy %>

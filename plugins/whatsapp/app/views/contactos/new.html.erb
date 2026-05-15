@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag "contacto", media: "all" %>
+<%= javascript_include_tag "contacto", nonce: true, data: { turbo_track: "reload" } %>
+<%= javascript_include_tag "openproject-whatsapp-countries", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+
+<div class="contacto-shell"
+     data-contacto-project="<%= @project.id %>"
+     data-contacto-favorite-url-template="<%= whatsapp_plugin_project_whatsapp_chat_favorite_path(@project, id: '__CHAT_ID__') %>"
+     data-contacto-field-order-url="<%= whatsapp_plugin_project_contactos_fields_order_path(@project) %>"
+     data-contacto-form-order-url="<%= whatsapp_plugin_project_contactos_fields_form_order_path(@project) %>">
+  <div class="contacto-header">
+    <div>
+      <div class="contacto-title">Nuevo contacto</div>
+      <div class="contacto-subtitle">Crea contactos e importa informacion desde archivos.</div>
+    </div>
+    <div class="contacto-actions">
+      <%= link_to "Volver", whatsapp_plugin_project_contactos_path(@project), class: "contacto-btn contacto-btn-ghost" %>
+    </div>
+  </div>
+
+  <div class="contacto-layout">
+    <%= render "side" %>
+  </div>
+</div>

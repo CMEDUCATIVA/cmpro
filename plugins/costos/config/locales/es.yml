@@ -1,0 +1,70 @@
+es:
+  # Menu y navegaci\u00F3n
+  label_costos: "Costos"
+
+  # Descripci\u00F3n del plugin
+  plugin_description: "Plugin para integraci\u00F3n con Costos"
+
+  # T\u00EDtulos y contenido
+  costos_title: "Integraci\u00F3n Costos"
+  costos_description: "M\u00F3dulo de bienvenida para OpenProject"
+
+  # Mensaje de bienvenida
+  costos_welcome_title: "\u00A1Bienvenido al M\u00F3dulo Costos!"
+  costos_welcome_message: "\u00A1Hola! Bienvenido al m\u00F3dulo Costos. Este es un m\u00F3dulo simple de ejemplo para OpenProject."
+
+  # Informaci\u00F3n del m\u00F3dulo
+  costos_module_info: "Informaci\u00F3n del M\u00F3dulo"
+  costos_name: "Nombre"
+  costos_version: "Versi\u00F3n"
+  costos_author: "Autor"
+  costos_description_label: "Descripci\u00F3n"
+  costos_module_description: "Plugin simple de bienvenida para OpenProject"
+
+  # Mensajes
+  costos_loading: "Cargando..."
+  costos_error: "Error al cargar el contenido"
+  costos_error_500: "Ha ocurrido un error en la p\u00E1gina que trat\u00F3 de acceder. Si contin\u00FAa teniendo problemas contacte a su administrador de CMPROYECTOS | ENTORNO COM\u00DAN DE DATOS (CDE) para asistencia."
+
+  # Costos namespace
+  costos:
+    embed_title: "Cargar Modelo Costos"
+    embed_type: "Tipo de Embed"
+    embed_url: "URL de Embed"
+    embed_code: "C\u00F3digo de Embed"
+    embed_input_label: "Pega tu c\u00F3digo o URL aqu\u00ED"
+    embed_placeholder: "Pega aqu\u00ED la URL o el c\u00F3digo embed de Costos..."
+    embed_url_placeholder: "Ejemplo: https://tu-plataforma.xyz/embed?stream=..."
+    embed_code_placeholder: "Ejemplo: <iframe src='https://tu-plataforma.xyz/embed?stream=...' ...></iframe>"
+    load_embed: "Cargar Embed"
+    clear_embed: "Limpiar"
+    embed_empty_error: "Por favor, ingresa una URL o c\u00F3digo embed v\u00E1lido"
+    embed_invalid_url: "Ingrese una URL v\u00E1lida que comience con https://"
+    embed_invalid_code: "Ingresa un c\u00F3digo iframe v\u00E1lido"
+    costos_title: "Integraci\u00F3n Costos"
+
+  cost_types:
+    unit_label: "UNIDADES"
+    code_label: "C\u00D3DIGO"
+    cost_rate_label: "Precio"
+    sale_rate_label: "Precio de venta"
+    study_rate_label: "Precio estudio"
+    adjust_current_price_label: "Ajustar precio actual"
+    search_label: "Buscar tipos de costo"
+    search_placeholder: "Buscar"
+    limited_results: "Mostrando %{count} de %{total} tipos de costo (primeros %{limit})"
+    per_page: "Filas por p\u00E1gina"
+    per_page_all: "Todos"
+    previous: "Anterior"
+    next: "Siguiente"
+
+  costs:
+    text_search_cost_type: "Busca y selecciona un tipo de costo"
+    text_no_cost_types: "No hay tipos de costo disponibles"
+
+  activerecord:
+    attributes:
+      cost_type:
+        current_rate: "Precio"
+        unit: "UNIDADES"
+        unit_plural: "C\u00D3DIGO"

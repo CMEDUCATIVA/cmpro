@@ -1,0 +1,3 @@
+gem "openproject-ia_colaborativa", path: "plugins/ia_colaborativa"
+gem "openproject-documentos", path: "plugins/openproject-documentos"
+gem "openproject-whatsapp", path: "plugins/whatsapp"

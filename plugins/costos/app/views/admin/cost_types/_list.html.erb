@@ -1,0 +1,173 @@
+<%#-- copyright
+OpenProject is an open source project management software.
+Copyright (C) the OpenProject GmbH
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License version 3.
+
+OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+Copyright (C) 2006-2013 Jean-Philippe Lang
+Copyright (C) 2010-2013 the ChiliProject Team
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+See COPYRIGHT and LICENSE files for more details.
+
+++#%>
+
+<% cost_types = Array(@cost_types) -%>
+
+<% if cost_types.empty? %>
+  <%= no_results_box %>
+<% else %>
+  <% display_count = cost_types.count %>
+  <% total_count = @total_cost_types || display_count %>
+  <% limit_value = @page_size == :all ? t("cost_types.per_page_all") : (@page_size || display_count) %>
+  <% offset_index = @page_size == :all ? 0 : ((@current_page - 1) * @page_size) %>
+  <div class="generic-table--container">
+    <div class="generic-table--results-container">
+      <table class="generic-table" data-controller="table-highlighting">
+        <colgroup>
+          <col class="cost-types--column-index">
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col data-highlight="false">
+        </colgroup>
+        <thead>
+          <tr>
+            <th class="cost-types--column-index">
+              <div class="generic-table--sort-header-outer">
+                <div class="generic-table--sort-header">
+                  <span>#</span>
+                </div>
+              </div>
+            </th>
+            <%= sort_header_tag "unit_plural",
+                                caption: t('cost_types.code_label', default: CostType.human_attribute_name(:unit_plural)) %>
+            <%= sort_header_tag "name", caption: CostType.model_name.human %>
+            <%= sort_header_tag "unit",
+                                caption: t('cost_types.unit_label', default: CostType.human_attribute_name(:unit)) %>
+            <th>
+              <div class="generic-table--sort-header-outer">
+                <div class="generic-table--sort-header">
+                  <span>
+                    <%= CostType.human_attribute_name(:current_rate) %>
+                  </span>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="generic-table--sort-header-outer">
+                <div class="generic-table--sort-header">
+                  <span>
+                    <%= t('cost_types.sale_rate_label') %>
+                  </span>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="generic-table--sort-header-outer">
+                <div class="generic-table--sort-header">
+                  <span>
+                    <%= t('cost_types.study_rate_label') %>
+                  </span>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="generic-table--sort-header-outer">
+                <div class="generic-table--sort-header">
+                  <span>
+                    <%= t('cost_types.adjust_current_price_label') %>
+                  </span>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="generic-table--sort-header-outer">
+                <div class="generic-table--sort-header">
+                  <span>
+                    <%= t(:caption_default) %>
+                  </span>
+                </div>
+              </div>
+            </th>
+            <th><div class="generic-table--empty-header"></div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% cost_types.each_with_index do |cost_type, index| %>
+          <% current_rate = cost_type.rate_at(@fixed_date) %>
+          <tr>
+            <td class="cost-types--column-index">
+              <%= index + 1 + offset_index %>
+            </td>
+            <%= content_tag :td, cost_type.unit_plural %>
+            <%= content_tag :td, link_to(cost_type.name, main_app.edit_admin_cost_type_path(cost_type)) %>
+            <%= content_tag :td, cost_type.unit %>
+            <%= content_tag :td, to_currency_with_empty(current_rate), class: "currency", id: "cost_type_#{cost_type.id}_rate" %>
+            <%= render partial: 'admin/cost_types/precio_de_venta', locals: { cost_type: cost_type, fixed_date: @fixed_date } %>
+            <%= render partial: 'admin/cost_types/precio_estudio', locals: { cost_type: cost_type, fixed_date: @fixed_date } %>
+            <td>
+              <%= form_for cost_type, url: main_app.set_rate_admin_cost_type_path(cost_type), method: :put, html: { class: "inline-label" }  do |f| %>
+                <label class="sr-only" for="<%= "rate_field_#{cost_type.id}" %>"><%= t('cost_types.adjust_current_price_label') %></label>
+                <%= content_tag :input,
+                                "",
+                                value: "",
+                                name: :rate,
+                                size: 7,
+                                inputmode: :decimal,
+                                placeholder: t(:label_example_placeholder, decimal: unitless_currency_number(1000.50)),
+                                id: "rate_field_#{cost_type.id}" %>
+                <span class="form-label">
+                  <%= Setting.costs_currency %>
+                </span>
+                <button type="submit"
+                        class="button submit_cost_type">
+                  <%= op_icon("icon icon-save", title: I18n.t(:caption_save_rate)) %>
+                </button>
+              <% end %>
+            </td>
+            <%= content_tag :td, cost_type.is_default? ? op_icon("icon icon-checkmark", title: I18n.t(:general_text_Yes)) : "" %>
+            <td class="buttons">
+              <%= button_to main_app.admin_cost_type_path(cost_type),
+                            method: :delete,
+                            form: { id: "delete_cost_type_#{cost_type.id}",
+                                   class: "delete_cost_type",
+                                   title: t(:button_lock),
+                                   data: { turbo_confirm: t(:text_are_you_sure) } },
+                            class: "button--link submit_cost_type" do %>
+                <%= op_icon("icon icon-locked", title: I18n.t(:button_lock)) %>
+              <% end %>
+            </td>
+          </tr>
+          <tr style="display:none;">
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  <p class="cost-types--results-hint -bottom">
+    <%= t("cost_types.limited_results", count: display_count, total: total_count, limit: limit_value) %>
+  </p>
+<% end %>

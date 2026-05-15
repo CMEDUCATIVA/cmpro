@@ -1,0 +1,1018 @@
+<%
+  ia_colab_is_admin = begin
+    if respond_to?(:current_user, true) && current_user.present?
+      current_user.admin?
+    elsif defined?(User) && User.respond_to?(:current)
+      User.current&.admin?
+    else
+      false
+    end
+  rescue StandardError
+    false
+  end
+%>
+
+<%= stylesheet_link_tag 'ia_colaborativa/chat', media: 'all' %>
+<%= javascript_include_tag 'ia_colaborativa/chat',
+                           nonce: content_security_policy_script_nonce %>
+<script nonce="<%= content_security_policy_script_nonce %>">
+  window.IA_COLAB_MCP_URL = "<%= (ENV['MCP_SERVER_URL'] || 'http://192.168.1.55:8000').chomp('/') %>";
+  window.IA_COLAB_IS_ADMIN = <%= ia_colab_is_admin ? 'true' : 'false' %>;
+</script>
+
+<%= stylesheet_link_tag 'ia_colaborativa/ckeditor/ai_button',
+                        media: 'all',
+                        'data-turbo-track': 'reload' %>
+<%= javascript_include_tag 'ia_colaborativa/ckeditor/debug_button',
+                           defer: true,
+                           nonce: content_security_policy_script_nonce %>
+<%= javascript_include_tag 'ia_colaborativa/ckeditor/ai_button',
+                           defer: true,
+                           nonce: content_security_policy_script_nonce %>
+<%= javascript_include_tag 'ia_colaborativa/ckeditor/ai_magic_commands',
+                           defer: true,
+                           nonce: content_security_policy_script_nonce %>
+<%= javascript_include_tag 'ia_colaborativa/ckeditor/magic_button',
+                           defer: true,
+                           nonce: content_security_policy_script_nonce %>
+<%= javascript_include_tag 'ia_colaborativa/boton_auto_chat',
+                           defer: true,
+                           nonce: content_security_policy_script_nonce %>
+
+<!-- Botón flotante circular con efecto neón futurista -->
+<button id="ia-chat-toggle-btn" 
+        style="position: fixed; 
+               bottom: 90px; 
+               right: 25px; 
+               z-index: 9998; 
+               width: 70px;
+               height: 70px;
+               padding: 8px;
+               margin: 0;
+               background: linear-gradient(135deg, #5B46E5 0%, #7C3AED 50%, #A855F7 100%); 
+               color: white; 
+               border: 3px solid rgba(139, 92, 246, 0.5);
+               border-radius: 50%; 
+               cursor: pointer; 
+               box-shadow: 
+                 0 0 20px rgba(139, 92, 246, 0.6),
+                 0 0 40px rgba(139, 92, 246, 0.4),
+                 0 0 60px rgba(139, 92, 246, 0.2),
+                 0 4px 20px rgba(0, 0, 0, 0.3);
+               transition: all 0.3s ease;
+               will-change: transform, box-shadow;
+               user-select: none;
+               -webkit-tap-highlight-color: transparent;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               animation: neon-pulse 2s ease-in-out infinite;
+               line-height: 1;
+               overflow: hidden;">
+  <span class="op-ia-avatar-static-glow"
+        style="font-size: 20px; 
+               font-weight: 700;
+               letter-spacing: 0.05em;
+               text-transform: uppercase;
+               filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));">IA</span>
+</button>
+
+<!-- Ventana de chat estilo ChatGPT oscuro con branding CMPROYECTOS -->
+<div id="ia-chat-window" 
+     style="display: none; 
+            position: fixed; 
+            bottom: 20px; 
+            right: 25px; 
+            background: #212121; 
+            border-radius: 16px; 
+            box-shadow: 
+              0 0 0 1px rgba(139, 92, 246, 0.2),
+              0 10px 40px rgba(0, 0, 0, 0.5),
+              0 4px 12px rgba(0, 0, 0, 0.3); 
+            z-index: 9999; 
+            flex-direction: column; 
+            overflow: hidden;
+            will-change: transform, opacity;
+            transition: all 0.3s ease;">
+  
+  <!-- Header estilo ChatGPT oscuro -->
+  <div style="background: #212121; 
+              padding: 14px 16px; 
+              display: flex; 
+              justify-content: flex-end; 
+              align-items: center; 
+              border-bottom: 1px solid #3f3f3f;">
+    <div style="display: flex; gap: 8px; align-items: center;">
+      <button id="ia-chat-settings-btn"
+              style="background: transparent;
+                     border: none;
+                     color: #8e8ea0;
+                     width: 32px;
+                     height: 32px;
+                     border-radius: 6px;
+                     cursor: pointer;
+                     font-size: 16px;
+                     transition: all 0.15s ease;
+                     user-select: none;
+                     -webkit-tap-highlight-color: transparent;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;"
+              title="Configuración del chat">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+          <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+          <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+        </svg>
+      </button>
+      <button id="ia-chat-clear-btn"
+              style="background: transparent;
+                     border: none;
+                     color: #8e8ea0;
+                     width: 32px;
+                     height: 32px;
+                     border-radius: 6px;
+                     cursor: pointer;
+                     font-size: 16px;
+                     transition: all 0.15s ease;
+                     user-select: none;
+                     -webkit-tap-highlight-color: transparent;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;"
+              title="Nuevo chat">&#128465;</button>
+      <button id="ia-chat-minimize-btn" 
+              style="background: transparent; 
+                     border: none; 
+                     color: #8e8ea0; 
+                     width: 32px; 
+                     height: 32px; 
+                     border-radius: 6px; 
+                     cursor: pointer; 
+                     font-size: 18px;
+                     transition: all 0.15s ease;
+                     user-select: none;
+                     -webkit-tap-highlight-color: transparent;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;"
+              title="Minimizar">&minus;</button>
+      <button id="ia-chat-close-btn" 
+              style="background: transparent; 
+              border: none; 
+              color: #8e8ea0; 
+              width: 32px; 
+              height: 32px; 
+              border-radius: 6px; 
+              cursor: pointer; 
+              font-size: 20px;
+              transition: all 0.15s ease;
+              user-select: none;
+              -webkit-tap-highlight-color: transparent;
+              display: flex;
+              align-items: center;
+              justify-content: center;"
+       title="Cerrar">&times;</button>
+    </div>
+</div>
+
+<!-- Ventana de configuración del chat -->
+<div id="ia-chat-settings-modal"
+     style="display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;">
+  <div style="background: #212121;
+              color: #ececec;
+              width: min(720px, 90%);
+              max-width: 720px;
+              height: min(640px, 90vh);
+              max-height: 720px;
+              border-radius: 16px;
+              border: 1px solid #3f3f3f;
+              box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+              display: flex;
+              flex-direction: column;
+              overflow: hidden;">
+    <div style="padding: 16px;
+                border-bottom: 1px solid #333;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;">
+      <div style="font-weight: 600;
+                  font-size: 16px;">Configuración de SaraIA</div>
+      <button id="ia-chat-settings-close"
+              style="background: transparent;
+                     border: none;
+                     color: #8e8ea0;
+                     width: 30px;
+                     height: 30px;
+                     border-radius: 6px;
+                     cursor: pointer;
+                     font-size: 18px;">&times;</button>
+    </div>
+    <div style="flex: 1; display: flex; min-height: 0;">
+      <div style="width: 170px;
+                  border-right: 1px solid #333;
+                  padding: 18px 12px;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  background: #1a1a1a;">
+        <button type="button"
+                class="ia-settings-tab active"
+                data-tab="general"
+                style="width: 100%;
+                       background: #2f2f2f;
+                       border: 1px solid #444;
+                       color: #ececec;
+                       padding: 10px;
+                       border-radius: 8px;
+                       cursor: pointer;
+                font-weight: 400;
+                       text-align: left;">
+          General
+        </button>
+        <button type="button"
+                class="ia-settings-tab"
+                data-tab="automation"
+                style="width: 100%;
+                       background: transparent;
+                       border: 1px solid #444;
+                       color: #8e8ea0;
+                       padding: 10px;
+                       border-radius: 8px;
+                       cursor: pointer;
+                font-weight: 400;
+                       text-align: left;">
+          Automatización
+        </button>
+        <button type="button"
+                class="ia-settings-tab"
+                data-tab="debug"
+                style="width: 100%;
+                       background: transparent;
+                       border: 1px solid #444;
+                       color: #8e8ea0;
+                       padding: 10px;
+                       border-radius: 8px;
+                       cursor: pointer;
+                       font-weight: 600;
+                       text-align: left;">
+          Debug
+        </button>
+      </div>
+      <div style="flex: 1;
+                  overflow-y: auto;
+                  padding: 0;
+                  background: #1e1e1e;">
+                                <div class="ia-settings-panel"
+             data-tab-panel="general"
+             style="padding: 24px;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    color: #cbd5f5;
+                    display: block;">
+          <div style="display: flex;
+                      gap: 12px;
+                      align-items: flex-start;
+                      justify-content: space-between;
+                      flex-wrap: wrap;
+                      margin-bottom: 16px;">
+            <p style="flex: 1;
+                      margin: 0;
+                      font-size: 13px;
+                      line-height: 1.6;
+                      color: #f8fafc;">
+              Aquí podrás gestionar futuras opciones del asistente de IA integrado con CMPROYECTOS.
+            </p>
+            <button id="ia-api-provider-show-btn"
+                    type="button"
+                    style="padding: 6px 14px;
+                           border-radius: 6px;
+                           border: none;
+                           background: linear-gradient(135deg, #5B46E5, #7C3AED, #A855F7);
+                           color: white;
+                           font-weight: 600;
+                           font-size: 11px;
+                           letter-spacing: 0.02em;
+                           text-transform: uppercase;
+                           cursor: pointer;
+                           align-self: center;
+                           margin-left: auto;
+                           padding: 5px 12px;">
+              Guardar
+            </button>
+          </div>
+          <%= render "ia_colaborativa/hooks/proveedor_api" %>
+        </div>
+
+        <div class="ia-settings-panel"
+             data-tab-panel="automation"
+             style="display: none;
+                    padding: 24px;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    color: #cbd5f5;">
+          <style>
+            #peb-auto-root .peb-tree {
+              border: 1px solid #3b3b3b;
+              border-radius: 12px;
+              background: #18181b;
+              padding: 16px;
+              box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+            }
+            #peb-auto-root .peb-tree__header {
+              display: flex;
+              gap: 12px;
+              align-items: center;
+              margin-bottom: 12px;
+            }
+            #peb-auto-root .peb-tree__toggle {
+              border: 1px solid #5B46E5;
+              background: rgba(91, 70, 229, 0.15);
+              color: #ddd;
+              border-radius: 8px;
+              width: 36px;
+              height: 32px;
+              cursor: pointer;
+              font-size: 14px;
+            }
+            #peb-auto-root .peb-tree__title {
+              flex: 1;
+              background: transparent;
+              border: 1px solid #3d3d3d;
+              border-radius: 8px;
+              padding: 6px 10px;
+              color: #f8fafc;
+              font-weight: 600;
+              font-size: 15px;
+            }
+            #peb-auto-root .peb-tree__actions {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+            }
+            #peb-auto-root .peb-tree__status {
+              font-size: 12px;
+              color: #94a3b8;
+            }
+            #peb-auto-root .peb-tree__save {
+              border: 1px solid #5B46E5;
+              background: #5B46E5;
+              color: white;
+              padding: 6px 14px;
+              border-radius: 8px;
+              cursor: pointer;
+              font-weight: 600;
+            }
+            #peb-auto-root .peb-tree__save:disabled {
+              opacity: 0.6;
+              cursor: not-allowed;
+            }
+            #peb-auto-root .peb-tree__create {
+              border: 1px solid rgba(148,163,184,0.4);
+              background: transparent;
+              color: #e0e7ff;
+              padding: 6px 12px;
+              border-radius: 8px;
+              cursor: pointer;
+              font-weight: 600;
+            }
+            #peb-auto-root .peb-tree__create:disabled {
+              opacity: 0.4;
+              cursor: not-allowed;
+            }
+            #peb-auto-root .peb-tree__body {
+              border-top: 1px solid rgba(255,255,255,0.06);
+              padding-top: 12px;
+            }
+            #peb-auto-root .peb-tree__empty {
+              background: rgba(15,23,42,0.35);
+              border: 1px dashed rgba(148,163,184,0.4);
+              border-radius: 10px;
+              padding: 14px;
+              color: #a5b4fc;
+            }
+            #peb-auto-root .peb-tree__phase-list {
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+            }
+            #peb-auto-root .peb-tree__phase-card {
+              /* Ensure styles are present if not in CSS file */
+              background: #1a1a2e;
+              border: 1px solid #3d3d3d;
+              border-radius: 12px;
+              padding: 16px;
+            }
+            #peb-auto-root .peb-tree__phase-card.over {
+              border: 2px dashed #5B46E5;
+              background: rgba(91, 70, 229, 0.1);
+            }
+            #peb-auto-root div[draggable="true"].over {
+              border-top: 2px solid #5B46E5;
+            }
+            #peb-auto-root .peb-tree__creator {
+              border: 1px solid rgba(148,163,184,0.4);
+              border-radius: 10px;
+              padding: 14px;
+              background: rgba(15,23,42,0.4);
+              margin-bottom: 12px;
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+            }
+            #peb-auto-root .peb-tree__creator-grid {
+              display: grid;
+              grid-template-columns: 160px 90px 140px 60px;
+              gap: 12px;
+              align-items: end;
+            }
+            #peb-auto-root .peb-tree__creator-field {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+            }
+            #peb-auto-root .peb-tree__creator-field-label {
+              font-size: 12px;
+              color: #cbd5f5;
+            }
+            #peb-auto-root .peb-tree__creator-input {
+              border: 1px solid #3d3d3d;
+              border-radius: 8px;
+              padding: 6px 10px;
+              background: transparent;
+              color: #f8fafc;
+            }
+            #peb-auto-root .peb-tree__creator-select {
+              border: 1px solid #3d3d3d;
+              border-radius: 8px;
+              padding: 6px 10px;
+              background-color: #1a1a2e !important;
+              color: #f8fafc !important;
+              cursor: pointer;
+              outline: none;
+            }
+            #peb-auto-root .peb-tree__creator-select:focus {
+              border-color: #5B46E5;
+              background-color: #1a1a2e !important;
+              color: #f8fafc !important;
+            }
+            #peb-auto-root .peb-tree__creator-select option {
+              background-color: #1a1a2e !important;
+              color: #f8fafc !important;
+            }
+            #peb-auto-root .peb-tree__creator-actions {
+              display: flex;
+              justify-content: flex-end;
+              gap: 10px;
+            }
+            #peb-auto-root .peb-tree__creator-cancel {
+              border: 1px solid rgba(148,163,184,0.4);
+              background: transparent;
+              color: #cbd5f5;
+              border-radius: 8px;
+              padding: 6px 12px;
+              cursor: pointer;
+            }
+            #peb-auto-root .peb-tree__creator-submit {
+              border: 1px solid #5B46E5;
+              background: #5B46E5;
+              color: white;
+              border-radius: 8px;
+              padding: 6px 16px;
+              cursor: pointer;
+            }
+          </style>
+          <div id="peb-auto-root"></div>
+        </div>
+        
+
+
+
+
+<div class="ia-settings-panel"
+             data-tab-panel="debug"
+             style="display: none;
+                    height: 100%;">
+          <div id="ia-chat-debug-panel"
+               style="flex: 1;
+                      overflow-y: auto;
+                      padding: 20px;
+                      display: flex;
+                      flex-direction: column;
+                      gap: 12px;
+                      background: #212121;
+                      font-family: 'Courier New', monospace;
+                      font-size: 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; gap: 12px;">
+              <h3 style="color: #ececec; margin: 0; font-size: 16px; font-weight: 600;">Debug Panel</h3>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <label style="display: flex; align-items: center; gap: 6px; font-size: 12px; color: #cbd5f5;">
+                  <input type="checkbox"
+                         id="ia-debug-enable-toggle"
+                         style="accent-color: #5B46E5;"
+                         checked />
+                  <span id="ia-debug-toggle-label">Logging activo</span>
+                </label>
+                <button id="ia-debug-refresh-btn"
+                        style="background: #2f2f2f;
+                               border: 1px solid #3f3f3f;
+                               color: #ececec;
+                               padding: 6px 12px;
+                               border-radius: 6px;
+                               cursor: pointer;
+                               font-size: 12px;
+                               transition: all 0.15s ease;">
+                  Refresh
+                </button>
+                <button id="ia-debug-clear-btn"
+                        style="background: #3a1f1f;
+                               border: 1px solid #5a2a2a;
+                               color: #f5dada;
+                               padding: 6px 12px;
+                               border-radius: 6px;
+                               cursor: pointer;
+                               font-size: 12px;
+                               transition: all 0.15s ease;">
+                  Limpiar
+                </button>
+              </div>
+            </div>
+            <div id="ia-debug-content" style="color: #8e8ea0; line-height: 1.6;">
+              <p style="margin: 0;">Cargando información de debug...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de contraseña para ajustes -->
+<div id="ia-chat-settings-auth-modal"
+     style="display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            z-index: 10001;
+            align-items: center;
+            justify-content: center;">
+  <div style="background: #212121;
+              color: #ececec;
+              width: min(420px, 90%);
+              border-radius: 14px;
+              border: 1px solid #3f3f3f;
+              box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+              padding: 18px;
+              display: flex;
+              flex-direction: column;
+              gap: 12px;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="font-weight: 600; font-size: 15px;">Acceso a Configuración</div>
+      <button id="ia-chat-settings-auth-close"
+              type="button"
+              style="background: transparent;
+                     border: none;
+                     color: #8e8ea0;
+                     width: 28px;
+                     height: 28px;
+                     border-radius: 6px;
+                     cursor: pointer;
+                     font-size: 16px;">&times;</button>
+    </div>
+    <div style="font-size: 12px; color: #9ca3af;">
+      Introduce la contraseña para abrir la configuración.
+    </div>
+    <div style="position: relative; width: 100%;">
+      <input id="ia-chat-settings-auth-input"
+             type="password"
+             placeholder="Contraseña"
+             style="width: 100%;
+                    padding: 12px 40px 12px 14px;
+                    height: 40px;
+                    line-height: 1.4;
+                    border-radius: 10px;
+                    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+                    background: #12131f !important;
+                    color: #fefefe !important;
+                    font-size: 13px;
+                    font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                    outline: none;">
+      <button id="ia-chat-settings-auth-toggle"
+              type="button"
+              aria-label="Mostrar contraseña"
+              title="Mostrar contraseña"
+              style="position: absolute;
+                     right: 10px;
+                     top: 50%;
+                     transform: translateY(-50%);
+                     width: 28px;
+                     height: 28px;
+                     border-radius: 8px;
+                     border: 1px solid transparent;
+                     background: transparent;
+                     color: #cbd5f5;
+                     display: inline-flex;
+                     align-items: center;
+                     justify-content: center;
+                     cursor: pointer;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+      </button>
+    </div>
+    <label style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #cbd5f5;">
+      <input type="checkbox" id="ia-chat-settings-auth-remember" style="accent-color: #5B46E5;">
+      Recordar contraseña en este navegador
+    </label>
+    <div style="display: flex; justify-content: flex-end; gap: 8px;">
+      <button id="ia-chat-settings-auth-cancel"
+              type="button"
+              style="background: #2f2f2f;
+                     border: 1px solid #3f3f3f;
+                     color: #ececec;
+                     padding: 6px 12px;
+                     border-radius: 8px;
+                     cursor: pointer;
+                     font-size: 12px;">
+        Cancelar
+      </button>
+      <button id="ia-chat-settings-auth-submit"
+              type="button"
+              style="background: #5B46E5;
+                     border: 1px solid #6d5bf0;
+                     color: #fff;
+                     padding: 6px 12px;
+                     border-radius: 8px;
+                     cursor: pointer;
+                     font-size: 12px;
+                     font-weight: 600;">
+        Entrar
+      </button>
+    </div>
+  </div>
+</div>
+
+  <!-- Pantalla de bienvenida estilo ChatGPT oscuro -->
+  <div id="ia-chat-welcome" 
+       style="flex: 1; 
+              display: flex; 
+              flex-direction: column; 
+              align-items: center; 
+              justify-content: center; 
+              padding: 40px 24px;
+              text-align: center;
+              background: #212121;">
+    <h2 style="color: #ececec; 
+               font-size: 20px; 
+               font-weight: 600; 
+               margin: 0 0 12px 0;
+               letter-spacing: -0.02em;
+               line-height: 1.4;">
+      &iexcl;Hola! Soy SaraIA, tu inteligencia artificial en la construcción
+    </h2>
+    <p style="color: #8e8ea0;
+              font-size: 15px;
+              margin: 0;
+              line-height: 1.5;
+              font-weight: 500;">
+      &iquest;En qué puedo ayudarte hoy?
+    </p>
+  </div>
+
+  <!-- Área de mensajes estilo ChatGPT oscuro -->
+  <div id="ia-chat-messages"
+       style="flex: 1;
+              overflow-y: auto;
+              padding: 16px;
+              display: none;
+              flex-direction: column;
+              gap: 16px;
+              background: #212121;">
+  </div>
+  <!-- Input estilo ChatGPT oscuro -->
+  <div style="padding: 12px 16px 16px 16px; background: #212121; border-top: 1px solid #3f3f3f;">
+    <!-- Preview de imagen adjunta -->
+    <div id="ia-image-preview-container"
+         style="display: none;
+                padding: 8px;
+                margin-bottom: 8px;
+                background: #2f2f2f;
+                border: 1px solid #3f3f3f;
+                border-radius: 8px;
+                position: relative;">
+      <img id="ia-image-preview"
+           style="max-width: 100%;
+                  max-height: 120px;
+                  border-radius: 4px;
+                  display: block;" />
+      <button id="ia-image-remove-btn"
+              type="button"
+              style="position: absolute;
+                     top: 12px;
+                     right: 12px;
+                     background: rgba(0, 0, 0, 0.7);
+                     color: white;
+                     border: none;
+                     width: 28px;
+                     height: 28px;
+                     border-radius: 50%;
+                     cursor: pointer;
+                     font-size: 16px;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     transition: all 0.15s ease;">&times;</button>
+    </div>
+
+    <form id="ia-chat-form"
+          style="display: flex;
+                 gap: 8px;
+                 background: #2f2f2f;
+                 border: 1px solid #565869;
+                 border-radius: 12px;
+                 padding: 8px 12px;
+                 transition: all 0.2s ease;
+                 align-items: center;
+                 position: relative;">
+
+      <!-- Input de archivo oculto -->
+      <input id="ia-chat-file-input"
+             type="file"
+             accept="image/png,image/jpeg,image/jpg,image/gif,image/webp,image/bmp,image/svg+xml,image/tiff,image/heic,image/heif,image/*"
+             style="display: none;" />
+
+      <!-- Botón de adjuntar imagen -->
+      <button type="button"
+              id="ia-chat-attach-btn"
+              style="background: transparent;
+                     color: #8e8ea0;
+                     border: none;
+                     width: 32px;
+                     height: 32px;
+                     border-radius: 6px;
+                     cursor: pointer;
+                     font-size: 18px;
+                     font-weight: 400;
+                     transition: all 0.15s ease;
+                     user-select: none;
+                     -webkit-tap-highlight-color: transparent;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     flex-shrink: 0;
+                     padding: 0;
+                     margin: 0;"
+              title="Adjuntar imagen">
+        &#128206;
+      </button>
+
+      <input id="ia-chat-input"
+             type="text"
+             placeholder="Pregunta lo que quieras..."
+             autocomplete="off"
+             style="flex: 1;
+                    padding: 8px 4px;
+                    border: none;
+                    background: transparent;
+                    color: #ececec;
+                    font-size: 14px;
+                    outline: none;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                    position: relative;
+                    z-index: 2;" />
+      <button type="submit"
+              id="ia-chat-send-btn"
+              style="background: transparent;
+                     color: #8e8ea0;
+                     border: none;
+                     width: 32px;
+                     height: 32px;
+                     border-radius: 6px;
+                     cursor: pointer;
+                     font-size: 18px;
+                     font-weight: 400;
+                     transition: all 0.15s ease;
+                     user-select: none;
+                     -webkit-tap-highlight-color: transparent;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     flex-shrink: 0;
+                     padding: 0;
+                     margin: 0;">
+        &uarr;
+      </button>
+    </form>
+    
+    <!-- Dropdown contextual Agentes IA -->
+    <div style="display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 8px;
+                margin-top: 8px;
+                position: relative;">
+        <div id="ia-agent-menu-wrapper"
+             style="position: relative; margin-left: 16px; display: inline-flex;">
+               <button type="button"
+               id="ia-agent-menu-button"
+               data-open="false"
+               style="background: transparent;
+                      color: #8E8EA0;
+                      border: none;
+                      padding: 0;
+                      font-size: 12px;
+                       font-weight: 400;
+              cursor: pointer;
+               display: flex;
+               align-items: center;
+               gap: 6px;">
+          <span><span id="ia-agent-menu-label">Sara-GPT</span>
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="font-size: 12px;">
+              <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+            </svg>
+          </span>
+        </button>
+        <div id="ia-agent-menu"
+             style="display: none;
+                    position: absolute;
+                    left: 0;
+                    bottom: calc(100% + 4px);
+                    background: #2f2f2f;
+                    border: 1px solid #3f3f3f;
+                    border-radius: 10px;
+                    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+                    padding: 4px;
+                    min-width: 190px;
+                    z-index: 5;">
+          <button type="button"
+                  class="ia-agent-option"
+                  data-agent="sara">
+            Sara-GPT
+          </button>
+          <button type="button"
+                  class="ia-agent-option"
+                  data-agent="sara_tools">
+            Sara
+          </button>
+          <button type="button"
+                  class="ia-agent-option"
+                  data-agent="docs">
+            Sara-Docs-GPT
+          </button>
+          <button type="button"
+                  class="ia-agent-option"
+                  data-agent="cde">
+            Sara-Obra-GPT
+          </button>
+        </div>
+        <button type="button" id="ia-projects-button"
+                style="background: transparent;
+                       color: #8E8EA0;
+                       border: none;
+                       padding: 0;
+                       font-size: 12px;
+                       font-weight: 400;
+                       cursor: pointer;
+                       display: flex;
+                       align-items: center;
+                       gap: 6px;
+                       margin-left: 12px;">
+          <span>Proyectos
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="font-size: 12px;">
+              <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+            </svg>
+          </span>
+        </button>
+        
+        <!-- Modal de búsqueda de proyectos -->
+        <div id="ia-projects-search-modal"
+             style="display: none;
+                    position: fixed;
+                    inset: 0;
+                    background: rgba(0,0,0,0.65);
+                    z-index: 10000;
+                    align-items: center;
+                    justify-content: center;">
+          <div style="background: #212121;
+                      color: #ececec;
+                      width: min(800px, 90%);
+                      max-width: 800px;
+                      height: min(600px, 90vh);
+                      max-height: 600px;
+                      border-radius: 16px;
+                      border: 1px solid #3f3f3f;
+                      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+                      display: flex;
+                      flex-direction: column;
+                      overflow: hidden;">
+            <!-- Header del modal -->
+            <div style="padding: 16px;
+                        border-bottom: 1px solid #333;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;">
+              <div style="font-weight: 600;
+                          font-size: 16px;
+                          display: flex;
+                          align-items: center;
+                          gap: 8px;">
+                Buscar Proyectos
+              </div>
+              <button id="ia-projects-search-close"
+                      style="background: transparent;
+                             border: none;
+                             color: #8e8ea0;
+                             width: 30px;
+                             height: 30px;
+                             border-radius: 6px;
+                             cursor: pointer;
+                             font-size: 18px;">&times;</button>
+            </div>
+            
+            <!-- Contenido del modal -->
+            <div style="flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        overflow: hidden;">
+              
+              <!-- Campo de búsqueda -->
+              <div style="padding: 16px;
+                          border-bottom: 1px solid #333;
+                          background: #1a1a1a;">
+                <div style="display: flex; gap: 12px; align-items: center;">
+                  <input id="ia-projects-search-input"
+                         type="text"
+                         placeholder="Buscar por nombre de proyecto..."
+                         style="flex: 1;
+                                padding: 10px 14px;
+                                border: 1px solid #3f3f3f;
+                                border-radius: 8px;
+                                background: #2f2f2f;
+                                color: #ececec;
+                                font-size: 14px;
+                                outline: none;
+                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;"
+                         autocomplete="off" />
+                  <button id="ia-projects-search-btn"
+                          style="background: #5B46E5;
+                                 color: white;
+                                 border: none;
+                                 padding: 10px 16px;
+                                 border-radius: 8px;
+                                 cursor: pointer;
+                                 font-weight: 600;
+                                 font-size: 14px;
+                                 transition: all 0.15s ease;">
+                    Buscar
+                  </button>
+                </div>
+                
+                <!-- Indicador de carga -->
+                <div id="ia-projects-search-loading"
+                     style="display: none;
+                            margin-top: 8px;
+                            text-align: center;
+                            color: #8e8ea0;
+                            font-size: 13px;">
+                  Buscando proyectos...
+                </div>
+              </div>
+              
+              <!-- Resultados de búsqueda -->
+              <div id="ia-projects-search-results"
+                   style="flex: 1;
+                          overflow-y: auto;
+                          padding: 16px;
+                          background: #212121;">
+                <div style="text-align: center;
+                            color: #8e8ea0;
+                            padding: 40px;
+                            font-size: 14px;">
+                  Ingresa un término de búsqueda para encontrar proyectos
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer text minimalista oscuro -->
+    <div style="text-align: center; 
+                margin-top: 10px; 
+                font-size: 11px; 
+                color: #8e8ea0; 
+                line-height: 1.4;">
+      CMPROYECTOS &middot; Entorno común de datos con IA
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag 'ia_colaborativa/drag_drop_automation', defer: true, nonce: content_security_policy_script_nonce %>
+<%= javascript_include_tag 'ia_colaborativa/automation', defer: true, nonce: content_security_policy_script_nonce %>
+

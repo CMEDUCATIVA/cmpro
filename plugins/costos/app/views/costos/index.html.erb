@@ -1,0 +1,51 @@
+<% html_title t('costos.costos_title') %>
+<%= stylesheet_link_tag 'costos/main', media: 'all' %>
+
+<div class="costos-container">
+  <div class="costos-content">
+    <!-- Form to paste embed code or URL -->
+    <div class="costos-embed-form"
+         id="embedForm"
+         data-empty-error="<%= j(t('costos.embed_empty_error')) %>"
+         data-invalid-url="<%= j(t('costos.embed_invalid_url')) %>"
+         data-invalid-code="<%= j(t('costos.embed_invalid_code')) %>">
+      <h2><%= t('costos.embed_title') %></h2>
+
+      <div class="form-group">
+        <label for="embedType"><%= t('costos.embed_type') %>:</label>
+        <select id="embedType" class="form-control">
+          <option value="url"><%= t('costos.embed_url') %></option>
+          <option value="code"><%= t('costos.embed_code') %></option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="embedInput"><%= t('costos.embed_input_label') %>:</label>
+        <textarea id="embedInput"
+                  class="form-control"
+                  rows="5"
+                  placeholder="<%= t('costos.embed_placeholder') %>"
+                  data-url-placeholder="<%= t('costos.embed_url_placeholder') %>"
+                  data-code-placeholder="<%= t('costos.embed_code_placeholder') %>"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button id="loadEmbed" class="button -primary">
+          <%= t('costos.load_embed') %>
+        </button>
+        <button id="clearEmbed" class="button">
+          <%= t('costos.clear_embed') %>
+        </button>
+      </div>
+
+      <p class="costos-embed-feedback" id="embedFeedback" aria-live="polite"></p>
+    </div>
+
+    <!-- Container for the embedded content -->
+    <div class="costos-iframe-container" id="embedContainer" style="display: none;">
+      <div id="embedContent"></div>
+    </div>
+  </div>
+</div>
+
+<%= javascript_include_tag 'costos/embed', nonce: true %>

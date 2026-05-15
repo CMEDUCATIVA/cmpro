@@ -1,0 +1,41 @@
+<%= component_wrapper do %>
+  <%=
+    render Primer::OpenProject::PageHeader.new do |header|
+      header.with_title(variant: :default) { t("settings.project_attributes.heading") }
+      header.with_description { t("settings.project_attributes.heading_description") }
+      header.with_breadcrumbs(breadcrumbs_items)
+    end
+  %>
+
+  <%=
+    render Primer::OpenProject::SubHeader.new do |subheader|
+      subheader.with_action_menu(
+        leading_icon: :plus,
+        trailing_icon: :"triangle-down",
+        label: I18n.t(:button_add),
+        anchor_align: :end,
+        button_arguments: {
+          scheme: :primary,
+          aria: { label: I18n.t(:button_add) },
+          test_selector: "project-attributes-add-menu-button"
+        }
+      ) do |menu|
+        menu.with_item(
+          label: t("settings.project_attributes.label_new_section"),
+          id: "dialog-show-project-custom-field-section-dialog",
+          tag: :a,
+          href: new_link_admin_settings_project_custom_field_sections_path,
+          content_arguments: { data: { controller: "async-dialog" } }
+        )
+
+        menu.with_item(
+          label: t("settings.project_attributes.label_new_attribute"),
+          tag: :a,
+          href: new_admin_settings_project_custom_field_path(type: "ProjectCustomField"),
+          content_arguments: { data: { turbo: "false",
+                                       test_selector: "new-project-custom-field-button" } }
+        )
+      end
+    end
+  %>
+<% end %>

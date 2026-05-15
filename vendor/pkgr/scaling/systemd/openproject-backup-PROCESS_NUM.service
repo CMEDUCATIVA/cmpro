@@ -1,0 +1,12 @@
+[Unit]
+StopWhenUnneeded=true
+Requires=openproject-backup.service
+After=openproject-backup.service
+
+[Service]
+Environment=APP_PROCESS_INDEX=__PROCESS_INDEX__
+ExecStart=/usr/bin/openproject run backup
+Restart=always
+
+[Install]
+WantedBy=openproject-backup.service

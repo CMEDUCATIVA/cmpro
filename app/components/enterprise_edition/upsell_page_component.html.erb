@@ -1,0 +1,41 @@
+<div class="op-enterprise-upsell-page" data-test-selector="op-enterprise-upsell-page">
+  <%=
+    render(Primer::OpenProject::FlexLayout.new(justify_content: :center, align_items: :center)) do |flex|
+      flex.with_column do
+        render(Primer::Beta::Octicon.new(icon: :"op-enterprise-addons",
+                                         size: :medium,
+                                         classes: "upsell-colored"))
+      end
+
+      flex.with_column(ml: 2) do
+        render(Primer::Beta::Heading.new(tag: :h2)) { title }
+      end
+    end
+  %>
+
+  <p class="upsell--feature-reference">
+    <%= render(Primer::Beta::Text.new) { description } %>
+    <%= render(Primer::Beta::Text.new) { plan_text } %>
+  </p>
+  <% if more_info_text.present? %>
+    <%= render(Primer::Beta::Text.new(tag: :p, color: :muted)) { more_info_text } %>
+  <% end %>
+
+  <% if features.present? %>
+  <ul>
+    <% features.each do |text| %>
+      <li><%= text %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <% if @video.present? %>
+    <%= video_tag @video, controls: false, class: "widget-box--teaser-video", autoplay: true, loop: true, muted: true %>
+  <% elsif @image.present? %>
+    <%= image_tag @image, class: "widget-box--teaser-image widget-box--teaser-image_default" %>
+  <% else %>
+    <%= image_tag "enterprise-add-on.svg", class: "widget-box--teaser-image widget-box--teaser-image_default" %>
+  <% end %>
+
+  <%= render EnterpriseEdition::UpsellButtonsComponent.new(feature_key, justify_content: :center) %>
+</div>

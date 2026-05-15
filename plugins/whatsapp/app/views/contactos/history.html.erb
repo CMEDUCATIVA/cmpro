@@ -1,0 +1,179 @@
+<% content_for :header_tags do %>
+  <meta name="turbo-cache-control" content="no-cache">
+  <%= stylesheet_link_tag "contacto", media: "all" %>
+  <%= javascript_include_tag "contacto", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "contacto_historial_dashboard", nonce: true, data: { turbo_track: "reload" } %>
+<% end %>
+
+<div class="contacto-shell">
+  <div class="contacto-header">
+    <div>
+      <div class="contacto-title">Historial de Llamadas</div>
+      <div class="contacto-subtitle">Registro consolidado de llamadas del proyecto.</div>
+    </div>
+    <div class="contacto-actions">
+      <%= link_to "Volver", whatsapp_plugin_project_contactos_path(@project), class: "contacto-btn contacto-btn-ghost" %>
+    </div>
+  </div>
+
+  <div class="contacto-history-dashboard"
+       data-contacto-history-dashboard="true"
+       data-contacto-history-dashboard-metrics="<%= ERB::Util.html_escape((@history_dashboard_metrics || {}).to_json) %>"></div>
+
+  <div class="contacto-layout">
+    <div class="contacto-main">
+      <div class="contacto-history-toolbar">
+        <form method="get"
+              action="<%= whatsapp_plugin_project_contactos_history_path(@project) %>"
+              class="contacto-history-calendar-form"
+              data-contacto-history-calendar-form>
+          <input type="date"
+                 name="history_date"
+                 value="<%= @history_date_iso %>"
+                 class="contacto-history-calendar-input"
+                 data-contacto-history-date-input />
+          <select name="responsible_id"
+                  class="contacto-history-responsible-input"
+                  data-contacto-history-responsible-input>
+            <option value="">Todos los responsables</option>
+            <% @history_users.each do |user| %>
+              <option value="<%= user[:id] %>" <%= "selected" if @history_responsible_id.to_s == user[:id].to_s %>><%= user[:name] %></option>
+            <% end %>
+          </select>
+        </form>
+      </div>
+      <div class="contacto-table-wrap">
+        <% max_hour_contacts = (@call_history_by_hour || []).map { |items| items&.size.to_i }.max.to_i %>
+        <% hour_col_width = [[96 + (max_hour_contacts * 10), 96].max, 260].min %>
+        <table class="contacto-table is-loading" data-contacto-history-table="true" data-history-storage-key="contacto.history.columns.<%= @project.id %>">
+          <thead>
+            <tr>
+              <th data-col-key="hour" style="width:<%= hour_col_width %>px;min-width:<%= hour_col_width %>px;">Hora</th>
+              <th data-col-key="name">Nombre</th>
+              <th data-col-key="phone">Telefono</th>
+              <th data-col-key="responsible">Responsable</th>
+              <th data-col-key="duration">Duracion de llamada</th>
+              <th data-col-key="date">Fecha</th>
+              <th data-col-key="start_time">Hora de inicio</th>
+              <th data-col-key="end_time">Hora de fin</th>
+              <th data-col-key="outcome">Resultado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% (0..23).each do |hour| %>
+              <% rows = (@call_history_by_hour || [])[hour] || [] %>
+              <tr class="contacto-history-hour-row" data-hour-row="<%= format('%02d', hour) %>">
+                <td data-col-key="hour" class="contacto-history-hour-cell" style="width:<%= hour_col_width %>px;min-width:<%= hour_col_width %>px;">
+                  <div class="contacto-history-hour-label"><%= format("%02d:00", hour) %></div>
+                  <% if rows.any? %>
+                    <small class="contacto-history-hour-count"><%= rows.size %></small>
+                  <% end %>
+                </td>
+                <td data-col-key="name">
+                  <% if rows.any? %>
+                    <% rows.each do |row| %>
+                      <div class="contacto-history-cell-item <%= 'is-pause' if row[:is_pause] %>"><%= row[:name] %></div>
+                      <% if row[:gap_after_seconds].present? %>
+                        <div class="contacto-history-gap-row" aria-hidden="true">&nbsp;</div>
+                      <% end %>
+                    <% end %>
+                  <% else %>
+                    <span class="contacto-history-cell-empty">-</span>
+                  <% end %>
+                </td>
+                <td data-col-key="phone">
+                  <% if rows.any? %>
+                    <% rows.each do |row| %>
+                      <div class="contacto-history-cell-item <%= 'is-pause' if row[:is_pause] %>"><%= row[:phone] %></div>
+                      <% if row[:gap_after_seconds].present? %>
+                        <div class="contacto-history-gap-row" aria-hidden="true">&nbsp;</div>
+                      <% end %>
+                    <% end %>
+                  <% else %>
+                    <span class="contacto-history-cell-empty">-</span>
+                  <% end %>
+                </td>
+                <td data-col-key="responsible">
+                  <% if rows.any? %>
+                    <% rows.each do |row| %>
+                      <div class="contacto-history-cell-item <%= 'is-pause' if row[:is_pause] %>"><%= row[:responsible] %></div>
+                      <% if row[:gap_after_seconds].present? %>
+                        <div class="contacto-history-gap-row" aria-hidden="true">&nbsp;</div>
+                      <% end %>
+                    <% end %>
+                  <% else %>
+                    <span class="contacto-history-cell-empty">-</span>
+                  <% end %>
+                </td>
+                <td data-col-key="duration">
+                  <% if rows.any? %>
+                    <% rows.each do |row| %>
+                      <div class="contacto-history-cell-item <%= 'is-pause' if row[:is_pause] %>"><%= row[:duration] %></div>
+                      <% if row[:gap_after_seconds].present? %>
+                        <div class="contacto-history-gap-row" aria-hidden="true">&nbsp;</div>
+                      <% end %>
+                    <% end %>
+                  <% else %>
+                    <span class="contacto-history-cell-empty">-</span>
+                  <% end %>
+                </td>
+                <td data-col-key="date">
+                  <% if rows.any? %>
+                    <% rows.each do |row| %>
+                      <div class="contacto-history-cell-item <%= 'is-pause' if row[:is_pause] %>"><%= row[:ended_at].present? ? l(row[:ended_at].to_date, format: :default) : "" %></div>
+                      <% if row[:gap_after_seconds].present? %>
+                        <div class="contacto-history-gap-row" aria-hidden="true">&nbsp;</div>
+                      <% end %>
+                    <% end %>
+                  <% else %>
+                    <span class="contacto-history-cell-empty">-</span>
+                  <% end %>
+                </td>
+                <td data-col-key="start_time">
+                  <% if rows.any? %>
+                    <% rows.each do |row| %>
+                      <div class="contacto-history-cell-item <%= 'is-pause' if row[:is_pause] %>"><%= row[:started_at].present? ? row[:started_at].strftime("%H:%M:%S") : "" %></div>
+                      <% if row[:gap_after_seconds].present? %>
+                        <div class="contacto-history-gap-row">
+                          <span class="contacto-history-gap-label <%= 'is-dead-time' if row[:gap_dead_time_alert] %>">
+                            Entre llamada: <%= row[:gap_after_label] %>
+                          </span>
+                        </div>
+                      <% end %>
+                    <% end %>
+                  <% else %>
+                    <span class="contacto-history-cell-empty">-</span>
+                  <% end %>
+                </td>
+                <td data-col-key="end_time">
+                  <% if rows.any? %>
+                    <% rows.each do |row| %>
+                      <div class="contacto-history-cell-item <%= 'is-pause' if row[:is_pause] %>"><%= row[:ended_at].present? ? row[:ended_at].strftime("%H:%M:%S") : "" %></div>
+                      <% if row[:gap_after_seconds].present? %>
+                        <div class="contacto-history-gap-row" aria-hidden="true">&nbsp;</div>
+                      <% end %>
+                    <% end %>
+                  <% else %>
+                    <span class="contacto-history-cell-empty">-</span>
+                  <% end %>
+                </td>
+                <td data-col-key="outcome">
+                  <% if rows.any? %>
+                    <% rows.each do |row| %>
+                      <div class="contacto-history-cell-item <%= 'is-pause' if row[:is_pause] %>"><%= row[:outcome] %></div>
+                      <% if row[:gap_after_seconds].present? %>
+                        <div class="contacto-history-gap-row" aria-hidden="true">&nbsp;</div>
+                      <% end %>
+                    <% end %>
+                  <% else %>
+                    <span class="contacto-history-cell-empty">-</span>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

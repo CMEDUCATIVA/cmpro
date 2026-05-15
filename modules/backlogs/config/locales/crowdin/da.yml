@@ -1,0 +1,158 @@
+#-- copyright
+#OpenProject is an open source project management software.
+#Copyright (C) the OpenProject GmbH
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License version 3.
+#OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+#Copyright (C) 2006-2013 Jean-Philippe Lang
+#Copyright (C) 2010-2013 the ChiliProject Team
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License
+#as published by the Free Software Foundation; either version 2
+#of the License, or (at your option) any later version.
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with this program; if not, write to the Free Software
+#Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#See COPYRIGHT and LICENSE files for more details.
+#++
+da:
+  plugin_openproject_backlogs:
+    name: "OpenProject Backlogs"
+    description: "This module adds features enabling agile teams to work with OpenProject in Scrum projects."
+  activerecord:
+    attributes:
+      work_package:
+        position: "Position"
+        story_points: "Historiepunkter"
+        backlogs_work_package_type: "Backlog-type"
+    errors:
+      models:
+        work_package:
+          attributes:
+            blocks_ids:
+              can_only_contain_work_packages_of_current_sprint: "kan kun indeholde ID'er for arbejdspakker i den aktuelle sprint."
+              must_block_at_least_one_work_package: "skal indeholde ID'et på mindst én billet."
+            version_id:
+              task_version_must_be_the_same_as_story_version: "skal være identisk med hovedhistorieversionen."
+        sprint:
+          cannot_end_before_it_starts: "Sprint kan ikke afsluttes før det starter."
+  backlogs:
+    add_new_story: "Ny historie"
+    any: "alle"
+    backlog_settings: "Backlog-indstillinger"
+    burndown_graph: "Burndown-graf"
+    card_paper_size: "Papirformat til kortudskrivning"
+    chart_options: "Diagrammuligheder"
+    close: "Luk"
+    column_width: "Kolonnebredde:"
+    date: "Dag"
+    definition_of_done: "Definition af Udført"
+    generating_chart: "Genererer graf..."
+    hours: "Timer"
+    impediment: "Hindring"
+    label_versions_default_fold_state: "Vis versioner sammenfoldet"
+    work_package_is_closed: "Arbejdspakken er færdig, når"
+    label_is_done_status: "Status %{status_name} betyder færdig"
+    no_burndown_data: "Ingen tilgængelige burndown-data. Sprint start- og slutdatoerne er obligatoriske."
+    points: "Point"
+    positions_could_not_be_rebuilt: "Positioner kunne ikke genopbygges."
+    positions_rebuilt_successfully: "Positioner er genopbygget."
+    properties: "Egenskaber"
+    rebuild: "Genopbyg"
+    rebuild_positions: "Genopbyg positioner"
+    remaining_hours: "Resterende arbejde"
+    remaining_hours_ideal: "Resterende arbejde (ideelt)"
+    show_burndown_chart: "Burndown-diagram"
+    story: "Historie"
+    story_points: "Historiepunkter"
+    story_points_ideal: "Historiepunkter (ideelt)"
+    task: "Opgave"
+    task_color: "Opgavefarve"
+    unassigned: "Utildelt"
+    x_more: "%{count} flere..."
+  backlogs_active: "aktiv"
+  backlogs_any: "alle"
+  backlogs_inactive: "Projekt viser ingen aktivitet"
+  backlogs_points_burn_direction: "Punkt burn op/ned"
+  backlogs_product_backlog: "Produkt-backlog"
+  backlogs_product_backlog_is_empty: "Produkt-backlog er tom"
+  backlogs_product_backlog_unsized: "Toppen af produkt-backloggen har historier uden størrelser"
+  backlogs_sizing_inconsistent: "Historiestørrelser varierer i forhold til deres skøn"
+  backlogs_sprint_notes_missing: "Lukkede sprinter uden retrospektive/gennemgangsnotater"
+  backlogs_sprint_unestimated: "Lukkede eller aktive sprinter med uestimerede historier"
+  backlogs_sprint_unsized: "Projekt har historier om aktive eller nyligt lukkede sprints, som ikke var uden størrelse"
+  backlogs_sprints: "Sprints"
+  backlogs_story: "Historie"
+  backlogs_story_type: "Historietyper"
+  backlogs_task: "Opgave"
+  backlogs_task_type: "Opgavetype"
+  backlogs_velocity_missing: "Ingen hastighed kunne beregnes for dette projekt"
+  backlogs_velocity_varies: "Hastighed varierer betydeligt sprints imellem"
+  backlogs_wiki_template: "Skabelon til sprint-wikiside"
+  backlogs_empty_title: "Ingen versioner defineret til brug i backlogs"
+  backlogs_empty_action_text: "For at komme i gang med backlogs, opret en ny version og tildel den til en backlogs-kolonne."
+  button_edit_wiki: "Redigér wikiside"
+  error_backlogs_task_cannot_be_story: "Indstillingerne er ugyldige. Den valgte opgavetype kan ikke også være en historietype."
+  error_intro_plural: "Flg. fejl opstod:"
+  error_intro_singular: "Flg. fejl opstod:"
+  error_outro: "Ret ovenstående fejl før genindsendelse."
+  event_sprint_description: "%{summary}: %{url}\n%{description}"
+  event_sprint_summary: "%{project}: %{summary}"
+  ideal: "ideelt"
+  inclusion: "er ikke medtaget på listen"
+  label_back_to_project: "Tilbage til projektsiden"
+  label_backlog: "Backlog"
+  label_backlogs: "Backlogs"
+  label_backlogs_unconfigured: "Man har ikke opsat Backlogs endnu. Gå til %{administration} > %{plugins}, og klik dernæst på linket %{configure} til dette plugin. Når man har indstillet feltindhold, vend tilbage til denne side for at begynde at bruge værktøjet."
+  label_blocks_ids: "ID'er for blokerede arbejdspakker"
+  label_burndown: "Burndown"
+  label_column_in_backlog: "Kolonne i backlog"
+  label_hours: "timer"
+  label_work_package_hierarchy: "Arbejdspakkehierarki"
+  label_master_backlog: "Hoved-Backlog"
+  label_not_prioritized: "uprioriteret"
+  label_points: "punkter"
+  label_points_burn_down: "Ned"
+  label_points_burn_up: "Op"
+  label_product_backlog: "produkt-backlog"
+  label_select_all: "Vælg alle"
+  label_sprint_backlog: "sprint-backlog"
+  label_sprint_cards: "Eksportere kort"
+  label_sprint_impediments: "Sprint-hindringer"
+  label_sprint_name: "Sprint \"%{name}\""
+  label_sprint_velocity: "Hastighed %{velocity}, baseret på %{sprints} sprints med en gennemsnitlig %{days} dage"
+  label_stories: "Historier"
+  label_stories_tasks: "Historier/Opgaver"
+  label_task_board: "Opgaveoversigt"
+  label_version_setting: "Versioner"
+  label_version: 'Version'
+  label_webcal: "Webcal-feed"
+  label_wiki: "Wiki"
+  permission_view_master_backlog: "Se hoved-backlog"
+  permission_view_taskboards: "Vis opgaveoversigter"
+  permission_select_done_statuses: "Vælg udført-statusser"
+  permission_update_sprints: "Opdatere sprints"
+  points_accepted: "accepterede punkter"
+  points_committed: "committede punkter"
+  points_resolved: "løste punkter"
+  points_to_accept: "ikke-accepterede punkter"
+  points_to_resolve: "ikke-løste punkter"
+  project_module_backlogs: "Backlogs"
+  rb_label_copy_tasks: "Kopiér arbejdspakker"
+  rb_label_copy_tasks_all: "Alle"
+  rb_label_copy_tasks_none: "Ingen"
+  rb_label_copy_tasks_open: "Åbn"
+  rb_label_link_to_original: "Medtag link til original historie"
+  remaining_hours: "resterende arbejde"
+  required_burn_rate_hours: "krævet burn-hastighed (timer)"
+  required_burn_rate_points: "krævet burn-hastighed (point)"
+  todo_work_package_description: "%{summary}: %{url}\n%{description}"
+  todo_work_package_summary: "%{type}: %{summary}"
+  version_settings_display_label: "Kolonne i backlog"
+  version_settings_display_option_left: "venstre"
+  version_settings_display_option_none: "ingen"
+  version_settings_display_option_right: "højre"

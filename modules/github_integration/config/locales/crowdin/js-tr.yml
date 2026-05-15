@@ -1,0 +1,54 @@
+#-- copyright
+#OpenProject is an open source project management software.
+#Copyright (C) the OpenProject GmbH
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License version 3.
+#OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+#Copyright (C) 2006-2013 Jean-Philippe Lang
+#Copyright (C) 2010-2013 the ChiliProject Team
+#This program is free software; you can redistribute it and/or
+#modify it under the terms of the GNU General Public License
+#as published by the Free Software Foundation; either version 2
+#of the License, or (at your option) any later version.
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+#You should have received a copy of the GNU General Public License
+#along with this program; if not, write to the Free Software
+#Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+#See COPYRIGHT and LICENSE files for more details.
+#++
+tr:
+  js:
+    github_integration:
+      work_packages:
+        tab_name: "GitHub"
+      tab_header:
+        title: "Çekme istekleri"
+        copy_menu:
+          label: Git kod parçaları
+          description: Git kod parçalarını panoya kopyala
+        git_actions:
+          branch_name: Dal adı
+          commit_message: İşlem mesajı
+          cmd: Boş işlemle dal oluştur
+          title: Git için hızlı kod parçaları
+          copy_success: '✅ Kopyalandı!'
+          copy_error: '❌ Kopyalanamadı!'
+      tab_prs:
+        empty: 'Henüz bağlanan herhangi bir çekme isteği yok. PR açıklamasında <code>OP#%{wp_id}</code> kodunu kullanarak mevcut bir PR''yi bağlayın veya yeni bir PR oluşturun.'
+      github_actions: Eylemler
+      pull_requests:
+        message: "%{github_user_link} tarafından yazılan %{repository_link} için %{pr_number} %{pr_link} numaralı çekme isteği %{pr_state} durumdadır."
+        merged_message: "%{repository_link} için %{pr_number} %{pr_link} numaralı çekme isteği %{github_user_link} tarafından %{pr_state} durumundadır."
+        referenced_message: "%{github_user_link} tarafından yazılan %{repository_link} için%{pr_number} %{pr_link} numaralı çekme isteği bu iş paketine atıfta bulunmuştur."
+        states:
+          opened: 'açıldı'
+          closed: 'kapalı'
+          draft: 'taslak'
+          merged: 'birleştirildi'
+          ready_for_review: 'incelemeye hazır olarak işaretlendi'
+    work_packages:
+      tabs:
+        github: "GitHub"

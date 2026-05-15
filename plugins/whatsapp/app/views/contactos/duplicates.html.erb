@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag "contacto", media: "all" %>
+<%= javascript_include_tag "contacto" %>
+
+<div class="contacto-shell">
+  <div class="contacto-header">
+    <div>
+      <div class="contacto-title">Duplicados</div>
+      <div class="contacto-subtitle">Contactos con telefono, email o external_id repetido.</div>
+    </div>
+    <div class="contacto-actions">
+      <%= link_to "Volver", whatsapp_plugin_project_contactos_path(@project), class: "contacto-btn contacto-btn-ghost" %>
+    </div>
+  </div>
+
+  <% @duplicates.each do |key, groups| %>
+    <div class="contacto-card">
+      <div class="contacto-card-title">Duplicados por <%= key %></div>
+      <% if groups.any? %>
+        <% groups.each do |value, contacts| %>
+          <div class="contacto-dup-group">
+            <div class="contacto-dup-title"><%= value %></div>
+            <ul class="contacto-dup-list">
+              <% contacts.each do |contact| %>
+                <li>
+                  <%= link_to [contact.first_name, contact.last_name].join(" ").strip.presence || "Contacto",
+                              whatsapp_plugin_project_contacto_path(@project, contact.id) %>
+                  (<%= contact.email.to_s.presence || contact.phone.to_s %>)
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="contacto-empty">Sin duplicados.</div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,3901 @@
+﻿<% content_for :header_tags do %>
+  <%= javascript_include_tag "chat", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "openproject-whatsapp-countries", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "wa-debug", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "responsable_wa_chat_card", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "conversation_selector", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "openproject-whatsapp", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "whatsapp_relaciones", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= stylesheet_link_tag "whatsapp_relaciones", plugin: "openproject-whatsapp", media: "all", nonce: true, data: { turbo_track: "reload" } %>
+<% end %>
+<% if respond_to?(:action_cable_meta_tag) %>
+  <%= action_cable_meta_tag %>
+<% end %>
+<div class="wa-shell"
+     data-wa-project-id="<%= @project.id %>"
+     data-wa-chat-read-url-template="<%= whatsapp_plugin_project_whatsapp_chat_read_path(@project, id: "__ID__") %>"
+     data-wa-debug-log-url="<%= whatsapp_plugin_project_whatsapp_debug_path(@project) %>"
+     data-contacto-table-settings-url="<%= whatsapp_plugin_project_contactos_table_settings_path(@project) %>"
+     data-wa-tags="<%= ERB::Util.html_escape(@tag_map.to_json) %>"
+     data-wa-tags-upsert-url="<%= whatsapp_plugin_project_contactos_tags_upsert_path(@project) %>"
+     data-wa-tags-color-url="<%= whatsapp_plugin_project_contactos_tags_color_path(@project, "__ID__") %>"
+     data-wa-tags-rename-url="<%= whatsapp_plugin_project_contactos_tags_rename_path(@project, "__ID__") %>"
+     data-wa-tags-destroy-url="<%= whatsapp_plugin_project_contactos_tags_destroy_path(@project, "__ID__") %>"
+     data-wa-tags-admin="<%= @tags_admin %>"
+     data-wa-wp-types-url="<%= whatsapp_plugin_project_whatsapp_work_package_types_path(@project) %>"
+     data-wa-wp-create-url="<%= whatsapp_plugin_project_whatsapp_work_packages_path(@project) %>"
+     data-wa-wp-related-url="<%= whatsapp_plugin_project_whatsapp_related_work_packages_path(@project) %>"
+     data-wa-wp-delete-url="<%= whatsapp_plugin_project_whatsapp_work_package_destroy_path(@project, id: "__ID__") %>"
+     data-wa-wp-unlink-url="<%= whatsapp_plugin_project_whatsapp_work_package_unlink_path(@project, id: "__ID__") %>"
+     data-wa-wp-statuses-url-template="<%= whatsapp_plugin_project_whatsapp_work_package_statuses_path(@project, id: "__ID__") %>"
+     data-wa-boards-url="<%= whatsapp_plugin_project_whatsapp_boards_path(@project) %>"
+     data-wa-board-lists-url="<%= whatsapp_plugin_project_whatsapp_board_lists_path(@project, id: "__ID__") %>"
+     data-wa-board-add-url="<%= whatsapp_plugin_project_whatsapp_board_add_card_path(@project) %>"
+     data-wa-board-cards-url="<%= whatsapp_plugin_project_whatsapp_board_cards_path(@project) %>"
+     data-wa-board-card-delete-url="<%= whatsapp_plugin_project_whatsapp_board_card_destroy_path(@project, id: "__ID__") %>"
+     data-wa-media-files-url="<%= whatsapp_plugin_project_whatsapp_media_files_path(@project) %>"
+     data-wa-media-file-delete-url-template="<%= whatsapp_plugin_project_whatsapp_media_file_destroy_path(@project, id: "__ID__") %>"
+     data-wa-media-files-bulk-delete-url="<%= whatsapp_plugin_project_whatsapp_media_files_bulk_destroy_path(@project) %>"
+     data-wa-macros-list-url="<%= whatsapp_plugin_project_email_flows_list_path(@project, macros_only: 1) %>"
+     data-wa-macros-run-url="<%= whatsapp_plugin_project_email_flows_run_path(@project) %>"
+     data-wa-ia-flows-list-url="<%= whatsapp_plugin_project_email_flows_list_path(@project, ia_only: 1) %>"
+     data-wa-ia-flow-select-url-template="<%= whatsapp_plugin_project_whatsapp_chat_ia_flow_path(@project, id: "__ID__") %>"
+     data-wa-contact-profile-url="<%= whatsapp_plugin_project_whatsapp_contact_profile_path(@project) %>"
+     data-wa-responsible-options="<%= ERB::Util.html_escape(@wa_responsible_options.to_json) %>"
+     data-wa-responsible-admin="<%= User.current.admin? ? "true" : "false" %>">
+
+  <div class="wa-content-header">
+    <div class="wa-header-company">
+      EMPRESA: <%= @project_settings&.session_name.to_s.upcase.presence || "-" %>
+    </div>
+    <button class="wa-icon-btn wa-plus-btn" type="button" title="Nuevo chat" data-wa-newchat-toggle="true">&#x271A;</button>
+    <div class="wa-header-more">
+      <button class="wa-icon-btn wa-header-more-btn" type="button" title="Mas acciones" aria-label="Mas acciones" data-wa-header-more-toggle="true">&#x22EE;</button>
+      <div class="wa-header-more-menu is-hidden" data-wa-header-more-menu>
+        <button class="wa-header-more-item" type="button" data-wa-header-action="connections">Conexiones</button>
+        <button class="wa-header-more-item" type="button" data-wa-header-action="templates">Plantillas</button>
+        <button class="wa-header-more-item" type="button" data-wa-header-action="files">Archivos</button>
+        <% if User.current&.admin? %>
+          <button class="wa-header-more-item" type="button" data-wa-header-action="server">Servidor</button>
+          <button class="wa-header-more-item" type="button" data-wa-header-action="debug">Debug</button>
+        <% end %>
+      </div>
+    </div>
+    <div class="wa-qr-connected is-hidden wa-qr-connected-header" data-wa-qr-connected-header>
+      <span class="wa-qr-connected-total" data-wa-qr-connected-total><%= number_to_human_size(@total_project_media_bytes || 0) %></span>
+      <span class="wa-qr-connected-dot" aria-hidden="true"></span>
+      <span data-wa-qr-connected-header-label>Desconectado</span>
+    </div>
+  </div>
+  <div class="wa-new-chat-panel is-hidden" data-wa-newchat-panel>
+    <div class="wa-new-chat-header">
+      <div class="wa-new-chat-title">Crear un nuevo chat</div>
+      <button class="wa-new-chat-close" type="button" title="Cerrar" data-wa-newchat-close="true">&#x2715;</button>
+    </div>
+    <label class="wa-settings-label" for="wa-newchat-from">De donde escribir</label>
+    <select id="wa-newchat-from" class="wa-settings-input" data-wa-newchat-from></select>
+    <label class="wa-settings-label" for="wa-newchat-phone">A donde escribir</label>
+    <div class="wa-new-chat-phone">
+      <div class="wa-new-chat-country-wrap">
+        <input class="wa-new-chat-country-input"
+               type="text"
+               aria-label="Pais"
+               data-wa-country-input />
+        <div class="wa-new-chat-country-list is-hidden" data-wa-country-list>
+        </div>
+      </div>
+      <input id="wa-newchat-phone" class="wa-settings-input wa-new-chat-input" type="text" placeholder="Numero" />
+    </div>
+    <button class="wa-settings-button wa-new-chat-submit" type="button" data-wa-newchat-create="true">Crear chat</button>
+    <div class="wa-new-chat-status" data-wa-newchat-status></div>
+  </div>
+
+  <div class="wa-alert is-hidden" data-wa-alert>
+    <div class="wa-alert-card">
+      <div class="wa-alert-title">Advertencia</div>
+      <div class="wa-alert-text" data-wa-alert-text>Este chat ya existe.</div>
+      <button class="wa-settings-button wa-alert-close" type="button" data-wa-alert-close="true">Aceptar</button>
+    </div>
+  </div>
+
+  <div class="wa-image-lightbox is-hidden" data-wa-image-lightbox>
+    <div class="wa-image-lightbox-card">
+      <button class="wa-image-lightbox-close" type="button" aria-label="Cerrar" data-wa-image-lightbox-close="true">&#x2715;</button>
+      <img class="wa-image-lightbox-img" alt="Imagen" data-wa-image-lightbox-img>
+      <video class="wa-image-lightbox-video" controls data-wa-image-lightbox-video></video>
+    </div>
+  </div>
+
+  <div class="wa-confirm-overlay is-hidden" data-wa-confirm-overlay>
+    <div class="wa-confirm-card" role="dialog" aria-modal="true">
+      <div class="wa-confirm-title">Â¿EstÃ¡s seguro que deseas eliminar?</div>
+      <div class="wa-confirm-actions">
+        <button class="wa-confirm-yes" type="button" data-wa-confirm="yes">Si</button>
+        <button class="wa-confirm-no" type="button" data-wa-confirm="no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="wa-layout">
+    <aside class="wa-sidebar">
+      <div class="wa-search">
+        <div class="wa-search-field">
+          <input type="text"
+                 name="wa-chat-search"
+                 role="searchbox"
+                 inputmode="search"
+                 placeholder="Buscar chats o personas..."
+                 autocomplete="off"
+                 readonly
+                 aria-autocomplete="none"
+                 spellcheck="false"
+                 autocapitalize="off"
+                 autocorrect="off"
+                 data-form-type="other"
+                 data-lpignore="true"
+                 data-1p-ignore="true"
+                 data-bwignore="true"
+                 data-wa-chat-search="true"
+                 data-wa-chat-search-url="<%= whatsapp_plugin_project_whatsapp_chats_search_path(@project) %>" />
+          <button class="wa-search-filter-btn" type="button" aria-label="Filtros avanzados" title="Filtros avanzados" data-wa-filter-toggle>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+            </svg>
+          </button>
+        </div>
+        <div class="wa-filter-panel is-hidden" data-wa-filter-panel>
+          <div class="wa-filter-section">
+            <div class="wa-filter-title">Estado</div>
+            <% (@wp_statuses || []).each do |status| %>
+              <label class="wa-filter-option">
+                <input type="checkbox" value="<%= status.id %>" data-wa-filter-status>
+                <%= status.name.to_s %>
+              </label>
+            <% end %>
+          </div>
+          <div class="wa-filter-section">
+            <div class="wa-filter-title">Etiquetas</div>
+            <div class="wa-filter-tags" data-wa-filter-tags></div>
+          </div>
+          <div class="wa-filter-save"></div>
+        </div>
+      </div>
+      <div class="wa-tabs">
+        <button class="wa-tab is-active" type="button" data-wa-filter="all">Todos</button>
+        <button class="wa-tab" type="button" data-wa-filter="unread">No leidos</button>
+        <button class="wa-tab" type="button" data-wa-filter="favorites" aria-label="Favoritos" title="Favoritos">
+          <span class="wa-tab-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+              <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.282.95l3.522 3.356-.83 4.73z"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="wa-filter-saved" data-wa-filter-saved></div>
+      <div class="wa-chat-list" data-wa-chat-offset="<%= @chats.size %>" data-wa-chat-limit="20">
+        <% @chats.each do |chat| %>
+          <% initials = chat.title.to_s.split.map { |word| word[0] }.join[0, 2].to_s.upcase %>
+          <% display_title = chat.title.to_s %>
+          <% display_title = display_title.length > 15 ? "#{display_title[0, 15]}..." : display_title %>
+          <% active_class = @active_chat && chat.id == @active_chat.id ? " is-active" : "" %>
+          <% last_message = chat.messages.max_by(&:created_at) %>
+          <% profile = chat.contact_profile %>
+          <% phone_label = profile&.phone.to_s.strip.presence %>
+          <% phone_label ||= "+#{chat.external_id.to_s.split('@').first}" if chat.external_id.to_s.present? %>
+          <% preview = last_message&.body.to_s %>
+          <% preview = preview.present? ? (preview.length > 15 ? "#{preview[0, 15]}..." : preview) : "Sin mensajes" %>
+          <% time_label = format_time(chat.last_message_at || chat.created_at) %>
+          <% favorite_class = chat.respond_to?(:favorite) && chat.favorite ? " is-favorite" : "" %>
+          <% ia_flow_id = chat.metadata.is_a?(Hash) ? chat.metadata["ia_flow_id"].to_s.presence : nil %>
+          <% conversation_status = (chat.metadata.is_a?(Hash) ? chat.metadata["conversation_status"].to_s : "").presence || "started" %>
+          <div class="wa-chat-card<%= active_class %><%= favorite_class %>" data-chat-id="<%= chat.id %>" data-chat-external-id="<%= chat.external_id.to_s %>" data-ia-flow-id="<%= ia_flow_id.to_s %>" data-conversation-status="<%= conversation_status %>">
+            <%= link_to whatsapp_plugin_project_whatsapp_path(@project, chat_id: chat.id),
+                        class: "wa-chat-link",
+                        data: { whatsapp_chat_link: true, chat_id: chat.id, chat_external_id: chat.external_id.to_s, turbo: false } do %>
+              <div class="wa-chat-meta">
+              <div class="wa-chat-row wa-chat-row-actions">
+                <div class="wa-chat-actions-left">
+                  <div class="wa-avatar"><%= initials.presence || "CH" %></div>
+                  <div class="wa-chat-actions">
+                    <button class="wa-chat-edit" type="button" title="Editar" data-wa-chat-edit-toggle="true">&#x270E;</button>
+                    <button class="wa-chat-action wa-chat-action-ia" type="button" title="IA" data-wa-chat-ia="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-robot" viewBox="0 0 16 16">
+                        <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135"></path>
+                        <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5"></path>
+                      </svg>
+                    </button>
+                    <button class="wa-chat-favorite" type="button" title="Favorito" data-wa-chat-favorite="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="wa-chat-actions-right">
+                  <button class="wa-chat-delete" type="button" title="Eliminar" data-wa-chat-delete="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                    </svg>
+                  </button>
+                  <div class="wa-chat-time"><%= time_label %></div>
+                </div>
+              </div>
+              <div class="wa-chat-row">
+                <div class="wa-chat-name-box">
+                  <span class="wa-chat-title"><%= display_title.presence || "Chat" %></span>
+                  <% tags = Array(profile&.tags).map { |tag| tag.to_s.strip }.reject(&:blank?) %>
+                  <div class="wa-chat-tags" data-wa-chat-tags data-tags="<%= ERB::Util.html_escape(tags.to_json) %>">
+                    <% if tags.any? %>
+                      <% tag_map = (@tag_map || []).each_with_object({}) { |tag, acc| acc[tag[:name].to_s.downcase] = tag } %>
+                      <% tags.first(4).each do |tag| %>
+                        <% meta = tag_map[tag.downcase] || { color: "#1e88e5" } %>
+                        <% initials = tag.split(/\s+/).map { |part| part[0] }.join("").upcase[0, 2] %>
+                        <% initials = tag[0, 2].to_s.upcase if initials.blank? %>
+                        <% color = meta[:color].to_s %>
+                        <% light = ["#fdd835", "#ffffff", "#9e9e9e", "#ec407a", "#fb8c00"].include?(color.downcase) %>
+                        <span class="wa-chat-tag-dot" draggable="true" style="background-color:<%= color %>;color:<%= light ? "#111111" : "#ffffff" %>" data-tooltip="<%= tag %>"><%= initials %></span>
+                      <% end %>
+                      <% if tags.size > 4 %>
+                        <span class="wa-chat-tag-more" aria-hidden="true">...</span>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+              <div class="wa-chat-row">
+                <div class="wa-chat-subtitle">Telefono:</div>
+                <div class="wa-chat-subvalue"><%= phone_label.presence || "--" %></div>
+              </div>
+              <div class="wa-chat-row">
+                <div class="wa-chat-subtitle">Email:</div>
+                <div class="wa-chat-subvalue"><%= profile&.email.to_s.presence || "--" %></div>
+              </div>
+              <div class="wa-chat-preview-row">
+                <div class="wa-chat-preview"><%= preview %></div>
+                <% if conversation_status != "ended" && chat_unread_count(chat) > 0 %>
+                  <span class="wa-unread-badge"><%= chat_unread_count(chat) %></span>
+                <% end %>
+              </div>
+              </div>
+            <% end %>
+            <div class="wa-ia-panel" data-wa-ia-panel>
+              <div class="wa-ia-panel-header">
+              <div class="wa-ia-panel-title">AutomatizaciÃ³n e IA</div>
+                <button class="wa-ia-panel-close" type="button" title="Cerrar" data-wa-ia-close="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="wa-ia-panel-body">
+                <div class="wa-ia-macro-row">
+                  <select class="wa-chat-macro-select" data-wa-ia-macro-select="true">
+                    <option value="">Seleccione macros</option>
+                    <% if @macro_flows.present? %>
+                      <% @macro_flows.each do |flow_item| %>
+                        <option value="<%= flow_item[:id] %>" data-macro-node-id="<%= flow_item[:macro_node_id] %>">
+                          <%= flow_item[:name].to_s.presence || "Flujo #{flow_item[:id]}" %>
+                        </option>
+                      <% end %>
+                    <% end %>
+                  </select>
+                  <button class="wa-chat-macro-run" type="button" data-wa-ia-macro-run="true" title="Ejecutar macro" disabled>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM10.6935 15.8458L15.4137 13.059C16.1954 12.5974 16.1954 11.4026 15.4137 10.941L10.6935 8.15419C9.93371 7.70561 9 8.28947 9 9.21316V14.7868C9 15.7105 9.93371 16.2944 10.6935 15.8458Z" fill="#1C274C"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="wa-ia-macro-row wa-ia-flow-row">
+                  <select class="wa-chat-ia-select" data-wa-ia-flow-select="true">
+                    <option value="">Seleccione la IA</option>
+                    <% if @ia_flows.present? %>
+                      <% @ia_flows.each do |flow_item| %>
+                        <option value="<%= flow_item[:id] %>">
+                          <%= flow_item[:name].to_s.presence || "Flujo #{flow_item[:id]}" %>
+                        </option>
+                      <% end %>
+                    <% end %>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="wa-chat-list-footer">
+        <button class="wa-chat-load-more" type="button" data-wa-chat-load-more="true">
+          Cargar
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+          </svg>
+        </button>
+      </div>
+    </aside>
+
+    <section class="wa-chat">
+      <div class="wa-wp-split-panel is-hidden" data-wa-wp-split-panel>
+        <div class="wa-wp-split-header">
+          <button class="wa-wp-tabs-scroll wa-wp-tabs-scroll-left" type="button" aria-label="Scroll tabs left" data-wa-wp-tabs-scroll="left">&#x2039;</button>
+          <div class="wa-wp-split-tabs" data-wa-wp-split-tabs></div>
+          <button class="wa-wp-tabs-scroll wa-wp-tabs-scroll-right" type="button" aria-label="Scroll tabs right" data-wa-wp-tabs-scroll="right">&#x203A;</button>
+          <button class="wa-wp-split-close" type="button" title="Cerrar" data-wa-wp-split-close="true">&#x2715;</button>
+        </div>
+        <iframe class="wa-wp-split-iframe" data-wa-wp-split-iframe title="Work package details"></iframe>
+      </div>
+      <div class="wa-settings-panel is-hidden"
+           data-wa-settings
+           data-wa-waha-url="<%= @waha_url.to_s %>"
+           data-wa-realtime-enabled="<%= @realtime_enabled ? "true" : "false" %>"
+           data-wa-settings-url="<%= whatsapp_plugin_project_whatsapp_settings_path(@project) %>"
+           data-wa-waha-create-url="<%= whatsapp_plugin_project_whatsapp_waha_sessions_path(@project) %>"
+           data-wa-waha-start-url-template="<%= whatsapp_plugin_project_whatsapp_waha_session_start_path(@project, session: '__SESSION__') %>"
+           data-wa-waha-status-url-template="<%= whatsapp_plugin_project_whatsapp_waha_session_status_path(@project, session: '__SESSION__') %>"
+           data-wa-waha-qr-url-template="<%= whatsapp_plugin_project_whatsapp_waha_session_qr_path(@project, session: '__SESSION__') %>"
+           data-wa-waha-delete-url-template="<%= whatsapp_plugin_project_whatsapp_waha_session_delete_path(@project, session: '__SESSION__') %>"
+           data-wa-chat-create-url="<%= whatsapp_plugin_project_whatsapp_chats_path(@project) %>"
+           data-wa-session-name="<%= @project_settings&.session_name.to_s %>"
+           data-wa-contact-profile-url="<%= whatsapp_plugin_project_whatsapp_contact_profile_path(@project) %>">
+        <div class="wa-settings-card">
+          <div class="wa-settings-header">
+            <div class="wa-settings-title">Configuracion</div>
+            <button class="wa-settings-close" type="button" title="Cerrar" data-wa-settings-close="true">&#x2715;</button>
+          </div>
+          <div class="wa-settings-layout">
+            <div class="wa-settings-nav">
+              <button class="wa-settings-tab is-active" type="button" data-wa-settings-tab="connections">Conexiones</button>
+              <button class="wa-settings-tab" type="button" data-wa-settings-tab="broadcasts">Broadcasts</button>
+              <button class="wa-settings-tab" type="button" data-wa-settings-tab="templates">Plantillas</button>
+              <button class="wa-settings-tab" type="button" data-wa-settings-tab="files">Archivos</button>
+              <% if User.current&.admin? %>
+                <button class="wa-settings-tab" type="button" data-wa-settings-tab="server">Servidor</button>
+                <button class="wa-settings-tab" type="button" data-wa-settings-tab="debug">Debug</button>
+                <button class="wa-settings-tab" type="button" data-wa-settings-tab="connections-list">Lista de Conexiones</button>
+              <% end %>
+            </div>
+            <div class="wa-settings-content is-active" data-wa-settings-panel="connections">
+              <div class="wa-settings-section-header">
+                <div class="wa-settings-section-title">Agregar numero de WhatsApp</div>
+                <div class="wa-qr-connected is-hidden" data-wa-qr-connected>
+                  <span class="wa-qr-connected-dot" aria-hidden="true"></span>
+                  <span data-wa-qr-connected-label>Desconectado</span>
+                </div>
+              </div>
+              <div class="wa-settings-connection-layout">
+                <div class="wa-settings-guide">
+                  <label class="wa-settings-label" for="wa-session-name">Nombre de la Sesion de WhatsApp</label>
+                  <input id="wa-session-name"
+                         class="wa-settings-input"
+                         type="text"
+                         placeholder="Escribe el nombre de la sesion"
+                         value="<%= @project_settings&.session_name.to_s %>"
+                         required />
+                  <label class="wa-settings-label" for="wa-admin-name">Nombre del Administrador WhatsApp</label>
+                  <input id="wa-admin-name"
+                         class="wa-settings-input"
+                         type="text"
+                         placeholder="Escribe el nombre del administrador"
+                         value="<%= @project_settings&.admin_name.to_s %>"
+                         required />
+                  <label class="wa-settings-label" for="wa-admin-email">Correo del Administrador de WhatsApp</label>
+                  <input id="wa-admin-email"
+                         class="wa-settings-input"
+                         type="text"
+                         placeholder="Escribe el correo del administrador"
+                         value="<%= @project_settings&.admin_email.to_s %>"
+                         required />
+                  <label class="wa-settings-label" for="wa-time-zone">Zona horaria</label>
+                  <select id="wa-time-zone" class="wa-settings-input" required>
+                    <option value="">Usar zona del servidor</option>
+                    <% seen_time_zones = {} %>
+                    <% ActiveSupport::TimeZone.all.each do |tz| %>
+                      <% tz_name = tz.tzinfo.name %>
+                      <% next if seen_time_zones[tz_name] %>
+                      <% seen_time_zones[tz_name] = true %>
+                      <% tz_country = time_zone_country_map[tz_name].to_s %>
+                      <option value="<%= tz_name %>"
+                              data-country="<%= tz_country %>"
+                              <%= "selected" if @project_settings&.time_zone.to_s == tz_name %>>
+                        <%= tz_name %>
+                      </option>
+                    <% end %>
+                  </select>
+                  <div class="wa-settings-action-row">
+                    <button class="wa-settings-button" type="button" data-wa-create-session="true">Crear conexion</button>
+                    <button class="wa-settings-button wa-settings-button-danger" type="button" data-wa-delete-session="true">Eliminar o Reiniciar Conexion</button>
+                  </div>
+                  <div class="wa-settings-status" data-wa-settings-status></div>
+                  <div class="wa-settings-text">
+                    Inicie sesion en WhatsApp en el telefono principal cada 10 dias para mantener la conexion activa.
+                  </div>
+                  <div class="wa-settings-text">
+                    For stable operation update the WhatsApp application on your phone to the latest version.
+                  </div>
+
+                  <div class="wa-settings-subtitle">Para evitar que te bloqueen, sigue estas directrices:</div>
+                  <ul class="wa-settings-list">
+                    <li>No conecte un numero si lleva menos de 24 horas registrado en WhatsApp o lleva mas de 7 dias inactivo en WhatsApp.</li>
+                    <li>No utilice un dispositivo en el que ya se haya bloqueado el numero de WhatsApp.</li>
+                    <li>Despues de conectar su numero al servicio, no debe cambiar la configuracion de inicio de sesion y volver a introducir su cuenta de WhatsApp en otros dispositivos.</li>
+                    <li>"Caliente" el numero de antemano. Para ello, utilice activamente el numero en WhatsApp durante 1-2 dias antes de la integracion. Cuantos mas mensajes entrantes, mas confianza en el numero y menor riesgo de bloqueo.</li>
+                  </ul>
+                </div>
+                <div class="wa-settings-connection-right">
+                  <div class="wa-qr-box">
+                    <img class="wa-qr-image"
+                         alt="QR de WhatsApp"
+                         draggable="false"
+                         oncontextmenu="return false;"
+                         data-wa-qr-image />
+                    <div class="wa-qr-progress" aria-hidden="true">
+                      <div class="wa-qr-progress-bar" data-wa-qr-progress></div>
+                    </div>
+                  <div class="wa-qr-helper" data-wa-qr-helper>Escanea el codigo QR para confirmar</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wa-settings-content" data-wa-settings-panel="broadcasts">
+              <div class="wa-settings-section-title">Broadcasts</div>
+              <div class="wa-settings-text">Configura envios masivos desde aqui.</div>
+            </div>
+            <%= render partial: "whatsapp/templates_panel" %>
+            <div class="wa-settings-content" data-wa-settings-panel="files">
+              <div class="wa-settings-section-title">Archivos</div>
+              <div class="wa-settings-text">Listado de todos los mensajes con media del proyecto.</div>
+              <div class="wa-files-panel"
+                   data-wa-files-panel="true"
+                   data-wa-files-url="<%= whatsapp_plugin_project_whatsapp_media_files_path(@project) %>"
+                   data-wa-files-delete-url-template="<%= whatsapp_plugin_project_whatsapp_media_file_destroy_path(@project, id: '__ID__') %>"
+                   data-wa-files-bulk-delete-url="<%= whatsapp_plugin_project_whatsapp_media_files_bulk_destroy_path(@project) %>">
+                <div class="wa-files-toolbar">
+                  <select class="wa-settings-input" data-wa-files-filter-type>
+                    <option value="">Todos los tipos</option>
+                    <option value="image">Imagen</option>
+                    <option value="video">Video</option>
+                    <option value="audio">Audio</option>
+                    <option value="file">Archivo</option>
+                  </select>
+                  <select class="wa-settings-input" data-wa-files-filter-chat>
+                    <option value="">Todos los chats</option>
+                  </select>
+                  <select class="wa-settings-input" data-wa-files-filter-direction>
+                    <option value="">Todos los remitentes</option>
+                    <option value="incoming">Entrante</option>
+                    <option value="outgoing">Saliente</option>
+                  </select>
+                  <button class="wa-settings-button" type="button" data-wa-files-apply-filter>Filtrar</button>
+                  <button class="wa-settings-button wa-settings-button-danger" type="button" data-wa-files-delete-selected disabled>Eliminar seleccionados</button>
+                </div>
+                <div class="wa-files-summary" data-wa-files-selection-summary>Seleccionados: 0 | Tamano: 0 B</div>
+                <div class="wa-settings-status" data-wa-files-status></div>
+                <div class="wa-files-table-wrap">
+                  <table class="wa-admin-table wa-files-table">
+                    <thead>
+                      <tr>
+                        <th><input type="checkbox" data-wa-files-select-all /></th>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th data-wa-files-sort-size role="button" title="Ordenar por tamano">Tamano</th>
+                        <th>Chat</th>
+                        <th>Fecha</th>
+                        <th>Remitente</th>
+                        <th>Descargar/Ver</th>
+                        <th>Eliminar</th>
+                      </tr>
+                    </thead>
+                    <tbody data-wa-files-body>
+                      <tr class="wa-admin-empty">
+                        <td colspan="9">Sin archivos.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <% if User.current&.admin? %>
+              <div class="wa-settings-content" data-wa-settings-panel="server">
+                <div class="wa-settings-section-title">Servidor</div>
+                <label class="wa-settings-label" for="wa-server-url">URL del servidor</label>
+                <input id="wa-server-url"
+                       class="wa-settings-input"
+                       type="text"
+                       placeholder="http://192.168.1.41:3003"
+                       value="<%= @waha_url.to_s %>" />
+                <label class="wa-settings-label" for="wa-realtime-enabled">
+                  <input id="wa-realtime-enabled"
+                         type="checkbox"
+                         data-wa-realtime-toggle="true"
+                         <%= "checked" if @realtime_enabled %> />
+                  Activar actualizacion en tiempo real
+                </label>
+                <button class="wa-settings-button" type="button" data-wa-save-server="true">Guardar</button>
+                <div class="wa-settings-status" data-wa-server-status></div>
+              </div>
+              <div class="wa-settings-content" data-wa-settings-panel="debug">
+                <%= render "debug" %>
+              </div>
+              <div class="wa-settings-content" data-wa-settings-panel="connections-list">
+                <div class="wa-settings-section-title">Lista de Conexiones</div>
+                <div class="wa-settings-text">Solo se muestran conexiones en estado WORKING.</div>
+                <div class="wa-admin-connections"
+                     data-wa-admin-connections="true"
+                     data-wa-admin-connections-url="<%= whatsapp_plugin_project_whatsapp_admin_connections_path(@project) %>"
+                     data-wa-admin-limit-url-template="<%= whatsapp_plugin_project_whatsapp_admin_connection_limit_path(@project, connection_project_id: '__PROJECT_ID__') %>"
+                     data-wa-admin-delete-url-template="<%= whatsapp_plugin_project_whatsapp_waha_session_delete_path('__PROJECT_ID__', session: '__SESSION__') %>">
+                  <table class="wa-admin-table">
+                    <thead>
+                      <tr>
+                        <th>Administrador WhatsApp</th>
+                        <th>Proyecto</th>
+                        <th>Estado</th>
+                        <th>Total</th>
+                        <th>Limite (GB)</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody data-wa-admin-connections-body>
+                      <tr class="wa-admin-empty">
+                        <td colspan="6">Sin conexiones activas.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="wa-chat-body <%= @active_chat ? '' : 'is-hidden' %>" data-wa-chat-body>
+        <div class="wa-chat-header">
+          <div class="wa-chat-info">
+            <% chat_initials = @active_chat&.title.to_s.split.map { |word| word[0] }.join[0, 2].to_s.upcase %>
+            <div class="wa-avatar is-large"><%= chat_initials.presence || 'CH' %></div>
+              <div class="wa-chat-details">
+              <% active_title = @active_chat&.title.to_s.presence || "Chat" %>
+              <div class="wa-chat-name"><%= active_title %></div>
+              <div class="wa-chat-status-select" data-wa-chat-status-wrap>
+                <select name="wa-chat-status" aria-label="Estado del paquete de trabajo" data-wa-chat-status disabled>
+                  <option value="">Estado del paquete de trabajo</option>
+                </select>
+              </div>
+              <div class="wa-chat-id" data-wa-chat-id>ID: <%= @active_chat&.external_id || "--" %></div>
+            </div>
+          </div>
+          <div class="wa-chat-responsible" data-wa-chat-responsible-wrap>
+            <select class="wa-chat-responsible-select"
+                    data-wa-chat-responsible
+                    aria-label="Responsable del contacto"
+                    disabled>
+              <option value="">Responsable</option>
+            </select>
+          </div>
+          <div class="wa-chat-conversation" data-wa-conversation-wrap>
+            <select class="wa-chat-conversation-select"
+                    data-wa-conversation-selector
+                    aria-label="Estado de conversacion"
+                    disabled>
+              <option value="started">Conversacion Iniciada</option>
+              <option value="ended">Conversacion Terminada</option>
+            </select>
+          </div>
+          <div class="wa-chat-tools" data-wa-chat-tools>
+            <button class="wa-icon-btn" type="button" title="Mas" data-wa-more-toggle="true">&#x22EE;</button>
+          </div>
+        </div>
+
+        <div class="wa-more-panel is-hidden" data-wa-more>
+          <button class="wa-more-item" type="button">Cerrar chat</button>
+          <button class="wa-more-item" type="button" data-wa-delete-chat="true">Eliminar chat</button>
+        </div>
+
+        <div class="wa-chat-edit-panel is-hidden" data-wa-chat-edit-panel>
+          <div class="wa-chat-edit-card">
+            <div class="wa-chat-edit-header">
+              <div class="wa-chat-edit-title">Formulario de tarjeta</div>
+              <div class="wa-chat-edit-header-actions">
+                <button class="wa-chat-edit-close wa-chat-edit-close-btn" type="button" data-wa-chat-edit-close="true" aria-label="Cerrar">&times;</button>
+              </div>
+            </div>
+            <div class="wa-chat-edit-form">
+              <div class="wa-chat-edit-row is-single">
+                <div class="wa-chat-edit-field wa-chat-edit-full">
+                  <label class="wa-settings-label">ID del chat</label>
+                  <div class="wa-chat-id wa-chat-id-box" data-wa-chat-id>ID: --</div>
+                </div>
+              </div>
+              <%= render "whatsapp_relaciones" %>
+              <div class="wa-wp-form-title">Formulario de contacto</div>
+              <div class="wa-chat-edit-row">
+                <div class="wa-chat-edit-field" data-contacto-field="name">
+                  <label class="wa-settings-label" for="wa-edit-first-name">Nombres</label>
+                  <input id="wa-edit-first-name" class="wa-settings-input" type="text" placeholder="Nombres" />
+                </div>
+                <div class="wa-chat-edit-field" data-contacto-field="name">
+                  <label class="wa-settings-label" for="wa-edit-last-name">Apellidos</label>
+                  <input id="wa-edit-last-name" class="wa-settings-input" type="text" placeholder="Apellidos" />
+                </div>
+                <div class="wa-chat-edit-field" data-contacto-field="email">
+                  <label class="wa-settings-label" for="wa-edit-email">Email</label>
+                  <input id="wa-edit-email" class="wa-settings-input" type="text" placeholder="Email" />
+                </div>
+              </div>
+              <div class="wa-chat-edit-row">
+                <div class="wa-chat-edit-field" data-contacto-field="phone">
+                  <label class="wa-settings-label" for="wa-edit-phone">Telefono</label>
+                  <input id="wa-edit-phone" class="wa-settings-input" type="text" placeholder="Telefono" />
+                </div>
+                <div class="wa-chat-edit-field" data-contacto-field="address">
+                  <label class="wa-settings-label" for="wa-edit-address">Direccion</label>
+                  <input id="wa-edit-address" class="wa-settings-input" type="text" placeholder="Direccion" />
+                </div>
+                <div class="wa-chat-edit-field" data-contacto-field="city">
+                  <label class="wa-settings-label" for="wa-edit-city">Ciudad</label>
+                  <input id="wa-edit-city" class="wa-settings-input" type="text" placeholder="Ciudad" />
+                </div>
+              </div>
+              <div class="wa-chat-edit-row">
+                <div class="wa-chat-edit-field" data-contacto-field="state">
+                  <label class="wa-settings-label" for="wa-edit-state">Estado/Provincia</label>
+                  <input id="wa-edit-state" class="wa-settings-input" type="text" placeholder="Estado/Provincia" />
+                </div>
+                <div class="wa-chat-edit-field" data-contacto-field="country">
+                  <label class="wa-settings-label" for="wa-edit-country">Pais</label>
+                  <input id="wa-edit-country" class="wa-settings-input" type="text" placeholder="Pais" />
+                </div>
+                <div class="wa-chat-edit-field" data-contacto-field="postal_code">
+                  <label class="wa-settings-label" for="wa-edit-postal">Codigo postal</label>
+                  <input id="wa-edit-postal" class="wa-settings-input" type="text" placeholder="Codigo postal" />
+                </div>
+              </div>
+              <div class="wa-chat-edit-row">
+                <div class="wa-chat-edit-field" data-contacto-field="company">
+                  <label class="wa-settings-label" for="wa-edit-company">Empresa</label>
+                  <input id="wa-edit-company" class="wa-settings-input" type="text" placeholder="Empresa" />
+                </div>
+                <div class="wa-chat-edit-field" data-contacto-field="job_title">
+                  <label class="wa-settings-label" for="wa-edit-job">Cargo</label>
+                  <input id="wa-edit-job" class="wa-settings-input" type="text" placeholder="Cargo" />
+                </div>
+                <div class="wa-chat-edit-field" data-contacto-field="tags">
+                  <label class="wa-settings-label" for="wa-edit-tags">Etiquetas</label>
+                  <div class="wa-tags-input" data-wa-tags-input data-tags="[]">
+                    <input id="wa-edit-tags" type="hidden" value="" />
+                    <button class="wa-tags-toggle" type="button" data-wa-tags-toggle>Seleccionar etiquetas</button>
+                    <div class="wa-tags-chips" data-wa-tags-chips></div>
+                    <div class="wa-tags-dropdown is-hidden" data-wa-tags-dropdown></div>
+                  </div>
+                </div>
+              </div>
+              <div class="wa-chat-edit-row">
+                <div class="wa-chat-edit-field" data-contacto-field="source">
+                  <label class="wa-settings-label" for="wa-edit-source">Origen</label>
+                  <input id="wa-edit-source" class="wa-settings-input" type="text" placeholder="Origen" />
+                </div>
+                <div class="wa-chat-edit-field" data-contacto-field="status">
+                  <label class="wa-settings-label" for="wa-edit-status">Estado</label>
+                  <input id="wa-edit-status" class="wa-settings-input" type="text" placeholder="Estado" />
+                </div>
+                <div class="wa-chat-edit-field" data-contacto-field="birthday">
+                  <label class="wa-settings-label" for="wa-edit-birthday">Fecha de nacimiento</label>
+                  <input id="wa-edit-birthday" class="wa-settings-input" type="text" placeholder="YYYY-MM-DD" />
+                </div>
+              </div>
+              <div class="wa-chat-edit-row is-single">
+                <div class="wa-chat-edit-field wa-chat-edit-full" data-contacto-field="notes">
+                  <label class="wa-settings-label" for="wa-edit-notes">Notas</label>
+                  <textarea id="wa-edit-notes" class="wa-settings-input" placeholder="Notas"></textarea>
+                </div>
+              </div>
+              <% visible_fields = (@contact_fields || []).select { |field| field.visible_in_chat_card != false } %>
+              <% if visible_fields.present? %>
+                <% visible_fields.each_with_index do |field, index| %>
+                  <% if (index % 3).zero? %>
+                    <div class="wa-chat-edit-row">
+                  <% end %>
+                  <div class="wa-chat-edit-field" data-contacto-field="custom:<%= field.id %>">
+                    <label class="wa-settings-label"><%= field.name %></label>
+                    <% case field.field_type %>
+                    <% when "number" %>
+                      <input class="wa-settings-input" type="number"
+                             data-wa-custom-field-key="<%= field.name %>"
+                             data-wa-custom-field-type="number" />
+                    <% when "date" %>
+                      <input class="wa-settings-input" type="date"
+                             data-wa-custom-field-key="<%= field.name %>"
+                             data-wa-custom-field-type="date" />
+                    <% when "select" %>
+                      <select class="wa-settings-input"
+                              data-wa-custom-field-key="<%= field.name %>"
+                              data-wa-custom-field-type="select">
+                        <option value=""></option>
+                        <% Array(field.options).each do |opt| %>
+                          <option value="<%= opt %>"><%= opt %></option>
+                        <% end %>
+                      </select>
+                    <% when "multiselect" %>
+                      <select class="wa-settings-input"
+                              multiple
+                              data-wa-custom-field-key="<%= field.name %>"
+                              data-wa-custom-field-type="multiselect">
+                        <% Array(field.options).each do |opt| %>
+                          <option value="<%= opt %>"><%= opt %></option>
+                        <% end %>
+                      </select>
+                    <% when "boolean" %>
+                      <select class="wa-settings-input"
+                              data-wa-custom-field-key="<%= field.name %>"
+                              data-wa-custom-field-type="boolean">
+                        <option value=""></option>
+                        <option value="true">Si</option>
+                        <option value="false">No</option>
+                      </select>
+                    <% else %>
+                      <input class="wa-settings-input" type="text"
+                             data-wa-custom-field-key="<%= field.name %>"
+                             data-wa-custom-field-type="text" />
+                    <% end %>
+                  </div>
+                  <% if (index % 3) == 2 || index == visible_fields.length - 1 %>
+                    </div>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <div class="wa-wp-divider" aria-hidden="true"></div>
+            <div class="wa-chat-edit-actions"></div>
+            </div>
+            <div class="wa-chat-edit-toolbar">
+              <button class="wa-settings-button wa-chat-edit-save" type="button">Guardar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="wa-messages" data-wa-messages="true">
+          <div class="wa-day-divider wa-day-divider-floating" data-wa-day-floating>Hoy</div>
+          <div class="wa-chat-media-size" data-wa-chat-media-size>
+            <%= number_to_human_size(@active_chat_media_bytes || 0) %> -
+            Ultimo mensaje <%= format_time_full(@active_chat&.last_message_at || @active_chat&.created_at || Time.current) %>
+          </div>
+          <% if @active_chat %>
+            <% if @has_more_messages %>
+              <button class="wa-load-more" type="button"
+                      data-wa-load-more="true"
+                      data-wa-load-url="<%= whatsapp_plugin_project_whatsapp_path(@project, chat_id: @active_chat.id) %>"
+                      data-wa-before-id="<%= @oldest_message_id %>">
+                Mostrar mas
+              </button>
+            <% end %>
+            <% @messages.each do |message| %>
+              <% outgoing = message.sender_user_id == User.current.id %>
+              <% sender_label = outgoing ? "" : (message.sender_contact&.name || message.sender_user&.name || "Contacto") %>
+              <% metadata = message.metadata.is_a?(Hash) ? message.metadata : {} %>
+                <% reply_label = message.body.to_s.strip %>
+                <% if reply_label.blank? %>
+                  <% reply_label = "Imagen" if message.message_type == "image" %>
+                  <% reply_label = "Video" if message.message_type == "video" %>
+                  <% reply_label = "Archivo" if message.message_type == "file" %>
+                <% end %>
+                <% reply_label = reply_label[0, 60] + "..." if reply_label.length > 60 %>
+                <% reply_to = metadata["reply_to"].presence %>
+                <div class="wa-bubble <%= outgoing ? "is-out" : "is-in" %><%= message.message_type == "image" ? " is-image" : "" %><%= message.message_type == "activity" ? " is-activity" : "" %>"
+                     data-message-id="<%= message.id %>"
+                     data-created-at="<%= message.created_at.iso8601 %>"
+                     data-waha-id="<%= metadata["waha_id"].presence %>"
+                     data-reply-id="<%= metadata["waha_id"].presence || message.id %>"
+                     data-reply-label="<%= reply_label %>"
+                     <%= reply_to ? "data-reply-to=\"#{reply_to}\"" : "" %>>
+                <div class="wa-bubble-meta"><%= format_time(message.created_at) %></div>
+                <button class="wa-bubble-actions" type="button" title="Opciones" data-wa-bubble-actions="true">&#x25BE;</button>
+                <div class="wa-bubble-body">
+                  <% if message.message_type == "image" %>
+                    <% caption = message.body.to_s %>
+                    <% base64_caption = caption.start_with?("data:") || (caption.length > 2000 && caption.match?(/\A[a-zA-Z0-9+\/=\s]+\z/)) %>
+                    <% content_type = metadata["content_type"].to_s %>
+                    <% sticker = content_type == "image/webp" || metadata["filename"].to_s.downcase.end_with?(".webp") %>
+                    <img class="wa-bubble-image<%= sticker ? " is-sticker" : "" %>"
+                         data-wa-bubble-image="true"
+                         data-media-id="<%= message.id %>"
+                         data-full-src="<%= metadata["data_url"].presence %>"
+                         data-thumb-src="<%= metadata["thumb_data_url"].presence %>"
+                         data-remote-src="<%= metadata["remote_url"].presence %>"
+                         src="<%= metadata["thumb_data_url"].presence || metadata["data_url"].presence || "data:image/gif;base64,R0lGODlhAQABAAAAACw=" %>"
+                         loading="lazy"
+                         decoding="async"
+                         alt="Imagen" />
+                    <% if caption.present? && !base64_caption %>
+                      <div class="wa-bubble-caption"><%= wa_linkify(caption) %></div>
+                    <% end %>
+                  <% elsif message.message_type == "file" %>
+                    <div class="wa-bubble-file">
+                      <span class="wa-file-name"><%= metadata["filename"].presence || "archivo" %></span>
+                      <a class="wa-file-download wa-file-icon" href="#" data-media-id="<%= message.id %>">
+                        <% ext = File.extname(metadata["filename"].to_s).delete(".").upcase.presence || "FILE" %>
+                        <% ext = ext[0, 4] %>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" width="24" height="28" aria-hidden="true">
+                          <g fill="#dc2626">
+                            <path d="M6 2h8l6 6v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
+                            <path d="M14 2v6h6"/>
+                          </g>
+                          <g transform="translate(12 13)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M0 -4v5.5 M-2.5 0l2.5 2.5 2.5-2.5"/>
+                            <line x1="-4" y1="4" x2="4" y2="4"/>
+                          </g>
+                          <rect x="2" y="21" width="20" height="6" rx="3" fill="#dc2626"/>
+                          <text x="12" y="26" text-anchor="middle" font-size="6" font-weight="700" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"><%= ext %></text>
+                        </svg>
+                      </a>
+                    </div>
+                    <% if message.body.present? %>
+                      <div class="wa-bubble-caption"><%= wa_linkify(message.body) %></div>
+                    <% end %>
+                  <% elsif message.message_type == "video" %>
+                    <div class="wa-bubble-file">
+                      <span class="wa-file-name"><%= metadata["filename"].presence || "video.mp4" %></span>
+                      <a class="wa-file-download wa-file-icon" href="#" data-media-id="<%= message.id %>">
+                        <% ext = File.extname(metadata["filename"].to_s).delete(".").upcase.presence || "VIDEO" %>
+                        <% ext = ext[0, 4] %>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 28" width="24" height="28" aria-hidden="true">
+                          <g fill="#dc2626">
+                            <path d="M6 2h8l6 6v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
+                            <path d="M14 2v6h6"/>
+                          </g>
+                          <g transform="translate(12 13)" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M0 -4v5.5 M-2.5 0l2.5 2.5 2.5-2.5"/>
+                            <line x1="-4" y1="4" x2="4" y2="4"/>
+                          </g>
+                          <rect x="2" y="21" width="20" height="6" rx="3" fill="#dc2626"/>
+                          <text x="12" y="26" text-anchor="middle" font-size="6" font-weight="700" fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial"><%= ext %></text>
+                        </svg>
+                      </a>
+                    </div>
+                    <% if message.body.present? %>
+                      <div class="wa-bubble-caption"><%= wa_linkify(message.body) %></div>
+                    <% end %>
+                  <% else %>
+                    <%= wa_linkify(message.body) %>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
+        <%= form_with scope: :message,
+                      url: whatsapp_plugin_project_whatsapp_messages_path(@project),
+                      method: :post,
+                      local: true,
+                      data: { turbo: false, whatsapp_form: true, wa_image_send_url: whatsapp_plugin_project_whatsapp_images_path(@project), wa_video_send_url: whatsapp_plugin_project_whatsapp_videos_path(@project), wa_file_send_url: whatsapp_plugin_project_whatsapp_files_path(@project), wa_media_url_template: whatsapp_plugin_project_whatsapp_message_media_path(@project, id: "__ID__"), wa_typing_start_url: whatsapp_plugin_project_whatsapp_typing_start_path(@project), wa_typing_stop_url: whatsapp_plugin_project_whatsapp_typing_stop_path(@project), wa_activity_note_url: whatsapp_plugin_project_whatsapp_activity_note_path(@project) },
+                      class: "wa-composer" do |form| %>
+            <div class="wa-input-row">
+              <div class="wa-input-field">
+                <div class="wa-image-preview is-hidden" data-wa-image-preview>
+                  <button class="wa-image-preview-close" type="button" aria-label="Cerrar" data-wa-image-cancel="true">&#x2715;</button>
+                  <img class="wa-image-preview-img" alt="Vista previa" data-wa-image-preview-img>
+                  <video class="wa-image-preview-video" controls data-wa-image-preview-video></video>
+                  <div class="wa-file-preview" data-wa-file-preview></div>
+                  <div class="wa-preview-strip" data-wa-preview-strip></div>
+              </div>
+              <div class="wa-reply-preview is-hidden" data-wa-reply-preview>
+                <div class="wa-reply-text">
+                  <strong>Respondiendo</strong>
+                  <span data-wa-reply-label></span>
+                </div>
+                <button class="wa-reply-cancel" type="button" aria-label="Cancelar" data-wa-reply-cancel="true">&#x2715;</button>
+              </div>
+              <div class="wa-plus-menu is-hidden" data-wa-plus-menu>
+                <button class="wa-plus-item" type="button" data-wa-plus-photo="true">Fotos y videos</button>
+                <button class="wa-plus-item" type="button" data-wa-plus-doc="true">Documentos</button>
+                <button class="wa-plus-item" type="button" data-wa-plus-activity="true">Actividad</button>
+              </div>
+              <input class="wa-plus-file"
+                     type="file"
+                     accept="image/*,video/*"
+                     multiple="multiple"
+                     data-wa-plus-file="true" />
+              <input class="wa-plus-doc"
+                     type="file"
+                     accept="*/*"
+                     multiple="multiple"
+                     data-wa-plus-doc-file="true" />
+                <%= hidden_field_tag :reply_to, "", data: { wa_reply_to: true } %>
+                <div class="wa-input-textarea">
+                  <div class="wa-input-actions">
+                    <button class="wa-icon-btn wa-plus-btn" type="button" title="Opciones" data-wa-menu-toggle="true">&#x271A;</button>
+                    <button class="wa-icon-btn wa-emoji-btn" type="button" title="Emoticones" data-wa-emoji-toggle="true">&#x2615;</button>
+                  </div>
+                  <%= form.text_area :body, rows: 2, placeholder: "Escribe un mensaje..." %>
+                  <button class="wa-send-float" type="submit" title="Enviar">&#x27A4;</button>
+                </div>
+              </div>
+            </div>
+          <div class="wa-emoji-panel is-hidden wa-float-panel" aria-label="Emoticones" data-wa-emoji>
+            <div class="wa-emoji-grid">
+              <span>&#x1F600;</span><span>&#x1F603;</span><span>&#x1F604;</span><span>&#x1F601;</span><span>&#x1F606;</span><span>&#x1F605;</span><span>&#x1F923;</span><span>&#x1F602;</span>
+              <span>&#x1F609;</span><span>&#x1F60A;</span><span>&#x1F60D;</span><span>&#x1F618;</span><span>&#x1F60E;</span><span>&#x1F60F;</span><span>&#x1F914;</span><span>&#x1F634;</span>
+              <span>&#x1F644;</span><span>&#x1F62E;</span><span>&#x1F62D;</span><span>&#x1F622;</span><span>&#x1F621;</span><span>&#x1F624;</span><span>&#x1F4AA;</span><span>&#x1F44D;</span>
+              <span>&#x1F44E;</span><span>&#x1F64C;</span><span>&#x1F44F;</span><span>&#x1F91D;</span><span>&#x2705;</span><span>&#x274C;</span><span>&#x2757;</span><span>&#x2753;</span>
+              <span>&#x1F4CC;</span><span>&#x1F4CE;</span><span>&#x1F4C8;</span><span>&#x1F4CA;</span><span>&#x1F4A1;</span><span>&#x1F525;</span><span>&#x2728;</span><span>&#x1F389;</span>
+              <span>&#x1F680;</span><span>&#x1F6A7;</span><span>&#x1F6E0;</span><span>&#x1F9F0;</span><span>&#x1F3D7;</span><span>&#x1F3D9;</span><span>&#x1F3ED;</span><span>&#x1F3E2;</span>
+            </div>
+          </div>
+          <%= hidden_field_tag :chat_id, @active_chat&.id %>
+          <div class="wa-send-row"></div>
+        <% end %>
+      </div>
+    </section>
+  </main>
+
+  <div class="wa-debug-console" data-wa-debug-console></div>
+</div>
+
+<style>
+  #content-body {
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background: var(--wa-bg);
+  }
+
+  body.wa-debug-active #content-body {
+    height: auto;
+    min-height: 100%;
+    overflow: visible;
+  }
+  :root {
+    --wa-bg: #f5f6f8;
+    --wa-panel: #ffffff;
+    --wa-panel-strong: #f2f4f6;
+    --wa-card: #f7f9fb;
+    --wa-accent: #25d366;
+    --wa-accent-soft: rgba(37, 211, 102, 0.14);
+    --wa-text: #101418;
+    --wa-text-soft: #66737f;
+    --wa-danger: #f97316;
+    --wa-shadow: 0 18px 40px rgba(16, 24, 40, 0.12);
+    --wa-radius: 18px;
+  }
+
+  .wa-shell {
+    font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+    color: var(--wa-text);
+    background: var(--wa-bg);
+    min-height: 100vh;
+    padding: 0 0 20px 0;
+    position: relative;
+    overflow: hidden;
+    --wa-container-height: calc(100vh - 148px);
+  }
+
+  .wa-bg-shapes::before,
+  .wa-bg-shapes::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    filter: blur(0px);
+    opacity: 0.18;
+    background: linear-gradient(120deg, #93c5fd, #86efac);
+    animation: float 16s ease-in-out infinite;
+  }
+
+  .wa-bg-shapes::before {
+    top: -120px;
+    right: -80px;
+  }
+
+  .wa-bg-shapes::after {
+    bottom: -160px;
+    left: -120px;
+    animation-delay: -6s;
+  }
+
+  .wa-chat-tools {
+    display: flex;
+    gap: 8px;
+  }
+
+  .wa-chat-media-size {
+    position: sticky;
+    left: 12px;
+    top: 12px;
+    font-size: 12px;
+    color: var(--wa-text-soft);
+    background: transparent;
+    padding: 4px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .wa-chat-edit {
+    border: none;
+    background: #eef2f6;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transform: none;
+  }
+
+  .wa-chat-action-ia {
+    border: none;
+    background: transparent;
+    color: #0b141a;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+  }
+
+  .wa-content-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 6px;
+    gap: 8px;
+  }
+
+  .wa-header-company {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--wa-text);
+    margin-right: 8px;
+  }
+
+  .wa-header-more {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .wa-icon-btn {
+    border: none;
+    background: var(--wa-panel-strong);
+    color: var(--wa-text);
+    width: 48px;
+    height: 40px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: var(--wa-shadow);
+    transition: transform 0.2s ease, background 0.2s ease;
+    font-size: 12px;
+  }
+
+  .wa-gear-btn {
+    width: 40px;
+    font-size: 16px;
+  }
+
+  .wa-header-more-btn {
+    width: 40px;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .wa-icon-btn:hover {
+    transform: translateY(-2px);
+    background: var(--wa-card);
+  }
+
+  .wa-header-more-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 180px;
+    background: #ffffff;
+    border: 1px solid #dbe3ea;
+    border-radius: 14px;
+    box-shadow: 0 16px 38px rgba(15, 23, 42, 0.18);
+    padding: 8px;
+    display: grid;
+    gap: 4px;
+    z-index: 30;
+  }
+
+  .wa-header-more-menu.is-hidden {
+    display: none;
+  }
+
+  .wa-header-more-item {
+    border: none;
+    background: transparent;
+    color: var(--wa-text);
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .wa-header-more-item:hover {
+    background: #f3f6f8;
+  }
+
+  .wa-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 8px;
+    min-height: var(--wa-container-height);
+    padding-bottom: 28px;
+  }
+
+  .wa-sidebar,
+  .wa-chat {
+    background: var(--wa-panel);
+    border-radius: var(--wa-radius);
+    box-shadow: var(--wa-shadow);
+    padding: 8px;
+    position: relative;
+    animation: fadeIn 0.6s ease both;
+    height: var(--wa-container-height);
+    overflow: visible;
+  }
+
+  .wa-chat {
+    order: 1;
+    position: relative;
+  }
+
+  .wa-chat-empty-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--wa-text-soft);
+  }
+
+  .is-hidden {
+    display: none;
+  }
+
+  .wa-sidebar {
+    order: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .wa-search input {
+    width: 100%;
+    padding: 12px 36px 12px 14px;
+    border-radius: 14px;
+    border: 1px solid #e6eaee;
+    background: #f3f5f7;
+    color: var(--wa-text);
+  }
+
+  .wa-search {
+    position: relative;
+  }
+
+  .wa-search-field {
+    position: relative;
+  }
+
+  .wa-search-filter-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: var(--wa-text-soft);
+    padding: 4px;
+    cursor: pointer;
+  }
+
+  .wa-filter-panel {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    width: 260px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: var(--wa-shadow);
+    padding: 12px;
+    z-index: 50;
+  }
+
+  .wa-filter-panel.is-hidden {
+    display: none;
+  }
+
+  .wa-filter-section {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .wa-filter-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--wa-text-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
+  .wa-filter-option {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--wa-text);
+    line-height: 1.2;
+    width: 100%;
+  }
+
+  .wa-filter-option input[type="checkbox"] {
+    margin: 0;
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+  }
+
+  .wa-filter-tags {
+    display: grid;
+    gap: 6px;
+    max-height: 140px;
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+
+  .wa-filter-save {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px;
+  }
+
+  .wa-filter-save input {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .wa-filter-save-btn {
+    border: none;
+    background: var(--wa-accent);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .wa-filter-saved {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .wa-filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #eef2f7;
+    color: var(--wa-text);
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+  }
+
+  .wa-filter-chip-remove {
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  .wa-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .wa-tab-icon {
+    color: #fbbf24;
+    font-size: 14px;
+    margin-right: 6px;
+    line-height: 1;
+    text-shadow: -0.5px 0 #000000, 0.5px 0 #000000, 0 -0.5px #000000, 0 0.5px #000000;
+  }
+
+  .wa-alert {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 20, 25, 0.4);
+    display: grid;
+    place-items: center;
+    z-index: 40;
+  }
+
+  .wa-alert.is-hidden {
+    display: none;
+  }
+
+  .wa-alert-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px;
+    width: 320px;
+    box-shadow: var(--wa-shadow);
+    display: grid;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .wa-alert-title {
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .wa-alert-text {
+    font-size: 13px;
+    color: var(--wa-text-soft);
+  }
+
+  .wa-alert-close {
+    justify-self: center;
+  }
+
+  .wa-tab {
+    flex: 1;
+    border: none;
+    background: #f3f5f7;
+    color: var(--wa-text-soft);
+    padding: 8px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .wa-tab.is-active {
+    color: #ffffff;
+    background: var(--wa-accent);
+    font-weight: 600;
+  }
+
+  .wa-chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+    overflow-x: visible;
+    flex: 1 1 auto;
+    min-height: 0;
+    padding: 2px 0 16px;
+  }
+
+  .wa-chat-list-footer {
+    padding-top: 8px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .wa-chat-load-more {
+    width: 100%;
+    border: none;
+    background: #22c55e;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(34, 197, 94, 0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .wa-chat-load-more:disabled,
+  .wa-chat-load-more.is-hidden {
+    display: none;
+  }
+
+  .wa-chat-card {
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 6px;
+    padding: 6px;
+    border-radius: 14px;
+    background: #f5f7fa;
+    color: var(--wa-text);
+    text-decoration: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    position: relative;
+    overflow: visible;
+  }
+
+  .wa-chat-link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+  }
+
+  .wa-chat-link:hover {
+    text-decoration: none;
+  }
+
+  .wa-chat-card:hover {
+    transform: translateY(-2px);
+    background: var(--wa-card);
+    text-decoration: none;
+  }
+
+  .wa-chat-card.is-active {
+    border: 1px solid var(--wa-accent);
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.16), rgba(58, 163, 112, 0.12));
+  }
+
+  .wa-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: #e5e9ee;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    color: #0b141a;
+  }
+
+  .wa-avatar.is-large {
+    width: 52px;
+    height: 52px;
+  }
+
+  .wa-chat-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .wa-chat-row {
+    display: flex;
+    align-items: center;
+  }
+
+  .wa-chat-row-actions {
+    justify-content: space-between;
+  }
+
+  .wa-chat-actions-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .wa-chat-actions-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .wa-chat-name {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .wa-chat-details .wa-chat-name {
+    white-space: normal;
+    overflow: visible;
+  }
+
+  .wa-chat-title {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }
+
+  .wa-chat-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .wa-chat-name-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    background: #f7f9fb;
+    border: 1px solid #e1e6eb;
+    border-radius: 10px;
+    padding: 6px 8px;
+    font-weight: 600;
+    font-size: 12px;
+    overflow: visible;
+  }
+
+  .wa-chat-tags {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    user-select: none;
+  }
+
+  .wa-chat-tag-dot {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    aspect-ratio: 1 / 1;
+    flex: 0 0 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.16);
+    position: relative;
+    line-height: 1;
+    box-sizing: border-box;
+    padding: 0;
+    text-align: center;
+    cursor: grab;
+  }
+
+  .wa-chat-tag-dot.is-dragging {
+    opacity: 0.6;
+  }
+
+  .wa-chat-tag-dot::after {
+    content: none;
+  }
+
+  .wa-chat-tag-dot::before {
+    content: none;
+  }
+
+  .wa-chat-tag-dot:hover::after,
+  .wa-chat-tag-dot:hover::before {
+    opacity: 1;
+  }
+
+  .wa-chat-tag-tooltip {
+    position: fixed;
+    background: #111827;
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 1.2;
+    padding: 4px 8px;
+    border-radius: 8px;
+    white-space: nowrap;
+    z-index: 100000;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.22);
+  }
+
+  .wa-chat-tag-tooltip.is-hidden {
+    display: none;
+  }
+
+  .wa-chat-tag-tooltip-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 16px;
+  }
+
+  .wa-chat-tag-more {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 700;
+  }
+
+  .wa-chat-actions {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex: 0 0 auto;
+  }
+
+  .wa-ia-panel {
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    display: none;
+    z-index: 5;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .wa-ia-panel.is-open {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .wa-ia-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .wa-ia-panel-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--wa-text);
+  }
+
+  .wa-ia-panel-close {
+    border: none;
+    background: transparent;
+    color: #0b141a;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+  }
+
+  .wa-ia-panel-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .wa-ia-macro-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+  }
+
+  .wa-ia-panel .wa-chat-macro-select {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 6px 8px;
+    font-size: 12px;
+    background: #ffffff;
+  }
+
+  .wa-ia-panel .wa-chat-macro-run {
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    border-radius: 8px;
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #1c274c;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .wa-ia-panel .wa-chat-macro-run:hover {
+    border-color: #94a3b8;
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.12);
+    transform: translateY(-1px);
+  }
+
+  .wa-ia-panel .wa-chat-macro-run.is-running {
+    background: #22c55e;
+    border-color: #16a34a;
+    box-shadow: 0 6px 14px rgba(34, 197, 94, 0.25);
+    transform: translateY(-1px);
+  }
+
+  .wa-ia-panel .wa-chat-macro-run.is-running:disabled {
+    opacity: 1;
+    cursor: wait;
+  }
+
+  .wa-ia-panel .wa-chat-macro-run.is-pressed {
+    transform: scale(0.97);
+    box-shadow: inset 0 2px 6px rgba(15, 23, 42, 0.18);
+  }
+
+  .wa-ia-panel .wa-chat-macro-run:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: none;
+    transform: none;
+  }
+
+  .wa-chat-delete {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    color: #dc2626;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+  }
+
+  .wa-chat-id {
+    font-size: 12px;
+    color: var(--wa-text-soft);
+  }
+
+  .wa-chat-status-select select {
+    border: 1px solid #e1e6eb;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 12px;
+    background: #ffffff;
+    color: #111827;
+    line-height: 1.1;
+    height: 26px;
+  }
+
+  .wa-chat-status-select select option {
+    color: #111827;
+  }
+
+
+
+  .wa-chat-id-box {
+    background: #f7f9fb;
+    border: 1px solid #e1e6eb;
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+
+  .wa-chat-favorite {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    color: #0b141a;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+  }
+
+  .wa-chat-card.is-favorite .wa-chat-favorite {
+    color: #facc15;
+  }
+
+  .wa-chat-preview,
+  .wa-chat-time,
+
+  .wa-chat-preview-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 6px;
+  }
+
+  .wa-chat-subtitle,
+  .wa-chat-subvalue {
+    font-size: 11px;
+    color: var(--wa-text-soft);
+    padding-left: 6px;
+  }
+
+  .wa-chat-subtitle {
+    min-width: 58px;
+  }
+
+  .wa-confirm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 20, 25, 0.55);
+    display: grid;
+    place-items: center;
+    z-index: 120;
+  }
+
+  .wa-confirm-overlay.is-hidden {
+    display: none;
+  }
+
+  .wa-confirm-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px 20px;
+    width: min(320px, 90vw);
+    box-shadow: var(--wa-shadow);
+    display: grid;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .wa-confirm-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--wa-text);
+  }
+
+  .wa-confirm-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .wa-confirm-yes,
+  .wa-confirm-no {
+    border: none;
+    border-radius: 10px;
+    padding: 8px 14px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .wa-confirm-yes {
+    background: #dc2626;
+    color: #ffffff;
+  }
+
+  .wa-confirm-no {
+    background: #eef2f6;
+    color: var(--wa-text);
+  }
+
+  .wa-unread-badge {
+    min-width: 18px;
+    height: 18px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: #22c55e;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wa-chat-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .wa-badge {
+    background: var(--wa-accent);
+    color: #0b141a;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .wa-chat {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+
+  .wa-chat-body {
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: 6px;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .wa-chat-body.is-hidden {
+    display: none;
+  }
+
+  .wa-settings-panel {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 20, 25, 0.4);
+    display: grid;
+    place-items: stretch;
+    z-index: 20;
+    padding: 0;
+  }
+
+  .wa-settings-panel.is-hidden {
+    display: none;
+  }
+
+  .wa-settings-card {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 0;
+    border: none;
+    padding: 20px 24px;
+    box-shadow: none;
+  }
+
+  .wa-settings-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .wa-settings-title {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .wa-settings-close {
+    border: none;
+    background: #f5f7fa;
+    color: var(--wa-text);
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .wa-template-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .wa-template-card-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .wa-template-scroll {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 10px;
+    background: #f9fafb;
+    max-height: 420px;
+    overflow-y: auto;
+  }
+
+  .wa-template-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px;
+    background: #fff;
+    margin-bottom: 12px;
+  }
+
+  .wa-template-item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .wa-template-name {
+    font-weight: 600;
+  }
+
+  .wa-template-meta {
+    font-size: 12px;
+    color: #6b7280;
+  }
+
+  .wa-template-preview-text {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  .wa-template-file {
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 2px;
+    word-break: break-all;
+  }
+
+  .wa-template-file-meta {
+    color: #9aa3ad;
+    margin-left: 4px;
+  }
+
+  .wa-template-preview {
+    margin-top: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 10px;
+    background: #f9fafb;
+  }
+
+  .wa-settings-button.is-loading {
+    opacity: 0.7;
+    cursor: wait;
+    transform: translateY(1px);
+  }
+
+  .wa-template-preview-title {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 6px;
+  }
+
+  .wa-template-preview-bubble {
+    background: #dcfce7;
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    max-height: 240px;
+    overflow-y: auto;
+    border: 1px solid #bbf7d0;
+  }
+
+  .wa-template-preview-bubble img,
+  .wa-template-preview-bubble video {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .wa-template-preview-text {
+    white-space: pre-wrap;
+    color: #111827;
+  }
+
+  .wa-template-edit {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 1200;
+  }
+
+  .wa-template-edit.is-hidden {
+    display: none;
+  }
+
+  .wa-template-edit-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.35);
+  }
+
+  .wa-template-edit-panel {
+    position: relative;
+    width: min(640px, 92vw);
+    max-height: 80vh;
+    overflow: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    background: #f8fafc;
+    z-index: 1;
+  }
+
+  .wa-template-edit-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+
+  .wa-template-media-url.is-hidden {
+    display: none;
+  }
+
+  .wa-template-media-upload {
+    margin-top: 10px;
+  }
+
+  @media (max-width: 960px) {
+    .wa-template-layout {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .wa-settings-body {
+    display: grid;
+    gap: 10px;
+  }
+
+  .wa-settings-layout {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 14px;
+  }
+
+  .wa-settings-nav {
+    display: grid;
+    gap: 8px;
+    padding-right: 6px;
+    border-right: 1px solid #e6eaee;
+    align-content: flex-start;
+  }
+
+  .wa-settings-tab {
+    border: none;
+    background: #f5f7fa;
+    color: var(--wa-text);
+    padding: 10px 12px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 13px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+  }
+
+  .wa-settings-tab.is-active {
+    background: var(--wa-accent);
+    color: #0b141a;
+    font-weight: 600;
+  }
+
+  .wa-settings-content {
+    display: none;
+    gap: 10px;
+  }
+
+  .wa-settings-content.is-active {
+    display: grid;
+  }
+
+  .wa-debug-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .wa-debug-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #475569;
+  }
+
+  .wa-debug-console {
+    background: #0b1220;
+    color: #e2e8f0;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 12px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 12px;
+    line-height: 1.4;
+    max-height: 260px;
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+
+  .wa-debug-console.is-hidden {
+    display: none;
+  }
+
+  @media (max-width: 1200px) {
+    .wa-debug-console {
+      display: none;
+    }
+  }
+
+  .wa-settings-section-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .wa-settings-button {
+    border: none;
+    background: var(--wa-accent);
+    color: #0b141a;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    width: fit-content;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .wa-settings-button.is-loading {
+    transform: scale(0.97);
+    box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.12);
+    background: #bfc5cc;
+    color: #ffffff;
+  }
+
+  .wa-settings-button-danger {
+    background: #ef4444;
+    color: #ffffff;
+  }
+
+  .wa-settings-action-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .wa-settings-play {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #e6eaee;
+    background: #0b0f12;
+    color: #ffffff;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+  }
+
+  .wa-settings-play:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .wa-settings-status {
+    font-size: 12px;
+    color: var(--wa-text-soft);
+    min-height: 16px;
+  }
+
+  .wa-settings-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .wa-settings-connection-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) auto;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .wa-settings-guide {
+    display: grid;
+    gap: 8px;
+  }
+
+  .wa-settings-connection-right {
+    display: grid;
+    gap: 12px;
+    justify-items: center;
+    width: 100%;
+  }
+
+  .wa-qr-connected {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--wa-text);
+  }
+
+  .wa-qr-connected-total {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--wa-text-soft);
+  }
+
+  .wa-qr-connected-header {
+    margin-left: auto;
+    padding-right: 8px;
+  }
+
+  .wa-new-chat-panel {
+    position: absolute;
+    top: 56px;
+    left: 12px;
+    width: 352px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 12px 30px rgba(16, 24, 40, 0.18);
+    display: grid;
+    gap: 10px;
+    z-index: 20;
+  }
+
+  .wa-new-chat-panel.is-hidden {
+    display: none;
+  }
+
+  .wa-new-chat-submit {
+    margin-left: auto;
+  }
+
+  .wa-new-chat-status {
+    font-size: 12px;
+    color: var(--wa-text-soft);
+    margin-left: auto;
+  }
+
+  .wa-new-chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .wa-new-chat-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .wa-new-chat-close {
+    border: none;
+    background: #eef2f6;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+  }
+
+  .wa-new-chat-phone {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .wa-new-chat-country-wrap {
+    position: relative;
+  }
+
+  .wa-new-chat-input {
+    height: 38px;
+  }
+
+  .wa-new-chat-country-input {
+    width: 100%;
+    border: 1px solid #e6eaee;
+    border-radius: 10px;
+    padding: 10px 8px 10px 36px;
+    background: #f9fafb;
+    font-size: 12px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px 14px;
+    line-height: 16px;
+  }
+
+  .wa-new-chat-country-list {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e6eaee;
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgba(16, 24, 40, 0.12);
+    max-height: 160px;
+    overflow-y: auto;
+    display: grid;
+    gap: 2px;
+    padding: 6px;
+    z-index: 30;
+  }
+
+  .wa-new-chat-country-list.is-hidden {
+    display: none;
+  }
+
+  .wa-country-item {
+    border: none;
+    background: transparent;
+    text-align: left;
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .wa-country-item img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+
+  .wa-new-chat-country-flag img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+  }
+
+  .wa-country-item:hover {
+    background: #f3f5f7;
+  }
+
+  .wa-qr-connected-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f59e0b;
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.15);
+  }
+
+  .wa-qr-connected.is-working .wa-qr-connected-dot {
+    background: #22c55e;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+  }
+
+  .wa-qr-box {
+    border: 1px dashed #e6eaee;
+    border-radius: 12px;
+    padding: 12px;
+    display: grid;
+    gap: 8px;
+    width: fit-content;
+    justify-self: center;
+  }
+
+  .wa-qr-image {
+    width: 280px;
+    height: 280px;
+    object-fit: contain;
+    background: #f5f7fa;
+    border-radius: 8px;
+    justify-self: center;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+  }
+
+  .wa-qr-box.is-working .wa-qr-image {
+    filter: blur(6px);
+  }
+
+  .wa-qr-progress {
+    height: 6px;
+    width: 100%;
+    background: #eef2f6;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .wa-qr-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #22c55e;
+    transition: width 0.2s linear;
+  }
+
+  .wa-qr-helper {
+    font-size: 12px;
+    color: var(--wa-text-soft);
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .wa-settings-connection-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .wa-settings-label {
+    font-size: 12px;
+    color: var(--wa-text-soft);
+  }
+
+  .wa-template-form .wa-settings-label {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .wa-template-form .wa-settings-label:first-of-type {
+    margin-top: 0;
+  }
+
+  .wa-settings-input {
+    border: 1px solid #e6eaee;
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .wa-template-form .wa-settings-input,
+  .wa-template-form input.wa-settings-input,
+  .wa-template-form select.wa-settings-input,
+  .wa-template-form textarea.wa-settings-input {
+    border-radius: 12px;
+  }
+
+  .wa-template-file-input {
+    width: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    font-size: 0;
+    flex: 0 0 auto;
+  }
+
+  .wa-template-file-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .wa-template-file-current {
+    font-size: 12px;
+    color: #6b7280;
+    margin-left: auto;
+    max-width: 320px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .wa-template-file-current.is-placeholder {
+    color: #9aa3ad;
+  }
+
+  .wa-template-file-current.is-hidden {
+    display: none;
+  }
+
+  .wa-template-file-input::file-selector-button {
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: 1px solid #e6eaee;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  @media (max-width: 720px) {
+    .wa-template-file-row {
+      flex-wrap: wrap;
+    }
+
+    .wa-template-file-current {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
+
+  .wa-settings-text {
+    font-size: 12px;
+    color: var(--wa-text-soft);
+    line-height: 1.4;
+  }
+
+  .wa-settings-help {
+    font-size: 12px;
+    color: var(--wa-text-soft);
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  .wa-template-video-help.is-hidden {
+    display: none;
+  }
+
+  .wa-template-video-error {
+    color: #b91c1c;
+  }
+
+  .wa-template-video-error.is-hidden {
+    display: none;
+  }
+
+  .wa-settings-subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--wa-text);
+    margin-top: 4px;
+  }
+
+  .wa-settings-list {
+    margin: 0;
+    padding-left: 16px;
+    font-size: 12px;
+    color: var(--wa-text-soft);
+    line-height: 1.4;
+    display: grid;
+    gap: 6px;
+  }
+
+  .wa-admin-connections {
+    margin-top: 10px;
+  }
+
+  .wa-files-panel {
+    margin-top: 10px;
+  }
+
+  .wa-files-toolbar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .wa-files-toolbar .wa-settings-input {
+    width: auto;
+    min-width: 170px;
+  }
+
+  .wa-files-summary {
+    font-size: 12px;
+    color: var(--wa-text-soft);
+    margin-bottom: 8px;
+  }
+
+  .wa-files-table-wrap {
+    max-height: 460px;
+    overflow: auto;
+    border: 1px solid #e6eaee;
+    border-radius: 10px;
+  }
+
+  .wa-files-table th:first-child,
+  .wa-files-table td:first-child {
+    width: 34px;
+    text-align: center;
+  }
+
+  .wa-admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+
+  .wa-admin-table th,
+  .wa-admin-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #e6eaee;
+    text-align: left;
+  }
+
+  .wa-admin-table th {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--wa-text-soft);
+  }
+
+  .wa-admin-table td {
+    color: var(--wa-text);
+  }
+
+  .wa-admin-table .wa-admin-empty td {
+    text-align: center;
+    color: var(--wa-text-soft);
+  }
+
+  .wa-admin-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+  }
+
+  .wa-admin-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+  }
+
+  .wa-admin-limit-input {
+    width: 100px;
+  }
+
+  .wa-admin-action-btn {
+    border: none;
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .wa-admin-action-btn:hover {
+    background: #fecaca;
+  }
+
+  .wa-file-view-btn {
+    display: inline-block;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #111827;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  .wa-file-view-btn:hover {
+    background: #f3f4f6;
+  }
+
+  .wa-more-panel {
+    position: absolute;
+    top: 46px;
+    right: 10px;
+    background: #ffffff;
+    border: 1px solid #e6eaee;
+    border-radius: 12px;
+    padding: 6px;
+    z-index: 12;
+    box-shadow: var(--wa-shadow);
+  }
+
+  .wa-more-panel.is-hidden {
+    display: none;
+  }
+
+  .wa-chat-edit-panel {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    z-index: 120;
+    padding: 0;
+  }
+
+  .wa-chat-edit-panel.is-hidden {
+    display: none;
+  }
+
+  .wa-chat-edit-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 0;
+    width: 671px;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 0 18px 40px rgba(16, 24, 40, 0.2);
+    display: grid;
+    gap: 8px;
+    overflow: auto;
+    margin: 0;
+    align-content: start;
+    grid-auto-rows: max-content;
+    transform: translateX(-24px);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .wa-chat-edit-panel.is-open .wa-chat-edit-card {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .wa-chat-edit-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    align-self: start;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    padding: 14px 16px 10px;
+    z-index: 3;
+    border-bottom: 1px solid #eef1f4;
+  }
+
+  .wa-chat-edit-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .wa-chat-edit-title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .wa-chat-edit-id {
+    font-size: 12px;
+    color: var(--wa-text-soft);
+  }
+
+  .wa-chat-edit-close {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wa-chat-edit-close-btn {
+    background: transparent;
+    color: var(--wa-text);
+    width: auto;
+    height: auto;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 0;
+  }
+
+  .wa-chat-edit-form {
+    display: grid;
+    gap: 12px 16px;
+    grid-template-columns: 1fr;
+    padding: 12px 16px 16px;
+  }
+
+  .wa-chat-edit-row {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 12px 16px;
+    grid-template-columns: 1fr;
+  }
+
+  .wa-chat-edit-row.is-single {
+    grid-template-columns: 1fr;
+  }
+
+  .wa-chat-edit-form textarea.wa-settings-input {
+    min-height: 80px;
+    resize: vertical;
+  }
+
+  .wa-chat-edit-field {
+    display: grid;
+    gap: 6px;
+  }
+
+  .wa-chat-edit-field.is-hidden {
+    display: none;
+  }
+
+  .wa-chat-edit-full {
+    grid-column: 1 / -1;
+  }
+
+  .wa-chat-edit-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .wa-chat-edit-save {
+    margin-top: 4px;
+    justify-self: end;
+    background: #25D366;
+    color: #ffffff;
+    font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 8px;
+  }
+
+  .wa-chat-edit-toolbar {
+    position: sticky;
+    bottom: 0;
+    background: #ffffff;
+    padding: 10px 16px;
+    margin-top: 0;
+    border-top: 1px solid #e6eaee;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+  }
+
+  .wa-more-item {
+    border: none;
+    background: #f5f7fa;
+    color: var(--wa-text);
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+
+  .wa-more-item:hover {
+    background: var(--wa-card);
+  }
+
+  .wa-chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4px;
+  }
+
+  .wa-chat-responsible {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 8px;
+  }
+
+  .wa-chat-responsible-select {
+    min-width: 180px;
+    max-width: 240px;
+    height: 34px;
+    border: 1px solid #d6dbe2;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: #ffffff;
+    color: var(--wa-text);
+    font-size: 13px;
+  }
+
+  .wa-chat-responsible-select:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+
+  .wa-chat-conversation {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+
+  .wa-chat-conversation-select {
+    min-width: 220px;
+    max-width: 260px;
+    height: 34px;
+    border: 1px solid #d6dbe2;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: #ffffff;
+    color: var(--wa-text);
+    font-size: 13px;
+  }
+
+  .wa-chat-conversation-select:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+
+  .wa-chat-info {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .wa-messages {
+    background-color: #eef6ef;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%221120%22%20height%3D%221120%22%20viewBox%3D%220%200%201120%201120%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%3Cdefs%3E%3Cpattern%20id%3D%22mosaic%22%20width%3D%221120%22%20height%3D%221120%22%20patternUnits%3D%22userSpaceOnUse%22%3E%3Cg%20transform%3D%22translate(0%2C0)%22%20fill%3D%22none%22%20stroke%3D%22%236f9b76%22%20stroke-opacity%3D%220.12%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M40%2060c0-18%2014-32%2032-32h70c18%200%2032%2014%2032%2032v30c0%2018-14%2032-32%2032H92l-22%2018%204-18h-2c-18%200-32-14-32-32V60z%22/%3E%3Cpath%20d%3D%22M150%20170l18%2018%2032-42%22/%3E%3Cpath%20d%3D%22M90%20150l6%2016%2016%206-16%206-6%2016-6-16-16-6%2016-6%206-16z%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate(560%2C0)%22%20fill%3D%22none%22%20stroke%3D%22%236f9b76%22%20stroke-opacity%3D%220.12%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M30%2080l200-40-80%2090-40%2090-16-54-64-26z%22/%3E%3Cpath%20d%3D%22M170%20170c0%2026-20%2046-46%2046s-46-20-46-46c0-30%2046-80%2046-80s46%2050%2046%2080z%22/%3E%3Ccircle%20cx%3D%22124%22%20cy%3D%22170%22%20r%3D%2212%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate(0%2C560)%22%20fill%3D%22none%22%20stroke%3D%22%236f9b76%22%20stroke-opacity%3D%220.12%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M50%2060h30l12%2014h60c10%200%2018%208%2018%2018v30c0%2010-8%2018-18%2018H50c-10%200-18-8-18-18V92c0-10%208-18%2018-18z%22/%3E%3Ccircle%20cx%3D%22120%22%20cy%3D%22107%22%20r%3D%2214%22/%3E%3Cpath%20d%3D%22M40%20160c18%2010%2018%2030%200%2040%22/%3E%3Cpath%20d%3D%22M24%20150c32%2018%2032%2054%200%2072%22/%3E%3C/g%3E%3Cg%20transform%3D%22translate(560%2C560)%22%20fill%3D%22none%22%20stroke%3D%22%236f9b76%22%20stroke-opacity%3D%220.12%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%3E%3Ccircle%20cx%3D%2290%22%20cy%3D%2290%22%20r%3D%2230%22/%3E%3Cpath%20d%3D%22M80%2086h0%22/%3E%3Cpath%20d%3D%22M100%2086h0%22/%3E%3Cpath%20d%3D%22M78%20102c8%2010%2026%2010%2034%200%22/%3E%3Cpath%20d%3D%22M140%2060h70v40c0%2018-14%2032-32%2032h-6c-18%200-32-14-32-32V60z%22/%3E%3Cpath%20d%3D%22M210%2070h14c14%200%2024%2010%2024%2024s-10%2024-24%2024h-14%22/%3E%3C/g%3E%3Cg%20fill%3D%22%236f9b76%22%20fill-opacity%3D%220.06%22%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2220%22%20r%3D%226%22/%3E%3Ccircle%20cx%3D%221100%22%20cy%3D%2240%22%20r%3D%225%22/%3E%3Ccircle%20cx%3D%221080%22%20cy%3D%221080%22%20r%3D%226%22/%3E%3Ccircle%20cx%3D%2240%22%20cy%3D%221100%22%20r%3D%225%22/%3E%3Ccircle%20cx%3D%22560%22%20cy%3D%22560%22%20r%3D%224%22/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect%20width%3D%221120%22%20height%3D%221120%22%20fill%3D%22url(%23mosaic)%22/%3E%3C/svg%3E");
+    background-size: 1120px 1120px;
+    background-repeat: repeat;
+    border-radius: 16px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    min-height: 0;
+    height: 100%;
+    border: 1px solid #e6eaee;
+    flex: 1 1 auto;
+    position: relative;
+    scrollbar-gutter: stable;
+  }
+
+  .wa-messages > * {
+    flex: 0 0 auto;
+  }
+
+  .wa-load-more {
+    align-self: center;
+    border: none;
+    background: #ffffff;
+    color: var(--wa-text);
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid #e6eaee;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .wa-empty-state {
+    color: var(--wa-text-soft);
+    font-size: 13px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .wa-day-divider {
+    align-self: center;
+    font-size: 12px;
+    color: var(--wa-text-soft);
+    padding: 6px 12px;
+    background: #eef1f4;
+    border-radius: 999px;
+  }
+
+  .wa-day-divider-floating {
+    position: sticky;
+    top: 8px;
+    z-index: 2;
+    margin: 0 auto;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+  }
+
+  .wa-bubble {
+    max-width: 70%;
+    padding: 10px 32px 22px 12px;
+    border-radius: 16px;
+    background: #ffffff;
+    position: relative;
+    border: 1px solid #e6eaee;
+    overflow: visible;
+  }
+
+  .wa-bubble.is-image {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    min-height: 80px;
+    height: auto;
+    max-height: none;
+    overflow: hidden;
+  }
+
+  .wa-bubble.is-out {
+    align-self: flex-end;
+    background: #dcf8c6;
+    color: #0f1419;
+    border-top-right-radius: 6px;
+    border: 1px solid rgba(37, 211, 102, 0.35);
+  }
+
+  .wa-bubble.is-activity {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #1d4ed8;
+  }
+
+  .wa-bubble.is-activity .wa-bubble-meta,
+  .wa-bubble.is-activity .wa-bubble-actions {
+    color: #dbeafe;
+  }
+
+  .wa-bubble.is-activity a {
+    color: #bfdbfe;
+  }
+
+  .wa-bubble.is-in {
+    align-self: flex-start;
+    border-top-left-radius: 6px;
+    margin-left: 12px;
+  }
+
+  .wa-bubble.is-uploading {
+    opacity: 0.95;
+  }
+
+  .wa-bubble.is-error {
+    border-color: #ef4444;
+  }
+
+  .wa-upload-progress {
+    margin-top: 8px;
+    height: 6px;
+    background: #e6eaee;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .wa-upload-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--wa-accent);
+    transition: width 0.3s ease;
+  }
+
+  .wa-bubble.is-paused .wa-upload-bar {
+    background: #f59e0b;
+  }
+
+  .wa-upload-actions {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  .wa-upload-btn {
+    border: 1px solid #d6dde6;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 6px 12px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .wa-upload-btn:hover {
+    background: #f3f5f7;
+  }
+
+  .wa-upload-btn.wa-upload-cancel {
+    border-color: #ef4444;
+    color: #ef4444;
+  }
+
+  .wa-bubble-meta {
+    font-size: 11px;
+    color: var(--wa-text-soft);
+    margin-bottom: 0;
+    position: absolute;
+    right: 3px;
+    bottom: 6px;
+  }
+
+  .wa-bubble-actions {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 22px;
+    height: 22px;
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    color: var(--wa-text);
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+  }
+
+  .wa-bubble:hover .wa-bubble-actions {
+    opacity: 1;
+  }
+
+  .wa-bubble-menu {
+    position: absolute;
+    top: 30px;
+    right: 6px;
+    width: max-content;
+    min-width: 70px;
+    background: #fff;
+    border: 1px solid #e6eaee;
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: var(--wa-shadow);
+    z-index: 5;
+    display: none;
+  }
+
+  .wa-bubble-menu.is-open {
+    display: block;
+  }
+
+  .wa-bubble-menu button {
+    background: inherit;
+    border: none;
+    padding: 6px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    width: auto;
+    text-align: left;
+    color: inherit;
+  }
+
+  .wa-bubble-menu.is-out {
+    background: #dcf8c6;
+    border-color: rgba(37, 211, 102, 0.35);
+    color: #0f1419;
+  }
+
+  .wa-bubble-menu.is-in {
+    background: #ffffff;
+    border-color: #e6eaee;
+    color: var(--wa-text);
+  }
+
+  .wa-bubble-body {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 14px;
+  }
+
+  .wa-bubble-reply {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 6px 8px;
+    margin-bottom: 6px;
+    border-left: 3px solid #0f5132;
+    border-radius: 10px;
+    background: rgba(15, 81, 50, 0.08);
+    font-size: 12px;
+  }
+
+  .wa-bubble.is-out .wa-bubble-reply {
+    border-left-color: #0f5132;
+  }
+
+  .wa-bubble.is-in .wa-bubble-reply {
+    border-left-color: #64748b;
+    background: rgba(148, 163, 184, 0.12);
+  }
+
+  .wa-bubble-reply strong {
+    font-size: 11px;
+    color: #0f5132;
+  }
+
+  .wa-bubble.is-in .wa-bubble-reply strong {
+    color: #475569;
+  }
+
+  .wa-bubble-body.is-emoji {
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .wa-bubble.is-image .wa-bubble-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    position: static;
+  }
+
+  .wa-bubble-image {
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    position: static;
+  }
+
+  .wa-bubble-image.is-sticker {
+    width: 110px;
+    max-width: 50%;
+  }
+
+  .wa-debug-visual .wa-bubble-image {
+    min-width: 80px;
+    min-height: 48px;
+    background: #f8fafc;
+    outline: 2px dashed #ef4444;
+  }
+
+  .wa-bubble-video {
+    max-width: 240px;
+    border-radius: 12px;
+    display: block;
+  }
+
+  .wa-bubble-caption {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--wa-text);
+  }
+
+  .wa-bubble-body code,
+  .wa-bubble-caption code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 12px;
+    background: rgba(15, 23, 42, 0.08);
+    padding: 1px 4px;
+    border-radius: 4px;
+  }
+
+  .wa-bubble-caption.is-emoji {
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .wa-bubble.is-image .wa-bubble-caption {
+    font-size: 14px;
+  }
+
+  .wa-preview-strip {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .wa-reply-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 10px;
+    background: #e7f7ee;
+    border: 1px solid #c5ecd6;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .wa-reply-preview.is-hidden {
+    display: none;
+  }
+
+  .wa-reply-preview strong {
+    display: block;
+    font-size: 11px;
+    color: #0f5132;
+  }
+
+  .wa-reply-preview span {
+    color: #1f2937;
+  }
+
+  .wa-reply-cancel {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: #0f5132;
+  }
+
+  .wa-preview-thumb {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    background: #e9edf2;
+    flex: 0 0 auto;
+    cursor: pointer;
+  }
+
+  .wa-preview-thumb.is-active {
+    border-color: var(--wa-accent);
+  }
+
+  .wa-preview-thumb img,
+  .wa-preview-thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .wa-preview-file {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+    color: var(--wa-text);
+    text-align: center;
+    padding: 4px;
+  }
+
+  .wa-preview-file-icon {
+    font-size: 16px;
+  }
+
+  .wa-preview-remove {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background: #111827;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .wa-bubble-file {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(15, 20, 25, 0.08);
+    min-width: 180px;
+  }
+
+  .wa-file-name {
+    font-size: 12px;
+    color: var(--wa-text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1 1 auto;
+  }
+
+  .wa-file-download {
+    font-size: 16px;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  .wa-file-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 32px;
+  }
+
+  .wa-file-icon svg {
+    width: 24px;
+    height: 28px;
+    display: block;
+  }
+
+  .wa-file-card,
+  .wa-audio-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(245, 247, 250, 0.9);
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px dashed #d7dde3;
+  }
+
+  .wa-file-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: var(--wa-accent);
+    color: #0b141a;
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  .wa-file-name {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .wa-file-size,
+  .wa-audio-time {
+    font-size: 11px;
+    color: var(--wa-text-soft);
+  }
+
+  .wa-audio-bar {
+    flex: 1;
+    height: 6px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--wa-accent), rgba(37, 211, 102, 0.25));
+  }
+
+  .wa-composer {
+    display: grid;
+    gap: 6px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .wa-input-row {
+    display: grid;
+    gap: 6px;
+    position: relative;
+  }
+
+  .wa-input-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .wa-input-textarea {
+    position: relative;
+  }
+
+  .wa-input-field.is-dragging {
+    outline: 2px dashed rgba(37, 211, 102, 0.5);
+    outline-offset: 2px;
+  }
+
+  .wa-messages.is-dragging {
+    outline: 2px dashed rgba(37, 211, 102, 0.4);
+    outline-offset: -4px;
+  }
+
+  .wa-input-actions {
+    display: flex;
+    gap: 6px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    z-index: 1;
+  }
+
+  .wa-plus-menu {
+    position: absolute;
+    left: 8px;
+    bottom: calc(100% + 8px);
+    background: #ffffff;
+    border: 1px solid #e6eaee;
+    border-radius: 12px;
+    padding: 6px;
+    box-shadow: var(--wa-shadow);
+    display: flex;
+    gap: 6px;
+    z-index: 45;
+  }
+
+  .wa-plus-menu.is-hidden {
+    display: none;
+  }
+
+  .wa-plus-item {
+    border: none;
+    background: #f5f7fa;
+    color: var(--wa-text);
+    padding: 8px 12px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 13px;
+  }
+
+  .wa-plus-item:hover {
+    background: rgba(37, 211, 102, 0.12);
+  }
+
+  .wa-plus-file {
+    display: none;
+  }
+
+  .wa-plus-doc {
+    display: none;
+  }
+
+  .wa-image-preview {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(100% + 8px);
+    background: #ffffff;
+    border: 1px solid #e6eaee;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: var(--wa-shadow);
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+    z-index: 30;
+    pointer-events: auto;
+  }
+
+  .wa-image-preview.is-hidden {
+    display: none;
+  }
+
+  .wa-image-preview-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(15, 20, 25, 0.08);
+    cursor: pointer;
+  }
+
+  .wa-image-preview-img {
+    max-width: 100%;
+    max-height: 260px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
+  }
+
+  .wa-image-preview-video {
+    max-width: 100%;
+    max-height: 260px;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    display: none;
+    pointer-events: auto;
+  }
+
+  .wa-file-preview {
+    width: 100%;
+    display: none;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #e6eaee;
+    background: #f8fafc;
+    color: var(--wa-text);
+    font-size: 13px;
+  }
+
+  .wa-file-preview.is-visible {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .wa-file-preview-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .wa-file-preview-icon {
+    font-size: 16px;
+  }
+
+  .wa-image-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 20, 25, 0.6);
+    display: grid;
+    place-items: center;
+    z-index: 60;
+  }
+
+  .wa-image-lightbox.is-hidden {
+    display: none;
+  }
+
+  .wa-image-lightbox-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(80vw, 1100px);
+    height: min(80vh, 700px);
+    max-width: 80vw;
+    max-height: 80vh;
+    box-shadow: var(--wa-shadow);
+  }
+
+  .wa-image-lightbox-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+
+  .wa-image-lightbox-video {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    display: none;
+  }
+
+  .wa-image-lightbox-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    background: #111827;
+    color: #ffffff;
+    cursor: pointer;
+  }
+
+
+  .wa-image-preview-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  .wa-send-float {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #0b0f12;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+  }
+
+  .wa-send-float:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .wa-plus-btn,
+  .wa-emoji-btn {
+    width: 36px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+
+  .wa-emoji-panel {
+    width: 50%;
+    max-height: 220px;
+    overflow-y: auto;
+  }
+
+  .wa-float-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(100% + 8px);
+    z-index: 30;
+    box-shadow: var(--wa-shadow);
+  }
+
+  .wa-emoji-panel {
+    width: 50%;
+    max-height: 220px;
+    overflow-y: auto;
+  }
+
+  .wa-emoji-panel.is-hidden {
+    display: none;
+  }
+
+  .wa-emoji-group {
+    font-size: 12px;
+    color: var(--wa-text-soft);
+  }
+
+  .wa-emoji-grid {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 6px;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .wa-emoji-grid span {
+    display: grid;
+    place-items: center;
+    padding: 6px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .wa-emoji-grid span:hover {
+    background: rgba(37, 211, 102, 0.14);
+  }
+
+  .wa-composer textarea {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid #e6eaee;
+    background: #ffffff;
+    padding: 12px 8px 8px;
+    color: var(--wa-text);
+    resize: none;
+    padding-left: 104px;
+    padding-right: 48px;
+    line-height: 18px;
+    height: 40px;
+  }
+
+  .wa-input-field .wa-reply-preview + .wa-input-textarea textarea {
+    margin-top: 0;
+  }
+
+
+  .wa-send-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(18px);
+    }
+  }
+
+  @media (max-width: 980px) {
+    .wa-layout {
+      grid-template-columns: 1fr;
+      padding-bottom: 22px;
+    }
+
+    .wa-sidebar {
+      order: 2;
+    }
+
+    .wa-chat {
+      order: 1;
+    }
+
+    .wa-sidebar,
+    .wa-chat {
+      height: auto;
+    }
+
+    .wa-emoji-grid {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+</style>
+
+

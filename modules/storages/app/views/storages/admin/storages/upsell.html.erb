@@ -1,0 +1,5 @@
+<% html_title(t(:label_administration), t("storages.upsell.title")) -%>
+
+<%= render EnterpriseEdition::UpsellPageComponent.new(:one_drive_sharepoint_file_storage,
+                                                      video: "enterprise/one_drive_sharepoint_integration.mp4",
+                                                      i18n_scope: "storages.upsell") %>

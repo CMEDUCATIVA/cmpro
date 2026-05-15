@@ -1,0 +1,148 @@
+<section class="op-email-email--section" id="email-history">
+  <h3>Historial</h3>
+  <% delete_params = {} %>
+  <% delete_params[:history_date] = @history_selected_date.iso8601 if @history_selected_date.present? %>
+  <% if @history_pagination && @history_pagination[:page].to_i > 0 %>
+    <% delete_params[:page] = @history_pagination[:page].to_i %>
+  <% end %>
+
+  <% if @history_groups.blank? %>
+    <div class="op-email-email--empty">Sin envios registrados.</div>
+  <% else %>
+    <table class="op-email-email--table">
+      <thead>
+        <tr>
+          <th>Fecha ultimo envio</th>
+          <th>Para</th>
+          <th>Estado</th>
+          <th>SMTP</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @history_groups.each_with_index do |group, index| %>
+          <% detail_id = "email-history-detail-#{index}" %>
+          <tr class="op-email-email--history-row"
+              data-email-history-row="true"
+              data-email-history-target="<%= detail_id %>"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+              aria-controls="<%= detail_id %>">
+            <td>
+              <% if group[:last_sent_at].present? %>
+                <%= history_datetime_label(group[:last_sent_at]) %>
+              <% end %>
+            </td>
+            <td><%= group[:recipient_email] %></td>
+            <td>
+              <span class="op-email-email--status <%= group[:status_class] %>"><%= group[:status_label] %></span>
+            </td>
+            <td><%= group[:smtp_source] %></td>
+            <td>
+              <%= button_to whatsapp_plugin_project_email_history_bulk_destroy_path(@project, delete_params.merge(recipient_email: group[:recipient_email])),
+                            method: :delete,
+                            class: "op-email-email--history-delete-btn",
+                            form: { data: { turbo_confirm: "Eliminar todo el historial y cola pendiente para #{group[:recipient_email]}?" } },
+                            title: "Eliminar historial de #{group[:recipient_email]}",
+                            aria: { label: "Eliminar historial de #{group[:recipient_email]}" } do %>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7223 12.7585C14.7426 12.3448 14.4237 11.9929 14.01 11.9726C13.5963 11.9522 13.2444 12.2711 13.2241 12.6848L12.9999 17.2415C12.9796 17.6552 13.2985 18.0071 13.7122 18.0274C14.1259 18.0478 14.4778 17.7289 14.4981 17.3152L14.7223 12.7585Z" fill="#323544"/>
+                  <path d="M9.98802 11.9726C9.5743 11.9929 9.25542 12.3448 9.27577 12.7585L9.49993 17.3152C9.52028 17.7289 9.87216 18.0478 10.2859 18.0274C10.6996 18.0071 11.0185 17.6552 10.9981 17.2415L10.774 12.6848C10.7536 12.2711 10.4017 11.9522 9.98802 11.9726Z" fill="#323544"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.249 2C9.00638 2 7.99902 3.00736 7.99902 4.25V5H5.5C4.25736 5 3.25 6.00736 3.25 7.25C3.25 8.28958 3.95503 9.16449 4.91303 9.42267L5.54076 19.8848C5.61205 21.0729 6.59642 22 7.78672 22H16.2113C17.4016 22 18.386 21.0729 18.4573 19.8848L19.085 9.42267C20.043 9.16449 20.748 8.28958 20.748 7.25C20.748 6.00736 19.7407 5 18.498 5H15.999V4.25C15.999 3.00736 14.9917 2 13.749 2H10.249ZM14.499 5V4.25C14.499 3.83579 14.1632 3.5 13.749 3.5H10.249C9.83481 3.5 9.49902 3.83579 9.49902 4.25V5H14.499ZM5.5 6.5C5.08579 6.5 4.75 6.83579 4.75 7.25C4.75 7.66421 5.08579 8 5.5 8H18.498C18.9123 8 19.248 7.66421 19.248 7.25C19.248 6.83579 18.9123 6.5 18.498 6.5H5.5ZM6.42037 9.5H17.5777L16.96 19.7949C16.9362 20.191 16.6081 20.5 16.2113 20.5H7.78672C7.38995 20.5 7.06183 20.191 7.03807 19.7949L6.42037 9.5Z" fill="#323544"/>
+                </svg>
+              <% end %>
+            </td>
+          </tr>
+          <tr id="<%= detail_id %>" class="op-email-email--history-detail is-hidden" data-email-history-detail="true">
+            <td colspan="5">
+              <table class="op-email-email--table op-email-email--history-detail-table">
+                <thead>
+                  <tr>
+                    <th>Fecha</th>
+                    <th>Para</th>
+                    <th>Asunto</th>
+                    <th>Estado</th>
+                    <th>SMTP</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% group[:deliveries].each do |delivery| %>
+                    <% detail_status = history_delivery_status(delivery) %>
+                    <tr>
+                      <% detail_time = delivery.sent_at || delivery.created_at %>
+                      <td><%= history_datetime_label(detail_time) %></td>
+                      <td><%= delivery.recipient_email %></td>
+                      <td><%= delivery.subject %></td>
+                      <td>
+                        <span class="op-email-email--status <%= detail_status[:css_class] %>"><%= detail_status[:label] %></span>
+                      </td>
+                      <td><%= delivery.smtp_source %></td>
+                      <td>
+                        <% if delivery.is_a?(EmailDelivery) && delivery.id.present? %>
+                          <%= button_to whatsapp_plugin_project_email_history_delivery_destroy_path(@project, delivery.id, delete_params),
+                                        method: :delete,
+                                        class: "op-email-email--history-delete-btn",
+                                        form: { data: { turbo_confirm: "Eliminar esta ejecucion del historial?" } },
+                                        title: "Eliminar ejecucion",
+                                        aria: { label: "Eliminar ejecucion" } do %>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.7223 12.7585C14.7426 12.3448 14.4237 11.9929 14.01 11.9726C13.5963 11.9522 13.2444 12.2711 13.2241 12.6848L12.9999 17.2415C12.9796 17.6552 13.2985 18.0071 13.7122 18.0274C14.1259 18.0478 14.4778 17.7289 14.4981 17.3152L14.7223 12.7585Z" fill="#323544"/>
+                              <path d="M9.98802 11.9726C9.5743 11.9929 9.25542 12.3448 9.27577 12.7585L9.49993 17.3152C9.52028 17.7289 9.87216 18.0478 10.2859 18.0274C10.6996 18.0071 11.0185 17.6552 10.9981 17.2415L10.774 12.6848C10.7536 12.2711 10.4017 11.9522 9.98802 11.9726Z" fill="#323544"/>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M10.249 2C9.00638 2 7.99902 3.00736 7.99902 4.25V5H5.5C4.25736 5 3.25 6.00736 3.25 7.25C3.25 8.28958 3.95503 9.16449 4.91303 9.42267L5.54076 19.8848C5.61205 21.0729 6.59642 22 7.78672 22H16.2113C17.4016 22 18.386 21.0729 18.4573 19.8848L19.085 9.42267C20.043 9.16449 20.748 8.28958 20.748 7.25C20.748 6.00736 19.7407 5 18.498 5H15.999V4.25C15.999 3.00736 14.9917 2 13.749 2H10.249ZM14.499 5V4.25C14.499 3.83579 14.1632 3.5 13.749 3.5H10.249C9.83481 3.5 9.49902 3.83579 9.49902 4.25V5H14.499ZM5.5 6.5C5.08579 6.5 4.75 6.83579 4.75 7.25C4.75 7.66421 5.08579 8 5.5 8H18.498C18.9123 8 19.248 7.66421 19.248 7.25C19.248 6.83579 18.9123 6.5 18.498 6.5H5.5ZM6.42037 9.5H17.5777L16.96 19.7949C16.9362 20.191 16.6081 20.5 16.2113 20.5H7.78672C7.38995 20.5 7.06183 20.191 7.03807 19.7949L6.42037 9.5Z" fill="#323544"/>
+                            </svg>
+                          <% end %>
+                        <% elsif delivery.respond_to?(:flow_run_id) && delivery.flow_run_id.present? && delivery.respond_to?(:node_id) && delivery.node_id.present? %>
+                          <% pending_params = delete_params.merge(run_id: delivery.flow_run_id, node_id: delivery.node_id, scheduled_at: (delivery.created_at&.iso8601)) %>
+                          <% pending_params[:contact_id] = delivery.contact_profile_id if delivery.respond_to?(:contact_profile_id) && delivery.contact_profile_id.present? %>
+                          <%= button_to whatsapp_plugin_project_email_history_pending_destroy_path(@project, pending_params),
+                                        method: :delete,
+                                        class: "op-email-email--history-delete-btn",
+                                        form: { data: { turbo_confirm: "Eliminar este pendiente del flujo?" } },
+                                        title: "Eliminar pendiente",
+                                        aria: { label: "Eliminar pendiente" } do %>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.7223 12.7585C14.7426 12.3448 14.4237 11.9929 14.01 11.9726C13.5963 11.9522 13.2444 12.2711 13.2241 12.6848L12.9999 17.2415C12.9796 17.6552 13.2985 18.0071 13.7122 18.0274C14.1259 18.0478 14.4778 17.7289 14.4981 17.3152L14.7223 12.7585Z" fill="#323544"/>
+                              <path d="M9.98802 11.9726C9.5743 11.9929 9.25542 12.3448 9.27577 12.7585L9.49993 17.3152C9.52028 17.7289 9.87216 18.0478 10.2859 18.0274C10.6996 18.0071 11.0185 17.6552 10.9981 17.2415L10.774 12.6848C10.7536 12.2711 10.4017 11.9522 9.98802 11.9726Z" fill="#323544"/>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M10.249 2C9.00638 2 7.99902 3.00736 7.99902 4.25V5H5.5C4.25736 5 3.25 6.00736 3.25 7.25C3.25 8.28958 3.95503 9.16449 4.91303 9.42267L5.54076 19.8848C5.61205 21.0729 6.59642 22 7.78672 22H16.2113C17.4016 22 18.386 21.0729 18.4573 19.8848L19.085 9.42267C20.043 9.16449 20.748 8.28958 20.748 7.25C20.748 6.00736 19.7407 5 18.498 5H15.999V4.25C15.999 3.00736 14.9917 2 13.749 2H10.249ZM14.499 5V4.25C14.499 3.83579 14.1632 3.5 13.749 3.5H10.249C9.83481 3.5 9.49902 3.83579 9.49902 4.25V5H14.499ZM5.5 6.5C5.08579 6.5 4.75 6.83579 4.75 7.25C4.75 7.66421 5.08579 8 5.5 8H18.498C18.9123 8 19.248 7.66421 19.248 7.25C19.248 6.83579 18.9123 6.5 18.498 6.5H5.5ZM6.42037 9.5H17.5777L16.96 19.7949C16.9362 20.191 16.6081 20.5 16.2113 20.5H7.78672C7.38995 20.5 7.06183 20.191 7.03807 19.7949L6.42037 9.5Z" fill="#323544"/>
+                            </svg>
+                          <% end %>
+                        <% else %>
+                          <span class="op-email-email--history-delete-placeholder">-</span>
+                        <% end %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <% if @history_pagination && @history_pagination[:total_pages].to_i > 1 %>
+      <% current_page = @history_pagination[:page].to_i %>
+      <% total_pages = @history_pagination[:total_pages].to_i %>
+      <% pagination_params = {} %>
+      <% pagination_params[:history_date] = @history_selected_date.iso8601 if @history_selected_date.present? %>
+      <div class="op-email-email--pagination">
+        <% if current_page > 1 %>
+          <%= link_to "Anterior", whatsapp_plugin_project_email_history_path(@project, pagination_params.merge(page: current_page - 1)), class: "op-email-email--pagination-link" %>
+        <% else %>
+          <span class="op-email-email--pagination-link is-disabled">Anterior</span>
+        <% end %>
+
+        <span class="op-email-email--pagination-info">
+          Pagina <%= current_page %> de <%= total_pages %>
+        </span>
+
+        <% if current_page < total_pages %>
+          <%= link_to "Siguiente", whatsapp_plugin_project_email_history_path(@project, pagination_params.merge(page: current_page + 1)), class: "op-email-email--pagination-link" %>
+        <% else %>
+          <span class="op-email-email--pagination-link is-disabled">Siguiente</span>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</section>

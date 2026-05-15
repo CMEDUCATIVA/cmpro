@@ -1,0 +1,6 @@
+<%=
+  render Primer::Beta::Link.new(**@system_arguments) do
+    render Primer::Beta::Octicon.new(:question, size: :xsmall)
+  end
+%>
+<%= render @tooltip %>

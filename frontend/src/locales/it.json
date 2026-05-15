@@ -1,0 +1,2060 @@
+{
+  "it": {
+    "date": {
+      "abbr_day_names": [
+        "Dom",
+        "Lun",
+        "Mar",
+        "Mer",
+        "Gio",
+        "Ven",
+        "Sab"
+      ],
+      "abbr_month_names": [
+        null,
+        "Gen",
+        "Feb",
+        "Mar",
+        "Apr",
+        "Mag",
+        "Giu",
+        "Lug",
+        "Ago",
+        "Set",
+        "Ott",
+        "Nov",
+        "Dic"
+      ],
+      "abbr_week": "Sett",
+      "day_names": [
+        "Domenica",
+        "Lunedi",
+        "Martedì",
+        "Mercoledi",
+        "Giovedì",
+        "Venerdi",
+        "Sabato"
+      ],
+      "formats": {
+        "default": "%m/%d/%Y",
+        "long": "%B %d %y",
+        "short": "%b %d"
+      },
+      "month_names": [
+        null,
+        "Gennaio",
+        "Febbraio",
+        "Marzo",
+        "Aprile",
+        "Mag",
+        "Giugno",
+        "Luglio",
+        "Agosto",
+        "Settembre",
+        "Ottobre",
+        "Novembre",
+        "Dicembre"
+      ],
+      "order": [
+        "anno",
+        "mese",
+        "giorno"
+      ]
+    },
+    "js": {
+      "admin": {
+        "enterprise": {
+          "text_expired": "scaduto",
+          "text_reprieve_days_left": "%{days} giorni alla fine del periodo di grazia",
+          "trial": {
+            "confirmation": "Conferma l'indirizzo email",
+            "confirmation_info": "Ti abbiamo inviato un'email il %{date} su %{email}. Controlla le tue email e clicca sul link di conferma fornito per iniziare la prova di 14 giorni.\n",
+            "email_not_received": "Non hai ricevuto l'e-mail? Puoi inviarla di nuovo tramite il link qui a destra.",
+            "form": {
+              "domain_mismatch": "Il nome host della richiesta attuale non corrisponde al nome host configurato. Controlla le impostazioni di sistema.",
+              "general_consent": "Accetto le <a target=\"_blank\" href=\"%{link_terms}\">condizioni d'uso</a> e l'<a target=\"_blank\" href=\"%{link_privacy}\">informativa sulla privacy</a>.\n",
+              "invalid_email": "Indirizzo email non valido",
+              "label_additional_features": "Funzionalità aggiuntive",
+              "label_company": "Azienda",
+              "label_domain": "Dominio",
+              "label_expires_at": "Scade il",
+              "label_first_name": "Nome",
+              "label_last_name": "Cognome",
+              "label_maximum_users": "Numero massimo di utenti attivi",
+              "label_plan": "Piano",
+              "label_starts_at": "Comincia alle",
+              "label_subscriber": "Iscritto",
+              "receive_newsletter": "Voglio ricevere la <a target=\"_blank\" href=\"%{link}\">newsletter</a> di OpenProject.",
+              "taken_domain": "Puoi avere solo una prova attiva per ogni dominio.",
+              "taken_email": "Ogni utente può creare solo una prova."
+            },
+            "next_steps": "Prossimi passi",
+            "quick_overview": "Veloce panoramica sulla gestione dei progetti e il lavoro di squadra nell'edizione OpenProject Enterprise.",
+            "resend_link": "Reinvia",
+            "resend_success": "L'email è stata inviata nuovamente. Controlla le email e clicca sul link di conferma fornito.",
+            "resend_warning": "Impossibile inviare nuovamente l'email.",
+            "session_timeout": "La tua sessione è scaduta. Prova a ricaricare la pagina o a inviare nuovamente l'email.",
+            "status_confirmed": "confermato",
+            "status_label": "Stato:",
+            "status_waiting": "email inviata, in attesa di conferma",
+            "test_ee": "Prova l'Enterprise edition gratuitamente per 14 giorni",
+            "try_another_email": "O provare con un altro indirizzo email."
+          },
+          "upsell": {
+            "become_hero": "Diventa un eroe!",
+            "benefits": {
+              "description": "Quali sono i benefici dell'edizione Enterprise in sede?",
+              "high_security": "Funzionalità di sicurezza",
+              "high_security_text": "Singolo segno su (SAML, OpenID Connect, CAS), gruppi LDAP.",
+              "installation": "Assistenza all'installazione",
+              "installation_text": "I nostri ingegneri del software esperti ti guidano durante il processo di installazione e configurazione nella tua infrastruttura.",
+              "premium_features": "Componenti aggiuntivi Enterprise",
+              "premium_features_text": "Tabelloni Agile, tema e logo personalizzati, grafici, flussi di lavoro intelligenti con azioni personalizzate, ricerca completa di allegati nelle macro-attività e campi personalizzati a selezione multipla.",
+              "professional_support": "Supporto professionale",
+              "professional_support_text": "Ottieni un supporto affidabile e di livello da esperti tecnici con conoscenze dettagliate sulla gestione di OpenProject in ambienti critici per le imprese."
+            },
+            "button_book_now": "Prenota ora",
+            "button_contact_us": "Contattaci per una demo",
+            "button_start_trial": "Inizia la prova gratuita",
+            "button_upgrade": "Effettua l'upgrade ora",
+            "confidence": "Forniamo la sicurezza di un software di gestione di progetti di classe aziendale collaudato e supportato, con l'Open Source e una mente aperta.\n",
+            "enterprise_info_html": "%{feature_title} è un componente aggiuntivo per Imprese <span class='spot-icon spot-icon_inline spot-icon_enterprise-addons'></span>.",
+            "link_quote": "Richiedi un preventivo",
+            "more_info": "Altre informazioni",
+            "text": "L'edizione OpenProject Enterprise si basa sull'edizione Community. Include aggiunte Enterprise e supporto professionale principalmente rivolto alle organizzazioni con più di 10 utenti che gestiscono progetti critici di business con OpenProject.\n",
+            "unlimited": "Illimitato",
+            "upgrade_info": "Esegui l'upgrade a un piano a pagamento per attivarlo e iniziare a usarlo nel tuo team.",
+            "you_contribute": "Anche gli sviluppatori devono pagare le bollette. Con l'aggiornamento all'edizione Enterprise, sosterrai questo sforzo della comunità open source e contribuirai al suo sviluppo, manutenzione e miglioramento continuo."
+          }
+        },
+        "type_form": {
+          "add_group": "Aggiungi gruppo di attributi",
+          "add_table": "Aggiungi la tabella dei pacchetti di lavoro correlati",
+          "custom_field": "Campo personalizzato",
+          "drag_to_activate": "Trascina i campi da qui per attivarli",
+          "edit_query": "Modifica query",
+          "inactive": "Inattivo",
+          "new_group": "Nuovo gruppo",
+          "reset_to_defaults": "Ripristino predefinite"
+        },
+        "work_packages_settings": {
+          "warning_progress_calculation_mode_change_from_field_to_status_html": "Cambiando la modalità di calcolo dell'avanzamento da basata sul lavoro a basata sullo stato porvocherà la perdita di tutti i valori <i>% Complete</i> esistenti e saranno sostituiti con i valori associati ad ogni stato. I valori esistenti per il lavoro <i>rimanente</i> potrebbero anche essere ricalcolati per riflettere questo cambiamento. Questa azione non è reversibile.",
+          "warning_progress_calculation_mode_change_from_status_to_field_html": "La modifica della modalità di calcolo dei progressi da basata sullo stato a basata sul lavoro renderà il campo <i>% completamento</i> liberamente modificabile. Se inserisci facoltativamente valori per <i>Lavoro</i> o <i>Lavoro residuo</i>, questi verranno collegati anche a <i>% completamento</i>. La modifica di <i>Lavoro residuo</i> può quindi aggiornare <i>% completamento</i>."
+        },
+        "working_days": {
+          "add_non_working_day": "Giorno non lavorativo",
+          "already_added_error": "Esiste già un giorno non lavorativo per questa data. Può essere creato un solo giorno non lavorativo per ogni data univoca.",
+          "calendar": {
+            "empty_state_description": "Per quest'anno non sono definiti giorni non lavorativi specifici. Fai clic su \"+ Giorno non lavorativo\" di seguito per aggiungere una data.",
+            "empty_state_header": "Giorni non lavorativi",
+            "new_date": "(nuovo)"
+          },
+          "change_button": "Salva e riprogramma",
+          "change_description": "Changing which days of the week are considered working days or non-working days can affect the start and finish days of all work packages and life cycles in all projects in this instance.",
+          "change_title": "Cambia giorni lavorativi",
+          "removed_title": "Rimuoverai i seguenti giorni dall'elenco dei giorni non lavorativi:",
+          "warning": "The changes might take some time to take effect. You will be notified when all relevant work packages and project life cycles have been updated. Are you sure you want to continue?\n"
+        }
+      },
+      "ajax": {
+        "hide": "Nascondi",
+        "loading": "Caricamento…",
+        "updating": "Aggiornamento…"
+      },
+      "attachments": {
+        "delete": "Elimina allegato",
+        "delete_confirmation": "Vuoi davvero eliminare questo file? Quest’azione è irreversibile.\n",
+        "draggable_hint": "Trascina l'elemento nei campi dell'editor per allineare l'immagine o il riferimento allegato. I campi dell'editor chiusi verranno sbloccati durante il trascinamento.\n",
+        "quarantined_hint": "Il file è in quarantena, poiché è stato trovato un virus. Non è disponibile per il download."
+      },
+      "autocomplete_ng_select": {
+        "add_tag": "Aggiungi elemento",
+        "clear_all": "Cancella tutto",
+        "loading": "Caricamento...",
+        "not_found": "Nessun elemento trovato",
+        "type_to_search": "Digita per cercare"
+      },
+      "autocomplete_select": {
+        "active": "Attiva %{label} %{name}",
+        "placeholder": {
+          "multi": "Aggiungi \"%{name}\"",
+          "single": "Seleziona \"%{name}\""
+        },
+        "remove": "Rimuovi %{name}"
+      },
+      "autocompleter": {
+        "notFoundText": "Nessun elemento trovato",
+        "placeholder": "Digita per cercare",
+        "project": {
+          "placeholder": "Seleziona progetto"
+        }
+      },
+      "avatars": {
+        "empty_file_error": "Per favore caricare un'immagine valida (jpg, png, gif)",
+        "error_image_too_large": "L'immagine è troppo grande.",
+        "label_choose_avatar": "Scegli Avatar da file",
+        "text_upload_instructions": "Carica il tuo avatar personalizzato di 128x128 pixel. I file più grandi saranno ridimensionati e tagliati per corrispondere.\nUna volta selezionata un'immagine, verrà mostrata un'anteprima del tuo avatar prima del caricamento.\n",
+        "uploading_avatar": "Caricamento del tuo avatar.",
+        "wrong_file_format": "I formati consentiti sono jpg, png, gif"
+      },
+      "backup": {
+        "attachments_disabled": "Gli allegati non sono includibili poiché possono eccedere la dimensione complessiva massima consentita. Puoi modificare ciò tramite la configurazione (richiede un riavvio del server).",
+        "download_backup": "Scarica backup",
+        "include_attachments": "Includi allegati",
+        "info": "Qui puoi causare un backup. Il processo può impiegare un po' di tempo in base alla quantità di dati (specialmente allegati) che hai. Riceverai un'email una volta pronto.\n",
+        "last_backup": "Ultimo backup",
+        "last_backup_from": "Ultimo backup da",
+        "note": "Un nuovo backup sovrascriverà ogni suo precedente. Sono richiedibili solo un numero limitato di backup giornalieri.\n",
+        "options": "Opzioni",
+        "request_backup": "Richiedi backup",
+        "title": "Backup OpenProject"
+      },
+      "baseline": {
+        "apply": "Applica",
+        "clear": "Pulisci",
+        "drop_down": {
+          "a_specific_date": "una data specifica",
+          "between_two_specific_dates": "tra due date specifiche",
+          "last_month": "il mese scorso",
+          "last_week": "ultima settimana",
+          "last_working_day": "ultimo giorno lavorativo",
+          "none": "-",
+          "yesterday": "ieri"
+        },
+        "from": "Da",
+        "header_description": "Evidenzia le modifiche apportate a questo elenco da qualsiasi punto nel passato.",
+        "help_description": "Fuso orario di riferimento per la base di riferimento.",
+        "icon_tooltip": {
+          "added": "Aggiunto per la visualizzazione entro il periodo di confronto",
+          "changed": "Mantenuto con modifiche",
+          "removed": "Rimosso dalla vista entro il periodo di confronto"
+        },
+        "legends": {
+          "changes_between": "Modifiche tra",
+          "changes_since": "Modifiche dal",
+          "in_your_timezone": "Nel tuo fuso orario locale:",
+          "maintained_with_changes": "Mantenuto con le modifiche",
+          "no_longer_meets_filter_criteria": "Non soddisfa più i criteri del filtro",
+          "now_meets_filter_criteria": "Ora soddisfa i criteri del filtro"
+        },
+        "show_changes_since": "Mostra le modifiche da",
+        "time": "Ora",
+        "time_description": "Nella tua ora locale: %{datetime}",
+        "to": "A",
+        "toggle_title": "Base di riferimento"
+      },
+      "bcf": {
+        "add_viewpoint": "Aggiungi punto di vista",
+        "delete_viewpoint": "Elimina punto di vista",
+        "export": "Esporta",
+        "export_bcf_xml_file": "Esporta file BCF XML (BCF versione 2.1)",
+        "import": "Importazione",
+        "import_bcf_xml_file": "Importa file BCF XML (BCF versione 2.1)",
+        "label_bcf": "BCF",
+        "management": "Gestione BCF",
+        "refresh": "Aggiorna",
+        "refresh_work_package": "Aggiorna il pacchetto di lavoro",
+        "show_viewpoint": "Mostra punto di vista",
+        "viewpoint": "Punto di vista"
+      },
+      "boards": {
+        "add_card": "Aggiungi carta",
+        "add_list": "Aggiungi elenco alla board",
+        "add_list_modal": {
+          "labels": {
+            "assignee": "Seleziona utente da aggiungere al nuovo elenco assegnatari",
+            "status": "Seleziona lo stato da aggiungere come nuovo elenco",
+            "subproject": "Seleziona il sottoprogetto da aggiungere come nuovo elenco",
+            "subtasks": "Seleziona la macro-attività da aggiungere come nuovo elenco",
+            "version": "Seleziona la versione da aggiungere come nuovo elenco"
+          },
+          "warning": {
+            "add_members": "<a href=\"%{link}\">Aggiungi un nuovo membro a questo progetto</a> per selezionare nuovamente gli utenti.",
+            "assignee": "Non c'è nessun membro abbinato al valore del filtro.  <br>",
+            "no_member": "Questo progetto al momento non ha membri che possono essere aggiunti.  <br>",
+            "status": "Al momento non sono disponibili stati. <br>\nÈ probabile che non ce ne siano o che siano già stati aggiunti tutti alla scheda.\n"
+          }
+        },
+        "board_type": {
+          "action": "Scheda azione",
+          "action_by_attribute": "Scheda d'azione (%{attribute})",
+          "action_text": "Crea una board con elenchi filtrati sull'attributo %{attribute}. Spostare le macro-attività in altre liste aggiornerà il loro attributo.\n",
+          "action_text_assignee": "Board con colonne automatizzate in base agli utenti assegnati. Ideale per l'assegnazione di macro-attività.\n",
+          "action_text_status": "Board in stile kanban di base con colonne per stato come Da fare, In Corso, Fatto.\n",
+          "action_text_subprojects": "Board con colonne automatiche per sotto-progetti. Trascinando le macro-attività su altre liste aggiornerà di conseguenza il (sotto)progetto.\n",
+          "action_text_subtasks": "Board con colonne automatiche per sotto-elementi. Trascinando le macro-attività su altre liste aggiornerà di conseguenza il genitore.\n",
+          "action_text_version": "Scheda con colonne automatizzate in base all'attributo versione. Ideale per la pianificazione dei rilasci di software.\n",
+          "action_type": {
+            "assignee": "assegnatario",
+            "status": "stato",
+            "subproject": "Sottoprogetto",
+            "subtasks": "genitore-figlio",
+            "version": "versione"
+          },
+          "board_type_title": {
+            "assignee": "Assegnatario",
+            "basic": "Base",
+            "status": "Stato",
+            "subproject": "Sottoprogetto",
+            "subtasks": "genitore-figlio",
+            "version": "Versione"
+          },
+          "free": "base",
+          "free_text": "Inizia da zero con una board vuota. Aggiungi manualmente schede e colonne a questa board.\n",
+          "select_attribute": "Attributo azione",
+          "select_board_type": "Scegli il tipo di board di cui hai bisogno.",
+          "text": "Tipo bacheca"
+        },
+        "click_to_remove_list": "Clicca per rimuovere questa lista",
+        "configuration_modal": {
+          "display_settings": {
+            "card_mode": "Visualizza come carte",
+            "table_mode": "Mostra come tabella"
+          },
+          "title": "Configura questa scheda"
+        },
+        "create_new": "Creare nuova bacheca",
+        "error_attribute_not_writable": "Impossibile spostare il pacchetto di lavoro, %{attribute} non è scrivibile.",
+        "error_cannot_move_into_self": "Non è possibile spostare una macro-attività nella propria colonna.",
+        "error_loading_the_list": "Errore nel caricamento della lista: %{error_message}",
+        "error_permission_missing": "Manca l'autorizzazione per creare query pubbliche",
+        "label_board_type": "Tipo scheda",
+        "label_unnamed_board": "Scheda senza nome",
+        "label_unnamed_list": "Lista senza nome",
+        "lists": {
+          "delete": "Elimina elenco"
+        },
+        "new_board": "Nuova board",
+        "text_hidden_list_warning": "Non tutte le liste sono visualizzate perchè non hai il permesso. Contatta il tuo amministratore per ulteriori informazioni.",
+        "version": {
+          "close_version": "Chiudi versione",
+          "closed": "Chiuso",
+          "edit_version": "Modifica versione",
+          "is_closed": "Versione chiusa. Nessun elemento può essere aggiunto a questa versione.",
+          "is_locked": "Versione bloccata. Nessun elemento può essere aggiunto a questa versione.",
+          "lock_version": "Blocca versione",
+          "locked": "Chiuso",
+          "open_version": "Apri versione",
+          "show_version": "Mostra versione",
+          "unlock_version": "Sblocca versione"
+        }
+      },
+      "button_add": "Aggiungi",
+      "button_add_watcher": "Aggiungi osservatore",
+      "button_advanced_filter": "Filtro avanzato",
+      "button_back": "Indietro",
+      "button_back_to_list_view": "Torna alla visualizzazione in lista",
+      "button_cancel": "Annulla",
+      "button_change_project": "Sposta su un altro progetto",
+      "button_check_all": "Seleziona tutti",
+      "button_close": "Chiudi",
+      "button_close_details": "Nascondi dettagli",
+      "button_collapse_all": "Comprimi Tutto",
+      "button_configure-form": "Configura modulo",
+      "button_confirm": "Conferma",
+      "button_continue": "Continua",
+      "button_copy": "Copia",
+      "button_copy_link_to_clipboard": "Copia link negli appunti",
+      "button_copy_to_clipboard": "Copia negli appunti",
+      "button_copy_to_other_project": "Duplica in un altro progetto",
+      "button_create": "Crea",
+      "button_custom-fields": "Campo personalizzato",
+      "button_delete": "Cancella",
+      "button_delete_watcher": "Elimina osservatore",
+      "button_details_view": "Mostra dettagli",
+      "button_duplicate": "Duplica",
+      "button_edit": "Modifica",
+      "button_expand_all": "Espandi tutto",
+      "button_export-atom": "Scarica Atom",
+      "button_filter": "Filtro",
+      "button_generate_pdf": "Genera PDF",
+      "button_list_view": "Vista elenco",
+      "button_log_costs": "Registra unità di costo",
+      "button_log_time": "Registra l'orario effettuato",
+      "button_more": "Più",
+      "button_more_actions": "Altre azioni",
+      "button_open_details": "Mostra dettagli",
+      "button_open_fullscreen": "Apri la visualizzazione a schermo intero",
+      "button_quote": "Cita",
+      "button_save": "Salva",
+      "button_settings": "Impostazioni",
+      "button_show_cards": "Mostra la visualizzazione a schede",
+      "button_show_fullscreen": "Mostra la visualizzazione a schermo intero",
+      "button_show_gantt": "Mostra la visualizzazione Gantt",
+      "button_show_list": "Mostra la visualizzazione a elenco",
+      "button_show_table": "Mostra la visualizzazione a tabella",
+      "button_show_view": "Visualizzazione a schermo intero",
+      "button_uncheck_all": "Deseleziona tutti",
+      "button_update": "Aggiorna",
+      "calendar": {
+        "create_new": "Crea nuovo calendario",
+        "title": "Calendario",
+        "too_many": "Ci sono %{count} macro-attività in totale, ma solo %{max} può essere mostrata.",
+        "unsaved_title": "Calendario senza nome"
+      },
+      "caption_rate_history": "Cronologia tariffe",
+      "card": {
+        "add_new": "Aggiungi una nuova carta",
+        "highlighting": {
+          "entire_card_by": "Tutta la carta per",
+          "inline": "Evidenzia in linea:"
+        },
+        "remove_from_list": "Rimuovi la carta dall'elenco"
+      },
+      "chart": {
+        "axis_criteria": "Criteri dell'asse",
+        "errors": {
+          "could_not_load": "I dati per visualizzare il grafico non possono essere caricati. Potrebbero mancare i permessi necessari."
+        },
+        "modal_title": "Configurazione grafico macro-attività",
+        "tabs": {
+          "dataset": "Dataset %{number}",
+          "graph_settings": "Generale"
+        },
+        "type": "Tipo di grafico",
+        "types": {
+          "bar": "Barra",
+          "doughnut": "Ciambella",
+          "horizontal_bar": "Barra Orizzontale",
+          "line": "Linea",
+          "pie": "Torta",
+          "polar_area": "Area polare",
+          "radar": "Radar"
+        }
+      },
+      "clipboard": {
+        "browser_error": "Il tuo browser non supporta la copia negli appunti. Copia manualmente: %{content}",
+        "copied_successful": "Copia negli appunti completata con successo!"
+      },
+      "close_filter_title": "Chiudi il filtro",
+      "close_form_title": "Chiudi il modulo",
+      "close_popup_title": "Chiudi popup",
+      "custom_actions": {
+        "date": {
+          "current_date": "Data corrente",
+          "specific": "il"
+        }
+      },
+      "dashboards": {
+        "label": "Cruscotto"
+      },
+      "description_available_columns": "Colonne disponibili",
+      "description_current_position": "Sei qui: ",
+      "description_select_work_package": "Seleziona la macro-attività #%{id}",
+      "description_subwork_package": "Subordinata alla macro-attività #%{id}",
+      "editor": {
+        "ckeditor_error": "Si è verificato un errore all'interno di CKEditor",
+        "error_saving_failed": "Il salvataggio del documento è fallito con il seguente errore: %{error}",
+        "macro": {
+          "attribute_reference": {
+            "invalid_attribute": "L'attributo selezionato '%{name}' non esiste.",
+            "macro_help_tooltip": "Questo segmento di testo viene renderizzato dinamicamente da una macro.",
+            "nested_macro": "Questa macro fa riferimento in modo ricorsivo a %{model} %{id}.",
+            "not_found": "Impossibile trovare la risorsa richiesta"
+          },
+          "child_pages": {
+            "button": "Collegamenti alle pagine discendenti",
+            "hint": "Lascia questo campo vuoto per elencare tutte le pagine discendenti dalla pagina attuale. Se desideri referenziare un'altra pagina, specifica il titolo o lo slug di pagina.\n",
+            "include_parent": "Includi genitore",
+            "page": "Pagina wiki",
+            "text": "[Placeholder] Collegamenti alle pagine discendenti di",
+            "this_page": "questa pagina"
+          },
+          "code_block": {
+            "button": "Inserisci frammento di codice",
+            "language": "Linguaggio di formattazione",
+            "language_hint": "Specifica il linguaggio di formattazione che verrà utilizzato per evidenziare (se supportato).",
+            "title": "Inserisci / modifica frammento di codice"
+          },
+          "dropdown": {
+            "chose_macro": "Scegli macro",
+            "macros": "Macro"
+          },
+          "embedded_calendar": {
+            "text": "[Placeholder] Calendario incorporato"
+          },
+          "embedded_table": {
+            "button": "Incorpora la tabella della macro-attività",
+            "text": "[Placeholder] Tabella della macro-attività incorporata"
+          },
+          "error": "Impossibile espandere la macro: %{message}",
+          "toc": "Indice",
+          "toolbar_help": "Clicca per selezionare widget e visualizzare la barra degli strumenti. Fai doppio clic per modificare i widget",
+          "wiki_page_include": {
+            "button": "Includi il contenuto di un'altra pagina wiki",
+            "hint": "Includi il contenuto di un'altra pagina wiki specificando il titolo o lo slug di pagina.\nÈ possibile includere pagine wiki di un altro progetto separandole con una virgola, come nell'esempio seguente.\n",
+            "not_set": "(Pagina non ancora impostata)",
+            "page": "Pagina wiki",
+            "text": "[Placeholder] Inclusa pagina wiki di"
+          },
+          "work_package_button": {
+            "button": "Inserisci il tasto Crea macro-attività",
+            "button_style": "Mostra come pulsante",
+            "button_style_hint": "Facoltativo: Spunta per far apparire la macro come un pulsante e non come collegamento.",
+            "type": "Tipo di macro-attività",
+            "with_type": "Crea macro-attività (Tipo: %{typename})",
+            "without_type": "Crea macro-attività"
+          }
+        },
+        "mode": {
+          "manual": "Passa alla risorsa Markdown",
+          "wysiwyg": "Passa all'editor WYSIWYG"
+        },
+        "no_revisions": "Nessuna modifica locale trovata",
+        "preview": "Attiva/disattiva modalità anteprima",
+        "revisions": "Mostra le modifiche locali",
+        "source_code": "Attiva/Disattiva modalità origine Marcatura"
+      },
+      "enumeration_activities": "Attività (monitoraggio tempi)",
+      "enumeration_doc_categories": "Categorie di documenti",
+      "enumeration_work_package_priorities": "Priorità della macro-attività",
+      "error": {
+        "cannot_save_changes_with_message": "Impossibile salvare le modifiche a causa del seguente errore: %{error}",
+        "embedded_table_loading": "La vista incorporata non può essere caricata: %{message}",
+        "internal": "Si è verificato un errore interno.",
+        "query_saving": "Impossibile salvare la vista."
+      },
+      "error_attachment_upload": "Impossibile caricare il file: %{error}",
+      "error_attachment_upload_permission": "Non hai il permesso per caricare file su questa risorsa.",
+      "error_could_not_resolve_user_name": "Impossibile determinare il nome utente",
+      "error_could_not_resolve_version_name": "Impossibile determinare il nome della versione",
+      "exclusion_info": {
+        "modal": {
+          "content": "Lo stato '%{status_name}' è stato configurato per essere escluso dai totali delle gerarchie di Lavoro, Lavoro Rimanente e % Completamento. I totali non tengono conto di questo valore.",
+          "title": "Stato escluso dai totali della gerarchia"
+        }
+      },
+      "favorite_projects": {
+        "no_results": "Non hai progetti preferiti",
+        "no_results_subtext": "Aggiungi uno o più progetti come preferiti dalla rispettiva panoramica o da una lista di progetti."
+      },
+      "field_value_enter_prompt": "Inserisci un valore per '%{field}'",
+      "filter": {
+        "description": {
+          "text_close_filter": "Per selezionare una voce, lascia vuoto lo stato attivo per esempio premendo 'Invio'. Per uscire senza un filtro seleziona la prima voce (vuota).",
+          "text_open_filter": "Apri questo filtro con i tasti 'ALT' e le frecce."
+        },
+        "more_values_not_shown": "Ci sono altri %{total} risultati, effettua una ricerca per filtrare i risultati.",
+        "noneElement": "(nessuno)",
+        "sorting": {
+          "criteria": {
+            "one": "Primo criterio di ordinamento",
+            "three": "Terzo criterio di ordinamento",
+            "two": "Secondo criterio di ordinamento"
+          }
+        },
+        "time_zone_converted": {
+          "only_end": "Alle %{to} sul tuo fuso orario.",
+          "only_start": "Dalle %{from} sul tuo fuso orario.",
+          "two_values": "%{from} - %{to} sul tuo fuso orario."
+        },
+        "value_spacer": "-"
+      },
+      "forms": {
+        "advanced_settings": "Impostazioni avanzate",
+        "load_error_message": "Si è verificato un errore caricando il modulo",
+        "submit_success_message": "Il modulo è stato inviato correttamente",
+        "validation_error_message": "Sei pregato di risolvere gli errori presenti nel modulo"
+      },
+      "gantt_chart": {
+        "button_activate": "Mostra diagramma di Gantt",
+        "button_deactivate": "Nascondi diagramma di Gantt",
+        "filter": {
+          "noneSelection": "(nessuno)"
+        },
+        "label": "Diagramma di Gantt",
+        "labels": {
+          "bar": "Etichette di barra",
+          "description": "Seleziona gli attributi che desideri mostrare nelle rispettive posizioni del diagramma di Gantt in ogni momento. Nota che al passaggio del mouse su un elemento, verranno visualizzate le etichette delle date anziché questi attributi.\n",
+          "farRight": "Estrema destra",
+          "left": "Sinistra",
+          "right": "Destra",
+          "title": "Configurazione etichetta"
+        },
+        "quarter_label": "T%{quarter_number}",
+        "selection_mode": {
+          "notification": "Clicca su qualsiasi macro-attività evidenziata per creare una relazione. Premi ESC per annullare."
+        },
+        "zoom": {
+          "auto": "Zoom automatico",
+          "days": "Giorni",
+          "description": "Seleziona il livello di zoom iniziale da mostrare quando lo zoom automatico non è disponibile.\n",
+          "in": "Zoom avanti",
+          "months": "Mesi",
+          "out": "Zoom indietro",
+          "quarters": "Trimestri",
+          "weeks": "Settimane",
+          "years": "Anni"
+        }
+      },
+      "general_text_No": "No",
+      "general_text_Yes": "Si",
+      "general_text_no": "no",
+      "general_text_yes": "si",
+      "github_integration": {
+        "github_actions": "Azioni",
+        "pull_requests": {
+          "merged_message": "Pull request #%{pr_number} %{pr_link} per %{repository_link} %{pr_state} da %{github_user_link}.",
+          "message": "La richiesta pull #%{pr_number} %{pr_link} per %{repository_link} creata da %{github_user_link} è ora in stato %{pr_state}.",
+          "referenced_message": "La richiesta pull #%{pr_number} %{pr_link} per %{repository_link} creata da %{github_user_link} ha fatto riferimento a questa macro-attività.",
+          "states": {
+            "closed": "chiuso",
+            "draft": "è stata abbozzata",
+            "merged": "è stata unita",
+            "opened": "è stata aperta",
+            "ready_for_review": "è stata contrassegnata pronta alla revisione"
+          }
+        },
+        "tab_header": {
+          "copy_menu": {
+            "description": "Copia snippet su Git negli appunti",
+            "label": "Snippet su Git"
+          },
+          "git_actions": {
+            "branch_name": "Nome branch",
+            "cmd": "Crea branch con commit vuoto",
+            "commit_message": "Messaggio del commit",
+            "copy_error": "❌ Copia fallita!",
+            "copy_success": "✅ Copiato!",
+            "title": "Snippet rapidi per Git"
+          },
+          "title": "Richiesta di pull"
+        },
+        "tab_prs": {
+          "empty": "Non c'è ancora nessuna richiesta di pull collegata. Collega una PR esistente usando il codice <code>OP#%{wp_id}</code> nella descrizione della PR o creane una nuova."
+        },
+        "work_packages": {
+          "tab_name": "GitHub"
+        }
+      },
+      "gitlab_integration": {
+        "gitlab_pipelines": "Pipeline",
+        "tab_header_issue": {
+          "title": "Problemi"
+        },
+        "tab_header_mr": {
+          "copy_menu": {
+            "description": "Copia frammenti di codice su Git negli appunti",
+            "label": "Frammento di codice su Git"
+          },
+          "create_mr": {
+            "description": "Crea una richiesta di merge.",
+            "label": "Crea MR"
+          },
+          "git_actions": {
+            "branch_name": "Nome branch",
+            "cmd": "Crea branch con commit vuoto",
+            "commit_message": "Messaggio del commit",
+            "copy_error": "❌ Copia non riuscita!",
+            "copy_success": "✅ Copiato!",
+            "title": "Frammenti di codice rapidi per Git"
+          },
+          "title": "Richieste di merge"
+        },
+        "tab_issue": {
+          "empty": "Non ci sono ancora problemi collegati. Collega un problema esistente utilizzando il codice <code>OP#%{wp_id}</code> (o <code>PP#%{wp_id}</code> per collegamenti privati) nel titolo/descrizione del problema o crea un nuovo problema."
+        },
+        "tab_mrs": {
+          "empty": "Non ci sono ancora richieste di merge collegate. Collega una MR esistente utilizzando il codice <code>OP#%{wp_id}</code> (o <code>PP#%{wp_id}</code> per collegamenti privati) nel titolo/descrizione della MR o crea una nuova MR."
+        },
+        "updated_on": "Aggiornamento:",
+        "work_packages": {
+          "tab_name": "GitLab"
+        }
+      },
+      "global_search": {
+        "all_projects": "In tutti progetti",
+        "close_search": "Chiudi ricerca",
+        "current_project": "In questo progetto",
+        "current_project_and_all_descendants": "In questo progetto + sottoprogetti",
+        "recently_viewed": "Visualizzati di recente",
+        "search": "Cerca",
+        "title": {
+          "all_projects": "tutti i progetti",
+          "project_and_subprojects": "e tutti i sottoprogetti",
+          "search_for": "Cerca per"
+        }
+      },
+      "grid": {
+        "add_widget": "Aggiungi widget",
+        "configure": "Configura il widget",
+        "remove": "Rimuovi widget",
+        "widgets": {
+          "custom_text": {
+            "title": "Testo personalizzato"
+          },
+          "documents": {
+            "no_results": "Nessun documento ancora.",
+            "title": "Documenti"
+          },
+          "members": {
+            "add": "Membro",
+            "no_results": "Nessun membro visibile.",
+            "title": "Membri",
+            "too_many": "Visualizzazione di %{count} di %{total} membri.",
+            "view_all_members": "Visualizza tutti i membri"
+          },
+          "missing_permission": "Non hai i permessi necessari per visualizzare questo widget.",
+          "news": {
+            "at": "a",
+            "no_results": "Niente di nuovo da segnalare.",
+            "title": "Notizie"
+          },
+          "project_description": {
+            "no_results": "Nessuna descrizione ancora scritta. Una può essere fornita nelle \"Impostazioni di progetto\".",
+            "title": "Descrizione del progetto"
+          },
+          "project_favorites": {
+            "no_results": "Al momento non hai progetti preferiti. Clicca sull'icona della stella nella dashboard del progetto per aggiungerne uno ai tuoi preferiti.",
+            "title": "Progetti preferiti"
+          },
+          "project_status": {
+            "at_risk": "A rischio",
+            "discontinued": "Interrotto",
+            "finished": "Terminato",
+            "not_set": "Non impostato",
+            "not_started": "Non iniziato",
+            "off_track": "Fuori limite",
+            "on_track": "Nei limiti",
+            "title": "Stato del progetto"
+          },
+          "subprojects": {
+            "no_results": "Nessun sotto-progetto.",
+            "title": "Sotto-progetti"
+          },
+          "time_entries_current_user": {
+            "displayed_days": "Giorni visualizzati nel widget:",
+            "title": "Il mio tempo trascorso"
+          },
+          "time_entries_list": {
+            "no_results": "Nessuna voce sul tempo per gli ultimi 7 giorni.",
+            "title": "Tempo trascorso (ultimi 7 giorni)"
+          },
+          "work_packages_accountable": {
+            "title": "Macro-attività di cui sono responsabile"
+          },
+          "work_packages_assigned": {
+            "title": "Macro-attività assegnate a me"
+          },
+          "work_packages_calendar": {
+            "title": "Calendario"
+          },
+          "work_packages_created": {
+            "title": "Pacchetti di lavoro creati da me"
+          },
+          "work_packages_graph": {
+            "title": "Grafico delle macro-attività"
+          },
+          "work_packages_overview": {
+            "placeholder": "Clicca per modificare ...",
+            "title": "Panoramica delle macro-attività"
+          },
+          "work_packages_table": {
+            "title": "Tabella delle macro-attività"
+          },
+          "work_packages_watched": {
+            "title": "Pacchetti di lavoro visti da me"
+          }
+        }
+      },
+      "hal": {
+        "error": {
+          "edit_prohibited": "La modifica di %{attribute} è bloccata per questa macro-attività. Questo attributo o deriva da relazioni (ad es., con attività subordinate) oppure non è configurabile.",
+          "format": {
+            "date": "%{attribute} data non valida - atteso YYYY-MM-DD."
+          },
+          "general": "Si è verificato un errore.",
+          "update_conflict_refresh": "Clicca qui per ricaricare il pacchetto di lavoro e aggiornare alla versione più recente."
+        }
+      },
+      "help_texts": {
+        "show_modal": "Mostra testo guida"
+      },
+      "homescreen": {
+        "blocks": {
+          "new_features": {
+            "16_1": {
+              "standard": {
+                "new_features_html": "Questa versione contiene diverse nuove funzionalità e miglioramenti, come <br> <ul class=\"%{list_styling_class}\"> <li>Struttura del ciclo di vita del progetto con fasi e controlli di fase.</li> <li>Esportazione delle riunioni in formato PDF.</li> <li>Impostazione di opzioni smart predefinite per i promemoria.</li> <li>Utilizzo di un ritardo negativo per le date delle macro-attività.</li> <li>Visualizzazione di alberi gerarchici per i campi personalizzati della gerarchia.</li> <li>Approfitta di un'accessibilità migliorata per il selettore data con le regioni live ARIA.</li> </ul>\n"
+              }
+            },
+            "learn_about": "Scopri di più su tutte le nuove funzionalità",
+            "text_new_features": "Informati sulle nuove funzionalità e sugli aggiornamenti dei prodotti."
+          }
+        }
+      },
+      "ical_sharing_modal": {
+        "copy_url_label": "Copia URL",
+        "description": "Puoi utilizzare l'URL (iCalendar) per iscriverti a questo calendario su un client esterno e per visualizzare le informazioni sul pacchetto di lavoro aggiornate da lì.",
+        "ical_generation_error_text": "Si è verificato un errore nella creazione dell'URL del calendario.",
+        "inital_setup_error_message": "Si è verificato un errore recuperando i dati.",
+        "success_message": "L'URL \"%{name}\" è stato copiato con successo negli appunti. Incollalo nel tuo client di calendario per completare l'iscrizione.",
+        "title": "Iscriviti al calendario",
+        "token_name_description_text": "Se ti iscrivi a questo calendario da più dispositivi, questo nome ti aiuterà a distinguerli nel tuo elenco di <a href=\"my/access_token\", target=\"_blank\">token di accesso</a>.",
+        "token_name_label": "Dove lo userai?",
+        "token_name_placeholder": "Digita un nome, ad esempio \"Telefono\"",
+        "warning": "Sei pregato di non condividerlo con altri utenti. Chiunque abbia questo link potrà visualizzare i dettagli del pacchetto di lavoro senza un profilo o una password."
+      },
+      "ifc_models": {
+        "empty_warning": "Questo progetto non ha ancora nessun modello IFC.",
+        "keyboard_input_disabled": "Il visualizzatore non dispone di controlli da tastiera. Clicca sul visualizzatore per dare controlli da tastiera al visualizzatore.",
+        "models": {
+          "ifc_models": "Modelli IFC"
+        },
+        "use_this_link_to_manage": "Usa questo link per caricare e gestire i tuoi modelli IFC",
+        "views": {
+          "split": "Visualizzatore e tabella",
+          "split_cards": "Visualizzatore e schede",
+          "viewer": "Visualizzatore"
+        }
+      },
+      "include_projects": {
+        "apply": "Applica",
+        "clear_selection": "Annulla selezione",
+        "include_subprojects": "Includi tutti i sotto-progetti",
+        "no_results": "Nessun progetto corrisponde ai tuoi criteri di ricerca",
+        "search_placeholder": "Cerca progetto...",
+        "selected_filter": {
+          "all": "Tutti i progetti",
+          "selected": "Solo selezionati"
+        },
+        "title": "Progetti",
+        "toggle_title": "Includi progetti",
+        "tooltip": {
+          "current_project": "Questo è il progetto corrente in cui ti trovi.",
+          "does_not_match_search": "Il progetto non corrisponde ai criteri di ricerca.",
+          "include_all_selected": "Il progetto già stato incluso poiché è abilitata l'opzione Includi tutti i sotto-progetti."
+        }
+      },
+      "inplace": {
+        "btn_preview_disable": "Disabilita anteprima",
+        "btn_preview_enable": "Anteprima",
+        "button_cancel": "%{attribute}: Annulla",
+        "button_cancel_all": "Annulla",
+        "button_edit": "%{attribute}: Modifica",
+        "button_save": "%{attribute}: Salva",
+        "button_save_all": "Salva",
+        "clear_value_label": "-",
+        "errors": {
+          "maxlength": "%{field} non può contenere più di %{maxLength} cifra/e",
+          "messages_on_field": "Questo campo non è valido: %{messages}",
+          "minlength": "%{field} non può contenere meno di %{minLength} cifra/e",
+          "number": "%{field} non è un numero valido",
+          "required": "%{field} non può essere vuoto"
+        },
+        "link_formatting_help": "Guida di formattazione del testo",
+        "null_value_label": "Nessun valore"
+      },
+      "invite_user_modal": {
+        "back": "Indietro",
+        "invite": "Invita",
+        "message": {
+          "description": "Invieremo un'email all'utente, a cui puoi aggiungere qui un messaggio personale. Una spiegazione per l'invito potrebbe essere utile o forse qualche informazione sul progetto per aiutarli a iniziare.",
+          "label": "Messaggio di invito",
+          "next_button": "Avanti"
+        },
+        "principal": {
+          "already_member_message": "Già un membro di %{project}",
+          "create_new_placeholder": "Crea nuovo segnaposto:",
+          "invite_user": "Invito:",
+          "label": {
+            "name": "Nome",
+            "name_or_email": "Nome o indirizzo email"
+          },
+          "next_button": "Prossimo",
+          "no_results_group": "Nessun gruppo è stato trovato",
+          "no_results_placeholder": "Nessun segnaposto è stato trovato",
+          "no_results_user": "Nessun utente è stato trovato",
+          "required": {
+            "group": "Sei pregato di selezionare un gruppo",
+            "placeholder": "Sei pregato di selezionare un segnaposto",
+            "user": "Sei pregato di selezionare un utente"
+          }
+        },
+        "project": {
+          "label": "Progetto",
+          "lacking_permission": "Seleziona un progetto diverso poiché non hai i permessi per assegnare gli utenti a quello attualmente selezionato.",
+          "lacking_permission_info": "Non hai il permesso di assegnare gli utenti al progetto in cui ti trovi. Devi selezionarne un altro.",
+          "next_button": "Prossimo",
+          "no_invite_rights": "Non puoi invitare i membri a questo progetto",
+          "no_results": "Nessun progetto è stato trovato",
+          "required": "Sei pregato di selezionare un progetto"
+        },
+        "role": {
+          "description": "Questo è il ruolo che l'utente riceverà una volta unitosi al progetto. Il ruolo definisce che azioni possono intraprendere e che informazioni possono vedere. <a href=\"https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions\" target=\"_blank\"> Scopri di più sui ruoli e sulle autorizzazioni. </a>",
+          "label": "Ruolo in %{project}",
+          "next_button": "Prossimo",
+          "no_roles_found": "Nessun ruolo è stato trovato",
+          "required": "Sei pregato di selezionare un ruolo"
+        },
+        "success": {
+          "description": {
+            "group": "Il gruppo è ora parte di %{project}. Nel mentre puoi ad esempio già pianificare con quel gruppo e assegnare pacchetti di lavoro.",
+            "placeholder": "Il segnaposto è ora utilizzabile in %{project}. Nel mentre puoi ad esempio già pianificare con quell'utente e assegnare pacchetti di lavoro.",
+            "user": "L'utente può ora connettersi per accedere a %{project}. Nel mentre puoi ad esempio già pianificare con quell'utente e assegnare pacchetti di lavoro."
+          },
+          "next_button": "Continua",
+          "title": "%{principal} è stato invitato!"
+        },
+        "summary": {
+          "next_button": "Invia invito"
+        },
+        "title": {
+          "Group": "gruppo",
+          "PlaceholderUser": "utente del segnaposto",
+          "User": "utente",
+          "invite": "Invita utente",
+          "invite_principal_to_project": "Invita %{principal} a %{project}",
+          "invite_to_project": "Invita %{type} a %{project}"
+        },
+        "type": {
+          "group": {
+            "description": "I permessi basati sul ruolo assegnato nel progetto selezionato",
+            "title": "Gruppo"
+          },
+          "placeholder": {
+            "description": "Non ha accesso al progetto e non è inviata alcuna email.",
+            "description_no_ee": "Non ha accesso al progetto e non è inviata alcuna email. <br>Dai un'occhiata all'<a href=\"%{eeHref}\" target=\"_blank\">edizione Enterprise</a>",
+            "title": "Utente segnaposto",
+            "title_no_ee": "Utente del segnaposto (funzionalità solo dell'edizione Enterprise)"
+          },
+          "required": "Sei pregato di selezionare il tipo da invitare",
+          "user": {
+            "description": "I permessi basati sul ruolo assegnato nel progetto selezionato",
+            "title": "Utente"
+          }
+        }
+      },
+      "label_activate": "Attiva",
+      "label_activity_show_all": "Mostra tutte le attività",
+      "label_activity_show_only_comments": "Mostra solo le attività con commenti",
+      "label_add_attachments": "Allega file",
+      "label_add_column_after": "Aggiungi colonna dopo",
+      "label_add_column_before": "Aggiungi colonna prima",
+      "label_add_columns": "Aggiungi colonne",
+      "label_add_comment": "Aggiungi un commento",
+      "label_add_comment_title": "Commenta e digita @ per notificare altre persone",
+      "label_add_description": "Aggiunge una descrizione per %{file}",
+      "label_add_row_after": "Aggiungi riga dopo",
+      "label_add_row_before": "Aggiungi riga prima",
+      "label_add_selected_columns": "Aggiungi colonne selezionate",
+      "label_added_by": "aggiunto da",
+      "label_added_time_by": "Aggiunto da <a href=\"%{authorLink}\">%{author}</a> alle %{age}",
+      "label_ago": "giorni fa",
+      "label_all": "tutti",
+      "label_all_uppercase": "Tutti",
+      "label_all_work_packages": "tutte le macro-attività",
+      "label_and": "e",
+      "label_ascending": "Crescente",
+      "label_assignee": "Assegnatario",
+      "label_attachments": "Allegati",
+      "label_author": "Autore: %{user}",
+      "label_avatar": "Avatar",
+      "label_between": "tra",
+      "label_board": "Tabellone",
+      "label_board_locked": "Chiuso",
+      "label_board_plural": "Tabelloni",
+      "label_board_sticky": "In evidenza",
+      "label_cancel_comment": "Cancella il commento",
+      "label_change": "Cambia",
+      "label_children_derived_duration": "Durata derivata dei figli della macro-attività",
+      "label_closed_work_packages": "chiuso",
+      "label_collapse": "Comprimi",
+      "label_collapse_all": "Comprimi Tutto",
+      "label_collapsed": "collassato",
+      "label_columns": "Colonne",
+      "label_comment": "Commento",
+      "label_committed_at": "%{committed_revision_link} il %{date}",
+      "label_committed_link": "revisione accettata %{revision_identifier}",
+      "label_contains": "contiene",
+      "label_create": "Crea",
+      "label_create_work_package": "Crea una nuova macro-attività",
+      "label_created_by": "Creato da",
+      "label_created_on": "creato il",
+      "label_current": "attuale",
+      "label_custom_queries": "Privato",
+      "label_date": "Data",
+      "label_date_with_format": "Immettere il %{date_attribute} utilizzando il seguente formato: %{format}",
+      "label_deactivate": "Disattivare",
+      "label_default_queries": "Predefinito",
+      "label_descending": "Decrescente",
+      "label_description": "Descrizione",
+      "label_details": "Dettagli",
+      "label_display": "Visualizza",
+      "label_drop_files": "Rilascia qui i file per allegarli.",
+      "label_drop_folders_hint": "Non è possibile caricare cartelle come allegati. Si prega di selezionare singoli file.",
+      "label_drop_or_click_files": "Rilascia qui i file o clicca per allegarli.",
+      "label_edit_comment": "Modifica questo commento",
+      "label_edit_status": "Modifica lo stato della macro-attività",
+      "label_email": "Email",
+      "label_equals": "è",
+      "label_expand": "Espandi",
+      "label_expand_all": "Espandi tutto",
+      "label_expand_project_menu": "Espandi il menù di progetto",
+      "label_expanded": "espanso",
+      "label_export": "Esporta",
+      "label_export_preparing": "L'esportazione è in fase di preparazione e il download partirà a breve.",
+      "label_favorites": "Preferiti",
+      "label_filename": "File",
+      "label_files_to_upload": "Verranno caricati questi files:",
+      "label_filesize": "Dimensione",
+      "label_formattable_attachment_hint": "Allega e collega i file trascinandoli in questo campo, o incollandoli dagli appunti.",
+      "label_general": "Generale",
+      "label_global_queries": "Pubblico",
+      "label_greater_or_equal": ">=",
+      "label_group": "Gruppo",
+      "label_group_by": "Raggruppa per",
+      "label_group_plural": "Gruppi",
+      "label_hide_attributes": "Meno suggerimenti",
+      "label_hide_column": "Nascondi la colonna",
+      "label_hide_project_menu": "Comprimi il menù di progetto",
+      "label_hour": "ora",
+      "label_hours": "ore",
+      "label_import": "Importazione",
+      "label_in": "in",
+      "label_in_less_than": "in meno di",
+      "label_in_more_than": "in più di",
+      "label_incoming_emails": "Email in arrivo",
+      "label_information_plural": "Informazioni",
+      "label_invalid": "Non valido",
+      "label_last_updated_on": "Ultimo aggiornamento il",
+      "label_latest_activity": "Ultima attività",
+      "label_learn_more_link": "Scopri di più",
+      "label_less_or_equal": "<=",
+      "label_less_than_ago": "meno di qualche giorno fa",
+      "label_loading": "Caricamento...",
+      "label_mail_notification": "Notifiche email",
+      "label_manage_columns": "Gestisci e riordina colonne",
+      "label_me": "io",
+      "label_meeting_agenda": "Ordine del giorno",
+      "label_meeting_minutes": "Verbali",
+      "label_meetings": "Riunioni",
+      "label_menu_collapse": "collassa",
+      "label_menu_expand": "espandi",
+      "label_moderate_comment": "Modera i commenti",
+      "label_more_than_ago": "più di qualche giorno fa",
+      "label_next": "Prossimo",
+      "label_no_color": "Nessun colore",
+      "label_no_data": "Nessun dato da visualizzare",
+      "label_no_date": "Nessuna data",
+      "label_no_due_date": "nessuna data di fine",
+      "label_no_start_date": "nessuna data di inizio",
+      "label_no_value": "Nessun valore",
+      "label_none": "nessuno",
+      "label_not_contains": "non contiene",
+      "label_not_equals": "non è",
+      "label_on": "il",
+      "label_open_context_menu": "Apri il menu di scelta rapida",
+      "label_open_menu": "Apri menu",
+      "label_open_work_packages": "aperte",
+      "label_password": "Password",
+      "label_per_page": "Per pagina:",
+      "label_please_wait": "Attendere",
+      "label_press_enter_to_save": "Premi Invio per salvare.",
+      "label_preview": "Anteprima",
+      "label_previous": "Precedente",
+      "label_project": "Progetto",
+      "label_project_list": "Elenchi progetti",
+      "label_project_plural": "Progetti",
+      "label_public_query": "Pubblico",
+      "label_quote_comment": "Annota questo commento",
+      "label_recent": "Recenti",
+      "label_rejected_files": "Questi file non possono essere caricati:",
+      "label_rejected_files_reason": "Questi file non possono essere caricati perchè la loro dimensione è maggiore di %{maximumFilesize}",
+      "label_remove": "Rimuovi",
+      "label_remove_all_files": "Elimina tutti i file",
+      "label_remove_column": "Rimuovi colonna",
+      "label_remove_columns": "Rimuovi le colonne selezionate",
+      "label_remove_file": "Cancella %{fileName}",
+      "label_remove_row": "Rimuovi riga",
+      "label_remove_watcher": "Rimuovi watcher %{name}",
+      "label_report": "Segnalano",
+      "label_repository_plural": "Archivi",
+      "label_reset": "Reimposta",
+      "label_save_as": "Salva come",
+      "label_search_columns": "Cerca una colonna",
+      "label_select_project": "Seleziona un progetto",
+      "label_select_watcher": "Seleziona un osservatore...",
+      "label_selected_filter_list": "Filtri selezionati",
+      "label_show_attributes": "Mostra tutti gli attributi",
+      "label_show_in_menu": "Mostra la vista nel menù",
+      "label_sort_by": "Ordina per",
+      "label_sort_higher": "Sposta su",
+      "label_sort_lower": "Sposta giu",
+      "label_sorted_by": "ordinati per",
+      "label_sorting": "Ordinamento",
+      "label_spent_time": "Tempo speso",
+      "label_star_query": "Preferito",
+      "label_starred_queries": "Preferito",
+      "label_subject": "Soggetto",
+      "label_sum": "Somma",
+      "label_sum_for": "Somma per",
+      "label_this_week": "questa settimana",
+      "label_time_entry_plural": "Tempo speso",
+      "label_today": "Oggi",
+      "label_total_amount": "Totale: %{amount}",
+      "label_total_progress": "%{percent}% Progresso totale",
+      "label_total_sum": "Somma totale",
+      "label_unwatch": "Smetti di Osservare",
+      "label_unwatch_work_package": "Smetti di osservare macro-attività",
+      "label_up": "Su",
+      "label_updated_on": "aggiornato il",
+      "label_upload_counter": "%{done} di %{count} file completati",
+      "label_upload_notification": "Caricamento dei file...",
+      "label_uploaded_by": "Caricato da",
+      "label_user_plural": "Utenti",
+      "label_validation_error": "La macro-attività non può essere salvata a causa dei seguenti errori:",
+      "label_value_derived_from_children": "(valore derivato dai figli)",
+      "label_version_plural": "Versioni",
+      "label_view_has_changed": "Questa vista ha modifiche non salvate. Clicca per salvarle.",
+      "label_visibility_settings": "Impostazioni di visibilità",
+      "label_wait": "Prego, attendi per la configurazione...",
+      "label_warning": "Attenzione",
+      "label_watch": "Osserva",
+      "label_watch_work_package": "Osserva macro-attività",
+      "label_watcher_added_successfully": "Osservatore aggiunto correttamente!",
+      "label_watcher_deleted_successfully": "Osservatore eliminato correttamente!",
+      "label_work_package": "Macro-attività",
+      "label_work_package_context_menu": "Menu contestuale macro-attività",
+      "label_work_package_details_you_are_here": "Sei nella scheda %{tab} per %{type} %{subject}.",
+      "label_work_package_parent": "Macro-attività genitore",
+      "label_work_package_plural": "Macro-attività",
+      "label_work_package_upload_notification": "Caricamento dei file per la macro-attività #%{id}: %{subject} in corso",
+      "label_wp_id_added_by": "#%{id} aggiunto da%{author}",
+      "modals": {
+        "button_apply": "Applica",
+        "button_cancel": "Annulla",
+        "button_delete": "Elimina",
+        "button_save": "Salva",
+        "button_submit": "Invia",
+        "destroy_time_entry": {
+          "text": "Eliminare la seguente voce temporale?",
+          "title": "Conferma l'eliminazione della voce temporale"
+        },
+        "destroy_work_package": {
+          "bulk_text": "Eliminare il seguente %{label}?",
+          "confirm_deletion_children": "Prendo atto che TUTTI i discendenti delle macro-attività elencate verranno eliminati in modo ricorsivo.",
+          "deletes_children": "Tutte le macro-attività ed i relativi discendenti verranno eliminati ricorsivamente.",
+          "has_children": "Questa macro-attività ha %{childUnits}:",
+          "single_text": "Vuoi davvero eliminare questa macro-attività?",
+          "title": "Conferma l'eliminazione di %{label}"
+        },
+        "form_submit": {
+          "text": "Eseguire questa azione?",
+          "title": "Conferma per continuare"
+        },
+        "label_delete_page": "Elimina pagina corrente",
+        "label_name": "Nome"
+      },
+      "myTimeTracking": {
+        "noSpecificTime": "Nessun orario specifico"
+      },
+      "my_page": {
+        "label": "La mia pagina"
+      },
+      "notice_bad_request": "Richiesta non valida.",
+      "notice_job_started": "job partito.",
+      "notice_no_results_to_display": "Nessun risultato visibile da mostrare.",
+      "notice_successful_create": "Creato con successo.",
+      "notice_successful_delete": "Cancellato con successo.",
+      "notice_successful_update": "Aggiornato con successo.",
+      "notifications": {
+        "center": {
+          "and_more_users": {
+            "one": "e 1 altro",
+            "other": "e altri %{count}"
+          },
+          "empty_state": {
+            "no_notification": "Sembra che siate tutti coinvolti.",
+            "no_notification_for_filter": "A quanto pare ti piace molto questo filtro.",
+            "no_notification_with_current_filter": "A quanto pare ti piace molto il filtro %{filter}.",
+            "no_notification_with_current_project_filter": "Sembra che siate tutti coinvolti nel progetto selezionato.",
+            "no_selection": "Clicca su una notifica per visualizzare tutti i dettagli dell'attività."
+          },
+          "label_actor_and": "e",
+          "mark_all_read": "Segna tutti come letti",
+          "mark_all_read_confirmation": "Questa operazione contrassegnerà tutte le notifiche in questa vista come lette. Procedere?",
+          "mark_as_read": "Segna come letto",
+          "new_notifications": {
+            "link_text": "Clicca qui per caricarli.",
+            "message": "Ci sono nuove notifiche."
+          },
+          "no_results": {
+            "at_all": "Le nuove notifiche appariranno qui quando si verificherà dell'attività che ti riguardi.",
+            "with_current_filter": "Non ci sono notifiche in questa vista al momento"
+          },
+          "text_update_date_by": "%{date} da",
+          "total_count_warning": "Mostrando le %{newest_count} notifiche più recenti. %{more_count} altre non vengono visualizzate."
+        },
+        "date_alerts": {
+          "milestone_date": "Data inizio",
+          "overdue": "In ritardo",
+          "overdue_since": "da %{difference_in_days}.",
+          "property_is": "tra %{difference_in_days}.",
+          "property_is_deleted": "eliminato.",
+          "property_today": "è oggi.",
+          "property_was": "era %{difference_in_days} fa."
+        },
+        "no_unread": "Nessuna nuova notifica",
+        "reasons": {
+          "assigned": "Assegnatario",
+          "commented": "Commentato",
+          "created": "Creato",
+          "dateAlert": "Avviso data",
+          "mentioned": "Menzionato",
+          "prioritized": "Assegnata priorità",
+          "processed": "Elaborato",
+          "reminder": "Promemoria",
+          "responsible": "Responsabile",
+          "scheduled": "Programmato",
+          "shared": "Condiviso",
+          "watched": "Osservatore"
+        },
+        "reminders": {
+          "note": "Nota: \"%{note}\""
+        },
+        "settings": {
+          "change_notification_settings": "Puoi modificare le tue <a target=\"_blank\" href=\"%{url}\">impostazioni di notifica</a> per assicurarti di non perderti mai un aggiornamento importante.",
+          "global": {
+            "date_alerts": {
+              "description": "Notifiche automatiche quando si avvicinano date importanti per le macro-attività aperte in cui sei coinvolto (assegnatario, responsabile od osservatore)",
+              "title": "Avvisi data"
+            },
+            "delayed": {
+              "description": "Notifiche aggiuntive sulle attività in tutti i progetti",
+              "title": "Non partecipante"
+            },
+            "immediately": {
+              "description": "Notifiche per tutte le attività nelle macro-attività in cui sei coinvolto (assegnatario, responsabile od osservatore)",
+              "title": "Partecipazione"
+            },
+            "overdue": "Alla scadenza"
+          },
+          "notify_me": "Avvisami",
+          "project_specific": {
+            "add": "Aggiungi impostazione per il progetto",
+            "already_selected": "Questo progetto è già selezionato",
+            "description": "Queste impostazioni specifiche del progetto sostituiscono le impostazioni predefinite sopra.",
+            "remove": "Rimuovi impostazioni progetto",
+            "title": "Impostazioni di notifica specifiche del progetto"
+          },
+          "reasons": {
+            "assignee": "Assegnatario",
+            "mentioned": {
+              "description": "Ricevi una notifica ogni volta che qualcuno ti menziona ovunque",
+              "title": "Menzionato"
+            },
+            "responsible": "Responsabile",
+            "shared": "Condiviso",
+            "watched": "Osservatore",
+            "work_package_commented": "Tutti i nuovi commenti",
+            "work_package_created": "Nuove macro-attività",
+            "work_package_prioritized": "Tutte le modifiche prioritarie",
+            "work_package_processed": "Tutte le modifiche di stato",
+            "work_package_scheduled": "Tutte le modifiche della data"
+          },
+          "reminders": {
+            "no_notification": "Nessuna notifica",
+            "timeframes": {
+              "normal": {
+                "P1D": "1 giorno prima",
+                "P3D": "3 giorni prima",
+                "P7D": "una settimana prima",
+                "PT0S": "stesso giorno"
+              },
+              "overdue": {
+                "P1D": "ogni giorno",
+                "P3D": "ogni 3 giorni",
+                "P7D": "ogni settimana"
+              }
+            }
+          },
+          "title": "Impostazioni notifiche"
+        },
+        "title": "Notifiche"
+      },
+      "onboarding": {
+        "buttons": {
+          "got_it": "Capito",
+          "next": "Prossimo",
+          "skip": "Salta"
+        },
+        "steps": {
+          "backlogs": {
+            "overview": "Gestisci il tuo lavoro nella vista <b>backlog</b>.",
+            "sprints": "A destra hai il product backlog e il bug backlog, a sinistra i rispettivi sprint. Qui puoi creare <b>epics, storie utente e bug</b>, assegnare priorità tramite trascinamento e aggiungerli a uno sprint.",
+            "task_board": "Il pannello delle attività visualizza l'<b>avanzamento dello sprint</b>. Fai clic sull'icona più (+) accanto a una storia utente per aggiungere nuove attività o impedimenti. <br> Lo stato può essere aggiornato trascinandolo.",
+            "task_board_arrow": "Per vedere il tuo <b>pannello delle attività</b>, apri il menu a cascata Sprint...",
+            "task_board_select": "...e seleziona la voce <b>pannello delle attività</b>."
+          },
+          "boards": {
+            "add": "Fai clic sull'icona più (+) per <b>creare una nuova scheda</b> o <b>aggiungere una scheda esistente</b> all'elenco sulla board.",
+            "drag": "Trascina e rilascia le tue schede all'interno di un determinato elenco per riordinarle o per spostarle in un altro elenco. <br> Puoi fare clic sull'icona delle informazioni (i) nell'angolo in alto a destra o fare doppio clic su una scheda per aprirne i dettagli.",
+            "lists_basic": "Qui puoi creare più liste (colonne) all'interno della tua agile board.",
+            "lists_kanban": "Qui puoi creare più liste  (colonne) all'interno della tua board. Questa funzione ti consente di creare una <b>board Kanban</b>, ad esempio.",
+            "overview": "Seleziona <b>board</b> per cambiare visualizzazione e gestire il tuo progetto utilizzando la visualizzazione agile delle schede."
+          },
+          "help_menu": "Il menu Aiuto (?) fornisce <b>ulteriori risorse di aiuto</b>. Qui puoi trovare una guida utente, video utili e altro ancora. <br> Goditi il tuo lavoro con OpenProject!",
+          "members": "Invita nuovi <b>membri</b> per entrare al tuo progetto.",
+          "quick_add_button": "Clicca sull'icona più (+) nella navigazione dell'intestazione per <b>creare un nuovo progetto</b> o per <b>invitare colleghi</b>.",
+          "sidebar_arrow": "Utilizza la freccia di ritorno nell'angolo in alto a sinistra per tornare al <b>menu principale</b> del progetto.",
+          "team_planner": {
+            "add_assignee": "Per iniziare, aggiungi gli assegnatari al team planner.",
+            "add_existing": "Cerca macro-attività esistenti e trascinale nel team planner per assegnarle istantaneamente a un membro del team e definire le date di inizio e fine.",
+            "calendar": "La scheda di pianificazione settimanale o bisettimanale visualizza tutte le macro-attività assegnate ai membri del tuo team.",
+            "card": "Trascina le macro-attività orizzontalmente per spostarle indietro o avanti nel tempo, trascina i bordi per cambiare le date di inizio o di fine, trascina le macro-attività verticalmente su una riga diversa per assegnarle ad un altro membro.",
+            "overview": "Il pianificatore di team consente di assegnare visivamente compiti ai membri del team e ottenere una panoramica di chi sta lavorando su cosa."
+          },
+          "welcome": "Fai un tour introduttivo di tre minuti per apprendere le <b>funzioni importanti</b>. <br> Consigliamo di completare i passaggi fino alla fine. Puoi riavviare il tour in qualsiasi momento.",
+          "wiki": "Nella <b>wiki</b> puoi documentare e condividere la conoscenza con il tuo team.",
+          "wp": {
+            "back_button": "Utilizza la freccia di ritorno nell'angolo in alto a sinistra per uscire e tornare all'elenco delle macro-attività.",
+            "create_button": "Il pulsante <b>+ Crea</b> aggiungerà una nuova macro-attività al tuo progetto.",
+            "full_view": "La visualizzazione dei <b>dettagli delle macro-attività</b> fornisce tutte le informazioni rilevanti relative a un determinato pacchetto di lavoro, come descrizione, stato, priorità, attività, dipendenze e commenti.",
+            "gantt_menu": "Crea pianificazioni e sequenze temporali di progetto senza sforzo utilizzando il modulo diagramma di Gantt.",
+            "list": "Questa panoramica della <b>macro-attività</b> fornisce un elenco di tutto il lavoro nel progetto, come attività, pietre miliari, fasi e altro. <br> Le macro-attività possono essere create e modificate direttamente da questa vista. Per accedere ai dettagli di una particolare macro-attività, è sufficiente fare doppio clic sulla sua riga.",
+            "timeline": "Qui puoi <b>modificare il tuo piano di progetto</b>, creare nuove macro-attività, come attività, pietre miliari, fasi e altro, nonché <b>aggiungere dipendenze</b>. Tutti i membri del team possono visualizzare e aggiornare il piano più recente in qualsiasi momento.",
+            "toggler": "Ora dai un'occhiata alla sezione <b>macro-attività</b>, che ti dà una più dettagliata vista del tuo lavoro."
+          }
+        }
+      },
+      "open_project_storage_modal": {
+        "waiting_subtitle": {
+          "network_off": "C'è un problema di rete.",
+          "network_on": "La rete è tornata. Stiamo provando."
+        },
+        "waiting_title": {
+          "timeout": "Timeout"
+        }
+      },
+      "overviews": {
+        "label": "Panoramica"
+      },
+      "pagination": {
+        "no_other_page": "Sei nella pagina unica.",
+        "pages": {
+          "next": "Vai alla pagina successiva",
+          "previous": "Torna alla pagina precedente"
+        }
+      },
+      "password_confirmation": {
+        "field_description": "È necessario inserire la password dell'account per confermare la modifica.",
+        "title": "Confermare la password per continuare"
+      },
+      "placeholders": {
+        "default": "-",
+        "description": "Descrizione: Clicca per modificare...",
+        "relation_description": "Clicca per aggiungere una descrizione per la relazione",
+        "selection": "Si prega di selezionare",
+        "subject": "Inserisci l'oggetto qui"
+      },
+      "project": {
+        "autocompleter": {
+          "label": "Autocompletamento del progetto"
+        },
+        "click_to_switch_to_project": "Progetto: %{projectname}",
+        "confirm_template_load": "Cambiare il modello ricaricherà la pagina e perderai tutti gli input in questo modulo. Continuare?",
+        "context": "Contesto del progetto",
+        "copy": {
+          "copy_options": "Opzioni di copia"
+        },
+        "no_template_selected": "(Nessuno)",
+        "not_available": "Progetto N/A",
+        "required_outside_context": "Scegli un progetto per creare una macro-attività e vederne tutti gli attributi. Puoi selezionare solo progetti che hanno il tipo sopra indicato attivato.\n",
+        "use_template": "Utilizza modello"
+      },
+      "project_menu_details": "Dettagli",
+      "relation_buttons": {
+        "abort": "Interrompi",
+        "add_existing": "Aggiungi esistente",
+        "add_existing_child": "Aggiungi figlio",
+        "add_existing_relation": "Aggiungere relazione esistente",
+        "add_new_child": "Crea nuovo figlio",
+        "add_new_relation": "Crea nuova relazione",
+        "add_parent": "Aggiungi genitore esistente",
+        "add_predecessor": "Aggiungi predecessore",
+        "add_successor": "Aggiungi successore",
+        "change_parent": "Cambia genitore",
+        "create_new": "Crea nuovo",
+        "group_by_relation_type": "Raggruppa per tipo di relazione",
+        "group_by_wp_type": "Raggruppa per tipo di macro-attività",
+        "hierarchy_indent": "Indenta gerarchia",
+        "hierarchy_outdent": "Rimuovi indentazione gerarchia",
+        "remove": "Rimuovi la relazione",
+        "remove_child": "Rimuovi figlio",
+        "remove_parent": "Rimuovi genitore",
+        "save": "Salva la relazione",
+        "set_parent": "Imposta genitore",
+        "show_relations": "Visualizza relazioni",
+        "toggle_description": "Attiva/disattiva descrizione della relazione",
+        "update_description": "Inserisci o aggiorna la descrizione della relazione",
+        "update_relation": "Clicca per modificare il tipo di relazione"
+      },
+      "relation_labels": {
+        "blocked": "Bloccato da",
+        "blocks": "Blocca",
+        "child": "Figlio",
+        "children": "Figli",
+        "duplicated": "Duplicato da",
+        "duplicates": "Duplica",
+        "follows": "Segue",
+        "includes": "Include",
+        "parent": "Superiore",
+        "partof": "Parte di",
+        "precedes": "Precede",
+        "relates": "Riferito a",
+        "relation_type": "tipo di relazione",
+        "required": "Richiesto da",
+        "requires": "Richiede"
+      },
+      "relations": {
+        "empty": "Non esiste alcuna relazione",
+        "remove": "Rimuovi la relazione"
+      },
+      "relations_autocomplete": {
+        "parent_placeholder": "Scegli un nuovo genitore o premi il tasto Esc per annullare.",
+        "placeholder": "Digita per cercare"
+      },
+      "relations_hierarchy": {
+        "children_headline": "Figli",
+        "hierarchy_headline": "Gerarchia",
+        "parent_headline": "Superiore"
+      },
+      "reminders": {
+        "settings": {
+          "alerts": {
+            "document_added": "Documenti aggiunti",
+            "explanation": "Le notifiche oggi sono limitate ai pacchetti di lavoro. Puoi scegliere di continuare a ricevere avvisi email per questi eventi finché non vengono inclusi nelle notifiche:\n",
+            "forum_messages": "Nuovi messaggi del forum",
+            "membership_added": "Iscrizione aggiunta",
+            "membership_updated": "Iscrizione aggiornata",
+            "news_added": "Notizie aggiunte",
+            "news_commented": "Commento su un articolo di notizie",
+            "title": "Avvisi email per altri elementi (che non sono macro-attività)",
+            "wiki_page_added": "Pagina wiki aggiunta",
+            "wiki_page_updated": "Pagina wiki aggiornata"
+          },
+          "daily": {
+            "add_time": "Aggiungi tempo",
+            "enable": "Abilita promemoria email giornalieri",
+            "explanation": "Riceverai questi promemoria solo per le notifiche non lette e solo nelle ore specificate. %{no_time_zone}",
+            "no_time_zone": "Fino a quando non configuri un fuso orario per il tuo account, gli orari verranno interpretati in UTC.",
+            "time_label": "Tempo %{counter}:",
+            "title": "Inviami promemoria email giornalieri per le notifiche non lette"
+          },
+          "immediate": {
+            "mentioned": "Subito quando qualcuno mi @menziona",
+            "personal_reminder": "Immediatamente quando ricevo un promemoria personale",
+            "title": "Inviami un promemoria email"
+          },
+          "pause": {
+            "first_day": "Primo giorno ",
+            "label": "Sospendi temporaneamente i promemoria email giornalieri",
+            "last_day": "Ultimo giorno"
+          },
+          "title": "Promemoria email",
+          "workdays": {
+            "title": "Ricevi promemoria email in questi giorni"
+          }
+        }
+      },
+      "reporting_engine": {
+        "label_remove": "Elimina",
+        "label_response_error": "Si è verificato un errore durante l'elaborazione della query."
+      },
+      "repositories": {
+        "select_branch": "Selezionare ramo",
+        "select_tag": "Selezionare tag"
+      },
+      "revit": {
+        "revit_add_in": "Add-In Revit",
+        "revit_add_in_settings": "Impostazioni dell'Add-In Revit"
+      },
+      "sharing": {
+        "selected_count": "%{count} selezionati",
+        "selection": {
+          "mixed": "Misto"
+        },
+        "share": "Condividi"
+      },
+      "sort": {
+        "activate_asc": "attivalo per applicare l'ordinamento crescente",
+        "activate_dsc": "attivalo per applicare l'ordinamento decrescente",
+        "activate_no": "attivalo per rimuovere l'ordinamento",
+        "sorted_asc": "Ordinamento crescente applicato, ",
+        "sorted_dsc": "Ordinamento decrescente applicato, ",
+        "sorted_no": "Nessun ordinamento applicato, ",
+        "sorting_disabled": "ordinamento disabilitato"
+      },
+      "spot": {
+        "drop_modal": {
+          "close": "Chiusura modale",
+          "focus_grab": "Questo è un punto focale per i modali. Premere MAIUSC+TAB per tornare all'elemento scatenante modale."
+        },
+        "filter_chip": {
+          "remove": "Rimuovi"
+        }
+      },
+      "storages": {
+        "authentication_error": "Autenticazione con %{storageType} fallita",
+        "choose_location": "Scegli posizione",
+        "drop_files": "Rilascia qui i file per caricarli su %{name}.",
+        "drop_or_click_files": "Rilascia qui i file o clicca per caricarli su %{name}.",
+        "file_links": {
+          "already_linked_directory": "Questa directory è già collegata a questa macro-attività.",
+          "already_linked_file": "Questo file è già collegato a questa macro-attività.",
+          "download": "Scarica %{fileName}",
+          "empty": "Correntemente, non esiste alcun file collegato a questo pacchetto di lavoro. Inizia a collegare i file con l'azione seguente o dall'interno di %{storageType}.\n",
+          "link_uploaded_file_error": "Si è verificato un errore caricando il file caricato '%{fileName}' al pacchetto di lavoro %{workPackageId}.\n",
+          "open": "Apri file su memoria",
+          "open_location": "Apri file nella posizione",
+          "remove": "Rimuovi collegamento al file",
+          "remove_confirmation": "Vuoi davvero scollegare il file da questa macro-attività? Lo scollegamento non influisce sul file originale e rimuove solo la connessione a questa macro-attività.\n",
+          "remove_short": "Rimuovi collegamento",
+          "select": "Seleziona file",
+          "select_all": "Seleziona tutto",
+          "selection": {
+            "one": "Collega 1 file",
+            "other": "Collega %{count} file",
+            "zero": "Seleziona i file da collegare"
+          },
+          "success_create": {
+            "one": "1 link del file creato correttamente.",
+            "other": "%{count} link di file creati correttamente."
+          },
+          "tooltip": {
+            "not_found": "Impossibile trovare questo file.",
+            "not_logged_in": "Effettua il login nella memoria per accedere a questo file.",
+            "view_not_allowed": "Non hai i permessi per accedere al file."
+          },
+          "upload_error": {
+            "403": "Il tuo file (%{fileName}) non può essere caricato a causa di restrizioni di sistema. Per ulteriori informazioni, contatta il tuo amministratore.\n",
+            "413": "Il tuo file (%{fileName}) è più grande di quello che OpenProject può caricare su %{storageType}. Puoi prima caricarlo direttamente su %{storageType} e poi collegare il file.\n",
+            "507": "Il tuo file (%{fileName}) è più grande di quanto consentito dalla quota di archiviazione. Contatta il tuo amministratore per modificare questa quota.\n",
+            "default": "Il tuo file (%{fileName}) non può essere caricato.\n",
+            "detail": {
+              "nextcloud": "Verifica che la versione più recente di \"Integrazione OpenProject\" di Nextcloud App sia installata e contatta il tuo amministratore per ulteriori informazioni.\n"
+            }
+          }
+        },
+        "files": {
+          "already_existing_body": "Un file con il nome \"%{fileName}\" esiste già nella posizione in cui stai tentando di caricare questo file. Cosa ti piacerebbe fare?\n",
+          "already_existing_header": "Questo file esiste già",
+          "cannot_create_folder": "Impossibile creare la cartella. Evita di usare caratteri e simboli speciali e assicurati che la cartella non esista già.",
+          "directory_not_writeable": "Non hai l'autorizzazione ad aggiungere file a questa cartella.",
+          "dragging_folder": "Il caricamento in %{storageType} non supporta le cartelle.",
+          "dragging_many_files": "Il caricamento su %{storageType} supporta soltanto un file per volta.",
+          "empty_folder": "Questa cartella è vuota.",
+          "empty_folder_location_hint": "Clicca sul pulsante in basso per caricare il file in questa posizione.",
+          "file_not_selectable_location": "Impossibile selezionare un file durante la scelta di una posizione.",
+          "managed_project_folder_no_access": "Non hai ancora accesso alla cartella del progetto gestito. Aspetta un po' e riprova.\n",
+          "managed_project_folder_not_available": "La cartella del progetto gestita automaticamente non è stata ancora trovata. Attendi un po', ricarica la pagina per recuperare i dati più recenti e riprova.\n",
+          "project_folder_no_access": "Non hai accesso alla cartella del progetto. Sei pregato di contattare il tuo amministratore per ottenere l'accesso o caricare il file in un'altra posizione.\n",
+          "upload_keep_both": "Mantieni entrambi",
+          "upload_replace": "Sostituisci"
+        },
+        "information": {
+          "authentication_error": "La richiesta di %{storageType} non può essere autenticata, è un errore.",
+          "connection_error": "Alcune impostazioni %{storageType} non funzionano. Contatta l'amministratore %{storageType}.\n",
+          "live_data_error": "Errore nel recupero dei dettagli del file",
+          "live_data_error_description": "Alcuni dati %{storageType} non possono essere recuperati. Prova a ricaricare questa pagina o contatta l'amministratore %{storageType}.\n",
+          "no_file_links": "Per collegare i file a questa macro-attività, farlo tramite %{storageType}.",
+          "not_logged_in": "Per aggiungere un link, vedere o caricare i file relativi a questo pacchetto di lavoro, accedi a %{storageType}.\n",
+          "suggest_logout": "Puoi provare a risolvere il problema disconnettendoti e riconnettendoti.",
+          "suggest_relink": "Puoi provare a risolvere il problema ricollegando il tuo account tramite il pulsante di accesso qui sotto."
+        },
+        "link_existing_files": "Collega file esistenti",
+        "link_files_in_storage": "Collega file in %{storageType}",
+        "login": "Accesso %{storageType}",
+        "login_to": "Accedi a %{storageType}",
+        "new_folder": "Nuova cartella",
+        "no_connection": "Nessuna connessione %{storageType}",
+        "open_storage": "Apri %{storageType}",
+        "select_location": "Seleziona Posizione",
+        "types": {
+          "default": "Archivio",
+          "nextcloud": "Nextcloud",
+          "one_drive": "OneDrive/SharePoint"
+        },
+        "upload_files": "Caricare i files"
+      },
+      "team_planner": {
+        "add_assignee": "Assegnatario",
+        "add_existing": "Aggiungi esistente",
+        "add_existing_title": "Aggiungi macro-attività esistenti",
+        "cannot_drag_here": "Impossibile rimuovere la macro-attività a causa di permessi o restrizioni di modifica.",
+        "cannot_drag_to_non_working_day": "Questa macro-attività non può iniziare/finire in un giorno non lavorativo.",
+        "create_label": "Pianificatore di team",
+        "create_title": "Crea nuovo pianificatore di team",
+        "drag_here_to_remove": "Trascina qui per rimuovere l'assegnatario e le date di inizio e fine.",
+        "eight_weeks": "8 settimane",
+        "four_weeks": "4 settimane",
+        "modify": {
+          "errors": {
+            "fallback": "Questa macro-attività non può essere modificata.",
+            "permission_denied": "Non hai i permessi necessari per effettuare questa modifica."
+          }
+        },
+        "no_data": "Aggiungi assegnatari per configurare il tuo pianificatore di team.",
+        "one_week": "1 settimana",
+        "quick_add": {
+          "empty_state": "Utilizzare il campo di ricerca per trovare macro-attività e trascinarle nel planner per assegnarle a qualcuno e definire le date di inizio e di fine.",
+          "search_placeholder": "Cerca..."
+        },
+        "remove_assignee": "Rimuovi assegnatario",
+        "today": "Oggi",
+        "two_weeks": "2 settimane",
+        "unsaved_title": "Pianificatore di team senza nome",
+        "work_week": "Settimana lavorativa"
+      },
+      "text_are_you_sure": "Sei sicuro/a?",
+      "text_data_lost": "Tutti i dati inseriti andranno persi.",
+      "text_query_destroy_confirmation": "Sei sicuro di voler eliminare la vista selezionata?",
+      "text_user_wrote": "%{value} ha scritto:",
+      "text_work_packages_destroy_confirmation": "Sei sicuro di che voler eliminare le/le macro-attività selezionata/e?",
+      "time_entry": {
+        "stop": "Interrompi",
+        "title": "Registra l'orario effettuato",
+        "tracking": "Monitoraggio tempi",
+        "work_package_required": "Richiede prima di selezionare una macro-attività."
+      },
+      "timer": {
+        "button_stop": "Interrompi il timer corrente",
+        "start_new_timer": "Avvia nuovo timer",
+        "timer_already_running": "Per avviare un nuovo timer, devi prima interrompere il timer corrente:",
+        "timer_already_stopped": "Nessun timer attivo per questa macro-attività, lo hai interrotto in un'altra finestra?",
+        "tracking_time": "Monitoraggio tempo"
+      },
+      "tl_toolbar": {
+        "outlines": "Livello della gerarchia",
+        "zooms": "Livello di zoom"
+      },
+      "toolbar": {
+        "filter": "Filtro",
+        "search_query_label": "Ricerca viste memorizzate",
+        "settings": {
+          "columns": "Colonne",
+          "configure_view": "Configura vista",
+          "delete": "Cancella",
+          "display_hierarchy": "Visualizza gerarchia",
+          "display_sums": "Visualizza somme",
+          "export": "Esporta",
+          "group_by": "Raggruppa per",
+          "hide_hierarchy": "Nascondi gerarchia",
+          "hide_sums": "Nascondi le somme",
+          "page_settings": "Rinomina vista",
+          "save": "Salva",
+          "save_as": "Salva come",
+          "share_calendar": "Iscriviti al calendario",
+          "sort_by": "Ordina per",
+          "visibility_settings": "Impostazioni di visibilità"
+        },
+        "unselected_title": "Macro-attività"
+      },
+      "two_factor_authentication": {
+        "errors": {
+          "aborted": "Questa autenticazione è stata annullata. Riprova"
+        },
+        "label_two_factor_authentication": "Autenticazione a due fattori"
+      },
+      "types": {
+        "attribute_groups": {
+          "confirm_reset": "Attenzione: vuoi reimpostare la configurazione del modulo? Tutti gli attributi torneranno al loro gruppo predefinito e TUTTI i campi personalizzati verranno disattivati.\n",
+          "error_duplicate_group_name": "Il nome %{group} è usato più di una volta. I nomi dei gruppi devono essere univoci.",
+          "error_no_table_configured": "Si prega di configurare una tabella per %{group}.",
+          "more_information": "Altre informazioni",
+          "nevermind": "Lascia stare",
+          "reset_title": "Reimposta la configurazione del modulo",
+          "upgrade_to_ee": "Passa all'edizione Enterprise in sede",
+          "upgrade_to_ee_text": "Wow! Se hai bisogno di questa aggiunta sei un vero professionista! Ti andrebbe di aiutare noi sviluppatori OpenSource diventando un cliente dell'edizione Enterprise?"
+        }
+      },
+      "units": {
+        "child_work_packages": {
+          "one": "una macro-attività subordinata",
+          "other": "%{count} macro-attività subordinate"
+        },
+        "day": {
+          "one": "1 giorno",
+          "other": "%{count} giorni",
+          "zero": "0 giorni"
+        },
+        "hour": {
+          "one": "1 o",
+          "other": "%{count} o",
+          "zero": "0 o"
+        },
+        "word": {
+          "one": "1 parola",
+          "other": "%{count} parole"
+        },
+        "workPackage": {
+          "one": "macro-attività",
+          "other": "macro-attività"
+        }
+      },
+      "upsell": {
+        "ee_only": "Addon dell'edizione per Imprese"
+      },
+      "views": {
+        "card": "Carte",
+        "list": "Tabella",
+        "timeline": "Gantt"
+      },
+      "watchers": {
+        "label_add": "Aggiungere osservatori",
+        "label_discard": "Annulla la selezione",
+        "label_error_loading": "Si è verificato un errore nel caricamento degli osservatori",
+        "label_loading": "caricamento osservatori in corso...",
+        "label_search_watchers": "Ricerca osservatori",
+        "typeahead_placeholder": "Ricerca possibili osservatori"
+      },
+      "wiki_formatting": {
+        "code": "Codice inline",
+        "deleted": "Eliminato",
+        "heading1": "Intestazione 1",
+        "heading2": "Intestazione 2",
+        "heading3": "Intestazione 3",
+        "image": "Immagine",
+        "italic": "Corsivo",
+        "ordered_list": "Elenco ordinato",
+        "preformatted_text": "Testo preformattato",
+        "quote": "Cita",
+        "strong": "Grassetto",
+        "underline": "Sottolineato",
+        "unordered_list": "Elenco non ordinato",
+        "unquote": "Rimuovi citazione",
+        "wiki_link": "Collega ad una pagina Wiki"
+      },
+      "work_packages": {
+        "baseline": {
+          "addition_label": "Aggiunto alla visualizzazione entro il periodo di confronto",
+          "column_incompatible": "Questa colonna non mostra le modifiche nella modalità Base di riferimento.",
+          "modification_label": "Modificato entro il periodo di confronto",
+          "removal_label": "Rimosso dalla visualizzazione entro il periodo di confronto"
+        },
+        "bulk_actions": {
+          "copy": "Copia di massa",
+          "delete": "Eliminazione di massa",
+          "edit": "Modifica di massa",
+          "move": "Modifica complessiva del progetto"
+        },
+        "button_clear": "Pulisci",
+        "comment_added": "Il commento è stato aggiunto con successo.",
+        "comment_send_failed": "Si è verificato un errore. Impossibile inviare il commento.",
+        "comment_updated": "Il commento è stato aggiornato correttamente.",
+        "confirm_edit_cancel": "Sei sicuro di voler annullare la modifica della macro-attività?",
+        "copy": {
+          "title": "Copia macro-attività"
+        },
+        "create": {
+          "button": "Crea",
+          "header": "Nuovo %{type}",
+          "header_no_type": "Nuova macro-attività (Tipo non inserito)",
+          "header_with_parent": "Nuovo %{type} (Figlio di %{parent_type} #%{id})",
+          "title": "Nuova macro-attività"
+        },
+        "default_queries": {
+          "all_open": "Apri tutto",
+          "assigned_to_me": "Assegnato a me",
+          "created_by_me": "Creato da me",
+          "latest_activity": "Ultima attività",
+          "manually_sorted": "Nuovo elenco progetti ordinato manualmente",
+          "milestones": "Traguardi",
+          "overdue": "In ritardo",
+          "recently_created": "Creato di recente",
+          "shared_with_me": "Condivisi con me",
+          "shared_with_users": "Condiviso con gli utenti",
+          "summary": "Sommario"
+        },
+        "description_enter_text": "Inserisci testo",
+        "description_filter": "Filtro",
+        "description_options_hide": "Nascondi opzioni",
+        "description_options_show": "Mostra opzioni",
+        "edit_attribute": "%{attribute} - Modifica",
+        "faulty_query": {
+          "description": "La vista è errata e non può essere elaborata.",
+          "title": "Le macro-attività non possono essere caricate."
+        },
+        "filters": {
+          "baseline_incompatible": "Questo attributo del filtro non viene preso in considerazione nella modalità Base di riferimento.",
+          "baseline_warning": "La modalità di base di riferimento è attiva, ma alcuni dei tuoi filtri attivi non sono inclusi nel confronto.",
+          "title": "Filtra le macro-attività"
+        },
+        "hierarchy": {
+          "children_collapsed": "Livello di gerarchia %{level}, collassato. Clicca per visualizzare i dipendenti filtrati",
+          "children_expanded": "Livello di gerarchia %{level}, espanso. Clicca per collassare i dipendenti filtrati",
+          "hide": "Nascondi modalità gerarchica",
+          "leaf": "Foglia di Macro-attività a livello %{level}.",
+          "show": "Visualizza modalità gerarchica",
+          "toggle_button": "Clicca per cambiare modalità gerarchica."
+        },
+        "inline_create": {
+          "title": "Clicca qui per aggiungere un nuovo work package a questa lista"
+        },
+        "jump_marks": {
+          "content": "Vai al contenuto",
+          "label_content": "Clicca qui per saltare il menu ed andare al contenuto",
+          "label_pagination": "Clicca qui per saltare la tabella macro-attività e passare alla impaginazione",
+          "pagination": "Salta alla impaginazione tabella"
+        },
+        "key_value": "%{key}: %{value}",
+        "label_column_multiselect": "Campo a discesa combinata: selezionare con i tasti freccia, confermare la selezione con invio, eliminare con backspace",
+        "label_disable_multi_select": "Disabilita multiseleziona",
+        "label_enable_multi_select": "Abilita multiseleziona",
+        "label_filter_add": "Aggiungi filtro",
+        "label_filter_by_text": "Filtra per testo",
+        "label_options": "Opzioni",
+        "limited_results": "Solo %{count} macro-attività possono essere visualizzate nella modalità di ordinamento manuale. Riduci i risultati filtrando o passa all'ordinamento automatico.",
+        "message_error_during_bulk_delete": "Errore durante il tentativo d'eliminazione della macro-attività.",
+        "message_successful_bulk_delete": "Macro-attività eliminata con successo.",
+        "message_successful_show_in_fullscreen": "Clicca qui per aprire questa macro-attività in una visualizzazione a schermo intero.",
+        "message_view_spent_time": "Visualizza il tempo speso sulla macro-attività",
+        "message_work_package_read_only": "Il pacchetto di lavoro è bloccato in questo stato. Nessun attributo eccetto lo stato può essere alterato.",
+        "message_work_package_status_blocked": "Lo stato della macro-attività non è scrivibile a causa dello stato chiuso e della versione chiusa assegnata.",
+        "no_results": {
+          "description": "E' possibile che non ne sia stata creata alcuna o che tutte le macro-attività vengano filtrate.",
+          "title": "Nessuna macro-attività da visualizzare."
+        },
+        "placeholder_filter_by_text": "Oggetto, descrizione, commenti, ...",
+        "placeholders": {
+          "date": "Seleziona data",
+          "default": "-"
+        },
+        "progress": {
+          "title": "Stime e progressi del lavoro"
+        },
+        "properties": {
+          "assignee": "Assegnatario",
+          "author": "Autore",
+          "category": "Categoria",
+          "costObject": "Bilancio",
+          "createdAt": "Creato il",
+          "date": "Data",
+          "description": "Descrizione",
+          "dueDate": "Data di fine",
+          "duration": "Durata",
+          "overallCosts": "Costi complessivi",
+          "percentComplete": "% completamento",
+          "percentCompleteAlternative": "Avanzamento",
+          "percentageDone": "Percentuale di completamento",
+          "priority": "Priorità",
+          "projectName": "Progetto",
+          "remainingTime": "Lavoro rimanente",
+          "remainingWork": "Lavoro residuo",
+          "remainingWorkAlternative": "Ore rimanenti",
+          "responsible": "Responsabile",
+          "spentTime": "Tempo speso",
+          "spentUnits": "Unità spese",
+          "startDate": "Data di inizio",
+          "status": "Stato",
+          "storyPoints": "Punti della storia",
+          "subject": "Soggetto",
+          "subproject": "Sottoprogetto",
+          "title": "Titolo",
+          "type": "Tipo",
+          "updatedAt": "Aggiornato il",
+          "version": "Versione",
+          "versionName": "Versione",
+          "work": "Lavoro",
+          "workAlternative": "Tempo stimato"
+        },
+        "property_groups": {
+          "costs": "Costi",
+          "details": "Dettagli",
+          "estimatesAndTime": "Stime & Tempo",
+          "other": "Altro",
+          "people": "Persone"
+        },
+        "query": {
+          "click_to_edit_query_name": "Clicca per modificare il titolo della vista.",
+          "column_names": "Colonne",
+          "confirm_edit_cancel": "Sei sicuro di voler annullare la modifica del nome di questa vista? Il titolo verrà impostato sul valore precedente.",
+          "display_sums": "Visualizza somme",
+          "errors": {
+            "duplicate_query_title": "Il nome di questa vista è già esistente. Cambiarlo comunque?",
+            "not_found": "La vista non esiste",
+            "unretrievable_query": "Impossibile recuperare la vista dall'URL"
+          },
+          "filters": "Filtri",
+          "group": "Raggruppa per",
+          "group_by": "Raggruppa i risultati per",
+          "group_by_disabled_by_hierarchy": "Raggruppamento disabilitato durante la modalità gerarchica.",
+          "hide_column": "Nascondi la colonna",
+          "hierarchy_disabled_by_group_by": "Modalità gerarchica disabilitata a causa di un raggruppamento sulla colonna %{column}.",
+          "insert_columns": "Inserisci colonne",
+          "move_column_left": "Spostare la colonna a sinistra",
+          "move_column_right": "Spostare la colonna a destra",
+          "public_text": "Pubblica questa vista, consentendo ad altri utenti di accedere alla tua vista. Gli utenti con il permesso \"Gestisci viste pubbliche\" possono modificare o rimuovere la query pubblica. Questo non influisce sulla visibilità dei risultati della macro-attività in quella vista e gli utenti possono vedere risultati diversi a seconda dei loro permessi.\n",
+          "rename_query_placeholder": "Nome di questa vista",
+          "sort_ascending": "Ordinamento crescente",
+          "sort_descending": "Ordinamento decrescente",
+          "star_text": "Segna questa vista come preferita e aggiungila alla barra laterale delle viste salvate a sinistra.",
+          "text_no_results": "Nessuna vista corrispondente trovata."
+        },
+        "reminders": {
+          "button_label": "Imposta promemoria",
+          "presets": {
+            "custom": "A una data/ora particolare",
+            "month": "Tra un mese",
+            "three_days": "Tra 3 giorni",
+            "tomorrow": "Domani",
+            "week": "Tra una settimana"
+          },
+          "subtitle": "Riceverai una notifica per questa macro-attività all'ora scelta.",
+          "title": {
+            "edit": "Modifica promemoria",
+            "new": "Imposta un promemoria"
+          }
+        },
+        "scheduling": {
+          "is_parent": "Le date di questa macro-attività vengono automaticamente dedotte dai suoi figli. Attiva 'Programmazione manuale' per impostare le date.",
+          "is_switched_from_manual_to_automatic": "Potrebbe essere necessario ricalcolare le date di questa macro-attività dopo il passaggio dalla programmazione manuale alla programmazione automatica a causa delle relazioni con altre macro-attività."
+        },
+        "sharing": {
+          "show_all_users": "Mostra tutti gli utenti con i quali la macro-attività è stata condivisa",
+          "title": "Condividi macro-attività"
+        },
+        "table": {
+          "configure_button": "Configura la tabella della macro-attività",
+          "summary": "Tabella con righe di macro-attività e colonne dei loro attributi.",
+          "text_inline_edit": "Molte celle di questa tabella sono pulsanti che attivano le funzionalità di modifica in linea di tale attributo.",
+          "text_select_hint": "Le caselle di selezione devono essere aperte con ' ALT ' e i tasti freccia.",
+          "text_sort_hint": "Con i collegamenti nelle intestazioni di tabella puoi ordinare, raggruppare, riordinare, rimuovere e aggiungere le colonne della tabella."
+        },
+        "table_configuration": {
+          "button": "Configura questa tabella di macro-attività",
+          "choose_display_mode": "Visualizza la macro-attività come",
+          "columns_help_text": "Utilizza il campo di input sopra per aggiungere colonne alla visualizzazione della tabella. È possibile trascinare e rilasciare le colonne per riordinarle.",
+          "default": "predefinito",
+          "default_mode": "Elenco semplice",
+          "display_settings": "Impostazioni di visualizzazione",
+          "display_sums_hint": "Visualizza i totali degli attributi sommabili in una riga sotto i risultati della tabella.",
+          "embedded_tab_disabled": "La scheda di configurazione non è disponibile per la visualizzazione incorporata che stai modificando.",
+          "hierarchy_hint": "Tutti i risultati della tabella filtrata verranno ampliati con i loro antenati. Le gerarchie possono essere espanse e compresse.",
+          "hierarchy_mode": "Gerarchia",
+          "highlighting": "Evidenziazione",
+          "highlighting_mode": {
+            "description": "Evidenzia con colore",
+            "entire_row_by": "Tutta la riga per",
+            "inline": "Attibuto/i sottolineato/i",
+            "inline_all": "Tutti gli attributi",
+            "none": "Non evidenziare",
+            "priority": "Priorità",
+            "status": "Stato",
+            "type": "Tipo"
+          },
+          "modal_title": "Configurazione della tabella della macro-attività",
+          "relation_filters": {
+            "filter_work_packages_by_relation_type": "Filtra le macro-attività per tipo di relazione"
+          },
+          "show_timeline_hint": "Visualizza un Diagramma di Gantt interattivo a destra della tabella. È possibile modificare la larghezza trascinando il separatore tra tabella ed il Diagramma di Gantt.",
+          "sorting_mode": {
+            "automatic": "Automatico",
+            "description": "Scegli la modalità per ordinare i pacchetti di lavoro:",
+            "manually": "Manuale",
+            "warning": "Perderai il tuo ordinamento precedente quando attivi la modalità di ordinamento automatico."
+          }
+        },
+        "tabs": {
+          "activity": "Attività",
+          "files": "File",
+          "github": "GitHub",
+          "gitlab": "GitLab",
+          "meetings": "Riunioni",
+          "overview": "Panoramica",
+          "relations": "Relazioni",
+          "watchers": "Osservatori"
+        },
+        "time_relative": {
+          "days": "giorni",
+          "months": "mesi",
+          "weeks": "Settimane"
+        }
+      },
+      "zen_mode": {
+        "button_activate": "Attiva modalità zen",
+        "button_deactivate": "Disattiva modalità zen"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": ".",
+          "format": "%n %u",
+          "negative_format": "-%u%n",
+          "precision": 2,
+          "separator": ",",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "€"
+        }
+      },
+      "format": {
+        "delimiter": null,
+        "precision": 3,
+        "round_mode": "default",
+        "separator": ".",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "Miliardi",
+            "million": "Milioni",
+            "quadrillion": "Biliardi",
+            "thousand": "Mila",
+            "trillion": "Bilioni",
+            "unit": null
+          }
+        },
+        "format": {
+          "delimiter": null,
+          "precision": 1,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "one": "Byte",
+              "other": "Bytes"
+            },
+            "eb": "EB",
+            "gb": "GB",
+            "kb": "kB",
+            "mb": "MB",
+            "pb": "PB",
+            "tb": "TB",
+            "zb": "ZB"
+          }
+        }
+      },
+      "nth": {},
+      "percentage": {
+        "format": {
+          "delimiter": null,
+          "format": "%n%"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": null
+        }
+      }
+    },
+    "time": {
+      "am": "AM",
+      "formats": {
+        "default": "%m/%d/%Y %I: %M %p",
+        "long": "%B %d, %Y %H:%M",
+        "short": "%d %b %H:%M",
+        "time": "%I:%M %p"
+      },
+      "pm": "pm"
+    }
+  }
+}

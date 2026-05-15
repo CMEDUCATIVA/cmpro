@@ -1,0 +1,39 @@
+<%= component_wrapper(tag: "turbo-frame") do %>
+  <%= render(Primer::OpenProject::SubHeader.new(data: sub_header_data_attributes)) do |subheader|
+        subheader.with_filter_input(
+          name: "name_and_identifier",
+          label: t("projects.index.search.label"),
+          value: filter_input_value,
+          placeholder: t("projects.index.search.placeholder"),
+          leading_visual: {
+            icon: :search,
+            size: :small
+          },
+          clear_button_id: clear_button_id,
+          data: filter_input_data_attributes
+        )
+
+        subheader.with_filter_component do
+          render(Projects::ProjectFilterButtonComponent.new(query: @query, disabled: @disable_buttons))
+        end
+
+        if @current_user.allowed_globally?(:add_project)
+          subheader.with_action_button(
+            tag: :a,
+            href: new_project_path,
+            scheme: :primary,
+            leading_icon: :plus,
+            label: I18n.t(:label_project_new),
+            disabled: @disable_buttons,
+            size: :medium,
+            data: { "test-selector": "project-new-button" }
+          ) do
+            Project.model_name.human
+          end
+        end
+
+        subheader.with_bottom_pane_component(mt: 0) do
+          render(Projects::ProjectsFiltersComponent.new(query: @query))
+        end
+      end %>
+<% end %>

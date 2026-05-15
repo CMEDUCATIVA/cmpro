@@ -1,0 +1,475 @@
+﻿# Heredar directamente de ActionController::Base para evitar el sistema de autorizaciÃ³n de OpenProject
+class IaColaborativa::ChatController < ActionController::API
+  # No heredamos de ApplicationController para evitar todos los filtros de OpenProject
+  def create
+    message = params[:message].to_s.strip
+    agent_type = params[:agent_type].to_s.strip
+    image_data = params[:image_data]
+    current_user_data = params[:current_user]
+    project_selection = params[:project]
+    project_selection = project_selection.to_unsafe_h if project_selection.respond_to?(:to_unsafe_h)
+    fallback_project_id = params[:project_id].presence || project_selection&.[]('id') || project_selection&.[](:id)
+
+    # Log de entrada
+    Rails.logger.info "=" * 80
+    Rails.logger.info "ðŸŽ¯ ChatController - Nueva consulta"
+    Rails.logger.info "   ðŸ“ Mensaje: #{message}"
+    Rails.logger.info "   ðŸ¤– Agent Type recibido: '#{agent_type}'"
+    Rails.logger.info "   ðŸ–¼ï¸ Imagen: #{image_data.present? ? 'SÃ­' : 'No'}"
+    Rails.logger.info "   ðŸ‘¤ Usuario: #{current_user_data.present? ? current_user_data['name'] : 'No detectado'}"
+    Rails.logger.info "=" * 80
+    project_label = if project_selection.present?
+                      name = project_selection['name'] || project_selection[:name] || 'sin nombre'
+                      id_value = project_selection['id'] || project_selection[:id] || 'desconocido'
+                      "#{name} (ID: #{id_value})"
+                    else
+                      'No seleccionado'
+                    end
+    Rails.logger.info "   Proyecto: #{project_label}"
+    Rails.logger.info "=" * 80
+
+    if message.blank? && image_data.blank?
+      render json: { response: "Por favor escribe un mensaje o adjunta una imagen" }, status: :ok
+      return
+    end
+
+    project_payload = nil
+    project_id = fallback_project_id
+    if project_selection.present?
+      project_payload = { 'selection' => project_selection }
+      project_id = project_selection['id'] || project_selection[:id]
+      if project_id.present?
+        Rails.logger.info "Solicitando contexto MCP del proyecto #{project_id}"
+        project_result = ::IaColaborativa::McpService.get_project(project_id)
+        if project_result[:success]
+          project_payload['details'] = project_result[:data]
+          project_id ||= project_result[:data]['id']
+          ::IaColaborativa::DebugService.log_event('work_packages_flow', 'SaraIA Obra', {
+            stage: 'get_project',
+            success: true,
+            project_id: project_id,
+            project_name: project_payload.dig('details', 'name')
+          })
+        else
+          project_payload['details_error'] = project_result[:error]
+          Rails.logger.error "Fallo al consultar get_project #{project_id}: #{project_result[:error]}"
+        end
+      end
+    end
+
+    unless project_payload.present? || project_id.blank?
+      Rails.logger.info "Construyendo contexto MCP mÃ­nimo para el proyecto #{project_id}"
+      project_payload = { 'selection' => { 'id' => project_id } }
+      project_result = ::IaColaborativa::McpService.get_project(project_id)
+      if project_result[:success]
+        project_payload['details'] = project_result[:data]
+        ::IaColaborativa::DebugService.log_event('work_packages_flow', 'SaraIA Obra', {
+          stage: 'get_project',
+          success: true,
+          project_id: project_id,
+          project_name: project_payload.dig('details', 'name')
+        })
+      else
+        project_payload['details_error'] = project_result[:error]
+        Rails.logger.error "Fallo al consultar get_project #{project_id}: #{project_result[:error]}"
+        ::IaColaborativa::DebugService.log_event('work_packages_flow', 'SaraIA Obra', {
+          stage: 'get_project',
+          success: false,
+          project_id: project_id,
+          error: project_result[:error]
+        })
+      end
+    end
+
+    intent_param = params[:intent].presence&.to_s
+    intent = if intent_param.present?
+               intent_param.to_sym
+             else
+               ::IaColaborativa::SaraObraAgent.detect_intent(message) || :general
+             end
+    if intent == :automation
+      render json: automation_intent_payload(project_id, project_label), status: :ok
+      return
+    end
+    Rails.logger.info "ðŸ”Ž IntenciÃ³n detectada: #{intent}"
+    Rails.logger.info "ðŸ§¾ Project selecciÃ³n: #{project_selection.inspect}"
+    Rails.logger.info "ðŸ§¾ Project ID (fallback): #{project_id}"
+
+    if intent == :work_packages || intent == :kpis
+      ::IaColaborativa::DebugService.log_event('work_packages_flow', 'SaraIA Obra', {
+        stage: 'intent_detected',
+        intent: intent,
+        project_id: project_id,
+        user_id: current_user_data&.dig('id') || current_user_data&.dig(:id)
+      })
+      project_id ||= project_payload&.dig('details', 'id')
+      Rails.logger.info "work_packages -> project_id: #{project_id}, payload present: #{project_payload.present?}"
+      if project_id.present?
+        Rails.logger.info "Invocando list_work_packages con project_id #{project_id}"
+        Rails.logger.info "Consultando paquetes de trabajo abiertos para el proyecto #{project_id}"
+        begin
+          wp_result = ::IaColaborativa::McpService.list_work_packages(project_id: project_id, status: 'open')
+        rescue StandardError => e
+          Rails.logger.error "Error al llamar list_work_packages: #{e.class} - #{e.message}"
+          ::IaColaborativa::DebugService.log_event('work_packages_flow', 'SaraIA Obra', {
+            stage: 'list_work_packages',
+            project_id: project_id,
+            success: false,
+            error: e.message
+          })
+          raise
+        end
+        project_payload ||= { 'selection' => { 'id' => project_id } }
+        project_payload['work_packages'] = {
+          'success' => wp_result[:success],
+          'collection' => wp_result[:data],
+          'error' => wp_result[:error]
+        }
+        ::IaColaborativa::DebugService.log_event('work_packages_flow', 'SaraIA Obra', {
+          stage: 'list_work_packages',
+          project_id: project_id,
+          success: wp_result[:success],
+          workspace_count: wp_result[:data]&.dig('_embedded', 'elements')&.size,
+          error: wp_result[:error]
+        })
+        Rails.logger.error("Fallo al consultar list_work_packages #{project_id}: #{wp_result[:error]}") unless wp_result[:success]
+      else
+        Rails.logger.warn "Intento de work_packages sin proyecto seleccionado o sin ID vÃ¡lido"
+      end
+    end
+
+    begin
+      # Rutear segÃºn el agente seleccionado
+      ai_response = case agent_type
+                    when 'cde'
+                      # ðŸ—ï¸ SaraIA Obra - Datos en tiempo real del CDE (MCP)
+                      Rails.logger.info "ðŸ—ï¸ Ruteando a: SaraObraAgent"
+                      ::IaColaborativa::SaraObraAgent.chat(message, current_user_data, project_payload, intent)
+                    when 'docs', '', nil
+                      # ðŸ“š SaraIA - DocumentaciÃ³n BIM (LightRAG)
+                      Rails.logger.info "ðŸ“š Ruteando a: SaraDocsAgent"
+                      ::IaColaborativa::SaraDocsAgent.chat(message, image_data)
+                    else
+                      # Por defecto, usar documentaciÃ³n
+                      Rails.logger.warn "âš ï¸ Agent type desconocido: '#{agent_type}', usando SaraDocsAgent por defecto"
+                      ::IaColaborativa::SaraDocsAgent.chat(message, image_data)
+                    end
+
+      Rails.logger.info "âœ… Respuesta generada (#{ai_response.length} caracteres)"
+
+      agent_name = agent_type == 'cde' ? 'SaraIA Obra' : 'SaraIA'
+      provider_cfg = ::IaColaborativa::BaseAgent.provider_config
+      if ai_response.present?
+        ::IaColaborativa::DebugService.log_conversation_entry(
+          agent_name,
+          message,
+          ai_response,
+          {
+            intent: intent,
+            project_id: project_id,
+            provider: provider_cfg[:provider],
+            model: ::IaColaborativa::BaseAgent.ai_model(provider_cfg)
+          }
+        )
+      else
+        fallback_resp = ai_response.presence || "ERROR: sin respuesta de la IA"
+        ::IaColaborativa::DebugService.log_conversation_entry(
+          agent_name,
+          message,
+          fallback_resp,
+          {
+            intent: intent,
+            project_id: project_id,
+            provider: provider_cfg[:provider],
+            model: ::IaColaborativa::BaseAgent.ai_model(provider_cfg),
+            error: 'no_content'
+          }
+        )
+        ai_response = fallback_resp
+      end
+
+      extras = {}
+      if intent == :kpis
+        begin
+          tpl_path = Rails.root.join('app', 'assets', 'templates', 'cronograma_real_vs_planificado.html')
+          template_html = File.read(tpl_path)
+          elements = project_payload&.dig('work_packages', 'collection', '_embedded', 'elements') || []
+          mapped = elements.map do |e|
+            {
+              id: e['id'],
+              subject: e['subject'],
+              _links: { status: { title: e.dig('_links', 'status', 'title') || e.dig('_embedded', 'status', 'name') } },
+              overallCosts: e['overallCosts'] || e['overall_costs'],
+              createdAt: e['createdAt'],
+              startDate: e['startDate'],
+              dueDate: e['dueDate'],
+              updatedAt: e['updatedAt']
+            }
+          end
+          data_hash = {
+            project_name: project_payload&.dig('details', 'name') || 'Proyecto',
+            project_id: project_payload&.dig('details', 'id') || project_id || '---',
+            generated_at: Time.now.iso8601,
+            items: mapped
+          }
+          html_filled = template_html.sub('__DATA_JSON__', data_hash.to_json)
+          extras[:kpi_html] = html_filled
+          extras[:kpi_ready_message] = 'Ya puedes descargar tus indicadores KPIs.'
+        rescue StandardError => e
+          Rails.logger.error "Error preparando kpi_html: #{e.class} - #{e.message}"
+        end
+      end
+
+      render json: { response: ai_response, intent: intent }.merge(extras), status: :ok
+    rescue StandardError => e
+      # Log del error
+      agent_name = agent_type == 'cde' ? 'SaraIA Obra' : 'SaraIA'
+      Rails.logger.error "#{agent_name} Error: #{e.class} - #{e.message}"
+      Rails.logger.error e.backtrace.first(10).join("\n")
+
+      # Registrar la conversaciÃ‡Ã¼n fallida en el debug
+      begin
+        provider_cfg = ::IaColaborativa::BaseAgent.provider_config
+        ::IaColaborativa::DebugService.log_conversation_entry(
+          agent_name,
+          message,
+          "ERROR: #{e.message}",
+          {
+            intent: intent,
+            project_id: project_id,
+            error_class: e.class.name,
+            error_message: e.message,
+            provider: provider_cfg[:provider],
+            model: ::IaColaborativa::BaseAgent.ai_model(provider_cfg)
+          }
+        )
+      rescue StandardError => log_err
+        Rails.logger.error "Fallo al registrar conversaciÃ‡Ã¼n en DebugService: #{log_err.message}"
+      end
+
+      # Respuesta de fallback
+    render json: {
+      response: "Hola, soy #{agent_name} de CMPROYECTOS. Hubo un error: #{e.message}"
+    }, status: :ok
+  end
+end
+
+  def greeting_response(current_user_data)
+    name = current_user_data&.dig('name') || current_user_data&.dig(:name)
+    greeting = name.present? ? "Hola #{name}," : 'Hola,'
+    "#{greeting} Â¿en quÃ© proyecto o tarea BIM puedo ayudarte hoy?"
+  end
+
+  def automation_intent_payload(project_id, project_label)
+    titles = automation_plan_titles
+    ::IaColaborativa::DebugService.log_event('automation_flow', 'SaraIA Obra', {
+      stage: 'intent_detected',
+      project_id: project_id,
+      project_label: project_label,
+      options_count: titles.size
+    })
+
+    {
+      response: build_automation_prompt(project_label, titles),
+      automation_options: titles
+    }
+  end
+
+  def automation_plan_titles(_project_id = nil)
+    IaColaborativa::PebAutomation.order(:created_at).map do |plan|
+      { id: plan.id, name: plan.plan_title.presence || "Tarjeta #{plan.id}" }
+    end
+  end
+
+  def build_automation_prompt(project_label, titles)
+    base = "Detecto que quieres crear algo en AutomatizaciÃ³n para #{project_label}."
+    if titles.any?
+      list = titles.each_with_index.map { |entry, index| "#{index + 1}. #{entry[:name]}" }.join("\n")
+      "#{base} Estos son los tipos de proyectos disponibles:\n#{list}\nIndica el nombre exacto que quieres usar o responde si prefieres crear una nueva."
+    else
+      "#{base} AÃºn no hay proyectos registrados. Â¿Quieres crear el primero?"
+    end
+  end
+
+  # ============================================================================
+  # ðŸ› DEBUG ENDPOINT - Estado completo del sistema
+  # ============================================================================
+
+  def debug
+    begin
+      debug_data = ::IaColaborativa::DebugService.get_system_state
+
+      render json: {
+        success: true,
+        data: debug_data
+      }, status: :ok
+
+    rescue StandardError => e
+      Rails.logger.error "Debug Error: #{e.class} - #{e.message}"
+      Rails.logger.error e.backtrace.first(5).join("\n")
+
+      render json: {
+        success: false,
+        error: e.message
+      }, status: :ok
+    end
+  end
+
+  # Obtener logs por tipo
+  def debug_logs
+    event_type = params[:event_type]
+    limit = params[:limit]&.to_i || 50
+
+    logs = if event_type.present?
+             ::IaColaborativa::DebugService.get_logs_by_type(event_type, limit)
+           else
+             ::IaColaborativa::DebugService.get_system_state[:recent_logs]
+           end
+
+    render json: { success: true, logs: logs }, status: :ok
+  end
+
+  # Obtener historial de conversaciones
+  def debug_conversations
+    agent_name = params[:agent_name]
+    limit = params[:limit]&.to_i || 20
+
+    conversations = if agent_name.present?
+                      ::IaColaborativa::DebugService.get_conversation_by_agent(agent_name, limit)
+                    else
+                      ::IaColaborativa::DebugService.get_system_state[:conversation_history]
+                    end
+
+    render json: { success: true, conversations: conversations }, status: :ok
+  end
+
+  def lightrag
+    message = params[:message].to_s.strip
+    mode = params[:mode].presence || 'hybrid'
+
+    if message.blank?
+      render json: { response: 'Por favor escribe una consulta.' }, status: :ok
+      return
+    end
+
+    Rails.logger.info "[IA CKEditor] Consulta directa a LightRAG (modo: #{mode})"
+
+    result = ::IaColaborativa::LightragService.query(message, mode: mode)
+
+    if result[:success] && result[:response].present?
+      render json: { response: result[:response], context: result[:context] }, status: :ok
+    else
+      error_message = result[:error] || 'LightRAG no devolviÃ³ respuesta.'
+      Rails.logger.error "[IA CKEditor] Error LightRAG: #{error_message}"
+      render json: { response: "Lo siento, no pude obtener informaciÃ³n de la base de conocimiento. Detalle: #{error_message}" }, status: :ok
+    end
+  rescue StandardError => e
+    Rails.logger.error "[IA CKEditor] ExcepciÃ³n LightRAG: #{e.class} - #{e.message}"
+    render json: { response: "Hubo un error al consultar LightRAG: #{e.message}" }, status: :ok
+  end
+
+  # ============================================================================
+  # ðŸ” SEARCH PROJECTS ENDPOINT
+  # ============================================================================
+
+  public
+
+  def search_projects
+    search_term = params[:search].to_s.strip
+    active_only = params[:active_only] != 'false' # Por defecto true
+    user_id = params[:user_id]&.to_i
+    Rails.logger.info "ðŸ” BÃºsqueda de proyectos: '#{search_term}' (user_id: #{user_id}, active_only: #{active_only})"
+
+    begin
+      # Obtener proyectos del usuario si se proporciona user_id
+      result = if user_id.present?
+                 ::IaColaborativa::McpService.list_user_projects(user_id: user_id, active_only: active_only)
+               else
+                 ::IaColaborativa::McpService.list_projects(active_only: active_only)
+  end
+
+  def automation_flow
+    project_id = params[:project_id]
+    plan_id = params[:plan_id]
+    plan = ::IaColaborativa::PebAutomation.find_by(id: plan_id)
+
+    unless plan
+      render json: { success: false, error: 'Plan no encontrado' }, status: :not_found
+      return
+    end
+
+    unless project_id.present?
+      render json: { success: false, error: 'project_id requerido' }, status: :unprocessable_entity
+      return
+    end
+
+    service = ::IaColaborativa::AutomationFlowService.new(plan: plan, project_id: project_id)
+    result = service.run
+
+    if result[:success]
+      render json: { success: true, created: result[:created], message: result[:message] || 'AutomatizaciÃ³n iniciada.' }, status: :ok
+    else
+      render json: { success: false, error: result[:error] || 'No fue posible iniciar la automatizaciÃ³n.' }, status: :unprocessable_entity
+    end
+  end
+
+      if result[:success]
+        projects = result.dig(:data, '_embedded', 'elements') || []
+
+        # Filtrar por tÃ©rmino de bÃºsqueda si existe
+        if search_term.present?
+          projects = projects.select do |project|
+            title = project.dig('_links', 'project', 'title') || project['name']
+            title.to_s.downcase.include?(search_term.downcase)
+          end
+        end
+
+        Rails.logger.info "âœ… Proyectos encontrados: #{projects.size}"
+
+        render json: {
+          success: true,
+          projects: projects.map do |p|
+            project_link = p.dig('_links', 'project')
+            {
+              id: project_link && project_link['href'] ? project_link['href'].split('/').last : p['id'],
+              name: project_link ? project_link['title'] : p['name'],
+              identifier: p['identifier'],
+              description: p.dig('description', 'raw'),
+              active: p['active'],
+              created_at: p['createdAt'],
+              updated_at: p['updatedAt'],
+              project_href: project_link && project_link['href'],
+              project_title: project_link && project_link['title']
+            }
+          end,
+          total: projects.size
+        }, status: :ok
+      else
+        Rails.logger.error "âŒ Error al obtener proyectos: #{result[:error]}"
+        render json: {
+          success: false,
+          error: result[:error] || 'Error al consultar proyectos'
+        }, status: :ok
+      end
+
+    rescue StandardError => e
+      Rails.logger.error "âŒ ExcepciÃ³n al buscar proyectos: #{e.class} - #{e.message}"
+      render json: {
+        success: false,
+        error: "Error al buscar proyectos: #{e.message}"
+      }, status: :ok
+    end
+
+  end
+
+  # Limpiar logs y conversaciones del DebugService
+  def clear_debug
+    ::IaColaborativa::DebugService.clear_logs
+    render json: { success: true, message: 'Logs de debug limpiados' }, status: :ok
+  rescue StandardError => e
+    Rails.logger.error "Error al limpiar debug: #{e.class} - #{e.message}"
+    render json: { success: false, error: e.message }, status: :internal_server_error
+  end
+  private
+end
+

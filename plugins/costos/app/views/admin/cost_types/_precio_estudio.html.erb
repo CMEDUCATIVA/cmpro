@@ -1,0 +1,8 @@
+<%# Columna "Precio estudio" - reutiliza la tasa vigente para mostrar study_rate %>
+<%
+  fixed_date = local_assigns.fetch(:fixed_date, Time.zone.today)
+  rate_source = cost_type.rate_at(fixed_date) || cost_type.rates.order(valid_from: :desc).first
+  study_rate_value = rate_source&.study_rate
+  study_rate_record = study_rate_value.nil? ? nil : Struct.new(:rate).new(study_rate_value)
+%>
+<%= content_tag :td, (study_rate_record ? to_currency_with_empty(study_rate_record) : ""), class: "currency" %>

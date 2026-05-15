@@ -1,0 +1,2077 @@
+{
+  "cs": {
+    "date": {
+      "abbr_day_names": [
+        "Ne",
+        "Po",
+        "Út",
+        "St",
+        "Čt",
+        "Pá",
+        "So"
+      ],
+      "abbr_month_names": [
+        null,
+        "Led",
+        "Úno",
+        "Bře",
+        "Dub",
+        "Kvě",
+        "Čer",
+        "Červenec",
+        "Srp",
+        "Září",
+        "Říjen",
+        "Listopad",
+        "Prosinec"
+      ],
+      "abbr_week": "Wk",
+      "day_names": [
+        "neděle",
+        "pondělí",
+        "úterý",
+        "středa",
+        "čtvrtek",
+        "pátek",
+        "sobota"
+      ],
+      "formats": {
+        "default": "%d. %m. %Y",
+        "long": "%d. %B %Y",
+        "short": "%d. %b"
+      },
+      "month_names": [
+        null,
+        "leden",
+        "únor",
+        "březen",
+        "duben",
+        "Květen",
+        "červen",
+        "červenec",
+        "srpen",
+        "září",
+        "říjen",
+        "listopad",
+        "prosinec"
+      ],
+      "order": [
+        "rok",
+        ":měsíc",
+        "den"
+      ]
+    },
+    "js": {
+      "admin": {
+        "enterprise": {
+          "text_expired": "vypršela platnost",
+          "text_reprieve_days_left": "%{days} dní do konce doby odkladu",
+          "trial": {
+            "confirmation": "Potvrzení e-mailové adresy",
+            "confirmation_info": "Poslali jsme Vám e-mail od %{date} do %{email}. Zkontrolujte prosím svou doručenou poštu a klikněte na odkaz pro potvrzení poskytnutý pro zahájení čtrnáctidenního zkušebního období.\n",
+            "email_not_received": "Neobdrželi jste e-mail? Můžete znovu odeslat e-mail s odkazem vpravo.",
+            "form": {
+              "domain_mismatch": "Aktuální název hostitele se neshoduje s nakonfigurovaným názvem hostitele. Zkontrolujte prosím nastavení systému.",
+              "general_consent": "Souhlasím s <a target=\"_blank\" href=\"%{link_terms}\">podmínkami služby</a> a <a target=\"_blank\" href=\"%{link_privacy}\">zásadami ochrany osobních údajů</a>.\n",
+              "invalid_email": "Neplatná e-mailová adresa",
+              "label_additional_features": "Additional features",
+              "label_company": "Společnost",
+              "label_domain": "Doména",
+              "label_expires_at": "Vyprší v",
+              "label_first_name": "Křestní jméno",
+              "label_last_name": "Příjmení",
+              "label_maximum_users": "Maximální počet aktivních uživatelů",
+              "label_plan": "Tarif",
+              "label_starts_at": "Začíná v",
+              "label_subscriber": "Odběratel",
+              "receive_newsletter": "Chci dostávat<a target=\"_blank\" href=\"%{link}\">newsletter OpenProject</a>.",
+              "taken_domain": "V každé doméně může být pouze jedna aktivní zkušební verze.",
+              "taken_email": "Každý uživatel může vytvořit pouze jednu zkušební verzi."
+            },
+            "next_steps": "Další kroky",
+            "quick_overview": "Získejte rychlý přehled o řízení projektu a týmové spolupráci s OpenProject Enterprise edion.",
+            "resend_link": "Znovu odeslat",
+            "resend_success": "E-mail byl znovu odeslán. Zkontrolujte své e-maily a klikněte na odkaz pro potvrzení.",
+            "resend_warning": "E-mail nelze znovu odeslat.",
+            "session_timeout": "Vypršel časový limit relace. Zkuste stránku znovu načíst nebo znovu odeslat e-mail.",
+            "status_confirmed": "potvrzeno",
+            "status_label": "Stav:",
+            "status_waiting": "e-mail odeslán - čeká na potvrzení",
+            "test_ee": "Vyzkoušejte Enterprise Edition 14 dní zdarma",
+            "try_another_email": "Nebo to zkuste s jinou e-mailovou adresou."
+          },
+          "upsell": {
+            "become_hero": "Staň se hrdinou!",
+            "benefits": {
+              "description": "Jaké jsou výhody  Enterprise on-premises Edice?",
+              "high_security": "Bezpečnostní prvky",
+              "high_security_text": "Single sign on (SAML, OpenID Connect, CAS), LDAP skupiny.",
+              "installation": "Instalační podpora",
+              "installation_text": "Zkušení softwaroví inženýři vás povedou kompletní instalací a instalací ve vaší vlastní infrastruktuře.",
+              "premium_features": "Doplňky Enterprise Edice",
+              "premium_features_text": "Agile desky, vlastní téma a logo, grafy, inteligentní pracovní postupy s vlastními akcemi, fulltextové vyhledávání příloh pracovního balíčku a vícenásobný výběr vlastních polí.",
+              "professional_support": "Profesionální podpora",
+              "professional_support_text": "Získejte spolehlivou, vysoce profesionální podporu od seniorních podpůrných inženýrů s odbornými znalostmi o používání OpenProject."
+            },
+            "button_book_now": "Rezervujte nyní",
+            "button_contact_us": "Kontaktujte nás pro demo",
+            "button_start_trial": "Zahájit zkušební verzi zdarma",
+            "button_upgrade": "Upgradovat nyní",
+            "confidence": "Doručujeme testovaný a podporovaný software pro řízení projetků - s Open Source a otevřenou myslí.\n",
+            "enterprise_info_html": "%{feature_title} je <span class='spot-icon spot-icon_inline spot-icon_enterprise-addons'></span>  Enterprise   doplněk.",
+            "link_quote": "Získat cenovou nabídku",
+            "more_info": "Více informací",
+            "text": "The OpenProject Enterprise edition builds on top of the Community edition. It includes Enterprise add-ons and professional support mainly aimed at organizations with more than 10 users that manage business critical projects with OpenProject.\n",
+            "unlimited": "Bez omezení",
+            "upgrade_info": "Přejděte na placenou verzi a začněte ji používat ve vašem týmu.",
+            "you_contribute": "Developers need to pay their bills, too. By upgrading to the Enterprise edition, you will be supporting this open source community effort and contributing to its development, maintenance and continuous improvement."
+          }
+        },
+        "type_form": {
+          "add_group": "Přidat skupinu atributů",
+          "add_table": "Přidat seznam se souvisejícími pracovními balíčky",
+          "custom_field": "Vlastní pole",
+          "drag_to_activate": "Přetáhněte pole zde, abyste je aktivovali",
+          "edit_query": "Upravit dotaz",
+          "inactive": "Neaktivní",
+          "new_group": "Nová skupina",
+          "reset_to_defaults": "Obnovit výchozí nastavení"
+        },
+        "work_packages_settings": {
+          "warning_progress_calculation_mode_change_from_field_to_status_html": "Changing progress calculation mode from work-based to status-based will result in all existing <i>% Complete</i> values to be lost and replaced with values associated with each status. Existing values for <i>Remaining work</i> may also be recalculated to reflect this change. This action is not reversible.",
+          "warning_progress_calculation_mode_change_from_status_to_field_html": "Changing progress calculation mode from status-based to work-based will make the <i>% Complete</i> field freely editable. If you optionally enter values for <i>Work</i> or <i>Remaining work</i>, they will also be linked to <i>% Complete</i>. Changing <i>Remaining work</i> can then update <i>% Complete</i>."
+        },
+        "working_days": {
+          "add_non_working_day": "Nepracovní den",
+          "already_added_error": "Nepracovní den pro toto datum již existuje. Pro každý jedinečný datum může být vytvořen pouze jeden nepracovní den.",
+          "calendar": {
+            "empty_state_description": "Pro tento rok nejsou definovány žádné konkrétní nepracovní dny. Pro přidání data klikněte na \"+ Nepracovní den\".",
+            "empty_state_header": "Nepracovní dny",
+            "new_date": "(nové)"
+          },
+          "change_button": "Uložit a přeplánovat",
+          "change_description": "Changing which days of the week are considered working days or non-working days can affect the start and finish days of all work packages and life cycles in all projects in this instance.",
+          "change_title": "Změnit pracovní dny",
+          "removed_title": "Následující dny odeberete ze seznamu nepracovních dnů:",
+          "warning": "The changes might take some time to take effect. You will be notified when all relevant work packages and project life cycles have been updated. Are you sure you want to continue?\n"
+        }
+      },
+      "ajax": {
+        "hide": "Skrýt",
+        "loading": "Načítání…",
+        "updating": "Aktualizace..."
+      },
+      "attachments": {
+        "delete": "Smazat přílohu",
+        "delete_confirmation": "Opravdu chcete odstranit tento soubor? Tato akce není vratná.\n",
+        "draggable_hint": "Přetáhněte pole editoru na vložený obrázek nebo referenční přílohu. Uzavřená pole editoru budou otevřena během pokračujícího přetahování.\n",
+        "quarantined_hint": "Soubor je karanténí, protože byl nalezen virus. Není k dispozici ke stažení."
+      },
+      "autocomplete_ng_select": {
+        "add_tag": "Přidat položku",
+        "clear_all": "Vymazat vše",
+        "loading": "Načítání...",
+        "not_found": "Nenalezeny žádné položky",
+        "type_to_search": "Zadejte hledaný text"
+      },
+      "autocomplete_select": {
+        "active": "Aktivní %{label} %{name}",
+        "placeholder": {
+          "multi": "Přidat \"%{name}\"",
+          "single": "Vybrat \"%{name}\""
+        },
+        "remove": "Odstranit %{name}"
+      },
+      "autocompleter": {
+        "notFoundText": "Nenalezeny žádné položky",
+        "placeholder": "Zadejte hledaný text",
+        "project": {
+          "placeholder": "Vybrat projekt"
+        }
+      },
+      "avatars": {
+        "empty_file_error": "Prosím nahrajte platný obrázek (jpg, png, gif)",
+        "error_image_too_large": "Obrázek je příliš velký.",
+        "label_choose_avatar": "Vyberte avatar ze souboru",
+        "text_upload_instructions": "Nahrajte svůj vlastní avatar o velikosti 128 pixelů. Větší soubory budou změněny a oříznuty tak, aby odpovídaly.\nNáhled avataru bude zobrazen před odesláním, jakmile jste vybrali obrázek.\n",
+        "uploading_avatar": "Nahrávám váš avatar.",
+        "wrong_file_format": "Povolené formáty jsou jpg, png, gif"
+      },
+      "backup": {
+        "attachments_disabled": "Přílohy nemusí být zahrnuty, protože přesahují maximální povolenou velikost. Můžete to změnit v konfiguraci (vyžaduje restartování serveru).",
+        "download_backup": "Stáhnout zálohu",
+        "include_attachments": "Zahrnout přílohy",
+        "info": "Zde můžete spustit zálohu. Proces může nějakou dobu trvat v závislosti na množství dat (zejména příloh), které máte. Budete dostávat e-mail, jakmile bude připraven.\n",
+        "last_backup": "Poslední záloha",
+        "last_backup_from": "Poslední záloha z",
+        "note": "Nová záloha přepíše předchozí zálohu. Lze požadovat pouze omezený počet záloh za den.\n",
+        "options": "Možnosti",
+        "request_backup": "Žádost o zálohu",
+        "title": "Zálohovat OpenProject"
+      },
+      "baseline": {
+        "apply": "Použít",
+        "clear": "Vyčistit",
+        "drop_down": {
+          "a_specific_date": "konkrétní datum",
+          "between_two_specific_dates": "mezi dvěma konkrétními daty",
+          "last_month": "Poslední měsíc",
+          "last_week": "poslední týden",
+          "last_working_day": "poslední pracovní den",
+          "none": "-",
+          "yesterday": "včera"
+        },
+        "from": "Od",
+        "header_description": "Zvýraznit změny provedené v tomto seznamu od té doby v minulosti.",
+        "help_description": "Referenční časové pásmo pro Baseline",
+        "icon_tooltip": {
+          "added": "Přidáno k zobrazení ve srovnávacím období",
+          "changed": "Udržováno s úpravami",
+          "removed": "Odstraněno ze zobrazení ve srovnávacím období "
+        },
+        "legends": {
+          "changes_between": "Změny mezi",
+          "changes_since": "Změny od",
+          "in_your_timezone": "Ve vašem místním časovém pásmu:",
+          "maintained_with_changes": "Udržováno se změnami",
+          "no_longer_meets_filter_criteria": "Již nesplňuje kritéria filtru",
+          "now_meets_filter_criteria": "Nyní splňuje kritéria filtru"
+        },
+        "show_changes_since": "Zobrazit změny od",
+        "time": "Čas",
+        "time_description": "Ve vašem místním čase: %{datetime}",
+        "to": "Do",
+        "toggle_title": "Směrný plán"
+      },
+      "bcf": {
+        "add_viewpoint": "Přidat pohled",
+        "delete_viewpoint": "Odstranit pohled",
+        "export": "Export",
+        "export_bcf_xml_file": "Exportovat soubor BCF XML (BCF verze 2.1)",
+        "import": "Import",
+        "import_bcf_xml_file": "Importovat soubor BCF XML (BCF verze 2.1)",
+        "label_bcf": "BCF",
+        "management": "Řízení BCF",
+        "refresh": "Aktualizovat\n",
+        "refresh_work_package": "Aktualizovat pracovní balíček",
+        "show_viewpoint": "Zobrazit pohled",
+        "viewpoint": "Bod pohledu"
+      },
+      "boards": {
+        "add_card": "Přidat kartu",
+        "add_list": "Přidat list na tabuli",
+        "add_list_modal": {
+          "labels": {
+            "assignee": "Vyberte uživatele, který chcete přidat jako nový seznam řešitelů",
+            "status": "Vyberte stav pro přidání jako nový seznam",
+            "subproject": "Vyberte podprojekt pro přidání jako nový seznam",
+            "subtasks": "Vyberte pracovní balíček, který chcete přidat jako nový seznam",
+            "version": "Vyberte verzi pro přidání jako nový seznam"
+          },
+          "warning": {
+            "add_members": "<a href=\"%{link}\">Přidejte nového člena do tohoto projektu</a> a znovu vyberte uživatele.",
+            "assignee": "Žádný člen neodpovídá hodnotě vašeho filtru.  <br>",
+            "no_member": "Tento projekt v současné době nemá žádné členy, kteří by mohli být přidáni.  <br>",
+            "status": "V současné době není k dispozici žádný stav. <br>\nBuď nejsou k dispozici žádné nebo již všechny byly přidány do tabule.\n"
+          }
+        },
+        "board_type": {
+          "action": "Akční tabule",
+          "action_by_attribute": "Akční tabule (%{attribute})",
+          "action_text": "Tabule s filtrovanými seznamy v atributu %{attribute} . Přesunutí pracovních balíčků do jiných seznamů aktualizuje jejich atribut.\n",
+          "action_text_assignee": "Tabule s automatickými sloupcemi založenými na přiřazených uživatelích. Ideal pro odesílání pracovních balíčků.\n",
+          "action_text_status": "Základní tabule ve stylu kanbanu se sloupci pro status jako je do Do, Probíhá, Done.\n",
+          "action_text_subprojects": "Boj s automatickými sloupce pro podprojekty. Přesunutí pracovních balíčků do jiných seznamů odpovídajícím způsobem aktualizuje podprojekt.\n",
+          "action_text_subtasks": "Tabule s automatickými sloupce pro podprojekty. Přesunutí pracovních balíčků do jiných seznamů odpovídajícím způsobem \n",
+          "action_text_version": "Tabule s automatickými sloupci na základě atributu verze. Ideal pro plánování vývoje produktů.\n",
+          "action_type": {
+            "assignee": "Řešitel",
+            "status": "Stav",
+            "subproject": "Podprojekt",
+            "subtasks": "nadřazený-podřazený",
+            "version": "verze"
+          },
+          "board_type_title": {
+            "assignee": "Řešitel",
+            "basic": "Základní",
+            "status": "Stav",
+            "subproject": "Podprojekt",
+            "subtasks": "nadřazený-podřazený",
+            "version": "Verze"
+          },
+          "free": "základní",
+          "free_text": "Začněte od začátku prázdnou tabulí ručním přidáváním karet a sloupců do této tabule.\n",
+          "select_attribute": "Atribut akce",
+          "select_board_type": "Vyberte prosím typ tabule, kterou potřebujete.",
+          "text": "Typ tabule"
+        },
+        "click_to_remove_list": "Kliknutím odstraníte tento seznam",
+        "configuration_modal": {
+          "display_settings": {
+            "card_mode": "Zobrazit jako karty",
+            "table_mode": "Zobrazit jako tabulku"
+          },
+          "title": "Konfigurovat tuto tabuli"
+        },
+        "create_new": "Vytvořit tabuli",
+        "error_attribute_not_writable": "Pracovní balíček nelze přesunout, do %{attribute} nelze zapisovat.",
+        "error_cannot_move_into_self": "Pracovní balíček nelze přesunout do vlastního sloupce.",
+        "error_loading_the_list": "Chyba při načítání seznamu: %{error_message}",
+        "error_permission_missing": "Chybí oprávnění k vytvoření veřejných dotazů",
+        "label_board_type": "Typ tabule",
+        "label_unnamed_board": "Nepojmenovaná tabule",
+        "label_unnamed_list": "Nepojmenovaný seznam",
+        "lists": {
+          "delete": "Odstranit seznam"
+        },
+        "new_board": "Nová tabule",
+        "text_hidden_list_warning": "Ne všechny seznamy se zobrazují, protože vám chybí oprávnění. Pro více informací kontaktujte svého administrátora.",
+        "version": {
+          "close_version": "Zavřít verzi",
+          "closed": "Uzavřeno",
+          "edit_version": "Upravit verzi",
+          "is_closed": "Verze je uzavřena. Do této verze nemohou být přidány žádné položky.",
+          "is_locked": "Verze je uzamčena. Do této verze nelze přidat žádné položky.",
+          "lock_version": "Uzamknout verzi",
+          "locked": "Uzamčeno",
+          "open_version": "Otevřít verzi",
+          "show_version": "Zobrazit verzi",
+          "unlock_version": "Odemknout verzi"
+        }
+      },
+      "button_add": "Přidat",
+      "button_add_watcher": "Přidat sledující",
+      "button_advanced_filter": "Pokročilý filtr",
+      "button_back": "Zpět",
+      "button_back_to_list_view": "Zpět na seznam",
+      "button_cancel": "Zrušit",
+      "button_change_project": "Přesunout do jiného projektu",
+      "button_check_all": "Zaškrtnout vše",
+      "button_close": "Zavřít",
+      "button_close_details": "Zavřít zobrazení podrobností",
+      "button_collapse_all": "Sbalit vše",
+      "button_configure-form": "Nastavení formuláře",
+      "button_confirm": "Potvrdit",
+      "button_continue": "Pokračovat",
+      "button_copy": "Kopírovat",
+      "button_copy_link_to_clipboard": "Kopírovat odkaz do schránky",
+      "button_copy_to_clipboard": "Kopírovat do schránky",
+      "button_copy_to_other_project": "Duplikovat v jiném projektu",
+      "button_create": "Vytvořit",
+      "button_custom-fields": "Vlastní pole",
+      "button_delete": "Odstranit",
+      "button_delete_watcher": "Smazat sledujícího uživatele",
+      "button_details_view": "Zobrazení podrobností",
+      "button_duplicate": "Kopie",
+      "button_edit": "Upravit",
+      "button_expand_all": "Rozbalit vše",
+      "button_export-atom": "Stáhnout Atom",
+      "button_filter": "Filtr",
+      "button_generate_pdf": "Generate PDF",
+      "button_list_view": "Zobrazit jako seznam",
+      "button_log_costs": "Logovat jednotkové náklady",
+      "button_log_time": "Čas protokolu",
+      "button_more": "Více",
+      "button_more_actions": "Další akce",
+      "button_open_details": "Otevřít podrobností - panel",
+      "button_open_fullscreen": "Otevřít podrobnosti - fullscreen",
+      "button_quote": "Citovat",
+      "button_save": "Uložit",
+      "button_settings": "Nastavení",
+      "button_show_cards": "Zobrazit zobrazení karty",
+      "button_show_fullscreen": "Celá obrazovka",
+      "button_show_gantt": "Zobrazit jako Gantt",
+      "button_show_list": "Zobrazit seznam",
+      "button_show_table": "Zobrazit jako tabulku",
+      "button_show_view": "Celá obrazovka",
+      "button_uncheck_all": "Odznačit vše",
+      "button_update": "Aktualizovat",
+      "calendar": {
+        "create_new": "Vytvořit nový kalendář",
+        "title": "Kalendář",
+        "too_many": "Celkem je zde %{count} pracovních balíčků, ale pouze %{max} lze zobrazit.",
+        "unsaved_title": "Nepojmenovaný kalendář"
+      },
+      "caption_rate_history": "Historie sazeb",
+      "card": {
+        "add_new": "Přidat novou kartu",
+        "highlighting": {
+          "entire_card_by": "Celá karta od",
+          "inline": "Zvýraznit inlini:"
+        },
+        "remove_from_list": "Odstranit kartu ze seznamu"
+      },
+      "chart": {
+        "axis_criteria": "Kritéria osy",
+        "errors": {
+          "could_not_load": "Data k zobrazení grafu nelze načíst. Možná chybí potřebná oprávnění."
+        },
+        "modal_title": "Konfigurace grafu pracovních balíčků",
+        "tabs": {
+          "dataset": "Dataset %{number}",
+          "graph_settings": "Obecné"
+        },
+        "type": "Typ grafu",
+        "types": {
+          "bar": "Lišta",
+          "doughnut": "Koberec",
+          "horizontal_bar": "Vodorovný pruh",
+          "line": "Řádek",
+          "pie": "Koláč",
+          "polar_area": "Polární oblast",
+          "radar": "Radar"
+        }
+      },
+      "clipboard": {
+        "browser_error": "Váš prohlížeč nepodporuje, kopírování do schránky. Ručně zkopírujte vybraný text: %{content}",
+        "copied_successful": "Úspěšně zkopírováno do schránky!"
+      },
+      "close_filter_title": "Zavřít filtr",
+      "close_form_title": "Zavřít formulář",
+      "close_popup_title": "Zavřít okno",
+      "custom_actions": {
+        "date": {
+          "current_date": "Aktuální datum",
+          "specific": "zapnuto"
+        }
+      },
+      "dashboards": {
+        "label": "Nástěnka"
+      },
+      "description_available_columns": "Dostupné sloupce",
+      "description_current_position": "Jste zde: ",
+      "description_select_work_package": "Vyberte pracovní balíček #%{id}",
+      "description_subwork_package": "Podřazený pracovního balíčku #%{id}",
+      "editor": {
+        "ckeditor_error": "Došlo k chybě v CKEditoru",
+        "error_saving_failed": "Uložení dokumentu se nezdařilo s následující chybou: %{error}",
+        "macro": {
+          "attribute_reference": {
+            "invalid_attribute": "Vybraný atribut '%{name}' neexistuje.",
+            "macro_help_tooltip": "Tento textový segment je dynamicky rendrován makrem.",
+            "nested_macro": "Tento makro rekurzivně odkazuje na %{model} %{id}.",
+            "not_found": "Požadovaný zdroj nebyl nalezen."
+          },
+          "child_pages": {
+            "button": "Odkazy na podřízené stránky",
+            "hint": "Ponechte toto pole prázdné pro zobrazení všech podstránek aktuální stránky. Pokud chcete odkazovat na jinou stránku, zadejte její název nebo slug.\n",
+            "include_parent": "Zahrnout nadřazený",
+            "page": "Stránka wiki",
+            "text": "[Placeholder] Odkazy na podřízené stránky z",
+            "this_page": "tato stránka"
+          },
+          "code_block": {
+            "button": "Insert code snippet",
+            "language": "Formátování jazyka",
+            "language_hint": "Zadejte jazyk, který bude použit pro zvýraznění (pokud je podporováno).",
+            "title": "Insert / edit Code snippet"
+          },
+          "dropdown": {
+            "chose_macro": "Vybrat makro",
+            "macros": "Makra"
+          },
+          "embedded_calendar": {
+            "text": "[Placeholder] Vložený kalendář"
+          },
+          "embedded_table": {
+            "button": "Vložit tabulku pracovního balíčku",
+            "text": "[Placeholder] Vložený tabulka pracovního balíčku"
+          },
+          "error": "Nelze rozšířit makro %{message}",
+          "toc": "Obsah",
+          "toolbar_help": "Klikněte pro výběr widgetu a zobrazení panelu nástrojů. Dvojklikem upravíte widget",
+          "wiki_page_include": {
+            "button": "Zahrnout obsah jiné wiki stránky",
+            "hint": "Zahrnout obsah jiné wiki stránky zadáním jejího názvu nebo sluchu.\nMůžete zahrnout wiki stránku jiného projektu tak, že je oddělíte dvojtečkou jako následující příklad.\n",
+            "not_set": "(ještě nenastaveno)",
+            "page": "Stránka wiki",
+            "text": "[Placeholder] Včetně wiki stránky z"
+          },
+          "work_package_button": {
+            "button": "Vložit tlačítko pro vytvoření pracovního balíčku",
+            "button_style": "Použít styl tlačítka",
+            "button_style_hint": "Volitelné: Zkontrolujte, zda se makro zobrazí jako tlačítko, ne jako odkaz.",
+            "type": "Typ pracovního balíčku",
+            "with_type": "Vytvořit pracovní balíček (typ: %{typename})",
+            "without_type": "Vytvořit pracovní balíček"
+          }
+        },
+        "mode": {
+          "manual": "Přepněte do Markdown zdroje",
+          "wysiwyg": "Přepnout na WYSIWYG Editor"
+        },
+        "no_revisions": "Nebyly nalezeny žádné místní úpravy",
+        "preview": "Přepnout režim náhledu",
+        "revisions": "Zobrazit místní úpravy",
+        "source_code": "Přepnout zdrojový mód Markdown"
+      },
+      "enumeration_activities": "Aktivity (sledování času)",
+      "enumeration_doc_categories": "Kategorie dokumentů",
+      "enumeration_work_package_priorities": "Priority pracovního balíčku",
+      "error": {
+        "cannot_save_changes_with_message": "Nelze uložit změny kvůli následující chybě: %{error}",
+        "embedded_table_loading": "Vložené zobrazení nelze načíst: %{message}",
+        "internal": "Došlo k vnitřní chybě.",
+        "query_saving": "Zobrazení nelze uložit."
+      },
+      "error_attachment_upload": "Nahrání souboru se nezdařilo: %{error}",
+      "error_attachment_upload_permission": "Nemáte oprávnění k nahrávání souborů na tento zdroj.",
+      "error_could_not_resolve_user_name": "Nemohu zjistit název verze",
+      "error_could_not_resolve_version_name": "Nemohu zjistit název verze",
+      "exclusion_info": {
+        "modal": {
+          "content": "The status '%{status_name}' has been configured to be excluded from hierarchy totals of Work, Remaining work, and % Complete. The totals do not take this value into account.",
+          "title": "Status vyloučen z součtů hierarchie"
+        }
+      },
+      "favorite_projects": {
+        "no_results": "Nemáte žádné oblíbené projekty",
+        "no_results_subtext": "Add one or multiple projects as favorite through their overview or in a project list."
+      },
+      "field_value_enter_prompt": "Zadejte hodnotu pro '%{field}'",
+      "filter": {
+        "description": {
+          "text_close_filter": "Chcete-li vybrat položku, ponechte zaostření například stisknutím klávesy Enter. Chcete-li ponechat bez filtru, vyberte první položku (prázdnou).",
+          "text_open_filter": "Otevřete tento filtr \"ALT\" a šipkami."
+        },
+        "more_values_not_shown": "K dispozici je ještě %{total} výsledků, hledejte pro filtrování výsledků.",
+        "noneElement": "(žádný)",
+        "sorting": {
+          "criteria": {
+            "one": "První kritérium třídění",
+            "three": "Třetí kritérium třídění",
+            "two": "Druhé kritérium třídění"
+          }
+        },
+        "time_zone_converted": {
+          "only_end": "Do %{to} ve vašem místním čase.",
+          "only_start": "Od %{from} ve vašem místním čase.",
+          "two_values": "%{from} - %{to} ve vašem místním čase."
+        },
+        "value_spacer": "-"
+      },
+      "forms": {
+        "advanced_settings": "Pokročilá nastavení",
+        "load_error_message": "Při načítání formuláře došlo k chybě",
+        "submit_success_message": "Formulář byl úspěšně odeslán",
+        "validation_error_message": "Opravte prosím chyby ve formuláři"
+      },
+      "gantt_chart": {
+        "button_activate": "Zobrazit Ganttův diagram",
+        "button_deactivate": "Skrýt Gantt",
+        "filter": {
+          "noneSelection": "(žádný)"
+        },
+        "label": "Ganttův diagram",
+        "labels": {
+          "bar": "Popisky lišty",
+          "description": "Vyberte atributy, které chcete zobrazit v příslušných pozicích Ganttova diagramu. Všimněte si, že při najetí kursorem myši budou místo těchto atributů zobrazeny jeho popisky s daty.\n",
+          "farRight": "Dále vpravo",
+          "left": "Vlevo",
+          "right": "Vpravo",
+          "title": "Konfigurace štítku"
+        },
+        "quarter_label": "Q%{quarter_number}",
+        "selection_mode": {
+          "notification": "Kliknutím na libovolný zvýrazněný pracovní balíček vytvoříte vztah. Stiskněte ESC pro zrušení."
+        },
+        "zoom": {
+          "auto": "Automatické přiblížení",
+          "days": "Dny",
+          "description": "Vyberte počáteční úroveň přiblížení, která by se měla zobrazit, pokud není autozoom dostupný.\n",
+          "in": "Přiblížit",
+          "months": "Měsíce",
+          "out": "Oddálit",
+          "quarters": "Čtvrtletí",
+          "weeks": "Týdny",
+          "years": "Roky"
+        }
+      },
+      "general_text_No": "Ne",
+      "general_text_Yes": "Ano",
+      "general_text_no": "ne",
+      "general_text_yes": "ano",
+      "github_integration": {
+        "github_actions": "Akce",
+        "pull_requests": {
+          "merged_message": "Požadavek na natažení #%{pr_number} %{pr_link} pro %{repository_link} byl %{pr_state} od %{github_user_link}.",
+          "message": "Požadavek na natažení #%{pr_number} %{pr_link} pro %{repository_link} autora %{github_user_link} byl %{pr_state}.",
+          "referenced_message": "Požadavek na natažení #%{pr_number} %{pr_link} pro %{repository_link} autora %{github_user_link} odkazoval na tento pracovní balíček.",
+          "states": {
+            "closed": "zavřeno",
+            "draft": "navrženo",
+            "merged": "sloučeno",
+            "opened": "otevřeno",
+            "ready_for_review": "označeno jako připraveno k revizi"
+          }
+        },
+        "tab_header": {
+          "copy_menu": {
+            "description": "Kopírovat úryvky gitu do schránky",
+            "label": "Git snippets"
+          },
+          "git_actions": {
+            "branch_name": "Název pobočky",
+            "cmd": "Vytvořit větev s prázdným commitem",
+            "commit_message": "odevzdat zprávu",
+            "copy_error": "❌ Kopírování selhalo!",
+            "copy_success": "✅ zkopírováno!",
+            "title": "Rychlé snippety pro Git"
+          },
+          "title": "Pull Requesty"
+        },
+        "tab_prs": {
+          "empty": "Zatím nejsou propojeny žádné požadavky na natažení. Propojit existující PR pomocí kódu <code>OP#%{wp_id}</code> v PR popisu nebo vytvořit nové PR."
+        },
+        "work_packages": {
+          "tab_name": "GitHub"
+        }
+      },
+      "gitlab_integration": {
+        "gitlab_pipelines": "Datové kanály",
+        "tab_header_issue": {
+          "title": "Problémy"
+        },
+        "tab_header_mr": {
+          "copy_menu": {
+            "description": "Kopírovat git snippents do schránky",
+            "label": "Git snippets"
+          },
+          "create_mr": {
+            "description": "Vytvořit požadavek na sloučení",
+            "label": "Vytvořit MR"
+          },
+          "git_actions": {
+            "branch_name": "název větve",
+            "cmd": "Vytvořit větev s prázdným commitem",
+            "commit_message": "Commitnout zprávu",
+            "copy_error": "❌ Kopírování selhalo!",
+            "copy_success": "✅ Zkopírováno!",
+            "title": "Rychlé snippety pro Git"
+          },
+          "title": "Sloučit požadavky"
+        },
+        "tab_issue": {
+          "empty": "Zatím nejsou k dispozici žádné propojené problémy. Propojte existující problém pomocí kódu <code>OP#%{wp_id}</code> (nebo <code>PP#%{wp_id}</code> pro soukromé odkazy) v názvu/popisu problému nebo vytvořte nový problém."
+        },
+        "tab_mrs": {
+          "empty": "Zatím nejsou k dispozici žádné propojené problémy. Propojte existující problém pomocí kódu <code>OP#%{wp_id}</code> (nebo <code>PP#%{wp_id}</code> pro soukromé odkazy) v názvu/popisu problému nebo vytvořte nový problém."
+        },
+        "updated_on": "Aktualizováno",
+        "work_packages": {
+          "tab_name": "GitLab"
+        }
+      },
+      "global_search": {
+        "all_projects": "Ve všech projektech",
+        "close_search": "Zavřít hledání",
+        "current_project": "V tomto projektu",
+        "current_project_and_all_descendants": "V tomto projektu + podprojektech",
+        "recently_viewed": "Nedávno zobrazené",
+        "search": "Vyhledávání",
+        "title": {
+          "all_projects": "všechny projekty",
+          "project_and_subprojects": "a všechny podprojekty",
+          "search_for": "Hledat"
+        }
+      },
+      "grid": {
+        "add_widget": "Přidat widget",
+        "configure": "Konfigurovat widget",
+        "remove": "Odstranit widget",
+        "widgets": {
+          "custom_text": {
+            "title": "Vlastní text"
+          },
+          "documents": {
+            "no_results": "Zatím žádné dokumenty.",
+            "title": "Dokumenty"
+          },
+          "members": {
+            "add": "Člen",
+            "no_results": "Žádní viditelní členové.",
+            "title": "Členové",
+            "too_many": "Zobrazuji %{count} z %{total} členů.",
+            "view_all_members": "Zobrazit všechny členy"
+          },
+          "missing_permission": "Nemáte potřebná oprávnění k zobrazení tohoto widgetu.",
+          "news": {
+            "at": "v",
+            "no_results": "Žádné novinky.",
+            "title": "Novinky"
+          },
+          "project_description": {
+            "no_results": "Zatím nebyl napsán žádný popis. Můžete ho uvést v \"Nastavení projektu\".",
+            "title": "Popis projektu"
+          },
+          "project_favorites": {
+            "no_results": "Momentálně nemáte žádné oblíbené projekty. Klikněte na ikonu hvězdičky v nástěnce projektu pro přidání jednoho do oblíbených.",
+            "title": "Oblíbené projekty"
+          },
+          "project_status": {
+            "at_risk": "Riziko",
+            "discontinued": "Zrušeno",
+            "finished": "Dokončeno",
+            "not_set": "Nenastaveno",
+            "not_started": "Nezahájeno",
+            "off_track": "Mimo plán",
+            "on_track": "Dle plánu",
+            "title": "Stav projektu"
+          },
+          "subprojects": {
+            "no_results": "Žádné podprojekty.",
+            "title": "Podprojekty"
+          },
+          "time_entries_current_user": {
+            "displayed_days": "Dny zobrazené ve widgetu:",
+            "title": "Můj strávený čas"
+          },
+          "time_entries_list": {
+            "no_results": "Žádné záznamy za posledních 7 dní.",
+            "title": "Strávený čas (posledních 7 dní)"
+          },
+          "work_packages_accountable": {
+            "title": "Pracovní balíčky, za které zodpovídám"
+          },
+          "work_packages_assigned": {
+            "title": "Pracovní balíčky přidělené mně"
+          },
+          "work_packages_calendar": {
+            "title": "Kalendář"
+          },
+          "work_packages_created": {
+            "title": "Pracovní balíčky vytvořené mnou"
+          },
+          "work_packages_graph": {
+            "title": "Graf pracovních balíčků"
+          },
+          "work_packages_overview": {
+            "placeholder": "Kliekněte pro editaci...",
+            "title": "Přehled pracovních balíčků"
+          },
+          "work_packages_table": {
+            "title": "Tabulka pracovních balíčků"
+          },
+          "work_packages_watched": {
+            "title": "Pracovní balíčky, které sleduji"
+          }
+        }
+      },
+      "hal": {
+        "error": {
+          "edit_prohibited": "Editace %{attribute} je zablokována pro tento pracovní balíček. Buď je tento atribut odvozen od vztahů (např. podřazený) nebo není konfigurovatelný.",
+          "format": {
+            "date": "%{attribute} není platné datum - RRRR-MM-DD očekáváno."
+          },
+          "general": "Došlo k chybě.",
+          "update_conflict_refresh": "Klikněte zde pro aktualizaci na nejnovější verzi."
+        }
+      },
+      "help_texts": {
+        "show_modal": "Show help text"
+      },
+      "homescreen": {
+        "blocks": {
+          "new_features": {
+            "16_1": {
+              "standard": {
+                "new_features_html": "The release contains various new features and improvements, such as <br> <ul class=\"%{list_styling_class}\"> <li>Structure the project life cycle with phases and phase gates.</li> <li>Export meetings in PDF format.</li> <li>Set smart default options for reminders.</li> <li>Use negative lag for work package dates.</li> <li>Display hierarchy trees for hierarchy custom fields.</li> <li>Benefit from improved accessibility for the date picker with ARIA live regions.</li> </ul>\n"
+              }
+            },
+            "learn_about": "Learn more about all new features",
+            "text_new_features": "Přečtěte si o nových funkcích a aktualizacích produktů."
+          }
+        }
+      },
+      "ical_sharing_modal": {
+        "copy_url_label": "Kopírovat URL",
+        "description": "Můžete použít URL (iCalendar) k odběru tohoto kalendáře v externím klientovi a zobrazit aktuální informace o pracovním balíčku.",
+        "ical_generation_error_text": "Při generování adresy URL kalendáře došlo k chybě.",
+        "inital_setup_error_message": "Při načítání dat došlo k chybě.",
+        "success_message": "URL \"%{name}\" byla úspěšně zkopírována do vaší schránky. Vložte ji do vašeho klienta kalendáře pro dokončení odběru.",
+        "title": "Přihlásit kalendář k odběru",
+        "token_name_description_text": "Pokud se přihlásíte k odběru tohoto kalendáře z více zařízení, toto jméno vám pomůže rozlišit mezi nimi v seznamu <a href=\"my/access_token\", target=\"_blank\">přístupových tokenů</a>.",
+        "token_name_label": "Kde to použijete?",
+        "token_name_placeholder": "Zadejte jméno, např. \"Telefon\"",
+        "warning": "Prosím, nesdílejte tuto URL s ostatními uživateli. Kdokoli s tímto odkazem bude moci zobrazit podrobnosti o pracovním balíčku bez účtu nebo hesla."
+      },
+      "ifc_models": {
+        "empty_warning": "Tento projekt ještě nemá žádné modely IFC.",
+        "keyboard_input_disabled": "Divák nemá ovládání klávesnice. Klikněte na prohlížeč pro ovládání klávesnice.",
+        "models": {
+          "ifc_models": "IFC modely"
+        },
+        "use_this_link_to_manage": "Pomocí tohoto odkazu můžete nahrát a spravovat vaše IFC modely",
+        "views": {
+          "split": "Prohlížeč a tabulka",
+          "split_cards": "Prohlížeč a karty",
+          "viewer": "Prohlížeč"
+        }
+      },
+      "include_projects": {
+        "apply": "Použít",
+        "clear_selection": "Zrušit výběr",
+        "include_subprojects": "Zahrnout všechny podprojekty",
+        "no_results": "Žádný projekt neodpovídá vašim kritériím vyhledávání.",
+        "search_placeholder": "Hledat projekt...",
+        "selected_filter": {
+          "all": "Všechny projekty",
+          "selected": "Pouze vybrané"
+        },
+        "title": "Projekty",
+        "toggle_title": "Zahrnout projekty",
+        "tooltip": {
+          "current_project": "Toto je aktuální projekt, ve kterém se nacházíte.",
+          "does_not_match_search": "Projekt neodpovídá kritériím vyhledávání.",
+          "include_all_selected": "Projekt je již zahrnut, protože Zahrnout všechny podprojekty je povoleno."
+        }
+      },
+      "inplace": {
+        "btn_preview_disable": "Zakázat náhled",
+        "btn_preview_enable": "Náhled",
+        "button_cancel": "%{attribute}: Zrušit",
+        "button_cancel_all": "Zrušit",
+        "button_edit": "%{attribute}: Upravit",
+        "button_save": "%{attribute}: Uložit",
+        "button_save_all": "Uložit",
+        "clear_value_label": "-",
+        "errors": {
+          "maxlength": "%{field} nemůže obsahovat více než %{maxLength} číslic",
+          "messages_on_field": "Toto pole je neplatné: %{messages}",
+          "minlength": "%{field} nemůže obsahovat méně než %{minLength} číslic",
+          "number": "%{field} není platné číslo",
+          "required": "%{field} nemůže být prázdné"
+        },
+        "link_formatting_help": "Nápověda pro formátování textu",
+        "null_value_label": "Žádná hodnota"
+      },
+      "invite_user_modal": {
+        "back": "Zpět",
+        "invite": "Pozvat",
+        "message": {
+          "description": "Pošleme uživateli e-mail, ke kterému můžete přidat osobní zprávu. Vysvětlení pozvánky by mohlo být užitečné, nebo pár informací o projektu, které by jim pomohly začít.",
+          "label": "Pozvánka",
+          "next_button": "Další"
+        },
+        "principal": {
+          "already_member_message": "Už jsi členem %{project}",
+          "create_new_placeholder": "Vytvořit nový placeholder",
+          "invite_user": "Pozvat",
+          "label": {
+            "name": "Jméno",
+            "name_or_email": "Jméno nebo e-mailová adresa"
+          },
+          "next_button": "Další",
+          "no_results_group": "Nebyly nalezeny žádné skupiny",
+          "no_results_placeholder": "Nebyly nalezeny žádné placeholdery",
+          "no_results_user": "Nebyli nalezeni žádní uživatelé",
+          "required": {
+            "group": "Zvolte prosím skupinu.",
+            "placeholder": "Vyberte prosím placeholder",
+            "user": "Vyberte prosím uživatele"
+          }
+        },
+        "project": {
+          "label": "Projekt",
+          "lacking_permission": "Vyberte jiný projekt, protože nemáte oprávnění pro přiřazení uživatelů k aktuálně vybranému.",
+          "lacking_permission_info": "Chybí vám oprávnění k přiřazení uživatelů k projektu, ve kterém se právě nacházíte. Musíte vybrat jiný.",
+          "next_button": "Další",
+          "no_invite_rights": "Nejste oprávněni pozvat členy do tohoto projektu",
+          "no_results": "Nebyly nalezeny žádné projekty",
+          "required": "Vyberte projekt"
+        },
+        "role": {
+          "description": "Toto je role, kterou uživatel obdrží, když se připojí k vašemu projektu. Role vymezuje, která změny mohou provádět a jaké informace mohou vidět. <a href=\"https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions\" target=\"_blank\"> Další informace o rolích a oprávněních. </a>",
+          "label": "Role v %{project}",
+          "next_button": "Další",
+          "no_roles_found": "Nebyly nalezeny žádné role.",
+          "required": "Vyberte prosím roli"
+        },
+        "success": {
+          "description": {
+            "group": "Skupina je nyní součástí %{project}. Mezitím již můžete s touto skupinou plánovat a přiřadit například pracovní balíčky.",
+            "placeholder": "Zástupného uživatele lze nyní použít v %{project}. Mezitím již můžete plánovat s tímto uživatelem a přiřadit mu například pracovní balíčky.",
+            "user": "Uživatel se nyní může přihlásit do %{project}. Mezitím již můžete s tímto uživatelem plánovat a přiřazovat například pracovní balíčky."
+          },
+          "next_button": "Pokračovat",
+          "title": "%{principal} byl pozván!"
+        },
+        "summary": {
+          "next_button": "Odeslat pozvánku"
+        },
+        "title": {
+          "Group": "Skupina",
+          "PlaceholderUser": "placeholder uživatel",
+          "User": "uživatel",
+          "invite": "Pozvat uživatele",
+          "invite_principal_to_project": "Pozvat %{principal} do %{project}",
+          "invite_to_project": "Pozvat %{type} do %{project}"
+        },
+        "type": {
+          "group": {
+            "description": "Oprávnění založená na přiřazené roli ve vybraném projektu",
+            "title": "Skupina"
+          },
+          "placeholder": {
+            "description": "Nemá přístup k projektu a nejsou odesílány žádné e-maily.",
+            "description_no_ee": "Nemá přístup k projektu a nejsou odeslány žádné e-maily. <br>Podívejte se na <a href=\"%{eeHref}\" target=\"_blank\">Enterprise Edition</a>",
+            "title": "placeholder uživatel",
+            "title_no_ee": "placeholder uživatel (pouze funkce Enterprise Edition)"
+          },
+          "required": "Vyberte prosím typ, který chcete pozvat",
+          "user": {
+            "description": "Oprávnění založená na přiřazené roli ve vybraném projektu",
+            "title": "Uživatel"
+          }
+        }
+      },
+      "label_activate": "Aktivovat",
+      "label_activity_show_all": "Zobrazit všechny aktivity",
+      "label_activity_show_only_comments": "Zobrazit aktivity pouze s komentáři",
+      "label_add_attachments": "Připojit soubory",
+      "label_add_column_after": "Přidat sloupec za",
+      "label_add_column_before": "Přidat sloupec před",
+      "label_add_columns": "Přidat sloupce",
+      "label_add_comment": "Přidat komentář",
+      "label_add_comment_title": "Zde můžete komentovat a pomocí @ označit uživatele",
+      "label_add_description": "Přidat popis pro %{file}",
+      "label_add_row_after": "Přidat řádek za",
+      "label_add_row_before": "Přidat řádek před",
+      "label_add_selected_columns": "Přidat vybrané sloupce",
+      "label_added_by": "přidal",
+      "label_added_time_by": "Přidal <a href=\"%{authorLink}\">%{author}</a> v %{age}",
+      "label_ago": "dnů před",
+      "label_all": "vše",
+      "label_all_uppercase": "Vše",
+      "label_all_work_packages": "všechny pracovní balíčky",
+      "label_and": "a",
+      "label_ascending": "Vzestupně",
+      "label_assignee": "Řešitel",
+      "label_attachments": "Přílohy",
+      "label_author": "Autor: %{user}",
+      "label_avatar": "Avatar",
+      "label_between": "mezi",
+      "label_board": "Tabule",
+      "label_board_locked": "Uzamčeno",
+      "label_board_plural": "Tabule",
+      "label_board_sticky": "Přilepit",
+      "label_cancel_comment": "Stornovat komentář",
+      "label_change": "Změna",
+      "label_children_derived_duration": "Délka trvání pracovního balíčku odvozena",
+      "label_closed_work_packages": "uzavřeno",
+      "label_collapse": "Sbalit",
+      "label_collapse_all": "Sbalit vše",
+      "label_collapsed": "sbalené",
+      "label_columns": "Sloupce",
+      "label_comment": "Komentář",
+      "label_committed_at": "%{committed_revision_link} v %{date}",
+      "label_committed_link": "provedené revize %{revision_identifier}",
+      "label_contains": "obsahuje",
+      "label_create": "Vytvořit",
+      "label_create_work_package": "Vytvořit nový pracovní balíček",
+      "label_created_by": "Vytvořil(a)",
+      "label_created_on": "vytvořeno",
+      "label_current": "aktuální",
+      "label_custom_queries": "Soukromé",
+      "label_date": "Datum",
+      "label_date_with_format": "Zadejte %{date_attribute} v následujícím formátu: %{format}",
+      "label_deactivate": "Deaktivovat",
+      "label_default_queries": "Výchozí",
+      "label_descending": "Sestupně",
+      "label_description": "Popis",
+      "label_details": "Podrobnosti",
+      "label_display": "Zobrazit",
+      "label_drop_files": "Sem přetáhněte soubory pro připojení souborů.",
+      "label_drop_folders_hint": "Není možné použít složku jako přílohu. Prosím vyberte jednotlivé soubory.",
+      "label_drop_or_click_files": "Sem přetáhněte soubory nebo klikněte pro připojení souborů.",
+      "label_edit_comment": "Upravit komentář",
+      "label_edit_status": "Úprava stavu pracovního balíčku",
+      "label_email": "E-mail",
+      "label_equals": "je",
+      "label_expand": "Rozbalit",
+      "label_expand_all": "Rozbalit vše",
+      "label_expand_project_menu": "Rozbalit nabídku projektu",
+      "label_expanded": "rozšířené",
+      "label_export": "Export",
+      "label_export_preparing": "Export je připraven a bude brzy k stažení.",
+      "label_favorites": "Oblíbené",
+      "label_filename": "Soubor",
+      "label_files_to_upload": "Tyto soubory budou nahrány:",
+      "label_filesize": "Velikost",
+      "label_formattable_attachment_hint": "Připojit a propojit soubory smazáním tohoto pole nebo vložením ze schránky.",
+      "label_general": "Obecné",
+      "label_global_queries": "Veřejné",
+      "label_greater_or_equal": ">=",
+      "label_group": "Skupina",
+      "label_group_by": "Seskupit podle",
+      "label_group_plural": "Skupiny",
+      "label_hide_attributes": "Zobrazit méně",
+      "label_hide_column": "Skrýt sloupec",
+      "label_hide_project_menu": "Sbalit nabídku projektu",
+      "label_hour": "hodina",
+      "label_hours": "hodiny",
+      "label_import": "Import",
+      "label_in": "v",
+      "label_in_less_than": "za méně než",
+      "label_in_more_than": "za více než",
+      "label_incoming_emails": "Příchozí e-maily",
+      "label_information_plural": "Informace",
+      "label_invalid": "Neplatné",
+      "label_last_updated_on": "Naposled aktualizováno",
+      "label_latest_activity": "Poslední aktivita",
+      "label_learn_more_link": "Více informací",
+      "label_less_or_equal": "<=",
+      "label_less_than_ago": "před méně jak (dny)",
+      "label_loading": "Načítání...",
+      "label_mail_notification": "E-mailová upozornění",
+      "label_manage_columns": "Správa a uspořádání sloupců",
+      "label_me": "já",
+      "label_meeting_agenda": "Agenda",
+      "label_meeting_minutes": "Zápis",
+      "label_meetings": "Schůzky",
+      "label_menu_collapse": "sbalit",
+      "label_menu_expand": "rozbalit",
+      "label_moderate_comment": "Moderate comment",
+      "label_more_than_ago": "před více jak (dny)",
+      "label_next": "Další",
+      "label_no_color": "Bez barvy",
+      "label_no_data": "Žádná data k zobrazení",
+      "label_no_date": "žádné datum",
+      "label_no_due_date": "žádné datum dokončení",
+      "label_no_start_date": "žádné datum začátku",
+      "label_no_value": "Žádná hodnota",
+      "label_none": "žádný",
+      "label_not_contains": "neobsahuje",
+      "label_not_equals": "není",
+      "label_on": "zapnuto",
+      "label_open_context_menu": "Otevřít kontextovou nabídku",
+      "label_open_menu": "Otevřít nabídku",
+      "label_open_work_packages": "open",
+      "label_password": "Heslo",
+      "label_per_page": "Na stránku:",
+      "label_please_wait": "Čekejte prosím",
+      "label_press_enter_to_save": "Stiskněte Enter pro uložení.",
+      "label_preview": "Náhled",
+      "label_previous": "Předchozí",
+      "label_project": "Projekt",
+      "label_project_list": "Seznamy projektů",
+      "label_project_plural": "Projekty",
+      "label_public_query": "Veřejné",
+      "label_quote_comment": "Citovat tento komentář",
+      "label_recent": "Nedávné",
+      "label_rejected_files": "Tyto soubory nelze nahrát:",
+      "label_rejected_files_reason": "Tyto soubory nelze nahrát, protože jejich velikost je větší než %{maximumFilesize}",
+      "label_remove": "Odstranit",
+      "label_remove_all_files": "Odstranit všechny soubory",
+      "label_remove_column": "Odstranit sloupec",
+      "label_remove_columns": "Odstranit vybrané sloupce",
+      "label_remove_file": "Odstranit %{fileName}",
+      "label_remove_row": "Odstranit řádek",
+      "label_remove_watcher": "Odstranit sledujícího %{name}",
+      "label_report": "Hlášení",
+      "label_repository_plural": "Repozitáře",
+      "label_reset": "Reset",
+      "label_save_as": "Uložit jako",
+      "label_search_columns": "Vyhledávání ve sloupci",
+      "label_select_project": "Vyberte projekt",
+      "label_select_watcher": "Zvolte sledujícího...",
+      "label_selected_filter_list": "Vybrané filtry",
+      "label_show_attributes": "Zobrazit všechny atributy",
+      "label_show_in_menu": "Zobrazit pohled v menu",
+      "label_sort_by": "Seřadit podle",
+      "label_sort_higher": "Přesunout výš",
+      "label_sort_lower": "Přesunout níž",
+      "label_sorted_by": "řazeno podle",
+      "label_sorting": "Řazení",
+      "label_spent_time": "Strávený čas",
+      "label_star_query": "Oblíbená",
+      "label_starred_queries": "Oblíbené",
+      "label_subject": "Předmět",
+      "label_sum": "Suma",
+      "label_sum_for": "Součet pro",
+      "label_this_week": "tento týden",
+      "label_time_entry_plural": "Strávený čas",
+      "label_today": "Dnes",
+      "label_total_amount": "Celkem: %{amount}",
+      "label_total_progress": "Celkový průběh %{percent}%",
+      "label_total_sum": "Celková SUMA",
+      "label_unwatch": "Přestat sledovat",
+      "label_unwatch_work_package": "Přestat sledovat pracovní balíček",
+      "label_up": "Nahoru",
+      "label_updated_on": "aktualizováno",
+      "label_upload_counter": "Dokončeno %{done} z %{count} souborů",
+      "label_upload_notification": "Nahrávám soubory...",
+      "label_uploaded_by": "Nahrál",
+      "label_user_plural": "Uživatelé",
+      "label_validation_error": "Pracovní balíček nemohl být uložen z důvodu následujících chyb:",
+      "label_value_derived_from_children": "(hodnota odvozená od dětí)",
+      "label_version_plural": "Verze",
+      "label_view_has_changed": "Toto zobrazení obsahuje neuložené změny. Klepnutím je uložíte.",
+      "label_visibility_settings": "Viditelnost zobrazení",
+      "label_wait": "Počkejte prosím na konfiguraci...",
+      "label_warning": "Upozornění",
+      "label_watch": "Sledovat",
+      "label_watch_work_package": "Sledovat pracovní balíček",
+      "label_watcher_added_successfully": "Sledující úspěšně přidán!",
+      "label_watcher_deleted_successfully": "Sledující úspěšně odstraněn!",
+      "label_work_package": "Pracovní balíček",
+      "label_work_package_context_menu": "Kontextové menu pracovního balíčku",
+      "label_work_package_details_you_are_here": "Jste na kartě %{tab} pro %{type} %{subject}.",
+      "label_work_package_parent": "Nadřazený pracovní balíček",
+      "label_work_package_plural": "Pracovní balíčky",
+      "label_work_package_upload_notification": "Nahrávám soubory pro pracovní balíček č.%{id}: %{subject}",
+      "label_wp_id_added_by": "#%{id} přidal(a) %{author}",
+      "modals": {
+        "button_apply": "Použít",
+        "button_cancel": "Zrušit",
+        "button_delete": "Vymazat",
+        "button_save": "Uložit",
+        "button_submit": "Potvrdit",
+        "destroy_time_entry": {
+          "text": "Opravdu chcete odstranit následující časovou položku?",
+          "title": "Potvrdit odstranění záznamu času"
+        },
+        "destroy_work_package": {
+          "bulk_text": "Opravdu chcete odstranit %{label}?",
+          "confirm_deletion_children": "Jsem si vědom, že všechny potomky uvedených pracovních balíčků budou rekurzivně odstraněny.",
+          "deletes_children": "Všechny podřízené pracovní balíčky a jejich potomci budou také rekurzivně odstraněny.",
+          "has_children": "Pracovní balíček má %{childUnits}:",
+          "single_text": "Opravdu chcete odstranit tento balíček?",
+          "title": "Potvrdit smazání %{label}"
+        },
+        "form_submit": {
+          "text": "Opravdu chcete provést tuto akci?",
+          "title": "Potvrdit a pokračovat"
+        },
+        "label_delete_page": "Odstranit aktuální stránku",
+        "label_name": "Název"
+      },
+      "myTimeTracking": {
+        "noSpecificTime": "No specific time"
+      },
+      "my_page": {
+        "label": "Moje stránka"
+      },
+      "notice_bad_request": "Chybný požadavek.",
+      "notice_job_started": "Úloha byla zahájena",
+      "notice_no_results_to_display": "Žádné viditelné výsledky k zobrazení.",
+      "notice_successful_create": "Úspěšné vytvoření.",
+      "notice_successful_delete": "Úspěšné odstranění.",
+      "notice_successful_update": "Úspěšná aktualizace.",
+      "notifications": {
+        "center": {
+          "and_more_users": {
+            "few": "a %{count} dalšich",
+            "many": "a %{count} dalšich",
+            "one": "a 1 další",
+            "other": "a %{count} dalšich"
+          },
+          "empty_state": {
+            "no_notification": "Vypadá to, že jste všechno dohnali...",
+            "no_notification_for_filter": "Vypadá to, že jste všichni zachytili tento filtr.",
+            "no_notification_with_current_filter": "Vypadá to, že tady nic není %{filter} filtr.",
+            "no_notification_with_current_project_filter": "Vypadá to, že nemáte žadné nové oznámení pro vybraný projekt.",
+            "no_selection": "Klikněte na oznámení pro zobrazení všech podrobností o aktivitě."
+          },
+          "label_actor_and": "a",
+          "mark_all_read": "Označit vše jako přečtené",
+          "mark_all_read_confirmation": "This will mark all notifications in this view as read. Are you sure you want to do this?",
+          "mark_as_read": "Označit jako přečtené",
+          "new_notifications": {
+            "link_text": "Klikněte zde pro jejich načtení.",
+            "message": "Máte nová oznámení."
+          },
+          "no_results": {
+            "at_all": "Nová oznámení se zobrazí zde, když se objeví aktivita, která se vás týká",
+            "with_current_filter": "V současné době nejsou v tomto zobrazení žádná oznámení"
+          },
+          "text_update_date_by": "%{date} podle",
+          "total_count_warning": "Zobrazení posledních oznámení %{newest_count} . Nezobrazuje se ještě %{more_count}"
+        },
+        "date_alerts": {
+          "milestone_date": "Datum milníku",
+          "overdue": "Po termínu",
+          "overdue_since": "od %{difference_in_days}",
+          "property_is": "je v %{difference_in_days}",
+          "property_is_deleted": "je vymazán.",
+          "property_today": "je dnes.",
+          "property_was": "byl před %{difference_in_days}"
+        },
+        "no_unread": "Žádná nepřečtená oznámení",
+        "reasons": {
+          "assigned": "Řešitel",
+          "commented": "Komentované",
+          "created": "Vytvořeno",
+          "dateAlert": "Upozornění na datum",
+          "mentioned": "Zmíněné",
+          "prioritized": "Prioritní",
+          "processed": "Zpracované",
+          "reminder": "Připomínka",
+          "responsible": "Odpovědný",
+          "scheduled": "Naplánováno",
+          "shared": "Sdíleno",
+          "watched": "Sledující"
+        },
+        "reminders": {
+          "note": "Poznámka: \"%{note}\""
+        },
+        "settings": {
+          "change_notification_settings": "Můžete změnit nastavení <a target=\"_blank\" href=\"%{url}\">oznámení</a> , abyste se ujistili, že nikdy nezmeškáte důležitou aktualizaci.",
+          "global": {
+            "date_alerts": {
+              "description": "Automatická oznámení, pokud se blíží důležitá data pro otevřené pracovní balíčky, které jste zapojeni (přiřazený, zodpovědný nebo sledovaný).",
+              "title": "Upozornění na datum"
+            },
+            "delayed": {
+              "description": "Další oznámení pro činnosti ve všech projektech.",
+              "title": "Neúčast"
+            },
+            "immediately": {
+              "description": "Upozornění pro všechny aktivity v pracovních balíčcích, do kterých jste zapojeni (Řešitel, odpovědný nebo sledující).",
+              "title": "Participace"
+            },
+            "overdue": "Po termínu"
+          },
+          "notify_me": "Upozornit mě",
+          "project_specific": {
+            "add": "Přidat nastavení pro projekt",
+            "already_selected": "Tento projekt je již vybrán",
+            "description": "Toto specifické nastavení projektu přepíše výchozí nastavení výše.",
+            "remove": "Odstranit nastavení projektu",
+            "title": "Nastavení upozornění pro konkrétní projekt\n"
+          },
+          "reasons": {
+            "assignee": "Řešitel",
+            "mentioned": {
+              "description": "Dostat upozornění, kdykoli mě někdo kdekoli zmíní",
+              "title": "Zmíněné"
+            },
+            "responsible": "Odpovědný",
+            "shared": "Sdílené",
+            "watched": "Sledující",
+            "work_package_commented": "Všechny nové komentáře",
+            "work_package_created": "Nový pracovní balíček",
+            "work_package_prioritized": "Všechny prioritní změny",
+            "work_package_processed": "Všechny změny stavu",
+            "work_package_scheduled": "Všechny změny data"
+          },
+          "reminders": {
+            "no_notification": "Žádné oznámení",
+            "timeframes": {
+              "normal": {
+                "P1D": "před 1 dnem",
+                "P3D": "3 dny před",
+                "P7D": "před týdnem",
+                "PT0S": "Týž den"
+              },
+              "overdue": {
+                "P1D": "každý den",
+                "P3D": "Každé 3 dny",
+                "P7D": "každý týden"
+              }
+            }
+          },
+          "title": "Nastavení oznámení"
+        },
+        "title": "Oznámení"
+      },
+      "onboarding": {
+        "buttons": {
+          "got_it": "Rozumím",
+          "next": "Další",
+          "skip": "Přeskočit"
+        },
+        "steps": {
+          "backlogs": {
+            "overview": "Spravujte svou práci v <b>backlogs</b> zobrazení.",
+            "sprints": "Napravo máte nevyřízené produkty a nevyřízené chyby, vlevo máte příslušné sprinty. Zde můžete vytvořit <b>epiky, uživatelské příběhy a chyby</b>, upřednostnit přetažením a přidat je do sprintu.",
+            "task_board": "Pracovní panel vizualizuje postup <b>pro tento sprint</b>. Kliknutím na ikonu plus (+) vedle uživatelského příběhu přidáte nové úkoly nebo překážky. <br> Stav lze aktualizovat přetažením.",
+            "task_board_arrow": "Chcete-li vidět Váš <b>seznam úkolů</b>, otevřete Sprint drop-down menu...",
+            "task_board_select": "...a vyberte <b>vstup do tabule</b>."
+          },
+          "boards": {
+            "add": "Klikněte na ikonu plus (+) pro <b>vytvoření nové karty</b> nebo <b>přidejte existující kartu</b> do seznamu na tabuli.",
+            "drag": "Přetažením karet v daném seznamu je změníte, nebo je přesuňte do jiného seznamu. <br> Můžete kliknout na info (i) ikonu v pravém horním rohu nebo dvakrát kliknout na kartu pro otevření podrobností.",
+            "lists_basic": "Zde můžete vytvořit více seznamů (sloupce) v agilní tabuli.",
+            "lists_kanban": "Zde si můžete vytvořit více seznamů (sloupce) ve vaší tabuli. Tato funkce vám umožní například vytvořit <b>Kanban desku</b>.",
+            "overview": "Vyberte <b>tabule</b> pro posun zobrazení a správu vašeho projektu pomocí agilního zobrazení desek."
+          },
+          "help_menu": "Menu nápovědy (?) poskytuje <b>další zdroje nápovědy</b>. Zde můžete najít uživatelskou příručku, užitečnou jak na videa a další. <br> Užijte si vaši práci s OpenProject!",
+          "members": "Pozvěte nové <b>členy</b> , aby se připojili k vašemu projektu.",
+          "quick_add_button": "Klikněte na ikonu plus (+) v záhlaví pro <b>vytvoření nového projektu</b> nebo pro <b>pozvání spolupracovníků</b>.",
+          "sidebar_arrow": "Pomocí šipky zpět v levém horním rohu se vrátíte do <b>hlavního menu projektu</b>.",
+          "team_planner": {
+            "add_assignee": "Chcete-li začít, přidejte do plánovače týmu řešitele",
+            "add_existing": "Vyhledejte existující pracovní balíčky a přetáhněte je do plánovače týmu, abyste je okamžitě přiřadili členovi týmu a definovali datum zahájení a ukončení.\n",
+            "calendar": "Týdenní nebo dvoutýdenní plánovací tabule zobrazuje všechny pracovní balíčky přiřazené členům vašeho týmu.\n",
+            "card": "Přetáhněte pracovní balíčky vodorovně, abyste je posunuli dozadu nebo dopředu v čase, Přetáhněte hrany pro změnu počátečního a koncového data a dokonce je přetáhněte svisle do jiného řádku pro jejich přiřazení jinému členovi.",
+            "overview": "Plánovač týmu vám umožní vizuálně přiřadit úkoly členům týmu a získat přehled o tom, kdo na čem pracuje."
+          },
+          "welcome": "Take a three-minute introduction tour to learn the most <b>important features</b>. <br> We recommend completing the steps until the end. You can restart the tour any time.",
+          "wiki": "V rámci <b>Wiki</b> můžete dokumentovat a sdílet znalosti společně se svým týmem.",
+          "wp": {
+            "back_button": "Použijte šipku zpět v levém horním rohu pro ukončení a návrat do seznamu pracovních balíčků.",
+            "create_button": "Tlačítko <b>Vytvořit</b> přidá do vašeho projektu nový pracovní balíček.",
+            "full_view": "Zobrazení <b>podrobností pracovního balíčku</b> poskytuje všechny relevantní informace týkající se daného pracovního balíčku, jako je popis, stav, priorita, činnosti, závislosti a komentáře.",
+            "gantt_menu": "Vytvořte projektové plány a časové osy bez námahy pomocí modulu Ganttovy diagramy.",
+            "list": "Tento přehled <b>pracovního balíčku</b> poskytuje seznam všech prací ve vašem projektu, jako jsou úkoly, milníky, fáze a další. <br> Pracovní balíčky lze vytvořit a upravit přímo z tohoto pohledu. Pro přístup k detailům konkrétního pracovního balíčku, stačí kliknout na jeho řádek.",
+            "timeline": "Zde můžete upravit váš projektový plán. Vytvářet nové fáze, milníky a přidat závislosti. Všichni členové týmu mohou kdykoliv zobrazit a aktualizovat aktuální plán.",
+            "toggler": "Nyní se podívejme na část <b>Pracovní balíček</b> , která vám poskytne podrobnější přehled vaší práce."
+          }
+        }
+      },
+      "open_project_storage_modal": {
+        "waiting_subtitle": {
+          "network_off": "Je tu problém se sítí.",
+          "network_on": "Síť je zpátky . Zkoušíme to."
+        },
+        "waiting_title": {
+          "timeout": "Vypršel časový limit"
+        }
+      },
+      "overviews": {
+        "label": "Přehled"
+      },
+      "pagination": {
+        "no_other_page": "Jste na jediné stránce.",
+        "pages": {
+          "next": "Přejít na další stránku",
+          "previous": "Zpět na předchozí stránku"
+        }
+      },
+      "password_confirmation": {
+        "field_description": "Pro potvrzení této změny je třeba zadat heslo k účtu.",
+        "title": "Pro pokračování potvrďte vaše heslo"
+      },
+      "placeholders": {
+        "default": "-",
+        "description": "Popis: Klikněte pro úpravu...",
+        "relation_description": "Kliknutím přidáte popis pro tento vztah",
+        "selection": "Zvolte prosím",
+        "subject": "Zde zadejte předmět"
+      },
+      "project": {
+        "autocompleter": {
+          "label": "Automatické doplňování projektu"
+        },
+        "click_to_switch_to_project": "Projekt: %{projectname}",
+        "confirm_template_load": "Přepnutí šablony znovu načte stránku a ztratíte všechny vstupy do tohoto formuláře. Pokračovat?",
+        "context": "Kontext projektu",
+        "copy": {
+          "copy_options": "Možností kopírování"
+        },
+        "no_template_selected": "(Žádné)",
+        "not_available": "Project N/A",
+        "required_outside_context": "Vyberte projekt pro vytvoření pracovního balíčku, abyste viděli všechny atributy. Můžete vybrat pouze projekty, které mají výše uvedený typ aktivován.\n",
+        "use_template": "Použít šablonu"
+      },
+      "project_menu_details": "Podrobnosti",
+      "relation_buttons": {
+        "abort": "Zrušit",
+        "add_existing": "Přidat existující",
+        "add_existing_child": "Přidat potomka",
+        "add_existing_relation": "Přidat existující vztah",
+        "add_new_child": "Vytvořit nového potomka",
+        "add_new_relation": "Vytvořit nový vztah",
+        "add_parent": "Přidat existující nadřazený",
+        "add_predecessor": "Přidat předchůdce",
+        "add_successor": "Add successor",
+        "change_parent": "Změnit nadřazený",
+        "create_new": "Vytvořit nový",
+        "group_by_relation_type": "Seskupit podle typu vztahu",
+        "group_by_wp_type": "Seskupit podle typu pracovního balíčku",
+        "hierarchy_indent": "Přisadit hierarchii",
+        "hierarchy_outdent": "Odsadit hierarchii",
+        "remove": "Odstranit vztah",
+        "remove_child": "Odstranit potomka",
+        "remove_parent": "Odstranit nadřazený",
+        "save": "Uložit vztah",
+        "set_parent": "Nastavit nadřazený",
+        "show_relations": "Zobrazit vztahy",
+        "toggle_description": "Přepnout popis relace",
+        "update_description": "Nastavit nebo upravit popis tohoto vztahu",
+        "update_relation": "Klikněte pro změnu typu vztahu"
+      },
+      "relation_labels": {
+        "blocked": "Zablokován",
+        "blocks": "Blokuje",
+        "child": "Potomek",
+        "children": "Potomci",
+        "duplicated": "Duplikováno",
+        "duplicates": "Duplikáty",
+        "follows": "Následuje",
+        "includes": "Zahrnuje",
+        "parent": "Nadřazený",
+        "partof": "Část",
+        "precedes": "Je předchůdcem",
+        "relates": "Související s",
+        "relation_type": "typ vztahu",
+        "required": "Vyžadováno",
+        "requires": "Vyžaduje"
+      },
+      "relations": {
+        "empty": "Neexistuje žádný vztah",
+        "remove": "Odstranit vztah"
+      },
+      "relations_autocomplete": {
+        "parent_placeholder": "Vyberte nový rnadřazený nebo zrušte stisknutím ESC ",
+        "placeholder": "Zadejte hledaný text"
+      },
+      "relations_hierarchy": {
+        "children_headline": "Potomci",
+        "hierarchy_headline": "Hierarchie",
+        "parent_headline": "Nadřazený"
+      },
+      "reminders": {
+        "settings": {
+          "alerts": {
+            "document_added": "Dokumenty přidány",
+            "explanation": "Oznámení jsou dnes omezena na pracovní balíčky. Můžete se rozhodnout nadále dostávat e-mailová upozornění pro tyto události, dokud nebudou zahrnuta do oznámení:\n",
+            "forum_messages": "Nové zprávy o fóru",
+            "membership_added": "Členství přidáno",
+            "membership_updated": "Členství bylo aktualizováno",
+            "news_added": "Přidané novinky",
+            "news_commented": "Komentář k novince",
+            "title": "E-mailová upozornění pro ostatní položky (které nejsou pracovní balíčky)",
+            "wiki_page_added": "Přidána stránka wiki",
+            "wiki_page_updated": "Wiki stránka aktualizována"
+          },
+          "daily": {
+            "add_time": "Přidat čas",
+            "enable": "Zapnout denní posílání oznámení e-mailem",
+            "explanation": "Tyto připomínky obdržíte pouze pro nepřečtená oznámení a pouze v hodinách, které zadáte. %{no_time_zone}",
+            "no_time_zone": "Dokud nenastavíte časové pásmo pro svůj účet, budou časy interpretovány v UTC.",
+            "time_label": "Čas %{counter}:",
+            "title": "Posílat mi denní souhrn nepřečtených oznámení e-mailem "
+          },
+          "immediate": {
+            "mentioned": "V momente  když mě někdo @zmiňuje",
+            "personal_reminder": "Okamžitě po osobní připomenutí",
+            "title": "Pošlete mi připomenutí e-mailem"
+          },
+          "pause": {
+            "first_day": "První den",
+            "label": "Dočasně pozastavit denní připomenutí e-mailem",
+            "last_day": "Poslední den"
+          },
+          "title": "E-mail upozornění ",
+          "workdays": {
+            "title": "posílat e-mailem v těchto dnech"
+          }
+        }
+      },
+      "reporting_engine": {
+        "label_remove": "Odstranit",
+        "label_response_error": "Došlo k chybě zpracování dotazu."
+      },
+      "repositories": {
+        "select_branch": "Vybrat větev",
+        "select_tag": "Vybrat štítek"
+      },
+      "revit": {
+        "revit_add_in": "Revit doplněk",
+        "revit_add_in_settings": "Nastavení Revit doplňků "
+      },
+      "sharing": {
+        "selected_count": "%{count} vybráno",
+        "selection": {
+          "mixed": "Smíšená"
+        },
+        "share": "Sdílet"
+      },
+      "sort": {
+        "activate_asc": "aktivujte pro vzestupné řazení",
+        "activate_dsc": "aktivujte pro sestupné řazení",
+        "activate_no": "odstranit řazení",
+        "sorted_asc": "Použito vzestupné řazení, ",
+        "sorted_dsc": "Použité sestupně ",
+        "sorted_no": "Není použito žádné třídění, ",
+        "sorting_disabled": "řazení zakázáno"
+      },
+      "spot": {
+        "drop_modal": {
+          "close": "Zavřít modal",
+          "focus_grab": "Toto je ukotvení pro modaly. Stisknutím karty shift+b se vrátíte k aktivačnímu prvku modalu."
+        },
+        "filter_chip": {
+          "remove": "Odstranit"
+        }
+      },
+      "storages": {
+        "authentication_error": "Authentication with %{storageType} failed",
+        "choose_location": "Vyberte lokalitu",
+        "drop_files": "Přetáhněte soubory pro jejich nahrání na %{name}.",
+        "drop_or_click_files": "Přetáhněte soubory sem nebo klikněte pro jejich nahrání do %{name}.",
+        "file_links": {
+          "already_linked_directory": "Tento adresář je již propojen s tímto pracovním balíčkem.",
+          "already_linked_file": "Tento soubor je již propojen s tímto pracovním balíčkem.",
+          "download": "Stáhnout %{fileName}",
+          "empty": "V současné době neexistují žádné propojené soubory k tomuto pracovnímu balíčku. Začněte propojovat soubory s akcí níže nebo zevnitř %{storageType}.\n",
+          "link_uploaded_file_error": "Došlo k chybě při propojení nedávno nahraného souboru '%{fileName}' s pracovním balíčkem %{workPackageId}.\n",
+          "open": "Otevřít soubor v úložišti",
+          "open_location": "Otevřít soubor v umístění",
+          "remove": "Odstranit odkaz na soubor",
+          "remove_confirmation": "Jste si jisti, že chcete odlinkovat soubor od tohoto pracovního balíčku? Toto nemá vliv na původní soubor a odstraní pouze připojení k tomuto pracovnímu balíčku.\n",
+          "remove_short": "Odstranit odkaz",
+          "select": "Vybrat soubory",
+          "select_all": "Vybrat vše",
+          "selection": {
+            "few": "Propojit %{count} souborů",
+            "many": "Propojit %{count} souborů",
+            "one": "Propojit 1 Soubor",
+            "other": "Propojit %{count} souborů",
+            "zero": "Vyberte soubory, které chcete propojit"
+          },
+          "success_create": {
+            "few": "%{count} odkazů na soubor byl úspěšně vytvořen.",
+            "many": "%{count} odkazů na soubor byl úspěšně vytvořen.",
+            "one": "Odkaz na soubor byl úspěšně vytvořen.",
+            "other": "%{count} odkazů na soubor byl úspěšně vytvořen."
+          },
+          "tooltip": {
+            "not_found": "Tento soubor nebyl nalezen.",
+            "not_logged_in": "Pro přístup k tomuto souboru se přihlaste do úložiště.",
+            "view_not_allowed": "Nemáte oprávnění k zobrazení tohoto souboru."
+          },
+          "upload_error": {
+            "403": "Váš soubor (%{fileName}) nelze nahrát kvůli systémovým omezením. Pro více informací kontaktujte svého správce.\n",
+            "413": "Váš soubor (%{fileName}) je větší než to, co může OpenProject nahrát do %{storageType}. Nejprve jej můžete nahrát přímo do %{storageType} a poté propojit soubor.\n",
+            "507": "Váš soubor (%{fileName}) je větší než kvóta na úložiště. Obraťte se na správce pro úpravu této kvóty.\n",
+            "default": "Váš soubor (%{fileName}) nelze nahrát.\n",
+            "detail": {
+              "nextcloud": "Zkontrolujte, zda je nainstalována nejnovější verze aplikace Nextcloud \"OpenProject Integration\" a pro více informací kontaktujte administrátora.\n"
+            }
+          }
+        },
+        "files": {
+          "already_existing_body": "Soubor s názvem \"%{fileName}\" již existuje v místě, kde se pokoušíte nahrát tento soubor. Co chcete udělat?\n",
+          "already_existing_header": "Tento soubor už existuje",
+          "cannot_create_folder": "Failed to create folder. Avoid using special characters and symbols and make sure the folder does not exist already.",
+          "directory_not_writeable": "Nemáte oprávnění přidávat soubory do této složky.",
+          "dragging_folder": "Nahrávání do %{storageType} nepodporuje složky.",
+          "dragging_many_files": "Nahrávání do %{storageType} podporuje pouze jeden soubor najednou.",
+          "empty_folder": "Tato složka je prázdná.",
+          "empty_folder_location_hint": "Klikněte na tlačítko níže pro nahrání souboru do tohoto umístění.",
+          "file_not_selectable_location": "Výběr souboru není možný v procesu výběru umístění.",
+          "managed_project_folder_no_access": "Zatím nemáte přístup ke složce spravovaného projektu. Počkejte prosím trochu a zkuste to znovu.\n",
+          "managed_project_folder_not_available": "Automaticky spravovaná složka projektu nebyla nalezena. Počkejte, prosím, znovu načtěte stránku pro načtení nejnovějších dat a zkuste to znovu.\n",
+          "project_folder_no_access": "Nemáte přístup ke složce projektu. Obraťte se na svého administrátora pro získání přístupu nebo nahrajte soubor do jiného umístění.\n",
+          "upload_keep_both": "Zachovat obojí",
+          "upload_replace": "Nahradit"
+        },
+        "information": {
+          "authentication_error": "The request to %{storageType} could not be authenticated, that's an error.",
+          "connection_error": "Některá nastavení %{storageType} nefungují. Obraťte se na správce %{storageType}.\n",
+          "live_data_error": "Chyba při načítání detailů souboru",
+          "live_data_error_description": "Některá data %{storageType} nelze načíst. Zkuste prosím znovu načíst tuto stránku nebo kontaktujte správce %{storageType}.\n",
+          "no_file_links": "Chcete-li propojit soubory s tímto pracovním balíčkem, proveďte to prostřednictvím %{storageType}.",
+          "not_logged_in": "Chcete-li přidat odkaz nebo zobrazit soubory související s tímto pracovním balíčkem, přihlaste se do %{storageType}.\n",
+          "suggest_logout": "You can try whether logging out and back in fixes this problem.",
+          "suggest_relink": "You can try whether re-linking your account via the login button below fixes this problem."
+        },
+        "link_existing_files": "Odkaz na existující soubory",
+        "link_files_in_storage": "Prolinkovat soubory v %{storageType}",
+        "login": "%{storageType} přihlášení",
+        "login_to": "Přihlásit se k %{storageType}",
+        "new_folder": "Nová složka",
+        "no_connection": "Žádné připojení %{storageType}",
+        "open_storage": "Otevřít %{storageType}",
+        "select_location": "Vyberte lokalitu",
+        "types": {
+          "default": "Úložiště",
+          "nextcloud": "Nextcloud",
+          "one_drive": "OneDrive/SharePoint"
+        },
+        "upload_files": "Nahrát soubory"
+      },
+      "team_planner": {
+        "add_assignee": "Řešitel",
+        "add_existing": "Přidat existující",
+        "add_existing_title": "Přidat existující pracovní balíčky",
+        "cannot_drag_here": "Pracovní balíček nelze odstranit kvůli oprávněním nebo úpravám omezení.",
+        "cannot_drag_to_non_working_day": "Tento pracovní balíček nemůže začít/skončit v nepracovní den.",
+        "create_label": "Týmový plánovač",
+        "create_title": "Vytvořit nový týmový plánovač",
+        "drag_here_to_remove": "Přetažením sem odstraníte pověřenou osobu a datum začátku a ukončení.",
+        "eight_weeks": "8 týdnů",
+        "four_weeks": "4 týdny",
+        "modify": {
+          "errors": {
+            "fallback": "Tento pracovní balíček nelze upravit.",
+            "permission_denied": "Nemáte potřebná oprávnění k úpravě tohoto stavu."
+          }
+        },
+        "no_data": "Přidejte řešitele k nastavení svého týmového plánovače.",
+        "one_week": "1 týden",
+        "quick_add": {
+          "empty_state": "Použijte vyhledávací pole pro nalezení pracovních balíčků a přetáhněte je do plánovače, aby někomu přiřadil a definoval datum začátku a konce.",
+          "search_placeholder": "Hledat..."
+        },
+        "remove_assignee": "Odstranit řešitele",
+        "today": "Dnes",
+        "two_weeks": "2 týdny",
+        "unsaved_title": "Nepojmenovaný plánovač týmu",
+        "work_week": "Pracovní týden"
+      },
+      "text_are_you_sure": "Jste si jisti?",
+      "text_data_lost": "Všechna zadaná data budou ztracena.",
+      "text_query_destroy_confirmation": "Jste si jisti, že chcete odstranit vybrané zobrazení?",
+      "text_user_wrote": "%{value} napsal:",
+      "text_work_packages_destroy_confirmation": "Jste si jisti, že chcete odstranit vybrané pracovní balíčky?",
+      "time_entry": {
+        "stop": "Zastavit",
+        "title": "Čas protokolu",
+        "tracking": "Sledování času",
+        "work_package_required": "Vyžaduje nejprve výběr pracovního balíčku."
+      },
+      "timer": {
+        "button_stop": "Zastavit aktuální časovač",
+        "start_new_timer": "Spustit nový časovač",
+        "timer_already_running": "Chcete-li spustit nový časovač, musíte nejprve zastavit aktuální časovač:",
+        "timer_already_stopped": "Žádný aktivní časovač pro tento pracovní balíček, zastavil jste jej v jiném okně?",
+        "tracking_time": "Čas sledování"
+      },
+      "tl_toolbar": {
+        "outlines": "Úroveň hierarchie",
+        "zooms": "Úroveň zvětšení"
+      },
+      "toolbar": {
+        "filter": "Filtr",
+        "search_query_label": "Vyhledat uložené zobrazení",
+        "settings": {
+          "columns": "Sloupce",
+          "configure_view": "Konfigurace zobrazení",
+          "delete": "Odstranit",
+          "display_hierarchy": "Hierarchie zobrazení",
+          "display_sums": "Zobrazit součty",
+          "export": "Export",
+          "group_by": "Seskupit podle",
+          "hide_hierarchy": "Skrýt hierarchii",
+          "hide_sums": "Skrýt součty",
+          "page_settings": "Přejmenovat zobrazení",
+          "save": "Uložit",
+          "save_as": "Uložit jako",
+          "share_calendar": "Přihlásit kalendář k odběru",
+          "sort_by": "Seřadit podle",
+          "visibility_settings": "Nastavení viditelnosti"
+        },
+        "unselected_title": "Pracovní balíček"
+      },
+      "two_factor_authentication": {
+        "errors": {
+          "aborted": "Ověřování bylo zrušeno. Zkuste to prosím znovu."
+        },
+        "label_two_factor_authentication": "Dvoufázové ověření"
+      },
+      "types": {
+        "attribute_groups": {
+          "confirm_reset": "Upozornění: Opravdu chcete resetovat konfiguraci formuláře? Tato akce obnoví atributy na jejich výchozí skupinu a zakáže VŠECHNY vlastní pole.\n",
+          "error_duplicate_group_name": "Jméno %{group} je již použito. Jména skupin musí být jedinečná.",
+          "error_no_table_configured": "Prosím nastavte tabulku pro %{group}.",
+          "more_information": "Více informací",
+          "nevermind": "Nevadí",
+          "reset_title": "Vyčistit konfiguraci formuláře",
+          "upgrade_to_ee": "Upgradovat na Enterprise Edition on premises",
+          "upgrade_to_ee_text": "Páni! Pokud potřebujete tuto funkci, jste super pro! Nevadili byste nám podpořit OpenSource vývojáře tím, že se stanete klientem Enterprise Edition?"
+        }
+      },
+      "units": {
+        "child_work_packages": {
+          "few": "%{count} podřazených pracovních balíčků",
+          "many": "%{count} podřazených pracovních balíčků",
+          "one": "jeden podřazený pracovní balíček",
+          "other": "%{count} podřazených pracovních balíčků"
+        },
+        "day": {
+          "one": "1 den",
+          "other": "%{count} dní",
+          "zero": "0 dní"
+        },
+        "hour": {
+          "one": "1 h",
+          "other": "%{count} h",
+          "zero": "0 h"
+        },
+        "word": {
+          "few": "%{count} slov",
+          "many": "%{count} slov",
+          "one": "1 slovo",
+          "other": "%{count} slov"
+        },
+        "workPackage": {
+          "few": "pracovní balíčky",
+          "many": "pracovní balíčky",
+          "one": "pracovní balíček",
+          "other": "pracovní balíčky"
+        }
+      },
+      "upsell": {
+        "ee_only": "doplňek Enterprise Edice"
+      },
+      "views": {
+        "card": "Karty",
+        "list": "Tabulka",
+        "timeline": "Ganttův diagram"
+      },
+      "watchers": {
+        "label_add": "Přidat sledující",
+        "label_discard": "Zrušit výběr",
+        "label_error_loading": "Při načítání pozorovatelů došlo k chybě",
+        "label_loading": "načítám sledující...",
+        "label_search_watchers": "Hledat sledující",
+        "typeahead_placeholder": "Hledání možných přihlížejících"
+      },
+      "wiki_formatting": {
+        "code": "Vložený kód",
+        "deleted": "Odstraněno",
+        "heading1": "Nadpis 1",
+        "heading2": "Nadpis 2",
+        "heading3": "Nadpis 3",
+        "image": "Obrázek",
+        "italic": "Kurzíva",
+        "ordered_list": "Seřazený seznam",
+        "preformatted_text": "Předformátovaný Text",
+        "quote": "Citovat",
+        "strong": "Silný",
+        "underline": "Podtržení",
+        "unordered_list": "Neseřazený seznam",
+        "unquote": "Konec citátu",
+        "wiki_link": "Odkaz na stránku Wiki"
+      },
+      "work_packages": {
+        "baseline": {
+          "addition_label": "Přidáno k zobrazení ve srovnávacím období",
+          "column_incompatible": "Tento sloupec nezobrazuje změny v režimu Baseline.",
+          "modification_label": "Upraveno ve srovnávacím období",
+          "removal_label": "Odstraněno ze zobrazení ve srovnávacím období "
+        },
+        "bulk_actions": {
+          "copy": "Hromadné kopírování",
+          "delete": "Hromadné odstranění",
+          "edit": "Hromadná úprava",
+          "move": "Hromadná změna projektu"
+        },
+        "button_clear": "Vyčistit",
+        "comment_added": "Komentář byl úspěšně přidán.",
+        "comment_send_failed": "Došlo k chybě. Nelze odeslat komentář.",
+        "comment_updated": "Komentář byl úspěšně aktualizován.",
+        "confirm_edit_cancel": "Opravdu chcete zrušit úpravy pracovního balíčku?",
+        "copy": {
+          "title": "Kopírovat pracovní balíček"
+        },
+        "create": {
+          "button": "Vytvořit",
+          "header": "Nový %{type}",
+          "header_no_type": "Nový pracovní balíček (ještě není nastaven typ)",
+          "header_with_parent": "Nový %{type} (podřazený %{parent_type} #%{id})",
+          "title": "Nový pracovní balíček"
+        },
+        "default_queries": {
+          "all_open": "Všechny otevřené",
+          "assigned_to_me": "Přiřazeno mně",
+          "created_by_me": "Vytvořeno mnou",
+          "latest_activity": "Poslední aktivita",
+          "manually_sorted": "Nový ručně seřazený dotaz",
+          "milestones": "Milníky",
+          "overdue": "Po termínu",
+          "recently_created": "Nedávno vytvořené",
+          "shared_with_me": "Sdíleno se mnou",
+          "shared_with_users": "Sdíleno s uživateli",
+          "summary": "Souhrn"
+        },
+        "description_enter_text": "Zadejte text",
+        "description_filter": "Filtr",
+        "description_options_hide": "Skrýt možnosti",
+        "description_options_show": "Zobrazit možnosti",
+        "edit_attribute": "%{attribute} - Upravit",
+        "faulty_query": {
+          "description": "Váš pohled je chybný a nelze jej zpracovat.",
+          "title": "Pracovní balíčky nelze načíst."
+        },
+        "filters": {
+          "baseline_incompatible": "Tento atribut filtru se nebere v úvahu v režimu Baseline",
+          "baseline_warning": "Baseline režim je zapnutý, ale některé z vašich aktivních filtrů nejsou zahrnuty do srovnání.",
+          "title": "Filtrovat pracovní balíčky"
+        },
+        "hierarchy": {
+          "children_collapsed": "Úroveň hierarchie %{level}, sbalena. Kliknutím zobrazíte filtrované potomky",
+          "children_expanded": "Úroveň hierarchie %{level}, rozbalena. Klepnutím sbalíte filtrované potomky",
+          "hide": "Skrýt režim hierarchie",
+          "leaf": "List pracovního balíčku na úrovni %{level}.",
+          "show": "Zobrazit režim hierarchie",
+          "toggle_button": "Klepnutím přepnete režim hierarchie."
+        },
+        "inline_create": {
+          "title": "Klikněte zde pro přidání nového pracovního balíčku do tohoto seznamu"
+        },
+        "jump_marks": {
+          "content": "Přejít na obsah",
+          "label_content": "Klikněte zde pro přeskočení nabídky a přejděte na obsah",
+          "label_pagination": "Kliknutím sem přeskočíte tabulku pracovních balíčků a přejděte na stránku",
+          "pagination": "Přejít na stránku tabulky"
+        },
+        "key_value": "%{key}: %{value}",
+        "label_column_multiselect": "Kombinované rozbalovací pole: Vyberte pomocí kláves se šipkami, potvrďte výběr se vstupem a smažte jej pomocí backspace",
+        "label_disable_multi_select": "Zakázat multiselect",
+        "label_enable_multi_select": "Povolit multiselect",
+        "label_filter_add": "Přidat filtr",
+        "label_filter_by_text": "Filtrovat podle textu",
+        "label_options": "Možnosti",
+        "limited_results": "Pouze %{count} pracovních balíčků může být zobrazeno v ručním režimu třídění. Snížte výsledky filtrováním, nebo přepněte na automatické třídění.",
+        "message_error_during_bulk_delete": "Při pokusu o odstranění pracovních balíčků došlo k chybě.",
+        "message_successful_bulk_delete": "Pracovní balíčky úspěšně odstraněny.",
+        "message_successful_show_in_fullscreen": "Klikněte zde pro otevření tohoto pracovního balíčku v celoobrazovkovém zobrazení.",
+        "message_view_spent_time": "Zobrazit strávený čas pro tento pracovní balíček",
+        "message_work_package_read_only": "Pracovní balíček je v tomto stavu uzamčen. Nemůže být změněn žádný jiný atribut mimo vlastního stavu balíčku.",
+        "message_work_package_status_blocked": "Stav pracovního balíčku nelze zapisovat kvůli stavu zavření a přiřazování uzavřené verze.",
+        "no_results": {
+          "description": "Buď nebyly vytvořeny nebo jsou všechny pracovní balíčky odfiltrovány.",
+          "title": "Žádné pracovní balíčky k zobrazení."
+        },
+        "placeholder_filter_by_text": "Předmět, popis, komentáře, ...",
+        "placeholders": {
+          "date": "Vybrat datum",
+          "default": "-"
+        },
+        "progress": {
+          "title": "Odhady práce a průběh "
+        },
+        "properties": {
+          "assignee": "Řešitel",
+          "author": "Autor",
+          "category": "Kategorie",
+          "costObject": "Rozpočet",
+          "createdAt": "Vytvořeno",
+          "date": "Datum",
+          "description": "Popis",
+          "dueDate": "Datum dokončení",
+          "duration": "Doba trvání",
+          "overallCosts": "Celkové náklady",
+          "percentComplete": "% Dokončeno",
+          "percentCompleteAlternative": "Průběh",
+          "percentageDone": "Procento hotovo",
+          "priority": "Priorita",
+          "projectName": "Projekt",
+          "remainingTime": "Zbývající práce",
+          "remainingWork": "Zbývající práce",
+          "remainingWorkAlternative": "Zbývající hodiny",
+          "responsible": "Zodpovědný",
+          "spentTime": "Strávený čas",
+          "spentUnits": "Strávené jednotky",
+          "startDate": "Datum zahájení",
+          "status": "Stav",
+          "storyPoints": "Body příběhu",
+          "subject": "Předmět",
+          "subproject": "Podprojekt",
+          "title": "Název",
+          "type": "Typ",
+          "updatedAt": "Aktualizováno",
+          "version": "Verze",
+          "versionName": "Verze",
+          "work": "Práce",
+          "workAlternative": "Odhadovaný čas"
+        },
+        "property_groups": {
+          "costs": "Náklady",
+          "details": "Podrobnosti",
+          "estimatesAndTime": "Odhady a Čas",
+          "other": "Ostatní",
+          "people": "Lidé"
+        },
+        "query": {
+          "click_to_edit_query_name": "Kliknutím upravíte název tohoto zobrazení.",
+          "column_names": "Sloupce",
+          "confirm_edit_cancel": "Jste si jisti, že chcete zrušit úpravy názvu tohoto pohledu? Titulek bude nastaven zpět na předchozí hodnotu.",
+          "display_sums": "Zobrazit součty",
+          "errors": {
+            "duplicate_query_title": "Název tohoto zobrazení již existuje. Chcete přesto změnit?",
+            "not_found": "Neexistuje takové zobrazení",
+            "unretrievable_query": "Nelze načíst zobrazení z URL"
+          },
+          "filters": "Filtry",
+          "group": "Seskupit podle",
+          "group_by": "Seskupit výsledky podle",
+          "group_by_disabled_by_hierarchy": "Skupina podle je zakázána kvůli aktivnímu režimu hierarchie.",
+          "hide_column": "Skrýt sloupec",
+          "hierarchy_disabled_by_group_by": "Režim hierarchie je zakázán kvůli tomu, že výsledky jsou seskupeny uživatelem %{column}.",
+          "insert_columns": "Vložit sloupec ...",
+          "move_column_left": "Přesunout sloupec vlevo",
+          "move_column_right": "Přesunout sloupec vpravo",
+          "public_text": "Publikujte toto zobrazení, umožňující ostatním uživatelům přístup k vašemu zobrazení. Uživatelé s oprávněním 'Spravovat veřejné zobrazení' mohou upravit nebo odebrat veřejný dotaz. To nemá vliv na viditelnost výsledků pracovního balíčku v tomto zobrazení a v závislosti na jejich oprávněních mohou uživatelé vidět různé výsledky.\n",
+          "rename_query_placeholder": "Název tohoto zobrazení",
+          "sort_ascending": "Seřadit vzestupně",
+          "sort_descending": "Seřadit sestupně",
+          "star_text": "Označte toto zobrazení jako oblíbené a přidejte do postranního panelu vlevo.",
+          "text_no_results": "Nebyly nalezeny žádné odpovídající zobrazení."
+        },
+        "reminders": {
+          "button_label": "Nastavit připomínku",
+          "presets": {
+            "custom": "At a particular date/time",
+            "month": "In a month",
+            "three_days": "In 3 days",
+            "tomorrow": "Tomorrow",
+            "week": "In a week"
+          },
+          "subtitle": "Za tento pracovní balíček obdržíte oznámení ve zvoleném čase.",
+          "title": {
+            "edit": "Upravit připomínku",
+            "new": "Set a reminder"
+          }
+        },
+        "scheduling": {
+          "is_parent": "Data tohoto pracovního balíčku jsou automaticky odvozena od jeho dětí. Aktivujte 'Manuální plánování' pro ručné nastavení dat.",
+          "is_switched_from_manual_to_automatic": "Data tohoto pracovního balíčku budou možná muset být přepočítána po přepnutí z manuálu na automatické plánování kvůli vztahům s ostatními pracovními balíčky."
+        },
+        "sharing": {
+          "show_all_users": "Zobrazit všechny uživatele, s nimiž byl pracovní balíček sdílen s",
+          "title": "Sdílet pracovní balíček"
+        },
+        "table": {
+          "configure_button": "Konfigurovat tabulku pracovních balíčků",
+          "summary": "Tabulka s řádky pracovního balíčku a atributy sloupců pracovního balíčku.",
+          "text_inline_edit": "Většina buněk v této tabulce jsou tlačítka, která aktivují funkci úpravy inline-editace atributu.",
+          "text_select_hint": "Vyberte pole by mělo být otevřeno pomocí kláves \"ALT\" a šipkami.",
+          "text_sort_hint": "Pomocí odkazů v záhlaví tabulky můžete seřadit, seřadit, odstranit a přidat sloupce tabulky."
+        },
+        "table_configuration": {
+          "button": "Konfigurovat tabulku pracovních balíčků",
+          "choose_display_mode": "Zobrazit pracovní balíčky jako",
+          "columns_help_text": "Toto pole použijte pro přidání nebo odebrání sloupců v tabulkovém zobrazení. Přetažením sloupců myší změníte jejich pořadí v tabulce.",
+          "default": "výchozí",
+          "default_mode": "Plochý seznam",
+          "display_settings": "Nastavení zobrazení",
+          "display_sums_hint": "Zobrazit součty všech sčitatelných atributů v řádku pod tabulkou výsledků.",
+          "embedded_tab_disabled": "Tato karta konfigurace není k dispozici pro embedded zobrazení, které upravujete.",
+          "hierarchy_hint": "Všechny filtrované výsledky z tabulky budou rozšířeny o jejich předky. Hierarchii lze rozbalit a sbalit.",
+          "hierarchy_mode": "Hierarchie",
+          "highlighting": "Zvýraznění",
+          "highlighting_mode": {
+            "description": "Barevné zvýraznění",
+            "entire_row_by": "Celý řádek od",
+            "inline": "Zvýrazněné atributy",
+            "inline_all": "Všechny atributy",
+            "none": "Bez zvýraznění",
+            "priority": "Priorita",
+            "status": "Stav",
+            "type": "Typ"
+          },
+          "modal_title": "Konfigurace tabulky pracovních balíčků",
+          "relation_filters": {
+            "filter_work_packages_by_relation_type": "Filtrovat pracovní balíčky podle typu vztahu"
+          },
+          "show_timeline_hint": "Zobrazit interaktivní Ganttův graf na pravé straně tabulky. Šířku můžete změnit přetažením dělící příčky mezi tabulkou a Ganttovým diagramem.",
+          "sorting_mode": {
+            "automatic": "Automaticky",
+            "description": "Vyberte režim pro řazení vašich pracovních balíčků:",
+            "manually": "Ručně",
+            "warning": "Při aktivaci režimu automatického řazení ztratíte své předchozí řazení."
+          }
+        },
+        "tabs": {
+          "activity": "Aktivita",
+          "files": "Soubory",
+          "github": "GitHub",
+          "gitlab": "Gitlab",
+          "meetings": "Schůzky",
+          "overview": "Přehled",
+          "relations": "Vztahy",
+          "watchers": "Sledující"
+        },
+        "time_relative": {
+          "days": "dnů",
+          "months": "mesice",
+          "weeks": "týdny"
+        }
+      },
+      "zen_mode": {
+        "button_activate": "Aktivovat zen režim",
+        "button_deactivate": "Deaktivovat zen režim"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": " ",
+          "format": "%n %u",
+          "negative_format": "-%u%n",
+          "precision": 2,
+          "separator": ",",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "Kč"
+        }
+      },
+      "format": {
+        "delimiter": null,
+        "precision": 3,
+        "round_mode": "default",
+        "separator": ",",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "Miliarda",
+            "million": "Milion",
+            "quadrillion": "Biliarda",
+            "thousand": "Tisíc",
+            "trillion": "Bilion",
+            "unit": null
+          }
+        },
+        "format": {
+          "delimiter": null,
+          "precision": 1,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "few": "Bytes",
+              "many": "Bytes",
+              "one": "Byte",
+              "other": "Bytes"
+            },
+            "eb": "EB",
+            "gb": "GB",
+            "kb": "kB",
+            "mb": "MB",
+            "pb": "PB",
+            "tb": "TB",
+            "zb": "ZB"
+          }
+        }
+      },
+      "nth": {
+        "ordinalized": "%{number}.",
+        "ordinals": "."
+      },
+      "percentage": {
+        "format": {
+          "delimiter": null,
+          "format": "%n%"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": null
+        }
+      }
+    },
+    "time": {
+      "am": "am",
+      "formats": {
+        "default": "%m/%d/%Y %I:%M %p",
+        "long": "%B %d, %Y %H:%M",
+        "short": "%d %b %H:%M",
+        "time": "%I:%M %p"
+      },
+      "pm": "odp"
+    }
+  }
+}

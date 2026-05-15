@@ -1,0 +1,71 @@
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag "email/email_email", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "email/email_email", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= stylesheet_link_tag "email/flows_builder", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "email/flows_builder", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "email/flows_builder_history", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "email/flows_builder_webhook_input", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "email/flows_builder_transform_json", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+  <%= javascript_include_tag "email/flows_builder_rate_limit", plugin: "openproject-whatsapp", nonce: true, data: { turbo_track: "reload" } %>
+<% end %>
+
+<div class="op-email-email" data-email-tab="<%= @active_tab %>">
+  <div class="op-email-email--header">
+    <div>
+      <h2>Email</h2>
+      <div class="op-email-email--subtitle">Envio de correos por proyecto.</div>
+    </div>
+    <% if @active_tab == "history" %>
+      <%= form_with url: whatsapp_plugin_project_email_history_path(@project),
+                    method: :get,
+                    local: true,
+                    class: "op-email-email--header-filter-form",
+                    html: { data: { email_history_filter_form: true } } do %>
+        <label class="op-email-email--header-filter-label" for="history_date">Filtrar por fecha</label>
+        <input id="history_date"
+               name="history_date"
+               type="date"
+               class="op-email-email--input op-email-email--header-filter-select"
+               value="<%= @history_selected_date&.iso8601 %>"
+               data-email-history-date-input="true" />
+        <% if @history_selected_date.present? %>
+          <%= link_to "Limpiar", whatsapp_plugin_project_email_history_path(@project), class: "op-email-email--pagination-link" %>
+        <% end %>
+        <div class="op-email-email--header-counter">
+          Correos enviados: <strong><%= @history_sent_count.to_i %></strong>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="op-email-email--nav">
+    <%= link_to "Envios", whatsapp_plugin_project_email_send_path(@project), class: "op-email-email--tab #{'is-active' if @active_tab == 'send'}" %>
+    <%= link_to "Plantillas", whatsapp_plugin_project_email_templates_path(@project), class: "op-email-email--tab #{'is-active' if @active_tab == 'templates'}" %>
+    <%= link_to "Configuracion", whatsapp_plugin_project_email_settings_path(@project), class: "op-email-email--tab #{'is-active' if @active_tab == 'settings'}" %>
+    <%= link_to "Historial", whatsapp_plugin_project_email_history_path(@project), class: "op-email-email--tab #{'is-active' if @active_tab == 'history'}" %>
+    <%= link_to "Flujos", whatsapp_plugin_project_email_flows_path(@project), class: "op-email-email--tab #{'is-active' if @active_tab == 'flows'}" %>
+    <%= link_to "Historial de flujo", whatsapp_plugin_project_email_flows_history_path(@project), class: "op-email-email--tab #{'is-active' if @active_tab == 'flows_history'}" %>
+  </div>
+
+  <% if flash[:alert].present? %>
+    <div class="op-email-email--flash is-alert"><%= flash[:alert] %></div>
+  <% end %>
+  <% if flash[:notice].present? %>
+    <div class="op-email-email--flash is-notice"><%= flash[:notice] %></div>
+  <% end %>
+
+  <% case @active_tab %>
+  <% when "templates" %>
+    <%= render partial: "templates_email" %>
+  <% when "settings" %>
+    <%= render partial: "settings_email" %>
+  <% when "history" %>
+    <%= render partial: "history_email" %>
+  <% when "flows" %>
+    <%= render partial: "flows_email" %>
+  <% when "flows_history" %>
+    <%= render partial: "flows_history_email" %>
+  <% else %>
+    <%= render partial: "send_email" %>
+  <% end %>
+</div>

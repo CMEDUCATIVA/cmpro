@@ -1,0 +1,16 @@
+<%=
+  component_wrapper(style: "position: relative") do
+    render(
+      Primer::Beta::Button.new(
+        scheme: :secondary,
+        tag: :a,
+        href: new_meeting_outcome_path(@meeting, meeting_agenda_item_id: @meeting_agenda_item.id),
+        classes: "hide-when-print",
+        data: { "turbo-stream": true }
+      )
+    ) do |button|
+      button.with_leading_visual_icon(icon: :plus)
+      t(:label_agenda_outcome)
+    end
+  end
+%>

@@ -1,0 +1,670 @@
+<div id="ia-api-provider-widget"
+     style="margin-top: 18px;
+            padding: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            background: radial-gradient(circle at top right, rgba(123, 78, 248, 0.12), transparent 55%),
+                        #111117;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55),
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;">
+  <div style="font-size: 14px;
+              font-weight: 600;
+              color: #f8fafc;
+              letter-spacing: 0.08em;
+              text-transform: none;
+              font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+    Proveedor de API
+  </div>
+  <select id="ia-api-provider-select"
+          data-providers="Anthropic|DeepSeek|OpenAI|OpenRouter|Google Gemini"
+          style="width: 100%;
+                 padding: 12px 14px;
+                 height: 42px;
+                 line-height: 1.4;
+                 border-radius: 10px;
+                 border: 1px solid rgba(255, 255, 255, 0.10);
+                 background-color: #12131f !important;
+                 background-image: linear-gradient(180deg, rgba(255,255,255,0.03), transparent);
+                 color: #fefefe;
+                 font-size: 13px;
+                 font-weight: 500;
+                 font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                 outline: none;
+                 box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+                 appearance: none;
+                 -webkit-appearance: none;
+                 background-clip: padding-box;">
+    <option value="" disabled selected style="background-color:#12131f;color:#e5e7eb;">Selecciona un proveedor</option>
+    <!-- Opciones generadas desde JS -->
+  </select>
+  <div id="ia-api-provider-key-box"
+       style="display: none;
+              flex-direction: column;
+              gap: 8px;
+              margin-top: 14px;
+              padding: 12px;
+              border-radius: 10px;
+              background: rgba(255, 255, 255, 0.02);
+              border: 1px solid rgba(255, 255, 255, 0.12);">
+    <div style="display:flex;
+                justify-content:space-between;
+                align-items:flex-start;
+                gap:10px;">
+      <div style="font-size: 13px;
+                  font-weight: 600;
+                  color: #f8fafc;
+                  letter-spacing: 0.08em;
+                  text-transform: none;
+                  font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+        OpenRouter API Key
+      </div>
+    </div>
+    <input id="ia-api-provider-key-input"
+           type="text"
+           placeholder="Ingrese el Api Key..."
+            style="width: 100%;
+                   padding: 12px 14px;
+                   height: 42px;
+                   line-height: 1.4;
+                   border-radius: 10px;
+                   border: 1px solid rgba(255, 255, 255, 0.10) !important;
+                   background: #12131f !important;
+                   background-image: linear-gradient(180deg, rgba(255,255,255,0.03), transparent) !important;
+                   background-clip: padding-box !important;
+                   color: #fefefe !important;
+                   caret-color: #fefefe !important;
+                   -webkit-text-fill-color: #fefefe !important;
+                   font-size: 13px;
+                   font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                   outline: none;
+                   box-shadow: inset 0 1px 0 rgba(255,255,255,0.06) !important;
+                   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 1000px #12131f inset !important;
+                   appearance: none !important;
+                   -webkit-appearance: none !important;">
+    <div style="font-size: 12px;
+                color: #9ca3af;">
+      Las claves API se almacenan de forma segura en el almacenamiento del CDE
+    </div>
+  </div>
+  <div id="ia-api-provider-model-box"
+       style="display: none;
+              flex-direction: column;
+              gap: 8px;
+              margin-top: 10px;
+              padding: 12px;
+              border-radius: 10px;
+              background: rgba(255, 255, 255, 0.02);
+              border: 1px solid rgba(255, 255, 255, 0.12);">
+    <div style="font-size: 13px;
+                font-weight: 600;
+                color: #f8fafc;
+                letter-spacing: 0.08em;
+                text-transform: none;
+                font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+      Modelo
+    </div>
+    <select id="ia-api-provider-model-select"
+            style="width: 100%;
+                   padding: 10px 12px;
+                   height: 40px;
+                   line-height: 1.4;
+                   border-radius: 8px;
+                   border: 1px solid rgba(255, 255, 255, 0.1);
+                   background-color: #12131f !important;
+                   background-image: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+                   color: #fefefe;
+                   font-size: 13px;
+                   font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                   outline: none;
+                   box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+                   appearance: none;
+                   -webkit-appearance: none;">
+      <option value="" disabled selected style="background-color:#12131f;color:#ffffff;">Seleccione el modelo</option>
+      <option value="openai/gpt-4o-mini" style="background-color:#12131f;color:#eceffc;">openai/gpt-4o-mini</option>
+      <option value="deepseek/deepseek-chat-v3.1" style="background-color:#12131f;color:#eceffc;">deepseek/deepseek-chat-v3.1</option>
+      <option value="x-ai/grok-4.1-fast" style="background-color:#12131f;color:#eceffc;">x-ai/grok-4.1-fast</option>
+      <option value="google/gemini-2.5-flash-lite-preview-09-2025" style="background-color:#12131f;color:#eceffc;">google/gemini-2.5-flash-lite-preview-09-2025</option>
+    </select>
+    <div style="font-size: 12px;
+                color: #9ca3af;">
+      Selecciona el modelo que usarás para las solicitudes relacionadas con OpenRouter; mantenlo coherente con tu herramienta de IA preferida.
+    </div>
+  </div>
+
+  <!-- Selector de tokens máximos -->
+  <div id="ia-max-tokens-box"
+       style="display: flex;
+              flex-direction: column;
+              gap: 8px;
+              margin-top: 12px;
+              padding: 12px;
+              border-radius: 10px;
+              background: rgba(255, 255, 255, 0.02);
+              border: 1px solid rgba(255, 255, 255, 0.12);">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="font-size: 13px;
+                  font-weight: 600;
+                  color: #f8fafc;
+                  letter-spacing: 0.08em;
+                  text-transform: none;
+                  font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+        Tokens máximos por respuesta
+      </div>
+      <div id="ia-max-tokens-value"
+           style="font-size: 12px; color: #cbd5f5; font-weight: 600;">1000</div>
+    </div>
+    <input id="ia-max-tokens-slider"
+           type="range"
+           min="256"
+           max="32000"
+           step="256"
+           value="1000"
+           style="width: 100%; accent-color: #5B46E5; cursor: pointer;">
+    <div style="font-size: 12px; color: #9ca3af;">
+      Ajusta el límite de tokens que enviarás al modelo por respuesta. Valores mayores permiten respuestas más largas, pero consumen más cuota.
+    </div>
+  </div>
+  <div id="ia-openai-provider-key-box"
+       style="display: none;
+              flex-direction: column;
+              gap: 8px;
+              margin-top: 14px;
+              padding: 12px;
+              border-radius: 10px;
+              background: rgba(255, 255, 255, 0.02);
+              border: 1px solid rgba(255, 255, 255, 0.12);">
+    <div style="display:flex;
+                justify-content:space-between;
+                align-items:flex-start;
+                gap:10px;">
+      <div style="font-size: 13px;
+                  font-weight: 600;
+                  color: #f8fafc;
+                  letter-spacing: 0.08em;
+                  text-transform: none;
+                  font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+        OpenAI API Key
+      </div>
+    </div>
+    <input id="ia-openai-provider-key-input"
+           type="password"
+           placeholder="Ingrese el Api Key..."
+            style="width: 100%;
+                   padding: 12px 14px;
+                   height: 42px;
+                   line-height: 1.4;
+                   border-radius: 10px;
+                   border: 1px solid rgba(255, 255, 255, 0.10) !important;
+                   background: #12131f !important;
+                   background-image: linear-gradient(180deg, rgba(255,255,255,0.03), transparent) !important;
+                   background-clip: padding-box !important;
+                   color: #fefefe !important;
+                   caret-color: #fefefe !important;
+                   -webkit-text-fill-color: #fefefe !important;
+                   font-size: 13px;
+                   font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                   outline: none;
+                   box-shadow: inset 0 1px 0 rgba(255,255,255,0.06) !important;
+                   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 1000px #12131f inset !important;
+                   appearance: none !important;
+                   -webkit-appearance: none !important;">
+    <div style="font-size: 12px;
+                color: #9ca3af;">
+      Las claves API se almacenan de forma segura en el almacenamiento del CDE
+    </div>
+  </div>
+  <div id="ia-openai-provider-model-box"
+       style="display: none;
+              flex-direction: column;
+              gap: 8px;
+              margin-top: 10px;
+              padding: 12px;
+              border-radius: 10px;
+              background: rgba(255, 255, 255, 0.02);
+              border: 1px solid rgba(255, 255, 255, 0.12);">
+    <div style="font-size: 13px;
+                font-weight: 600;
+                color: #f8fafc;
+                letter-spacing: 0.08em;
+                text-transform: none;
+                font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+      Modelo (OpenAI)
+    </div>
+    <select id="ia-openai-provider-model-select"
+            style="width: 100%;
+                   padding: 10px 12px;
+                   height: 40px;
+                   line-height: 1.4;
+                   border-radius: 8px;
+                   border: 1px solid rgba(255, 255, 255, 0.1);
+                   background-color: #12131f !important;
+                   background-image: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+                   color: #fefefe;
+                   font-size: 13px;
+                   font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                   outline: none;
+                   box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+                   appearance: none;
+                   -webkit-appearance: none;">
+      <option value="" disabled selected style="background-color:#12131f;color:#ffffff;">Seleccione el modelo</option>
+      <option value="gpt-5.1" style="background-color:#12131f;color:#eceffc;">gpt-5.1</option>
+      <option value="gpt-5.1-codex" style="background-color:#12131f;color:#eceffc;">gpt-5.1-codex</option>
+      <option value="gpt-5.1-codex-mini" style="background-color:#12131f;color:#eceffc;">gpt-5.1-codex-mini</option>
+      <option value="gpt-5" style="background-color:#12131f;color:#eceffc;">gpt-5</option>
+      <option value="gpt-5-mini" style="background-color:#12131f;color:#eceffc;">gpt-5-mini</option>
+      <option value="gpt-5-codex" style="background-color:#12131f;color:#eceffc;">gpt-5-codex</option>
+      <option value="gpt-5-nano" style="background-color:#12131f;color:#eceffc;">gpt-5-nano</option>
+      <option value="gpt-5-chat-latest" style="background-color:#12131f;color:#eceffc;">gpt-5-chat-latest</option>
+      <option value="gpt-4.1" style="background-color:#12131f;color:#eceffc;">gpt-4.1</option>
+      <option value="gpt-4.1-mini" style="background-color:#12131f;color:#eceffc;">gpt-4.1-mini</option>
+      <option value="gpt-4.1-nano" style="background-color:#12131f;color:#eceffc;">gpt-4.1-nano</option>
+      <option value="o3" style="background-color:#12131f;color:#eceffc;">o3</option>
+      <option value="o3-high" style="background-color:#12131f;color:#eceffc;">o3-high</option>
+      <option value="o3-low" style="background-color:#12131f;color:#eceffc;">o3-low</option>
+      <option value="o4-mini" style="background-color:#12131f;color:#eceffc;">o4-mini</option>
+      <option value="o4-mini-high" style="background-color:#12131f;color:#eceffc;">o4-mini-high</option>
+      <option value="o4-mini-low" style="background-color:#12131f;color:#eceffc;">o4-mini-low</option>
+      <option value="o3-mini" style="background-color:#12131f;color:#eceffc;">o3-mini</option>
+      <option value="o1" style="background-color:#12131f;color:#eceffc;">o1</option>
+      <option value="o1-preview" style="background-color:#12131f;color:#eceffc;">o1-preview</option>
+      <option value="o1-mini" style="background-color:#12131f;color:#eceffc;">o1-mini</option>
+      <option value="gpt-4o" style="background-color:#12131f;color:#eceffc;">gpt-4o</option>
+      <option value="gpt-4o-mini" style="background-color:#12131f;color:#eceffc;">gpt-4o-mini</option>
+      <option value="codex-mini-latest" style="background-color:#12131f;color:#eceffc;">codex-mini-latest</option>
+      <option value="gpt-5-2025-08-07" style="background-color:#12131f;color:#eceffc;">gpt-5-2025-08-07</option>
+      <option value="gpt-5-mini-2025-08-07" style="background-color:#12131f;color:#eceffc;">gpt-5-mini-2025-08-07</option>
+      <option value="gpt-5-nano-2025-08-07" style="background-color:#12131f;color:#eceffc;">gpt-5-nano-2025-08-07</option>
+    </select>
+    <div style="font-size: 12px;
+                color: #9ca3af;">
+      Selecciona el modelo que usarás para las solicitudes relacionadas con OpenAI.
+    </div>
+  </div>
+  <div id="ia-gemini-provider-key-box"
+       style="display: none;
+              flex-direction: column;
+              gap: 8px;
+              margin-top: 14px;
+              padding: 12px;
+              border-radius: 10px;
+              background: rgba(255, 255, 255, 0.02);
+              border: 1px solid rgba(255, 255, 255, 0.12);">
+    <div style="display:flex;
+                justify-content:space-between;
+                align-items:flex-start;
+                gap:10px;">
+      <div style="font-size: 13px;
+                  font-weight: 600;
+                  color: #f8fafc;
+                  letter-spacing: 0.08em;
+                  text-transform: none;
+                  font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+        Google Gemini API Key
+      </div>
+    </div>
+    <input id="ia-gemini-provider-key-input"
+           type="password"
+           placeholder="Ingrese el Api Key..."
+            style="width: 100%;
+                   padding: 12px 14px;
+                   height: 42px;
+                   line-height: 1.4;
+                   border-radius: 10px;
+                   border: 1px solid rgba(255, 255, 255, 0.10) !important;
+                   background: #12131f !important;
+                   background-image: linear-gradient(180deg, rgba(255,255,255,0.03), transparent) !important;
+                   background-clip: padding-box !important;
+                   color: #fefefe !important;
+                   caret-color: #fefefe !important;
+                   -webkit-text-fill-color: #fefefe !important;
+                   font-size: 13px;
+                   font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                   outline: none;
+                   box-shadow: inset 0 1px 0 rgba(255,255,255,0.06) !important;
+                   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 1000px #12131f inset !important;
+                   appearance: none !important;
+                   -webkit-appearance: none !important;">
+    <div style="font-size: 12px;
+                color: #9ca3af;">
+      Las claves API se almacenan de forma segura en el almacenamiento del CDE
+    </div>
+  </div>
+  <div id="ia-gemini-provider-model-box"
+       style="display: none;
+              flex-direction: column;
+              gap: 8px;
+              margin-top: 10px;
+              padding: 12px;
+              border-radius: 10px;
+              background: rgba(255, 255, 255, 0.02);
+              border: 1px solid rgba(255, 255, 255, 0.12);">
+    <div style="font-size: 13px;
+                font-weight: 600;
+                color: #f8fafc;
+                letter-spacing: 0.08em;
+                text-transform: none;
+                font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+      Modelo (Google Gemini)
+    </div>
+    <select id="ia-gemini-provider-model-select"
+            style="width: 100%;
+                   padding: 10px 12px;
+                   height: 40px;
+                   line-height: 1.4;
+                   border-radius: 8px;
+                   border: 1px solid rgba(255, 255, 255, 0.1);
+                   background-color: #12131f !important;
+                   background-image: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+                   color: #fefefe;
+                   font-size: 13px;
+                   font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                   outline: none;
+                   box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+                   appearance: none;
+                   -webkit-appearance: none;">
+      <option value="" disabled selected style="background-color:#12131f;color:#ffffff;">Seleccione el modelo</option>
+      <option value="gemini-1.5-flash-002" style="background-color:#12131f;color:#eceffc;">gemini-1.5-flash-002</option>
+      <option value="gemini-1.5-flash-8b-exp-0827" style="background-color:#12131f;color:#eceffc;">gemini-1.5-flash-8b-exp-0827</option>
+      <option value="gemini-1.5-flash-exp-0827" style="background-color:#12131f;color:#eceffc;">gemini-1.5-flash-exp-0827</option>
+      <option value="gemini-1.5-pro-002" style="background-color:#12131f;color:#eceffc;">gemini-1.5-pro-002</option>
+      <option value="gemini-1.5-pro-exp-0827" style="background-color:#12131f;color:#eceffc;">gemini-1.5-pro-exp-0827</option>
+      <option value="gemini-2.0-flash-001" style="background-color:#12131f;color:#eceffc;">gemini-2.0-flash-001</option>
+      <option value="gemini-2.0-flash-exp" style="background-color:#12131f;color:#eceffc;">gemini-2.0-flash-exp</option>
+      <option value="gemini-2.0-flash-lite-preview-02-05" style="background-color:#12131f;color:#eceffc;">gemini-2.0-flash-lite-preview-02-05</option>
+      <option value="gemini-2.0-flash-thinking-exp-01-21" style="background-color:#12131f;color:#eceffc;">gemini-2.0-flash-thinking-exp-01-21</option>
+      <option value="gemini-2.0-flash-thinking-exp-12-19" style="background-color:#12131f;color:#eceffc;">gemini-2.0-flash-thinking-exp-12-19</option>
+      <option value="gemini-2.0-pro-exp-02-05" style="background-color:#12131f;color:#eceffc;">gemini-2.0-pro-exp-02-05</option>
+      <option value="gemini-2.5-flash" style="background-color:#12131f;color:#eceffc;">gemini-2.5-flash</option>
+      <option value="gemini-2.5-flash-lite-preview-06-17" style="background-color:#12131f;color:#eceffc;">gemini-2.5-flash-lite-preview-06-17</option>
+      <option value="gemini-2.5-flash-lite-preview-09-2025" style="background-color:#12131f;color:#eceffc;">gemini-2.5-flash-lite-preview-09-2025</option>
+      <option value="gemini-2.5-flash-preview-04-17" style="background-color:#12131f;color:#eceffc;">gemini-2.5-flash-preview-04-17</option>
+      <option value="gemini-2.5-flash-preview-04-17:thinking" style="background-color:#12131f;color:#eceffc;">gemini-2.5-flash-preview-04-17:thinking</option>
+      <option value="gemini-2.5-flash-preview-05-20" style="background-color:#12131f;color:#eceffc;">gemini-2.5-flash-preview-05-20</option>
+      <option value="gemini-2.5-flash-preview-05-20:thinking" style="background-color:#12131f;color:#eceffc;">gemini-2.5-flash-preview-05-20:thinking</option>
+      <option value="gemini-2.5-flash-preview-09-2025" style="background-color:#12131f;color:#eceffc;">gemini-2.5-flash-preview-09-2025</option>
+      <option value="gemini-2.5-pro" style="background-color:#12131f;color:#eceffc;">gemini-2.5-pro</option>
+      <option value="gemini-2.5-pro-exp-03-25" style="background-color:#12131f;color:#eceffc;">gemini-2.5-pro-exp-03-25</option>
+      <option value="gemini-2.5-pro-preview-03-25" style="background-color:#12131f;color:#eceffc;">gemini-2.5-pro-preview-03-25</option>
+      <option value="gemini-2.5-pro-preview-05-06" style="background-color:#12131f;color:#eceffc;">gemini-2.5-pro-preview-05-06</option>
+      <option value="gemini-2.5-pro-preview-06-05" style="background-color:#12131f;color:#eceffc;">gemini-2.5-pro-preview-06-05</option>
+      <option value="gemini-3-pro-preview" style="background-color:#12131f;color:#eceffc;">gemini-3-pro-preview</option>
+      <option value="gemini-exp-1206" style="background-color:#12131f;color:#eceffc;">gemini-exp-1206</option>
+      <option value="gemini-flash-latest" style="background-color:#12131f;color:#eceffc;">gemini-flash-latest</option>
+      <option value="gemini-flash-lite-latest" style="background-color:#12131f;color:#eceffc;">gemini-flash-lite-latest</option>
+    </select>
+    <div style="font-size: 12px;
+                color: #9ca3af;">
+      Selecciona el modelo que usarás para las solicitudes relacionadas con Google Gemini.
+    </div>
+  </div>
+  <div id="ia-mcp-server-box"
+       style="margin-top: 16px;
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              padding: 14px;
+              border-radius: 12px;
+              background: rgba(255, 255, 255, 0.02);
+              border: 1px solid rgba(255, 255, 255, 0.12);">
+    <div style="font-size: 13px;
+                font-weight: 600;
+                color: #f8fafc;
+                letter-spacing: 0.08em;
+                text-transform: none;
+                font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+      Servidor MCP del CDE
+    </div>
+    <input id="ia-mcp-server-url-input"
+           type="text"
+           placeholder="https://tu-servidor-mcp.ejemplo"
+           style="width: 100%;
+                  padding: 12px 14px;
+                  height: 42px;
+                  line-height: 1.4;
+                  border-radius: 10px;
+                  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+                  background: #12131f !important;
+                  background-image: linear-gradient(180deg, rgba(255,255,255,0.03), transparent) !important;
+                  background-clip: padding-box !important;
+                  color: #fefefe !important;
+                  caret-color: #fefefe !important;
+                  -webkit-text-fill-color: #fefefe !important;
+                  font-size: 13px;
+                  font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                  outline: none;
+                  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06) !important;
+                  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 1000px #12131f inset !important;
+                  appearance: none !important;
+                  -webkit-appearance: none !important;">
+  <div style="font-size: 12px;
+              color: #9ca3af;">
+    Define la URL del servidor MCP para el CDE (e.g. https://cde.midominio.com:8000).
+  </div>
+</div>
+  <div id="ia-mcp-server-auth-box"
+       style="margin-top: 12px;
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              padding: 14px;
+              border-radius: 12px;
+              background: rgba(255, 255, 255, 0.02);
+              border: 1px solid rgba(255, 255, 255, 0.12);">
+    <div style="font-size: 13px;
+                font-weight: 600;
+                color: #f8fafc;
+                letter-spacing: 0.08em;
+                text-transform: none;
+                font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+      Autenticacion MCP (Basic)
+    </div>
+    <input id="ia-mcp-server-username-input"
+           type="text"
+           placeholder="Usuario"
+           style="width: 100%;
+                  padding: 12px 14px;
+                  height: 42px;
+                  line-height: 1.4;
+                  border-radius: 10px;
+                  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+                  background: #12131f !important;
+                  background-image: linear-gradient(180deg, rgba(255,255,255,0.03), transparent) !important;
+                  background-clip: padding-box !important;
+                  color: #fefefe !important;
+                  caret-color: #fefefe !important;
+                  -webkit-text-fill-color: #fefefe !important;
+                  font-size: 13px;
+                  font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                  outline: none;
+                  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06) !important;
+                  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 1000px #12131f inset !important;
+                  appearance: none !important;
+                  -webkit-appearance: none !important;">
+    <div style="display: flex; gap: 8px; align-items: center;">
+      <input id="ia-mcp-server-password-input"
+             type="password"
+             placeholder="Contrasena"
+             style="width: 100%;
+                    padding: 12px 14px;
+                    height: 42px;
+                    line-height: 1.4;
+                    border-radius: 10px;
+                    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+                    background: #12131f !important;
+                    background-image: linear-gradient(180deg, rgba(255,255,255,0.03), transparent) !important;
+                    background-clip: padding-box !important;
+                    color: #fefefe !important;
+                    caret-color: #fefefe !important;
+                    -webkit-text-fill-color: #fefefe !important;
+                    font-size: 13px;
+                    font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                    outline: none;
+                    box-shadow: inset 0 1px 0 rgba(255,255,255,0.06) !important;
+                    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 1000px #12131f inset !important;
+                    appearance: none !important;
+                    -webkit-appearance: none !important;">
+      <button id="ia-mcp-server-password-toggle"
+              type="button"
+              title="Ver contrasena"
+              style="width: 42px;
+                     height: 42px;
+                     border-radius: 10px;
+                     border: 1px solid rgba(255, 255, 255, 0.10);
+                     background: #12131f;
+                     color: #cbd5f5;
+                     cursor: pointer;
+                     font-size: 14px;">
+        👁
+      </button>
+    </div>
+    <label style="display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  font-size: 12px;
+                  color: #cbd5f5;">
+      <input type="checkbox"
+             id="ia-mcp-server-remember-pass"
+             style="accent-color: #5B46E5;">
+      Recordar contrasena en este navegador
+    </label>
+    <div style="font-size: 12px;
+                color: #9ca3af;">
+      Credenciales basicas para acceder al servidor MCP del CDE.
+    </div>
+  </div>
+  <div id="ia-mcp-search-server-box"
+       style="margin-top: 12px;
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              padding: 14px;
+              border-radius: 12px;
+              background: rgba(255, 255, 255, 0.02);
+              border: 1px solid rgba(255, 255, 255, 0.12);">
+    <div style="font-size: 13px;
+                font-weight: 600;
+                color: #f8fafc;
+                letter-spacing: 0.08em;
+                text-transform: none;
+                font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+      Busqueda de Proyecto MCP
+    </div>
+    <input id="ia-mcp-search-url-input"
+           type="text"
+           placeholder="https://tu-servidor-mcp-busqueda.ejemplo"
+           style="width: 100%;
+                  padding: 12px 14px;
+                  height: 42px;
+                  line-height: 1.4;
+                  border-radius: 10px;
+                  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+                  background: #12131f !important;
+                  background-image: linear-gradient(180deg, rgba(255,255,255,0.03), transparent) !important;
+                  background-clip: padding-box !important;
+                  color: #fefefe !important;
+                  caret-color: #fefefe !important;
+                  -webkit-text-fill-color: #fefefe !important;
+                  font-size: 13px;
+                  font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                  outline: none;
+                  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06) !important;
+                  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 1000px #12131f inset !important;
+                  appearance: none !important;
+                  -webkit-appearance: none !important;">
+    <div style="font-size: 12px;
+                color: #9ca3af;">
+      Define la URL del servidor MCP para la busqueda de proyectos.
+    </div>
+  </div>
+  <div id="ia-lightrag-server-box"
+       style="margin-top: 12px;
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              padding: 14px;
+              border-radius: 12px;
+              background: rgba(255, 255, 255, 0.02);
+              border: 1px solid rgba(255, 255, 255, 0.12);">
+    <div style="font-size: 13px;
+                font-weight: 600;
+                color: #f8fafc;
+                letter-spacing: 0.08em;
+                text-transform: none;
+                font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+      Servidor Lightrag del CDE
+    </div>
+    <input id="ia-lightrag-url-input"
+           type="text"
+           placeholder="https://tu-lightrag.ejemplo"
+           style="width: 100%;
+                  padding: 12px 14px;
+                  height: 42px;
+                  line-height: 1.4;
+                  border-radius: 10px;
+                  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+                  background: #12131f !important;
+                  background-image: linear-gradient(180deg, rgba(255,255,255,0.03), transparent) !important;
+                  background-clip: padding-box !important;
+                  color: #fefefe !important;
+                  caret-color: #fefefe !important;
+                  -webkit-text-fill-color: #fefefe !important;
+                  font-size: 13px;
+                  font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                  outline: none;
+                  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06) !important;
+                  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 1000px #12131f inset !important;
+                  appearance: none !important;
+                  -webkit-appearance: none !important;">
+    <div style="font-size: 12px;
+                color: #9ca3af;">
+      Define la URL del servidor Lightrag para la base de conocimiento BIM.
+    </div>
+  </div>
+  <div id="ia-lightrag-api-key-box"
+       style="margin-top: 12px;
+              display: flex;
+              flex-direction: column;
+              gap: 8px;
+              padding: 14px;
+              border-radius: 12px;
+              background: rgba(255, 255, 255, 0.02);
+              border: 1px solid rgba(255, 255, 255, 0.12);">
+    <div style="font-size: 13px;
+                font-weight: 600;
+                color: #f8fafc;
+                letter-spacing: 0.08em;
+                text-transform: none;
+                font-family: 'Inter', 'Poppins', system-ui, sans-serif;">
+      Lightrag API Key
+    </div>
+    <input id="ia-lightrag-api-key-input"
+           type="text"
+           placeholder="Ingresa la API Key de Lightrag"
+           style="width: 100%;
+                  padding: 12px 14px;
+                  height: 42px;
+                  line-height: 1.4;
+                  border-radius: 10px;
+                  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+                  background: #12131f !important;
+                  background-image: linear-gradient(180deg, rgba(255,255,255,0.03), transparent) !important;
+                  background-clip: padding-box !important;
+                  color: #fefefe !important;
+                  caret-color: #fefefe !important;
+                  -webkit-text-fill-color: #fefefe !important;
+                  font-size: 13px;
+                  font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+                  outline: none;
+                  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06) !important;
+                  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 0 0 1000px #12131f inset !important;
+                  appearance: none !important;
+                  -webkit-appearance: none !important;">
+    <div style="font-size: 12px;
+                color: #9ca3af;">
+      Se usa para autenticar las consultas a Lightrag (si tu instancia requiere API Key).
+    </div>
+  </div>
+</div>

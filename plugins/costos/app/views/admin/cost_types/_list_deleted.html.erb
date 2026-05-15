@@ -1,0 +1,104 @@
+<%#-- copyright
+OpenProject is an open source project management software.
+Copyright (C) the OpenProject GmbH
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License version 3.
+
+OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+Copyright (C) 2006-2013 Jean-Philippe Lang
+Copyright (C) 2010-2013 the ChiliProject Team
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+See COPYRIGHT and LICENSE files for more details.
+
+++#%>
+
+<% source = if defined?(@deleted_cost_types) && @deleted_cost_types.present?
+              @deleted_cost_types
+            else
+              Array(@cost_types)
+            end -%>
+<% cost_types = source.select { |cost_type| cost_type.deleted_at.present? } -%>
+
+<% if cost_types.empty? %>
+  <%= no_results_box %>
+<% else %>
+  <div class="generic-table--container">
+    <div class="generic-table--results-container">
+      <table class="generic-table locked_cost_types">
+        <colgroup>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col>
+          <col data-highlight="false">
+        </colgroup>
+        <thead>
+          <tr>
+            <%= sort_header_tag("unit_plural",
+                                caption: t('cost_types.code_label', default: CostType.human_attribute_name(:unit_plural))) %>
+            <%= sort_header_tag("name", caption: CostType.model_name.human) %>
+            <%= sort_header_tag("unit",
+                                caption: t('cost_types.unit_label', default: CostType.human_attribute_name(:unit))) %>
+            <th>
+              <div class="generic-table--sort-header-outer">
+                <div class="generic-table--sort-header">
+                  <span>
+                    <%= CostType.human_attribute_name(:current_rate) %>
+                  </span>
+                </div>
+              </div>
+            </th>
+            <th>
+              <div class="generic-table--sort-header-outer">
+                <div class="generic-table--sort-header">
+                  <span>
+                    <%= t(:caption_locked_on) %>
+                  </span>
+                </div>
+              </div>
+            </th>
+            <th><div class="generic-table--empty-header"></div></th>
+          </tr>
+          </thead>
+          <tbody>
+            <% cost_types.each do |cost_type| %>
+              <tr>
+                <%= content_tag :td, cost_type.unit_plural %>
+                <%= content_tag :td, cost_type.name %>
+                <%= content_tag :td, cost_type.unit %>
+                <%= content_tag :td, to_currency_with_empty(cost_type.rate_at(@fixed_date)), class: "currency" %>
+                <%= content_tag :td, cost_type.deleted_at.to_date %>
+                <td class="buttons">
+                  <%= button_to main_app.restore_admin_cost_type_path(cost_type),
+                                method: :patch,
+                                form: { id: "restore_cost_type_#{cost_type.id}",
+                                       class: "restore_cost_type" },
+                                class: "button--link submit_cost_type" do %>
+                    <%= op_icon("icon icon-unlocked", title: I18n.t(:button_unlock)) %>
+                  <% end %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+<% end %>

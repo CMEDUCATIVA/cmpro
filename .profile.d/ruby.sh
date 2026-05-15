@@ -1,0 +1,10 @@
+export LANG=${LANG:-en_US.UTF-8}
+export GEM_PATH="$HOME/vendor/bundle/ruby/3.4.0:$GEM_PATH"
+export PATH="$HOME/bin:$HOME/vendor/bundle/bin:$HOME/vendor/bundle/ruby/3.4.0/bin:$PATH"
+export DISABLE_SPRING="1"
+export MALLOC_ARENA_MAX=${MALLOC_ARENA_MAX:-2}
+export BUNDLE_PATH=${BUNDLE_PATH:-vendor/bundle}
+export BUNDLE_WITHOUT=${BUNDLE_WITHOUT:-development:test}
+export BUNDLE_BIN=${BUNDLE_BIN:-vendor/bundle/bin}
+export BUNDLE_DEPLOYMENT=${BUNDLE_DEPLOYMENT:-1}
+export RACK_ENV=${RACK_ENV:-production}

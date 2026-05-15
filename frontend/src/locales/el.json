@@ -1,0 +1,2060 @@
+{
+  "el": {
+    "date": {
+      "abbr_day_names": [
+        "Κυρ",
+        "Δευ",
+        "Τρί",
+        "Τετ",
+        "Πέμ",
+        "Παρ",
+        "Σάβ"
+      ],
+      "abbr_month_names": [
+        null,
+        "Ιαν",
+        "Φεβ",
+        "Μαρ",
+        "Απρ",
+        "Μάι",
+        "Ιουν",
+        "Ιουλ",
+        "Αύγ",
+        "Σεπ",
+        "Οκτ",
+        "Νοε",
+        "Δεκ"
+      ],
+      "abbr_week": "Εβδ",
+      "day_names": [
+        "Κυριακή",
+        "Δευτέρα",
+        "Τρίτη",
+        "Τετάρτη",
+        "Πέμπτη",
+        "Παρασκευή",
+        "Σάββατο"
+      ],
+      "formats": {
+        "default": "%m/%d/%Y",
+        "long": "%B %d, %Y",
+        "short": "%b %d"
+      },
+      "month_names": [
+        null,
+        "Ιανουάριος",
+        "Φεβρουάριος",
+        "Μάρτιος",
+        "Απρίλιος",
+        "Μάι",
+        "Ιούνιος",
+        "Ιούλιος",
+        "Αύγουστος",
+        "Σεπτέμβριος",
+        "Οκτώβριος",
+        "Νοέμβριος",
+        "Δεκέμβριος"
+      ],
+      "order": [
+        ":έτος",
+        ":μήνας",
+        ":ημέρα"
+      ]
+    },
+    "js": {
+      "admin": {
+        "enterprise": {
+          "text_expired": "expired",
+          "text_reprieve_days_left": "%{days} days until end of grace period",
+          "trial": {
+            "confirmation": "Επιβεβαίωση της διεύθυνσης email",
+            "confirmation_info": "Σας στείλαμε ένα email στο %{date} στο %{email}. Παρακαλούμε ελέγξτε τα εισερχόμενά σας και κάντε κλικ στον σύνδεσμο επιβεβαίωσης που παρέχεται για να ξεκινήσετε τη δοκιμή 14 ημερών.\n",
+            "email_not_received": "Δεν λάβατε email? Μπορείτε να ξαναστείλετε το email με τον σύνδεσμο στα δεξιά.",
+            "form": {
+              "domain_mismatch": "The current request host name does not match the configured host name. Please double check your system settings.",
+              "general_consent": "Συμφωνώ με τους <a target=\"_blank\" href=\"%{link_terms}\">όρους χρήσης</a> και με την <a target=\"_blank\" href=\"%{link_privacy}\">πολιτική απορρήτου</a>.\n",
+              "invalid_email": "Μη έγκυρη διεύθυνση email",
+              "label_additional_features": "Additional features",
+              "label_company": "Εταιρεία",
+              "label_domain": "Τομέας",
+              "label_expires_at": "Λήγει στις",
+              "label_first_name": "Όνομα",
+              "label_last_name": "Επώνυμο",
+              "label_maximum_users": "Μέγιστοι ενεργοί χρήστες",
+              "label_plan": "Πλάνο",
+              "label_starts_at": "Αρχίζει στις",
+              "label_subscriber": "Συνδρομητής",
+              "receive_newsletter": "Θέλω να λαμβάνω το <a target=\"_blank\" href=\"%{link}\">ενημερωτικό δελτίο</a> του OpenProject.",
+              "taken_domain": "Μπορεί να υπάρχει μόνο μια ενεργή δοκιμαστική συνδρομή ανά τομέα.",
+              "taken_email": "Κάθε χρήστης μπορεί να δημιουργήσει μόνο μία δοκιμαστική συνδρομή."
+            },
+            "next_steps": "Επόμενα βήματα",
+            "quick_overview": "Get a quick overview of project management and team collaboration with OpenProject Enterprise edition.",
+            "resend_link": "Αποστολή ξανά",
+            "resend_success": "Το email απεστάλη ξανά. Παρακαλούμε ελέγξτε τα emails σας και πατήστε τον σύνδεσμο επιβεβαίωσης.",
+            "resend_warning": "Δεν ήταν δυνατή η αποστολή email.",
+            "session_timeout": "Η συνεδρία σας έληξε. Παρακαλούμε δοκιμάστε να ξαναφορτώσετε τη σελίδα ή να ξαναστείλετε το email.",
+            "status_confirmed": "επιβεβαιωμένο",
+            "status_label": "Κατάσταση:",
+            "status_waiting": "το email απεστάλη - αναμονή για επιβεβαίωση",
+            "test_ee": "Test the Enterprise edition 14 days for free",
+            "try_another_email": "Ή δοκιμάστε με διαφορετική διεύθυνση email."
+          },
+          "upsell": {
+            "become_hero": "Γίνετε ήρωας!",
+            "benefits": {
+              "description": "What are the benefits of the Enterprise on-premises edition?",
+              "high_security": "Χαρακτηριστικά ασφαλείας",
+              "high_security_text": "Single sign on (SAML, OpenID Connect, CAS), LDAP groups.",
+              "installation": "Υποστήριξη εγκατάστασης",
+              "installation_text": "Οι έμπειροι μηχανικοί λογισμικού σας καθοδηγούν στην πλήρη διαδικασία εγκατάστασης και εγκατάστασης στη δική σας υποδομή.",
+              "premium_features": "Enterprise add-ons",
+              "premium_features_text": "Agile πίνακες, προσαρμοσμένα θέματα και λογότυπα, γραφήματα, έξυπνες ροές εργασίας με προσαρμοσμένες ενέργειες, αναζήτηση κειμένου για συνημμένα πακέτων εργασίας και πολλαπλή επιλογή προσαρμοσμένων πεδίων.",
+              "professional_support": "Επαγγελματική υποστήριξη",
+              "professional_support_text": "Αποκτήστε αξιόπιστη, high-touch υποστήριξη από ανώτερους μηχανικούς υποστήριξης με εξειδικευμένες γνώσεις σχετικά με τη λειτουργία του OpenProject σε κρίσιμα επιχειρηματικά περιβάλλοντα."
+            },
+            "button_book_now": "Κάντε κράτηση τώρα",
+            "button_contact_us": "Επικοινωνήστε μαζί μας για μια επίδειξη",
+            "button_start_trial": "Έναρξη δωρεάν δοκιμαστικής περιόδου",
+            "button_upgrade": "Αναβάθμιση τώρα",
+            "confidence": "Παρέχουμε την εμπιστοσύνη ενός δοκιμασμένου και υποστηριζόμενου λογισμικού διαχείρισης έργων, επιχειρησιακού επιπέδου - με Ανοιχτό Κώδικα και ανοιχτό μυαλό.\n",
+            "enterprise_info_html": "%{feature_title} is an Enterprise <span class='spot-icon spot-icon_inline spot-icon_enterprise-addons'></span> add-on.",
+            "link_quote": "Λάβετε μια προσφορά",
+            "more_info": "Περισσότερες πληροφορίες",
+            "text": "The OpenProject Enterprise edition builds on top of the Community edition. It includes Enterprise add-ons and professional support mainly aimed at organizations with more than 10 users that manage business critical projects with OpenProject.\n",
+            "unlimited": "Απεριόριστα",
+            "upgrade_info": "Please upgrade to a paid plan to activate and start using it in your team.",
+            "you_contribute": "Developers need to pay their bills, too. By upgrading to the Enterprise edition, you will be supporting this open source community effort and contributing to its development, maintenance and continuous improvement."
+          }
+        },
+        "type_form": {
+          "add_group": "Προσθήκη ομάδας χαρακτηριστικών",
+          "add_table": "Προσθήκη πίνακα με σχετιζόμενες εργασίες",
+          "custom_field": "Προσαρμοσμένο πεδίο",
+          "drag_to_activate": "Σύρετε πεδία από εδώ για να τα ενεργοποιήσετε",
+          "edit_query": "Επεξεργασία αναζήτησης",
+          "inactive": "Ανενεργό",
+          "new_group": "Νέα ομάδα",
+          "reset_to_defaults": "Επαναφορά στα προεπιλεγμένα"
+        },
+        "work_packages_settings": {
+          "warning_progress_calculation_mode_change_from_field_to_status_html": "Changing progress calculation mode from work-based to status-based will result in all existing <i>% Complete</i> values to be lost and replaced with values associated with each status. Existing values for <i>Remaining work</i> may also be recalculated to reflect this change. This action is not reversible.",
+          "warning_progress_calculation_mode_change_from_status_to_field_html": "Changing progress calculation mode from status-based to work-based will make the <i>% Complete</i> field freely editable. If you optionally enter values for <i>Work</i> or <i>Remaining work</i>, they will also be linked to <i>% Complete</i>. Changing <i>Remaining work</i> can then update <i>% Complete</i>."
+        },
+        "working_days": {
+          "add_non_working_day": "Non-working day",
+          "already_added_error": "A non-working day for this date exists already. There can only be one non-working day created for each unique date.",
+          "calendar": {
+            "empty_state_description": "No specific non-working days are defined for this year. Click on \"+ Non-working day\" below to add a date.",
+            "empty_state_header": "Non-working days",
+            "new_date": "(new)"
+          },
+          "change_button": "Save and reschedule",
+          "change_description": "Changing which days of the week are considered working days or non-working days can affect the start and finish days of all work packages and life cycles in all projects in this instance.",
+          "change_title": "Change working days",
+          "removed_title": "You will remove the following days from the non-working days list:",
+          "warning": "The changes might take some time to take effect. You will be notified when all relevant work packages and project life cycles have been updated. Are you sure you want to continue?\n"
+        }
+      },
+      "ajax": {
+        "hide": "Απόκρυψη",
+        "loading": "Loading…",
+        "updating": "Updating…"
+      },
+      "attachments": {
+        "delete": "Delete attachment",
+        "delete_confirmation": "Are you sure you want to delete this file? This action is not reversible.\n",
+        "draggable_hint": "Σύρετε στο πεδίο επεξεργαστή για να ευθυγραμμίσετε συνημμένα εικόνας ή αναφοράς. Τα κλειστά πεδία επεξεργαστή θα ανοίξουν όσο συνεχίζετε να σέρνετε.\n",
+        "quarantined_hint": "The file is quarantined, as a virus was found. It is not available for download."
+      },
+      "autocomplete_ng_select": {
+        "add_tag": "Add item",
+        "clear_all": "Clear all",
+        "loading": "Φόρτωση...",
+        "not_found": "No items found",
+        "type_to_search": "Πληκτρολογήστε για αναζήτηση"
+      },
+      "autocomplete_select": {
+        "active": "Ενεργό %{label} %{name}",
+        "placeholder": {
+          "multi": "Προσθήκη \"%{name}\"",
+          "single": "Επιλογή \"%{name}\""
+        },
+        "remove": "Διαγραφή %{name}"
+      },
+      "autocompleter": {
+        "notFoundText": "No items found",
+        "placeholder": "Πληκτρολογήστε για αναζήτηση",
+        "project": {
+          "placeholder": "Select project"
+        }
+      },
+      "avatars": {
+        "empty_file_error": "Παρακαλούμε ανεβάστε μια έγκυρη εικόνα (jpg, png, gif)",
+        "error_image_too_large": "Η εικόνα είναι πολύ μεγάλη.",
+        "label_choose_avatar": "Επιλέξτε Άβαταρ από αρχείο",
+        "text_upload_instructions": "Ανεβάστε το δικό σας προσαρμοσμένο άβαταρ σε 128 με 128 pixels. Σε μεγαλύτερα αρχεία θα αλλαχθεί το μέγεθος τους και θα περικοπούν για να ταιριάζουν. Μια προεπισκόπηση του άβαταρ σας θα εμφανιστεί πριν το ανέβασμα, μόλις επιλέξετε μια εικόνα.\n",
+        "uploading_avatar": "Μεταφόρτωση του avatar σας.",
+        "wrong_file_format": "Οι επιτρεπόμενες μορφές είναι jpg, png, gif"
+      },
+      "backup": {
+        "attachments_disabled": "Attachments may not be included since they exceed the maximum overall size allowed. You can change this via the configuration (requires a server restart).",
+        "download_backup": "Λήψη αντιγράφου ασφαλείας",
+        "include_attachments": "Include attachments",
+        "info": "You can trigger a backup here. The process can take some time depending on the amount of data (especially attachments) you have. You will receive an email once it's ready.\n",
+        "last_backup": "Last backup",
+        "last_backup_from": "Last backup from",
+        "note": "A new backup will override any previous one. Only a limited number of backups per day can be requested.\n",
+        "options": "Επιλογές",
+        "request_backup": "Request backup",
+        "title": "Backup OpenProject"
+      },
+      "baseline": {
+        "apply": "Εφαρμογή",
+        "clear": "Εκκαθάριση",
+        "drop_down": {
+          "a_specific_date": "a specific date",
+          "between_two_specific_dates": "between two specific dates",
+          "last_month": "τελευταίος μήνα",
+          "last_week": "προηγούμενη εβδομάδα",
+          "last_working_day": "last working day",
+          "none": "-",
+          "yesterday": "χθες"
+        },
+        "from": "Από",
+        "header_description": "Highlight changes made to this list since any point in the past.",
+        "help_description": "Reference time zone for the baseline.",
+        "icon_tooltip": {
+          "added": "Added to view within the comparison time period",
+          "changed": "Maintained with modifications",
+          "removed": "Removed from view within the comparison time period"
+        },
+        "legends": {
+          "changes_between": "Changes between",
+          "changes_since": "Changes since",
+          "in_your_timezone": "In your local timezone:",
+          "maintained_with_changes": "Maintained with changes",
+          "no_longer_meets_filter_criteria": "No longer meets filter criteria",
+          "now_meets_filter_criteria": "Now meets filter criteria"
+        },
+        "show_changes_since": "Show changes since",
+        "time": "Ώρα",
+        "time_description": "In your local time: %{datetime}",
+        "to": "Έως",
+        "toggle_title": "Baseline"
+      },
+      "bcf": {
+        "add_viewpoint": "Προσθήκη viewpoint",
+        "delete_viewpoint": "Διαγραφή viewpoint",
+        "export": "Εξαγωγή",
+        "export_bcf_xml_file": "Εξαγωγή αρχείου BCF XML (BCF version 2.1)",
+        "import": "Εισαγωγή",
+        "import_bcf_xml_file": "Εισαγωγή αρχείου BCF XML (BCF version 2.1)",
+        "label_bcf": "BCF",
+        "management": "Διαχείριση BCF",
+        "refresh": "Refresh",
+        "refresh_work_package": "Refresh work package",
+        "show_viewpoint": "Εμφάνιση viewpoint",
+        "viewpoint": "Viewpoint"
+      },
+      "boards": {
+        "add_card": "Προσθήκη κάρτας",
+        "add_list": "Προσθήκη λίστας στον πίνακα",
+        "add_list_modal": {
+          "labels": {
+            "assignee": "Επιλέξτε χρήστη για να προσθέσετε ως νέα λίστα assignee",
+            "status": "Επιλέξτε κατάσταση για προσθήκη ως νέα λίστα",
+            "subproject": "Επιλέξτε υποέργο για προσθήκη ως νέα λίστα",
+            "subtasks": "Επιλέξτε πακέτο εργασίας για προσθήκη ως νέα λίστα",
+            "version": "Επιλέξτε έκδοση για προσθήκη ως νέα λίστα"
+          },
+          "warning": {
+            "add_members": "<a href=\"%{link}\">Add a new member to this project</a> to select users again.",
+            "assignee": "Δεν υπάρχει κανένα μέλος που να ταιριάζει με την τιμή του φίλτρου.  <br>",
+            "no_member": "Αυτό το έργο, προς το παρόν, δεν έχει μέλη που μπορούν να προστεθούν.  <br>",
+            "status": "There is currently no status available. <br>\nEither there are none or they have all already been added to the board.\n"
+          }
+        },
+        "board_type": {
+          "action": "Πίνακας ενεργειών",
+          "action_by_attribute": "Πίνακας ενεργειών (%{attribute})",
+          "action_text": "A board with filtered lists on %{attribute} attribute. Moving work packages to other lists will update their attribute.\n",
+          "action_text_assignee": "Board with automated columns based on assigned users. Ideal for dispatching work packages.\n",
+          "action_text_status": "Βασικός πίνακας τύπου kanban με στήλες για την κατάσταση, όπως To Do, In Progress, Done.\n",
+          "action_text_subprojects": "Board with automated columns for subprojects. Dragging work packages to other lists updates the (sub-)project accordingly.\n",
+          "action_text_subtasks": "Board with automated columns for sub-elements. Dragging work packages to other lists updates the parent accordingly.\n",
+          "action_text_version": "Board with automated columns based on the version attribute. Ideal for planning product development.\n",
+          "action_type": {
+            "assignee": "Εντολοδόχος",
+            "status": "κατάσταση",
+            "subproject": "υποέργο",
+            "subtasks": "γονέας-παιδί",
+            "version": "έκδοση"
+          },
+          "board_type_title": {
+            "assignee": "Ανάθεση σε",
+            "basic": "Βασικό",
+            "status": "Κατάσταση",
+            "subproject": "Υποέργο",
+            "subtasks": "Parent-child",
+            "version": "Έκδοση"
+          },
+          "free": "βασικό",
+          "free_text": "Ξεκινήστε από το μηδέν με ένα κενό πίνακα. Προσθέστε κάρτες και στήλες χειροκίνητα σε αυτόν τον πίνακα.\n",
+          "select_attribute": "Χαρακτηριστικό ενέργειας",
+          "select_board_type": "Παρακαλώ επιλέξτε τον τύπο πίνακα που χρειάζεστε.",
+          "text": "Τύπος πίνακα"
+        },
+        "click_to_remove_list": "Κάντε κλικ για να αφαιρέσετε αυτή τη λίστα",
+        "configuration_modal": {
+          "display_settings": {
+            "card_mode": "Εμφάνιση ως κάρτες",
+            "table_mode": "Εμφάνιση ως πίνακα"
+          },
+          "title": "Διαμόρφωση αυτού του πίνακα"
+        },
+        "create_new": "Δημιουργία νέου πίνακα",
+        "error_attribute_not_writable": "Δεν είναι δυνατή η μετακίνηση του πακέτου εργασίας, το %{attribute} δεν είναι εγγράψιμο.",
+        "error_cannot_move_into_self": "Δεν μπορείτε να μετακινήσετε ένα πακέτο εργασίας στη δική του στήλη.",
+        "error_loading_the_list": "Σφάλμα κατά την φόρτωση της λίστας: %{error_message}",
+        "error_permission_missing": "Λείπει το δικαίωμα δημιουργίας δημόσιων ερωτημάτων",
+        "label_board_type": "Τύπος πίνακα",
+        "label_unnamed_board": "Ανώνυμος πίνακας",
+        "label_unnamed_list": "Ανώνυμη λίστα",
+        "lists": {
+          "delete": "Διαγραφή λίστας"
+        },
+        "new_board": "Νέος πίνακας",
+        "text_hidden_list_warning": "Not all lists are displayed because you lack the permission. Contact your admin for more information.",
+        "version": {
+          "close_version": "Κλείσιμο έκδοσης",
+          "closed": "Κλειστό",
+          "edit_version": "Επεξεργασία έκδοσης",
+          "is_closed": "Η έκδοση είναι κλειστή. Δεν μπορούν να προστεθούν αντικείμενα σε αυτή την έκδοση.",
+          "is_locked": "Η έκδοση είναι κλειδωμένη. Δεν μπορούν να προστεθούν αντικείμενα σε αυτή την έκδοση.",
+          "lock_version": "Κλείδωμα έκδοσης",
+          "locked": "Κλειδωμένο",
+          "open_version": "Άνοιγμα έκδοσης",
+          "show_version": "Εμφάνιση έκδοσης",
+          "unlock_version": "Ξεκλείδωμα έκδοσης"
+        }
+      },
+      "button_add": "Προσθήκη",
+      "button_add_watcher": "Προσθήκη παρατηρητή",
+      "button_advanced_filter": "Προχωρημένο φίλτρο",
+      "button_back": "Επιστροφή",
+      "button_back_to_list_view": "Επιστροφή στη προβολή λίστας",
+      "button_cancel": "Ακύρωση",
+      "button_change_project": "Move to another project",
+      "button_check_all": "Επιλογή όλων",
+      "button_close": "Κλείσιμο",
+      "button_close_details": "Κλείσιμο προβολής λεπτομερειών",
+      "button_collapse_all": "Σύμπτυξη όλων",
+      "button_configure-form": "Διαμόρφωση φόρμας",
+      "button_confirm": "Επιβεβαίωση",
+      "button_continue": "Συνέχεια",
+      "button_copy": "Αντιγραφή",
+      "button_copy_link_to_clipboard": "Copy link to clipboard",
+      "button_copy_to_clipboard": "Αντιγραφή στο πρόχειρο",
+      "button_copy_to_other_project": "Duplicate in another project",
+      "button_create": "Δημιουργία",
+      "button_custom-fields": "Προσαρμοσμένα πεδία",
+      "button_delete": "Διαγραφή",
+      "button_delete_watcher": "Διαγραφή παρατηρητή",
+      "button_details_view": "Λεπτομερής Προβολή",
+      "button_duplicate": "Δημιουργία αντιγράφου",
+      "button_edit": "Επεξεργασία",
+      "button_expand_all": "Ανάπτυξη όλων",
+      "button_export-atom": "Κατεβάστε το Atom",
+      "button_filter": "Φίλτρο",
+      "button_generate_pdf": "Generate PDF",
+      "button_list_view": "Προβολή λίστας",
+      "button_log_costs": "Καταγραφή κόστους μονάδας",
+      "button_log_time": "Ιστορικό χρόνου",
+      "button_more": "Περισσότερα",
+      "button_more_actions": "More actions",
+      "button_open_details": "Άνοιγμα προβολής λεπτομερειών",
+      "button_open_fullscreen": "Άνοιγμα προβολής πλήρης οθόνη",
+      "button_quote": "Παράθεση",
+      "button_save": "Αποθήκευση",
+      "button_settings": "Ρυθμίσεις",
+      "button_show_cards": "Εμφάνιση προβολής κάρτας",
+      "button_show_fullscreen": "Show fullscreen view",
+      "button_show_gantt": "Show Gantt view",
+      "button_show_list": "Εμφάνιση προβολής λίστας",
+      "button_show_table": "Show table view",
+      "button_show_view": "Προβολή πλήρης οθόνης",
+      "button_uncheck_all": "Αποεπιλογή όλων",
+      "button_update": "Ενημέρωση",
+      "calendar": {
+        "create_new": "Δημιουργία νέου ημερολογίου",
+        "title": "Ημερολόγιο",
+        "too_many": "Συνολικά υπάρχουν %{count} πακέτα εργασίας, αλλά μπορούν να εμφανιστούν μόνο %{max}.",
+        "unsaved_title": "Ανώνυμο ημερολόγιο"
+      },
+      "caption_rate_history": "Ιστορικό αμοιβής",
+      "card": {
+        "add_new": "Προσθέστε νέα κάρτα",
+        "highlighting": {
+          "entire_card_by": "Ολόκληρη κάρτα με",
+          "inline": "Επισήμανση inline:"
+        },
+        "remove_from_list": "Αφαίρεση κάρτας από τη λίστα"
+      },
+      "chart": {
+        "axis_criteria": "Κριτήρια άξονα",
+        "errors": {
+          "could_not_load": "Τα δεδομένα για εμφάνιση στο διάγραμμα δεν μπόρεσαν να φορτωθούν. Μπορεί να λείπουν τα απαραίτητα δικαιώματα."
+        },
+        "modal_title": "Διαμόρφωση του διαγράμματος πακέτων εργασίας",
+        "tabs": {
+          "dataset": "Σύνολο Δεδομένων %{number}",
+          "graph_settings": "Γενικά"
+        },
+        "type": "Τύπος διαγράμματος",
+        "types": {
+          "bar": "Ραβδόγραμμα",
+          "doughnut": "Ντόνατ",
+          "horizontal_bar": "Οριζόντια μπάρα",
+          "line": "Γραμμή",
+          "pie": "Πίτα",
+          "polar_area": "Πολική περιοχή",
+          "radar": "Ραντάρ"
+        }
+      },
+      "clipboard": {
+        "browser_error": "Your browser doesn't support copying to clipboard. Please copy it manually: %{content}",
+        "copied_successful": "Αντιγράφηκε επιτυχώς στο πρόχειρο!"
+      },
+      "close_filter_title": "Κλείσιμο φίλτρου",
+      "close_form_title": "Κλείσιμο φόρμας",
+      "close_popup_title": "Κλείσιμο αναδυόμενου",
+      "custom_actions": {
+        "date": {
+          "current_date": "Τρέχουσα ημερομηνία",
+          "specific": "σε"
+        }
+      },
+      "dashboards": {
+        "label": "Πίνακας Ελέγχου"
+      },
+      "description_available_columns": "Διαθέσιμες στήλες",
+      "description_current_position": "Είστε εδώ: ",
+      "description_select_work_package": "Επιλέξτε πακέτο εργασίας #%{id}",
+      "description_subwork_package": "Παιδί του πακέτου εργασίας #%{id}",
+      "editor": {
+        "ckeditor_error": "An error occurred within CKEditor",
+        "error_saving_failed": "Η αποθήκευση του αρχείου απέτυχε δίνοντας το ακόλουθο μήνυμα: %{error}",
+        "macro": {
+          "attribute_reference": {
+            "invalid_attribute": "Το επιλεγμένο χαρακτηριστικό '%{name}' δεν υπάρχει.",
+            "macro_help_tooltip": "Αυτό το τμήμα κειμένου δημιουργείται δυναμικά από μια μακροεντολή.",
+            "nested_macro": "This macro is recursively referencing %{model} %{id}.",
+            "not_found": "Ο ζητούμενος πόρος δεν βρέθηκε."
+          },
+          "child_pages": {
+            "button": "Σύνδεσμοι σε σελίδες-παιδιά",
+            "hint": "Αφήστε αυτό το πεδίο άδειο για να καταγραφούν όλες οι σελίδες-παιδιά της τρέχουσας σελίδας. Αν θέλετε να κάνετε αναφορά σε διαφορετική σελίδα, δώστε τον τίτλο ή το slug του.\n",
+            "include_parent": "Συμπεριλάβετε τον γονέα",
+            "page": "Σελίδα Wiki",
+            "text": "[Placeholder] Σύνδεσμοι στις σελίδες-παιδιά του",
+            "this_page": "αυτή η σελίδα"
+          },
+          "code_block": {
+            "button": "Εισαγωγή αποσπάσματος κώδικα",
+            "language": "Μορφοποίηση γλώσσας",
+            "language_hint": "Εισάγετε την γλώσσα μορφοποίησης που θα χρησιμοποιηθεί για επισημάνσεις (αν υποστηρίζεται).",
+            "title": "Εισαγωγή / επεξεργασία αποσπάσματος κώδικα"
+          },
+          "dropdown": {
+            "chose_macro": "Choose macro",
+            "macros": "Μακροεντολές"
+          },
+          "embedded_calendar": {
+            "text": "[Placeholder] Ενσωματωμένο ημερολόγιο"
+          },
+          "embedded_table": {
+            "button": "Ενσωμάτωση πίνακα πακέτων εργασίας",
+            "text": "[Placeholder] Ενσωματωμένος πίνακας πακέτων εργασίας"
+          },
+          "error": "Αδυναμία επέκτασης μακροεντολής: %{message}",
+          "toc": "Πίνακας περιεχομένων",
+          "toolbar_help": "Κάντε κλικ για να επιλέξετε widget και να εμφανίσετε τη γραμμή εργαλείων. Κάντε διπλό κλικ για να επεξεργαστείτε το widget",
+          "wiki_page_include": {
+            "button": "Συμπεριλάβετε περιεχόμενο από άλλη σελίδα wiki",
+            "hint": "Συμπεριλάβετε περιεχόμενο από άλλη σελίδα wiki προσδιορίζοντας το τίτλο ή το slug της. Μπορείτε να συμπεριλάβετε την σελίδα wiki από άλλο έργο διαχωρίζοντας τις με άνω κάτω τελεία όπως το ακόλουθο παράδειγμα.\n",
+            "not_set": "(Η σελίδα δεν έχει οριστεί ακόμα)",
+            "page": "Σελίδα Wiki",
+            "text": "[Placeholder] Συμπεριλαμβανόμενη σελίδα wiki του"
+          },
+          "work_package_button": {
+            "button": "Εισάγετε κουμπί δημιουργίας πακέτου εργασίας",
+            "button_style": "Χρησιμοποιήστε το στυλ κουμπιού",
+            "button_style_hint": "Προαιρετικό: Επιλέξτε για να κάνετε την μακροεντολή να εμφανίζεται ως κουμπί και όχι ως σύνδεσμος.",
+            "type": "Τύπος πακέτου εργασίας",
+            "with_type": "Δημιουργήστε πακέτο εργασίας (Τύπου: %{typename})",
+            "without_type": "Δημιουργήστε πακέτο εργασίας"
+          }
+        },
+        "mode": {
+          "manual": "Αλλαγή σε Markdown source",
+          "wysiwyg": "Αλλαγή σε επεξεργαστή WYSIWYG"
+        },
+        "no_revisions": "No local modifications found",
+        "preview": "Ενεργοποίηση λειτουργίας προεπισκόπησης",
+        "revisions": "Show local modifications",
+        "source_code": "Ενεργοποίηση λειτουργίας Markdown source"
+      },
+      "enumeration_activities": "Δραστηριότητες (παρακολούθηση χρόνου)",
+      "enumeration_doc_categories": "Κατηγορίες εγγράφων",
+      "enumeration_work_package_priorities": "Προτεραιότητες πακέτου εργασίας",
+      "error": {
+        "cannot_save_changes_with_message": "Δεν μπορούμε να αποθηκεύσουμε τις αλλαγές σας λόγω του ακολούθου σφάλματος: %{error}",
+        "embedded_table_loading": "Δεν ήταν δυνατή η φόρτωση της ενσωματωμένης προβολής: %{message}",
+        "internal": "Παρουσιάστηκε ένα εσωτερικό σφάλμα.",
+        "query_saving": "Δεν ήταν δυνατή η αποθήκευση της προβολής."
+      },
+      "error_attachment_upload": "Απέτυχε το ανέβασμα του αρχείου: %{error}",
+      "error_attachment_upload_permission": "Δεν έχετε άδεια να μεταφορτώσετε αρχεία σε αυτό τον πόρο.",
+      "error_could_not_resolve_user_name": "Δεν ήταν δυνατή η επίλυση του ονόματος του χρήστη",
+      "error_could_not_resolve_version_name": "Δεν ήταν δυνατή η επίλυση του ονόματος της έκδοσης",
+      "exclusion_info": {
+        "modal": {
+          "content": "The status '%{status_name}' has been configured to be excluded from hierarchy totals of Work, Remaining work, and % Complete. The totals do not take this value into account.",
+          "title": "Status excluded from hierarchy totals"
+        }
+      },
+      "favorite_projects": {
+        "no_results": "You have no favorite projects",
+        "no_results_subtext": "Add one or multiple projects as favorite through their overview or in a project list."
+      },
+      "field_value_enter_prompt": "Εισαγωγή τιμής για το '%{field}'",
+      "filter": {
+        "description": {
+          "text_close_filter": "Για να επιλέξετε μια καταχώρηση, φύγετε από την εστίαση, για παράδειγμα πατώντας το πλήκτρο enter. Για να φύγετε χωρίς το φίλτρο, επιλέξτε την πρώτη (άδεια) καταχώρηση.",
+          "text_open_filter": "Ανοίξτε αυτό το φίλτρο με το 'ALT' και τα πλήκτρα βέλους."
+        },
+        "more_values_not_shown": "There are %{total} more results, search to filter results.",
+        "noneElement": "(κανένα)",
+        "sorting": {
+          "criteria": {
+            "one": "Πρώτο κριτήριο ταξινόμησης",
+            "three": "Τρίτο κριτήριο ταξινόμησης",
+            "two": "Δεύτερο κριτήριο ταξινόμησης"
+          }
+        },
+        "time_zone_converted": {
+          "only_end": "Μέχρι %{to} στην τοπική σας ώρα.",
+          "only_start": "Από %{from} στην τοπική σας ώρα.",
+          "two_values": "%{from} - %{to} στην τοπική σας ώρα."
+        },
+        "value_spacer": "-"
+      },
+      "forms": {
+        "advanced_settings": "Προηγμένες ρυθμίσεις",
+        "load_error_message": "There was an error loading the form",
+        "submit_success_message": "Η φόρμα υποβλήθηκε με επιτυχία",
+        "validation_error_message": "Please fix the errors present in the form"
+      },
+      "gantt_chart": {
+        "button_activate": "Εμφάνιση διαγράμματος Gantt",
+        "button_deactivate": "Απόκρυψη διαγράμματος Gantt",
+        "filter": {
+          "noneSelection": "(κανένα)"
+        },
+        "label": "Διάγραμμα Gantt",
+        "labels": {
+          "bar": "Ετικέτες μπάρας",
+          "description": "Select the attributes you want to be shown in the respective positions of the Gantt chart at all times. Note that when hovering over an element, its date labels will be shown instead of these attributes.\n",
+          "farRight": "Πολύ δεξιά",
+          "left": "Αριστερά",
+          "right": "Δεξιά",
+          "title": "Διαμόρφωση ετικέτας"
+        },
+        "quarter_label": "Q%{quarter_number}",
+        "selection_mode": {
+          "notification": "Κάντε κλικ σε οποιοδήποτε πακέτο εργασίας για να δημιουργήσετε τη συσχέτιση. Πατήστε το πλήκτρο escape για ακύρωση."
+        },
+        "zoom": {
+          "auto": "Αυτόματη μεγέθυνση",
+          "days": "Ημέρες",
+          "description": "Επιλέξτε το αρχικό επίπεδο μεγέθυνσης που θα πρέπει να εμφανίζεται όταν η αυτόματη μεγέθυνση δεν είναι διαθέσιμη.\n",
+          "in": "Μεγέθυνση",
+          "months": "Μήνες",
+          "out": "Σμίκρυνση",
+          "quarters": "Τρίμηνα",
+          "weeks": "Εβδομάδες",
+          "years": "Χρόνια"
+        }
+      },
+      "general_text_No": "Όχι",
+      "general_text_Yes": "Ναι",
+      "general_text_no": "όχι",
+      "general_text_yes": "ναι",
+      "github_integration": {
+        "github_actions": "Ενέργειες",
+        "pull_requests": {
+          "merged_message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} has been %{pr_state} by %{github_user_link}.",
+          "message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} authored by %{github_user_link} has been %{pr_state}.",
+          "referenced_message": "Pull request #%{pr_number} %{pr_link} for %{repository_link} authored by %{github_user_link} referenced this work package.",
+          "states": {
+            "closed": "κλειστό",
+            "draft": "drafted",
+            "merged": "merged",
+            "opened": "opened",
+            "ready_for_review": "marked ready for review"
+          }
+        },
+        "tab_header": {
+          "copy_menu": {
+            "description": "Copy git snippets to clipboard",
+            "label": "Git snippets"
+          },
+          "git_actions": {
+            "branch_name": "Branch name",
+            "cmd": "Create branch with empty commit",
+            "commit_message": "Commit message",
+            "copy_error": "❌ Η αντιγραφή απέτυχε!",
+            "copy_success": "✅ Αντιγράφηκε!",
+            "title": "Quick snippets for Git"
+          },
+          "title": "Pull requests"
+        },
+        "tab_prs": {
+          "empty": "There are no pull requests linked yet. Link an existing PR by using the code <code>OP#%{wp_id}</code> in the PR description or create a new PR."
+        },
+        "work_packages": {
+          "tab_name": "GitHub"
+        }
+      },
+      "gitlab_integration": {
+        "gitlab_pipelines": "Pipelines",
+        "tab_header_issue": {
+          "title": "Ζητήματα"
+        },
+        "tab_header_mr": {
+          "copy_menu": {
+            "description": "Copy git snippets to clipboard",
+            "label": "Git snippets"
+          },
+          "create_mr": {
+            "description": "Create a Merge Request",
+            "label": "Create MR"
+          },
+          "git_actions": {
+            "branch_name": "Branch name",
+            "cmd": "Create branch with empty commit",
+            "commit_message": "Commit message",
+            "copy_error": "❌ Η αντιγραφή απέτυχε!",
+            "copy_success": "✅ Αντιγράφηκε!",
+            "title": "Quick snippets for Git"
+          },
+          "title": "Merge requests"
+        },
+        "tab_issue": {
+          "empty": "There are no issues linked yet. Link an existing issue by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the issue title/description or create a new issue."
+        },
+        "tab_mrs": {
+          "empty": "There are no merge requests linked yet. Link an existing MR by using the code <code>OP#%{wp_id}</code> (or <code>PP#%{wp_id}</code> for private links) in the MR title/description or create a new MR."
+        },
+        "updated_on": "Τροποποιήθηκε",
+        "work_packages": {
+          "tab_name": "GitLab"
+        }
+      },
+      "global_search": {
+        "all_projects": "Σε όλα τα έργα",
+        "close_search": "Κλείσιμο αναζήτησης",
+        "current_project": "Σε αυτό το έργο",
+        "current_project_and_all_descendants": "Σε αυτό το έργο + υποέργα",
+        "recently_viewed": "Recently viewed",
+        "search": "Αναζήτηση",
+        "title": {
+          "all_projects": "όλα τα έργα",
+          "project_and_subprojects": "και όλα τα υποέργα",
+          "search_for": "Αναζήτηση για"
+        }
+      },
+      "grid": {
+        "add_widget": "Προσθήκη widget",
+        "configure": "Ρύθμιση widget",
+        "remove": "Αφαίρεση widget",
+        "widgets": {
+          "custom_text": {
+            "title": "Προσαρμοσμένο κείμενο"
+          },
+          "documents": {
+            "no_results": "Δεν υπάρχουν έγγραφα.",
+            "title": "Έγγραφα"
+          },
+          "members": {
+            "add": "Μέλος",
+            "no_results": "Δεν υπάρχουν ορατά μέλη.",
+            "title": "Μέλη",
+            "too_many": "Προβολή %{count} απο %{total} μέλη.",
+            "view_all_members": "Δείτε όλα τα μέλη"
+          },
+          "missing_permission": "You don't have the necessary permissions to view this widget.",
+          "news": {
+            "at": "στο",
+            "no_results": "Τίποτα νέο για αναφορά.",
+            "title": "Νέα"
+          },
+          "project_description": {
+            "no_results": "Δεν έχει γραφτεί ακόμα περιγραφή. Μπορεί να παρασχεθεί μια στις 'Ρυθμίσεις έργου'.",
+            "title": "Περιγραφή έργου"
+          },
+          "project_favorites": {
+            "no_results": "You currently have no favorite projects. Click on the star icon in the project dashboard to add one to your favorites.",
+            "title": "Favorite projects"
+          },
+          "project_status": {
+            "at_risk": "Σε κίνδυνο",
+            "discontinued": "Discontinued",
+            "finished": "Ολοκληρωμένο",
+            "not_set": "Μη ορισμένο",
+            "not_started": "Not started",
+            "off_track": "Eκτός πορείας",
+            "on_track": "Eντός πορείας",
+            "title": "Κατάσταση έργου"
+          },
+          "subprojects": {
+            "no_results": "Δεν υπάρχουν υποέργα.",
+            "title": "Υποέργα"
+          },
+          "time_entries_current_user": {
+            "displayed_days": "Ημέρες που εμφανίζονται στο widget:",
+            "title": "Ο δικός μου χρόνος που δαπανήθηκε"
+          },
+          "time_entries_list": {
+            "no_results": "Δεν υπάρχουν καταχωρήσεις χρόνου για τις τελευταίες 7 ημέρες.",
+            "title": "Χρόνος που δαπανήθηκε (τις τελευταίες 7 ημέρες)"
+          },
+          "work_packages_accountable": {
+            "title": "Πακέτα εργασίας για τα οποία είμαι υπεύθυνος"
+          },
+          "work_packages_assigned": {
+            "title": "Πακέτα εργασίας που έχουν ανατεθεί σε μένα"
+          },
+          "work_packages_calendar": {
+            "title": "Ημερολόγιο"
+          },
+          "work_packages_created": {
+            "title": "Εργασίες που δημιούργησα"
+          },
+          "work_packages_graph": {
+            "title": "Γράφημα πακέτων εργασίας"
+          },
+          "work_packages_overview": {
+            "placeholder": "Κάντε κλικ για επεξεργασία ...",
+            "title": "Επισκόπηση των πακέτων εργασίας"
+          },
+          "work_packages_table": {
+            "title": "Πίνακας πακέτων εργασίας"
+          },
+          "work_packages_watched": {
+            "title": "Εργασίες που παρακολουθώ"
+          }
+        }
+      },
+      "hal": {
+        "error": {
+          "edit_prohibited": "Η επεξεργασία του %{attribute} έχει μπλοκαριστεί για αυτό τον πόρο. Είτε αυτό το χαρακτηριστικό παράγεται από σχέσεις (π.χ. παιδιά) ή διαφορετικά δεν μπορεί να διαμορφωθεί.",
+          "format": {
+            "date": "%{attribute} δεν είναι έγκυρη ημερομηνία - αναμένεται ΕΕΕΕ-ΜΜ-ΗΗ."
+          },
+          "general": "Παρουσιάστηκε σφάλμα.",
+          "update_conflict_refresh": "Κάντε κλικ εδώ για να ανανεώσετε τον πόρο και να κάνετε ενημέρωση στην τελευταία έκδοση."
+        }
+      },
+      "help_texts": {
+        "show_modal": "Show help text"
+      },
+      "homescreen": {
+        "blocks": {
+          "new_features": {
+            "16_1": {
+              "standard": {
+                "new_features_html": "The release contains various new features and improvements, such as <br> <ul class=\"%{list_styling_class}\"> <li>Structure the project life cycle with phases and phase gates.</li> <li>Export meetings in PDF format.</li> <li>Set smart default options for reminders.</li> <li>Use negative lag for work package dates.</li> <li>Display hierarchy trees for hierarchy custom fields.</li> <li>Benefit from improved accessibility for the date picker with ARIA live regions.</li> </ul>\n"
+              }
+            },
+            "learn_about": "Learn more about all new features",
+            "text_new_features": "Διαβάστε για τις νέες λειτουργίες και τις ενημερώσεις προϊόντων."
+          }
+        }
+      },
+      "ical_sharing_modal": {
+        "copy_url_label": "Copy URL",
+        "description": "You can use the URL (iCalendar) to subscribe to this calendar in an external client and view up-to-date work package information from there.",
+        "ical_generation_error_text": "An error occured while generating the calendar URL.",
+        "inital_setup_error_message": "An error occured while fetching data.",
+        "success_message": "The URL \"%{name}\" was successfully copied to your clipboard. Paste it in your calendar client to complete the subscription.",
+        "title": "Subscribe to calendar",
+        "token_name_description_text": "If you subscribe to this calendar from multiple devices, this name will help you distinguish between them in your <a href=\"my/access_token\", target=\"_blank\">access tokens</a> list.",
+        "token_name_label": "Where will you be using this?",
+        "token_name_placeholder": "Type a name, e.g. \"Phone\"",
+        "warning": "Please don't share this URL with other users. Anyone with this link will be able to view work package details without an account or password."
+      },
+      "ifc_models": {
+        "empty_warning": "Αυτό το έργο δεν έχει ακόμη κανένα μοντέλο IFC.",
+        "keyboard_input_disabled": "Viewer does not have keyboard controls. Click on the viewer to give keyboard control to the viewer.",
+        "models": {
+          "ifc_models": "Μοντέλα IFC"
+        },
+        "use_this_link_to_manage": "Χρησιμοποιήστε αυτό το σύνδεσμο για να ανεβάσετε και να διαχειριστείτε τα μοντέλα IFC σας",
+        "views": {
+          "split": "Προβολέας και πίνακας",
+          "split_cards": "Θεατής και κάρτες",
+          "viewer": "Θεατής"
+        }
+      },
+      "include_projects": {
+        "apply": "Εφαρμογή",
+        "clear_selection": "Clear selection",
+        "include_subprojects": "Include all sub-projects",
+        "no_results": "No project matches your search criteria.",
+        "search_placeholder": "Search project...",
+        "selected_filter": {
+          "all": "Όλα τα έργα",
+          "selected": "Only selected"
+        },
+        "title": "Έργα",
+        "toggle_title": "Include projects",
+        "tooltip": {
+          "current_project": "This is the current project you are in.",
+          "does_not_match_search": "Project does not match the search criteria.",
+          "include_all_selected": "Project already included since Include all sub-projects is enabled."
+        }
+      },
+      "inplace": {
+        "btn_preview_disable": "Απενεργοποίηση προεπισκόπησης",
+        "btn_preview_enable": "Προεπισκόπηση",
+        "button_cancel": "%{attribute}: Ακύρωση",
+        "button_cancel_all": "Ακύρωση",
+        "button_edit": "%{attribute}: Επεξεργασία",
+        "button_save": "%{attribute}: Αποθήκευση",
+        "button_save_all": "Αποθήκευση",
+        "clear_value_label": "-",
+        "errors": {
+          "maxlength": "%{field} δεν μπορεί να περιέχει περισσότερα από %{maxLength} ψηφία",
+          "messages_on_field": "Αυτό το πεδίο δεν είναι έγκυρο: %{messages}",
+          "minlength": "%{field} δεν μπορεί να περιέχει λιγότερα από %{minLength} ψηφίο/-α",
+          "number": "%{field} δεν είναι έγκυρος αριθμός",
+          "required": "%{field} δεν μπορεί να είναι κενό"
+        },
+        "link_formatting_help": "Βοήθεια μορφοποίησης κειμένου",
+        "null_value_label": "Καμία τιμή"
+      },
+      "invite_user_modal": {
+        "back": "Επιστροφή",
+        "invite": "Πρόσκληση",
+        "message": {
+          "description": "We will send an email to the user, to which you can add a personal message here. An explanation for the invitation could be useful, or prehaps a bit of information regarding the project to help them get started.",
+          "label": "Μήνυμα πρόσκλησης",
+          "next_button": "Επόμενο"
+        },
+        "principal": {
+          "already_member_message": "Ήδη μέλος του %{project}",
+          "create_new_placeholder": "Δημιουργία νέου placeholder:",
+          "invite_user": "Πρόσκληση:",
+          "label": {
+            "name": "Όνομα",
+            "name_or_email": "Όνομα ή διεύθυνση email"
+          },
+          "next_button": "Επόμενο",
+          "no_results_group": "Δεν βρέθηκαν ομάδες",
+          "no_results_placeholder": "Δεν βρέθηκαν placeholders",
+          "no_results_user": "Δεν βρέθηκαν χρήστες",
+          "required": {
+            "group": "Παρακαλούμε επιλέξτε μια ομάδα",
+            "placeholder": "Παρακαλώ επιλέξτε ένα placeholder",
+            "user": "Παρακαλώ επιλέξτε ένα χρήστη"
+          }
+        },
+        "project": {
+          "label": "Έργο",
+          "lacking_permission": "Παρακαλώ επιλέξτε ένα διαφορετικό πρότζεκτ καθώς δεν έχετε δικαιώματα να εγγράψετε τους χρήστες στο επιλεγμένο.",
+          "lacking_permission_info": "You lack the permission to assign users to the project you are currently in. You need to select a different one.",
+          "next_button": "Επόμενο",
+          "no_invite_rights": "You are not allowed to invite members to this project",
+          "no_results": "Δεν βρέθηκαν έργα",
+          "required": "Παρακαλούμε επιλέξτε ένα έργο"
+        },
+        "role": {
+          "description": "This is the role that the user will receive when they join your project. The role defines which actions they are allowed to take and which information they are allowed to see. <a href=\"https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions\" target=\"_blank\"> Learn more about roles and permissions. </a>",
+          "label": "Ρόλος στο %{project}",
+          "next_button": "Επόμενο",
+          "no_roles_found": "Δεν βρέθηκε κανένας ρόλος",
+          "required": "Παρακαλούμε επιλέξτε ένα ρόλο"
+        },
+        "success": {
+          "description": {
+            "group": "Η ομάδα είναι τώρα μέρος του %{project}. Εν τω μεταξύ, μπορείτε να προγραμματίσετε ήδη με αυτή την ομάδα και να αντιστοιχίσετε πακέτα εργασίας.",
+            "placeholder": "The placeholder can now be used in %{project}. Meanwhile you can already plan with that user and assign work packages for instance.",
+            "user": "The user can now log in to access %{project}. Meanwhile you can already plan with that user and assign work packages for instance."
+          },
+          "next_button": "Συνέχεια",
+          "title": "%{principal} προσκλήθηκε!"
+        },
+        "summary": {
+          "next_button": "Αποστολή πρόσκλησης"
+        },
+        "title": {
+          "Group": "ομάδα",
+          "PlaceholderUser": "placeholder χρήστης",
+          "User": "χρήστης",
+          "invite": "Προσκαλέστε χρήστη",
+          "invite_principal_to_project": "Πρόσκληση %{principal} στο %{project}",
+          "invite_to_project": "Προσκαλέστε %{type} στο %{project}"
+        },
+        "type": {
+          "group": {
+            "description": "Permissions based on the assigned role in the selected project",
+            "title": "Ομάδα"
+          },
+          "placeholder": {
+            "description": "Has no access to the project and no emails are sent out.",
+            "description_no_ee": "Has no access to the project and no emails are sent out. <br>Check out the <a href=\"%{eeHref}\" target=\"_blank\">Enterprise edition</a>",
+            "title": "Placeholder χρήστης",
+            "title_no_ee": "Placeholder user (Enterprise edition only add-on)"
+          },
+          "required": "Παρακαλώ επιλέξτε τον τύπο που θα προσκληθεί",
+          "user": {
+            "description": "Permissions based on the assigned role in the selected project",
+            "title": "Χρήστης"
+          }
+        }
+      },
+      "label_activate": "Ενεργοποίηση",
+      "label_activity_show_all": "Εμφάνιση όλων των δραστηριοτήτων",
+      "label_activity_show_only_comments": "Εμφάνιση μόνο δραστηριοτήτων με σχόλια",
+      "label_add_attachments": "Attach files",
+      "label_add_column_after": "Προσθήκη στήλης μετά",
+      "label_add_column_before": "Προσθήκη στήλης πριν",
+      "label_add_columns": "Προσθέστε στήλη",
+      "label_add_comment": "Προσθέστε σχόλιο",
+      "label_add_comment_title": "Σχολιάστε και γράψτε @ για να ειδοποιήσετε άλλους ανθρώπους",
+      "label_add_description": "Προσθέστε περιγραφή για το αρχείο %{file}",
+      "label_add_row_after": "Προσθήκη γραμμής μετά",
+      "label_add_row_before": "Προσθήκη γραμμής πριν",
+      "label_add_selected_columns": "Προσθέστε τις επιλεγμένες στήλες",
+      "label_added_by": "προστέθηκε από",
+      "label_added_time_by": "Added by <a href=\"%{authorLink}\">%{author}</a> at %{age}",
+      "label_ago": "ημέρες πριν",
+      "label_all": "όλα",
+      "label_all_uppercase": "Όλα",
+      "label_all_work_packages": "όλα τα πακέτα εργασίας",
+      "label_and": "και",
+      "label_ascending": "Αύξουσα",
+      "label_assignee": "Ανάθεση σε",
+      "label_attachments": "Συνημμένα",
+      "label_author": "Συγγραφέας: %{user}",
+      "label_avatar": "Άβαταρ",
+      "label_between": "μεταξύ",
+      "label_board": "Πίνακας",
+      "label_board_locked": "Κλειδωμένο",
+      "label_board_plural": "Πίνακες",
+      "label_board_sticky": "Sticky",
+      "label_cancel_comment": "Ακύρωση σχολίου",
+      "label_change": "Τροποποίηση",
+      "label_children_derived_duration": "Work package's children derived duration",
+      "label_closed_work_packages": "κλειστό",
+      "label_collapse": "Σύμπτυξη",
+      "label_collapse_all": "Σύμπτυξη όλων",
+      "label_collapsed": "συμπτυγμένο",
+      "label_columns": "Στήλες",
+      "label_comment": "Σχόλιο",
+      "label_committed_at": "%{committed_revision_link} στις %{date}",
+      "label_committed_link": "δεσμευμένη αναθεώρηση %{revision_identifier}",
+      "label_contains": "περιέχει",
+      "label_create": "Δημιουργία",
+      "label_create_work_package": "Δημιουργήστε νέο πακέτο εργασίας",
+      "label_created_by": "Δημιουργήθηκε από",
+      "label_created_on": "δημιουργήθηκε στις",
+      "label_current": "current",
+      "label_custom_queries": "Private",
+      "label_date": "Ημερομηνία",
+      "label_date_with_format": "Εισάγετε την %{date_attribute} χρησιμοποιώντας την ακόλουθη μορφοποίηση: %{format}",
+      "label_deactivate": "Απενεργοποίηση",
+      "label_default_queries": "Προεπιλογή",
+      "label_descending": "Φθίνουσα",
+      "label_description": "Περιγραφή",
+      "label_details": "Λεπτομέρειες",
+      "label_display": "Εμφάνιση",
+      "label_drop_files": "Drop files here to attach files.",
+      "label_drop_folders_hint": "Δεν μπορείτε να μεταφορτώσετε φακέλους ως συνημμένο. Παρακαλώ επιλέξτε μεμονωμένα αρχεία.",
+      "label_drop_or_click_files": "Drop files here or click to attach files.",
+      "label_edit_comment": "Επεξεργαστείτε αυτό το σχόλιο",
+      "label_edit_status": "Επεξεργαστείτε την κατάσταση του πακέτου εργασίας",
+      "label_email": "Email",
+      "label_equals": "είναι",
+      "label_expand": "Επέκταση",
+      "label_expand_all": "Ανάπτυξη όλων",
+      "label_expand_project_menu": "Επέκταση του μενού έργου",
+      "label_expanded": "επεκταμένη",
+      "label_export": "Εξαγωγή",
+      "label_export_preparing": "Η εξαγωγή προετοιμάζεται και θα κατεβεί σύντομα.",
+      "label_favorites": "Favorites",
+      "label_filename": "Aρχείο",
+      "label_files_to_upload": "Τα αρχεία αυτά θα μεταφορτωθούν:",
+      "label_filesize": "Μέγεθος",
+      "label_formattable_attachment_hint": "Συνάψτε και συνδέστε αρχεία σέρνοντας τα σε αυτό το πεδίο, ή κάνοντας επικόλληση.",
+      "label_general": "Γενικά",
+      "label_global_queries": "Δημόσιο",
+      "label_greater_or_equal": ">=",
+      "label_group": "Ομάδα",
+      "label_group_by": "Ομαδοποίηση κατά",
+      "label_group_plural": "Ομάδες",
+      "label_hide_attributes": "Εμφάνιση λιγότερων",
+      "label_hide_column": "Απόκρυψη στήλης",
+      "label_hide_project_menu": "Σύμπτυξη του μενού έργου",
+      "label_hour": "ώρα",
+      "label_hours": "ώρες",
+      "label_import": "Εισαγωγή",
+      "label_in": "σε",
+      "label_in_less_than": "σε λιγότερο από",
+      "label_in_more_than": "σε περισσότερο από",
+      "label_incoming_emails": "Εισερχόμενα email",
+      "label_information_plural": "Πληροφορίες",
+      "label_invalid": "Invalid",
+      "label_last_updated_on": "Τελευταία ενημέρωση στις",
+      "label_latest_activity": "Τελευταία δραστηριότητα",
+      "label_learn_more_link": "Μάθετε περισσότερα",
+      "label_less_or_equal": "<=",
+      "label_less_than_ago": "σε λιγότερο από ημέρες πριν",
+      "label_loading": "Φόρτωση...",
+      "label_mail_notification": "Ειδοποιήσεις email",
+      "label_manage_columns": "Manage and reorder columns",
+      "label_me": "εγώ",
+      "label_meeting_agenda": "Ατζέντα",
+      "label_meeting_minutes": "Πρακτικά",
+      "label_meetings": "Συναντήσεις",
+      "label_menu_collapse": "σύμπτυξη",
+      "label_menu_expand": "επέκταση",
+      "label_moderate_comment": "Moderate comment",
+      "label_more_than_ago": "σε περισσότερο από ημέρες πριν",
+      "label_next": "Επόμενο",
+      "label_no_color": "Χωρίς χρώμα",
+      "label_no_data": "Δεν υπάρχουν δεδομένα για εμφάνιση",
+      "label_no_date": "no date",
+      "label_no_due_date": "καμία ημερομηνία λήξης",
+      "label_no_start_date": "δεν υπάρχει ημερομηνία έναρξης",
+      "label_no_value": "Καμία τιμή",
+      "label_none": "κανένα",
+      "label_not_contains": "δεν περιέχει",
+      "label_not_equals": "δεν είναι",
+      "label_on": "σε",
+      "label_open_context_menu": "Άνοιγμα του μενού πλαισίου",
+      "label_open_menu": "Άνοιγμα μενού",
+      "label_open_work_packages": "ανοιχτό",
+      "label_password": "Κωδικός",
+      "label_per_page": "Ανά σελίδα:",
+      "label_please_wait": "Παρακαλώ περιμένετε",
+      "label_press_enter_to_save": "Πατήστε enter για αποθήκευση.",
+      "label_preview": "Προεπισκόπηση",
+      "label_previous": "Προηγούμενο",
+      "label_project": "Έργο",
+      "label_project_list": "Project lists",
+      "label_project_plural": "Έργα",
+      "label_public_query": "Δημόσιο",
+      "label_quote_comment": "Παραθέστε αυτό το σχόλιο",
+      "label_recent": "Πρόσφατα",
+      "label_rejected_files": "Δεν ήταν δυνατή η μεταφόρτωση αυτών των αρχείων:",
+      "label_rejected_files_reason": "Δεν ήταν δυνατή η μεταφόρτωση αυτών των αρχείων καθώς το μέγεθος τους είναι μεγαλύτερο από %{maximumFilesize}",
+      "label_remove": "Αφαίρεση",
+      "label_remove_all_files": "Διαγράψτε όλα τα αρχεία",
+      "label_remove_column": "Κατάργηση στήλης",
+      "label_remove_columns": "Αφαιρέστε τις επιλεγμένες στήλες",
+      "label_remove_file": "Διαγραφή %{fileName}",
+      "label_remove_row": "Κατάργηση γραμμής",
+      "label_remove_watcher": "Αφαίρεση παρατηρητή %{name}",
+      "label_report": "Αναφορά",
+      "label_repository_plural": "Αποθετήρια",
+      "label_reset": "Επαναφορά",
+      "label_save_as": "Αποθήκευση ως",
+      "label_search_columns": "Search a column",
+      "label_select_project": "Επιλογή έργου",
+      "label_select_watcher": "Επιλέξτε έναν παρατηρητή...",
+      "label_selected_filter_list": "Επιλεγμένα φίλτρα",
+      "label_show_attributes": "Εμφανίστε όλα τα χαρακτηριστικά",
+      "label_show_in_menu": "Εμφάνιση προβολής στο μενού",
+      "label_sort_by": "Ταξινόμηση κατά",
+      "label_sort_higher": "Μετακίνηση προς τα πάνω",
+      "label_sort_lower": "Μετακίνηση προς τα κάτω",
+      "label_sorted_by": "ταξινομημένο κατά",
+      "label_sorting": "Ταξινόμηση",
+      "label_spent_time": "Χρόνος που δαπανήθηκε",
+      "label_star_query": "Αγαπημένο",
+      "label_starred_queries": "Favorite",
+      "label_subject": "Θέμα",
+      "label_sum": "Άθροισμα",
+      "label_sum_for": "Άθροισμα του",
+      "label_this_week": "αυτή την εβδομάδα",
+      "label_time_entry_plural": "Χρόνος που δαπανήθηκε",
+      "label_today": "Σήμερα ",
+      "label_total_amount": "Σύνολο: %{amount}",
+      "label_total_progress": "%{percent}% Συνολική πρόοδος",
+      "label_total_sum": "Συνολικό άθροισμα",
+      "label_unwatch": "Αναίρεση παρακολούθησης",
+      "label_unwatch_work_package": "Αναίρεση παρακολούθησης πακέτου εργασίας",
+      "label_up": "Πάνω",
+      "label_updated_on": "ενημερώθηκε στις",
+      "label_upload_counter": "Ολοκληρώθηκαν %{done} από %{count} αρχεία",
+      "label_upload_notification": "Μεταφόρτωση αρχείων...",
+      "label_uploaded_by": "Μεταφορτώθηκε από",
+      "label_user_plural": "Χρήστες",
+      "label_validation_error": "Δεν ήταν δυνατή η αποθήκευση του πακέτου εργασίας λόγω των ακόλουθων σφαλμάτων:",
+      "label_value_derived_from_children": "(αξία που προέρχεται από παιδιά)",
+      "label_version_plural": "Εκδόσεις",
+      "label_view_has_changed": "Η προβολή έχει μη αποθηκευμένες αλλαγές. Κάντε κλικ για τις αποθηκεύσετε.",
+      "label_visibility_settings": "Ρυθμίσεις ορατότητας",
+      "label_wait": "Παρακαλώ περιμένετε για την διαμόρφωση...",
+      "label_warning": "Προειδοποίηση",
+      "label_watch": "Παρακολουθήστε",
+      "label_watch_work_package": "Παρακολούθηση πακέτου εργασίας",
+      "label_watcher_added_successfully": "Ο παρατηρητής προστέθηκε επιτυχώς!",
+      "label_watcher_deleted_successfully": "Ο παρατηρητής διαγράφηκε επιτυχώς!",
+      "label_work_package": "Εργασία",
+      "label_work_package_context_menu": "Work package context menu",
+      "label_work_package_details_you_are_here": "You are on the %{tab} tab for %{type} %{subject}.",
+      "label_work_package_parent": "Πακετό εργασίας γονέας",
+      "label_work_package_plural": "Πακέτα εργασίας",
+      "label_work_package_upload_notification": "Μεταφόρτωση αρχείων για το Πακέτο εργασίας #%{id}: %{subject}",
+      "label_wp_id_added_by": "#%{id} προστέθηκε από %{author}",
+      "modals": {
+        "button_apply": "Εφαρμογή",
+        "button_cancel": "Ακύρωση",
+        "button_delete": "Διαγραφή",
+        "button_save": "Αποθήκευση",
+        "button_submit": "Υποβολή",
+        "destroy_time_entry": {
+          "text": "Είστε βέβαιοι ότι θέλετε να διαγράψετε την ακόλουθη καταχώρηση χρόνου",
+          "title": "Επιβεβαίωση διαγραφής καταχώρησης χρόνου"
+        },
+        "destroy_work_package": {
+          "bulk_text": "Are you sure you want to delete the following %{label}?",
+          "confirm_deletion_children": "Αναγνωρίζω ότι ΌΛΟΙ οι απόγονοι από τα αναφερόμενα πακέτα εργασίας θα αφαιρεθούν αναδρομικά.",
+          "deletes_children": "Όλα τα παιδιά πακέτα εργασίας και οι απόγονοι τους επίσης θα διαγραφούν αναδρομικά.",
+          "has_children": "Το πακέτο εργασίας έχει %{childUnits}:",
+          "single_text": "Are you sure you want to delete the work package",
+          "title": "Επιβεβαίωση διαγραφής του %{label}"
+        },
+        "form_submit": {
+          "text": "Είστε βέβαιοι ότι θέλετε να προβείτε αυτήν την ενέργεια;",
+          "title": "Επιβεβαιώστε για να συνεχίσετε"
+        },
+        "label_delete_page": "Διαγραφή της τρέχουσας σελίδας",
+        "label_name": "Όνομα"
+      },
+      "myTimeTracking": {
+        "noSpecificTime": "No specific time"
+      },
+      "my_page": {
+        "label": "Η σελίδα μου"
+      },
+      "notice_bad_request": "Εσφαλμένο Αίτημα.",
+      "notice_job_started": "η εργασία ξεκίνησε.",
+      "notice_no_results_to_display": "Δεν υπάρχουν ορατά αποτελέσματα για εμφάνιση.",
+      "notice_successful_create": "Επιτυχής δημιουργία.",
+      "notice_successful_delete": "Επιτυχής διαγραφή.",
+      "notice_successful_update": "Επιτυχής ενημέρωση.",
+      "notifications": {
+        "center": {
+          "and_more_users": {
+            "one": "and 1 other",
+            "other": "and %{count} others"
+          },
+          "empty_state": {
+            "no_notification": "Looks like you are all caught up.",
+            "no_notification_for_filter": "Looks like you are all caught up for this filter.",
+            "no_notification_with_current_filter": "Looks like you are all caught up for %{filter} filter.",
+            "no_notification_with_current_project_filter": "Looks like you are all caught up with the selected project.",
+            "no_selection": "Click on a notification to view all activity details."
+          },
+          "label_actor_and": "και",
+          "mark_all_read": "Mark all as read",
+          "mark_all_read_confirmation": "This will mark all notifications in this view as read. Are you sure you want to do this?",
+          "mark_as_read": "Mark as read",
+          "new_notifications": {
+            "link_text": "Click here to load them.",
+            "message": "There are new notifications."
+          },
+          "no_results": {
+            "at_all": "New notifications will appear here when there is activity that concerns you.",
+            "with_current_filter": "There are no notifications in this view at the moment"
+          },
+          "text_update_date_by": "%{date} by",
+          "total_count_warning": "Showing the %{newest_count} most recent notifications. %{more_count} more are not displayed."
+        },
+        "date_alerts": {
+          "milestone_date": "Milestone date",
+          "overdue": "Overdue",
+          "overdue_since": "since %{difference_in_days}.",
+          "property_is": "is in %{difference_in_days}.",
+          "property_is_deleted": "is deleted.",
+          "property_today": "is today.",
+          "property_was": "was %{difference_in_days} ago."
+        },
+        "no_unread": "No unread notifications",
+        "reasons": {
+          "assigned": "Ανάθεση σε",
+          "commented": "Σχολιασμένο",
+          "created": "Δημιουργήθηκε",
+          "dateAlert": "Date alert",
+          "mentioned": "Mentioned",
+          "prioritized": "Prioritized",
+          "processed": "Processed",
+          "reminder": "Reminder",
+          "responsible": "Υπόλογος",
+          "scheduled": "Προγραμματισμένο",
+          "shared": "Shared",
+          "watched": "Παρατηρητής"
+        },
+        "reminders": {
+          "note": "Note: “%{note}”"
+        },
+        "settings": {
+          "change_notification_settings": "You can modify your <a target=\"_blank\" href=\"%{url}\">notification settings</a> to ensure you never miss an important update.",
+          "global": {
+            "date_alerts": {
+              "description": "Automatic notifications when important dates are approaching for open work packages you are involved in (assignee, accountable or watcher).",
+              "title": "Date alerts"
+            },
+            "delayed": {
+              "description": "Additional notifications for activities in all projects.",
+              "title": "Non-participating"
+            },
+            "immediately": {
+              "description": "Notifications for all activities in work packages you are involved in (assignee, accountable or watcher).",
+              "title": "Participating"
+            },
+            "overdue": "When overdue"
+          },
+          "notify_me": "Notify me",
+          "project_specific": {
+            "add": "Add setting for project",
+            "already_selected": "This project is already selected",
+            "description": "These project-specific settings override default settings above.",
+            "remove": "Remove project settings",
+            "title": "Project-specific notification settings"
+          },
+          "reasons": {
+            "assignee": "Ανάθεση σε",
+            "mentioned": {
+              "description": "Receive a notification every time someone mentions me anywhere",
+              "title": "Mentioned"
+            },
+            "responsible": "Υπόλογος",
+            "shared": "Shared",
+            "watched": "Παρατηρητής",
+            "work_package_commented": "All new comments",
+            "work_package_created": "New work packages",
+            "work_package_prioritized": "All priority changes",
+            "work_package_processed": "All status changes",
+            "work_package_scheduled": "All date changes"
+          },
+          "reminders": {
+            "no_notification": "No notification",
+            "timeframes": {
+              "normal": {
+                "P1D": "1 day before",
+                "P3D": "3 days before",
+                "P7D": "a week before",
+                "PT0S": "same day"
+              },
+              "overdue": {
+                "P1D": "every day",
+                "P3D": "every 3 days",
+                "P7D": "every week"
+              }
+            }
+          },
+          "title": "Notification settings"
+        },
+        "title": "Notifications"
+      },
+      "onboarding": {
+        "buttons": {
+          "got_it": "Το κατάλαβα",
+          "next": "Επόμενο",
+          "skip": "Παράλειψη"
+        },
+        "steps": {
+          "backlogs": {
+            "overview": "Manage your work in the <b>backlogs</b> view.",
+            "sprints": "On the right you have the product backlog and the bug backlog, on the left you have the respective sprints. Here you can create <b>epics, user stories, and bugs</b>, prioritize via drag & drop and add them to a sprint.",
+            "task_board": "The task board visualizes the <b>progress for this sprint</b>. Click on the plus (+) icon next to a user story to add new tasks or impediments. <br> The status can be updated by drag and drop.",
+            "task_board_arrow": "To see your <b>task board</b>, open the sprint drop-down...",
+            "task_board_select": "...and select the <b>task board</b> entry."
+          },
+          "boards": {
+            "add": "Click on the plus (+) icon to <b>create a new card</b> or <b>add an existing card</b> to the list on the board.",
+            "drag": "Drag and drop your cards within a given list to reorder them, or to move them to another list. <br> You can click the info (i) icon in the upper right-hand corner or double-click a card to open its details.",
+            "lists_basic": "Here you can create multiple lists (columns) within your agile board.",
+            "lists_kanban": "Here you can create multiple lists (columns) within your board. This feature allows you to create a <b>Kanban board</b>, for example.",
+            "overview": "Select <b>boards</b> to shift the view and manage your project using the agile boards view."
+          },
+          "help_menu": "The Help (?) menu provides <b>additional help resources</b>. Here you can find a user guide, helpful how-to videos and more. <br> Enjoy your work with OpenProject!",
+          "members": "Invite new <b>members</b> to join your project.",
+          "quick_add_button": "Click on the plus (+) icon in the header navigation to <b>create a new project</b> or to <b>invite coworkers</b>.",
+          "sidebar_arrow": "Use the return arrow in the top left corner to return to the project’s <b>main menu</b>.",
+          "team_planner": {
+            "add_assignee": "To get started, add assignees to the team planner.",
+            "add_existing": "Search for existing work packages and drag them to the team planner to instantly assign them to a team member and define start and end dates.",
+            "calendar": "The weekly or biweekly planning board displays all work packages assigned to your team members.",
+            "card": "Drag work packages horizontally to move them backwards or forwards in time, drag the edges to change start and end dates and even drag them vertically to a different row to assign them to another member.",
+            "overview": "The team planner lets you visually assign tasks to team members and get an overview of who is working on what."
+          },
+          "welcome": "Take a three-minute introduction tour to learn the most <b>important features</b>. <br> We recommend completing the steps until the end. You can restart the tour any time.",
+          "wiki": "Within the <b>wiki</b> you can document and share knowledge together with your team.",
+          "wp": {
+            "back_button": "Use the return arrow in the top left corner to exit and return to the work package list.",
+            "create_button": "The <b>+ Create</b> button will add a new work package to your project.",
+            "full_view": "The <b>work package details</b> view provides all the relevant information pertaining to a given work package, such as its description, status, priority, activities, dependencies, and comments.",
+            "gantt_menu": "Create project schedules and timelines effortlessly using the Gantt chart module.",
+            "list": "This <b>work</b> package overview provides a list of all the work in your project, such as tasks, milestones, phases, and more. <br> Work packages can be created and edited directly from this view. To access the details of a particular work package, simply double-click its row.",
+            "timeline": "Here you can <b>edit your project plan</b>, create new work packages, such as tasks, milestones, phases, and more, as well as <b>add dependencies</b>. All team members can see and update the latest plan at any time.",
+            "toggler": "Now let's have a look at the <b>work package</b> section, which gives you a more detailed view of your work."
+          }
+        }
+      },
+      "open_project_storage_modal": {
+        "waiting_subtitle": {
+          "network_off": "There is a network problem.",
+          "network_on": "Network is back. We are trying."
+        },
+        "waiting_title": {
+          "timeout": "Timeout"
+        }
+      },
+      "overviews": {
+        "label": "Επισκόπηση"
+      },
+      "pagination": {
+        "no_other_page": "Βρίσκεστε στη μοναδική σελίδα.",
+        "pages": {
+          "next": "Μεταβείτε στην επόμενη σελίδα",
+          "previous": "Επιστροφή στην προηγούμενη σελίδα"
+        }
+      },
+      "password_confirmation": {
+        "field_description": "Πρέπει να εισάγετε τον κωδικό πρόσβασης του λογαριασμού σας για να επιβεβαιώσετε αυτή την αλλαγή.",
+        "title": "Επιβεβαιώστε τον κωδικό πρόσβασης σας για να συνεχίσετε"
+      },
+      "placeholders": {
+        "default": "-",
+        "description": "Description: Click to edit...",
+        "relation_description": "Κάντε κλικ για να προσθέσετε περιγραφή για αυτή την σχέση",
+        "selection": "Παρακαλώ επιλέξτε",
+        "subject": "Εισάγετε θέμα εδώ"
+      },
+      "project": {
+        "autocompleter": {
+          "label": "Αυτόματη συμπλήρωση έργου"
+        },
+        "click_to_switch_to_project": "Project: %{projectname}",
+        "confirm_template_load": "Η αλλαγή του προτύπου θα επαναφορτώσει τη σελίδα και θα χάσετε όλα τα στοιχεία εισόδου σε αυτή τη φόρμα. Συνέχεια?",
+        "context": "Πλαίσιο έργου",
+        "copy": {
+          "copy_options": "Επιλογές αντιγραφής"
+        },
+        "no_template_selected": "(Κανένα)",
+        "not_available": "Project N/A",
+        "required_outside_context": "Παρακαλούμε επιλέξτε ένα έργο μέσα στο οποίο θα δημιουργήσετε το πακέτο εργασίας για να δείτε όλα τα χαρακτηριστικά. Μπορείτε να επιλέξετε μόνο έργα που έχουν τον παραπάνω τύπο ενεργό.\n",
+        "use_template": "Χρήση προτύπου"
+      },
+      "project_menu_details": "Λεπτομέρειες",
+      "relation_buttons": {
+        "abort": "Ματαίωση",
+        "add_existing": "Προσθήκη υπάρχοντος",
+        "add_existing_child": "Add child",
+        "add_existing_relation": "Προσθέστε υπάρχουσα συσχέτιση",
+        "add_new_child": "Δημιουργήστε καινούργιο παιδί",
+        "add_new_relation": "Δημιουργία νέας συσχέτισης",
+        "add_parent": "Προσθέστε υπάρχοντα γονέα",
+        "add_predecessor": "Προσθήκη προκατόχου",
+        "add_successor": "Add successor",
+        "change_parent": "Αλλαγή γονέα",
+        "create_new": "Δημιουργία νέου",
+        "group_by_relation_type": "Ομαδοποίηση κατά τύπο συσχέτισης",
+        "group_by_wp_type": "Ομαδοποίηση κατά τύπο πακέτου εργασίας",
+        "hierarchy_indent": "Ιεραρχία εσοχής",
+        "hierarchy_outdent": "Ιεραρχία προεξοχής",
+        "remove": "Αφαίρεση συσχέτισης",
+        "remove_child": "Αφαίρεση παιδιού",
+        "remove_parent": "Αφαίρεση γονέα",
+        "save": "Αποθήκευση συσχέτισης",
+        "set_parent": "Ορισμός γονέα",
+        "show_relations": "Show relations",
+        "toggle_description": "Ενεργοποίηση περιγραφής συσχέτισης",
+        "update_description": "Ορίστε ή ενημερώστε την περιγραφή αυτή της συσχέτισης",
+        "update_relation": "Κάντε κλικ για να αλλάξετε τον τύπο συσχέτισης"
+      },
+      "relation_labels": {
+        "blocked": "Αποκλεισμένο από",
+        "blocks": "Μπλοκ",
+        "child": "Child",
+        "children": "Παιδιά",
+        "duplicated": "Αντιγράφτηκε από",
+        "duplicates": "Αντίγραφα",
+        "follows": "Ακολουθεί",
+        "includes": "Περιλαμβάνει",
+        "parent": "Γονέας",
+        "partof": "Μέρος του",
+        "precedes": "Προηγείται",
+        "relates": "Σχετίζεται με",
+        "relation_type": "τύπος σχέσης",
+        "required": "Απαιτείται από",
+        "requires": "Απαιτεί"
+      },
+      "relations": {
+        "empty": "Δεν υπάρχει συσχέτιση",
+        "remove": "Αφαίρεση συσχέτισης"
+      },
+      "relations_autocomplete": {
+        "parent_placeholder": "Επιλέξτε νέο γονέα ή πατήστε escale για ακύρωση.",
+        "placeholder": "Πληκτρολογήστε για αναζήτηση"
+      },
+      "relations_hierarchy": {
+        "children_headline": "Παιδιά",
+        "hierarchy_headline": "Ιεραρχία",
+        "parent_headline": "Γονέας"
+      },
+      "reminders": {
+        "settings": {
+          "alerts": {
+            "document_added": "Documents added",
+            "explanation": "Notifications today are limited to work packages. You can choose to continue receiving email alerts for these events until they are included in notifications:\n",
+            "forum_messages": "New forum messages",
+            "membership_added": "Membership added",
+            "membership_updated": "Membership updated",
+            "news_added": "Νέα προστέθηκαν",
+            "news_commented": "Comment on a news item",
+            "title": "Email alerts for other items (that are not work packages)",
+            "wiki_page_added": "Η σελίδα Wiki προστέθηκε",
+            "wiki_page_updated": "Η σελίδα Wiki ενημερώθηκε"
+          },
+          "daily": {
+            "add_time": "Add time",
+            "enable": "Enable daily email reminders",
+            "explanation": "You will receive these reminders only for unread notifications and only at hours you specify. %{no_time_zone}",
+            "no_time_zone": "Until you configure a time zone for your account, the times will be interpreted to be in UTC.",
+            "time_label": "Time %{counter}:",
+            "title": "Send me daily email reminders for unread notifications"
+          },
+          "immediate": {
+            "mentioned": "Immediately when someone @mentions me",
+            "personal_reminder": "Immediately when I receive a personal reminder",
+            "title": "Send me an email reminder"
+          },
+          "pause": {
+            "first_day": "First day",
+            "label": "Temporarily pause daily email reminders",
+            "last_day": "Last day"
+          },
+          "title": "Email reminders",
+          "workdays": {
+            "title": "Receive email reminders on these days"
+          }
+        }
+      },
+      "reporting_engine": {
+        "label_remove": "Διαγραφή",
+        "label_response_error": "Παρουσιάστηκε σφάλμα κατά το χειρισμό του ερωτήματος."
+      },
+      "repositories": {
+        "select_branch": "Επιλογή κλάδου",
+        "select_tag": "Επιλογή σήμανσης"
+      },
+      "revit": {
+        "revit_add_in": "Πρόσθετο Revit",
+        "revit_add_in_settings": "Ρυθμίσεις πρόσθετου Revit"
+      },
+      "sharing": {
+        "selected_count": "%{count} selected",
+        "selection": {
+          "mixed": "Mixed"
+        },
+        "share": "Share"
+      },
+      "sort": {
+        "activate_asc": "ενεργοποιήστε για να εφαρμοστεί η αύξουσα ταξινόμηση",
+        "activate_dsc": "ενεργοποιήστε για να εφαρμοστεί η φθίνουσα ταξινόμηση",
+        "activate_no": "ενεργοποιήστε για να αφαιρέσετε την ταξινόμηση",
+        "sorted_asc": "Εφαρμόστηκε αύξουσα ταξινόμηση, ",
+        "sorted_dsc": "Εφαρμόστηκε φθίνουσα ταξινόμηση, ",
+        "sorted_no": "Δεν έχει εφαρμοστεί ταξινόμηση, ",
+        "sorting_disabled": "η ταξινόμηση είναι απενεργοποιημένη"
+      },
+      "spot": {
+        "drop_modal": {
+          "close": "Close modal",
+          "focus_grab": "This is a focus anchor for modals. Press shift+tab to go back to the modal trigger element."
+        },
+        "filter_chip": {
+          "remove": "Αφαίρεση"
+        }
+      },
+      "storages": {
+        "authentication_error": "Authentication with %{storageType} failed",
+        "choose_location": "Choose location",
+        "drop_files": "Drop files here to upload them to %{name}.",
+        "drop_or_click_files": "Drop files here or click to upload them to %{name}.",
+        "file_links": {
+          "already_linked_directory": "This directory is already linked to this work package.",
+          "already_linked_file": "This file is already linked to this work package.",
+          "download": "Download %{fileName}",
+          "empty": "Currently there are no linked files to this work package. Start linking files with the action below or from within %{storageType}.\n",
+          "link_uploaded_file_error": "An error occurred linking the recently uploaded file '%{fileName}' to the work package %{workPackageId}.\n",
+          "open": "Open file on storage",
+          "open_location": "Open file in location",
+          "remove": "Remove file link",
+          "remove_confirmation": "Are you sure you want to unlink the file from this work package? Unlinking does not affect the original file and only removes the connection to this work package.\n",
+          "remove_short": "Remove link",
+          "select": "Select files",
+          "select_all": "Επιλογή όλων",
+          "selection": {
+            "one": "Link 1 file",
+            "other": "Link %{count} files",
+            "zero": "Select files to link"
+          },
+          "success_create": {
+            "one": "Successfully created 1 file link.",
+            "other": "Successfully created %{count} file links."
+          },
+          "tooltip": {
+            "not_found": "This file cannot be found.",
+            "not_logged_in": "Please log in to the storage to access this file.",
+            "view_not_allowed": "You have no permission to see this file."
+          },
+          "upload_error": {
+            "403": "Your file (%{fileName}) could not be uploaded due to system restrictions. Please contact your administrator for more information.\n",
+            "413": "Your file (%{fileName}) is bigger than what OpenProject can upload to %{storageType}. You can upload it directly to %{storageType} first and then link the file.\n",
+            "507": "Your file (%{fileName}) is bigger than the storage quota allows. Contact your administrator to modify this quota.\n",
+            "default": "Your file (%{fileName}) could not be uploaded.\n",
+            "detail": {
+              "nextcloud": "Please check that the latest version of the Nextcloud App \"OpenProject Integration\" is installed and contact your administrator for more information.\n"
+            }
+          }
+        },
+        "files": {
+          "already_existing_body": "A file with the name \"%{fileName}\" already exists in the location where you are trying to upload this file. What would you like to do?\n",
+          "already_existing_header": "This file already exists",
+          "cannot_create_folder": "Failed to create folder. Avoid using special characters and symbols and make sure the folder does not exist already.",
+          "directory_not_writeable": "You do not have permission to add files to this folder.",
+          "dragging_folder": "The upload to %{storageType} does not support folders.",
+          "dragging_many_files": "The upload to %{storageType} supports only one file at once.",
+          "empty_folder": "This folder is empty.",
+          "empty_folder_location_hint": "Click the button below to upload the file to this location.",
+          "file_not_selectable_location": "Selecting a file is not possible in the process of choosing a location.",
+          "managed_project_folder_no_access": "You have no access yet to the managed project folder. Please wait a bit and try again.\n",
+          "managed_project_folder_not_available": "The automatically managed project folder was not yet found. Please wait a bit, reload the page to fetch the newest data, and try again.\n",
+          "project_folder_no_access": "You have no access to the project folder. Please, contact your administrator to get access or upload the file in another location.\n",
+          "upload_keep_both": "Keep both",
+          "upload_replace": "Αντικατάσταση"
+        },
+        "information": {
+          "authentication_error": "The request to %{storageType} could not be authenticated, that's an error.",
+          "connection_error": "Some %{storageType} settings are not working. Please contact your %{storageType} administrator.\n",
+          "live_data_error": "Error fetching file details",
+          "live_data_error_description": "Some %{storageType} data could not be fetched. Please try to reload this page or contact your %{storageType} administrator.\n",
+          "no_file_links": "In order to link files to this work package please do it via %{storageType}.",
+          "not_logged_in": "To add a link, see or upload files related to this work package, please login to %{storageType}.\n",
+          "suggest_logout": "You can try whether logging out and back in fixes this problem.",
+          "suggest_relink": "You can try whether re-linking your account via the login button below fixes this problem."
+        },
+        "link_existing_files": "Link existing files",
+        "link_files_in_storage": "Link files in %{storageType}",
+        "login": "%{storageType} login",
+        "login_to": "Login to %{storageType}",
+        "new_folder": "New folder",
+        "no_connection": "No %{storageType} connection",
+        "open_storage": "Open %{storageType}",
+        "select_location": "Select location",
+        "types": {
+          "default": "Αποθηκευτικός χώρος",
+          "nextcloud": "Nextcloud",
+          "one_drive": "OneDrive/SharePoint"
+        },
+        "upload_files": "Upload files"
+      },
+      "team_planner": {
+        "add_assignee": "Ανάθεση σε",
+        "add_existing": "Προσθήκη υπάρχοντος",
+        "add_existing_title": "Add existing work packages",
+        "cannot_drag_here": "Cannot remove the work package due to permissions or editing restrictions.",
+        "cannot_drag_to_non_working_day": "This work package cannot start/finish on a non-working day.",
+        "create_label": "Team planner",
+        "create_title": "Create new team planner",
+        "drag_here_to_remove": "Drag here to remove assignee and start and end dates.",
+        "eight_weeks": "8-week",
+        "four_weeks": "4-week",
+        "modify": {
+          "errors": {
+            "fallback": "This work package cannot be edited.",
+            "permission_denied": "You do not have the necessary permissions to modify this."
+          }
+        },
+        "no_data": "Add assignees to set up your team planner.",
+        "one_week": "1-week",
+        "quick_add": {
+          "empty_state": "Use the search field to find work packages and drag them to the planner to assign it to someone and define start and end dates.",
+          "search_placeholder": "Search..."
+        },
+        "remove_assignee": "Remove assignee",
+        "today": "Σήμερα ",
+        "two_weeks": "2-week",
+        "unsaved_title": "Unnamed team planner",
+        "work_week": "Work week"
+      },
+      "text_are_you_sure": "Είστε σίγουρος/η;",
+      "text_data_lost": "All entered data will be lost.",
+      "text_query_destroy_confirmation": "Είστε σίγουροι ότι θέλετε να διαγράψετε την επιλεγμένη προβολή;",
+      "text_user_wrote": "%{value} έγραψε:",
+      "text_work_packages_destroy_confirmation": "Είστε βέβαιοι ότι θέλετε να διαγράψετε το(-α) επιλεγμένο(-α) πακέτο(-α) εργασίας;",
+      "time_entry": {
+        "stop": "Stop",
+        "title": "Καταγραφή χρόνου",
+        "tracking": "Παρακολούθηση χρόνου",
+        "work_package_required": "Πρέπει πρώτα να επιλεγεί ένα πακέτο εργασίας."
+      },
+      "timer": {
+        "button_stop": "Stop current timer",
+        "start_new_timer": "Start new timer",
+        "timer_already_running": "To start a new timer, you must first stop the current timer:",
+        "timer_already_stopped": "No active timer for this work package, have you stopped it in another window?",
+        "tracking_time": "Tracking time"
+      },
+      "tl_toolbar": {
+        "outlines": "Επίπεδο Ιεραρχίας",
+        "zooms": "Επίπεδο μεγέθυνσης"
+      },
+      "toolbar": {
+        "filter": "Φίλτρο",
+        "search_query_label": "Αναζήτηση αποθηκευμένων προβολών",
+        "settings": {
+          "columns": "Στήλες",
+          "configure_view": "Configure view",
+          "delete": "Διαγραφή",
+          "display_hierarchy": "Εμφάνιση ιεραρχίας",
+          "display_sums": "Εμφάνιση αθροισμάτων",
+          "export": "Εξαγωγή",
+          "group_by": "Ομαδοποίηση κατά",
+          "hide_hierarchy": "Απόκρυψη ιεραρχίας",
+          "hide_sums": "Απόκρυψη αθροισμάτων",
+          "page_settings": "Μετονομασία προβολής",
+          "save": "Αποθήκευση",
+          "save_as": "Αποθήκευση ως",
+          "share_calendar": "Subscribe to calendar",
+          "sort_by": "Ταξινόμηση κατά",
+          "visibility_settings": "Ρυθμίσεις ορατότητας"
+        },
+        "unselected_title": "Εργασία"
+      },
+      "two_factor_authentication": {
+        "errors": {
+          "aborted": "The authentication was cancelled. Please try again."
+        },
+        "label_two_factor_authentication": "Ταυτοποίηση δύο παραγόντων"
+      },
+      "types": {
+        "attribute_groups": {
+          "confirm_reset": "Προειδοποίηση: Είστε σίγουροι ότι θέλετε να επαναφέρετε τη φόρμα διαμόρφωσης; Αυτό θα επαναφέρει τα χαρακτηριστικά στις προεπιλεγμένες ομάδες τους και θα απενεργοποιήσει ΌΛΑ τα προσαρμοσμένα πεδία.\n",
+          "error_duplicate_group_name": "Το όνομα %{group} χρησιμοποιείται περισσότερες από μία φορές. Τα ονόματα ομάδων πρέπει να είναι μοναδικά.",
+          "error_no_table_configured": "Παρακαλώ διαμορφώστε έναν πίνακα για %{group}.",
+          "more_information": "Περισσότερες πληροφορίες",
+          "nevermind": "Δεν πειράζει",
+          "reset_title": "Επαναφορά φόρμας διαμόρφωσης",
+          "upgrade_to_ee": "Upgrade to Enterprise on-premises edition",
+          "upgrade_to_ee_text": "Wow! If you need this add-on you are a super pro! Would you mind supporting us OpenSource developers by becoming an Enterprise edition client?"
+        }
+      },
+      "units": {
+        "child_work_packages": {
+          "one": "ένα παιδί πακέτο εργασίας",
+          "other": "%{count} παιδιά πακέτα εργασίας"
+        },
+        "day": {
+          "one": "1 ημέρα",
+          "other": "%{count} ημέρες",
+          "zero": "0 days"
+        },
+        "hour": {
+          "one": "1 ώρα",
+          "other": "%{count} ώρες",
+          "zero": "0 ω"
+        },
+        "word": {
+          "one": "1 word",
+          "other": "%{count} words"
+        },
+        "workPackage": {
+          "one": "πακέτο εργασίας",
+          "other": "πακέτα εργασίας"
+        }
+      },
+      "upsell": {
+        "ee_only": "Enterprise edition add-on"
+      },
+      "views": {
+        "card": "Κάρτες",
+        "list": "Πίνακας",
+        "timeline": "Gantt"
+      },
+      "watchers": {
+        "label_add": "Προσθήκη παρατηρητών",
+        "label_discard": "Απόρριψη της επιλογής",
+        "label_error_loading": "Παρουσιάστηκε σφάλμα κατά τη φόρτωση των παρατηρητών",
+        "label_loading": "φορτώνονται οι παρατηρητές...",
+        "label_search_watchers": "Αναζητήστε παρατηρητές",
+        "typeahead_placeholder": "Αναζήτηση πιθανών παρατηρητών"
+      },
+      "wiki_formatting": {
+        "code": "Κώδικας Inline",
+        "deleted": "Διαγραμμένο",
+        "heading1": "Επικεφαλίδα 1",
+        "heading2": "Επικεφαλίδα 2",
+        "heading3": "Επικεφαλίδα 3",
+        "image": "Εικόνα",
+        "italic": "Πλάγια γραφή",
+        "ordered_list": "Ταξινομημένη λίστα",
+        "preformatted_text": "Προδιαμορφωμένο κείμενο",
+        "quote": "Παράθεση",
+        "strong": "Δυνατό",
+        "underline": "Υπογράμμιση",
+        "unordered_list": "Μη ταξινομημένη λίστα",
+        "unquote": "Αφαίρεση παράθεσης",
+        "wiki_link": "Σύνδεση σε μια σελίδα Wiki"
+      },
+      "work_packages": {
+        "baseline": {
+          "addition_label": "Added to view within the comparison time period",
+          "column_incompatible": "This column does not show changes in Baseline mode.",
+          "modification_label": "Modified within the comparison time period",
+          "removal_label": "Removed from view within the comparison time period"
+        },
+        "bulk_actions": {
+          "copy": "Μαζική αντιγραφή",
+          "delete": "Μαζική διαγραφή",
+          "edit": "Μαζική επεξεργασία",
+          "move": "Μαζική αλλαγή του έργου"
+        },
+        "button_clear": "Εκκαθάριση",
+        "comment_added": "Το σχόλιο προστέθηκε με επιτυχία.",
+        "comment_send_failed": "Παρουσιάστηκε ένα σφάλμα. Δεν ήταν δυνατή η υποβολή του σχολίου.",
+        "comment_updated": "Το σχόλιο ενημερώθηκε με επιτυχία.",
+        "confirm_edit_cancel": "Είστε βέβαιοι ότι θέλετε να ακυρώσετε την επεξεργασία αυτού του πακέτου εργασίας;",
+        "copy": {
+          "title": "Αντιγραφή πακέτου εργασίας"
+        },
+        "create": {
+          "button": "Δημιουργία",
+          "header": "Νέο %{type}",
+          "header_no_type": "Καινούργιο πακέτο εργασίας (Ο τύπος δεν έχει οριστεί ακόμη)",
+          "header_with_parent": "Νέο %{type} (Παιδί του %{parent_type} #%{id})",
+          "title": "Νέο πακέτο εργασίας"
+        },
+        "default_queries": {
+          "all_open": "Όλα τα ανοιχτά",
+          "assigned_to_me": "Έχουν ανατεθεί σε εμένα",
+          "created_by_me": "Δημιουργήθηκε από εμένα",
+          "latest_activity": "Τελευταία δραστηριότητα",
+          "manually_sorted": "New manually sorted query",
+          "milestones": "Milestones",
+          "overdue": "Overdue",
+          "recently_created": "Δημιουργήθηκαν πρόσφατα",
+          "shared_with_me": "Shared with me",
+          "shared_with_users": "Shared with users",
+          "summary": "Περίληψη"
+        },
+        "description_enter_text": "Εισάγετε κείμενο",
+        "description_filter": "Φίλτρο",
+        "description_options_hide": "Απόκρυψη επιλογών",
+        "description_options_show": "Εμφάνιση επιλογών",
+        "edit_attribute": "%{attribute} - Επεξεργασία",
+        "faulty_query": {
+          "description": "Η προβολή έχει σφάλμα και δεν ήταν δυνατή η επεξεργασία της.",
+          "title": "Δεν ήταν δυνατή η φόρτωση των πακέτων εργασίας."
+        },
+        "filters": {
+          "baseline_incompatible": "This filter attribute is not taken into consideration in Baseline mode.",
+          "baseline_warning": "Baseline mode is on but some of your active filters are not included in the comparison.",
+          "title": "Φιλτράρισμα πακέτων εργασίας"
+        },
+        "hierarchy": {
+          "children_collapsed": "Επίπεδο ιεραρχίας %{level}, συμπτυγμένο. Πατήστε για να εμφανίσετε τα φιλτραρισμένα παιδιά",
+          "children_expanded": "Επίπεδο ιεραρχίας %{level}, ανεπτυγμένο. Πατήστε για να συμπτύξετε τα φιλτραρισμένα παιδιά",
+          "hide": "Απόκρυψη λειτουργίας ιεραρχίας",
+          "leaf": "Φύλλο του πακέτου εργασίας στο επίπεδο %{level}.",
+          "show": "Εμφάνιση λειτουργίας ιεραρχίας",
+          "toggle_button": "Πατήστε για να ενεργοποιήσετε τη λειτουργία ιεραρχίας."
+        },
+        "inline_create": {
+          "title": "Πατήστε εδώ για να προσθέσετε ένα καινούργιο πακέτο εργασίας σε αυτή τη λίστα"
+        },
+        "jump_marks": {
+          "content": "Μεταπήδηση στο περιεχόμενο",
+          "label_content": "Κάντε κλικ εδώ για να προσπεράσετε το μενού και να πάτε στο περιεχόμενο",
+          "label_pagination": "Πατήστε εδώ για να προσπεράσετε τον πίνακα πακέτων εργασίας και να πάτε στην σελιδοποίηση",
+          "pagination": "Μεταπήδηση στον πίνακα σελιδοποίησης"
+        },
+        "key_value": "%{key}: %{value}",
+        "label_column_multiselect": "Συνδυασμένο αναπτυσσόμενο πεδίο: Επιλέξτε με τα πλήκτρα βέλους, επιβεβαιώστε πατώντας το πλήκτρο enter, διαγράψτε πατώντας το πλήκτρο backspace",
+        "label_disable_multi_select": "Απενεργοποίηση πολλαπλής επιλογής",
+        "label_enable_multi_select": "Ενεργοποίηση πολλαπλής επιλογής",
+        "label_filter_add": "Προσθήκη φίλτρου",
+        "label_filter_by_text": "Φιλτράρισμα βάσει κειμένου",
+        "label_options": "Επιλογές",
+        "limited_results": "Only %{count} work packages can be shown in manual sorting mode. Please reduce the results by filtering, or switch to automatic sorting.",
+        "message_error_during_bulk_delete": "Παρουσιάστηκε ένα σφάλμα κατά την διαγραφή των πακέτων εργασίας.",
+        "message_successful_bulk_delete": "Τα πακέτα εργασίας διαγράφηκαν επιτυχώς.",
+        "message_successful_show_in_fullscreen": "Πατήστε εδώ για να ανοίξετε το πακέτο εργασίας σε πλήρη οθόνη.",
+        "message_view_spent_time": "Εμφάνιση χρόνου που δαπανήθηκε σε αυτό το πακέτο εργασίας",
+        "message_work_package_read_only": "Το πακέτο εργασίας είναι κλειδωμένο σε αυτή την κατάσταση. Κανένα χαρακτηριστικό εκτός από την κατάσταση δεν μπορεί να αλλαχθεί.",
+        "message_work_package_status_blocked": "Η κατάσταση του πακέτου εργασίας δεν είναι εγγράψιμη λόγω κλειστής κατάστασης και εκχωρημένης έκδοσης.",
+        "no_results": {
+          "description": "Είτε δεν έχει δημιουργηθεί κανένα ή όλα τα πακέτα εργασίας έχουν φιλτραριστεί.",
+          "title": "Δεν υπάρχουν πακέτα εργασίας για εμφάνιση."
+        },
+        "placeholder_filter_by_text": "Θέμα, περιγραφή, σχόλια, ...",
+        "placeholders": {
+          "date": "Select date",
+          "default": "-"
+        },
+        "progress": {
+          "title": "Work estimates and progress"
+        },
+        "properties": {
+          "assignee": "Ανάθεση σε",
+          "author": "Συγγραφέας",
+          "category": "Κατηγορία",
+          "costObject": "Προϋπολογισμός",
+          "createdAt": "Δημιουργήθηκε στις",
+          "date": "Ημερομηνία",
+          "description": "Περιγραφή",
+          "dueDate": "Ημερομηνία λήξης",
+          "duration": "Διάρκεια",
+          "overallCosts": "Συνολικό κόστος",
+          "percentComplete": "% Complete",
+          "percentCompleteAlternative": "Progress",
+          "percentageDone": "Ποσοστό ολοκλήρωσης",
+          "priority": "Προτεραιότητα",
+          "projectName": "Έργο",
+          "remainingTime": "Remaining work",
+          "remainingWork": "Remaining work",
+          "remainingWorkAlternative": "Υπολειπόμενες ώρες",
+          "responsible": "Υπεύθυνος",
+          "spentTime": "Χρόνος που δαπανήθηκε",
+          "spentUnits": "Δαπανημένες μονάδες",
+          "startDate": "Ημερομηνία έναρξης",
+          "status": "Κατάσταση",
+          "storyPoints": "Πόντοι Ιστορίας",
+          "subject": "Θέμα",
+          "subproject": "Υποέργο",
+          "title": "Τίτλος",
+          "type": "Τύπος",
+          "updatedAt": "Τροποποιήθηκε",
+          "version": "Έκδοση",
+          "versionName": "Έκδοση",
+          "work": "Work",
+          "workAlternative": "Εκτιμώμενος χρόνος"
+        },
+        "property_groups": {
+          "costs": "Κόστος",
+          "details": "Λεπτομέρειες",
+          "estimatesAndTime": "Εκτιμήσεις & Χρόνος",
+          "other": "Άλλο",
+          "people": "Άτομα"
+        },
+        "query": {
+          "click_to_edit_query_name": "Κάντε κλικ για να επεξεργαστείτε τον τίτλο αυτής της προβολής.",
+          "column_names": "Στήλες",
+          "confirm_edit_cancel": "Είστε βέβαιοι ότι θέλετε να ακυρώσετε την επεξεργασία του ονόματος αυτής της προβολής; Ο τίτλος θα επανέλθει στην προηγούμενη τιμή του.",
+          "display_sums": "Εμφάνιση Αθροισμάτων",
+          "errors": {
+            "duplicate_query_title": "Το όνομα αυτής της προβολής υπάρχει ήδη. Αλλαγή παρόλα αυτά;",
+            "not_found": "Δεν υπάρχει τέτοια προβολή",
+            "unretrievable_query": "Δεν ήταν δυνατή η ανάκτηση της προβολής από τον σύνδεσμο URL"
+          },
+          "filters": "Φίλτρα",
+          "group": "Ομαδοποίηση κατά",
+          "group_by": "Ομαδοποίηση αποτελεσμάτων κατά",
+          "group_by_disabled_by_hierarchy": "Η ομαδοποίηση είναι απενεργοποιημένη επειδή είναι ενεργή η λειτουργία ιεραρχίας.",
+          "hide_column": "Απόκρυψη στήλης",
+          "hierarchy_disabled_by_group_by": "Η λειτουργία ιεραρχίας είναι απενεργοποιημένη επειδή τα αποτελέσματα είναι ομαδοποιημένα κατά %{column}.",
+          "insert_columns": "Insert columns",
+          "move_column_left": "Μετακίνηση στήλης αριστερά",
+          "move_column_right": "Μετακίνηση στήλης δεξιά",
+          "public_text": "Δημοσιεύστε αυτή την προβολή, επιτρέποντας σε άλλους χρήστες να έχουν πρόσβαση στην προβολή σας. Οι χρήστες με δικαίωμα 'Διαχείρισης δημόσιων προβολών' μπορούν να τροποποιήσουν ή να αφαιρέσουν τις δημόσιες αναζητήσεις. Αυτό δεν επηρεάζει την ορατότητα των αποτελεσμάτων πακέτων εργασίας σε αυτή την προβολή και ανάλογα με τα δικαιώματα τους, οι χρήστες μπορεί να βλέπουν διαφορετικά αποτελέσματα.\n",
+          "rename_query_placeholder": "Το όνομα αυτής της προβολής",
+          "sort_ascending": "Αύξουσα ταξινόμηση",
+          "sort_descending": "Φθίνουσα ταξινόμηση",
+          "star_text": "Σήμανση αυτής της προβολής ως αγαπημένη και προσθήκη στην πλάγια μπάρα αποθηκευμένων προβολών στα αριστερά.",
+          "text_no_results": "Δεν βρέθηκαν προβολές που να ταιριάζουν."
+        },
+        "reminders": {
+          "button_label": "Set reminder",
+          "presets": {
+            "custom": "At a particular date/time",
+            "month": "In a month",
+            "three_days": "In 3 days",
+            "tomorrow": "Tomorrow",
+            "week": "In a week"
+          },
+          "subtitle": "You will receive a notification for this work package at the chosen time.",
+          "title": {
+            "edit": "Edit reminder",
+            "new": "Set a reminder"
+          }
+        },
+        "scheduling": {
+          "is_parent": "Οι ημερομηνίες αυτού του πακέτου εργασίας προκύπτουν αυτόματα από τα παιδιά του. Ενεργοποιήστε τον \"Χειροκίνητο προγραμματισμό\" για να ορίσετε τις ημερομηνίες.",
+          "is_switched_from_manual_to_automatic": "Οι ημερομηνίες αυτού του πακέτου εργασίας μπορεί να χρειαστεί να υπολογιστούν εκ νέου μετά τη μετάβαση από χειροκίνητο σε αυτόματο προγραμματισμό λόγω των σχέσεων με άλλα πακέτα εργασίας."
+        },
+        "sharing": {
+          "show_all_users": "Show all users with whom the work package has been shared with",
+          "title": "Share work package"
+        },
+        "table": {
+          "configure_button": "Διαμόρφωση του πίνακα πακέτων εργασίας",
+          "summary": "Πίνακας με γραμμές από πακέτα εργασίας και στήλες από χαρακτηριστικά πακέτων εργασίας.",
+          "text_inline_edit": "Τα περισσότερα κελιά αυτού του πίνακα είναι κουμπιά τα οποία ενεργοποιούν την λειτουργικότητα επεξεργασίας-inline αυτού του χαρακτηριστικού.",
+          "text_select_hint": "Επιλέξτε τα κουτιά που θα πρέπει να ανοίγουν με το πλήκτρο 'ALT' και τα πλήκτρα βέλους.",
+          "text_sort_hint": "Με τους συνδέσμους στις επικεφαλίδες του πίνακα μπορείτε να ταξινομήσετε, ομαδοποιήσετε, να αλλάξετε την σειρά, να αφαιρέσετε και να προσθέσετε στήλες στον πίνακα."
+        },
+        "table_configuration": {
+          "button": "Διαμόρφωση αυτού του πίνακα πακέτων εργασίας",
+          "choose_display_mode": "Εμφάνιση πακέτων εργασίας ως",
+          "columns_help_text": "Χρησιμοποιήστε το παραπάνω πεδίο εισόδου για να προσθέσετε στήλες στην προβολή πίνακα σας. Μπορείτε να σύρετε και να αποθέσετε τις στήλες για να τις αναδιατάξετε.",
+          "default": "προεπιλογή",
+          "default_mode": "Επίπεδη λίστα",
+          "display_settings": "Ρυθμίσεις εμφάνισης",
+          "display_sums_hint": "Εμφάνιση αθροισμάτων από όλα τα αθροίσιμα χαρακτηριστικά σε μια στήλη κάτω από τα αποτελέσματα του πίνακα.",
+          "embedded_tab_disabled": "This configuration tab is not available for the embedded view you are editing.",
+          "hierarchy_hint": "Όλα τα φιλτραρισμένα αποτελέσματα πίνακα θα επαυξηθούν με τους προγόνους τους. Οι ιεραρχίες μπορούν να επεκταθούν ή να συμπτυχθούν.",
+          "hierarchy_mode": "Ιεραρχία",
+          "highlighting": "Επισημαίνοντας",
+          "highlighting_mode": {
+            "description": "Επισήμανση με χρώμα",
+            "entire_row_by": "Ολόκληρη στήλη με",
+            "inline": "Χαρακτηριστικό/-α με επισήμανση",
+            "inline_all": "Όλα τα χαρακτηριστικά",
+            "none": "Χωρίς επισήμανση",
+            "priority": "Προτεραιότητα",
+            "status": "Κατάσταση",
+            "type": "Τύπος"
+          },
+          "modal_title": "Διαμόρφωση του πίνακα πακέτων εργασίας",
+          "relation_filters": {
+            "filter_work_packages_by_relation_type": "Φιλτράρετε τα πακέτα εργασίας κατά τύπο συσχέτισης"
+          },
+          "show_timeline_hint": "Εμφάνιση ενός διαδραστικού διαγράμματος gantt στη δεξιά πλευρά του πίνακα. Μπορείτε να αλλάξετε το πλάτος του σέρνοντας το διαχωριστικό ανάμεσα στον πίνακα και το διάγραμμα gantt.",
+          "sorting_mode": {
+            "automatic": "Αυτόματα",
+            "description": "Επιλέξτε τη λειτουργία ταξινόμησης για τα πακέτα εργασίας σας:",
+            "manually": "Χειροκίνητα",
+            "warning": "Θα χάσετε την προηγούμενη ταξινόμηση όταν ενεργοποιήσετε την λειτουργία αυτόματης ταξινόμησης."
+          }
+        },
+        "tabs": {
+          "activity": "Δραστηριότητα",
+          "files": "Αρχεία",
+          "github": "GitHub",
+          "gitlab": "GitLab",
+          "meetings": "Συναντήσεις",
+          "overview": "Επισκόπηση",
+          "relations": "Συσχετίσεις",
+          "watchers": "Παρατηρητές"
+        },
+        "time_relative": {
+          "days": "ημέρες",
+          "months": "μήνες",
+          "weeks": "εβδομάδες"
+        }
+      },
+      "zen_mode": {
+        "button_activate": "Ενεργοποίηση λειτουργίας zen",
+        "button_deactivate": "Απενεργοποίηση λειτουργίας zen"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": ".",
+          "format": "%n %u",
+          "negative_format": "-%u%n",
+          "precision": 2,
+          "separator": ",",
+          "significant": false,
+          "strip_insignificant_zeros": false,
+          "unit": "€"
+        }
+      },
+      "format": {
+        "delimiter": null,
+        "precision": 3,
+        "round_mode": "default",
+        "separator": ".",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "δισεκατομμύριο",
+            "million": "εκατομμύριο",
+            "quadrillion": "τετράκις εκατομμύριο",
+            "thousand": "χίλια",
+            "trillion": "τρισεκατομμύριο",
+            "unit": null
+          }
+        },
+        "format": {
+          "delimiter": null,
+          "precision": 1,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "one": "Byte",
+              "other": "Bytes"
+            },
+            "eb": "EB",
+            "gb": "GB",
+            "kb": "kB",
+            "mb": "MB",
+            "pb": "PB",
+            "tb": "TB",
+            "zb": "ZB"
+          }
+        }
+      },
+      "nth": {},
+      "percentage": {
+        "format": {
+          "delimiter": null,
+          "format": "%n%"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": null
+        }
+      }
+    },
+    "time": {
+      "am": "πμ",
+      "formats": {
+        "default": "%m/%d/%Y %I:%M %p",
+        "long": "%B %d, %Y %H:%M",
+        "short": "%d %b %H:%M",
+        "time": "%I:%M %p"
+      },
+      "pm": "μμ"
+    }
+  }
+}

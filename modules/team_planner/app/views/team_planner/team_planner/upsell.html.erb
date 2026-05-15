@@ -1,0 +1,8 @@
+<% html_title(t(:label_administration), t("ee.upsell.team_planner_view.title")) -%>
+
+<%=
+  render EnterpriseEdition::UpsellPageComponent.new(
+    :team_planner_view,
+    video: "enterprise/team-planner-animation.mp4"
+  )
+%>

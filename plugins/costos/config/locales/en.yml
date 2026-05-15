@@ -1,0 +1,69 @@
+en:
+  # Menu and navigation
+  label_costos: "Costos"
+  
+  # Plugin description
+  plugin_description: "Plugin for Costos integration"
+  
+  # Titles and content
+  costos_title: "Costos Integration"
+  costos_description: "Welcome module for OpenProject"
+  
+  # Welcome message
+  costos_welcome_title: "Welcome to the Costos Module!"
+  costos_welcome_message: "Hello! Welcome to the Costos module. This is a simple example module for OpenProject."
+  
+  # Module information
+  costos_module_info: "Module Information"
+  costos_name: "Name"
+  costos_version: "Version"
+  costos_author: "Author"
+  costos_description_label: "Description"
+  costos_module_description: "Simple welcome plugin for OpenProject"
+  
+  # Messages
+  costos_loading: "Loading..."
+  costos_error: "Error loading content"
+  costos_error_500: "An error has occurred on the page you were trying to access. If you continue to have problems please contact your CMPROYECTOS | COMMON DATA ENVIRONMENT (CDE) administrator for assistance."
+
+  # Costos namespace
+  costos:
+    embed_title: "Load Costos Model"
+    embed_type: "Embed Type"
+    embed_url: "Embed URL"
+    embed_code: "Embed Code"
+    embed_input_label: "Paste your code or URL here"
+    embed_placeholder: "Paste Costos embed URL or code here..."
+    embed_url_placeholder: "Example: https://tu-plataforma.xyz/embed?stream=..."
+    embed_code_placeholder: "Example: <iframe src='https://tu-plataforma.xyz/embed?stream=...' ...></iframe>"
+    load_embed: "Load Embed"
+    clear_embed: "Clear"
+    embed_empty_error: "Please enter a valid URL or embed code"
+    embed_invalid_url: "Please enter a valid https:// URL"
+    embed_invalid_code: "Please provide a valid iframe code"
+    costos_title: "Costos Integration"
+
+  cost_types:
+    unit_label: "UNITS"
+    code_label: "CODE"
+    cost_rate_label: "Price"
+    sale_rate_label: "Sales price"
+    study_rate_label: "Study price"
+    adjust_current_price_label: "Adjust current price"
+    search_label: "Search cost types"
+    search_placeholder: "Search"
+    limited_results: "Showing %{count} of %{total} cost types (first %{limit})"
+    per_page: "Rows per page"
+    per_page_all: "All"
+    previous: "Prev"
+    next: "Next"
+  costs:
+    text_search_cost_type: "Search and select a cost type"
+    text_no_cost_types: "No cost types available"
+
+  activerecord:
+    attributes:
+      cost_type:
+        current_rate: "Price"
+        unit: "UNITS"
+        unit_plural: "CODE"

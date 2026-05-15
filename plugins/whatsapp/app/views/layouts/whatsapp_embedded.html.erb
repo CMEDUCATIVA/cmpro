@@ -1,0 +1,83 @@
+<% content_for :header_tags do %>
+  <% html_title(*local_assigns[:page_title]) if local_assigns[:page_title].present? %>
+  <meta name="turbo-cache-control" content="no-cache">
+  <style>
+    body {
+      overflow: auto;
+      background: #ffffff;
+    }
+    html,
+    body {
+      height: 100% !important;
+    }
+    header,
+    .top-menu,
+    .op-app-header,
+    .op-app-header--wrapper,
+    .op-top-menu,
+    .op-project-menu,
+    .main-menu,
+    #main-menu,
+    .op-sidemenu,
+    .op-sidemenu--container,
+    .op-menu--container,
+    .op-flyout-menu,
+    .op-app-header .top-menu,
+    .op-app-header .op-app-header--logo {
+      display: none !important;
+    }
+    #content,
+    #content-wrapper,
+    #content-body,
+    #content-body-wrapper {
+      padding: 0 !important;
+      margin: 0 !important;
+      height: 100% !important;
+    }
+    #content-body {
+      min-height: 0 !important;
+      overflow: auto !important;
+    }
+    .wa-shell {
+      height: 100% !important;
+      min-height: 100% !important;
+      --wa-container-height: 100%;
+      background: #ffffff !important;
+    }
+    .wa-layout,
+    .wa-chat,
+    .wa-chat-body {
+      height: 100% !important;
+      min-height: 0 !important;
+    }
+    .wa-layout {
+      grid-template-columns: 1fr !important;
+    }
+    .wa-content-header {
+      display: none !important;
+    }
+    .wa-sidebar {
+      display: none !important;
+    }
+    #ia-chat-toggle-btn {
+      display: none !important;
+    }
+    [data-wa-more-toggle="true"] {
+      display: none !important;
+    }
+    .content-overlay,
+    opce-modal-overlay,
+    opce-spot-drop-modal-portal {
+      display: none !important;
+    }
+  </style>
+<% end -%>
+
+<% content_for :content_body do %>
+  <openproject-base></openproject-base>
+  <div id="projected-content">
+    <%= yield %>
+  </div>
+<% end -%>
+
+<%= render template: "layouts/base", locals: local_assigns.merge({ no_layout_yield: true }) %>

@@ -1,0 +1,872 @@
+<div class="ia-colaborativa-menu-page">
+  <div class="ia-colaborativa-menu-layout">
+    <aside class="ia-colaborativa-menu-sidebar">
+      <div class="ia-colaborativa-menu-agent-list">
+        <div class="ia-colaborativa-menu-agent-group">
+          <button type="button" class="ia-colaborativa-menu-agent" data-agent="sara">
+          <span class="ia-colaborativa-menu-agent-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.992 5.50179C8.40875 5.50179 5.49352 8.41702 5.49352 12.0002C5.49352 15.5835 8.40875 18.4987 11.992 18.4987C15.5752 18.4987 18.4904 15.5835 18.4904 12.0002C18.4904 8.41702 15.5752 5.50179 11.992 5.50179ZM11.992 15.3632C10.1344 15.3632 8.62899 13.8578 8.62899 12.0002C8.62899 10.1427 10.1344 8.63726 11.992 8.63726C13.8495 8.63726 15.355 10.1427 15.355 12.0002C15.355 13.8578 13.8495 15.3632 11.992 15.3632Z" fill="#323544"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5367 4.43414V2.00781C17.8105 2.28978 22 6.65596 22 11.9999C22 17.3439 17.8105 21.7089 12.5367 21.9921V19.5657C16.4672 19.285 19.5797 16.0007 19.5797 11.9999C19.5797 7.99922 16.4672 4.7149 12.5367 4.43414ZM6.26091 16.9615C5.21897 15.7586 4.54735 14.2266 4.42754 12.5445H2C2.12585 14.8982 3.06734 17.0341 4.54251 18.6787L6.2597 16.9615H6.26091ZM11.4476 21.9921V19.5657C9.76431 19.4459 8.23227 18.7755 7.02939 17.7324L5.3122 19.4496C6.95799 20.9259 9.09389 21.8662 11.4464 21.9921H11.4476Z" fill="#323544"/>
+            </svg>
+          </span>
+          <span class="ia-colaborativa-menu-agent-text">Sara-GPT</span>
+          </button>
+          <button type="button" class="ia-colaborativa-menu-agent" data-agent="sara_tools">
+          <span class="ia-colaborativa-menu-agent-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 7.25C6 6.00736 7.00736 5 8.25 5H15.75C16.9926 5 18 6.00736 18 7.25V9C18 9.41421 17.6642 9.75 17.25 9.75C16.8358 9.75 16.5 9.41421 16.5 9V7.25C16.5 6.83579 16.1642 6.5 15.75 6.5H8.25C7.83579 6.5 7.5 6.83579 7.5 7.25V9C7.5 9.41421 7.16421 9.75 6.75 9.75C6.33579 9.75 6 9.41421 6 9V7.25Z" fill="#323544"/>
+              <path d="M5 12C5 10.7574 6.00736 9.75 7.25 9.75H16.75C17.9926 9.75 19 10.7574 19 12V15.75C19 16.9926 17.9926 18 16.75 18H7.25C6.00736 18 5 16.9926 5 15.75V12Z" fill="#323544"/>
+              <path d="M10 13.25C10 12.8358 10.3358 12.5 10.75 12.5H13.25C13.6642 12.5 14 12.8358 14 13.25C14 13.6642 13.6642 14 13.25 14H10.75C10.3358 14 10 13.6642 10 13.25Z" fill="white"/>
+            </svg>
+          </span>
+          <span class="ia-colaborativa-menu-agent-text">Sara</span>
+          </button>
+          <button type="button" class="ia-colaborativa-menu-agent" data-agent="docs">
+          <span class="ia-colaborativa-menu-agent-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.992 5.50179C8.40875 5.50179 5.49352 8.41702 5.49352 12.0002C5.49352 15.5835 8.40875 18.4987 11.992 18.4987C15.5752 18.4987 18.4904 15.5835 18.4904 12.0002C18.4904 8.41702 15.5752 5.50179 11.992 5.50179ZM11.992 15.3632C10.1344 15.3632 8.62899 13.8578 8.62899 12.0002C8.62899 10.1427 10.1344 8.63726 11.992 8.63726C13.8495 8.63726 15.355 10.1427 15.355 12.0002C15.355 13.8578 13.8495 15.3632 11.992 15.3632Z" fill="#323544"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5367 4.43414V2.00781C17.8105 2.28978 22 6.65596 22 11.9999C22 17.3439 17.8105 21.7089 12.5367 21.9921V19.5657C16.4672 19.285 19.5797 16.0007 19.5797 11.9999C19.5797 7.99922 16.4672 4.7149 12.5367 4.43414ZM6.26091 16.9615C5.21897 15.7586 4.54735 14.2266 4.42754 12.5445H2C2.12585 14.8982 3.06734 17.0341 4.54251 18.6787L6.2597 16.9615H6.26091ZM11.4476 21.9921V19.5657C9.76431 19.4459 8.23227 18.7755 7.02939 17.7324L5.3122 19.4496C6.95799 20.9259 9.09389 21.8662 11.4464 21.9921H11.4476Z" fill="#323544"/>
+            </svg>
+          </span>
+          <span class="ia-colaborativa-menu-agent-text">Sara-Docs-GPT</span>
+          </button>
+          <button type="button" class="ia-colaborativa-menu-agent" data-agent="cde">
+          <span class="ia-colaborativa-menu-agent-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.992 5.50179C8.40875 5.50179 5.49352 8.41702 5.49352 12.0002C5.49352 15.5835 8.40875 18.4987 11.992 18.4987C15.5752 18.4987 18.4904 15.5835 18.4904 12.0002C18.4904 8.41702 15.5752 5.50179 11.992 5.50179ZM11.992 15.3632C10.1344 15.3632 8.62899 13.8578 8.62899 12.0002C8.62899 10.1427 10.1344 8.63726 11.992 8.63726C13.8495 8.63726 15.355 10.1427 15.355 12.0002C15.355 13.8578 13.8495 15.3632 11.992 15.3632Z" fill="#323544"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5367 4.43414V2.00781C17.8105 2.28978 22 6.65596 22 11.9999C22 17.3439 17.8105 21.7089 12.5367 21.9921V19.5657C16.4672 19.285 19.5797 16.0007 19.5797 11.9999C19.5797 7.99922 16.4672 4.7149 12.5367 4.43414ZM6.26091 16.9615C5.21897 15.7586 4.54735 14.2266 4.42754 12.5445H2C2.12585 14.8982 3.06734 17.0341 4.54251 18.6787L6.2597 16.9615H6.26091ZM11.4476 21.9921V19.5657C9.76431 19.4459 8.23227 18.7755 7.02939 17.7324L5.3122 19.4496C6.95799 20.9259 9.09389 21.8662 11.4464 21.9921H11.4476Z" fill="#323544"/>
+            </svg>
+          </span>
+          <span class="ia-colaborativa-menu-agent-text">Sara-Obra-GPT</span>
+          </button>
+        </div>
+        <button type="button" class="ia-colaborativa-menu-project-button">
+          <span class="ia-colaborativa-menu-agent-icon">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.75 6C9.75 4.75736 10.7574 3.75 12 3.75H19C20.2426 3.75 21.25 4.75736 21.25 6V20.5C21.25 20.9142 20.9142 21.25 20.5 21.25H9.75V6ZM14 9.0835C13.5858 9.0835 13.25 9.41928 13.25 9.8335C13.25 10.2477 13.5858 10.5835 14 10.5835H17C17.4142 10.5835 17.75 10.2477 17.75 9.8335C17.75 9.41928 17.4142 9.0835 17 9.0835H14ZM14 14.4168C13.5858 14.4168 13.25 14.7526 13.25 15.1668C13.25 15.581 13.5858 15.9168 14 15.9168H17C17.4142 15.9168 17.75 15.581 17.75 15.1668C17.75 14.7526 17.4142 14.4168 17 14.4168H14Z" fill="#323544"/>
+              <path opacity="0.4" d="M8.75 8.25H6C4.75736 8.25 3.75 9.25736 3.75 10.5V20.5C3.75 20.9142 4.08579 21.25 4.5 21.25H8.75V17.5H7.50586C7.09165 17.5 6.75586 17.1642 6.75586 16.75C6.75586 16.3358 7.09165 16 7.50586 16H8.75V13.5H7.50586C7.09165 13.5 6.75586 13.1642 6.75586 12.75C6.75586 12.3358 7.09165 12 7.50586 12H8.75V8.25Z" fill="#323544"/>
+            </svg>
+          </span>
+          <span class="ia-colaborativa-menu-agent-text">Seleccione proyecto</span>
+        </button>
+      </div>
+    </aside>
+    <main class="ia-colaborativa-menu-main">
+      <div class="ia-colaborativa-menu-thread"></div>
+    </main>
+  </div>
+</div>
+
+<style>
+  .ia-colaborativa-menu-page {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 2% 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .ia-colaborativa-menu-active,
+  .ia-colaborativa-menu-active body,
+  .ia-colaborativa-menu-active #wrapper,
+  .ia-colaborativa-menu-active #content-wrapper,
+  .ia-colaborativa-menu-active #content-body {
+    overflow-x: hidden !important;
+  }
+
+  /* Prevent the global left-menu resizer from extending below viewport and creating bottom artifacts */
+  .ia-colaborativa-menu-active op-resizer.main-menu--resizer,
+  .ia-colaborativa-menu-active .main-menu--resizer {
+    top: 55px !important;
+    bottom: 0 !important;
+    height: auto !important;
+    max-height: calc(100vh - 55px) !important;
+  }
+
+  .ia-colaborativa-menu-layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 16px;
+  }
+
+  .ia-colaborativa-menu-sidebar {
+    flex: 0 0 280px;
+    min-width: 220px;
+    max-width: 320px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #d4d4d8;
+  }
+
+  .ia-colaborativa-menu-agent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .ia-colaborativa-menu-agent-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .ia-colaborativa-menu-project-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    cursor: pointer;
+    color: #111827;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .ia-colaborativa-menu-project-button:hover {
+    background: #f3f4f6;
+  }
+
+  .ia-colaborativa-menu-agent {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    color: #111827;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .ia-colaborativa-menu-agent svg {
+    display: block;
+  }
+
+  .ia-colaborativa-menu-agent:hover {
+    background: #f3f4f6;
+    border-color: #e5e7eb;
+  }
+
+  .ia-colaborativa-menu-agent.is-active {
+    background: #eef2ff;
+    border-color: #c7d2fe;
+    font-weight: 600;
+  }
+
+  .ia-colaborativa-menu-main {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .ia-colaborativa-menu-thread {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-toggle-btn {
+    display: none !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-window {
+    position: static !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    margin: 0 !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    z-index: 1 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-window,
+  .ia-colaborativa-menu-active #ia-chat-window * {
+    color: #111827;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-window {
+    background: #ffffff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-window > div:first-child {
+    border-bottom: 0 !important;
+    justify-content: flex-end !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-window > div:last-child {
+    border-top: 0 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-window > div {
+    background: #ffffff !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages {
+    background: #ffffff !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-form {
+    background: #f9fafb !important;
+    border-color: #e5e7eb !important;
+    overflow: visible !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-project-hint {
+    z-index: 50 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-image-preview-container {
+    background: #f9fafb !important;
+    border-color: #e5e7eb !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-image-remove-btn {
+    background: rgba(17, 24, 39, 0.65) !important;
+    color: #ffffff !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-input {
+    color: #111827 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-input::placeholder {
+    color: #6b7280 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-send-btn,
+  .ia-colaborativa-menu-active #ia-chat-attach-btn,
+  .ia-colaborativa-menu-active #ia-chat-minimize-btn,
+  .ia-colaborativa-menu-active #ia-chat-close-btn,
+  .ia-colaborativa-menu-active #ia-chat-clear-btn,
+  .ia-colaborativa-menu-active #ia-chat-settings-btn {
+    color: #374151 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-send-btn {
+    color: transparent !important;
+    font-size: 0 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-send-btn::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.4214 21.9991C17.9437 21.9991 22.421 17.5224 22.421 12C22.421 6.47766 17.9437 2.00098 12.4214 2.00098C6.89916 2.00098 2.42188 6.47766 2.42188 12C2.42188 17.5224 6.89916 21.9991 12.4214 21.9991ZM12.4209 16.1902C12.0067 16.1902 11.6709 15.8544 11.6709 15.4402L11.6709 11.9612L9.77013 11.9612C9.46674 11.9612 9.19323 11.7784 9.07717 11.4981C8.96112 11.2178 9.02538 10.8952 9.23999 10.6807L11.8539 8.06865C11.9914 7.90994 12.1944 7.80955 12.4209 7.80955C12.6347 7.80955 12.8276 7.89902 12.9643 8.04256L15.6041 10.6807C15.8187 10.8952 15.883 11.2178 15.7669 11.4981C15.6509 11.7784 15.3773 11.9612 15.074 11.9612H13.1709L13.1709 15.4402C13.1709 15.8544 12.8351 16.1902 12.4209 16.1902Z' fill='%23323544'/%3E%3C/svg%3E");
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-attach-btn {
+    color: transparent !important;
+    font-size: 0 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-attach-btn::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0002 4.875C12.6216 4.875 13.1252 5.37868 13.1252 6V10.8752H18.0007C18.622 10.8752 19.1257 11.3789 19.1257 12.0002C19.1257 12.6216 18.622 13.1252 18.0007 13.1252H13.1252V18.0007C13.1252 18.622 12.6216 19.1257 12.0002 19.1257C11.3789 19.1257 10.8752 18.622 10.8752 18.0007V13.1252H6C5.37868 13.1252 4.875 12.6216 4.875 12.0002C4.875 11.3789 5.37868 10.8752 6 10.8752H10.8752V6C10.8752 5.37868 11.3789 4.875 12.0002 4.875Z' fill='%23323544'/%3E%3C/svg%3E");
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-send-btn:hover,
+  .ia-colaborativa-menu-active #ia-chat-attach-btn:hover,
+  .ia-colaborativa-menu-active #ia-chat-settings-btn:hover {
+    color: #111827 !important;
+    background: #f3f4f6 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-minimize-btn,
+  .ia-colaborativa-menu-active #ia-chat-close-btn,
+  .ia-colaborativa-menu-active #ia-chat-clear-btn {
+    display: none !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-button {
+    display: inline-flex !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-agent-menu-wrapper {
+    display: inline-flex !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-modal {
+    background: transparent !important;
+    backdrop-filter: none !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-modal > div {
+    background: #ffffff !important;
+    border-color: #e5e7eb !important;
+    box-shadow: 0 18px 48px rgba(15, 23, 42, 0.18) !important;
+    color: #111827 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-modal > div > div:first-child {
+    background: #ffffff !important;
+    border-bottom: 1px solid #e5e7eb !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-modal > div > div:first-child button {
+    color: #6b7280 !important;
+    font-size: 16px !important;
+    border-radius: 999px !important;
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-close {
+    background: transparent !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-close:hover {
+    background: #f3f4f6 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-modal > div > div:nth-child(2) > div:first-child {
+    background: #f9fafb !important;
+    border-bottom: 1px solid #e5e7eb !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-modal h2,
+  .ia-colaborativa-menu-active #ia-projects-search-modal h3,
+  .ia-colaborativa-menu-active #ia-projects-search-modal p,
+  .ia-colaborativa-menu-active #ia-projects-search-modal span,
+  .ia-colaborativa-menu-active #ia-projects-search-modal div {
+    color: #111827 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-modal input {
+    background: #f9fafb !important;
+    color: #111827 !important;
+    border-color: #e5e7eb !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-modal input::placeholder {
+    color: #6b7280 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-btn {
+    background: #4f46e5 !important;
+    color: #ffffff !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-btn {
+    font-size: 0 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-btn::after {
+    content: "Buscar";
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-results {
+    background: #ffffff !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-search-results .project-result-item {
+    background: #f9fafb !important;
+    border-color: #e5e7eb !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-project-hint {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    color: #111827 !important;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12) !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-project-hint .ia-project-hint-option {
+    background: #f3f4f6 !important;
+    border-color: #e5e7eb !important;
+    color: #111827 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-project-hint .ia-project-hint-option:hover {
+    background: #e5e7eb !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages table {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    color: #111827 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages th {
+    background: #f3f4f6 !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    color: #111827 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages td {
+    border-bottom: 1px solid #e5e7eb !important;
+    color: #111827 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages div[style*="background:#1f1f1f"] {
+    background: #ffffff !important;
+    border-color: #e5e7eb !important;
+    color: #111827 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages div[style*="background:#232323"] {
+    background: #f9fafb !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages div[style*="color:#cbd5f5"],
+  .ia-colaborativa-menu-active #ia-chat-messages div[style*="color:#e5e7eb"],
+  .ia-colaborativa-menu-active #ia-chat-messages div[style*="color:#f8fafc"] {
+    color: #111827 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages button[title] {
+    background: transparent !important;
+    border: none !important;
+    padding: 4px 6px !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages button[style*="background: #5B46E5"],
+  .ia-colaborativa-menu-active #ia-chat-messages button[style*="background: #5b46e5"],
+  .ia-colaborativa-menu-active #ia-chat-messages button[style*="background: rgb(91, 70, 229)"] {
+    background: #2563eb !important;
+    border: 1px solid #2563eb !important;
+    color: #ffffff !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages button[style*="background: #5B46E5"] *,
+  .ia-colaborativa-menu-active #ia-chat-messages button[style*="background: #5b46e5"] *,
+  .ia-colaborativa-menu-active #ia-chat-messages button[style*="background: rgb(91, 70, 229)"] * {
+    color: #ffffff !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages button[style*="background: #5B46E5"]:hover {
+    background: #1d4ed8 !important;
+    border-color: #1d4ed8 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages a[style*="background:#5B46E5"],
+  .ia-colaborativa-menu-active #ia-chat-messages a[style*="background: #5B46E5"],
+  .ia-colaborativa-menu-active #ia-chat-messages a[style*="background:#5b46e5"],
+  .ia-colaborativa-menu-active #ia-chat-messages a[style*="background: #5b46e5"] {
+    background: #2563eb !important;
+    border-color: #2563eb !important;
+    color: #ffffff !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages a[style*="background:#5B46E5"]:hover,
+  .ia-colaborativa-menu-active #ia-chat-messages a[style*="background: #5B46E5"]:hover,
+  .ia-colaborativa-menu-active #ia-chat-messages a[style*="background:#5b46e5"]:hover,
+  .ia-colaborativa-menu-active #ia-chat-messages a[style*="background: #5b46e5"]:hover {
+    background: #1d4ed8 !important;
+    border-color: #1d4ed8 !important;
+    color: #ffffff !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-agent-menu {
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12) !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-agent-menu-button {
+    background: transparent !important;
+    border: none !important;
+    color: #374151 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-agent-menu-button[ data-open="true" ] {
+    background: #f3f4f6 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-agent-menu-label {
+    color: #374151 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-agent-menu .ia-agent-option {
+    color: #111827 !important;
+    background: transparent !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-agent-menu .ia-agent-option:hover {
+    background: #f3f4f6 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-projects-button {
+    color: #374151 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-welcome h2 {
+    color: #111827 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-welcome p,
+  .ia-colaborativa-menu-active #ia-chat-window .ia-message,
+  .ia-colaborativa-menu-active #ia-chat-window .ia-message p {
+    color: #374151 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages,
+  .ia-colaborativa-menu-active #ia-chat-messages * {
+    color: #111827 !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages > div[style*="rgba(15, 23, 42, 0.15)"] {
+    background: #f3f4f6 !important;
+    box-shadow: none !important;
+    border: 1px solid #e5e7eb !important;
+    width: fit-content !important;
+    max-width: 75% !important;
+    margin-left: auto !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-messages > div[style*="rgba(15, 23, 42, 0.15)"] img {
+    border-color: #e5e7eb !important;
+  }
+
+  .ia-colaborativa-menu-active #ia-chat-window[aria-hidden="true"] {
+    display: flex !important;
+  }
+
+  @media (max-width: 1100px) {
+    .ia-colaborativa-menu-layout {
+      flex-direction: column;
+    }
+
+    .ia-colaborativa-menu-sidebar {
+      width: 100%;
+      max-width: none;
+    }
+
+    .ia-colaborativa-menu-thread {
+      max-width: none;
+    }
+  }
+</style>
+
+<script nonce="<%= content_security_policy_script_nonce %>">
+  (function () {
+    var root = document.documentElement;
+    var rootClass = "ia-colaborativa-menu-active";
+
+    function clearMenuLayoutState() {
+      if (!root) return;
+      root.classList.remove(rootClass);
+      root.style.removeProperty("--ia-colab-menu-offset");
+      root.style.removeProperty("--ia-colab-menu-height");
+
+      var chatWindow = document.getElementById("ia-chat-window");
+      if (chatWindow && chatWindow.parentElement !== document.body) {
+        document.body.appendChild(chatWindow);
+      }
+      if (chatWindow) {
+        chatWindow.style.display = "none";
+        chatWindow.setAttribute("aria-hidden", "true");
+      }
+    }
+
+    function isMenuPageActive() {
+      return !!document.querySelector(".ia-colaborativa-menu-page");
+    }
+
+    if (root && isMenuPageActive() && !root.classList.contains("ia-colaborativa-menu-active")) {
+      root.classList.add("ia-colaborativa-menu-active");
+    }
+
+    function updateMenuOffset() {
+      var header = document.querySelector("#header, .top-menu, .main-header");
+      var headerHeight = header ? header.getBoundingClientRect().height : 0;
+      var extra = 32;
+      root.style.setProperty("--ia-colab-menu-offset", (headerHeight + extra) + "px");
+    }
+
+    function updateMenuHeight() {
+      // Avoid forcing menu height from #content-body because OpenProject can
+      // report a different rendered height and produce an extra vertical band.
+      // Let CSS fallback use viewport-based formula with the computed offset.
+      root.style.removeProperty("--ia-colab-menu-height");
+    }
+
+    function normalizeMainMenuResizer() {
+      var resizer = document.querySelector("op-resizer.main-menu--resizer, .main-menu--resizer");
+      if (!resizer) return;
+      resizer.style.top = "55px";
+      resizer.style.bottom = "0";
+      resizer.style.height = "auto";
+      resizer.style.maxHeight = "calc(100vh - 55px)";
+    }
+
+    function moveChatWindow() {
+      var container = document.querySelector(".ia-colaborativa-menu-thread");
+      var chatWindow = document.getElementById("ia-chat-window");
+      if (!container || !chatWindow) {
+        return false;
+      }
+      if (chatWindow.parentElement !== container) {
+        container.appendChild(chatWindow);
+      }
+      chatWindow.style.display = "flex";
+      chatWindow.setAttribute("aria-hidden", "false");
+      if (window.openIaChat) {
+        window.openIaChat();
+      }
+      normalizeEmptyChatState();
+      return true;
+    }
+
+    function normalizeEmptyChatState() {
+      var list = document.getElementById("ia-chat-messages");
+      var welcome = document.getElementById("ia-chat-welcome");
+      if (!list || !welcome) return;
+
+      // Detect actual rendered content, not just empty child containers.
+      var hasMessages = Array.prototype.some.call(list.children || [], function (child) {
+        if (!child) return false;
+        if (child.offsetParent === null) return false;
+        var text = (child.textContent || "").trim();
+        if (text.length > 0) return true;
+        return !!child.querySelector("img, table, button, a, svg, pre, code");
+      });
+
+      if (!hasMessages) {
+        list.style.display = "none";
+        welcome.style.display = "flex";
+      } else {
+        list.style.display = "flex";
+        welcome.style.display = "none";
+      }
+    }
+
+    function bindChatStateObserver() {
+      var list = document.getElementById("ia-chat-messages");
+      if (!list || list.dataset.iaMenuObserved === "true") return;
+
+      var observer = new MutationObserver(function () {
+        normalizeEmptyChatState();
+      });
+      observer.observe(list, { childList: true, subtree: true, attributes: true });
+      list.dataset.iaMenuObserved = "true";
+    }
+
+    function ensureChatWindow(attemptsLeft) {
+      if (moveChatWindow() || attemptsLeft <= 0) {
+        return;
+      }
+      requestAnimationFrame(function () {
+        ensureChatWindow(attemptsLeft - 1);
+      });
+    }
+
+    function syncAgentSidebar() {
+      var current = window.currentAgent || "sara";
+      var buttons = document.querySelectorAll(".ia-colaborativa-menu-agent");
+      buttons.forEach(function (button) {
+        var isActive = button.getAttribute("data-agent") === current;
+        button.classList.toggle("is-active", isActive);
+      });
+    }
+
+    function bindAgentSidebar() {
+      var buttons = document.querySelectorAll(".ia-colaborativa-menu-agent");
+      buttons.forEach(function (button) {
+        if (button.dataset && button.dataset.iaMenuBound === "true") {
+          return;
+        }
+        button.addEventListener("click", function () {
+          var agent = button.getAttribute("data-agent") || "sara";
+          console.log("[IA Menu] click agent:", agent);
+          window.currentAgent = agent;
+          if (window.onAgentChange) {
+            window.onAgentChange(agent);
+          } else {
+            window.currentAgent = agent;
+          }
+          syncAgentSidebar();
+          if (agent === "cde") {
+            console.log("[IA Menu] cde selected, opening project search");
+            openProjectModalOnce();
+          }
+        });
+        if (button.dataset) {
+          button.dataset.iaMenuBound = "true";
+        }
+      });
+      syncAgentSidebar();
+    }
+
+    function bindProjectButton() {
+      var button = document.querySelector(".ia-colaborativa-menu-project-button");
+      if (!button) return;
+      if (button.dataset && button.dataset.iaMenuBound === "true") {
+        return;
+      }
+      button.addEventListener("click", function () {
+        console.log("[IA Menu] click project selector");
+        window.currentAgent = "cde";
+        if (window.onAgentChange) {
+          window.onAgentChange("cde");
+        } else {
+          window.currentAgent = "cde";
+        }
+        syncAgentSidebar();
+        openProjectModalOnce();
+      });
+      if (button.dataset) {
+        button.dataset.iaMenuBound = "true";
+      }
+    }
+
+    function patchMindmapButton() {
+      if (!window.attachMindmapButton || window.attachMindmapButton.__iaMenuPatched) {
+        return;
+      }
+      var original = window.attachMindmapButton;
+      window.attachMindmapButton = function (aiNode, responseText) {
+        original(aiNode, responseText);
+        if (!aiNode) return;
+        var mindmapButton = Array.prototype.find.call(
+          aiNode.querySelectorAll("button"),
+          function (btn) { return btn.textContent && btn.textContent.trim() === "Mapa mental"; }
+        );
+        if (!mindmapButton) return;
+        var actionIcon = aiNode.querySelector('button[title="Copiar respuesta"], button[title="Regenerar respuesta"]');
+        var actionsRow = actionIcon ? actionIcon.parentElement : null;
+        if (actionsRow && actionsRow !== mindmapButton.parentElement) {
+          actionsRow.appendChild(mindmapButton);
+          var oldRow = mindmapButton.parentElement;
+          if (oldRow && oldRow !== actionsRow && oldRow.children.length === 0) {
+            oldRow.remove();
+          }
+        }
+      };
+      window.attachMindmapButton.__iaMenuPatched = true;
+    }
+
+    function patchOnAgentChange() {
+      if (!window.onAgentChange || window.onAgentChange.__iaMenuPatched) {
+        return;
+      }
+      var original = window.onAgentChange;
+      window.onAgentChange = function (agentType) {
+        console.log("[IA Menu] onAgentChange:", agentType);
+        window.currentAgent = agentType || "docs";
+        original(agentType);
+        if (agentType === "cde" && !window.selectedProject) {
+          console.log("[IA Menu] onAgentChange cde without project, opening search");
+          openProjectModalOnce();
+        }
+      };
+      window.onAgentChange.__iaMenuPatched = true;
+    }
+
+    function openProjectModalOnce() {
+      var modal = document.getElementById("ia-projects-search-modal");
+      if (window.__iaMenuProjectModalOpen && modal && modal.style.display === "flex") {
+        return;
+      }
+      window.__iaMenuProjectModalOpen = true;
+      if (window.openProjectsSearchModal) {
+        console.log("[IA Menu] openProjectsSearchModal");
+        window.openProjectsSearchModal();
+      }
+      if (modal) {
+        setTimeout(function () {
+          if (modal.style.display !== "flex") {
+            console.log("[IA Menu] force modal display");
+            modal.style.display = "flex";
+          }
+        }, 50);
+      }
+    }
+
+    function patchCloseProjectsModal() {
+      if (!window.closeProjectsSearchModal || window.closeProjectsSearchModal.__iaMenuPatched) {
+        return;
+      }
+      var original = window.closeProjectsSearchModal;
+      window.closeProjectsSearchModal = function () {
+        window.__iaMenuProjectModalOpen = false;
+        return original.apply(this, arguments);
+      };
+      window.closeProjectsSearchModal.__iaMenuPatched = true;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!isMenuPageActive()) {
+        clearMenuLayoutState();
+        return;
+      }
+      updateMenuOffset();
+      updateMenuHeight();
+      normalizeMainMenuResizer();
+      ensureChatWindow(10);
+      normalizeEmptyChatState();
+      bindChatStateObserver();
+      bindAgentSidebar();
+      bindProjectButton();
+      patchMindmapButton();
+      patchOnAgentChange();
+      patchCloseProjectsModal();
+    });
+    document.addEventListener("turbo:load", function () {
+      if (!isMenuPageActive()) {
+        clearMenuLayoutState();
+        return;
+      }
+      updateMenuOffset();
+      updateMenuHeight();
+      normalizeMainMenuResizer();
+      ensureChatWindow(10);
+      normalizeEmptyChatState();
+      bindChatStateObserver();
+      bindAgentSidebar();
+      bindProjectButton();
+      patchMindmapButton();
+      patchOnAgentChange();
+      patchCloseProjectsModal();
+    });
+    window.addEventListener("resize", function () {
+      if (!isMenuPageActive()) return;
+      updateMenuOffset();
+      updateMenuHeight();
+      normalizeMainMenuResizer();
+    });
+
+    // Important with Turbo cache/navigation: clean global styles when leaving this view
+    document.addEventListener("turbo:before-cache", clearMenuLayoutState);
+    document.addEventListener("turbo:before-visit", clearMenuLayoutState);
+    document.addEventListener("turbo:render", function () {
+      if (!isMenuPageActive()) {
+        clearMenuLayoutState();
+      }
+    });
+    window.addEventListener("beforeunload", clearMenuLayoutState);
+  })();
+</script>

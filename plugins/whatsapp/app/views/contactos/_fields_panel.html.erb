@@ -1,0 +1,137 @@
+<div class="contacto-section">
+  <div class="contacto-section-title">Crear campo</div>
+  <%= form_with url: whatsapp_plugin_project_contactos_fields_path(@project),
+                scope: :field,
+                method: :post,
+                local: true,
+                id: "contacto-create-field-form",
+                data: { contacto_field_form: true, turbo: false } do |f| %>
+    <div class="contacto-form-stack">
+      <div>
+        <label for="contacto-field-name-new">Nombre</label>
+        <%= f.text_field :name, id: "contacto-field-name-new" %>
+      </div>
+      <div>
+        <label for="contacto-field-type-new">Tipo</label>
+        <%= f.select :field_type, [["Texto", "text"], ["Numero", "number"], ["Fecha", "date"], ["Lista", "select"]], {}, id: "contacto-field-type-new", data: { contacto_field_type: true } %>
+      </div>
+      <div class="contacto-field-options" data-contacto-field-options>
+        <label>Opciones de la lista</label>
+        <div class="contacto-field-options-list" data-contacto-field-options-list></div>
+        <button type="button" class="contacto-btn contacto-btn-ghost contacto-field-option-add" data-contacto-field-option-add>
+          Agregar opcion
+        </button>
+        <%= f.hidden_field :options_text, data: { contacto_field_options_input: true } %>
+      </div>
+    <div>
+      <label for="contacto-field-required-new">Requerido</label>
+      <%= f.select :required, [["No", false], ["Si", true]], {}, id: "contacto-field-required-new" %>
+    </div>
+    <div>
+      <label class="contacto-checkbox">
+        <%= f.check_box :visible_in_chat_card, checked: true %>
+        <span>Visible en Chat Card</span>
+      </label>
+    </div>
+    <div>
+      <label class="contacto-checkbox">
+        <%= f.check_box :add_to_variables %>
+        <span>Agregar a Variables</span>
+      </label>
+    </div>
+    <div class="contacto-divider" aria-hidden="true"></div>
+    </div>
+  <% end %>
+</div>
+
+<div class="contacto-section">
+<div class="contacto-section-title">Campos creados</div>
+  <div class="contacto-field-list" data-contacto-fields-order>
+    <% @contact_fields.each do |field| %>
+      <div class="contacto-field-item" data-field-id="<%= field.id %>" draggable="true">
+        <div>
+          <strong><%= field.name %></strong>
+        </div>
+        <div class="contacto-field-actions">
+          <button type="button" class="contacto-link" data-contacto-field-edit-toggle aria-label="Editar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+              <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+              <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+            </svg>
+          </button>
+          <%= button_to whatsapp_plugin_project_contactos_field_path(@project, field.id),
+                        method: :delete,
+                        form: { data: { contacto_confirm: "true", turbo: false } },
+                        class: "contacto-link contacto-link-danger",
+                        title: "Eliminar",
+                        aria: { label: "Eliminar" } do %>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+              <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+              <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+            </svg>
+          <% end %>
+        </div>
+      </div>
+      <div class="contacto-field-edit is-hidden" data-contacto-field-edit>
+        <%= form_with url: whatsapp_plugin_project_contactos_field_path(@project, field.id),
+                      scope: :field,
+                      method: :patch,
+                      local: true,
+                      data: { contacto_field_form: true, turbo: false } do |f| %>
+          <div class="contacto-form-stack">
+            <div>
+              <label for="contacto-field-name-<%= field.id %>">Nombre</label>
+              <%= f.text_field :name, id: "contacto-field-name-#{field.id}", value: field.name %>
+            </div>
+            <div>
+              <label for="contacto-field-type-<%= field.id %>">Tipo</label>
+              <%= f.select :field_type,
+                           [["Texto", "text"], ["Numero", "number"], ["Fecha", "date"], ["Lista", "select"]],
+                           { selected: field.field_type },
+                           { id: "contacto-field-type-#{field.id}", data: { contacto_field_type: true } } %>
+            </div>
+            <div class="contacto-field-options" data-contacto-field-options>
+              <label>Opciones de la lista</label>
+              <div class="contacto-field-options-list" data-contacto-field-options-list>
+                <% Array(field.options).each do |opt| %>
+                  <div class="contacto-field-option-row">
+                    <input type="text" class="contacto-field-option-input" name="field[options][]" value="<%= opt %>">
+                    <button type="button" class="contacto-field-option-remove">Quitar</button>
+                  </div>
+                <% end %>
+              </div>
+              <button type="button" class="contacto-btn contacto-btn-ghost contacto-field-option-add" data-contacto-field-option-add>
+                Agregar opcion
+              </button>
+              <%= f.hidden_field :options_text, data: { contacto_field_options_input: true } %>
+            </div>
+            <div>
+            <label for="contacto-field-required-<%= field.id %>">Requerido</label>
+            <%= f.select :required,
+                         [["No", false], ["Si", true]],
+                         { selected: field.required },
+                         { id: "contacto-field-required-#{field.id}" } %>
+          </div>
+          <div>
+            <label class="contacto-checkbox">
+              <%= f.check_box :visible_in_chat_card, checked: field.visible_in_chat_card %>
+              <span>Visible en Chat Card</span>
+            </label>
+          </div>
+          <div>
+            <label class="contacto-checkbox">
+              <%= f.check_box :add_to_variables, checked: field.add_to_variables %>
+              <span>Agregar a Variables</span>
+            </label>
+          </div>
+          <div class="contacto-divider" aria-hidden="true"></div>
+          </div>
+          <div class="contacto-field-edit-actions">
+            <button type="button" class="contacto-btn contacto-btn-ghost" data-contacto-field-edit-cancel>Cancelar</button>
+            <button class="contacto-btn" type="submit">Guardar</button>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

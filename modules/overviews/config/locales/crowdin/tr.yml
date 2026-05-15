@@ -1,0 +1,4 @@
+tr:
+  overviews:
+    label: 'Genel bakış'
+  permission_manage_overview: 'Genel bakış sayfasını yönet'

@@ -1,0 +1,2077 @@
+{
+  "pl": {
+    "date": {
+      "abbr_day_names": [
+        "Nie",
+        "Pon",
+        "Wt",
+        "Śro",
+        "Czw",
+        "Pt",
+        "Sb"
+      ],
+      "abbr_month_names": [
+        null,
+        "Sty",
+        "Lut",
+        "Mar",
+        "Kwi",
+        "Maj",
+        "Cze",
+        "Lip",
+        "Sie",
+        "Wrz",
+        "Paź",
+        "Lis",
+        "Gru"
+      ],
+      "abbr_week": "Tydz.",
+      "day_names": [
+        "Niedziela",
+        "Poniedziałek",
+        "Wtorek",
+        "Środa",
+        "Czwartek",
+        "Piątek",
+        "Sobota"
+      ],
+      "formats": {
+        "default": "%m/%d/%Y",
+        "long": "%B %d, %Y",
+        "short": "%b %d"
+      },
+      "month_names": [
+        null,
+        "Styczeń",
+        "Luty",
+        "Marzec",
+        "Kwiecień",
+        "Maj",
+        "Czerwiec",
+        "Lipiec",
+        "Sierpień",
+        "Wrzesień",
+        "Październik",
+        "Listopad",
+        "Grudzień"
+      ],
+      "order": [
+        "rok",
+        ":miesiąc",
+        ":dzień"
+      ]
+    },
+    "js": {
+      "admin": {
+        "enterprise": {
+          "text_expired": "wygasł",
+          "text_reprieve_days_left": "Liczba dni do końca okresu karencji: %{days}",
+          "trial": {
+            "confirmation": "Potwierdzenie adresu e-mail",
+            "confirmation_info": "Wysłaliśmy Ci wiadomość e-mail %{date} na adres %{email}. Sprawdź swoją skrzynkę odbiorczą i kliknij link potwierdzający, aby rozpocząć 14-dniowy okres próbny.\n",
+            "email_not_received": "Wiadomość e-mail nie doszła? Możesz ją ponownie wysłać za pomocą linku po prawej stronie.",
+            "form": {
+              "domain_mismatch": "Obecna nazwa hosta żądania nie pasuje do skonfigurowanej nazwy hosta. Sprawdź dokładnie ustawienia systemu.",
+              "general_consent": "Przyjmuję <a target=\"_blank\" href=\"%{link_terms}\">warunki umowy</a> i <a target=\"_blank\" href=\"%{link_privacy}\">politykę prywatności</a>.\n",
+              "invalid_email": "Nieprawidłowy adres e-mail",
+              "label_additional_features": "Dodatkowe funkcje",
+              "label_company": "Firma",
+              "label_domain": "Domena",
+              "label_expires_at": "Wygasa",
+              "label_first_name": "Imię",
+              "label_last_name": "Nazwisko",
+              "label_maximum_users": "Maksymalna liczba aktywnych użytkowników",
+              "label_plan": "Plan",
+              "label_starts_at": "Data rozpoczęcia",
+              "label_subscriber": "Subskrybent",
+              "receive_newsletter": "Chcę otrzymywać <a target=\"_blank\" href=\"%{link}\">biuletyn </a> OpenProject.",
+              "taken_domain": "W każdej domenie może być aktywna tylko jedna wersja próbna.",
+              "taken_email": "Każdy użytkownik może utworzyć tylko jeden okres próbny."
+            },
+            "next_steps": "Następne kroki",
+            "quick_overview": "Zapoznaj się z krótkim omówieniem zarządzania projektami i pracy zespołowej w OpenProject w wersji Enterprise.",
+            "resend_link": "Wysłać ponownie",
+            "resend_success": "Wiadomość e-mail została wysłana ponownie. Sprawdź swoje wiadomości e-mail i kliknij podany link potwierdzenia.",
+            "resend_warning": "Nie można ponownie wysłać wiadomości e-mail.",
+            "session_timeout": "Upłynął limit czasu sesji. Spróbuj ponownie załadować stronę lub ponownie wyślij wiadomość e-mail.",
+            "status_confirmed": "potwierdzony",
+            "status_label": "Stan:",
+            "status_waiting": "wysłano wiadomość e-mail — oczekiwanie na potwierdzenie",
+            "test_ee": "Testuj wersję Enterprise przez 14 dni za darmo",
+            "try_another_email": "Możesz też spróbować użyć innego adresu e-mail."
+          },
+          "upsell": {
+            "become_hero": "Zostań bohaterem!",
+            "benefits": {
+              "description": "Jakie są korzyści z rozwiązania lokalnego wersji Enterprise?",
+              "high_security": "Funkcje zabezpieczeń",
+              "high_security_text": "Pojedyncze logowanie (SAML, OpenID Connect, CAS), grupy LDAP.",
+              "installation": "Pomoc w instalacji",
+              "installation_text": "Doświadczeni inżynierowie oprogramowania prowadzą Cię przez cały proces instalacji i konfiguracji w Twojej własnej infrastrukturze.",
+              "premium_features": "Dodatki dla Enterprise",
+              "premium_features_text": "Tablice zwinne, niestandardowy motyw i logotyp, wykresy, inteligentne przepływy pracy z działaniami niestandardowymi, wyszukiwanie pełnotekstowe w załącznikach do pakietów roboczych i pola niestandardowe, umożliwiające wybór wielokrotny.",
+              "professional_support": "Profesjonalne wsparcie",
+              "professional_support_text": "Uzyskaj niezawodne, wysokiej klasy wsparcie od starszych inżynierów wsparcia technicznego posiadających wiedzę fachową na temat uruchamiania oprogramowania OpenProject w środowiskach o znaczeniu krytycznym dla biznesu."
+            },
+            "button_book_now": "Zarezerwuj teraz",
+            "button_contact_us": "Skontaktuj się z nami, aby uzyskać demo",
+            "button_start_trial": "Rozpocznij bezpłatny okres próbny",
+            "button_upgrade": "Uaktualnij teraz",
+            "confidence": "Dostarczamy sprawdzone i wspierane oprogramowanie klasy korporacyjnej do zarządzania projektami — z otwartym kodem źródłowym i otwartym umysłem.\n",
+            "enterprise_info_html": "%{feature_title} jest dodatkiem wersji Enterprise <span class='spot-icon spot-icon_inline spot-icon_enterprise-addons'></span>.",
+            "link_quote": "Uzyskaj wycenę",
+            "more_info": "Więcej informacji",
+            "text": "Edycja OpenProject Enterprise opiera się na edycji społecznośiowej. Zawiera dodatki dla Entrprise i profesjonalne wsparcie skierowane głównie do organizacji z ponad 10 użytkownikami, które zarządzają projektami o kluczowym znaczeniu dla biznesu za pomocą OpenProject.\n",
+            "unlimited": "Bez ograniczeń",
+            "upgrade_info": "Aby ją aktywować i zacząć korzystać z niej w zespole, przejdź na plan płatny.",
+            "you_contribute": "Deweloperzy również muszą płacić rachunki. Poprzez przejście na wersję Enterprise będziesz wspierać ten wysiłek społeczności open source i przyczyniać się do jej rozwoju, utrzymania i ciągłego doskonalenia."
+          }
+        },
+        "type_form": {
+          "add_group": "Dodaj grupę atrybutów",
+          "add_table": "Dodaj tabelę powiązanych pakietów roboczych",
+          "custom_field": "Pola niestandardowe",
+          "drag_to_activate": "Aby aktywować pola, przeciągaj je stąd",
+          "edit_query": "Edytuj zapytanie",
+          "inactive": "Nieaktywny",
+          "new_group": "Nowa Grupa",
+          "reset_to_defaults": "Resetuj do ustawień domyślnych"
+        },
+        "work_packages_settings": {
+          "warning_progress_calculation_mode_change_from_field_to_status_html": "Zmiana trybu obliczania postępu z opartego na pracy na oparty na statusie spowoduje, że wszystkie istniejące wartości <i>% ukończenia</i> zostaną utracone i zastąpione wartościami powiązanymi z poszczególnymi statusami. Istniejące wartości <i>Pozostała praca</i> mogą również zostać obliczone ponownie w celu odzwierciedlenia tej zmiany. Działanie to jest nieodwracalne.",
+          "warning_progress_calculation_mode_change_from_status_to_field_html": "Zmiana trybu obliczania postępu z opartego na statusie na oparty na pracy spowoduje, że pole <i>% ukończenia</i> będzie można dowolnie edytować. Jeśli opcjonalnie wprowadzisz wartości <i>Praca</i> lub <i>Pozostała praca</i>, zostaną one również powiązane z wartością <i>% ukończenia</i>. Zmiana wartości <i>Pozostała praca</i> może wówczas skutkować zaktualizowaniem wartości <i>% ukończenia</i>."
+        },
+        "working_days": {
+          "add_non_working_day": "Dzień nieroboczy",
+          "already_added_error": "Dzień nieroboczy dla tej daty już istnieje. Można utworzyć tylko jeden dzień nieroboczy dla każdej unikalnej daty.",
+          "calendar": {
+            "empty_state_description": "Dla tego roku nie zdefiniowano żadnych określonych dni nieroboczych. Kliknij poniższy przycisk „+ Dzień nieroboczy”, aby dodać datę.",
+            "empty_state_header": "Dni nierobocze",
+            "new_date": "(nowe)"
+          },
+          "change_button": "Zapisz i zmień harmonogram",
+          "change_description": "Changing which days of the week are considered working days or non-working days can affect the start and finish days of all work packages and life cycles in all projects in this instance.",
+          "change_title": "Zmień dni robocze",
+          "removed_title": "Z listy dni nieroboczych usuniesz następujące dni:",
+          "warning": "The changes might take some time to take effect. You will be notified when all relevant work packages and project life cycles have been updated. Are you sure you want to continue?\n"
+        }
+      },
+      "ajax": {
+        "hide": "Ukryj",
+        "loading": "Ładowanie…",
+        "updating": "Aktualizowanie..."
+      },
+      "attachments": {
+        "delete": "Usuń załącznik",
+        "delete_confirmation": "Czy na pewno chcesz usunąć ten plik? Ta akcja nie jest odwracalna.\n",
+        "draggable_hint": "Przeciągaj w polu edytora, aby wstawić obraz lub załącznik referencyjny. Zamknięte pola edytora zostaną otwarte podczas przeciągania.\n",
+        "quarantined_hint": "Plik został poddany kwarantannie, ponieważ wykryto w nim wirusa. Nie jest dostępny do pobrania."
+      },
+      "autocomplete_ng_select": {
+        "add_tag": "Dodaj element",
+        "clear_all": "Wyczyść wszystko",
+        "loading": "Ładowanie...",
+        "not_found": "Nie znaleziono elementów",
+        "type_to_search": "Wpisz szukaną frazę"
+      },
+      "autocomplete_select": {
+        "active": "Aktywne %{label} %{name}",
+        "placeholder": {
+          "multi": "Dodaj %{name}",
+          "single": "Wybierz %{name}"
+        },
+        "remove": "Usuń %{name}"
+      },
+      "autocompleter": {
+        "notFoundText": "Nie znaleziono elementów",
+        "placeholder": "Wpisz szukaną frazę",
+        "project": {
+          "placeholder": "Wybierz projekt"
+        }
+      },
+      "avatars": {
+        "empty_file_error": "Prześlij prawidłowy obraz (jpg, png, gif)",
+        "error_image_too_large": "Obraz jest zbyt duży.",
+        "label_choose_avatar": "Wybierz awatara z pliku",
+        "text_upload_instructions": "Prześlij swój awatar rozmiaru 128 na 128 pikseli. Większe pliki zostaną zmniejszone o dopasowane.\nPodgląd awatara zostanie wyświetlony przed przesłaniem po wybraniu obrazu.\n",
+        "uploading_avatar": "Przesyłanie tego awatara.",
+        "wrong_file_format": "Dozwolone są formaty jpg, png, gif"
+      },
+      "backup": {
+        "attachments_disabled": "Nie można dołączyć załączników, ponieważ przekraczają maksymalny dozwolony rozmiar całkowity. Można to zmienić poprzez konfigurację (wymaga ponownego uruchomienia serwera).",
+        "download_backup": "Pobierz kopię zapasową",
+        "include_attachments": "Dołącz załączniki",
+        "info": "Tutaj możesz uruchomić tworzenie kopii zapasowej. Proces może zająć nieco czasu, w zależności od ilości danych (zwłaszcza załączników). Gdy kopia zapasowa będzie gotowa, otrzymasz wiadomość e-mail.\n",
+        "last_backup": "Ostatnia kopia zapasowa",
+        "last_backup_from": "Ostatnia kopia zapasowa: z",
+        "note": "Nowa kopia zapasowa zastąpi poprzednią. Można żądać tylko ograniczonej liczby kopii zapasowych dziennie.\n",
+        "options": "Opcje",
+        "request_backup": "Zażądaj kopii zapasowej",
+        "title": "Kopia zapasowa OpenProject"
+      },
+      "baseline": {
+        "apply": "Zastosuj",
+        "clear": "Wyczyść",
+        "drop_down": {
+          "a_specific_date": "określona data",
+          "between_two_specific_dates": "między dwiema określonymi datami",
+          "last_month": "w zeszłym miesiącu",
+          "last_week": "zeszły tydzień",
+          "last_working_day": "ostatni dzień roboczy",
+          "none": "-",
+          "yesterday": "wczoraj"
+        },
+        "from": "Od",
+        "header_description": "Wyróżnij zmiany wprowadzone na tej liście od dowolnego momentu w przeszłości.",
+        "help_description": "Referencyjna strefa czasowa linii odniesienia.",
+        "icon_tooltip": {
+          "added": "Dodano do wyświetlania w okresie objętym porównaniem",
+          "changed": "Zachowano z modyfikacjami",
+          "removed": "Usunięto z wyświetlania w okresie objętym porównaniem"
+        },
+        "legends": {
+          "changes_between": "Zmiany między",
+          "changes_since": "Zmiany od",
+          "in_your_timezone": "W Twojej lokalnej strefie czasowej:",
+          "maintained_with_changes": "Zachowano ze zmianami",
+          "no_longer_meets_filter_criteria": "Już nie spełnia kryteriów filtrowania",
+          "now_meets_filter_criteria": "Teraz spełnia kryteria filtrowania"
+        },
+        "show_changes_since": "Pokaż zmiany od",
+        "time": "Godzina",
+        "time_description": "W Twoim czasie lokalnym: %{datetime}",
+        "to": "Do",
+        "toggle_title": "Linia odniesienia"
+      },
+      "bcf": {
+        "add_viewpoint": "Dodaj punkt widzenia",
+        "delete_viewpoint": "Usuń punkt widzenia",
+        "export": "Eksportuj",
+        "export_bcf_xml_file": "Wyeksportuj plik BCF-XML (wersja BCF 2.1)",
+        "import": "Importuj",
+        "import_bcf_xml_file": "Zaimportuj plik BCF-XML (wersja BCF 2.1)",
+        "label_bcf": "BCF",
+        "management": "Zarządzanie BCF",
+        "refresh": "Odśwież",
+        "refresh_work_package": "Odśwież pakiet roboczy",
+        "show_viewpoint": "Pokaż punkt widzenia",
+        "viewpoint": "Punkt widzenia"
+      },
+      "boards": {
+        "add_card": "Dodaj kartę",
+        "add_list": "Dodaj listę do tablicy",
+        "add_list_modal": {
+          "labels": {
+            "assignee": "Wybierz użytkownika do dodania jako nową listę przypisanych",
+            "status": "Wybierz status do dodania jako nową listę",
+            "subproject": "Wybierz podprojekt do dodania jako nową listę",
+            "subtasks": "Wybierz pakiet roboczy do dodania jako nową listę",
+            "version": "Wybierz wersję do dodania jako nową listę"
+          },
+          "warning": {
+            "add_members": "<a href=\"%{link}\">Dodaj nowego członka do tego projektu</a>, aby ponownie wybrać użytkowników.",
+            "assignee": "Nie ma żadnego członka pasującego do tej wartości filtru.  <br>",
+            "no_member": "W tym projekcie nie ma obecnie żadnych członków, których można dodać. <br>",
+            "status": "Obecnie nie jest dostępny żaden status. <br>\nAlbo nie istnieją, albo wszystkie zostały już dodane do tablicy.\n"
+          }
+        },
+        "board_type": {
+          "action": "Tablica działania",
+          "action_by_attribute": "Tablica działania (%{attribute})",
+          "action_text": "Tablica z listami filtrowanymi w atrybucie %{attribute}. Przeniesienie pakietów roboczych na inne listy zaktualizuje ich atrybut.\n",
+          "action_text_assignee": "Tablica z zautomatyzowanymi kolumnami odpowiadającymi przypisanym użytkownikom. Idealna do rozsyłania pakietów roboczych.\n",
+          "action_text_status": "Podstawowa tablica w stylu kanban z kolumnami statusu, takimi jak Do wykonania, W toku, Gotowe.\n",
+          "action_text_subprojects": "Tablica z zautomatyzowanymi kolumnami projektów składowych. Przeciąganie pakietów roboczych na inne listy odpowiednio aktualizuje (pod)projekt.\n",
+          "action_text_subtasks": "Tablica z zautomatyzowanymi kolumnami elementów składowych. Przeciąganie pakietów roboczych na inne listy odpowiednio aktualizuje elementy nadrzędne.\n",
+          "action_text_version": "Tablica z automatycznymi kolumnami na podstawie atrybutu wersji. Idealna do planowania rozwoju produktu.\n",
+          "action_type": {
+            "assignee": "przypisana osoba",
+            "status": "Status",
+            "subproject": "podprojekt",
+            "subtasks": "nadrzędny-podrzędny",
+            "version": "wersja"
+          },
+          "board_type_title": {
+            "assignee": "Przypisana osoba",
+            "basic": "Podstawowa",
+            "status": "Status",
+            "subproject": "Podprojekt",
+            "subtasks": "Nadrzędny-podrzędny",
+            "version": "Wersja"
+          },
+          "free": "podstawowy",
+          "free_text": "Zacznij od zera z pustą tablicą. Ręcznie dodaj karty i kolumny do tej tablicy.\n",
+          "select_attribute": "Atrybut działania",
+          "select_board_type": "Wybierz typ tablicy, którego potrzebujesz.",
+          "text": "Typ tablicy"
+        },
+        "click_to_remove_list": "Kliknij, aby usunąć tę listę",
+        "configuration_modal": {
+          "display_settings": {
+            "card_mode": "Wyświetlaj jako karty",
+            "table_mode": "Wyświetlaj jako tabelę"
+          },
+          "title": "Skonfiguruj tę tablicę"
+        },
+        "create_new": "Utwórz nową tablicę",
+        "error_attribute_not_writable": "Nie można przenieść pakietu roboczego, nie można zapisać %{attribute}.",
+        "error_cannot_move_into_self": "Nie możesz przenieść pakietu roboczego do jego własnej kolumny.",
+        "error_loading_the_list": "Błąd podczas ładowania listy: %{error_message}",
+        "error_permission_missing": "Brakuje uprawnienia do tworzenia zapytań publicznych",
+        "label_board_type": "Typ tablicy",
+        "label_unnamed_board": "Tablica bez nazwy",
+        "label_unnamed_list": "Lista bez nazwy",
+        "lists": {
+          "delete": "Usuń listę"
+        },
+        "new_board": "Nowa tablica",
+        "text_hidden_list_warning": "Nie wszystkie listy są wyświetlane, ponieważ nie masz uprawnień. Aby uzyskać więcej informacji, skontaktuj się z administratorem.",
+        "version": {
+          "close_version": "Zamknij wersję",
+          "closed": "Zamknięte",
+          "edit_version": "Edytuj wersję",
+          "is_closed": "Wersja jest zamknięta. Do tej wersji nie można dodać żadnych elementów.",
+          "is_locked": "Wersja jest zablokowana. Do tej wersji nie można dodać żadnych elementów.",
+          "lock_version": "Zablokuj wersję",
+          "locked": "Zablokowany",
+          "open_version": "Otwórz wersję",
+          "show_version": "Pokaż wersję",
+          "unlock_version": "Odblokuj wersję"
+        }
+      },
+      "button_add": "Dodaj",
+      "button_add_watcher": "Dodaj obserwatora",
+      "button_advanced_filter": "Zaawansowane filtrowanie",
+      "button_back": "Wstecz",
+      "button_back_to_list_view": "Wróć do widoku listy",
+      "button_cancel": "Anuluj",
+      "button_change_project": "Przenieś do innego projektu",
+      "button_check_all": "Zaznacz wszystko",
+      "button_close": "Zamknij",
+      "button_close_details": "Zamknij szczegóły widoku",
+      "button_collapse_all": "Zwiń wszystko",
+      "button_configure-form": "Skonfiguruj formularz",
+      "button_confirm": "Potwierdź",
+      "button_continue": "Kontynuuj",
+      "button_copy": "Kopiuj",
+      "button_copy_link_to_clipboard": "Kopiuj link do schowka",
+      "button_copy_to_clipboard": "Skopiuj do schowka",
+      "button_copy_to_other_project": "Zduplikuj w innym projekcie",
+      "button_create": "Utwórz",
+      "button_custom-fields": "Pola niestandardowe",
+      "button_delete": "Usuń",
+      "button_delete_watcher": "Usuń obserwatora",
+      "button_details_view": "Zobacz szczegóły",
+      "button_duplicate": "Duplikat",
+      "button_edit": "Edycja",
+      "button_expand_all": "Rozwiń wszystkie",
+      "button_export-atom": "Pobierz Atom",
+      "button_filter": "Filtr",
+      "button_generate_pdf": "Wygeneruj PDF",
+      "button_list_view": "Widok listy",
+      "button_log_costs": "Rejestruj koszty jednostkowe",
+      "button_log_time": "Rejestruj czas pracy",
+      "button_more": "Więcej",
+      "button_more_actions": "Więcej działań",
+      "button_open_details": "Otwórz szczegóły widoku",
+      "button_open_fullscreen": "Otwórz widok pełnoekranowy",
+      "button_quote": "Cytat",
+      "button_save": "Zapisz",
+      "button_settings": "Ustawienia",
+      "button_show_cards": "Pokaż widok karty",
+      "button_show_fullscreen": "Pokaż widok pełnoekranowy",
+      "button_show_gantt": "Pokaż widok wykresu Gantta",
+      "button_show_list": "Pokaż widok listy",
+      "button_show_table": "Pokaż widok tabeli",
+      "button_show_view": "Tryb pełnoekranowy",
+      "button_uncheck_all": "Odznacz wszystko",
+      "button_update": "Aktualizacja",
+      "calendar": {
+        "create_new": "Utwórz nowy kalendarz",
+        "title": "Kalendarz",
+        "too_many": "Łącznie pakietów roboczych jest %{count}, ale pokazać można tylko %{max}.",
+        "unsaved_title": "Kalendarz bez nazwy"
+      },
+      "caption_rate_history": "Historia stawek",
+      "card": {
+        "add_new": "Dodaj nową kartę",
+        "highlighting": {
+          "entire_card_by": "Cała karta do",
+          "inline": "Wyróżniaj w treści:"
+        },
+        "remove_from_list": "Usuń kartę z listy"
+      },
+      "chart": {
+        "axis_criteria": "Kryteria osi",
+        "errors": {
+          "could_not_load": "Nie można załadować danych potrzebnych do wyświetlenia wykresu. Być może brakuje niezbędnych uprawnień."
+        },
+        "modal_title": "Konfiguracja wykresu pakietów roboczych",
+        "tabs": {
+          "dataset": "Zestaw danych %{number}",
+          "graph_settings": "Ogólne"
+        },
+        "type": "Typ wykresu",
+        "types": {
+          "bar": "Słupkowy",
+          "doughnut": "Pierścieniowy",
+          "horizontal_bar": "Słupkowy poziomy",
+          "line": "Liniowy",
+          "pie": "Kołowy",
+          "polar_area": "Biegunowy",
+          "radar": "Radarowy"
+        }
+      },
+      "clipboard": {
+        "browser_error": "Twoja przeglądarka nie obsługuje kopiowania do schowka. Skopiuj go ręcznie. %{content}",
+        "copied_successful": "Skopiowano do schowka!"
+      },
+      "close_filter_title": "Zamknij filtr",
+      "close_form_title": "Zamknij formularz",
+      "close_popup_title": "Zamknij okno",
+      "custom_actions": {
+        "date": {
+          "current_date": "Bieżąca data",
+          "specific": "wł"
+        }
+      },
+      "dashboards": {
+        "label": "Pulpit nawigacyjny"
+      },
+      "description_available_columns": "Dostępne kolumny",
+      "description_current_position": "Jesteś tutaj: ",
+      "description_select_work_package": "Zaznacz zestaw Zadań #%{id}",
+      "description_subwork_package": "Otwórz zadanie-dziecko #%{id}",
+      "editor": {
+        "ckeditor_error": "Wystąpił błąd w CKEditor",
+        "error_saving_failed": "Zapisywanie dokumentu nie powiodło się, błąd: %{error}",
+        "macro": {
+          "attribute_reference": {
+            "invalid_attribute": "Wybrany atrybut „%{name}” nie istnieje.",
+            "macro_help_tooltip": "Ten segment tekstowy jest renderowany dynamicznie przez makro.",
+            "nested_macro": "To makro odwołuje się rekurencyjnie do %{model} %{id}.",
+            "not_found": "Nie można znaleźć żądanego zasobu"
+          },
+          "child_pages": {
+            "button": "Łącza do stron podrzędnych",
+            "hint": "Aby wyświetlać listę wszystkich stron podrzędnych bieżącej strony, pozostaw to pole puste. Aby odwołać się do innej strony, podaj jej tytuł lub przyjazny adres URL.\n",
+            "include_parent": "Uwzględnij nadrzędne",
+            "page": "Strona wiki",
+            "text": "[Placeholder] Łącza do stron podrzędnych",
+            "this_page": "tej strony"
+          },
+          "code_block": {
+            "button": "Wstaw fragment kodu",
+            "language": "Język formatowania",
+            "language_hint": "Wprowadź język formatowania, który będzie używany do wyróżniania (jeśli jest obsługiwany).",
+            "title": "Wstaw/edytuj fragment kodu"
+          },
+          "dropdown": {
+            "chose_macro": "Wybierz makro",
+            "macros": "Makra"
+          },
+          "embedded_calendar": {
+            "text": "[Placeholder] Wbudowany kalendarz"
+          },
+          "embedded_table": {
+            "button": "Osadź tabelę pakietów roboczych",
+            "text": "[Placeholder] Osadzona tabela pakietów roboczych"
+          },
+          "error": "Nie można rozwinąć makra: %{message}",
+          "toc": "Spis treści",
+          "toolbar_help": "Kliknij, aby wybrać widżet i wyświetlić pasek narzędzi. Kliknij dwukrotnie, aby edytować widżet",
+          "wiki_page_include": {
+            "button": "Uwzględnij zawartość innej strony wiki",
+            "hint": "Uwzględnij zawartość innej strony wiki, określając jej tytuł lub przyjazny adres URL.\nMożesz uwzględnić stronę wiki z innego projektu, oddzielając ją dwukropkiem, jak w poniższym przykładzie.\n",
+            "not_set": "(Strona jeszcze nieustawiona)",
+            "page": "Strona wiki",
+            "text": "[Placeholder] Uwzględniono stronę wiki"
+          },
+          "work_package_button": {
+            "button": "Wstaw przycisk tworzenia pakietu roboczego",
+            "button_style": "Użyj stylu przycisku",
+            "button_style_hint": "Opcjonalnie: zaznacz, aby wyświetlać makro jako łącze, a nie przycisk.",
+            "type": "Typy pakietu roboczego",
+            "with_type": "Utwórz pakiet roboczy (typ: %{typename})",
+            "without_type": "Utwórz pakiet roboczy"
+          }
+        },
+        "mode": {
+          "manual": "Przełącz na źródło Markdown",
+          "wysiwyg": "Przełącz na edytor WYSIWYG"
+        },
+        "no_revisions": "Nie znaleziono żadnych lokalnych modyfikacji",
+        "preview": "Przełącz tryb podglądu",
+        "revisions": "Pokaż lokalne modyfikacje",
+        "source_code": "Przełącz tryb źródła Markdown"
+      },
+      "enumeration_activities": "Działania",
+      "enumeration_doc_categories": "Kategoria dokumentu",
+      "enumeration_work_package_priorities": "Priorytety pakietów roboczych",
+      "error": {
+        "cannot_save_changes_with_message": "Nie można zapisać zmian ze względu na następujący błąd: %{error}",
+        "embedded_table_loading": "Nie można załadować osadzonego widoku: %{message}",
+        "internal": "Wystąpił błąd wewnętrzny.",
+        "query_saving": "Nie można zapisać widoku."
+      },
+      "error_attachment_upload": "Załadowanie pliku nie powiodło się: %{error}",
+      "error_attachment_upload_permission": "Nie masz uprawnień do przesyłania plików do tego zasobu.",
+      "error_could_not_resolve_user_name": "Nie można rozpoznać nazwy użytkownika",
+      "error_could_not_resolve_version_name": "Nie można rozpoznać wersji",
+      "exclusion_info": {
+        "modal": {
+          "content": "Status „%{status_name}” został skonfigurowany tak, aby był wyłączony z sum hierarchii Praca, Pozostała praca i % ukończenia. Sumy nie uwzględniają tej wartości.",
+          "title": "Status wyłączono z sum hierarchii"
+        }
+      },
+      "favorite_projects": {
+        "no_results": "Nie masz żadnych ulubionych projektów",
+        "no_results_subtext": "Dodaj jeden lub wiele projektów jako ulubione w ich przeglądzie lub na liście projektów."
+      },
+      "field_value_enter_prompt": "Wprowadź wartość dla '%{field}'",
+      "filter": {
+        "description": {
+          "text_close_filter": "Aby wybrać wpis wybierz opcję i kliknij np. enter. Aby usunąć filtr zaznacz (pusty) wpis.",
+          "text_open_filter": "Otwórz filtr klawiszami strzałek przytrzymując klawisz 'ALT'."
+        },
+        "more_values_not_shown": "Są jeszcze wyniki (%{total}), wyszukaj, aby przefiltrować wyniki.",
+        "noneElement": "(brak)",
+        "sorting": {
+          "criteria": {
+            "one": "Pierwsze kryterium sortowania",
+            "three": "Trzecie kryterium sortowania",
+            "two": "Drugie kryterium sortowania"
+          }
+        },
+        "time_zone_converted": {
+          "only_end": "Do %{to} wg czasu lokalnego.",
+          "only_start": "Od %{from} wg czasu lokalnego.",
+          "two_values": "%{from} - %{to} wg czasu lokalnego."
+        },
+        "value_spacer": "-"
+      },
+      "forms": {
+        "advanced_settings": "Zaawansowane ustawienia",
+        "load_error_message": "Podczas ładowania formularza wystąpił błąd",
+        "submit_success_message": "Formularz został przesłany",
+        "validation_error_message": "Napraw błędy obecne w formularzu"
+      },
+      "gantt_chart": {
+        "button_activate": "Pokaż wykres Gantta",
+        "button_deactivate": "Ukryj wykres Gantta",
+        "filter": {
+          "noneSelection": "(brak)"
+        },
+        "label": "Wykres Gantta",
+        "labels": {
+          "bar": "Etykiety paska",
+          "description": "Wybierz atrybuty, które mają być zawsze wyświetlane w odpowiednich miejscach wykresu Gantta. Zauważ, że po najechaniu na element, zamiast tych atrybutów będą wyświetlane jego etykiety z datami.\n",
+          "farRight": "Daleko po prawej",
+          "left": "Lewa",
+          "right": "Prawa",
+          "title": "Konfiguracja etykiety"
+        },
+        "quarter_label": "Kwarta ł%{quarter_number}.",
+        "selection_mode": {
+          "notification": "Kliknij dowolny podświetlony pakiet roboczy, aby utworzyć relację. Aby anulować, naciśnij klawisz „Escape”."
+        },
+        "zoom": {
+          "auto": "Automatyczne powiększenie",
+          "days": "Dni",
+          "description": "Wybierz początkowy poziom powiększenia, który ma być wyświetlany, gdy tryb autopowiększenia jest niedostępny.\n",
+          "in": "Powiększ",
+          "months": "Miesiące",
+          "out": "Pomniejsz",
+          "quarters": "Kwartały",
+          "weeks": "Tygodnie",
+          "years": "Lata"
+        }
+      },
+      "general_text_No": "Nie",
+      "general_text_Yes": "Tak",
+      "general_text_no": "nie",
+      "general_text_yes": "tak",
+      "github_integration": {
+        "github_actions": "Akcje",
+        "pull_requests": {
+          "merged_message": "Żądanie Pull Request #%{pr_number} %{pr_link} dotyczące %{repository_link} zostało %{pr_state} przez %{github_user_link}.",
+          "message": "Żądanie Pull Request #%{pr_number} %{pr_link} dotyczące %{repository_link} autorstwa %{github_user_link} zostało %{pr_state}.",
+          "referenced_message": "Żądanie Pull Request #%{pr_number} %{pr_link} dotyczące %{repository_link} autorstwa %{github_user_link} odwoływało się do tego pakietu roboczego.",
+          "states": {
+            "closed": "Zamknięte",
+            "draft": "wersja robocza",
+            "merged": "połączony",
+            "opened": "otwarty",
+            "ready_for_review": "oznaczony jako gotowy do przeglądu"
+          }
+        },
+        "tab_header": {
+          "copy_menu": {
+            "description": "Skopiuj fragmenty git do schowka",
+            "label": "Fragmenty git"
+          },
+          "git_actions": {
+            "branch_name": "Nazwa gałęzi",
+            "cmd": "Utwórz gałąź z pustą zmianą",
+            "commit_message": "Wiadomość o zmianach",
+            "copy_error": "❌ Kopiowanie nie powiodło się!",
+            "copy_success": "✅ Skopiowano!",
+            "title": "Szybkie fragmenty do Git"
+          },
+          "title": "Żądania Pull Request"
+        },
+        "tab_prs": {
+          "empty": "Nie ma jeszcze powiązanych żądań Pull Request. Powiąż istniejące PR, używając kodu <code>OP#%{wp_id}</code> w opisie PR lub utwórz nowe PR."
+        },
+        "work_packages": {
+          "tab_name": "GitHub"
+        }
+      },
+      "gitlab_integration": {
+        "gitlab_pipelines": "Lejki",
+        "tab_header_issue": {
+          "title": "Problemy"
+        },
+        "tab_header_mr": {
+          "copy_menu": {
+            "description": "Skopiuj fragmenty git do schowka",
+            "label": "Fragmenty git"
+          },
+          "create_mr": {
+            "description": "Utwórz żądanie scalenia",
+            "label": "Utwórz MR"
+          },
+          "git_actions": {
+            "branch_name": "Nazwa gałęzi",
+            "cmd": "Utwórz gałąź z pustą zmianą",
+            "commit_message": "Wiadomość o zmianach",
+            "copy_error": "❌ Kopiowanie nie powiodło się!",
+            "copy_success": "✅ Skopiowano!",
+            "title": "Szybkie fragmenty do Git"
+          },
+          "title": "Żądania scalania"
+        },
+        "tab_issue": {
+          "empty": "Nie ma jeszcze żadnych powiązanych problemów. Powiąż istniejący problem, używając kodu <code>OP#%{wp_id}</code> (lub <code>PP#%{wp_id}</code> w przypadku linków prywatnych) w tytule/opisie problemu lub utwórz nowy problem."
+        },
+        "tab_mrs": {
+          "empty": "Nie ma jeszcze żadnych powiązanych żądań scalenia. Powiąż istniejące MR, używając kodu <code>OP#%{wp_id}</code> (lub <code>PP#%{wp_id}</code> w przypadku linków prywatnych) w tytule/opisie MR lub utwórz nowe MR."
+        },
+        "updated_on": "Zaktualizowano",
+        "work_packages": {
+          "tab_name": "GitLab"
+        }
+      },
+      "global_search": {
+        "all_projects": "We wszystkich projektach",
+        "close_search": "Zakończ wyszukiwanie",
+        "current_project": "W tym projekcie",
+        "current_project_and_all_descendants": "W tym projekcie + pod projekcie",
+        "recently_viewed": "Ostatnio wyświetlane",
+        "search": "Szukaj",
+        "title": {
+          "all_projects": "Wszystkie projekty",
+          "project_and_subprojects": "i wszystkie podprojekty",
+          "search_for": "Szukaj"
+        }
+      },
+      "grid": {
+        "add_widget": "Dodaj widżet",
+        "configure": "Konfiguruj widżet",
+        "remove": "Usuń widżet",
+        "widgets": {
+          "custom_text": {
+            "title": "Tekst niestandardowy/użytkownika"
+          },
+          "documents": {
+            "no_results": "Nie ma jeszcze dokumentów.",
+            "title": "Dokumenty"
+          },
+          "members": {
+            "add": "Członek",
+            "no_results": "Brak widocznych członków.",
+            "title": "Członkowie",
+            "too_many": "Wyświetlanie %{count} z %{total} członków.",
+            "view_all_members": "Zobacz wszystkich członków"
+          },
+          "missing_permission": "Nie masz uprawnień niezbędnych do wyświetlenia tego widżetu.",
+          "news": {
+            "at": "w",
+            "no_results": "Utwórz nowy raport.",
+            "title": "Aktualności"
+          },
+          "project_description": {
+            "no_results": "Nie napisano jeszcze opisu. Można go podać w sekcji Ustawienia projektu.",
+            "title": "Opis projektu"
+          },
+          "project_favorites": {
+            "no_results": "Obecnie nie masz żadnych ulubionych projektów. Kliknij ikonę gwiazdki na pulpicie nawigacyjnym projektu, aby dodać go do ulubionych.",
+            "title": "Ulubione projekty"
+          },
+          "project_status": {
+            "at_risk": "Zagrożony",
+            "discontinued": "Przerwane",
+            "finished": "Zakończone",
+            "not_set": "Nie ustawione",
+            "not_started": "Nierozpoczęte",
+            "off_track": "Poza ścieżką",
+            "on_track": "Na ścieżce",
+            "title": "Stan projektu"
+          },
+          "subprojects": {
+            "no_results": "Brak podprojektów.",
+            "title": "Podprojekty"
+          },
+          "time_entries_current_user": {
+            "displayed_days": "Dni wyświetlane w widżecie:",
+            "title": "Mój spędzony czas"
+          },
+          "time_entries_list": {
+            "no_results": "Brak zarejestrowanego czasu pracy w ostatnich 7 dniach.",
+            "title": "Poświęcony czas (ostatnie 7 dni)"
+          },
+          "work_packages_accountable": {
+            "title": "Pakiety robocze, za które odpowiadam"
+          },
+          "work_packages_assigned": {
+            "title": "Zadania przypisane do mnie"
+          },
+          "work_packages_calendar": {
+            "title": "Kalendarz"
+          },
+          "work_packages_created": {
+            "title": "Pakiety robocze stworzone przeze mnie"
+          },
+          "work_packages_graph": {
+            "title": "Wykres pakietów roboczych"
+          },
+          "work_packages_overview": {
+            "placeholder": "Kliknij, aby edytować...",
+            "title": "Przegląd pakietów roboczych"
+          },
+          "work_packages_table": {
+            "title": "Tabela pakietów roboczych"
+          },
+          "work_packages_watched": {
+            "title": "Pakiety robocze obserwowane przeze mnie"
+          }
+        }
+      },
+      "hal": {
+        "error": {
+          "edit_prohibited": "Edytowanie atrybutu %{attribute} w tym pakiecie pracy jest zablokowane. Ten atrybut jest dziedziczony z relacji (np. dziecka) lub nie można go skonfigurować z innego powodu.",
+          "format": {
+            "date": "Atrybut %{attribute} jest nieprawidłową datą. Oczekiwany format: RRRR-MM-DD."
+          },
+          "general": "Wystapił błąd.",
+          "update_conflict_refresh": "Kliknij tutaj, aby odświeżyć pakiet roboczy i zaktualizować go do najnowszej wersji."
+        }
+      },
+      "help_texts": {
+        "show_modal": "Pokaż tekst pomocy"
+      },
+      "homescreen": {
+        "blocks": {
+          "new_features": {
+            "16_1": {
+              "standard": {
+                "new_features_html": "Wersja zawiera różne nowe funkcje i ulepszenia, takie jak <br> <ul class=\"%{list_styling_class}\"> <li>Porządkowanie cyklu życia projektu za pomocą faz i bramek faz.</li> <li>Eksportowanie spotkań w formacie PDF.</li> <li>Ustawianie inteligentnych opcji domyślnych dla przypomnień.</li> <li>Stosowanie ujemnego opóźnienia do dat pakietów roboczych.</li> <li>Wyświetlanie drzew hierarchii niestandardowych pól hierarchii.</li> <li>Korzyści z ulepszonej dostępności selektora dat dzięki aktywnym regionom ARIA.</li> </ul>\n"
+              }
+            },
+            "learn_about": "Dowiedz się więcej o wszystkich nowych funkcjach",
+            "text_new_features": "Przeczytaj o nowych funkcjach i aktualizacjach produktów."
+          }
+        }
+      },
+      "ical_sharing_modal": {
+        "copy_url_label": "Kopiuj adres URL",
+        "description": "Możesz użyć adresu URL (iCalendar), aby subskrybować ten kalendarz w kliencie zewnętrznym i wyświetlać z niego aktualne informacje o pakietach roboczych.",
+        "ical_generation_error_text": "Podczas generowania adresu URL kalendarza wystąpił błąd.",
+        "inital_setup_error_message": "Podczas pobierania danych wystąpił błąd.",
+        "success_message": "Adres URL „%{name}” został skopiowany do schowka. Wklej go w kliencie kalendarza, aby dokonać subskrypcji.",
+        "title": "Subskrybuj kalendarz",
+        "token_name_description_text": "Jeśli subskrybujesz ten kalendarz na wielu urządzeniach, nazwa ta pomoże Ci rozróżnić je na liście <a href=\"my/access_token\", target=\"_blank\">tokenów dostępu</a>.",
+        "token_name_label": "Gdzie będziesz go używać?",
+        "token_name_placeholder": "Wpisz nazwę, np. „Telefon”",
+        "warning": "Nie udostępniaj tego adresu URL innym użytkownikom. Każda osoba mająca ten link będzie mogła wyświetlić szczegóły pakietu roboczego bez konieczności posiadania konta lub hasła."
+      },
+      "ifc_models": {
+        "empty_warning": "Ten projekt nie ma jeszcze żadnych modeli IFC.",
+        "keyboard_input_disabled": "Przeglądarka nie obsługuje sterowania za pomocą klawiatury. Kliknij przeglądarkę, aby przekazać jej sterowanie za pomocą klawiatury.",
+        "models": {
+          "ifc_models": "Modele IFC"
+        },
+        "use_this_link_to_manage": "Użyj tego linku, aby przesłać swoje modele IFC i zarządzać nimi",
+        "views": {
+          "split": "Przeglądarka i tabela",
+          "split_cards": "Przeglądarka i karty",
+          "viewer": "Przeglądarka"
+        }
+      },
+      "include_projects": {
+        "apply": "Zastosuj",
+        "clear_selection": "Wyczyść zaznaczenie",
+        "include_subprojects": "Uwzględnij wszystkie podprojekty",
+        "no_results": "Żaden projekt nie spełnia kryteriów wyszukiwania.",
+        "search_placeholder": "Wyszukaj projekt...",
+        "selected_filter": {
+          "all": "Wszystkie projekty",
+          "selected": "Tylko zaznaczone"
+        },
+        "title": "Projekty",
+        "toggle_title": "Uwzględnij projekty",
+        "tooltip": {
+          "current_project": "To jest bieżący projekt, w którym jesteś.",
+          "does_not_match_search": "Projekt nie spełnia kryteriów wyszukiwania.",
+          "include_all_selected": "Projekt już uwzględniony, ponieważ włączenie wszystkich podprojektów jest włączone."
+        }
+      },
+      "inplace": {
+        "btn_preview_disable": "Wyłącz podgląd",
+        "btn_preview_enable": "Podgląd",
+        "button_cancel": "%{attribute}: Anuluj",
+        "button_cancel_all": "Anuluj",
+        "button_edit": "%{attribute}: Edytuj",
+        "button_save": "%{attribute}: Zapisz",
+        "button_save_all": "Zapisz",
+        "clear_value_label": "-",
+        "errors": {
+          "maxlength": "%{field} nie może zawierać więcej niż %{maxLength} znaku(ów)",
+          "messages_on_field": "To pole jest nieprawidłowe: %{messages}",
+          "minlength": "%{field} nie może zawierać mniej niż %{minLength} znaku(ów)",
+          "number": "%{field} nie jest prawidłową liczbą",
+          "required": "%{field} nie może być puste"
+        },
+        "link_formatting_help": "Formatowanie tekstu - pomoc",
+        "null_value_label": "Brak wartości"
+      },
+      "invite_user_modal": {
+        "back": "Wstecz",
+        "invite": "Zaproś",
+        "message": {
+          "description": "Wyślemy do użytkownika wiadomość e-mail, do której możesz tutaj dodać prywatną wiadomość. Może to być wyjaśnienie zaproszenia lub ułatwiające rozpoczęcie pracy informacje na temat projektu.",
+          "label": "Wiadomość z zaproszeniem",
+          "next_button": "Następny"
+        },
+        "principal": {
+          "already_member_message": "Już jest członkiem %{project}",
+          "create_new_placeholder": "Utwórz nowy element zastępczy:",
+          "invite_user": "Zaproś:",
+          "label": {
+            "name": "Nazwa",
+            "name_or_email": "Nazwa lub adres e-mail"
+          },
+          "next_button": "Następny",
+          "no_results_group": "Nie znaleziono żadnych grup",
+          "no_results_placeholder": "Nie znaleziono elementów zastępczych",
+          "no_results_user": "Nie znaleziono żadnych użytkowników",
+          "required": {
+            "group": "Wybierz grupę",
+            "placeholder": "Wybierz element zastępczy",
+            "user": "Wybierz użytkownika"
+          }
+        },
+        "project": {
+          "label": "Projekt",
+          "lacking_permission": "Nie masz uprawnień do przypisywania użytkowników do aktualnie wybranego projektu, wybierz inny.",
+          "lacking_permission_info": "Nie masz uprawnień do przypisywania użytkowników do projektu, w którym teraz jesteś. Musisz wybrać inny.",
+          "next_button": "Następny",
+          "no_invite_rights": "Nie masz uprawnień do zapraszania członków do tego projektu",
+          "no_results": "Nie znaleziono żadnych projektów",
+          "required": "Wybierz projekt"
+        },
+        "role": {
+          "description": "To jest rola, jaką użytkownik otrzyma po dołączeniu do projektu. Rola określa, jakie działania mogą zostać podjęte i jakie informacje będą widoczne. <a href=\"https://www.openproject.org/docs/system-admin-guide/users-permissions/roles-permissions/#roles-and-permissions\" target=\"_blank\"> Dowiedz się więcej o rolach i uprawnieniach. </a>",
+          "label": "Rola w %{project}",
+          "next_button": "Następny",
+          "no_roles_found": "Nie znaleziono żadnych ról",
+          "required": "Wybierz rolę"
+        },
+        "success": {
+          "description": {
+            "group": "Grupa jest teraz częścią %{project}. Tymczasem możesz już planować z tą grupą i na przykład przypisać pakiety robocze.",
+            "placeholder": "Symbolu zastępczego można teraz użyć w %{project}. Tymczasem możesz już planować z tym użytkownikiem i na przykład przypisać pakiety robocze.",
+            "user": "Użytkownik może się teraz zalogować, aby uzyskać dostęp do %{project}.  Tymczasem możesz już planować z tym użytkownikiem i na przykład przypisać pakiety robocze."
+          },
+          "next_button": "Kontynuuj",
+          "title": "Zaproszono %{principal}!"
+        },
+        "summary": {
+          "next_button": "Wyślij zaproszenie"
+        },
+        "title": {
+          "Group": "grupa",
+          "PlaceholderUser": "użytkownik zastępczy",
+          "User": "użytkownik",
+          "invite": "Zaproś użytkownika",
+          "invite_principal_to_project": "Zaproś %{principal} do %{project}",
+          "invite_to_project": "Zaproś %{type} do %{project}"
+        },
+        "type": {
+          "group": {
+            "description": "Uprawnienia na podstawie przypisanej roli w wybranym projekcie",
+            "title": "Grupa"
+          },
+          "placeholder": {
+            "description": "Nie ma dostępu do projektu i nie są wysyłane żadne wiadomości e-mail.",
+            "description_no_ee": "Nie ma dostępu do projektu i żadne wiadomości e-mail nie są wysyłane. <br>Sprawdź <a href=\"%{eeHref}\" target=\"_blank\">wersję Enterprise</a>",
+            "title": "Użytkownik zastępczy",
+            "title_no_ee": "Użytkownik zastępczy (dodatek dostępny tylko w wersji Enterprise)"
+          },
+          "required": "Wybierz typ, który ma zostać zaproszony",
+          "user": {
+            "description": "Uprawnienia na podstawie przypisanej roli w wybranym projekcie",
+            "title": "Użytkownik"
+          }
+        }
+      },
+      "label_activate": "Aktywuj",
+      "label_activity_show_all": "Wyświetl wszystkie aktywności",
+      "label_activity_show_only_comments": "Wyświetl aktywności tylko z komentarzami",
+      "label_add_attachments": "Załącz pliki",
+      "label_add_column_after": "Dodaj kolumnę po",
+      "label_add_column_before": "Dodaj kolumnę przed",
+      "label_add_columns": "Dodaj kolumny",
+      "label_add_comment": "Dodaj komentarz",
+      "label_add_comment_title": "Skomentuj - wpisz @ by powiadomić inne osoby",
+      "label_add_description": "Dodaj opis do %{file}",
+      "label_add_row_after": "Dodaj wiersz po",
+      "label_add_row_before": "Dodaj wiersz przed",
+      "label_add_selected_columns": "Dodaj wybrane kolumny",
+      "label_added_by": "dodał",
+      "label_added_time_by": "Dodany przez <a href=\"%{authorLink}\">%{author}</a> o %{age}",
+      "label_ago": "dni temu",
+      "label_all": "wszystkie",
+      "label_all_uppercase": "Wszystkie",
+      "label_all_work_packages": "wszystkie pakiety pracy",
+      "label_and": "i",
+      "label_ascending": "Rosnąco",
+      "label_assignee": "Przypisana osoba",
+      "label_attachments": "Załączniki",
+      "label_author": "Autor: %{user}",
+      "label_avatar": "Awatar",
+      "label_between": "pomiędzy",
+      "label_board": "Tablica",
+      "label_board_locked": "Zablokowany",
+      "label_board_plural": "Tablice",
+      "label_board_sticky": "Przyklejony",
+      "label_cancel_comment": "Anuluj komentarz",
+      "label_change": "Zmień",
+      "label_children_derived_duration": "Wyprowadzony czas trwania elementów podrzędnych pakietu roboczego",
+      "label_closed_work_packages": "Zamknięte",
+      "label_collapse": "Zwiń",
+      "label_collapse_all": "Zwiń wszystko",
+      "label_collapsed": "zwinięty",
+      "label_columns": "Kolumny",
+      "label_comment": "Komentarz",
+      "label_committed_at": "%{committed_revision_link} w %{date}",
+      "label_committed_link": "rewizja przeprowadzona %{revision_identifier}",
+      "label_contains": "zawiera",
+      "label_create": "Utwórz",
+      "label_create_work_package": "Utwórz nowy pakiet roboczy",
+      "label_created_by": "Utworzony przez",
+      "label_created_on": "utworzono",
+      "label_current": "bieżący",
+      "label_custom_queries": "Prywatny",
+      "label_date": "Data",
+      "label_date_with_format": "Wprowadź %{date_attribute} w następującym formacie: %{format}",
+      "label_deactivate": "Wyłącz",
+      "label_default_queries": "Domyślnie",
+      "label_descending": "Malejąco",
+      "label_description": "Opis",
+      "label_details": "Szczegóły",
+      "label_display": "Wyświetlanie",
+      "label_drop_files": "Upuść pliki tutaj, aby je załączyć.",
+      "label_drop_folders_hint": "Nie można przesłać folderów jako załącznika. Wybierz pojedyncze pliki.",
+      "label_drop_or_click_files": "Upuść pliki tutaj lub kliknij, aby je załączyć.",
+      "label_edit_comment": "Edytuj komentarz",
+      "label_edit_status": "Edytuj status zadania",
+      "label_email": "Adres e-mail",
+      "label_equals": "jest",
+      "label_expand": "Rozwiń",
+      "label_expand_all": "Rozwiń wszystkie",
+      "label_expand_project_menu": "Rozwiń menu projektu",
+      "label_expanded": "rozwinięty",
+      "label_export": "Eksportuj",
+      "label_export_preparing": "Eksport jest przygotowywany i zostanie wkrótce pobrany.",
+      "label_favorites": "Ulubione",
+      "label_filename": "Plik",
+      "label_files_to_upload": "Pliki te zostaną przesłane:",
+      "label_filesize": "Rozmiar",
+      "label_formattable_attachment_hint": "Aby załączyć pliki, przeciągnij je tutaj lub wklej ze schowka.",
+      "label_general": "Ogólne",
+      "label_global_queries": "Publiczny",
+      "label_greater_or_equal": "≥",
+      "label_group": "Grupa",
+      "label_group_by": "Grupuj według",
+      "label_group_plural": "Grupy",
+      "label_hide_attributes": "Pokaż mniej",
+      "label_hide_column": "Ukryj kolumnę",
+      "label_hide_project_menu": "Zwiń menu projektu",
+      "label_hour": "godzina",
+      "label_hours": "godziny",
+      "label_import": "Importuj",
+      "label_in": "w",
+      "label_in_less_than": "w mniej niż",
+      "label_in_more_than": "w ponad",
+      "label_incoming_emails": "Przychodzące e-maile",
+      "label_information_plural": "Informacje",
+      "label_invalid": "Niewłaściwy",
+      "label_last_updated_on": "Ostatnia aktualizacja",
+      "label_latest_activity": "Ostatnia aktywność",
+      "label_learn_more_link": "Dowiedz się więcej",
+      "label_less_or_equal": "≤",
+      "label_less_than_ago": "mniej niż dni temu",
+      "label_loading": "Ładowanie...",
+      "label_mail_notification": "Powiadomienia e-mail",
+      "label_manage_columns": "Zarządzaj kolumnami i zmieniaj ich kolejność",
+      "label_me": "ja",
+      "label_meeting_agenda": "Plan spotkania",
+      "label_meeting_minutes": "Protokół ze spotkania",
+      "label_meetings": "Spotkania",
+      "label_menu_collapse": "Zwiń",
+      "label_menu_expand": "Rozwiń",
+      "label_moderate_comment": "Moderuj komentarz",
+      "label_more_than_ago": "Więcej niż dni temu",
+      "label_next": "Następny",
+      "label_no_color": "Bez koloru",
+      "label_no_data": "Brak danych do pokazania",
+      "label_no_date": "brak daty",
+      "label_no_due_date": "brak daty ukończenia",
+      "label_no_start_date": "brak daty rozpoczęcia",
+      "label_no_value": "Brak wartości",
+      "label_none": "Brak",
+      "label_not_contains": "nie zawierają",
+      "label_not_equals": "nie jest",
+      "label_on": "wł",
+      "label_open_context_menu": "Otwórz menu kontekstowe",
+      "label_open_menu": "Otwórz menu",
+      "label_open_work_packages": "Otwarte",
+      "label_password": "Hasło",
+      "label_per_page": "Na stronie:",
+      "label_please_wait": "Zaczekaj",
+      "label_press_enter_to_save": "Aby zapisać, naciśnij Enter.",
+      "label_preview": "Podgląd",
+      "label_previous": "Poprzedni",
+      "label_project": "Projekt",
+      "label_project_list": "Listy projektów",
+      "label_project_plural": "Projekty",
+      "label_public_query": "Publiczny",
+      "label_quote_comment": "Cytuj komentarz",
+      "label_recent": "Najnowsze",
+      "label_rejected_files": "Pliki nie mogą być przesłane:",
+      "label_rejected_files_reason": "Wymienione pliki nie mogą być przesłane gdyż ich rozmiar jest większy niż %{maximumFilesize}",
+      "label_remove": "Usuń",
+      "label_remove_all_files": "Usuń wszystkie pliki",
+      "label_remove_column": "Usuń kolumnę",
+      "label_remove_columns": "Usuń zaznaczone kolumny",
+      "label_remove_file": "Usuń %{fileName}",
+      "label_remove_row": "Usuń wiersz",
+      "label_remove_watcher": "Usuń obserwującego %{name}",
+      "label_report": "Raport",
+      "label_repository_plural": "Repozytoria",
+      "label_reset": "Reset",
+      "label_save_as": "Zapisz jako",
+      "label_search_columns": "Wyszukaj kolumnę",
+      "label_select_project": "Wybierz projekt",
+      "label_select_watcher": "Wybierz obserwatora...",
+      "label_selected_filter_list": "Wybrane filtry",
+      "label_show_attributes": "Pokaż wszystkie atrybuty",
+      "label_show_in_menu": "Pokaż widok w menu",
+      "label_sort_by": "Sortuj według",
+      "label_sort_higher": "Przenieś wyżej",
+      "label_sort_lower": "Przenieś niżej",
+      "label_sorted_by": "posortowane według",
+      "label_sorting": "Sortowanie",
+      "label_spent_time": "Czas pracy",
+      "label_star_query": "Dodane do ulubionych",
+      "label_starred_queries": "Ulubione",
+      "label_subject": "Temat",
+      "label_sum": "Suma",
+      "label_sum_for": "Suma dla",
+      "label_this_week": "ten tydzień",
+      "label_time_entry_plural": "Czas pracy",
+      "label_today": "Dzisiaj",
+      "label_total_amount": "Łącznie: %{amount}",
+      "label_total_progress": "%{percent}% Całkowitego postępu",
+      "label_total_sum": "Suma całkowita",
+      "label_unwatch": "Nie obserwuj",
+      "label_unwatch_work_package": "Wyłącz obserwowanie zadania",
+      "label_up": "W górę",
+      "label_updated_on": "zaktualizowany",
+      "label_upload_counter": "%{done} z %{count} plików ukończono",
+      "label_upload_notification": "Przesyłanie plików...",
+      "label_uploaded_by": "Przesłane przez",
+      "label_user_plural": "Użytkownicy",
+      "label_validation_error": "Zadania nie mogą być zapisane z powodu błędów:",
+      "label_value_derived_from_children": "(wartość wyprowadzana z elementów podrzędnych)",
+      "label_version_plural": "Wersje",
+      "label_view_has_changed": "Ten widok zawiera niezapisane zmiany. Kliknij, aby je zapisać.",
+      "label_visibility_settings": "Ustawienia widoczności",
+      "label_wait": "Proszę poczekaj na zakończenie konfiguracji...",
+      "label_warning": "Ostrzeżenie",
+      "label_watch": "Obserwuj",
+      "label_watch_work_package": "Obserwuj zadanie",
+      "label_watcher_added_successfully": "Obserwator dodany pomyślnie!",
+      "label_watcher_deleted_successfully": "Obserwator usunięty pomyślnie!",
+      "label_work_package": "Zadanie",
+      "label_work_package_context_menu": "Menu kontekstowe pakietu roboczego",
+      "label_work_package_details_you_are_here": "Jesteś na karcie %{tab}, %{type} %{subject}.",
+      "label_work_package_parent": "Nadrzędny pakiet roboczy",
+      "label_work_package_plural": "Pakiety robocze",
+      "label_work_package_upload_notification": "Wgrywanie plików dla Zestawu Zadań #%{id}: %{subject}",
+      "label_wp_id_added_by": "#%{id}, dodane przez %{author}",
+      "modals": {
+        "button_apply": "Zastosuj",
+        "button_cancel": "Anuluj",
+        "button_delete": "Usuń",
+        "button_save": "Zapisz",
+        "button_submit": "Prześlij",
+        "destroy_time_entry": {
+          "text": "Na pewno chcesz skasować?",
+          "title": "Potwierdź usunięcie wpisu"
+        },
+        "destroy_work_package": {
+          "bulk_text": "Czy na pewno chcesz usunąć %{label}?",
+          "confirm_deletion_children": "Potwierdzam, że WSZYSTKIE elementy potomne pakietów roboczych z listy będą rekurencyjnie usuwane.",
+          "deletes_children": "Wszystkie pakiety podrzędne i ich elementy potomne również będą rekursywnie usuwane.",
+          "has_children": "Pakiet roboczy zawiera %{childUnits}:",
+          "single_text": "Czy na pewno chcesz usunąć pakiet roboczy",
+          "title": "Potwierdź usunięcie %{label}"
+        },
+        "form_submit": {
+          "text": "Czy na pewno chcesz wykonać tę akcję?",
+          "title": "Potwierdź, aby kontynuować"
+        },
+        "label_delete_page": "Usuń bieżącą stronę",
+        "label_name": "Nazwa"
+      },
+      "myTimeTracking": {
+        "noSpecificTime": "Brak określonego czasu"
+      },
+      "my_page": {
+        "label": "Moja strona"
+      },
+      "notice_bad_request": "Nieprawidłowe żądanie.",
+      "notice_job_started": "zadanie rozpoczęte.",
+      "notice_no_results_to_display": "Brak widocznych wyników do wyświetlenia.",
+      "notice_successful_create": "Tworzenie zakończone sukcesem.",
+      "notice_successful_delete": "Usuwanie zakończone sukcesem.",
+      "notice_successful_update": "Aktualizacja zakończona sukcesem.",
+      "notifications": {
+        "center": {
+          "and_more_users": {
+            "few": "i %{count} inne",
+            "many": "i %{count} inne",
+            "one": "i 1 inny",
+            "other": "i %{count} innych"
+          },
+          "empty_state": {
+            "no_notification": "Wygląda na to, że jesteś już na bieżąco.",
+            "no_notification_for_filter": "Wygląda na to, że wszystko jest na bieżąco dla tego filtru.",
+            "no_notification_with_current_filter": "Wygląda na to, że wszystko jest na bieżąco dla filtru: %{filter}.",
+            "no_notification_with_current_project_filter": "Wygląda na to, że wszystko jest na bieżąco w wybranym projekcie.",
+            "no_selection": "Kliknij powiadomienie, aby wyświetlić wszystkie szczegóły aktywności."
+          },
+          "label_actor_and": "i",
+          "mark_all_read": "Oznacz wszystko jako przeczytane",
+          "mark_all_read_confirmation": "Spowoduje to oznaczenie wszystkich powiadomień w tym widoku jako przeczytanych. Czy na pewno chcesz to zrobić?",
+          "mark_as_read": "Oznacz jako przeczytane",
+          "new_notifications": {
+            "link_text": "Kliknij tutaj, aby je załadować.",
+            "message": "Masz nowe powiadomienia."
+          },
+          "no_results": {
+            "at_all": "Nowe powiadomienia pojawią się tutaj, gdy pojawi się aktywność, która dotyczy ciebie.",
+            "with_current_filter": "Obecnie brak powiadomień w tym widoku"
+          },
+          "text_update_date_by": "%{date} przez",
+          "total_count_warning": "Wyświetlono najnowsze powiadomienia: %{newest_count}. Nie wyświetlono %{more_count}."
+        },
+        "date_alerts": {
+          "milestone_date": "Data  kamienia milowego",
+          "overdue": "Przekroczony termin",
+          "overdue_since": "od %{difference_in_days}.",
+          "property_is": "jest za %{difference_in_days}.",
+          "property_is_deleted": "została usunięta.",
+          "property_today": "jest dzisiaj.",
+          "property_was": "była %{difference_in_days} temu."
+        },
+        "no_unread": "Brak nieprzeczytanych powiadomień",
+        "reasons": {
+          "assigned": "Przypisana osoba",
+          "commented": "Skomentował",
+          "created": "Utworzono",
+          "dateAlert": "Alert dotyczący daty",
+          "mentioned": "Wzmianka",
+          "prioritized": "Ma priorytet",
+          "processed": "Przetworzono",
+          "reminder": "Przypomnienie",
+          "responsible": "Osoba odpowiedzialna",
+          "scheduled": "Zaplanowany",
+          "shared": "Udostępniono",
+          "watched": "Obserwator"
+        },
+        "reminders": {
+          "note": "Uwaga: „%{note}”"
+        },
+        "settings": {
+          "change_notification_settings": "Możesz zmodyfikować <a target=\"_blank\" href=\"%{url}\">ustawienia powiadomień</a>, aby upewnić się, że nigdy nie przegapisz ważnej aktualizacji.",
+          "global": {
+            "date_alerts": {
+              "description": "Automatyczne powiadomienia, gdy zbliżają się ważne daty otwartych pakietów roboczych, do których Cię zaangażowano (jako osobę: przypisaną, odpowiedzialną lub obserwatora)",
+              "title": "Alerty dotyczące dat"
+            },
+            "delayed": {
+              "description": "Dodatkowe powiadomienia dotyczące działań we wszystkich projektach",
+              "title": "Brak uczestnictwa"
+            },
+            "immediately": {
+              "description": "Powiadomienia dotyczące wszystkich działań w pakietach roboczych, do których Cię zaangażowano (jako osobę przypisaną, odpowiedzialną lub obserwator)",
+              "title": "Uczestnictwo"
+            },
+            "overdue": "Po upływie terminu"
+          },
+          "notify_me": "Powiadom mnie",
+          "project_specific": {
+            "add": "Dodaj ustawienie dla projektu",
+            "already_selected": "Ten projekt jest już wybrany",
+            "description": "Te ustawienia dla danego projektu zastępują powyższe ustawienia domyślne.",
+            "remove": "Usuń ustawienia projektu",
+            "title": "Ustawienia powiadomień dla danego projektu"
+          },
+          "reasons": {
+            "assignee": "Przypisany do",
+            "mentioned": {
+              "description": "Otrzymuj powiadomienie za każdym razem, gdy pojawi się o tobie wzmianka gdziekolwiek",
+              "title": "Wzmianka"
+            },
+            "responsible": "Osoba odpowiedzialna",
+            "shared": "Udostępniono",
+            "watched": "Obserwator",
+            "work_package_commented": "Wszystkie nowe komentarze",
+            "work_package_created": "Nowe pakiety robocze",
+            "work_package_prioritized": "Wszystkie zmiany priorytetów",
+            "work_package_processed": "Wszystkie zmiany statusu",
+            "work_package_scheduled": "Wszystkie zmiany daty"
+          },
+          "reminders": {
+            "no_notification": "Bez powiadomienia",
+            "timeframes": {
+              "normal": {
+                "P1D": "1 dzień przed",
+                "P3D": "3 dni przed",
+                "P7D": "1 tydzień przed",
+                "PT0S": "tego samego dnia"
+              },
+              "overdue": {
+                "P1D": "codziennie",
+                "P3D": "co 3 dni",
+                "P7D": "co tydzień"
+              }
+            }
+          },
+          "title": "Ustawienia powiadomień"
+        },
+        "title": "Powiadomienia"
+      },
+      "onboarding": {
+        "buttons": {
+          "got_it": "OK",
+          "next": "Następny",
+          "skip": "Omiń"
+        },
+        "steps": {
+          "backlogs": {
+            "overview": "Zarządzaj swoją pracą w widoku <b>backlogs</b>.",
+            "sprints": "Po prawej stronie znajduje się backlog produktu i backlog usterek, a po lewej stronie znajdują się odpowiednie sprinty. Tutaj można tworzyć <b>wydarzenia, wpisy użytkownika i usterki</b>, nadawać priorytety metodą przeciągania i upuszczania oraz dodawać je do sprintu.",
+            "task_board": "Panel zadań przedstawia <b>postęp tego sprintu</b>. Dodaj nowe zadania lub przeszkody, klikając ikonę (+) obok wpisu użytkownika. <br>Stan można zaktualizować metodą przeciągania i upuszczania.",
+            "task_board_arrow": "Aby zobaczyć swój <b>panel zadań</b>, otwórz menu rozwijane sprint...",
+            "task_board_select": "...i wybierz wpis <b>panel zadań</b>."
+          },
+          "boards": {
+            "add": "Kliknij ikonę plus (+), aby <b>utworzyć nową kartę</b> lub <b>dodać istniejącą kartę</b> do listy na tablicy.",
+            "drag": "Przeciągaj i upuszczaj swoje karty w obrębie danej listy, aby zmienić ich kolejność lub przenieść je do innej listy. <br> Możesz kliknąć ikonę info (i) w prawym górnym rogu lub kliknąć dwukrotnie na karcie, aby wyświetlić jej szczegóły.",
+            "lists_basic": "Tutaj możesz utworzyć wiele list (kolumn) w swojej tablicy zwinnej.",
+            "lists_kanban": "Tutaj możesz utworzyć wiele list (kolumn) w jednym widoku tablicy. Ta funkcja pozwala ci na przykład na utworzenie <b>tablicy Kanban</b>.",
+            "overview": "Wybierz <b>tablice</b>, aby zmienić widok i zarządzać projektem za pomocą widoku tablic."
+          },
+          "help_menu": "Menu Pomoc (?) zawiera <b>dodatkowe zasoby pomocy</b>. Tutaj znajdziesz przewodnik użytkownika, pomocne filmy instruktażowe i nie tylko. <br> Życzymy miłej pracy z OpenProject!",
+          "members": "Zaproś nowych <b>członków</b> do swojego projektu.",
+          "quick_add_button": "Kliknij ikonę plus (+) w nawigacji nagłówka, aby <b>utworzyć nowy projekt</b> lub <b>zaprosić współpracowników</b>.",
+          "sidebar_arrow": "Użyj strzałki powrotu w lewym górnym rogu, aby wrócić do <b>menu głównego</b> projektu.",
+          "team_planner": {
+            "add_assignee": "Aby rozpocząć, dodaj przypisane osoby do planisty zespołu.",
+            "add_existing": "Wyszukaj istniejące pakiety robocze i przeciągnij je do planisty zespołu, aby natychmiast przypisać je członkowi zespołu oraz określić daty rozpoczęcia i zakończenia.",
+            "calendar": "Tygodniowa lub dwutygodniowa tablica planowania wyświetla wszystkie pakiety robocze przypisane członkom zespołu.",
+            "card": "Przeciągaj pakiety robocze w poziomie, aby przesuwać je wstecz lub do przodu w czasie, przeciągaj krawędzie, aby zmieniać daty rozpoczęcia i zakończenia, a nawet przeciągaj je w pionie do innego wiersza, aby przypisać je innemu członkowi zespołu.",
+            "overview": "Planista zespołu umożliwia wizualne przypisywanie zadań członkom zespołu i uzyskanie informacji o tym, kto nad czym pracuje."
+          },
+          "welcome": "Poświęć trzy minuty na zapoznanie się z <b>najważniejszymi funkcjami</b>. \n <br> Zalecamy wykonanie tych kroków do końca. Zwiedzanie można w każdej chwili zacząć od nowa.",
+          "wiki": "W <b>wiki</b> możesz dokumentować wiedzę i dzielić się nią z zespołem.",
+          "wp": {
+            "back_button": "Użyj strzałki powrotu w lewym górnym rogu, aby wyjść i powrócić do listy pakietów roboczych.",
+            "create_button": "Przycisk <b>+ Utwórz</b> doda nowy pakiet roboczy do twojego projektu.",
+            "full_view": "W widoku <b>szczegółów pakietu roboczego</b> znajdziesz wszystkie istotne informacje dotyczące danego pakietu roboczego, takie jak opis, stan i priorytet, aktywność, zależności oraz komentarze.",
+            "gantt_menu": "Bez trudu twórz harmonogramy i osie czasu projektów, korzystając z modułu wykresu Gantta.",
+            "list": "Ten przegląd pakietu <b>roboczego</b> zapewnia listę wszystkich zadań w twoim projekcie, takich jak zadania robocze, kamienie milowe, etapy i inne. <br> Pakiety robocze możesz tworzyć i edytować bezpośrednio w tym widoku. Aby wyświetlić szczegóły danego pakietu roboczego, po prostu kliknij dwukrotnie jego wiersz.",
+            "timeline": "Tutaj możesz <b>edytować plan projektu.</b>, tworzyć nowe pakiety robocze, takie jak zadania robocze, kamienie milowe i inne oraz <b>dodawać  zależności</b>. Wszyscy członkowie zespołu mogą w każdej chwili wyświetlić i zaktualizować najnowszy plan.",
+            "toggler": "Teraz przyjrzyjmy się sekcji <b>pakiet roboczy</b>, która zapewnia bardziej szczegółowy widok twojej pracy."
+          }
+        }
+      },
+      "open_project_storage_modal": {
+        "waiting_subtitle": {
+          "network_off": "Występuje problem z siecią.",
+          "network_on": "Sieć znów działa. Staramy się."
+        },
+        "waiting_title": {
+          "timeout": "Limit czasu"
+        }
+      },
+      "overviews": {
+        "label": "Przegląd"
+      },
+      "pagination": {
+        "no_other_page": "Jesteś na jedynej stronie.",
+        "pages": {
+          "next": "Do następnej strony",
+          "previous": "Wróć do poprzedniej strony"
+        }
+      },
+      "password_confirmation": {
+        "field_description": "Musisz wprowadzić hasło do twojego konta aby potwierdzić te zmiany.",
+        "title": "Potwierdź hasło aby kontynuować"
+      },
+      "placeholders": {
+        "default": "-",
+        "description": "Opis: Kliknij, aby edytować...",
+        "relation_description": "Kliknij, aby dodać opis do tej relacji",
+        "selection": "Proszę wybrać",
+        "subject": "Wpisz tutaj temat"
+      },
+      "project": {
+        "autocompleter": {
+          "label": "Autouzupełnianie projektu"
+        },
+        "click_to_switch_to_project": "Projekt: %{projectname}",
+        "confirm_template_load": "Przełączenie szablonu spowoduje ponowne załadowanie strony i utracisz wszystkie dane wprowadzone do tego formularza. Kontynuować?",
+        "context": "Kontekst projektu",
+        "copy": {
+          "copy_options": "Opcje kopiowania"
+        },
+        "no_template_selected": "(Brak)",
+        "not_available": "Projekt niedostępny",
+        "required_outside_context": "Wybierz projekt, w którym chcesz utworzyć pakiet roboczy, aby zobaczyć wszystkie atrybuty. Możesz wybrać tylko projekty, które mają aktywowany powyższy typ.\n",
+        "use_template": "Użyj szablonu"
+      },
+      "project_menu_details": "Szczegóły",
+      "relation_buttons": {
+        "abort": "Przerwij",
+        "add_existing": "Dodaj istniejącą",
+        "add_existing_child": "Dodaj element podrzędny",
+        "add_existing_relation": "Dodaj istniejącą relację",
+        "add_new_child": "Utwórz nowy podrzędny",
+        "add_new_relation": "Utwórz nową relację",
+        "add_parent": "Dodaj do istniejącego nadrzędnego",
+        "add_predecessor": "Dodaj poprzednika",
+        "add_successor": "Dodaj następcę",
+        "change_parent": "Zmień nadrzędny",
+        "create_new": "Utwórz nową",
+        "group_by_relation_type": "Grupuj wg typu relacji",
+        "group_by_wp_type": "Grupuj wg typu zadań",
+        "hierarchy_indent": "Wcinaj hierarchię",
+        "hierarchy_outdent": "Wsuwaj hierarchię",
+        "remove": "Usuń relację",
+        "remove_child": "Usuń podrzędny",
+        "remove_parent": "Usuń nadrzędny",
+        "save": "Zapisz relację",
+        "set_parent": "Ustaw element nadrzędny",
+        "show_relations": "Pokaż relacje",
+        "toggle_description": "Przełącz opis powiązania",
+        "update_description": "Ustaw bądź zaktualizuj opis tej relacji",
+        "update_relation": "Kliknij, aby zmienić typ powiązania"
+      },
+      "relation_labels": {
+        "blocked": "Blokowany przez",
+        "blocks": "Bloki",
+        "child": "Element podrzędny",
+        "children": "Dzieci",
+        "duplicated": "Zduplikowany przez",
+        "duplicates": "Duplikaty",
+        "follows": "Następuje po",
+        "includes": "Zawiera",
+        "parent": "Rodzic",
+        "partof": "Część",
+        "precedes": "Poprzedza",
+        "relates": "Powiązany z",
+        "relation_type": "typ relacji",
+        "required": "Wymagane przez",
+        "requires": "Wymaga"
+      },
+      "relations": {
+        "empty": "Brak relacji",
+        "remove": "Usuń relację"
+      },
+      "relations_autocomplete": {
+        "parent_placeholder": "Wybierz nowy element nadrzędny albo naciśnij klawisz Escape, aby anulować.",
+        "placeholder": "Wpisz szukaną frazę"
+      },
+      "relations_hierarchy": {
+        "children_headline": "Dzieci",
+        "hierarchy_headline": "Hierarchia",
+        "parent_headline": "Rodzic"
+      },
+      "reminders": {
+        "settings": {
+          "alerts": {
+            "document_added": "Dodanie dokumentu",
+            "explanation": "Dzisiaj powiadomienia są ograniczone do pakietów roboczych. Możesz nadal otrzymywać powiadomienia e-mail dla tych zdarzeń, dopóki nie zostaną one zawarte w powiadomieniach:\n",
+            "forum_messages": "Nowe wiadomości na forum",
+            "membership_added": "Dodanie członkostwa",
+            "membership_updated": "Aktualizacja członkostwa",
+            "news_added": "Wiadomość dodana",
+            "news_commented": "Komentarz do nowości",
+            "title": "Powiadomienia e-mail dla innych elementów (które nie są pakietami roboczymi)",
+            "wiki_page_added": "Dodano stronę wiki",
+            "wiki_page_updated": "Zaktualizowano stronę wiki"
+          },
+          "daily": {
+            "add_time": "Dodaj czas",
+            "enable": "Włącz codzienne przypomnienia e-mail",
+            "explanation": "Otrzymasz te przypomnienia tylko dla nieprzeczytanych powiadomień i tylko w określonych przez Ciebie godzinach. %{no_time_zone}",
+            "no_time_zone": "Dopóki nie skonfigurujesz strefy czasowej dla swojego konta, czas będzie interpretowany jako UTC.",
+            "time_label": "Czas %{counter}:",
+            "title": "Wyślij mi codzienne przypomnienia e-mail dla nieprzeczytanych powiadomień"
+          },
+          "immediate": {
+            "mentioned": "Natychmiast, gdy pojawi się @wzmianka o mnie",
+            "personal_reminder": "Natychmiast po otrzymaniu osobistego przypomnienia",
+            "title": "Wyślij mi przypomnienie e-mail"
+          },
+          "pause": {
+            "first_day": "Pierwszy dzień",
+            "label": "Tymczasowo wstrzymuj codzienne przypomnienia e-mail",
+            "last_day": "Ostatni dzień"
+          },
+          "title": "Przypomnienia e-mail",
+          "workdays": {
+            "title": "Otrzymuj przypomnienia e-mail w tych dniach"
+          }
+        }
+      },
+      "reporting_engine": {
+        "label_remove": "Usuń",
+        "label_response_error": "Wystąpił błąd podczas próby połączenia z serwerem."
+      },
+      "repositories": {
+        "select_branch": "Wybierz gałąź",
+        "select_tag": "Wybierz tag"
+      },
+      "revit": {
+        "revit_add_in": "Dodatek Revit",
+        "revit_add_in_settings": "Ustawienia dodatku Revit"
+      },
+      "sharing": {
+        "selected_count": "Wybrano %{count}",
+        "selection": {
+          "mixed": "Mieszane"
+        },
+        "share": "Udostępnij"
+      },
+      "sort": {
+        "activate_asc": "aktywuj, aby zastosować sortowanie rosnące",
+        "activate_dsc": "aktywuj, aby zastosować sortowanie malejące",
+        "activate_no": "aktywuj, aby usunąć sortowanie",
+        "sorted_asc": "Zastosowano sortowanie rosnące, ",
+        "sorted_dsc": "Zastosowano sortowanie malejące, ",
+        "sorted_no": "Nie zastosowano sortowania, ",
+        "sorting_disabled": "sortowanie jest wyłączone"
+      },
+      "spot": {
+        "drop_modal": {
+          "close": "Zamknij okno modalne",
+          "focus_grab": "To jest kotwica fokusu okien modalnych. Naciśnij klawisze Shift+Tab, aby wrócić do elementu wyzwalającego okna modalne."
+        },
+        "filter_chip": {
+          "remove": "Usuń"
+        }
+      },
+      "storages": {
+        "authentication_error": "Uwierzytelnianie przy użyciu %{storageType} nie powiodło się",
+        "choose_location": "Wybierz lokalizację",
+        "drop_files": "Upuść pliki tutaj, aby je przesłać do %{name}.",
+        "drop_or_click_files": "Upuść pliki tutaj lub kliknij, aby je przesłać do %{name}.",
+        "file_links": {
+          "already_linked_directory": "Ten katalog jest już powiązany z tym pakietem roboczym.",
+          "already_linked_file": "Ten plik jest już powiązany z tym pakietem roboczym.",
+          "download": "Pobierz %{fileName}",
+          "empty": "Obecnie nie ma żadnych powiązanych plików z tym pakietem roboczym. Rozpocznij łączenie plików z poniższą czynnością lub w ciągu %{storageType}.\n",
+          "link_uploaded_file_error": "Wystąpił błąd podczas łączenia niedawno przesłanego pliku '%{fileName}' z pakietem roboczym %{workPackageId}.\n",
+          "open": "Otwórz plik w pamięci",
+          "open_location": "Otwórz plik w lokalizacji",
+          "remove": "Usuń link do pliku",
+          "remove_confirmation": "Czy na pewno chcesz odłączyć plik od tego pakietu roboczego? Odłączenie nie ma wpływu na oryginalny plik i usuwa tylko połączenie z tym pakietem roboczym.\n",
+          "remove_short": "Usuń link",
+          "select": "Wybierz pliki",
+          "select_all": "Zaznacz wszystkie",
+          "selection": {
+            "few": "Połącz %{count} pliki",
+            "many": "Połącz %{count} plików",
+            "one": "Połącz 1 plik",
+            "other": "Połącz %{count} plików",
+            "zero": "Wybierz pliki do połączenia"
+          },
+          "success_create": {
+            "few": "Pomyślnie utworzono %{count} połączenia plików.",
+            "many": "Pomyślnie utworzono %{count} połączeń plików.",
+            "one": "Pomyślnie utworzono 1 połączenie plików.",
+            "other": "Pomyślnie utworzono %{count} połączeń plików."
+          },
+          "tooltip": {
+            "not_found": "Nie można znaleźć tego pliku.",
+            "not_logged_in": "Zaloguj się do magazynu, aby uzyskać dostęp do tego pliku.",
+            "view_not_allowed": "Nie masz uprawnień do wyświetlania tego pliku."
+          },
+          "upload_error": {
+            "403": "Nie można przesłać pliku (%{fileName}) ze względu na ograniczenia systemu. Aby uzyskać więcej informacji, skontaktuj się z administratorem.\n",
+            "413": "Plik (%{fileName}) ma rozmiar większy niż ten, który OpenProject może przesłać do %{storageType}. Możesz najpierw przesłać go bezpośrednio do %{storageType} , a następnie powiązać plik.\n",
+            "507": "Plik (%{fileName}) jest większy niż dozwolony limit przechowywania. Aby zmodyfikować ten limit, skontaktuj się z administratorem.\n",
+            "default": "Nie można przesłać pliku (%{fileName}).\n",
+            "detail": {
+              "nextcloud": "Sprawdź, czy zainstalowana jest najnowsza wersja aplikacji Nextcloud „OpenProject Integration” i skontaktuj się z administratorem, aby uzyskać więcej informacji.\n"
+            }
+          }
+        },
+        "files": {
+          "already_existing_body": "Plik o nazwie „%{fileName}” już istnieje w lokalizacji, do której próbujesz go przesłać. Co chcesz zrobić?\n",
+          "already_existing_header": "Ten plik już istnieje",
+          "cannot_create_folder": "Nie udało się utworzyć folderu. Unikaj używania znaków specjalnych i symboli oraz upewnij się, że folder jeszcze nie istnieje.",
+          "directory_not_writeable": "Nie masz uprawnień do dodawania plików do tego folderu.",
+          "dragging_folder": "Przesyłanie do %{storageType} nie obsługuje folderów.",
+          "dragging_many_files": "Przesyłanie do %{storageType} obsługuje tylko jeden plik na raz.",
+          "empty_folder": "Ten folder jest pusty.",
+          "empty_folder_location_hint": "Kliknij poniższy przycisk, aby przesłać plik do tej lokalizacji.",
+          "file_not_selectable_location": "Wybranie pliku nie jest możliwe w procesie wyboru lokalizacji.",
+          "managed_project_folder_no_access": "Nie masz jeszcze dostępu do zarządzanego folderu projektu. Poczekaj chwilę i spróbuj ponownie.\n",
+          "managed_project_folder_not_available": "Jeszcze nie znaleziono automatycznie zarządzanego folderu projektu. Zaczekaj chwilę, odśwież stronę, aby pobrać najnowsze dane i spróbuj ponownie.\n",
+          "project_folder_no_access": "Nie masz dostępu do folderu projektu. Skontaktuj się z administratorem, aby uzyskać dostęp lub prześlij plik w innej lokalizacji.\n",
+          "upload_keep_both": "Zachowaj oba",
+          "upload_replace": "Zastąp"
+        },
+        "information": {
+          "authentication_error": "Żądania do %{storageType} nie można uwierzytelnić, to jest błąd.",
+          "connection_error": "Niektóre ustawienia %{storageType} nie działają. Skontaktuj się z administratorem %{storageType}.\n",
+          "live_data_error": "Błąd podczas pobierania szczegółów pliku",
+          "live_data_error_description": "Niektóre dane %{storageType} nie mogą zostać pobrane. Spróbuj odświeżyć tę stronę lub skontaktuj się z administratorem %{storageType}.\n",
+          "no_file_links": "Aby połączyć pliki z tym pakietem roboczym, zrób to za pośrednictwem %{storageType}.",
+          "not_logged_in": "Aby dodać link, zobacz lub wgraj pliki związane z tym pakietem roboczym, zaloguj się do %{storageType}.\n",
+          "suggest_logout": "Możesz spróbować wylogować się, a następnie zalogować, aby naprawić ten problem.",
+          "suggest_relink": "Możesz spróbować, czy ponowne powiązanie Twojego konta za pomocą poniższego przycisku logowania rozwiązuje ten problem."
+        },
+        "link_existing_files": "Połącz istniejące pliki",
+        "link_files_in_storage": "Połącz pliki w %{storageType}",
+        "login": "%{storageType} logowanie",
+        "login_to": "Zaloguj się do %{storageType}",
+        "new_folder": "Nowy folder",
+        "no_connection": "Brak połączenia %{storageType}",
+        "open_storage": "Otwórz %{storageType}",
+        "select_location": "Zaznacz lokalizację",
+        "types": {
+          "default": "Magazyn danych",
+          "nextcloud": "Nextcloud",
+          "one_drive": "OneDrive/SharePoint"
+        },
+        "upload_files": "Wczytaj plik"
+      },
+      "team_planner": {
+        "add_assignee": "Osoba przydzielona",
+        "add_existing": "Dodaj istniejącego",
+        "add_existing_title": "Dodaj istniejące pakiety robocze",
+        "cannot_drag_here": "Nie można usunąć pakietu roboczego ze względu na uprawnienia lub ograniczenia edycji.",
+        "cannot_drag_to_non_working_day": "Ten pakiet roboczy nie może się rozpocząć/skończyć w dniu wolnym od pracy.",
+        "create_label": "Planista zespołu",
+        "create_title": "Utwórz nowego planistę zespołu",
+        "drag_here_to_remove": "Przeciągnij tutaj, aby usunąć przypisaną osobę oraz daty rozpoczęcia i zakończenia.",
+        "eight_weeks": "8 tygodni",
+        "four_weeks": "4 tygodnie",
+        "modify": {
+          "errors": {
+            "fallback": "Tego pakietu roboczego nie można edytować.",
+            "permission_denied": "Nie masz uprawnień niezbędnych do zmodyfikowania tego elementu."
+          }
+        },
+        "no_data": "Aby skonfigurować planistę zespołu, dodaj przypisane osoby.",
+        "one_week": "1 tydzień",
+        "quick_add": {
+          "empty_state": "Użyj pola wyszukiwania w celu znalezienia pakietów roboczych i przeciągnięcia ich do planisty, aby przypisać je do kogoś i zdefiniować daty rozpoczęcia i zakończenia.",
+          "search_placeholder": "Wyszukaj..."
+        },
+        "remove_assignee": "Usuń osobę przypisaną",
+        "today": "Dzisiaj",
+        "two_weeks": "2 tygodnie",
+        "unsaved_title": "Planista zespołu bez nazwy",
+        "work_week": "Tydzień roboczy"
+      },
+      "text_are_you_sure": "Jesteś pewny?",
+      "text_data_lost": "Wszystkie wprowadzone dane zostaną utracone.",
+      "text_query_destroy_confirmation": "Czy na pewno chcesz usunąć zaznaczony widok?",
+      "text_user_wrote": "%{value} napisał(a):",
+      "text_work_packages_destroy_confirmation": "Czy na pewno chcesz usunąć wybrane pakiety robocze?",
+      "time_entry": {
+        "stop": "Zatrzymaj",
+        "title": "Rejestruj czas pracy",
+        "tracking": "Zarządzanie czasem",
+        "work_package_required": "Wymaga wybrania najpierw pakietu roboczego."
+      },
+      "timer": {
+        "button_stop": "Zatrzymaj bieżące odliczanie",
+        "start_new_timer": "Rozpocznij nowe odliczanie",
+        "timer_already_running": "Aby rozpocząć nowe odliczanie, musisz najpierw zatrzymać bieżące odliczanie:",
+        "timer_already_stopped": "Brak aktywnego odliczania czasu dla tego pakietu roboczego, czy zatrzymano je w innym oknie?",
+        "tracking_time": "Czas śledzenia"
+      },
+      "tl_toolbar": {
+        "outlines": "Poziom hierarchii",
+        "zooms": "Powiększenie"
+      },
+      "toolbar": {
+        "filter": "Filtr",
+        "search_query_label": "Wyszukaj zapisane widoki",
+        "settings": {
+          "columns": "Kolumny",
+          "configure_view": "Konfiguruj widok",
+          "delete": "Usuń",
+          "display_hierarchy": "Wyświetl hierarchię",
+          "display_sums": "Wyświetl sumy",
+          "export": "Eksportuj",
+          "group_by": "Grupuj według",
+          "hide_hierarchy": "Ukryj hierarchię",
+          "hide_sums": "Ukryj sumy",
+          "page_settings": "Zmień nazwę widoku",
+          "save": "Zapisz",
+          "save_as": "Zapisz jako",
+          "share_calendar": "Subskrybuj kalendarz",
+          "sort_by": "Sortuj według",
+          "visibility_settings": "Ustawienia widoczności"
+        },
+        "unselected_title": "Zadanie"
+      },
+      "two_factor_authentication": {
+        "errors": {
+          "aborted": "Uwierzytelnianie zostało anulowane. Spróbuj ponownie."
+        },
+        "label_two_factor_authentication": "Uwierzytelnianie dwuskładnikowe"
+      },
+      "types": {
+        "attribute_groups": {
+          "confirm_reset": "Ostrzeżenie: czy na pewno chcesz zresetować konfigurację formularza? Przywróci to atrybuty do ich grupy domyślnej i wyłączy WSZYSTKIE pola niestandardowe.\n",
+          "error_duplicate_group_name": "Nazwa  %{group} jest użyta więcej niż raz. Nazwy grup muszą być unikalne.",
+          "error_no_table_configured": "Skonfiguruj tabelę grupy %{group}.",
+          "more_information": "Więcej informacji",
+          "nevermind": "Nieważne",
+          "reset_title": "Zresetuj konfigurację formularza",
+          "upgrade_to_ee": "Zaktualizuj do wersji Enterprise On-Premises",
+          "upgrade_to_ee_text": "Znakomicie! Jeśli potrzebujesz tego dodatku, jesteś superprofesjonalistą! Może wesprzesz nas jako deweloperów OpenSource, zostając nabywcą wersji Enterprise?"
+        }
+      },
+      "units": {
+        "child_work_packages": {
+          "few": "%{count} potomnych pakietów roboczych",
+          "many": "%{count} potomnych pakietów roboczych",
+          "one": "jeden potomny pakiet roboczy",
+          "other": "%{count} potomnych pakietów roboczych"
+        },
+        "day": {
+          "one": "1 dzień",
+          "other": "%{count} dni",
+          "zero": "0 dni"
+        },
+        "hour": {
+          "one": "1 h",
+          "other": "%{count} h",
+          "zero": "0 h"
+        },
+        "word": {
+          "few": "%{count} słowa",
+          "many": "%{count} słów",
+          "one": "1 słowo",
+          "other": "%{count} słowa"
+        },
+        "workPackage": {
+          "few": "pakiety robocze",
+          "many": "pakiety robocze",
+          "one": "pakiet roboczy",
+          "other": "pakiety robocze"
+        }
+      },
+      "upsell": {
+        "ee_only": "Dodatek do wersji Enterprise"
+      },
+      "views": {
+        "card": "Karty",
+        "list": "Tabela",
+        "timeline": "Wykres Gantta"
+      },
+      "watchers": {
+        "label_add": "Dodawanie obserwatorów",
+        "label_discard": "Odznacz wszystkie",
+        "label_error_loading": "Wystąpił błąd podczas ładowania obserwatorów.",
+        "label_loading": "ładowanie obserwatorów...",
+        "label_search_watchers": "Szukaj obserwatorów",
+        "typeahead_placeholder": "Szukaj możliwych obserwatorów"
+      },
+      "wiki_formatting": {
+        "code": "Inline Code",
+        "deleted": "Usunięto",
+        "heading1": "Nagłówek 1",
+        "heading2": "Nagłówek 2",
+        "heading3": "Nagłówek 3",
+        "image": "Obraz",
+        "italic": "Kursywa",
+        "ordered_list": "Lista uporządkowana",
+        "preformatted_text": "Tekst wstępnie sformatowany",
+        "quote": "Cytat",
+        "strong": "Pogrubienie",
+        "underline": "Podkreślenie",
+        "unordered_list": "Lista nieuporządkowana",
+        "unquote": "Nie cytuj",
+        "wiki_link": "Adres strony Wiki"
+      },
+      "work_packages": {
+        "baseline": {
+          "addition_label": "Dodano do wyświetlania w okresie objętym porównaniem",
+          "column_incompatible": "Ta kolumna nie pokazuje zmian w trybie Linia odniesienia.",
+          "modification_label": "Zmodyfikowano w okresie objętym porównaniem",
+          "removal_label": "Usunięto z wyświetlania w okresie objętym porównaniem"
+        },
+        "bulk_actions": {
+          "copy": "Masowe kopiowanie",
+          "delete": "Masowe usuwanie",
+          "edit": "Masowa edycja",
+          "move": "Masowa zmiana projektu"
+        },
+        "button_clear": "Wyczyść",
+        "comment_added": "Komentarz został dodany pomyślnie.",
+        "comment_send_failed": "Wystąpił błąd. Nie można zamieścić komentarza.",
+        "comment_updated": "Komentarz zaktualizowano pomyślnie.",
+        "confirm_edit_cancel": "Czy na pewno chcesz anulować edycję pakietu pracy?",
+        "copy": {
+          "title": "Kopiuj pakiet roboczy"
+        },
+        "create": {
+          "button": "Utwórz",
+          "header": "Nowy %{type}",
+          "header_no_type": "Nowy pakiet roboczy (typ jeszcze nie ustawiony)",
+          "header_with_parent": "Nowy %{type} (podrzędny %{parent_type} #%{id})",
+          "title": "Nowy pakiet roboczy"
+        },
+        "default_queries": {
+          "all_open": "Wszystkie otwarte",
+          "assigned_to_me": "Przypisane do mnie",
+          "created_by_me": "Utworzone przeze mnie",
+          "latest_activity": "Ostatnia aktywność",
+          "manually_sorted": "Nowe ręcznie sortowane zapytanie",
+          "milestones": "Kamienie milowe",
+          "overdue": "Przekroczony termin",
+          "recently_created": "Utworzone niedawno",
+          "shared_with_me": "Udostępnione dla mnie",
+          "shared_with_users": "Udostępnione użytkownikom",
+          "summary": "Podsumowanie"
+        },
+        "description_enter_text": "Wpisz tekst",
+        "description_filter": "Filtr",
+        "description_options_hide": "Ukryj opcje",
+        "description_options_show": "Pokaż opcje",
+        "edit_attribute": "%{attribute} - Edytuj",
+        "faulty_query": {
+          "description": "Ten widok jest błędny i nie można go przetworzyć.",
+          "title": "Pakiety robocze nie mogły zostać załadowane."
+        },
+        "filters": {
+          "baseline_incompatible": "Ten atrybut filtru nie jest brany pod uwagę w trybie Linia odniesienia.",
+          "baseline_warning": "Tryb Linia odniesienia jest włączony, ale niektóre z Twoich aktywnych filtrów nie są uwzględnione w porównaniu.",
+          "title": "Filtruj pakiety robocze"
+        },
+        "hierarchy": {
+          "children_collapsed": "%{level} poziom hierarchii zwinięty. Kliknij, aby wyświetlić filtrowane dzieci",
+          "children_expanded": "%{level} poziom hierarchii rozwinięty. Kliknij, aby zwinąć filtrowane dzieci",
+          "hide": "Ukryj tryb hierarchii",
+          "leaf": "Liść pakietu roboczego na poziomie %{level}.",
+          "show": "Pokaż tryb hierarchii",
+          "toggle_button": "Kliknij, aby przełączyć tryb hierarchii."
+        },
+        "inline_create": {
+          "title": "Kliknij tutaj, aby dodać nowy pakiet prac do tej listy"
+        },
+        "jump_marks": {
+          "content": "Przeskocz do zawartości",
+          "label_content": "Kliknij tutaj, aby pominąć menu i przejść do treści",
+          "label_pagination": "Kliknij tutaj, aby pominąć tablicę zadań i przejść do stronicowania",
+          "pagination": "Przejdź do stronicowania tabeli"
+        },
+        "key_value": "%{key}: %{value}",
+        "label_column_multiselect": "Łączone pole rozwijane: Wybierz za pomocą klawiszy strzałek, potwierdź wybór klawiszem enter, usuń klawiszem backspace",
+        "label_disable_multi_select": "Wyłącz wybór wielokrotny",
+        "label_enable_multi_select": "Włącz wybór wielokrotny",
+        "label_filter_add": "Dodaj filtr",
+        "label_filter_by_text": "Filtruj według tekstu",
+        "label_options": "Opcje",
+        "limited_results": "W trybie sortowania ręcznego można pokazać tylko ograniczoną liczbę pakietów roboczych (%{count}). Zmniejsz liczbę wyników filtrowania lub przełącz na sortowanie automatyczne.",
+        "message_error_during_bulk_delete": "Wystąpił błąd podczas próby usunięcia zadania.",
+        "message_successful_bulk_delete": "Pomyślnie usunięto zadania.",
+        "message_successful_show_in_fullscreen": "Kliknij tutaj, aby otworzyć ten pakiet prac w trybie pełnoekranowym.",
+        "message_view_spent_time": "Pokaż spędzony czas dla tych zadań",
+        "message_work_package_read_only": "Pakiet roboczy jest zablokowany w tym stanie. Nie można zmienić żadnego atrybutu innego niż stan.",
+        "message_work_package_status_blocked": "Nie można zapisać stanu pakietu roboczego ze względu na jego zamknięty stan i przypisaną mu zamkniętą wersję.",
+        "no_results": {
+          "description": "Pakiety prac nie zostały utworzone albo wszystkie są odfiltrowane.",
+          "title": "Brak pakietów prac do wyświetlenia."
+        },
+        "placeholder_filter_by_text": "Przedmiot, opis, komentarze, ...",
+        "placeholders": {
+          "date": "Wybierz datę",
+          "default": "-"
+        },
+        "progress": {
+          "title": "Szacunki i postęp pracy"
+        },
+        "properties": {
+          "assignee": "Przypisana osoba",
+          "author": "Autor",
+          "category": "Kategoria",
+          "costObject": "Budżet",
+          "createdAt": "Utworzone",
+          "date": "Data",
+          "description": "Opis",
+          "dueDate": "Data zakończenia",
+          "duration": "Czas trwania",
+          "overallCosts": "Koszt całkowity",
+          "percentComplete": "% ukończono",
+          "percentCompleteAlternative": "Postęp",
+          "percentageDone": "Wykonano procent",
+          "priority": "Priorytet",
+          "projectName": "Projekt",
+          "remainingTime": "Pozostała praca",
+          "remainingWork": "Pozostała praca",
+          "remainingWorkAlternative": "Pozostałe godziny",
+          "responsible": "Odpowiedzialny",
+          "spentTime": "Czas pracy",
+          "spentUnits": "Zużyte jednostki",
+          "startDate": "Data rozpoczęcia",
+          "status": "Status",
+          "storyPoints": "Historia Punktów",
+          "subject": "Temat",
+          "subproject": "Podprojekt",
+          "title": "Tytuł",
+          "type": "Typ",
+          "updatedAt": "Aktualizacja",
+          "version": "Wersja",
+          "versionName": "Wersja",
+          "work": "Praca",
+          "workAlternative": "Szacowany czas"
+        },
+        "property_groups": {
+          "costs": "Koszty",
+          "details": "Szczegóły",
+          "estimatesAndTime": "Szacunki i czas",
+          "other": "Inne",
+          "people": "Ludzie"
+        },
+        "query": {
+          "click_to_edit_query_name": "Kliknij, aby edytować tytuł tego widoku.",
+          "column_names": "Kolumny",
+          "confirm_edit_cancel": "Czy na pewno chcesz anulować edycję nazwy tego widoku? Przywrócona zostanie poprzednia wartość tytułu.",
+          "display_sums": "Wyświetl sumy",
+          "errors": {
+            "duplicate_query_title": "Nazwa tego widoku już istnieje. Zmienić mimo to?",
+            "not_found": "Nie ma takiego widoku",
+            "unretrievable_query": "Nie można pobrać widoku z adresu URL"
+          },
+          "filters": "Filtry",
+          "group": "Grupuj według",
+          "group_by": "Grupuj wyniki",
+          "group_by_disabled_by_hierarchy": "Przy aktywnym trybie hierarchii grupowanie jest wyłączone.",
+          "hide_column": "Ukryj kolumnę",
+          "hierarchy_disabled_by_group_by": "Tryb hierarchii jest wyłączony z powodu grupowania wyników wg %{column}.",
+          "insert_columns": "Wstaw kolumny",
+          "move_column_left": "Przenieść kolumnę w lewo",
+          "move_column_right": "Przenieść kolumnę w prawo",
+          "public_text": "Opublikuj ten widok, aby umożliwić dostęp do niego innym użytkownikom. Użytkownicy z uprawnieniami „Zarządzaj widokami publicznymi” mogą zmodyfikować lub usunąć zapytanie publiczne. Nie ma to wpływu na widoczność wyników pakietu roboczego w tym widoku, a użytkownicy mogą widzieć różne wyniki, w zależności od ich uprawnień.\n",
+          "rename_query_placeholder": "Nazwa tego widoku",
+          "sort_ascending": "Sortuj rosnąco",
+          "sort_descending": "Sortuj malejąco",
+          "star_text": "Oznacz ten widok jako ulubiony i dodaj do zapisanych widoków na pasku bocznym po lewej stronie.",
+          "text_no_results": "Nie znaleziono żadnych pasujących widoków."
+        },
+        "reminders": {
+          "button_label": "Ustaw przypomnienie",
+          "presets": {
+            "custom": "W określonym dniu/godzinie",
+            "month": "Za miesiąc",
+            "three_days": "Za 3 dni",
+            "tomorrow": "Jutro",
+            "week": "Za tydzień"
+          },
+          "subtitle": "W wybranym terminie otrzymasz powiadomienie dotyczące tego pakietu roboczego.",
+          "title": {
+            "edit": "Edytuj przypomnienie",
+            "new": "Ustaw przypomnienie"
+          }
+        },
+        "scheduling": {
+          "is_parent": "Daty tego pakietu roboczego są automatycznie odejmowane od jego elementów podrzędnych. Włącz funkcję Planowanie ręczne, aby ustawić daty.",
+          "is_switched_from_manual_to_automatic": "Po przełączeniu planowania z ręcznego na automatyczne konieczne może być ponowne obliczenie dat tego pakietu roboczego ze względu na jego powiązania z innymi pakietami roboczymi."
+        },
+        "sharing": {
+          "show_all_users": "Pokaż wszystkich użytkowników, którym udostępniono pakiet roboczy",
+          "title": "Udostępnij pakiet roboczy"
+        },
+        "table": {
+          "configure_button": "Konfiguruj tabelę pakietów roboczych",
+          "summary": "Tabela, której wiersze zawierają pakiety pracy, a kolumny ich atrybuty.",
+          "text_inline_edit": "Większość komórek w tej tabeli to przyciski uruchamiające edycję danego atrybutu.",
+          "text_select_hint": "Zaznacz boxy które powinny zostać otwarte poprzez jednoczesne użycie klawisza 'ALT' oraz strzałek.",
+          "text_sort_hint": "Za pomocą linków w nagłówkach tabeli można sortować, grupować, zmieniać kolejność, usuwać i dodać kolumny."
+        },
+        "table_configuration": {
+          "button": "Konfiguruj tę tabelę pakietów roboczych",
+          "choose_display_mode": "Wyświetlaj pakiety robocze jako",
+          "columns_help_text": "Użyj powyższego pola wprowadzania danych, aby dodać kolumny do widoku tabeli. Możesz przeciągać i upuszczać kolumny, aby zmienić ich kolejność.",
+          "default": "Domyślnie",
+          "default_mode": "Płaska lista",
+          "display_settings": "Ustawienia wyświetlania",
+          "display_sums_hint": "Wyświetlaj sumy wszystkich sumowanych atrybutów w wierszu pod wynikami tabeli.",
+          "embedded_tab_disabled": "Ta karta konfiguracji nie jest dostępna dla widoku osadzonego, który edytujesz.",
+          "hierarchy_hint": "Wszystkie przefiltrowane wyniki z tabeli będą poszerzane o ich przodków. Hierarchie można rozwijać i zwijać.",
+          "hierarchy_mode": "Hierarchia",
+          "highlighting": "Wyróżnianie",
+          "highlighting_mode": {
+            "description": "Wyróżniaj kolorem",
+            "entire_row_by": "Cały wiersz wg",
+            "inline": "Wyróżnione atrybuty",
+            "inline_all": "Wszystkie atrybuty",
+            "none": "Bez wyróżniania",
+            "priority": "Priorytet",
+            "status": "Status",
+            "type": "Typ"
+          },
+          "modal_title": "Konfiguracja tabeli pakietów roboczych",
+          "relation_filters": {
+            "filter_work_packages_by_relation_type": "Filtruj pakiety robocze według typu relacji"
+          },
+          "show_timeline_hint": "Pokaż interaktywny wykres Gantta po prawej stronie tabeli. Jego szerokość można zmienić, przeciągając linię podziału między tabelą a wykresem Gantta.",
+          "sorting_mode": {
+            "automatic": "Automatycznie",
+            "description": "Wybierz tryb sortowania pakietów roboczych:",
+            "manually": "Ręcznie",
+            "warning": "Wskutek aktywacji trybu automatycznego sortowania utracisz poprzednie sortowanie."
+          }
+        },
+        "tabs": {
+          "activity": "Działanie",
+          "files": "Pliki",
+          "github": "GitHub",
+          "gitlab": "GitLab",
+          "meetings": "Spotkania",
+          "overview": "Przegląd",
+          "relations": "Relacje",
+          "watchers": "Obserwatorzy"
+        },
+        "time_relative": {
+          "days": "dni",
+          "months": "miesiące",
+          "weeks": "tygodnie"
+        }
+      },
+      "zen_mode": {
+        "button_activate": "Włącz tryb zen",
+        "button_deactivate": "Wyłącz tryb zen"
+      }
+    },
+    "number": {
+      "currency": {
+        "format": {
+          "delimiter": " ",
+          "format": "%n %u",
+          "negative_format": "-%u%n",
+          "precision": 2,
+          "separator": ",",
+          "significant": false,
+          "strip_insignificant_zeros": true,
+          "unit": "zł"
+        }
+      },
+      "format": {
+        "delimiter": null,
+        "precision": 3,
+        "round_mode": "default",
+        "separator": ",",
+        "significant": false,
+        "strip_insignificant_zeros": false
+      },
+      "human": {
+        "decimal_units": {
+          "format": "%n %u",
+          "units": {
+            "billion": "Miliard",
+            "million": "Milion",
+            "quadrillion": "Biliard",
+            "thousand": "Tysiąc",
+            "trillion": "Bilion",
+            "unit": null
+          }
+        },
+        "format": {
+          "delimiter": null,
+          "precision": 1,
+          "significant": true,
+          "strip_insignificant_zeros": true
+        },
+        "storage_units": {
+          "format": "%n %u",
+          "units": {
+            "byte": {
+              "few": "Bajty",
+              "many": "Bajty",
+              "one": "Bajt",
+              "other": "Bajty"
+            },
+            "eb": "EB",
+            "gb": "GB",
+            "kb": "kB",
+            "mb": "MB",
+            "pb": "PB",
+            "tb": "TB",
+            "zb": "ZB"
+          }
+        }
+      },
+      "nth": {
+        "ordinalized": "%{number}.",
+        "ordinals": "."
+      },
+      "percentage": {
+        "format": {
+          "delimiter": null,
+          "format": "%n%"
+        }
+      },
+      "precision": {
+        "format": {
+          "delimiter": null
+        }
+      }
+    },
+    "time": {
+      "am": "am",
+      "formats": {
+        "default": "%m/%d/%Y %I:%M %p",
+        "long": "%B %d, %Y %H:%M",
+        "short": "%d %b %H:%M",
+        "time": "%I:%M %p"
+      },
+      "pm": "pm"
+    }
+  }
+}

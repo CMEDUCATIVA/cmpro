@@ -1,0 +1,32 @@
+<% values = contact.custom_fields.is_a?(Hash) ? contact.custom_fields : {} %>
+<% current = values[field.name] %>
+<% field_name = "contact[custom_fields][#{field.name}]" %>
+
+<% case field.field_type %>
+<% when "number" %>
+  <input type="number" name="<%= field_name %>" value="<%= current %>" />
+<% when "date" %>
+  <input type="date" name="<%= field_name %>" value="<%= current %>" />
+<% when "select" %>
+  <select name="<%= field_name %>">
+    <option value=""></option>
+    <% Array(field.options).each do |opt| %>
+      <option value="<%= opt %>" <%= "selected" if current.to_s == opt.to_s %>><%= opt %></option>
+    <% end %>
+  </select>
+<% when "multiselect" %>
+  <% selected = Array(current).map(&:to_s) %>
+  <select name="<%= field_name %>[]" multiple>
+    <% Array(field.options).each do |opt| %>
+      <option value="<%= opt %>" <%= "selected" if selected.include?(opt.to_s) %>><%= opt %></option>
+    <% end %>
+  </select>
+<% when "boolean" %>
+  <select name="<%= field_name %>">
+    <option value=""></option>
+    <option value="true" <%= "selected" if current.to_s == "true" %>>Si</option>
+    <option value="false" <%= "selected" if current.to_s == "false" %>>No</option>
+  </select>
+<% else %>
+  <input type="text" name="<%= field_name %>" value="<%= current %>" />
+<% end %>

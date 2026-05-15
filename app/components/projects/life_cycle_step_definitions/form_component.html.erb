@@ -1,0 +1,91 @@
+<%#-- copyright
+OpenProject is an open source project management software.
+Copyright (C) the OpenProject GmbH
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License version 3.
+
+OpenProject is a fork of ChiliProject, which is a fork of Redmine. The copyright follows:
+Copyright (C) 2006-2013 Jean-Philippe Lang
+Copyright (C) 2010-2013 the ChiliProject Team
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+See COPYRIGHT and LICENSE files for more details.
+
+++#%>
+
+<%= settings_primer_form_with(
+      model: [:admin, :settings, model],
+      data: { controller: "show-when-checked" }
+    ) do |f|
+      flex_layout do |body|
+        body.with_row do
+          render Primer::Alpha::TabPanels.new(label: "label") do |tab_panel|
+            tab_panel.with_tab(selected: selected?(:details), id: "tab-phases--details") do |tab|
+              tab.with_text { I18n.t("label_details") }
+              tab.with_panel do
+                render Projects::LifeCycleStepDefinitions::DetailsForm.new(f)
+              end
+            end
+            tab_panel.with_tab(selected: selected?(:phase_gates), id: "tab-phases--phase-gates") do |tab|
+              tab.with_text { I18n.t("settings.project_phase_definitions.phase_gates") }
+              tab.with_panel do
+                flex_layout do |gates_tab|
+                  gates_tab.with_row(mt: 2) do
+                    render Projects::LifeCycleStepDefinitions::StartGateCheckboxForm.new(f)
+                  end
+                  gates_tab.with_row(
+                    mt: 2,
+                    classes: model.start_gate.blank? ? "d-none" : "",
+                    data: {
+                      target_name: "start_gate",
+                      "show-when-checked-target": "effect",
+                      visibility_class: "d-none"
+                    }
+                  ) do
+                    render Projects::LifeCycleStepDefinitions::StartGateNameForm.new(f)
+                  end
+                  gates_tab.with_row(mt: 2) do
+                    render Projects::LifeCycleStepDefinitions::FinishGateCheckboxForm.new(f)
+                  end
+                  gates_tab.with_row(
+                    mt: 2,
+                    classes: model.finish_gate.blank? ? "d-none" : "",
+                    data: {
+                      target_name: "finish_gate",
+                      "show-when-checked-target": "effect",
+                      visibility_class: "d-none"
+                    }
+                  ) do
+                    render Projects::LifeCycleStepDefinitions::FinishGateNameForm.new(f)
+                  end
+                end
+              end
+            end
+          end
+        end
+
+        body.with_row(mt: 4) do
+          render_inline_form(f) do |submit_form|
+            submit_form.submit(
+              scheme: :primary,
+              name: :submit,
+              label: I18n.t(model.persisted? ? :button_update : :button_create)
+            )
+          end
+        end
+      end
+    end %>

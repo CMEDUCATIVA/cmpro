@@ -1,0 +1,371 @@
+<section class="op-email-email--section" id="email-settings">
+  <div class="op-email-email--settings-layout" data-email-settings-tabs="true">
+    <aside class="op-email-email--settings-sidebar" aria-label="Secciones de configuracion">
+      <button type="button"
+              class="op-email-email--settings-nav is-active"
+              data-email-settings-tab-trigger="general"
+              aria-controls="email-settings-pane-general"
+              aria-selected="true">
+        Configuracion general
+      </button>
+      <button type="button"
+              class="op-email-email--settings-nav"
+              data-email-settings-tab-trigger="smtp"
+              aria-controls="email-settings-pane-smtp"
+              aria-selected="false">
+        Configuracion SMTP
+      </button>
+    </aside>
+
+    <div class="op-email-email--settings-content">
+      <% if @settings&.errors&.any? %>
+        <div class="op-email-email--flash is-alert">
+          <%= @settings.errors.full_messages.join(", ") %>
+        </div>
+      <% end %>
+      <%= form_with model: @settings,
+                    url: whatsapp_plugin_project_email_settings_update_path(@project),
+                    method: :post,
+                    class: "op-email-email--form" do |form| %>
+        <div id="email-settings-pane-general"
+             class="op-email-email--settings-pane is-active"
+             data-email-settings-tab-pane="general">
+          <div class="op-email-email--panel-title">Configuracion general</div>
+          <div class="op-email-email--field">
+            <label class="op-email-email--checkbox">
+              <%= form.check_box :enabled %>
+              Activar modulo Email
+            </label>
+          </div>
+          <div class="op-email-email--field">
+            <label class="op-email-email--checkbox">
+              <%= form.check_box :use_plugin_smtp %>
+              Usar SMTP 2 por defecto
+            </label>
+          </div>
+          <div class="op-email-email--field">
+            <label class="op-email-email--checkbox">
+              <%= form.check_box :use_layout_default %>
+              Incluir encabezado y pie en SMTP por defecto
+            </label>
+          </div>
+          <div class="op-email-email--field">
+            <label class="op-email-email--checkbox">
+              <%= form.check_box :use_layout_plugin %>
+              Incluir encabezado y pie en SMTP 2/3/4
+            </label>
+          </div>
+          <div class="op-email-email--grid">
+            <div class="op-email-email--field">
+              <%= form.label :mail_from, "Remitente" %>
+              <%= form.text_field :mail_from, class: "op-email-email--input" %>
+            </div>
+            <div class="op-email-email--field">
+              <%= form.label :reply_to, "Reply-To" %>
+              <%= form.text_field :reply_to, class: "op-email-email--input" %>
+            </div>
+            <div class="op-email-email--field">
+              <%= form.label :throttle_per_minute, "Throttling (envios/min)" %>
+              <%= form.number_field :throttle_per_minute, class: "op-email-email--input" %>
+            </div>
+          </div>
+          <div class="op-email-email--field">
+            <label class="op-email-email--checkbox">
+              <%= form.check_box :global_rate_limit_enabled %>
+              Activar cadencia global de envio
+            </label>
+          </div>
+          <div class="op-email-email--grid">
+            <div class="op-email-email--field">
+              <%= form.label :global_rate_limit_count, "Maximo de correos" %>
+              <%= form.number_field :global_rate_limit_count, class: "op-email-email--input", min: 1 %>
+            </div>
+            <div class="op-email-email--field">
+              <%= form.label :global_rate_limit_period_value, "Cada" %>
+              <%= form.number_field :global_rate_limit_period_value, class: "op-email-email--input", min: 1 %>
+            </div>
+            <div class="op-email-email--field">
+              <%= form.label :global_rate_limit_period_unit, "Unidad" %>
+              <%= form.select :global_rate_limit_period_unit,
+                              [["Segundos", "second"], ["Minutos", "minute"], ["Horas", "hour"]],
+                              {},
+                              class: "op-email-email--input" %>
+            </div>
+          </div>
+          <div class="op-email-email--field">
+            <%= form.label :sender_names, "Remitentes" %>
+            <div class="op-email-email--token-input" data-email-sender-token-input>
+              <div class="op-email-email--chips" data-email-sender-chips></div>
+              <input type="text"
+                     class="op-email-email--token-field"
+                     placeholder="Agregar remitente y presionar Enter"
+                     data-email-sender-token-field />
+              <textarea name="email_project_setting[sender_names]"
+                        class="op-email-email--hidden-textarea"
+                        rows="1"
+                        data-email-sender-hidden><%= @settings.sender_names.to_s %></textarea>
+            </div>
+          </div>
+          <div class="op-email-email--field">
+            <%= form.label :signature, "Firma" %>
+            <%= form.text_area :signature, class: "op-email-email--textarea", rows: 3 %>
+          </div>
+        </div>
+
+        <div id="email-settings-pane-smtp"
+             class="op-email-email--settings-pane"
+             data-email-settings-tab-pane="smtp"
+             hidden>
+          <div class="op-email-email--smtp-stack">
+            <details class="op-email-email--smtp-accordion">
+              <summary class="op-email-email--smtp-summary">
+                <span>SMTP por defecto</span>
+                <span class="op-email-email--smtp-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="op-email-email--smtp-body">
+                <dl class="op-email-email--smtp-read-grid">
+                  <div class="op-email-email--smtp-read-item">
+                    <dt>Metodo</dt>
+                    <dd><%= Setting.email_delivery_method.to_s.presence || "-" %></dd>
+                  </div>
+                  <div class="op-email-email--smtp-read-item">
+                    <dt>Servidor</dt>
+                    <dd><%= Setting.smtp_address.to_s.presence || "-" %></dd>
+                  </div>
+                  <div class="op-email-email--smtp-read-item">
+                    <dt>Puerto</dt>
+                    <dd><%= Setting.smtp_port.to_s.presence || "-" %></dd>
+                  </div>
+                  <div class="op-email-email--smtp-read-item">
+                    <dt>Dominio</dt>
+                    <dd><%= Setting.smtp_domain.to_s.presence || "-" %></dd>
+                  </div>
+                  <div class="op-email-email--smtp-read-item">
+                    <dt>Usuario</dt>
+                    <dd><%= Setting.smtp_user_name.to_s.presence || "-" %></dd>
+                  </div>
+                  <div class="op-email-email--smtp-read-item">
+                    <dt>STARTTLS</dt>
+                    <dd><%= Setting.smtp_enable_starttls_auto ? "Si" : "No" %></dd>
+                  </div>
+                  <div class="op-email-email--smtp-read-item">
+                    <dt>SSL</dt>
+                    <dd><%= Setting.smtp_ssl ? "Si" : "No" %></dd>
+                  </div>
+                  <div class="op-email-email--smtp-read-item">
+                    <dt>Remitente</dt>
+                    <dd><%= Setting.mail_from.to_s.presence || "-" %></dd>
+                  </div>
+                </dl>
+              </div>
+            </details>
+
+            <details class="op-email-email--smtp-accordion">
+              <summary class="op-email-email--smtp-summary">
+                <span>SMTP 2</span>
+                <span class="op-email-email--smtp-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="op-email-email--smtp-body">
+                <div class="op-email-email--smtp-form-grid">
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp_address, "Servidor SMTP" %>
+                    <%= form.text_field :smtp_address, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp_port, "Puerto" %>
+                    <%= form.number_field :smtp_port, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp_domain, "Dominio" %>
+                    <%= form.text_field :smtp_domain, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp_authentication, "Autenticacion" %>
+                    <%= form.select :smtp_authentication,
+                                    [["Ninguna", ""], ["plain", "plain"], ["login", "login"], ["cram_md5", "cram_md5"]],
+                                    {},
+                                    class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp_user_name, "Usuario" %>
+                    <%= form.text_field :smtp_user_name, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp_password, "Contrasena" %>
+                    <%= form.password_field :smtp_password, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field op-email-email--smtp-checkbox-field">
+                    <label class="op-email-email--checkbox">
+                      <%= form.check_box :smtp_enable_starttls_auto %>
+                      STARTTLS auto
+                    </label>
+                  </div>
+                  <div class="op-email-email--field op-email-email--smtp-checkbox-field">
+                    <label class="op-email-email--checkbox">
+                      <%= form.check_box :smtp_ssl %>
+                      SSL
+                    </label>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp_openssl_verify_mode, "OpenSSL verify mode" %>
+                    <%= form.text_field :smtp_openssl_verify_mode, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp_timeout, "Timeout (seg)" %>
+                    <%= form.number_field :smtp_timeout, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :mail_from, "Remitente" %>
+                    <%= form.text_field :mail_from, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :reply_to, "Reply-To" %>
+                    <%= form.text_field :reply_to, class: "op-email-email--input" %>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="op-email-email--smtp-accordion">
+              <summary class="op-email-email--smtp-summary">
+                <span>SMTP 3</span>
+                <span class="op-email-email--smtp-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="op-email-email--smtp-body">
+                <div class="op-email-email--smtp-form-grid">
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp3_address, "Servidor SMTP" %>
+                    <%= form.text_field :smtp3_address, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp3_port, "Puerto" %>
+                    <%= form.number_field :smtp3_port, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp3_domain, "Dominio" %>
+                    <%= form.text_field :smtp3_domain, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp3_authentication, "Autenticacion" %>
+                    <%= form.select :smtp3_authentication,
+                                    [["Ninguna", ""], ["plain", "plain"], ["login", "login"], ["cram_md5", "cram_md5"]],
+                                    {},
+                                    class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp3_user_name, "Usuario" %>
+                    <%= form.text_field :smtp3_user_name, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp3_password, "Contrasena" %>
+                    <%= form.password_field :smtp3_password, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field op-email-email--smtp-checkbox-field">
+                    <label class="op-email-email--checkbox">
+                      <%= form.check_box :smtp3_enable_starttls_auto %>
+                      STARTTLS auto
+                    </label>
+                  </div>
+                  <div class="op-email-email--field op-email-email--smtp-checkbox-field">
+                    <label class="op-email-email--checkbox">
+                      <%= form.check_box :smtp3_ssl %>
+                      SSL
+                    </label>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp3_openssl_verify_mode, "OpenSSL verify mode" %>
+                    <%= form.text_field :smtp3_openssl_verify_mode, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp3_timeout, "Timeout (seg)" %>
+                    <%= form.number_field :smtp3_timeout, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp3_mail_from, "Remitente" %>
+                    <%= form.text_field :smtp3_mail_from, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp3_reply_to, "Reply-To" %>
+                    <%= form.text_field :smtp3_reply_to, class: "op-email-email--input" %>
+                  </div>
+                </div>
+              </div>
+            </details>
+
+            <details class="op-email-email--smtp-accordion">
+              <summary class="op-email-email--smtp-summary">
+                <span>SMTP 4</span>
+                <span class="op-email-email--smtp-chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="op-email-email--smtp-body">
+                <div class="op-email-email--smtp-form-grid">
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp4_address, "Servidor SMTP" %>
+                    <%= form.text_field :smtp4_address, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp4_port, "Puerto" %>
+                    <%= form.number_field :smtp4_port, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp4_domain, "Dominio" %>
+                    <%= form.text_field :smtp4_domain, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp4_authentication, "Autenticacion" %>
+                    <%= form.select :smtp4_authentication,
+                                    [["Ninguna", ""], ["plain", "plain"], ["login", "login"], ["cram_md5", "cram_md5"]],
+                                    {},
+                                    class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp4_user_name, "Usuario" %>
+                    <%= form.text_field :smtp4_user_name, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp4_password, "Contrasena" %>
+                    <%= form.password_field :smtp4_password, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field op-email-email--smtp-checkbox-field">
+                    <label class="op-email-email--checkbox">
+                      <%= form.check_box :smtp4_enable_starttls_auto %>
+                      STARTTLS auto
+                    </label>
+                  </div>
+                  <div class="op-email-email--field op-email-email--smtp-checkbox-field">
+                    <label class="op-email-email--checkbox">
+                      <%= form.check_box :smtp4_ssl %>
+                      SSL
+                    </label>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp4_openssl_verify_mode, "OpenSSL verify mode" %>
+                    <%= form.text_field :smtp4_openssl_verify_mode, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp4_timeout, "Timeout (seg)" %>
+                    <%= form.number_field :smtp4_timeout, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp4_mail_from, "Remitente" %>
+                    <%= form.text_field :smtp4_mail_from, class: "op-email-email--input" %>
+                  </div>
+                  <div class="op-email-email--field">
+                    <%= form.label :smtp4_reply_to, "Reply-To" %>
+                    <%= form.text_field :smtp4_reply_to, class: "op-email-email--input" %>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="op-email-email--field">
+          <div class="op-email-email--actions">
+            <%= form.submit "Guardar configuracion", class: "op-email-email--button" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

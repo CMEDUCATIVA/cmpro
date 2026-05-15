@@ -1,0 +1,16 @@
+<script nonce="<%= content_security_policy_script_nonce %>">
+  window.DocumentosIsAdmin = <%= User.current.admin?.to_json %>;
+</script>
+<style nonce="<%= content_security_policy_script_nonce %>">
+  turbo-frame#wiki_main_menu:not([data-documentos-wiki-ready="1"]) {
+    visibility: hidden !important;
+  }
+  .menu-wiki-pages-tree:not([data-documentos-wiki-ready="1"]) {
+    visibility: hidden !important;
+  }
+</style>
+<%= stylesheet_link_tag 'documentos/main', nonce: content_security_policy_script_nonce %>
+<%= javascript_include_tag 'documentos/button_ajustes', nonce: content_security_policy_script_nonce %>
+<%= javascript_include_tag 'documentos/flujo-boton-seleccionar-ubicacion', nonce: content_security_policy_script_nonce %>
+<%= javascript_include_tag 'documentos/conocimientoia', nonce: content_security_policy_script_nonce %>
+<%= javascript_include_tag 'documentos/wiki_menu_collapse', nonce: content_security_policy_script_nonce %>
