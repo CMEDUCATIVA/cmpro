@@ -17,9 +17,9 @@ public/assets/
 public/packs/
 public/webpack/
 
-files/
-repositories/
-screenshots/
+/files/
+/repositories/
+/screenshots/
 
 *.log
 *.dump
