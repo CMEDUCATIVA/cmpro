@@ -148,9 +148,14 @@ setup_database() {
 install_ruby_dependencies() {
   cd "$INSTALL_DIR"
 
-  if [[ ! -f vendor/ruby-3.4.4/lib/libruby-static.a && -f vendor/ruby-3.4.4/lib/libruby-static.a.gz ]]; then
-    gzip -dk vendor/ruby-3.4.4/lib/libruby-static.a.gz
+  if [[ -f vendor/ruby-3.4.4/lib/libruby-static.a.gz ]]; then
+    gzip -dkf vendor/ruby-3.4.4/lib/libruby-static.a.gz
     chown "$APP_USER:$APP_USER" vendor/ruby-3.4.4/lib/libruby-static.a
+  fi
+
+  if [[ ! -f vendor/ruby-3.4.4/lib/libruby-static.a ]]; then
+    echo "Missing vendor/ruby-3.4.4/lib/libruby-static.a; native gem builds cannot continue."
+    exit 1
   fi
 
   run_as_app "$INSTALL_DIR/vendor/ruby-3.4.4/bin/bundle" config set --local path vendor/bundle
