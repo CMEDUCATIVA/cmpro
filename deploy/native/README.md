@@ -44,6 +44,17 @@ sudo journalctl -u openproject-custom-web -f
 sudo journalctl -u openproject-custom-worker -f
 ```
 
+El instalador tambien crea un wrapper compatible con los comandos habituales:
+
+```bash
+sudo openproject run rake db:migrate
+sudo openproject run rake assets:clobber
+sudo openproject run rails openproject:plugins:register_frontend assets:precompile
+sudo openproject logs --tail --lines=200
+sudo openproject restart
+sudo openproject status
+```
+
 ## Configuracion
 
 Durante la instalacion se preguntan estos valores:

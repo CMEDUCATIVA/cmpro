@@ -249,6 +249,10 @@ install_services() {
   systemctl enable --now "${APP_NAME}-web.service" "${APP_NAME}-worker.service"
 }
 
+install_wrapper() {
+  install -m 0755 "$INSTALL_DIR/deploy/native/openproject-wrapper" /usr/local/bin/openproject
+}
+
 prompt_configuration
 install_packages
 install_node
@@ -259,6 +263,7 @@ setup_database
 install_ruby_dependencies
 setup_app
 install_services
+install_wrapper
 
 echo
 echo "Installed ${APP_NAME} at ${INSTALL_DIR}"
@@ -267,4 +272,5 @@ echo "PostgreSQL major version: ${POSTGRES_VERSION} (current source server: ${PO
 echo "Environment: ${ENV_FILE}"
 echo "Configured host: ${CONFIGURED_HOST}"
 echo "Internal bind: ${CONFIGURED_BIND_HOST}:${CONFIGURED_PORT}"
+echo "CLI wrapper: /usr/local/bin/openproject"
 echo "Edit ${ENV_FILE}, then run: systemctl restart ${APP_NAME}-web ${APP_NAME}-worker"

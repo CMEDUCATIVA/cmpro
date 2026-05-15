@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+APP_NAME="${APP_NAME:-openproject-custom}"
+APP_PATH="${APP_PATH:-/opt/openproject-custom}"
+ENV_FILE="${ENV_FILE:-/etc/${APP_NAME}/openproject.env}"
+APP_USER="${APP_USER:-openproject}"
+PATH_VALUE="${APP_PATH}/vendor/ruby-3.4.4/bin:/usr/local/bin:/usr/bin:/bin"
+
+usage() {
+  cat <<USAGE
+Usage:
+  openproject run <command...>
+  openproject logs [--tail] [--lines=N]
+  openproject restart
+  openproject status
+
+Examples:
+  openproject run rake db:migrate
+  openproject run rake assets:clobber
+  openproject run rails openproject:plugins:register_frontend assets:precompile
+  openproject logs --tail --lines=200
+USAGE
+}
+
+require_app() {
+  if [[ ! -d "$APP_PATH" || ! -f "$ENV_FILE" ]]; then
+    echo "OpenProject custom installation not found at $APP_PATH"
+    exit 1
+  fi
+}
+
+run_command() {
+  require_app
+  cd "$APP_PATH"
+  sudo -u "$APP_USER" env $(grep -v '^#' "$ENV_FILE" | xargs) \
+    PATH="$PATH_VALUE" \
+    "${APP_PATH}/vendor/ruby-3.4.4/bin/bundle" exec "$@"
+}
+
+logs_command() {
+  local follow=""
+  local lines="200"
+
+  for arg in "$@"; do
+    case "$arg" in
+      --tail|-f)
+        follow="-f"
+        ;;
+      --lines=*)
+        lines="${arg#--lines=}"
+        ;;
+      --lines)
+        shift
+        lines="${1:-200}"
+        ;;
+    esac
+  done
+
+  if [[ -n "$follow" ]]; then
+    journalctl -u "${APP_NAME}-web" -u "${APP_NAME}-worker" -n "$lines" -f
+  else
+    journalctl -u "${APP_NAME}-web" -u "${APP_NAME}-worker" -n "$lines" --no-pager
+  fi
+}
+
+case "${1:-}" in
+  run)
+    shift
+    if [[ "$#" -eq 0 ]]; then
+      usage
+      exit 1
+    fi
+    run_command "$@"
+    ;;
+  logs)
+    shift
+    logs_command "$@"
+    ;;
+  restart)
+    systemctl restart "${APP_NAME}-web" "${APP_NAME}-worker"
+    ;;
+  status)
+    systemctl status "${APP_NAME}-web" "${APP_NAME}-worker"
+    ;;
+  *)
+    usage
+    exit 1
+    ;;
+esac
+
