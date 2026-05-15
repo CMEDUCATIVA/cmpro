@@ -63,6 +63,20 @@ sudo OPENPROJECT_HOST_NAME=campus.vinfrancis.es \
   ./install-openproject-custom.sh https://github.com/USUARIO/REPO.git /opt/openproject-custom
 ```
 
+El instalador deja un administrador inicial:
+
+- usuario: `admin`
+- contrasena: `admin`
+
+Puedes cambiarlo durante la instalacion con:
+
+```bash
+sudo OPENPROJECT_ADMIN_LOGIN=admin \
+  OPENPROJECT_ADMIN_PASSWORD='otra-contrasena' \
+  OPENPROJECT_ADMIN_MAIL=admin@example.com \
+  ./install-openproject-custom.sh https://github.com/USUARIO/REPO.git /opt/openproject-custom
+```
+
 Edita:
 
 ```bash

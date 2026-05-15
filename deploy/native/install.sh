@@ -19,6 +19,9 @@ CONFIGURED_HOST="${OPENPROJECT_HOST_NAME:-${OPENPROJECT_HOST__NAME:-}}"
 CONFIGURED_HTTPS="${OPENPROJECT_HTTPS:-}"
 CONFIGURED_BIND_HOST="${HOST:-}"
 CONFIGURED_PORT="${PORT:-}"
+ADMIN_LOGIN="${OPENPROJECT_ADMIN_LOGIN:-admin}"
+ADMIN_PASSWORD="${OPENPROJECT_ADMIN_PASSWORD:-admin}"
+ADMIN_MAIL="${OPENPROJECT_ADMIN_MAIL:-admin@example.com}"
 
 if [[ "$(id -u)" -ne 0 ]]; then
   echo "Run as root: sudo $0 <github_repo_url> [install_dir]"
@@ -205,8 +208,34 @@ setup_app() {
   chown -R "$APP_USER:$APP_USER" tmp log "$DATA_DIR"
 
   run_as_app env $(grep -v '^#' "$ENV_FILE" | xargs) "$INSTALL_DIR/vendor/ruby-3.4.4/bin/bundle" exec rake db:migrate
+  ensure_admin_user
   run_as_app env $(grep -v '^#' "$ENV_FILE" | xargs) npm install
   run_as_app env $(grep -v '^#' "$ENV_FILE" | xargs) "$INSTALL_DIR/vendor/ruby-3.4.4/bin/bundle" exec rails openproject:plugins:register_frontend assets:precompile
+}
+
+ensure_admin_user() {
+  run_as_app env $(grep -v '^#' "$ENV_FILE" | xargs) \
+    OPENPROJECT_ADMIN_LOGIN="$ADMIN_LOGIN" \
+    OPENPROJECT_ADMIN_PASSWORD="$ADMIN_PASSWORD" \
+    OPENPROJECT_ADMIN_MAIL="$ADMIN_MAIL" \
+    "$INSTALL_DIR/vendor/ruby-3.4.4/bin/bundle" exec rails runner '
+      login = ENV.fetch("OPENPROJECT_ADMIN_LOGIN")
+      password = ENV.fetch("OPENPROJECT_ADMIN_PASSWORD")
+      mail = ENV.fetch("OPENPROJECT_ADMIN_MAIL")
+
+      user = User.find_by(login: login) || User.new(login: login)
+      user.firstname = "Admin"
+      user.lastname = "User"
+      user.mail = mail
+      user.admin = true
+      user.status = User.statuses[:active]
+      user.force_password_change = false if user.respond_to?(:force_password_change=)
+      user.password = password
+      user.password_confirmation = password
+      user.save!(validate: false)
+
+      puts "Admin ready: #{login} / #{password}"
+    '
 }
 
 install_services() {
