@@ -147,6 +147,12 @@ setup_database() {
 
 install_ruby_dependencies() {
   cd "$INSTALL_DIR"
+
+  if [[ ! -f vendor/ruby-3.4.4/lib/libruby-static.a && -f vendor/ruby-3.4.4/lib/libruby-static.a.gz ]]; then
+    gzip -dk vendor/ruby-3.4.4/lib/libruby-static.a.gz
+    chown "$APP_USER:$APP_USER" vendor/ruby-3.4.4/lib/libruby-static.a
+  fi
+
   run_as_app "$INSTALL_DIR/vendor/ruby-3.4.4/bin/bundle" config set --local path vendor/bundle
   run_as_app "$INSTALL_DIR/vendor/ruby-3.4.4/bin/bundle" config set --local without "development test"
   run_as_app "$INSTALL_DIR/vendor/ruby-3.4.4/bin/bundle" install --jobs=8 --retry=3

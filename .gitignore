@@ -27,6 +27,7 @@ screenshots/
 *.tar
 *.tar.gz
 *.tgz
+!vendor/ruby-3.4.4/lib/libruby-static.a.gz
 
 .ifcopenshell.*.tmp
 
