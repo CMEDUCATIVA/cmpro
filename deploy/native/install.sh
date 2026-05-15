@@ -14,6 +14,7 @@ OPENPROJECT_BASE_VERSION="${OPENPROJECT_BASE_VERSION:-16.1.1}"
 POSTGRES_CURRENT_MINOR="${POSTGRES_CURRENT_MINOR:-13.21}"
 DB_NAME="${POSTGRES_DB:-openproject}"
 DB_USER="${POSTGRES_USER:-openproject}"
+DB_PASSWORD_FILE="/root/.${APP_NAME}.db_password"
 
 if [[ "$(id -u)" -ne 0 ]]; then
   echo "Run as root: sudo $0 <github_repo_url> [install_dir]"
@@ -60,7 +61,7 @@ install_packages() {
     ca-certificates curl file git gnupg2 build-essential pkg-config \
     libpq-dev libpq5 libffi-dev libyaml-dev libssl-dev zlib1g-dev \
     unrtf tesseract-ocr poppler-utils catdoc imagemagick libclang-dev \
-    libjemalloc2 nginx postgresql "postgresql-client-${POSTGRES_VERSION}"
+    libjemalloc2 nginx "postgresql-${POSTGRES_VERSION}" "postgresql-client-${POSTGRES_VERSION}"
 }
 
 install_node() {
@@ -120,8 +121,8 @@ write_env() {
   chmod 640 "$ENV_FILE"
   chown root:"$APP_USER" "$ENV_FILE"
 
-  install -m 600 -o postgres -g postgres /dev/null "/tmp/${APP_NAME}.db_password"
-  printf "%s" "$db_password" > "/tmp/${APP_NAME}.db_password"
+  printf "%s" "$db_password" > "$DB_PASSWORD_FILE"
+  chmod 600 "$DB_PASSWORD_FILE"
 }
 
 setup_database() {
@@ -129,8 +130,8 @@ setup_database() {
 
   systemctl enable --now postgresql
 
-  if [[ -f "/tmp/${APP_NAME}.db_password" ]]; then
-    db_password="$(cat "/tmp/${APP_NAME}.db_password")"
+  if [[ -f "$DB_PASSWORD_FILE" ]]; then
+    db_password="$(cat "$DB_PASSWORD_FILE")"
   else
     db_password="$(grep '^DATABASE_URL=' "$ENV_FILE" | sed -E 's|^DATABASE_URL=postgres://[^:]+:([^@]+)@.*$|\1|')"
   fi
@@ -141,7 +142,7 @@ setup_database() {
   sudo -u postgres psql -tc "SELECT 1 FROM pg_database WHERE datname='${DB_NAME}'" | grep -q 1 \
     || sudo -u postgres createdb -O "$DB_USER" "$DB_NAME"
 
-  rm -f "/tmp/${APP_NAME}.db_password"
+  rm -f "$DB_PASSWORD_FILE"
 }
 
 install_ruby_dependencies() {
