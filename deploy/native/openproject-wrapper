@@ -33,6 +33,15 @@ require_app() {
 run_command() {
   require_app
   cd "$APP_PATH"
+
+  if [[ "${1:-}" == "rake" && "${2:-}" == "assets:precompile" ]]; then
+    shift 2
+    sudo -u "$APP_USER" env $(grep -v '^#' "$ENV_FILE" | xargs) \
+      PATH="$PATH_VALUE" \
+      "${APP_PATH}/vendor/ruby-3.4.4/bin/bundle" exec rails openproject:plugins:register_frontend assets:precompile "$@"
+    return
+  fi
+
   sudo -u "$APP_USER" env $(grep -v '^#' "$ENV_FILE" | xargs) \
     PATH="$PATH_VALUE" \
     "${APP_PATH}/vendor/ruby-3.4.4/bin/bundle" exec "$@"
@@ -88,4 +97,3 @@ case "${1:-}" in
     exit 1
     ;;
 esac
-
