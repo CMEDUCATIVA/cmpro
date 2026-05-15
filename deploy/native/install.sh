@@ -15,6 +15,10 @@ POSTGRES_CURRENT_MINOR="${POSTGRES_CURRENT_MINOR:-13.21}"
 DB_NAME="${POSTGRES_DB:-openproject}"
 DB_USER="${POSTGRES_USER:-openproject}"
 DB_PASSWORD_FILE="/root/.${APP_NAME}.db_password"
+CONFIGURED_HOST="${OPENPROJECT_HOST_NAME:-${OPENPROJECT_HOST__NAME:-}}"
+CONFIGURED_HTTPS="${OPENPROJECT_HTTPS:-}"
+CONFIGURED_BIND_HOST="${HOST:-}"
+CONFIGURED_PORT="${PORT:-}"
 
 if [[ "$(id -u)" -ne 0 ]]; then
   echo "Run as root: sudo $0 <github_repo_url> [install_dir]"
@@ -31,6 +35,33 @@ if ! grep -qiE "debian|ubuntu" /etc/os-release; then
   echo "This installer currently targets Debian/Ubuntu servers."
   exit 1
 fi
+
+prompt_configuration() {
+  local input
+
+  if [[ -z "$CONFIGURED_HOST" ]]; then
+    read -r -p "Dominio para OpenProject, sin https:// [localhost]: " input
+    CONFIGURED_HOST="${input:-localhost}"
+  fi
+
+  if [[ -z "$CONFIGURED_HTTPS" ]]; then
+    read -r -p "Usara HTTPS externo con Nginx/Proxy? [y/N]: " input
+    case "$input" in
+      y|Y|yes|YES|s|S|si|SI) CONFIGURED_HTTPS=true ;;
+      *) CONFIGURED_HTTPS=false ;;
+    esac
+  fi
+
+  if [[ -z "$CONFIGURED_BIND_HOST" ]]; then
+    read -r -p "IP donde escuchara Puma [0.0.0.0]: " input
+    CONFIGURED_BIND_HOST="${input:-0.0.0.0}"
+  fi
+
+  if [[ -z "$CONFIGURED_PORT" ]]; then
+    read -r -p "Puerto interno de Puma [8080]: " input
+    CONFIGURED_PORT="${input:-8080}"
+  fi
+}
 
 arch() {
   case "$(uname -m)" in
@@ -112,10 +143,14 @@ write_env() {
   sed -i "s|APP_USER=openproject|APP_USER=${APP_USER}|g" "$ENV_FILE"
   sed -i "s|APP_PATH=/opt/openproject-custom|APP_PATH=${INSTALL_DIR}|g" "$ENV_FILE"
   sed -i "s|APP_DATA_PATH=/var/openproject-custom/assets|APP_DATA_PATH=${DATA_DIR}|g" "$ENV_FILE"
+  sed -i "s|HOST=127.0.0.1|HOST=${CONFIGURED_BIND_HOST}|g" "$ENV_FILE"
+  sed -i "s|PORT=8080|PORT=${CONFIGURED_PORT}|g" "$ENV_FILE"
   sed -i "s|OPENPROJECT_BASE_VERSION=16.1.1|OPENPROJECT_BASE_VERSION=${OPENPROJECT_BASE_VERSION}|g" "$ENV_FILE"
   sed -i "s|POSTGRES_VERSION=13|POSTGRES_VERSION=${POSTGRES_VERSION}|g" "$ENV_FILE"
   sed -i "s|POSTGRES_CURRENT_MINOR=13.21|POSTGRES_CURRENT_MINOR=${POSTGRES_CURRENT_MINOR}|g" "$ENV_FILE"
   sed -i "s|OPENPROJECT_ATTACHMENTS__STORAGE__PATH=/var/openproject-custom/assets/files|OPENPROJECT_ATTACHMENTS__STORAGE__PATH=${DATA_DIR}/files|g" "$ENV_FILE"
+  sed -i "s|OPENPROJECT_HOST__NAME=localhost|OPENPROJECT_HOST__NAME=${CONFIGURED_HOST}|g" "$ENV_FILE"
+  sed -i "s|OPENPROJECT_HTTPS=false|OPENPROJECT_HTTPS=${CONFIGURED_HTTPS}|g" "$ENV_FILE"
   sed -i "s|CHANGE_ME_generate_with_openssl_rand_hex_64|${secret}|g" "$ENV_FILE"
   sed -i "s|CHANGE_ME_database_password|${db_password}|g" "$ENV_FILE"
   chmod 640 "$ENV_FILE"
@@ -185,6 +220,7 @@ install_services() {
   systemctl enable --now "${APP_NAME}-web.service" "${APP_NAME}-worker.service"
 }
 
+prompt_configuration
 install_packages
 install_node
 prepare_user_and_dirs
@@ -200,5 +236,6 @@ echo "Installed ${APP_NAME} at ${INSTALL_DIR}"
 echo "OpenProject base version: ${OPENPROJECT_BASE_VERSION}"
 echo "PostgreSQL major version: ${POSTGRES_VERSION} (current source server: ${POSTGRES_CURRENT_MINOR})"
 echo "Environment: ${ENV_FILE}"
-echo "Local URL: http://127.0.0.1:8080"
+echo "Configured host: ${CONFIGURED_HOST}"
+echo "Internal bind: ${CONFIGURED_BIND_HOST}:${CONFIGURED_PORT}"
 echo "Edit ${ENV_FILE}, then run: systemctl restart ${APP_NAME}-web ${APP_NAME}-worker"

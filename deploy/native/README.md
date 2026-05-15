@@ -19,6 +19,7 @@ sudo ./install-openproject-custom.sh https://github.com/USUARIO/REPO.git /opt/op
 
 El instalador:
 
+- pregunta dominio, HTTPS externo, IP de escucha y puerto interno;
 - instala dependencias del sistema;
 - descarga Node.js;
 - clona tu repositorio;
@@ -44,6 +45,23 @@ sudo journalctl -u openproject-custom-worker -f
 ```
 
 ## Configuracion
+
+Durante la instalacion se preguntan estos valores:
+
+- dominio, por ejemplo `campus.vinfrancis.es`;
+- si usara HTTPS externo desde Nginx Proxy Manager;
+- IP interna donde escuchara Puma, normalmente `0.0.0.0`;
+- puerto interno, normalmente `8080`.
+
+Tambien puedes ejecutar sin preguntas usando variables:
+
+```bash
+sudo OPENPROJECT_HOST_NAME=campus.vinfrancis.es \
+  OPENPROJECT_HTTPS=true \
+  HOST=0.0.0.0 \
+  PORT=8080 \
+  ./install-openproject-custom.sh https://github.com/USUARIO/REPO.git /opt/openproject-custom
+```
 
 Edita:
 
