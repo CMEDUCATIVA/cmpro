@@ -52,7 +52,7 @@ install_packages() {
 
   install -d -m 0755 /etc/apt/keyrings
   curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc \
-    | gpg --dearmor -o /etc/apt/keyrings/postgresql.gpg
+    | gpg --batch --yes --dearmor -o /etc/apt/keyrings/postgresql.gpg
   echo "deb [signed-by=/etc/apt/keyrings/postgresql.gpg] http://apt.postgresql.org/pub/repos/apt ${codename}-pgdg main" \
     > /etc/apt/sources.list.d/pgdg.list
 
